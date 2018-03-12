@@ -18,7 +18,7 @@ var navigationLinks = [
     new link("TabView", "/tab-view"),
     new link("TextField", "/text-field"),
     new link("TextView", "/text-view"),
-    new link("WebView", "/web-view"),
+    new link("WebView", "/ui/web-view/web-view-page"),
     new link("Style", "/style"),
     new link("Gestures", "/gestures"),
     new link("HtmlView", "/html-view"),

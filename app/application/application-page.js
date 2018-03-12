@@ -9,6 +9,5 @@ var navigationLinks = [
 function onNavigatingTo(args) {
     var page = args.object;
     page.bindingContext = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: args.context.title });
-    // page.bindingContext.actionBarTitle = args.context.title;
 }
 exports.onNavigatingTo = onNavigatingTo;

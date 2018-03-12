@@ -18,15 +18,6 @@ function ListViewLinksModel(info) {
         "links": new observableArrayModule.ObservableArray(info.links),
         "actionBarTitle": info.actionBarTitle
     });
-
-    viewModel.linksSort = function (value) {
-        console.log("links setter");
-        value.sort(function (a, b) {
-            var titleA = a.title.toUpperCase();
-            var titleB = b.title.toUpperCase();
-            return (titleA < titleB) ? -1 : (titleA > titleB) ? 1 : 0;
-        });
-    }
     
     viewModel.set("onItemTap", function (args) {
         var linkItem = viewModel.get("links").getItem(args.index);
