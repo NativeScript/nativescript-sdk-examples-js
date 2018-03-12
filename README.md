@@ -1,4 +1,4 @@
-# nativescript-sdk-examples
+# nativescript-sdk-examples-js
 
 This repo contains the code of the [NativeScript Core Cookbook](http://docs.nativescript.org/cookbook/overview.html) companion application.
 
