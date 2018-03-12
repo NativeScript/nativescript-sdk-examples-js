@@ -1,0 +1,35 @@
+{
+	"description": "NativeScript Application",
+	"license": "SEE LICENSE IN <your-license-filename>",
+	"readme": "NativeScript Application",
+	"repository": "<fill-your-repository-here>",
+	"nativescript": {
+		"id": "org.nativescript.nativescriptsdkexamplesjs",
+		"tns-android": {
+			"version": "3.4.2"
+		},
+		"tns-ios": {
+			"version": "3.4.1"
+		}
+	},
+	"dependencies": {
+		"nativescript-theme-core": "~1.0.4",
+		"tns-core-modules": "~3.4.0"
+	},
+	"devDependencies": {
+		"babel-traverse": "6.26.0",
+		"babel-types": "6.26.0",
+		"babylon": "6.18.0",
+		"lazy": "1.0.11",
+		"fs-extra": "^0.30.0",
+		"markdown-snippet-injector": "^0.2.0",
+		"tar.gz": "^1.0.7"
+	},
+	"scripts": {
+		"pretsc": "npm install",
+		"build": "node scripts/build.js",
+		"postbuild": "npm run inject && npm run archive",
+		"inject": "mdinject --root=app --docsroot=dist/cookbook --sourceext=\".js|.css|.xml\" --snippettitles=\"TypeScript|CSS|XML\"",
+		"archive": "node scripts/archive.js"
+	}
+}

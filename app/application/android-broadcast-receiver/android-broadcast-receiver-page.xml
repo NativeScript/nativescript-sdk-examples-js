@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" navigatedTo="onNavigatedTo" unloaded="onUnloaded">
+    <Page.actionBar>
+		<ActionBar title="" icon="" class="action-bar"/>
+	</Page.actionBar>
+	<GridLayout class="m-20" >
+		<GridLayout rows="*, *" columns="*" visibility="{{ isAndroid ? 'visible' : 'collapsed' }}">
+			<Label row="0" text="{{ info }}" textWrap="true" fontSize="14"></Label>
+			<Label row="1" text="{{ '&#xf240; Battery Life: ' + batteryLife + '%' }}" textWrap="true" class="fa" fontSize="24"></Label>
+		</GridLayout>
+		<GridLayout visibility="{{ !isAndroid ? 'visible' : 'collapsed' }}" backgroundColor="orangered">
+			<Label text="&#xff17b; Android Specific Example" textWrap="true" class="fa" fontSize="24"/>
+		</GridLayout>
+	</GridLayout>
+</Page>

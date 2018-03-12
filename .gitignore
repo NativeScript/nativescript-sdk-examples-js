@@ -1,0 +1,43 @@
+platforms
+hooks
+node_modules
+lib
+debugger
+dist
+report
+
+app/**/*.map
+
+.DS_Store
+**/*.log
+tags
+
+#VSCode
+.vscode/
+
+# Eclipse project files
+.classpath
+.project
+/.metadata
+
+# Intellij project files
+buildSrc/build
+*.iml
+*.ipr
+*.iws
+.idea/
+/.idea
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/

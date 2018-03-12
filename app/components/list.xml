@@ -1,0 +1,7 @@
+<ListView items="{{ links }}" class="list-group" itemTap="{{ onItemTap }}">
+	<ListView.itemTemplate>
+		<StackLayout class="list-group-item">
+			<Label text="{{ title }}" class="list-group-item-heading" />
+		</StackLayout>
+	</ListView.itemTemplate>
+</ListView>
