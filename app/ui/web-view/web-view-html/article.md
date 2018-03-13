@@ -1,4 +1,4 @@
-HTML
+XML
 <snippet id='web-view-xml-local-file'/>
 
 Add WebView `src` from local file

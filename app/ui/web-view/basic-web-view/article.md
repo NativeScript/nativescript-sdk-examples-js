@@ -1,4 +1,4 @@
-HTML
+XML
 <snippet id='web-view-html'/>
 
 Add WebView `src` and handle `loadFinishedEvent` event
