@@ -8,9 +8,7 @@ GridLayout {
 
 Label {
     border-radius: 20;
-    font-size: 14;
     horizontal-align: center;
-    margin: 8;
     padding: 15;
     vertical-align: middle;
 }

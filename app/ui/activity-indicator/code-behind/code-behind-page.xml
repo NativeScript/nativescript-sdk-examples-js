@@ -2,7 +2,7 @@
     <Page.actionBar>
         <ActionBar title="Dynamic Creation" icon="" />
     </Page.actionBar>
-    <GridLayout rows="*, *">
+    <GridLayout rows="*, 2*">
         <StackLayout row="0" id="myStack" verticalAlignment="middle" />
         <Label row="1" text="{{ snippet }}" textWrap="true" class="snippet"/>
     </GridLayout>

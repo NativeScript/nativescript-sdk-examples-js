@@ -1,0 +1,16 @@
+GridLayout {
+    background-color: #414b7d;
+    border-radius: 20;
+    margin: 8;
+    padding: 8;
+}
+
+Label {
+    color: white;
+    background-color:orangered;
+    border-radius: 20;
+    margin: 16;
+    padding: 8;
+    horizontal-align: center;
+    vertical-align: top;
+}

@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+	<Page.actionBar>
+		<ActionBar title="Animation Properties" />
+	</Page.actionBar>
+	<GridLayout rows="*" coluns="*">
+		<Label row="0" col="0" id="lbl" text="NativeScript" textWrap="true" longPress="animateTarget"/>
+	</GridLayout>
+</Page>

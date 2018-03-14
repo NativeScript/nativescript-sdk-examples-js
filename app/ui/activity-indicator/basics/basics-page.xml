@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-        <ActionBar title="Gettings Started" icon="" />
+        <ActionBar title="Basics" icon="" />
     </Page.actionBar>
     <GridLayout rows="*, *">
         <StackLayout row="0" verticalAlignment="middle">

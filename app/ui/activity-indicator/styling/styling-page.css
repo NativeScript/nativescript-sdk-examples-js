@@ -8,9 +8,7 @@ GridLayout {
 
 Label {
     border-radius: 20;
-    font-size: 14;
     horizontal-align: center;
-    margin: 8;
     padding: 15;
     vertical-align: middle;
 }
@@ -19,7 +17,6 @@ Label.snippet {
     background-color: whitesmoke;
     color: orangered;
     height: 100%;
-    margin: 8 0 0 0;
     width: 100%;
 }
 
