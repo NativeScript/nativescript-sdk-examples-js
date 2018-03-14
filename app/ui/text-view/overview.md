@@ -1,1 +1,1 @@
-NativeScript provides a TimePicker control that enables users to choose a time as a ready-to-use dialog. Every time part can be picked separately by its corresponding section of the control - for hour, minutes and AM/PM. 
+The TextView component can be used to type large text in your app. The component can also be used show any content by setting the `editable` property to `false`.

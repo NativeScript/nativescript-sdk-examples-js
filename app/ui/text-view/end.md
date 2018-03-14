@@ -1,8 +1,8 @@
 
-**API Reference for the** [TimePicker Class](http://docs.nativescript.org/api-reference/modules/_ui_time_picker_.html)
+**API Reference for the** [TextView Class](http://docs.nativescript.org/api-reference/modules/_ui_text_view_.html)
 
 **Native Component**
 
-| Android                | iOS      |
-|:-----------------------|:---------|
-| [android.widget.TimePicker](http://developer.android.com/reference/android/widget/TimePicker.html) | [UIDatePicker](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDatePicker_Class/index.html) | 
+| Android               | iOS      |
+|:----------------------|:---------|
+| [android.widget.EditText](http://developer.android.com/reference/android/widget/EditText.html) | [UITextView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextView_Class/) |

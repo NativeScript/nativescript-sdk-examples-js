@@ -29,7 +29,7 @@
 		"pretsc": "npm install",
 		"build": "node scripts/build.js",
 		"postbuild": "npm run inject && npm run archive",
-		"inject": "mdinject --root=app --docsroot=dist/cookbook --sourceext=\".js|.css|.xml\" --snippettitles=\"TypeScript|CSS|XML\"",
+		"inject": "mdinject --root=app --docsroot=dist/cookbook --sourceext=\".js|.css|.xml\" --snippettitles=\"JavaScript|CSS|XML\"",
 		"archive": "node scripts/archive.js"
 	}
 }
