@@ -5,10 +5,9 @@
 	</Page.actionBar>
     <!-- << action-bar-gettings-started -->
 
-    <GridLayout rows="*, *, *" class="m-20 p-10">
+    <GridLayout rows="*, *, *"> 
         <Label row="0" text="&#xff05a;" textWrap="true" class="fa" fontSize="40"/>
-        <Label row="1" text=" Getting Started Action Bar Example" textWrap="true" fontSize="24"/>
-        <Label row="2" text="{{ snippet }}" textWrap="true" fontSize="14" color="orangered" backgroundColor="white"/>
-        <!-- <Label row="2" text="Refer to the XML file for more info" textWrap="true" fontSize="14"/> -->
+        <Label row="1" text="{{ title }}" textWrap="true"/>
+        <Label row="2" text="{{ snippet }}" textWrap="true" class="snippet"/>
     </GridLayout>
 </Page>

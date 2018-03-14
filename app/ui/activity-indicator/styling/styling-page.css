@@ -19,5 +19,11 @@ Label.snippet {
     background-color: whitesmoke;
     color: orangered;
     height: 100%;
+    margin: 8 0 0 0;
+    width: 100%;
+}
+
+StackLayout {
+    height: 100%;
     width: 100%;
 }

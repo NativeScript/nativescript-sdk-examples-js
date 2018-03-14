@@ -4,7 +4,7 @@ var navigationLinks = [
     new link("Button", "/button"),
     new link("Application", "/application/application-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
-    new link("ActivityIndicator", "/activity-indicator"),
+    new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
     new link("Animations", "/animations"),
     new link("DatePicker", "/date-picker"),
     new link("Dialogs", "/dialogs"),
