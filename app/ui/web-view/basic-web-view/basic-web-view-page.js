@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
     vm.set("tftext", "https://docs.nativescript.org/")
     page.bindingContext = vm;
 }
-
+// handling WebView load finish event
 function onWebViewLoaded(webargs){
     let page = webargs.object.page;
     let vm = page.bindingContext;
@@ -30,7 +30,7 @@ function onWebViewLoaded(webargs){
         console.log("WebView message - " + message);
     });
 }
-
+// going to the previous page if such is available
 function goBack(args){
     let page = args.object.page;
     let webview = page.getViewById("myWebView");
@@ -38,7 +38,7 @@ function goBack(args){
         webview.goBack();
     }
 }
-
+// changing WebView source
 function submit(args) {
     let page = args.object.page;
     let vm = page.bindingContext;
