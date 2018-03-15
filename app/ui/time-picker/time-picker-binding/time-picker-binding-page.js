@@ -1,5 +1,6 @@
 // >> time-picker-binding-code
 var Observable = require("tns-core-modules/data/observable").Observable;
+// setting up the initial values for the TimePicker component 
 function onNavigatingTo(args) {
     var page = args.object;
     var vm = new Observable();
@@ -17,7 +18,7 @@ function onNavigatingTo(args) {
 
 function onPickerLoaded (args) {
     let timePicker = args.object;
-
+    // handling 'time change' via code behind
     timePicker.on("timeChange", (result)=>{
         let page = args.object.page;
         let vm = page.bindingContext;

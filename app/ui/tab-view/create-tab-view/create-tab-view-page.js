@@ -8,12 +8,13 @@ function onPageLoaded (args) {
     let stackLayout = page.getViewById("stackLayoutId");
 
     let items = [];
-
+    // creating TabView Item content body
     let StackLayout0 = new StackLayout();
     let label0 = new Label();
     label0.text = "Tab 0";
     StackLayout0.addChild(label0);
     let tabEntry0 = new tabViewModule.TabViewItem();
+    // creating TabView Item title
     tabEntry0.title = "Tab 0";
     tabEntry0.view = StackLayout0;
     items.push(tabEntry0);
@@ -26,10 +27,12 @@ function onPageLoaded (args) {
     tabEntry1.title = "Tab 1";
     tabEntry1.view = StackLayout1;
     items.push(tabEntry1);
-
+    // creating TabView
     let tabView = new tabViewModule.TabView();
+    // setting up its items and the selected index
     tabView.items = items;
     tabView.selectedIndex = 1;
+    // handling selectedIndexChangedEvent
     tabView.on(tabViewModule.TabView.selectedIndexChangedEvent, (args) => {
         alert("Selected index has changed ( Old index: "+args.oldIndex+" New index: "+args.newIndex+" )");
     });

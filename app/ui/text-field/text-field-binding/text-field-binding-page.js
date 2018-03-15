@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
     vm.set("tfResult", '');
     vm.set("secureState", false);
     vm.set("buttonText", "Enable TextField's secure");
-
+    // handling TextField text change 
     vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
         if(propertyChangeData.propertyName == 'tfText'){
             vm.set("tfResult", propertyChangeData.value);
@@ -17,7 +17,7 @@ function onNavigatingTo(args) {
       });
     page.bindingContext = vm;
 }
-
+// changing TextField secure property value on button tap
 function textFieldSecureStateChange(args){
     let page = args.object.page;
     let vm = page.bindingContext;
@@ -31,6 +31,7 @@ function textFieldSecureStateChange(args){
         vm.set("buttonText", "Disable TextField's secure");
     }
 }
+// displaying the TextField text in an Alert dialog
 function showText(args) {
     let page = args.object.page;
     let vm = page.bindingContext;

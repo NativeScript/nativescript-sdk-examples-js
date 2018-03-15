@@ -1,4 +1,4 @@
-This example shows how to bind TextView `text`, `hint` and `editable` properties as well as how to handle the text change.
+This example shows how to bind TextField `text`, `hint` and `secure` properties as well as how to handle the text change.
 
 XML
 <snippet id='textfield-xml-binding'/>

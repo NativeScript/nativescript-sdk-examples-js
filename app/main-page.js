@@ -14,7 +14,7 @@ var navigationLinks = [
     new link("SearchBar", "/search-bar"),
     new link("SegmentedBar", "/segmented-bar"),
     new link("Slider", "/slider"),
-    new link("Switch", "/switch"),
+    new link("Switch", "/ui/switch/switch-page"),
     new link("TabView", "/ui/tab-view/tab-view-page"),
     new link("TextField", "ui/text-field/text-field-page"),
     new link("TextView", "/ui/text-view/text-view-page"),

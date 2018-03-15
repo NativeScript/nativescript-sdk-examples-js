@@ -1,3 +1,5 @@
+The sample shows a fundamental way of using the WebView in a NativeScript application. 
+
 XML
 <snippet id='web-view-html'/>
 

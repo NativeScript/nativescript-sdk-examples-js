@@ -12,7 +12,7 @@ function onNavigatingTo(args) {
     vm.set("tvResult", '');
     vm.set("editState", true);
     vm.set("buttonText", 'Disable TextView');
-
+    // handling TextView text change 
     vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
         if(propertyChangeData.propertyName == 'tvText'){
             vm.set("tvResult", propertyChangeData.value);
@@ -20,7 +20,7 @@ function onNavigatingTo(args) {
     });
     page.bindingContext = vm;
 }
-
+// changing TextView editable property value on button tap
 function textViewEditStateChange(args){
     let page = args.object.page;
     let vm = page.bindingContext;
@@ -34,6 +34,7 @@ function textViewEditStateChange(args){
         vm.set("buttonText", 'Disable TextView');
     }
 }
+// displaying the TextView text in an Alert dialog
 function showText(args) {
     let page = args.object.page;
     let vm = page.bindingContext;

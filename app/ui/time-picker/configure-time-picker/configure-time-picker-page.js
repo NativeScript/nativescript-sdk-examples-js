@@ -14,7 +14,7 @@ function onPickerLoaded (args) {
 
     timePicker.hour = 10;
     timePicker.minute = 25;
-
+    // handling 'time change' via code behind
     timePicker.on("timeChange", (result)=>{
         let page = args.object.page;
         let vm = page.bindingContext;

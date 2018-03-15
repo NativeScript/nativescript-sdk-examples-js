@@ -8,7 +8,7 @@ function onNavigatingTo(args) {
 
     page.bindingContext = vm;
 }
-
+// changing the TabView selected index on button tap
 function changeTab(args) {
     let page = args.object.page;
     let vm = page.bindingContext;
@@ -24,6 +24,7 @@ function changeTab(args) {
 
 function onTabViewLoaded(args){
     let tabView = args.object;
+    // handling selectedIndexChangedEvent
     tabView.on("selectedIndexChange", (args)=>{
         alert("Selected index has changed: "+args.object.selectedIndex);
     })

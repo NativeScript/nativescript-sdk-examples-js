@@ -10,7 +10,7 @@ function onPageLoaded (args) {
     vm.set("tfResult", "");
     vm.set("secureButton", "TextField secure:(OFF)");
     vm.set("secure", false);
-    
+    // changing TextField secure property value on button tap
     vm.set("onTap", (btargs)=>{
        let secure = vm.get("secure")
        vm.set("secure", !secure);
@@ -21,7 +21,7 @@ function onPageLoaded (args) {
             vm.set("secureButton","TextField secure:(ON)");
         }
     });
-
+    // creating new TextField and binding the text property
     var options = {
         sourceProperty: "username",
         targetProperty: "text"
@@ -29,12 +29,13 @@ function onPageLoaded (args) {
     let firstTextField = new textFieldModule.TextField();
     firstTextField.updateTextTrigger="textChanged";
     firstTextField.bind(options, vm);
+    // registering for the TextField text change listener
     firstTextField.on("textChange", function(args){
         vm.set("tfResult", args.object.text);
     })
 
     
-
+    // creating new TextField and binding the secure property
     var secondOptions = {
         sourceProperty: "secure",
         targetProperty: "secure"

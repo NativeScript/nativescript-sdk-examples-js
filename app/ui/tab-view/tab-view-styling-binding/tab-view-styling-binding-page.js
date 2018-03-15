@@ -25,7 +25,7 @@ function changeTab(args) {
         vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
     }
 }
-
+// displaying the old and new TabView selectedIndex
 function onSelectedIndexChanged(args){
     alert("Selected index has changed ( Old index: "+args.oldIndex+" New index: "+args.newIndex+" )");
 }

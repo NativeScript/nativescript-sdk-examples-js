@@ -1,8 +1,9 @@
-// >> webview-js-gestures
 let Observable = require("tns-core-modules/data/observable").Observable;
+// >> webview-require
 let webViewModule = require("tns-core-modules/ui/web-view");
+// << webview-require
 let platformModule = require("tns-core-modules/platform");
-
+// >> webview-js-gestures
 function onNavigatingTo(args) {
     let page = args.object;
     let vm = new Observable();
@@ -11,7 +12,7 @@ function onNavigatingTo(args) {
     vm.set("panResult", "Pan: deltaX: _" + " deltaY: _");
     page.bindingContext = vm;
 }
-
+// disabling the WebView's zoom control(required only for Android)
 function onWebViewLoaded(webargs){
     let page = webargs.object.page;
     let vm = page.bindingContext;
@@ -20,14 +21,14 @@ function onWebViewLoaded(webargs){
         webview.android.getSettings().setDisplayZoomControls(false);
     }
 }
-
+// setting up Touch gesture callback method 
 function webViewTouch(args){
     let page = args.object.page;
     let vm = page.bindingContext;
     vm.set("touchResult", "Touch: x: " + args.getX().toFixed(3) + " y: " + args.getY().toFixed(3));
     console.log("Touch: x: " + args.getX().toFixed(3) + " y: " + args.getY().toFixed(3));
 }
-
+// setting up Pan gesture callback method 
 function webViewPan(args){
     let page = args.object.page;
     let vm = page.bindingContext;

@@ -1,4 +1,4 @@
-Creating TextField via Code-Behind
+Creating TextField via Code-Behind and setting up its properties.
 
 
 XML

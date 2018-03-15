@@ -2,6 +2,8 @@ let observableModule = require("tns-core-modules/data/observable");
 // >> textfield-require
 let textViewModule = require("tns-core-modules/ui/text-view");
 // << textfield-require
+
+// setting up the format for the TextField text
 function onNavigatingTo(args) {
     let page = args.object;
     const dateConverter = {

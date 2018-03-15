@@ -4,8 +4,10 @@ let webViewModule = require("tns-core-modules/ui/web-view");
 function onNavigatingTo(args) {
     let page = args.object;
     let vm = new Observable();
+    // loading the WebView source while providing a HTML code
     vm.set("firstWebViewSRC", '<!DOCTYPE html><html><head><title>MyTitle</title><meta charset="utf-8" /></head><body><span style="color:#0099CC; text-align: center;">First WebView</span></body></html>');
     vm.set("resultFirstWebView", "");
+    // loading the WebView source from a local file
     vm.set("secondWebViewSRC", "~/ui/web-view/web-view-html/test.html");
     vm.set("resultSecondWebView", "");
     page.bindingContext = vm;
@@ -16,7 +18,7 @@ function onFirstWebViewLoaded(webargs){
     let vm = page.bindingContext;
     let webview = webargs.object;
     vm.set("resultFirstWebView", "First WebView is still loading...");
-
+    // handling WebView load finish event
     webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
         let message;
         if (!args.error) {
