@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="TextField basics"/>
+	</Page.actionBar>
+    <StackLayout class="example-container">
+        <!-- >> switch-binding-xml -->
+        <GridLayout rows="auto auto" columns="* *" class="m-5">
+            <Label class="h3 m-15" text="{{ firstSwitchState }}" textWrap="true" row="0" col="0"/>
+            <Switch class="m-15" checked="{{ firstSwitch }}" checkedChange="onFirstChecked" row="0" col="1"/>
+            <Label class="h3 m-15" text="{{ secondSwitchState }}" textWrap="true" row="1" col="0"/>
+            <Switch class="m-15" checked="{{ secondSwitch }}" loaded="switchLoaded" checkedChange="onSecondChecked" row="1" col="1"/>
+        </GridLayout>
+        <!-- << switch-binding-xml -->
+    </StackLayout>
+</Page>
