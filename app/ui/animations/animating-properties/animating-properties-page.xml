@@ -2,7 +2,8 @@
 	<Page.actionBar>
 		<ActionBar title="Animation Properties" />
 	</Page.actionBar>
-	<GridLayout rows="*" coluns="*">
-		<Label row="0" col="0" id="lbl" text="NativeScript" textWrap="true" longPress="animateTarget"/>
-	</GridLayout>
+	<StackLayout>
+		<Label row="0" col="0" id="lbl" text="NativeScript" textWrap="true" longPress="animateTarget" />
+        <Button text="Animate" tap="animate" class="btn btn-primary btn-active" width="50%" borderRadius="10"/>
+	</StackLayout>
 </Page>

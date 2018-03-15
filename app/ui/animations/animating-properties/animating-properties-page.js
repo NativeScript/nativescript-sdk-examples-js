@@ -1,11 +1,17 @@
 const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
 const Animation = require("tns-core-modules/ui/animation").Animation;
+let myView;
 
 function onLoaded(args) {
     const page = args.object;
-    const myView = page.getViewById("lbl");
+    myView = page.getViewById("lbl");
+}
+exports.onLoaded = onLoaded;
 
-    // >> animation-properties
+function animate(args) {
+    console.log("animate func");
+    console.log(myView);
+
     myView.animate({
         backgroundColor: "#414b7d",
         curve: AnimationCurve.easeOut,
@@ -23,7 +29,7 @@ function onLoaded(args) {
     })
     // << animation-properties
 }
-exports.onLoaded = onLoaded;
+exports.animate = animate;
 
 function animateTarget(args) {
     // >> animation-constructor
@@ -35,7 +41,7 @@ function animateTarget(args) {
         duration: 1000,
         iterations: 1,
         rotate: 360,
-        scale: { x: 0.2 y: 0.2 },
+        scale: { x: 0.2, y: 0.2 },
         translate: { x: -50, y: -50 }
     }], false);
 
