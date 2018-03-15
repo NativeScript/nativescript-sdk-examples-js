@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+        <ActionBar title="Basics" icon="" />
+    </Page.actionBar>
+    <GridLayout rows="*, *">
+        <StackLayout row="0" verticalAlignment="middle">
+            <!-- >> activity-indicator-setting-busy -->
+            <ActivityIndicator busy="{{ isLoading }}" />
+            <!-- << activity-indicator-setting-busy -->
+        </StackLayout>
+        <Label row="1" text="{{ snippet }}" textWrap="true" class="snippet"/>
+    </GridLayout>
+</Page>
