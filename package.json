@@ -6,15 +6,15 @@
 	"nativescript": {
 		"id": "org.nativescript.nativescriptsdkexamplesjs",
 		"tns-android": {
-			"version": "3.4.2"
+			"version": "next"
 		},
 		"tns-ios": {
-			"version": "3.4.1"
+			"version": "next"
 		}
 	},
 	"dependencies": {
 		"nativescript-theme-core": "~1.0.4",
-		"tns-core-modules": "~3.4.0"
+		"tns-core-modules": "next"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.26.0",
@@ -29,7 +29,7 @@
 		"pretsc": "npm install",
 		"build": "node scripts/build.js",
 		"postbuild": "npm run inject && npm run archive",
-		"inject": "mdinject --root=app --docsroot=dist/cookbook --sourceext=\".js|.css|.xml\" --snippettitles=\"TypeScript|CSS|XML\"",
+		"inject": "mdinject --root=app --docsroot=dist/cookbook --sourceext=\".js|.css|.xml\" --snippettitles=\"JavaScript|CSS|XML\"",
 		"archive": "node scripts/archive.js"
 	}
 }
