@@ -1,6 +1,9 @@
 const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
 const Animation = require("tns-core-modules/ui/animation").Animation;
-let myView;
+const AnimationDefinitions = require("tns-core-modules/ui/animation").AnimationDefinitions;
+
+let animation,
+    myView;
 
 function onLoaded(args) {
     const page = args.object;
@@ -9,9 +12,7 @@ function onLoaded(args) {
 exports.onLoaded = onLoaded;
 
 function animate(args) {
-    console.log("animate func");
-    console.log(myView);
-
+    // >> animation-properties
     myView.animate({
         backgroundColor: "#414b7d",
         curve: AnimationCurve.easeOut,
@@ -32,25 +33,31 @@ function animate(args) {
 exports.animate = animate;
 
 function animateTarget(args) {
-    // >> animation-constructor
+    // >> animation-target
     const myView = args.object;
 
-    let animation = new Animation([{
+    let animationDefinition = {
         target: myView, // provide the view to animate
         curve: AnimationCurve.easeOut,
         duration: 1000,
-        iterations: 1,
-        rotate: 360,
         scale: { x: 0.2, y: 0.2 },
         translate: { x: -50, y: -50 }
-    }], false);
+    };
 
+    animation = new Animation([animationDefinition], false);
     animation.play()
         .then(() => {
             console.log("Animation finished");
+            console.log("animation.isPlaying: " + animation.isPlaying);
         }).catch((e) => {
             console.log(e.message);
         });
-    // << animation-constructor
+    // << animation-target
 }
-exports.animateTarget = animateTarget;
+exports.animateTarget = animateTarget
+
+function cancelAnimation() {
+    // >> animation-cancel
+    animation.cancel();
+    // << animation-cancel
+}

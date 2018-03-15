@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+	<Page.actionBar>
+		<ActionBar title="Chaining Animations" />
+	</Page.actionBar>
+	<GridLayout rows="*">
+		<Label row="0" id="lbl" text="NativeScript" textWrap="true" />
+	</GridLayout>
+</Page>
