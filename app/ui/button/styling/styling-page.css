@@ -1,4 +1,4 @@
-/* << button-css-styles */
+/* >> button-css-styles */
 .my-button {
     background-color: orangered;
     border-radius: 5;
@@ -13,4 +13,4 @@
     background-color: lightslategray;
     color:white;
 }
-/* >> button-css-styles */
+/* << button-css-styles */
