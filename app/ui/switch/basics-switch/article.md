@@ -1,5 +1,7 @@
-HTML
-<snippet id='switch-binding-html'/>
+The example shows, how to handle `checkedChange` event and how to set up the `checked` and `isEnabled` properties. 
 
-Handle `checkedChange` event and setting default value. 
-<snippet id='switch-event-handle-code'/>
+XML
+<snippet id='switch-basics-xml'/>
+
+
+<snippet id='switch-checked-change-event'/>

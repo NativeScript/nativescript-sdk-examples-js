@@ -1,8 +1,8 @@
-Creating TextField via Code-Behind and setting up its properties.
+In the following example is shown, how to create Switch via Code-behind
 
 
 XML
-<snippet id='creating-text-field-xml'/>
+<snippet id='creating-switch-xml'/>
 
 JavaScript
-<snippet id='creating-text-field-code'/>
+<snippet id='creating-switch-code'/>

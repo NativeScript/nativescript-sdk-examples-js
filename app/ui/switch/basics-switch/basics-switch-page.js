@@ -1,18 +1,19 @@
 let observableModule = require("tns-core-modules/data/observable");
-// >> textfield-require
+// >> switch-require
 let switchModule = require("tns-core-modules/ui/switch");
-// << textfield-require
-
-// setting up the format for the TextField text
+// << switch-require
+// >> switch-checked-change-event
 function onNavigatingTo(args) {
     let page = args.object;
-
+    // set up the initial values for the switch components
     const vm = new observableModule.Observable();
+    vm.set("buttonText", "Disable first switch");
     vm.set("firstSwitchState", "OFF");
     vm.set("secondSwitchState", "ON");
     vm.set("firstSwitch", false);
     vm.set("secondSwitch", true);
-    
+    vm.set("isEnabledSwitch", true);
+    // handle checked change
     vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
         if(propertyChangeData.propertyName == 'firstSwitch'){
             if (propertyChangeData.value) {
@@ -24,7 +25,7 @@ function onNavigatingTo(args) {
     });
     page.bindingContext = vm;
 }
-
+// handle checked change
 function switchLoaded(args){
     let switchComponent = args.object;
     switchComponent.on("checkedChange", (sargs)=>{
@@ -38,8 +39,21 @@ function switchLoaded(args){
         }
     })
 }
+// setting up isEnabled property
+function onTap(args){
+    let page = args.object;
+    let vm = page.bindingContext;
+    let isEnabledSwitch = vm.get("isEnabledSwitch");
+    vm.set("isEnabledSwitch", !isEnabledSwitch);
+    if(isEnabledSwitch){
+        vm.set("buttonText", "Enable first switch");
+    }
+    else{
+        vm.set("buttonText", "Disable first switch");
+    }
+}
 
 exports.switchLoaded = switchLoaded;
 exports.onNavigatingTo = onNavigatingTo;
-
-// << textfield-handle-submit-event
+exports.onTap = onTap;
+// << switch-checked-change-event

@@ -3,10 +3,10 @@
 		<ActionBar title="TextField Code-Behind"/>
 	</Page.actionBar>
 
-    <!-- >> creating-switch-xml -->
+    <!-- >> creating-slider-xml -->
     <StackLayout id="stackLayoutId">
-		<Label text="{{ 'Result: ' + swResult}}" textWrap="true" />
+		<Label text="{{ 'Result: ' + slResult}}" textWrap="true" />
         
     </StackLayout>
-    <!-- << creating-switch-xml -->
+    <!-- << creating-slider-xml -->
 </Page>
