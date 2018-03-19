@@ -1,6 +1,7 @@
 const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
 const Animation = require("tns-core-modules/ui/animation").Animation;
 const AnimationDefinitions = require("tns-core-modules/ui/animation").AnimationDefinitions;
+const Color = require("tns-core-modules/color").Color;
 
 let animation,
     myView;
@@ -60,4 +61,32 @@ function cancelAnimation() {
     // >> animation-cancel
     animation.cancel();
     // << animation-cancel
+}
+
+function demonstrateSimpleAnimations(args) {
+    let view = args.object;
+
+    // >> animating-background-color
+    view.backgroundColor = new Color("red");
+    view.animate({ 
+        backgroundColor: new Color("green"), 
+        duration: 2000 
+    });
+    // << animating-background-color
+
+    // >> using-animation-curve-enum
+    view.animate({
+        translate: { x: 0, y: 100},    
+        duration: 1000,
+        curve: AnimationCurve.easeIn
+    });
+    // << using-animation-curve-enum
+
+    // >> creating-cubic-bezier
+    view.animate({
+        translate: { x: 0, y: 100 },
+        duration: 1000,
+        curve: enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
+    });
+    // << creating-cubic-bezier
 }
