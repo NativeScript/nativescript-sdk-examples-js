@@ -1,9 +1,7 @@
 var ListViewLinksModel = require("../../links-view-model");
 var link = require("../../link");
 var navigationLinks = [
-    new link("Basics", "/ui/switch/basics-switch/basics-switch-page"),
-    new link("Switch Styling", "/ui/switch/switch-styling/switch-styling-page"),
-    new link("Switch (Code-Behind)", "/ui/switch/create-switch/create-switch-page"),
+    new link("Styling(Code behind)", "/ui/styling/styling-code-behind/styling-code-behind-page"),
 ];
 function onNavigatingTo(args) {
     var page = args.object;

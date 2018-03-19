@@ -1,9 +1,9 @@
 var ListViewLinksModel = require("../../links-view-model");
 var link = require("../../link");
 var navigationLinks = [
-    new link("Basics", "/ui/switch/basics-switch/basics-switch-page"),
-    new link("Switch Styling", "/ui/switch/switch-styling/switch-styling-page"),
-    new link("Switch (Code-Behind)", "/ui/switch/create-switch/create-switch-page"),
+    new link("Basics", "/ui/segmented-bar/basics-segmented-bar/basics-segmented-bar-page"),
+    new link("SegmentedBar Views", "/ui/segmented-bar/segmented-bar-views/segmented-bar-views-page"),
+    new link("SegmentedBar (Code-behind)", "/ui/segmented-bar/create-segmented-bar/create-segmented-bar-page"),
 ];
 function onNavigatingTo(args) {
     var page = args.object;

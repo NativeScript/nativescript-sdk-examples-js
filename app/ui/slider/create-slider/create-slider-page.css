@@ -1,0 +1,11 @@
+stack-layout{
+    width: 100%;
+}
+button, label, stack-layout {
+    font-size: 20;
+    margin: 11;
+    horizontal-align: center;    
+}
+Slider{
+    width: 200;
+}
