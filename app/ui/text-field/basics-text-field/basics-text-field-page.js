@@ -8,28 +8,28 @@ function onNavigatingTo(args) {
     let page = args.object;
     const dateConverter = {
         toView(value, format) {
-          let result = format;
-          const day = value.getDate();
-          result = result.replace("DD", day < 10 ? `0${day}` : day);
-          const month = value.getMonth() + 1;
-          result = result.replace("MM", month < 10 ? `0${month}` : month);
-          result = result.replace("YYYY", value.getFullYear());
-    
-          return result;
+            let result = format;
+            const day = value.getDate();
+            result = result.replace("DD", day < 10 ? `0${day}` : day);
+            const month = value.getMonth() + 1;
+            result = result.replace("MM", month < 10 ? `0${month}` : month);
+            result = result.replace("YYYY", value.getFullYear());
+
+            return result;
         },
         toModel(value, format) {
-          const ddIndex = format.indexOf("DD");
-          const day = parseInt(value.substr(ddIndex, 2), 10);
-          const mmIndex = format.indexOf("MM");
-          const month = parseInt(value.substr(mmIndex, 2), 10);
-          const yyyyIndex = format.indexOf("YYYY");
-          const year = parseInt(value.substr(yyyyIndex, 4), 10);
-          const result = new Date(year, month - 1, day);
-    
-          return result;
+            const ddIndex = format.indexOf("DD");
+            const day = parseInt(value.substr(ddIndex, 2), 10);
+            const mmIndex = format.indexOf("MM");
+            const month = parseInt(value.substr(mmIndex, 2), 10);
+            const yyyyIndex = format.indexOf("YYYY");
+            const year = parseInt(value.substr(yyyyIndex, 4), 10);
+            const result = new Date(year, month - 1, day);
+
+            return result;
         }
     };
-    
+
     const vm = observableModule.fromObject({
         dateConverter,
         dateFormat: "DD/MM/YYYY",
@@ -39,7 +39,7 @@ function onNavigatingTo(args) {
 }
 // >> textfield-handle-submit-event
 function firstTfLoaded(args) {
-    let firstTextfield =args.object;
+    let firstTextfield = args.object;
     setTimeout(() => {
         firstTextfield.focus(); // Shows the soft input method, ususally a soft keyboard.
     }, 100);

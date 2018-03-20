@@ -11,7 +11,7 @@ function onNavigatingTo(args) {
     vm.set("thirdSwitchResult", true);
     vm.set("thirdSwitch", true);
     // handling Switch checked change 
-    vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
+    vm.on(observableModule.Observable.propertyChangeEvent, function (propertyChangeData) {
         switch (propertyChangeData.propertyName) {
             case "firstSwitch":
                 vm.set("firstSwitchResult", propertyChangeData.value);
@@ -22,11 +22,11 @@ function onNavigatingTo(args) {
             case "thirdSwitch":
                 vm.set("thirdSwitchResult", propertyChangeData.value);
                 break;
-        
+
             default:
                 break;
         }
-      });
+    });
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;

@@ -14,8 +14,8 @@ function onNavigatingTo(args) {
     vm.set("secondSwitch", true);
     vm.set("isEnabledSwitch", true);
     // handle checked change
-    vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
-        if(propertyChangeData.propertyName == 'firstSwitch'){
+    vm.on(observableModule.Observable.propertyChangeEvent, function (propertyChangeData) {
+        if (propertyChangeData.propertyName == 'firstSwitch') {
             if (propertyChangeData.value) {
                 vm.set("firstSwitchState", "ON");
             } else {
@@ -26,10 +26,10 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 // handle checked change
-function switchLoaded(args){
+function switchLoaded(args) {
     let switchComponent = args.object;
-    switchComponent.on("checkedChange", (sargs)=>{
-        console.log("checkedChange "+sargs.object.checked);
+    switchComponent.on("checkedChange", (sargs) => {
+        console.log("checkedChange " + sargs.object.checked);
         let page = sargs.object.page;
         let vm = page.bindingContext;
         if (sargs.object.checked) {
@@ -40,15 +40,15 @@ function switchLoaded(args){
     })
 }
 // setting up isEnabled property
-function onTap(args){
+function onTap(args) {
     let page = args.object;
     let vm = page.bindingContext;
     let isEnabledSwitch = vm.get("isEnabledSwitch");
     vm.set("isEnabledSwitch", !isEnabledSwitch);
-    if(isEnabledSwitch){
+    if (isEnabledSwitch) {
         vm.set("buttonText", "Enable first switch");
     }
-    else{
+    else {
         vm.set("buttonText", "Disable first switch");
     }
 }

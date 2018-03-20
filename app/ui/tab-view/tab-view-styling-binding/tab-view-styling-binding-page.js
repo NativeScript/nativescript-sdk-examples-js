@@ -26,8 +26,8 @@ function changeTab(args) {
     }
 }
 // displaying the old and new TabView selectedIndex
-function onSelectedIndexChanged(args){
-    alert("Selected index has changed ( Old index: "+args.oldIndex+" New index: "+args.newIndex+" )");
+function onSelectedIndexChanged(args) {
+    alert("Selected index has changed ( Old index: " + args.oldIndex + " New index: " + args.newIndex + " )");
 }
 exports.onNavigatingTo = onNavigatingTo;
 exports.changeTab = changeTab;

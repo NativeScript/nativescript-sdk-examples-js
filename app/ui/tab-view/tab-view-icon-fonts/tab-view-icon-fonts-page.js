@@ -22,11 +22,11 @@ function changeTab(args) {
     }
 }
 
-function onTabViewLoaded(args){
+function onTabViewLoaded(args) {
     let tabView = args.object;
     // handling selectedIndexChangedEvent
-    tabView.on("selectedIndexChange", (args)=>{
-        alert("Selected index has changed: "+args.object.selectedIndex);
+    tabView.on("selectedIndexChange", (args) => {
+        alert("Selected index has changed: " + args.object.selectedIndex);
     })
 
 }

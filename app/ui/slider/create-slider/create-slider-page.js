@@ -1,7 +1,7 @@
 var observableModule = require("tns-core-modules/data/observable");
 let sliderModule = require("tns-core-modules/ui/slider");
 // >> creating-slider-code
-function onPageLoaded (args) {
+function onPageLoaded(args) {
     let page = args.object;
     let vm = new observableModule.Observable();
     let stackLayout = page.getViewById("stackLayoutId");
@@ -17,11 +17,11 @@ function onPageLoaded (args) {
     // setting slider.value to 22
     vm.set("age", 22);
 
-    sliderComponent.on("valueChange", (args)=>{
+    sliderComponent.on("valueChange", (args) => {
         vm.set("slResult", args.object.value)
     })
 
-    
+
     stackLayout.addChild(sliderComponent);
 
     page.bindingContext = vm;

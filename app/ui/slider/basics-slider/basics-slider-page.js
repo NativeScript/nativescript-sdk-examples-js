@@ -13,17 +13,17 @@ function onNavigatingTo(args) {
     vm.set("firstMinValue", 0);
     vm.set("firstMaxValue", 100);
     // handle value change
-    vm.on(observableModule.Observable.propertyChangeEvent, function(propertyChangeData){
-        if(propertyChangeData.propertyName == 'sliderValue'){
+    vm.on(observableModule.Observable.propertyChangeEvent, function (propertyChangeData) {
+        if (propertyChangeData.propertyName == 'sliderValue') {
             vm.set("currentValue", propertyChangeData.value);
         }
     });
     page.bindingContext = vm;
 }
 // handle value change
-function onSliderLoaded(args){
+function onSliderLoaded(args) {
     let sliderComponent = args.object;
-    sliderComponent.on("valueChange", (sargs)=>{
+    sliderComponent.on("valueChange", (sargs) => {
         console.log(sargs.object.value);
         let page = sargs.object.page;
         let vm = page.bindingContext;

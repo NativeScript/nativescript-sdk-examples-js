@@ -1,7 +1,7 @@
 var observableModule = require("tns-core-modules/data/observable");
 let switchModule = require("tns-core-modules/ui/switch");
 // >> creating-switch-code
-function onPageLoaded (args) {
+function onPageLoaded(args) {
     let page = args.object;
     let vm = new observableModule.Observable();
     let stackLayout = page.getViewById("stackLayoutId");
@@ -17,12 +17,11 @@ function onPageLoaded (args) {
     mySwitch.bind(options, vm);
     // setting up mySwitch.checked to false
     vm.set("enabled", false);
-    mySwitch.on("checkedChange", (args)=>{
+    mySwitch.on("checkedChange", (args) => {
         vm.set("swResult", args.object.checked)
     })
-    
-    stackLayout.addChild(mySwitch);
 
+    stackLayout.addChild(mySwitch);
     page.bindingContext = vm;
 }
 
