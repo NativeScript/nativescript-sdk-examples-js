@@ -3,7 +3,7 @@ let StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayou
 let Label = require("tns-core-modules/ui/label").Label;
 // >> creating-tab-view-code
 
-function onPageLoaded (args) {
+function onPageLoaded(args) {
     let page = args.object;
     let stackLayout = page.getViewById("stackLayoutId");
 
@@ -34,7 +34,7 @@ function onPageLoaded (args) {
     tabView.selectedIndex = 1;
     // handling selectedIndexChangedEvent
     tabView.on(tabViewModule.TabView.selectedIndexChangedEvent, (args) => {
-        alert("Selected index has changed ( Old index: "+args.oldIndex+" New index: "+args.newIndex+" )");
+        alert("Selected index has changed ( Old index: " + args.oldIndex + " New index: " + args.newIndex + " )");
     });
 
 

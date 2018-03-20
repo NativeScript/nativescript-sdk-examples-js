@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
     <Page.actionBar>
-		<ActionBar title="TextField basics"/>
+		<ActionBar title="SegmentedBar basics"/>
 	</Page.actionBar>
     <GridLayout rows="auto *" >
 		<!-- >> segmented-bar-xml -->

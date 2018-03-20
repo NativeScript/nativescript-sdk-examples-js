@@ -9,14 +9,14 @@ function onNavigatingTo(args) {
     vm.set("visibility1", true);
     vm.set("visibility2", false);
     vm.set("visibility3", false);
-    
+
     page.bindingContext = vm;
 }
 
-function sbLoaded(args){
+function sbLoaded(args) {
     // handle selected index change 
     let segmentedBarComponent = args.object;
-    segmentedBarComponent.on("selectedIndexChange", (sbargs)=>{
+    segmentedBarComponent.on("selectedIndexChange", (sbargs) => {
         let page = sbargs.object.page;
         let vm = page.bindingContext;
         let selectedIndex = sbargs.object.selectedIndex;

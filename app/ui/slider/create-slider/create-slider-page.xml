@@ -1,11 +1,11 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
     <Page.actionBar>
-		<ActionBar title="TextField Code-Behind"/>
+		<ActionBar title="Slider Code-Behind"/>
 	</Page.actionBar>
 
     <!-- >> creating-slider-xml -->
     <StackLayout id="stackLayoutId">
-		<Label text="{{ 'Result: ' + slResult}}" textWrap="true" />
+		    <Label text="{{ 'Result: ' + slResult}}" textWrap="true" />
         
     </StackLayout>
     <!-- << creating-slider-xml -->

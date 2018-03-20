@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Time Picker Configure"/>
+		<ActionBar title="TabView binding"/>
 	</Page.actionBar>
 
    <GridLayout rows="*" columns="*">

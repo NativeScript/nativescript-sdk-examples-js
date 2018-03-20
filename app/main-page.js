@@ -11,7 +11,7 @@ var navigationLinks = [
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/scroll-view"),
-    new link("SearchBar", "/search-bar"),
+    new link("SearchBar", "/ui/search-bar/search-bar-page"),
     new link("SegmentedBar", "/ui/segmented-bar/segmented-bar-page"),
     new link("Slider", "/ui/slider/slider-page"),
     new link("Switch", "/ui/switch/switch-page"),

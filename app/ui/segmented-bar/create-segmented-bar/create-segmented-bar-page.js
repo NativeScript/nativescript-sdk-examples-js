@@ -1,7 +1,7 @@
 var observableModule = require("tns-core-modules/data/observable");
-let segmentedBarModule  = require("tns-core-modules/ui/segmented-bar");
+let segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
 // >> creating-segmented-bar-code
-function onPageLoaded (args) {
+function onPageLoaded(args) {
     let page = args.object;
     let vm = new observableModule.Observable();
     let stackLayout = page.getViewById("stackLayoutId");
@@ -29,11 +29,11 @@ function onPageLoaded (args) {
     // setting SegmentedBar selected index to 0
     vm.set("sbindex", 0);
 
-    segmentedBar.on("selectedIndexChange", (args)=>{
+    segmentedBar.on("selectedIndexChange", (args) => {
         vm.set("sbResult", args.object.selectedIndex)
     })
 
-    
+
     stackLayout.insertChild(segmentedBar, 0);
 
     page.bindingContext = vm;
