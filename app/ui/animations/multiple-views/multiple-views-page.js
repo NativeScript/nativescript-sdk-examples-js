@@ -1,8 +1,9 @@
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
-const AnimationDefinition = require("tns-core-modules/ui/animation").AnimationDefinition;
 const Animation = require("tns-core-modules/ui/animation").Animation;
 
-let view1, view2, view3, view4;
+let view1;
+let view2;
+let view3;
+let view4;
 
 function onLoaded(args) {
     const page = args.object;
@@ -16,37 +17,37 @@ exports.onLoaded = onLoaded;
 
 function animate() {
     // >> animate-multiple-views
-    let definitions = [];
+    const definitions = [];
 
-    let definition1 = {
+    const definition1 = {
         target: view1,
         translate: { x: 200, y: 0 },
         duration: 1000
     };
     definitions.push(definition1);
 
-    let definition2 = {
+    const definition2 = {
         target: view2,
         translate: { x: 0, y: 200 },
         duration: 1000
     };
     definitions.push(definition2);
 
-    let definition3 = {
+    const definition3 = {
         target: view3,
         translate: { x: -200, y: 0 },
         duration: 1000
     };
     definitions.push(definition3);
 
-    let definition4 = {
+    const definition4 = {
         target: view4,
         translate: { x: 0, y: -200 },
         duration: 1000
     };
     definitions.push(definition4);
 
-    let animationSet = new Animation(definitions);
+    const animationSet = new Animation(definitions);
 
     animationSet.play()
         .then(() => {
@@ -54,7 +55,7 @@ function animate() {
         }).catch((e) => {
             console.log(e.message);
         });
-    // << animate-multiple-views 
+    // << animate-multiple-views
 }
 
 exports.animate = animate;

@@ -1,10 +1,11 @@
-var application = require("tns-core-modules/application");
-var Observable = require("tns-core-modules/data/observable").Observable;
-var platformModule = require("tns-core-modules/platform");
-var utilsModule = require("tns-core-modules/utils/utils");
-var vm, observer;
+const application = require("tns-core-modules/application");
+const Observable = require("tns-core-modules/data/observable").Observable;
+const platformModule = require("tns-core-modules/platform");
+const utilsModule = require("tns-core-modules/utils/utils");
+let vm;
+let observer;
 function onNavigatingTo(args) {
-    var page = args.object;
+    const page = args.object;
     vm = new Observable();
     vm.set("info", "Using iOS Notification Observer \nto check the battery life");
     vm.set("batteryLife", "0");
@@ -20,7 +21,7 @@ function onNavigatedTo(args) {
         // import { ios as iosUtils } from "tns-core-modules/utils/utils";
         utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryMonitoringEnabled = true;
         vm.set("batteryLife", +(utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1));
-        observer = application.ios.addNotificationObserver(UIDeviceBatteryLevelDidChangeNotification, function onReceiveCallback(notification) {
+        observer = application.ios.addNotificationObserver(UIDeviceBatteryLevelDidChangeNotification, (notification) => {
             // tslint:disable:max-line-length
             vm.set("batteryLife", +(utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1));
         });

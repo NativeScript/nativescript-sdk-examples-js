@@ -6,7 +6,7 @@ function onNavigatingTo(args) {
 
     const vm = new Observable();
     vm.set("isLoading", true);
-    var snippet = '<ActivityIndicator busy="{{ isLoading }}" \n  backgroundColor="lightgray" \n  borderRadius="50" \n  color="orangered" \n  width="100" height="100"/>';
+    const snippet = "<ActivityIndicator busy='{{ isLoading }}' \n  backgroundColor='lightgray' \n  borderRadius='50' \n  color='orangered' \n  width='100' height='100'/>";
     vm.set("snippet", snippet);
 
     // >> large-ios-indicator

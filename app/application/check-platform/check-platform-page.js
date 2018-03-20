@@ -1,10 +1,10 @@
 // >> application-require-js
-var application = require("tns-core-modules/application");
+const application = require("tns-core-modules/application");
 // << application-require-js
 function onGridLoaded(args) {
-    var grid = args.object;
-    var lbl = grid.getViewById("lbl");
-    var iconLabel = grid.getViewById("iconLabel");
+    const grid = args.object;
+    const lbl = grid.getViewById("lbl");
+    const iconLabel = grid.getViewById("iconLabel");
     iconLabel.className = "fa";
     iconLabel.textAlignment = "center";
     iconLabel.verticalAlignment = "middle";
@@ -31,7 +31,7 @@ function onGridLoaded(args) {
 }
 exports.onGridLoaded = onGridLoaded;
 function onNavigatingTo(args) {
-    var page = args.object;
+    const page = args.object;
     page.actionBar.title = args.context.title;
 }
 exports.onNavigatingTo = onNavigatingTo;

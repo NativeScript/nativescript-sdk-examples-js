@@ -1,10 +1,9 @@
 const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
 const Animation = require("tns-core-modules/ui/animation").Animation;
-const AnimationDefinitions = require("tns-core-modules/ui/animation").AnimationDefinitions;
 const Color = require("tns-core-modules/color").Color;
 
-let animation,
-    myView;
+let animation;
+let myView;
 
 function onLoaded(args) {
     const page = args.object;
@@ -22,8 +21,14 @@ function animate(args) {
         iterations: 3,
         opacity: 0.8,
         rotate: 360,
-        scale: { x: 2, y: 2 },
-        translate: { x: 0, y: 200 }
+        scale: {
+            x: 2,
+            y: 2
+        },
+        translate: {
+            x: 0,
+            y: 200
+        }
     }).then(() => {
         console.log("Animation finished");
     }).catch((e) => {
@@ -37,7 +42,7 @@ function animateTarget(args) {
     // >> animation-target
     const myView = args.object;
 
-    let animationDefinition = {
+    const animationDefinition = {
         target: myView, // provide the view to animate
         curve: AnimationCurve.easeOut,
         duration: 1000,
@@ -49,13 +54,13 @@ function animateTarget(args) {
     animation.play()
         .then(() => {
             console.log("Animation finished");
-            console.log("animation.isPlaying: " + animation.isPlaying);
+            console.log("animation.isPlaying: ", animation.isPlaying);
         }).catch((e) => {
             console.log(e.message);
         });
     // << animation-target
 }
-exports.animateTarget = animateTarget
+exports.animateTarget = animateTarget;
 
 function cancelAnimation() {
     // >> animation-cancel
@@ -64,19 +69,19 @@ function cancelAnimation() {
 }
 
 function demonstrateSimpleAnimations(args) {
-    let view = args.object;
+    const view = args.object;
 
     // >> animating-background-color
     view.backgroundColor = new Color("red");
-    view.animate({ 
-        backgroundColor: new Color("green"), 
-        duration: 2000 
+    view.animate({
+        backgroundColor: new Color("green"),
+        duration: 2000
     });
     // << animating-background-color
 
     // >> using-animation-curve-enum
     view.animate({
-        translate: { x: 0, y: 100},    
+        translate: { x: 0, y: 100 },
         duration: 1000,
         curve: AnimationCurve.easeIn
     });
@@ -84,9 +89,12 @@ function demonstrateSimpleAnimations(args) {
 
     // >> creating-cubic-bezier
     view.animate({
-        translate: { x: 0, y: 100 },
+        translate: {
+            x: 0,
+            y: 100
+        },
         duration: 1000,
-        curve: enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
+        curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
     // << creating-cubic-bezier
 }
