@@ -1,10 +1,12 @@
-var observableModule = require("tns-core-modules/data/observable");
-let textFieldModule = require("tns-core-modules/ui/text-field")
+const observableModule = require("tns-core-modules/data/observable");
+// >> textfield-require
+const textFieldModule = require("tns-core-modules/ui/text-field");
+// << textfield-require
 // >> creating-text-field-code
 function onPageLoaded(args) {
-    let page = args.object;
-    let vm = new observableModule.Observable();
-    let stackLayout = page.getViewById("stackLayoutId");
+    const page = args.object;
+    const vm = new observableModule.Observable();
+    const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("username", "john");
     vm.set("tfResult", "");
@@ -12,7 +14,7 @@ function onPageLoaded(args) {
     vm.set("secure", false);
     // changing TextField secure property value on button tap
     vm.set("onTap", (btargs) => {
-        let secure = vm.get("secure")
+        const secure = vm.get("secure");
         vm.set("secure", !secure);
         if (secure) {
             vm.set("secureButton", "TextField secure:(OFF)");
@@ -22,25 +24,24 @@ function onPageLoaded(args) {
         }
     });
     // creating new TextField and binding the text property
-    var options = {
+    const options = {
         sourceProperty: "username",
         targetProperty: "text"
-    }
-    let firstTextField = new textFieldModule.TextField();
+    };
+    const firstTextField = new textFieldModule.TextField();
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener
-    firstTextField.on("textChange", function (args) {
+    firstTextField.on("textChange", (args) => {
         vm.set("tfResult", args.object.text);
-    })
-
+    });
 
     // creating new TextField and binding the secure property
-    var secondOptions = {
+    const secondOptions = {
         sourceProperty: "secure",
         targetProperty: "secure"
-    }
-    let secondTextField = new textFieldModule.TextField();
+    };
+    const secondTextField = new textFieldModule.TextField();
     secondTextField.bind(secondOptions, vm);
 
     stackLayout.addChild(firstTextField);

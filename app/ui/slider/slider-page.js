@@ -1,11 +1,14 @@
-var ListViewLinksModel = require("../../links-view-model");
-var link = require("../../link");
-var navigationLinks = [
+const ListViewLinksModel = require("../../links-view-model");
+const link = require("../../link");
+const navigationLinks = [
     new link("Basics", "/ui/slider/basics-slider/basics-slider-page"),
-    new link("Slider (Code-Behind)", "/ui/slider/create-slider/create-slider-page"),
+    new link("Slider (Code-Behind)", "/ui/slider/create-slider/create-slider-page")
 ];
 function onNavigatingTo(args) {
-    var page = args.object;
-    page.bindingContext = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: args.context.title });
+    const page = args.object;
+    page.bindingContext = new ListViewLinksModel({
+        links: navigationLinks,
+        actionBarTitle: args.context.title
+    });
 }
 exports.onNavigatingTo = onNavigatingTo;

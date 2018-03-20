@@ -1,10 +1,12 @@
-var observableModule = require("tns-core-modules/data/observable");
-let segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
+const observableModule = require("tns-core-modules/data/observable");
+// >> segmented-bar-require
+const segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
+// << segmented-bar-require
 // >> creating-segmented-bar-code
 function onPageLoaded(args) {
-    let page = args.object;
-    let vm = new observableModule.Observable();
-    let stackLayout = page.getViewById("stackLayoutId");
+    const page = args.object;
+    const vm = new observableModule.Observable();
+    const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("sbResult", 0);
     // creating new SegmentedBar and binding the selectedIndex property
@@ -12,15 +14,15 @@ function onPageLoaded(args) {
         sourceProperty: "sbindex",
         targetProperty: "selectedIndex"
     };
-    let segmentedBar = new segmentedBarModule.SegmentedBar();
-    var items = [];
-    var item1 = new segmentedBarModule.SegmentedBarItem();
+    const segmentedBar = new segmentedBarModule.SegmentedBar();
+    const items = [];
+    const item1 = new segmentedBarModule.SegmentedBarItem();
     item1.title = "Item1";
     items.push(item1);
-    var item2 = new segmentedBarModule.SegmentedBarItem();
+    const item2 = new segmentedBarModule.SegmentedBarItem();
     item2.title = "Item2";
     items.push(item2);
-    var item3 = new segmentedBarModule.SegmentedBarItem();
+    const item3 = new segmentedBarModule.SegmentedBarItem();
     item3.title = "Item3";
     items.push(item3);
     segmentedBar.items = items;
@@ -30,9 +32,8 @@ function onPageLoaded(args) {
     vm.set("sbindex", 0);
 
     segmentedBar.on("selectedIndexChange", (args) => {
-        vm.set("sbResult", args.object.selectedIndex)
-    })
-
+        vm.set("sbResult", args.object.selectedIndex);
+    });
 
     stackLayout.insertChild(segmentedBar, 0);
 

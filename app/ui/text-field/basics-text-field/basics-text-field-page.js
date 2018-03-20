@@ -1,11 +1,7 @@
-let observableModule = require("tns-core-modules/data/observable");
-// >> textfield-require
-let textViewModule = require("tns-core-modules/ui/text-view");
-// << textfield-require
-
+const observableModule = require("tns-core-modules/data/observable");
 // setting up the format for the TextField text
 function onNavigatingTo(args) {
-    let page = args.object;
+    const page = args.object;
     const dateConverter = {
         toView(value, format) {
             let result = format;
@@ -39,7 +35,7 @@ function onNavigatingTo(args) {
 }
 // >> textfield-handle-submit-event
 function firstTfLoaded(args) {
-    let firstTextfield = args.object;
+    const firstTextfield = args.object;
     setTimeout(() => {
         firstTextfield.focus(); // Shows the soft input method, ususally a soft keyboard.
     }, 100);
@@ -47,8 +43,7 @@ function firstTfLoaded(args) {
 
 function onReturnPress(args) {
     // returnPress event will be triggered when user submits a value
-    let textField = args.object;
-
+    const textField = args.object;
     // Gets or sets the placeholder text.
     console.log(textField.hint);
     // Gets or sets the input text.
@@ -79,20 +74,20 @@ function onReturnPress(args) {
 
 function onFocus(args) {
     // focus event will be triggered when the users enters the TextField
-    let textField = args.object;
     console.log("onFocus event");
 }
 
 function onBlur(args) {
     // blur event will be triggered when the user leaves the TextField
-    let textField = args.object;
-    textField.dismissSoftInput()
+    const textField = args.object;
+    textField.dismissSoftInput();
     console.log("onBlur event");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.firstTfLoaded = firstTfLoaded;
 exports.firstTfLoaded = firstTfLoaded;
+exports.onReturnPress = onReturnPress;
 exports.onFocus = onFocus;
 exports.onBlur = onBlur;
 // << textfield-handle-submit-event

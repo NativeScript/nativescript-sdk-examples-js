@@ -1,7 +1,7 @@
-let observableModule = require("tns-core-modules/data/observable");
+const observableModule = require("tns-core-modules/data/observable");
 // >> segmented-bar-view-code
 function onNavigatingTo(args) {
-    let page = args.object;
+    const page = args.object;
     // set up the SelectedBar selected index
     const vm = new observableModule.Observable();
     vm.set("prop", 0);
@@ -14,12 +14,12 @@ function onNavigatingTo(args) {
 }
 
 function sbLoaded(args) {
-    // handle selected index change 
-    let segmentedBarComponent = args.object;
+    // handle selected index change
+    const segmentedBarComponent = args.object;
     segmentedBarComponent.on("selectedIndexChange", (sbargs) => {
-        let page = sbargs.object.page;
-        let vm = page.bindingContext;
-        let selectedIndex = sbargs.object.selectedIndex;
+        const page = sbargs.object.page;
+        const vm = page.bindingContext;
+        const selectedIndex = sbargs.object.selectedIndex;
         vm.set("prop", selectedIndex);
         switch (selectedIndex) {
             case 0:
@@ -41,7 +41,7 @@ function sbLoaded(args) {
                 break;
         }
 
-    })
+    });
 }
 
 exports.onNavigatingTo = onNavigatingTo;

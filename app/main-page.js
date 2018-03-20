@@ -1,6 +1,6 @@
-var ListViewLinksModel = require("./links-view-model");
-var link = require("./link");
-var navigationLinks = [
+const ListViewLinksModel = require("./links-view-model");
+const link = require("./link");
+const navigationLinks = [
     new link("Application", "/application/application-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
@@ -43,8 +43,8 @@ var navigationLinks = [
 ];
 
 function onNavigatingTo(args) {
-    var page = args.object;
-    var vm = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: "Cookbook" });
+    const page = args.object;
+    let vm = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: "Cookbook" });
     page.bindingContext = vm;
 }
 
