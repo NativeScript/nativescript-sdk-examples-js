@@ -1,15 +1,15 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/activity-indicator/basics/basics-page"),
-    new link("Styling", "/ui/activity-indicator/styling/styling-page"),
-    new link("Dynamic Creation", "/ui/activity-indicator/code-behind/code-behind-page")
+    new link("Basics", "/ui/button/basics/basics-page"),
+    new link("Styling", "/ui/button/styling/styling-page"),
+    new link("Dynamic Creation", "/ui/button/dynamic-creation/dynamic-creation-page")
 ];
-
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title });
+        actionBarTitle: args.context.title
+    });
 }
 exports.onNavigatingTo = onNavigatingTo;

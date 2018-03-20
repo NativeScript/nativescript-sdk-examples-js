@@ -1,11 +1,11 @@
 var ListViewLinksModel = require("./links-view-model");
 var link = require("./link");
 var navigationLinks = [
-    new link("Button", "/button"),
     new link("Application", "/application/application-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
     new link("Animations", "ui/animations/animations-page"),
+    new link("Button", "ui/button/button-page"),
     new link("DatePicker", "/date-picker"),
     new link("Dialogs", "/dialogs"),
     new link("Layouts", "/layouts"),

@@ -1,0 +1,16 @@
+/* >> button-css-styles */
+.my-button {
+    background-color: orangered;
+    border-radius: 5;
+    color: white;
+    font-family: FontAwesome;
+    font-size: 24;
+    vertical-align: middle;
+    width: 80%;
+}
+
+.my-button:active {
+    background-color: lightslategray;
+    color:white;
+}
+/* << button-css-styles */

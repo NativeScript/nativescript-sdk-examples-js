@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
 	<Page.actionBar>
-		<ActionBar title="Animation Properties" />
+		<ActionBar title="Animating Multiple Properties" />
 	</Page.actionBar>
 	<GridLayout rows="auto, *">
         <Button row="0" text="Animate" tap="animate" class="btn btn-primary btn-active" width="80%"/>

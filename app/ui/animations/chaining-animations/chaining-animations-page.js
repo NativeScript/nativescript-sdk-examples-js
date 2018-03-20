@@ -1,6 +1,3 @@
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
-const Animation = require("tns-core-modules/ui/animation").Animation;
-
 let myView;
 
 function onLoaded(args) {
@@ -21,7 +18,7 @@ function onLoaded(args) {
         }).catch((e) => {
             console.log(e.message);
         });
-    // << chaining-animations    
+    // << chaining-animations
 }
 exports.onLoaded = onLoaded;
 
