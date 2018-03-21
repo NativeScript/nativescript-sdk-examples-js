@@ -7,17 +7,11 @@ const navigationLinks = [
 ];
 
 // >> animations-imports
-// Main Animation class
-const Animation = require("tns-core-modules/ui/animation").Animation;
-
 // Full list of animating properties at https://docs.nativescript.org/api-reference/interfaces/_ui_animation_.animationdefinition
 const AnimationDefinition = require("tns-core-modules/ui/animation").AnimationDefinition;
 
 // Defines a pair of values (horizontal and vertical) for translate and scale animations.
 const Pair = require("tns-core-modules/ui/animation").Pair;
-
-// AnimationCurveEnum: ease, easeIn, easeInOut, easeOut, linear, spring
-const AnimationCurveEnum = require("tns-core-modules/ui/enums").AnimationCurve;
 // << animations-imports
 
 function onNavigatingTo(args) {

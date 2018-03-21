@@ -44,7 +44,10 @@ const navigationLinks = [
 
 function onNavigatingTo(args) {
     const page = args.object;
-    let vm = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: "Cookbook" });
+    const vm = new ListViewLinksModel({
+        links: navigationLinks,
+        actionBarTitle: "Cookbook"
+    });
     page.bindingContext = vm;
 }
 

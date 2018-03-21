@@ -1,5 +1,7 @@
+// >> animation-import
+// Main Animation class
 const Animation = require("tns-core-modules/ui/animation").Animation;
-
+// << animation-import
 let view1;
 let view2;
 let view3;

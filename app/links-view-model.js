@@ -3,7 +3,7 @@ const observableArrayModule = require("tns-core-modules/data/observable-array");
 const frameModule = require("tns-core-modules/ui/frame");
 
 function linksSort(value) {
-    value.sort(function (a, b) {
+    value.sort((a, b) => {
         const titleA = a.title.toUpperCase();
         const titleB = b.title.toUpperCase();
 
@@ -20,13 +20,13 @@ function ListViewLinksModel(info) {
         "actionBarTitle": info.actionBarTitle
     });
 
-    viewModel.set("onItemTap", function (args) {
+    viewModel.set("onItemTap", (args) => {
         const linkItem = viewModel.get("links").getItem(args.index);
         frameModule.topmost().navigate({
             moduleName: linkItem.link,
-            context: { "title": linkItem.title },
+            context: { "title": linkItem.title }
         });
-    })
+    });
 
     return viewModel;
 }
