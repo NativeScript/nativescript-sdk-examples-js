@@ -1,0 +1,27 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="SegmentedBar views"/>
+	</Page.actionBar>
+    <GridLayout rows="auto *" >
+		<!-- >> segmented-bar-view-xml -->
+		<SegmentedBar row="0" loaded="sbLoaded" class="m-5" selectedIndex="{{ sbSelectedIndex }}">
+			<SegmentedBar.items>
+				<SegmentedBarItem title="Item 1" />
+				<SegmentedBarItem title="Item 2" />
+				<SegmentedBarItem title="Item 3" />
+			</SegmentedBar.items>
+		</SegmentedBar>
+		<GridLayout row="1" rows="*" visibility="{{ visibility1 ? 'visible' : 'collapsed' }}" backgroundColor="white">
+			<Label text="{{ 'The new selectedIndex is: ' + prop }}" class="m-15 h3 p-5 text-center"/>
+		</GridLayout>
+
+		<GridLayout row="1" rows="*" visibility="{{ visibility2 ? 'visible' : 'collapsed' }}" backgroundColor="green">
+			<Label text="{{ 'The new selectedIndex is: ' + prop }}" class="m-15 h3 p-5 text-center" color="white"/>
+		</GridLayout>
+
+		<GridLayout row="1" rows="*" visibility="{{ visibility3 ? 'visible' : 'collapsed' }}" backgroundColor="red">
+			<Label text="{{ 'The new selectedIndex is: ' + prop }}" class="m-15 h3 p-5 text-center" color="white"/>
+		</GridLayout>
+		<!-- << segmented-bar-view-xml -->
+	</GridLayout>
+</Page>

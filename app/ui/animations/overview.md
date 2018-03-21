@@ -7,4 +7,6 @@ The declarative way uses the familiar CSS3 animations API and create CSS keyfram
 more information about CSS Animations vsm be found in this section, while the current article will provide detailed informatiion on how to use the NativeScript `Animation` module.
 
 The following classes, interfaces and enums can be explicitly used in your applications.
+<snippet id='animation-import'/>
+<snippet id='animation-curve-imports'/>
 <snippet id='animations-imports'/>

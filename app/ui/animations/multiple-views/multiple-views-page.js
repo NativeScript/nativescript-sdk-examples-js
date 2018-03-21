@@ -1,5 +1,7 @@
+// >> animation-import
+// Main Animation class
 const Animation = require("tns-core-modules/ui/animation").Animation;
-
+// << animation-import
 let view1;
 let view2;
 let view3;
@@ -21,28 +23,40 @@ function animate() {
 
     const definition1 = {
         target: view1,
-        translate: { x: 200, y: 0 },
+        translate: {
+            x: 200,
+            y: 0
+        },
         duration: 1000
     };
     definitions.push(definition1);
 
     const definition2 = {
         target: view2,
-        translate: { x: 0, y: 200 },
+        translate: {
+            x: 0,
+            y: 200
+        },
         duration: 1000
     };
     definitions.push(definition2);
 
     const definition3 = {
         target: view3,
-        translate: { x: -200, y: 0 },
+        translate: {
+            x: -200,
+            y: 0
+        },
         duration: 1000
     };
     definitions.push(definition3);
 
     const definition4 = {
         target: view4,
-        translate: { x: 0, y: -200 },
+        translate: {
+            x: 0,
+            y: -200
+        },
         duration: 1000
     };
     definitions.push(definition4);

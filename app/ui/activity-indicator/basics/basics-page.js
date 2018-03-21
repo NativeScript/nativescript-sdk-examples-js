@@ -1,6 +1,3 @@
-// >> activity-indicator-require
-const ActivityIndicator = require("tns-core-modules/ui/activity-indicator").ActivityIndicator;
-// << activity-indicator-require
 const Observable = require("tns-core-modules/data/observable").Observable;
 
 function onNavigatingTo(args) {

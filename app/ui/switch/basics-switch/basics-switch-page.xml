@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Switch basics"/>
+	</Page.actionBar>
+    <StackLayout class="example-container">
+        <!-- >> switch-basics-xml -->
+        <GridLayout rows="auto auto auto" columns="* *" class="m-5">
+            <Label class="h3 m-15" text="{{ firstSwitchState }}" textWrap="true" row="0" col="0"/>
+            <Switch class="m-15" checked="{{ firstSwitch }}" isEnabled="{{ isEnabledSwitch }}" checkedChange="onFirstChecked" row="0" col="1"/>
+            <Label class="h3 m-15" text="{{ secondSwitchState }}" textWrap="true" row="1" col="0"/>
+            <Switch class="m-15" checked="{{ secondSwitch }}" loaded="switchLoaded" checkedChange="onSecondChecked" row="1" col="1"/>
+            <Button row="2" col="0" colSpan="2" text="{{ buttonText }}" tap="onTap" />
+        </GridLayout>
+        <!-- << switch-basics-xml -->
+    </StackLayout>
+</Page>

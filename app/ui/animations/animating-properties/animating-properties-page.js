@@ -1,4 +1,7 @@
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
+// >> animation-curve-imports
+// AnimationCurveEnum: ease, easeIn, easeInOut, easeOut, linear, spring
+const AnimationCurveEnum = require("tns-core-modules/ui/enums").AnimationCurve;
+// << animation-curve-imports
 const Animation = require("tns-core-modules/ui/animation").Animation;
 const Color = require("tns-core-modules/color").Color;
 
@@ -15,7 +18,7 @@ function animate(args) {
     // >> animation-properties
     myView.animate({
         backgroundColor: "#414b7d",
-        curve: AnimationCurve.easeOut,
+        curve: AnimationCurveEnum.easeOut,
         delay: 300,
         duration: 3000,
         iterations: 3,
@@ -33,7 +36,7 @@ function animate(args) {
         console.log("Animation finished");
     }).catch((e) => {
         console.log(e.message);
-    })
+    });
     // << animation-properties
 }
 exports.animate = animate;
@@ -44,10 +47,16 @@ function animateTarget(args) {
 
     const animationDefinition = {
         target: myView, // provide the view to animate
-        curve: AnimationCurve.easeOut,
+        curve: AnimationCurveEnum.easeOut,
         duration: 1000,
-        scale: { x: 0.2, y: 0.2 },
-        translate: { x: -50, y: -50 }
+        scale: {
+            x: 0.2,
+            y: 0.2
+        },
+        translate: {
+            x: -50,
+            y: -50
+        }
     };
 
     animation = new Animation([animationDefinition], false);
@@ -81,7 +90,10 @@ function demonstrateSimpleAnimations(args) {
 
     // >> using-animation-curve-enum
     view.animate({
-        translate: { x: 0, y: 100 },
+        translate: {
+            x: 0,
+            y: 100
+        },
         duration: 1000,
         curve: AnimationCurve.easeIn
     });

@@ -1,6 +1,6 @@
-var ListViewLinksModel = require("./links-view-model");
-var link = require("./link");
-var navigationLinks = [
+const ListViewLinksModel = require("./links-view-model");
+const link = require("./link");
+const navigationLinks = [
     new link("Application", "/application/application-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
@@ -11,15 +11,15 @@ var navigationLinks = [
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/scroll-view"),
-    new link("SearchBar", "/search-bar"),
-    new link("SegmentedBar", "/segmented-bar"),
-    new link("Slider", "/slider"),
+    new link("SearchBar", "/ui/search-bar/search-bar-page"),
+    new link("SegmentedBar", "/ui/segmented-bar/segmented-bar-page"),
+    new link("Slider", "/ui/slider/slider-page"),
     new link("Switch", "/ui/switch/switch-page"),
     new link("TabView", "/ui/tab-view/tab-view-page"),
     new link("TextField", "ui/text-field/text-field-page"),
     new link("TextView", "/ui/text-view/text-view-page"),
     new link("WebView", "/ui/web-view/web-view-page"),
-    new link("Style", "/style"),
+    new link("Style", "/ui/styling/styling-page"),
     new link("Gestures", "/gestures"),
     new link("HtmlView", "/html-view"),
     new link("Image", "/image"),
@@ -43,8 +43,11 @@ var navigationLinks = [
 ];
 
 function onNavigatingTo(args) {
-    var page = args.object;
-    var vm = new ListViewLinksModel({ links: navigationLinks, actionBarTitle: "Cookbook" });
+    const page = args.object;
+    const vm = new ListViewLinksModel({
+        links: navigationLinks,
+        actionBarTitle: "Cookbook"
+    });
     page.bindingContext = vm;
 }
 

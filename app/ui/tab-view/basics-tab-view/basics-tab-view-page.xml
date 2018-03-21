@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="TextView binding"/>
+		<ActionBar title="TabView basics"/>
 	</Page.actionBar>
 
     <GridLayout rows="*" columns="*">

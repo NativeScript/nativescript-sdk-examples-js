@@ -1,35 +1,31 @@
-let observableModule = require("tns-core-modules/data/observable");
-// >> textfield-require
-let textViewModule = require("tns-core-modules/ui/text-view");
-// << textfield-require
-
+const observableModule = require("tns-core-modules/data/observable");
 // setting up the format for the TextField text
 function onNavigatingTo(args) {
-    let page = args.object;
+    const page = args.object;
     const dateConverter = {
         toView(value, format) {
-          let result = format;
-          const day = value.getDate();
-          result = result.replace("DD", day < 10 ? `0${day}` : day);
-          const month = value.getMonth() + 1;
-          result = result.replace("MM", month < 10 ? `0${month}` : month);
-          result = result.replace("YYYY", value.getFullYear());
-    
-          return result;
+            let result = format;
+            const day = value.getDate();
+            result = result.replace("DD", day < 10 ? `0${day}` : day);
+            const month = value.getMonth() + 1;
+            result = result.replace("MM", month < 10 ? `0${month}` : month);
+            result = result.replace("YYYY", value.getFullYear());
+
+            return result;
         },
         toModel(value, format) {
-          const ddIndex = format.indexOf("DD");
-          const day = parseInt(value.substr(ddIndex, 2), 10);
-          const mmIndex = format.indexOf("MM");
-          const month = parseInt(value.substr(mmIndex, 2), 10);
-          const yyyyIndex = format.indexOf("YYYY");
-          const year = parseInt(value.substr(yyyyIndex, 4), 10);
-          const result = new Date(year, month - 1, day);
-    
-          return result;
+            const ddIndex = format.indexOf("DD");
+            const day = parseInt(value.substr(ddIndex, 2), 10);
+            const mmIndex = format.indexOf("MM");
+            const month = parseInt(value.substr(mmIndex, 2), 10);
+            const yyyyIndex = format.indexOf("YYYY");
+            const year = parseInt(value.substr(yyyyIndex, 4), 10);
+            const result = new Date(year, month - 1, day);
+
+            return result;
         }
     };
-    
+
     const vm = observableModule.fromObject({
         dateConverter,
         dateFormat: "DD/MM/YYYY",
@@ -39,7 +35,7 @@ function onNavigatingTo(args) {
 }
 // >> textfield-handle-submit-event
 function firstTfLoaded(args) {
-    let firstTextfield =args.object;
+    const firstTextfield = args.object;
     setTimeout(() => {
         firstTextfield.focus(); // Shows the soft input method, ususally a soft keyboard.
     }, 100);
@@ -47,8 +43,7 @@ function firstTfLoaded(args) {
 
 function onReturnPress(args) {
     // returnPress event will be triggered when user submits a value
-    let textField = args.object;
-
+    const textField = args.object;
     // Gets or sets the placeholder text.
     console.log(textField.hint);
     // Gets or sets the input text.
@@ -79,20 +74,20 @@ function onReturnPress(args) {
 
 function onFocus(args) {
     // focus event will be triggered when the users enters the TextField
-    let textField = args.object;
     console.log("onFocus event");
 }
 
 function onBlur(args) {
     // blur event will be triggered when the user leaves the TextField
-    let textField = args.object;
-    textField.dismissSoftInput()
+    const textField = args.object;
+    textField.dismissSoftInput();
     console.log("onBlur event");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.firstTfLoaded = firstTfLoaded;
 exports.firstTfLoaded = firstTfLoaded;
+exports.onReturnPress = onReturnPress;
 exports.onFocus = onFocus;
 exports.onBlur = onBlur;
 // << textfield-handle-submit-event

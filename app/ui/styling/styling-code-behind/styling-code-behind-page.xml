@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"  loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Styling Code-behind"/>
+	</Page.actionBar>
+    <StackLayout id="layoutContainer">
+       <Label text="Sample label" class="title" textWrap="true" />
+    </StackLayout>
+</Page>
