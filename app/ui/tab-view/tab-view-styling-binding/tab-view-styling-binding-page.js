@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> tab-view-binding-code
 function onNavigatingTo(args) {
     const page = args.object;
@@ -28,7 +29,10 @@ function changeTab(args) {
 }
 // displaying the old and new TabView selectedIndex
 function onSelectedIndexChanged(args) {
-    alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`);
+    dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
+    .then(() => {
+        console.log("Dialog closed!");
+    });
 }
 exports.onNavigatingTo = onNavigatingTo;
 exports.changeTab = changeTab;

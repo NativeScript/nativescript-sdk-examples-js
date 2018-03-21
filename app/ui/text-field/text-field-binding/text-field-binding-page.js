@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> text-field-binding-code
 function onNavigatingTo(args) {
     const page = args.object;
@@ -32,7 +33,10 @@ function textFieldSecureStateChange(args) {
 }
 // displaying the TextField text in an Alert dialog
 function showText(args) {
-    alert(`Text: ${vm.get("tfText")}`);
+    dialogs.alert(`Text: ${vm.get("tfText")}`)
+    .then(() => {
+        console.log("Dialog closed!");
+    });
 }
 
 exports.onNavigatingTo = onNavigatingTo;

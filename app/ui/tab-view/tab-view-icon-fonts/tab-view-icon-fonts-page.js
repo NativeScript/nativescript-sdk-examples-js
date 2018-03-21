@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> text-field-binding-code
 function onNavigatingTo(args) {
     const page = args.object;
@@ -27,7 +28,10 @@ function onTabViewLoaded(args) {
     const tabView = args.object;
     // handling selectedIndexChangedEvent
     tabView.on("selectedIndexChange", (args) => {
-        alert(`Selected index has changed: ${args.object.selectedIndex}`);
+        dialogs.alert(`Selected index has changed: ${args.object.selectedIndex}`)
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     });
 
 }

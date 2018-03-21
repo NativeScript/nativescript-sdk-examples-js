@@ -1,5 +1,6 @@
 // >> tab-view-require
 const tabViewModule = require("tns-core-modules/ui/tab-view");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // << tab-view-require
 const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
 const Label = require("tns-core-modules/ui/label").Label;
@@ -34,7 +35,10 @@ function onPageLoaded(args) {
     tabView.selectedIndex = 1;
     // handling selectedIndexChangedEvent
     tabView.on(tabViewModule.TabView.selectedIndexChangedEvent, (args) => {
-        alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex})`);
+        dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex})`)
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     });
 
 

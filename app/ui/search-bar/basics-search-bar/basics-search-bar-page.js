@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> search-bar-basics-code
 function onNavigatingTo(args) {
     const page = args.object;
@@ -19,13 +20,19 @@ function onNavigatingTo(args) {
 function onSubmit(args) {
     const searchbar = args.object;
     console.log("Search submit result: ", searchbar.text);
-    alert(`You are searching for ${searchbar.text}`);
+    dialogs.alert(`You are searching for ${searchbar.text}`)
+    .then(() => {
+        console.log("Dialog closed!");
+    });
 }
 
 // Handle SearchBar `clear` event.
 function onClear(args) {
     console.log("clear search-bar text");
-    alert("clear search-bar text");
+    dialogs.alert("clear search-bar text")
+    .then(() => {
+        console.log("Dialog closed!");
+    });
 }
 
 exports.onNavigatingTo = onNavigatingTo;

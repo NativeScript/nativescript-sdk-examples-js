@@ -1,5 +1,6 @@
 // >> setting-url-webview
 const Observable = require("tns-core-modules/data/observable").Observable;
+const dialogs = require("tns-core-modules/ui/dialogs");
 const webViewModule = require("tns-core-modules/ui/web-view");
 function onNavigatingTo(args) {
     const page = args.object;
@@ -48,7 +49,10 @@ function submit(args) {
         textField.dismissSoftInput();
     }
     else {
-        alert("Please, add `http://` or `https://` in front of the URL string");
+        dialogs.alert("Please, add `http://` or `https://` in front of the URL string")
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     }
 }
 exports.onNavigatingTo = onNavigatingTo;

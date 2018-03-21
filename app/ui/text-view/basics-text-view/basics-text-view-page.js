@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> text-view-binding-code
 function onNavigatingTo(args) {
     const page = args.object;
@@ -35,7 +36,10 @@ function showText(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
 
-    alert(`Text: ${vm.get("tvText")}`);
+    dialogs.alert(`Text: ${vm.get("tvText")}`)
+    .then(() => {
+        console.log("Dialog closed!");
+    });
 }
 
 exports.onNavigatingTo = onNavigatingTo;

@@ -1,4 +1,5 @@
 const observableModule = require("tns-core-modules/data/observable");
+const dialogs = require("tns-core-modules/ui/dialogs");
 // >> search-bar-require
 const searchBarModule = require("tns-core-modules/ui/search-bar");
 // << search-bar-require
@@ -14,12 +15,18 @@ function onPageLoaded(args) {
     // set up SearchBar submit event
     searchBar.on(searchBarModule.SearchBar.submitEvent, (args) => {
         console.log("Search for ", args.object.text);
-        alert(`Search for ${args.object.text}`);
+        dialogs.alert(`Search for ${args.object.text}`)
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     });
     // set up SearchBar clear event
     searchBar.on(searchBarModule.SearchBar.clearEvent, (args) => {
         console.log("Clear");
-        alert("Clear SearchBar text");
+        dialogs.alert("Clear SearchBar text")
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     });
 
     searchBar.on("textChange", (args) => {
