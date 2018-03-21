@@ -1,3 +1,4 @@
+
 const observableModule = require("tns-core-modules/data/observable");
 // >> text-field-binding-code
 function onNavigatingTo(args) {

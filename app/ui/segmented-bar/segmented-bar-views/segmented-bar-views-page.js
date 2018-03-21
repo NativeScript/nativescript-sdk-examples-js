@@ -40,7 +40,6 @@ function sbLoaded(args) {
             default:
                 break;
         }
-
     });
 }
 

@@ -7,7 +7,6 @@ const Label = require("tns-core-modules/ui/label").Label;
 function onPageLoaded(args) {
     const page = args.object;
     const stackLayout = page.getViewById("stackLayoutId");
-
     const items = [];
     // creating TabView Item content body
     const StackLayout0 = new StackLayout();

@@ -33,8 +33,10 @@ function onPageLoaded(args) {
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener
     firstTextField.on("textChange", (args) => {
+
         vm.set("tfResult", args.object.text);
     });
+
 
     // creating new TextField and binding the secure property
     const secondOptions = {
