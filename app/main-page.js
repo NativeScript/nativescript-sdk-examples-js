@@ -50,6 +50,4 @@ function onNavigatingTo(args) {
     });
     page.bindingContext = vm;
 }
-
-
 exports.onNavigatingTo = onNavigatingTo;

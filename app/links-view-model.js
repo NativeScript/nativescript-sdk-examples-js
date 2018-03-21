@@ -7,7 +7,9 @@ function linksSort(value) {
         const titleA = a.title.toUpperCase();
         const titleB = b.title.toUpperCase();
 
-        return (titleA < titleB) ? -1 : (titleA > titleB) ? 1 : 0;
+        const expression = (titleA > titleB) ? 1 : 0;
+
+        return (titleA < titleB) ? -1 : expression;
     });
 }
 

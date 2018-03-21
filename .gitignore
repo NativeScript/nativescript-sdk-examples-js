@@ -41,3 +41,5 @@ buildSrc/build
 # generated files
 bin/
 gen/
+
+package-lock.json
