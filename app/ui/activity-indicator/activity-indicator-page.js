@@ -3,7 +3,7 @@ const link = require("../../link");
 const navigationLinks = [
     new link("Basics", "/ui/activity-indicator/basics/basics-page"),
     new link("Styling", "/ui/activity-indicator/styling/styling-page"),
-    new link("Dynamic Creation", "/ui/activity-indicator/code-behind/code-behind-page")
+    new link("Code-Behind", "/ui/activity-indicator/code-behind/code-behind-page")
 ];
 
 function onNavigatingTo(args) {

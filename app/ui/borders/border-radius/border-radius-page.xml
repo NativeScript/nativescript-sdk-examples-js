@@ -1,0 +1,18 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Border Radius"/>
+	</Page.actionBar>
+
+    <GridLayout rows="*, auto, *" columns="">
+        <StackLayout class="p-16" row="1">
+            <Label text="border-radius: 0 20 20 20;" class="text-center no-top-left" textWrap="true"/>
+            <Label text="border-radius: 0 0 20 20;" class="text-center no-top-left-right" textWrap="true"/>
+            <Label text="border-radius: 20 20 20 0;" class="text-center no-bottom-left" textWrap="true"/>
+            <Label text="border-radius: 20 20 0 0;" class="text-center no-bottom-left-right" textWrap="true"/>
+            <Label text="border-radius: 20;" class="text-center radius-all-corners" textWrap="true"/>
+            <Label text="border-radius: 0;" class="text-center no-radius-at-all" textWrap="true"/>
+            <Label text="border-radius: 20 0;" class="text-center diagonal" textWrap="true" />
+            <Label text="border-radius: 0 20;" class="text-center reverse-diagonal" textWrap="true" />
+        </StackLayout>
+    </GridLayout>
+</Page>

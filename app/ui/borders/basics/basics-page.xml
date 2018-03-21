@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+
+    <GridLayout rows="* auto, *" class="p-16">
+        <Label row="1" text="{{ snippet }}" class="border-props" textWrap="true"/>
+    </GridLayout>
+</Page>

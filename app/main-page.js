@@ -6,6 +6,8 @@ const navigationLinks = [
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
     new link("Animations", "ui/animations/animations-page"),
     new link("Button", "ui/button/button-page"),
+    new link("Borders", "ui/borders/borders-page"),
+
     new link("DatePicker", "/date-picker"),
     new link("Dialogs", "/dialogs"),
     new link("Layouts", "/layouts"),
