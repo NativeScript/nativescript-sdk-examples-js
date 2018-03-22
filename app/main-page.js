@@ -2,6 +2,7 @@ const ListViewLinksModel = require("./links-view-model");
 const link = require("./link");
 const navigationLinks = [
     new link("Application", "/application/application-page"),
+    new link("Application Settings", "/application-settings/application-settings-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
     new link("Animations", "ui/animations/animations-page"),
@@ -39,7 +40,7 @@ const navigationLinks = [
     new link("Location", "/location"),
     new link("FPS Meter", "/fps-meter"),
     new link("HTTP Module", "/http"),
-    new link("Application Settings", "/application-settings"),
+    
     
     new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
