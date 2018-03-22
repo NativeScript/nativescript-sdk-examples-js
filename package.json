@@ -9,7 +9,7 @@
 			"version": "next"
 		},
 		"tns-android": {
-			"version": "next"
+			"version": "4.0.0-2018.3.12.1"
 		}
 	},
 	"dependencies": {
