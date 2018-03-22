@@ -6,7 +6,7 @@
     <!-- << action-bar-gettings-started -->
 
     <GridLayout rows="*, *"> 
-        <Label row="0" text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa" textAlignment="center"/>
+        <Label row="0" text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
         <Label row="1" text="{{ snippet }}" textWrap="true" class="snippet"/>
     </GridLayout>
 </Page>

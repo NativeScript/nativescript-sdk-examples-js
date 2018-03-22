@@ -11,6 +11,7 @@ const navigationLinks = [
     new link("Color", "color/color-page"),
     new link("DatePicker", "ui/date-picker/date-picker-page"),
     new link("Dialogs", "ui/dialogs/dialogs-page"),
+    new link("Gestures", "ui/gestures/gestures-page"),
     
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
