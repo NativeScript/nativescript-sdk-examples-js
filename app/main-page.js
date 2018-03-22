@@ -9,8 +9,8 @@ const navigationLinks = [
     new link("Borders", "ui/borders/borders-page"),
     new link("Color", "color/color-page"),
     new link("DatePicker", "ui/date-picker/date-picker-page"),
-
-    new link("Dialogs", "/dialogs"),
+    new link("Dialogs", "ui/dialogs/dialogs-page"),
+    
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/scroll-view"),
