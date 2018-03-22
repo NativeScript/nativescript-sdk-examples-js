@@ -1,5 +1,6 @@
 
 **API Reference for the** [ActionBar Class](http://docs.nativescript.org/api-reference/modules/_ui_action_bar_.html)
+**API Reference for the** [Known Colors](https://docs.nativescript.org/api-reference/modules/_color_known_colors_)
 
 **Native Component**
 

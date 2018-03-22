@@ -6,8 +6,11 @@ const navigationLinks = [
     new link("ActivityIndicator", "ui/activity-indicator/activity-indicator-page"),
     new link("Animations", "ui/animations/animations-page"),
     new link("Button", "ui/button/button-page"),
-    new link("DatePicker", "/date-picker"),
-    new link("Dialogs", "/dialogs"),
+    new link("Borders", "ui/borders/borders-page"),
+    new link("Color", "color/color-page"),
+    new link("DatePicker", "ui/date-picker/date-picker-page"),
+    new link("Dialogs", "ui/dialogs/dialogs-page"),
+    
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
@@ -37,7 +40,7 @@ const navigationLinks = [
     new link("FPS Meter", "/fps-meter"),
     new link("HTTP Module", "/http"),
     new link("Application Settings", "/application-settings"),
-    new link("Color", "/color"),
+    
     new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
     new link("Modal page", "/modal-page"),

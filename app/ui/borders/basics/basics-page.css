@@ -1,0 +1,12 @@
+Label {
+    background-color: lightslategray;
+    color: white;
+    padding: 16;
+}
+/* >> css-border-props */
+.border-props {
+    border-width: 3;
+    border-color: orangered;
+    border-radius: 20;
+}
+/* << css-border-props */

@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+		<ActionBar title="Action"/>
+	</Page.actionBar>
+    <StackLayout verticalAlignment="middle">
+        <Button text="Show Action Dialog" tap="showActionDialog" class="btn btn-primary btn-active"/>
+    </StackLayout>
+</Page>

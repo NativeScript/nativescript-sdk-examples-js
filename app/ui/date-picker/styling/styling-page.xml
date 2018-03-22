@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <StackLayout verticalAlignment="middle">
+        <!-- >> date-picker-styling -->
+        <DatePicker day="20" month="04" year="1980" class="date-picker"></DatePicker>
+        <!-- << date-picker-styling -->
+    </StackLayout>
+</Page>

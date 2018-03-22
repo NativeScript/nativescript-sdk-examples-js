@@ -1,0 +1,42 @@
+Label {
+    background-color: lightslategray;
+    border-width: 2;
+    border-color: orangered;
+    color: white;
+    margin-top: 8;
+    padding: 8;
+}
+
+/* >> border-radius-css */
+.no-top-left {
+    border-radius: 0 20 20 20;
+}
+
+.no-top-left-right {
+    border-radius: 0 0 20 20;
+}
+
+.no-bottom-left {
+    border-radius: 20 20 20 0;
+}
+
+.no-bottom-left-right {
+    border-radius: 20 20 0 0;
+}
+
+.radius-all-corners {
+    border-radius: 20;
+}
+
+.no-radius-at-all {
+    border-radius: 0;
+}
+
+.diagonal {
+    border-radius: 20 0;
+}
+
+.reverse-diagonal {
+    border-radius: 0 20;
+}
+/* << border-radius-css */

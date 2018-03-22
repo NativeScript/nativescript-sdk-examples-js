@@ -10,11 +10,12 @@ exports.onNavigatingTo = onNavigatingTo;
 
 // >> button-tap-event
 function onTap(args) {
-    // const button = args.object;
-
-    let count = vm.get("counter"); // initial value = 0
+    const button = args.object;
+    // >> (hide)
+    let count = vm.get("counter");
     vm.set("counter", ++count);
-    console.log("Tapped ", vm.get("counter"), " times!");
+    // << (hide)
+    button.text = `Tapped ${count} times`;
 }
 exports.onTap = onTap;
 // << button-tap-event

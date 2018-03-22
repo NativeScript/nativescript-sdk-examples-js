@@ -1,0 +1,8 @@
+/* >> date-picker-styles */
+.date-picker {
+    background-color: lightgray;
+    border-radius: 20;
+    color: orangered; /* iOS only*/
+    width: 80%;
+}
+/* << date-picker-styles */

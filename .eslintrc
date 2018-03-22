@@ -16,7 +16,7 @@
         "block-spacing": "error",
         "brace-style": [
             "error",
-            "stroustrup",
+            "1tbs",
             { "allowSingleLine": true }
         ],
         "camelcase": "error",
@@ -46,7 +46,6 @@
         "max-statements-per-line": "error",
         "new-parens": "error",
         "newline-per-chained-call": "off",
-        "no-alert": "error",
         "no-array-constructor": "error",
         "no-bitwise": [
             "error",

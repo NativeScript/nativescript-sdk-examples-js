@@ -9,8 +9,9 @@ function onNavigatingTo(args) {
     const myButton = new Button();
     myButton.text = "Tap me!";
     myButton.className = "btn btn-primary btn-active";
-    myButton.on("tap", () => {
-        console.log("My newly created button is tapped!");
+    myButton.on("tap", (args) => {
+        // args is of type EventData
+        alert("My newly created button is tapped!");
     });
     // << button-code-create
 
