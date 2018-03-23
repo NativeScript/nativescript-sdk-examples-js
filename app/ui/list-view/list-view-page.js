@@ -1,8 +1,8 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/placeholder/placeholder-example/placeholder-example-page"),
-    new link("Platform-specific files", "/ui/placeholder/placeholder-platform-files/placeholder-platform-files-page")
+    new link("Basics", "/ui/list-view/basics/basics-page"),
+    new link("Code-Behind", "/ui/list-picker/code-behind/code-behind-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
