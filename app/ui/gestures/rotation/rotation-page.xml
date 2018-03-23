@@ -1,9 +1,11 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Double Tap"/>
+		<ActionBar title="Rotation"/>
 	</Page.actionBar>
 
     <StackLayout verticalAlignment="middle">
-        <Label text="DoubleTap me!" doubleTap="onDoubleTap" textWrap="true"/>
+        <!-- >> gest-rotation-xml -->
+        <Label text="Rotate me!" rotation="onRotation" textWrap="true"/>
+        <!-- << gest-rotation-xml -->
     </StackLayout>
 </Page>

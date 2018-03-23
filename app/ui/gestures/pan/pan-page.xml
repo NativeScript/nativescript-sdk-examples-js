@@ -1,9 +1,11 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Double Tap"/>
+		<ActionBar title="Pan"/>
 	</Page.actionBar>
 
     <StackLayout verticalAlignment="middle">
-        <Label text="DoubleTap me!" doubleTap="onDoubleTap" textWrap="true"/>
+        <!-- >> gest-pan-xml -->
+        <Label text="Pan me!" pan="onPan" textWrap="true"/>
+        <!-- <<>> gest-pan-xml -->
     </StackLayout>
 </Page>
