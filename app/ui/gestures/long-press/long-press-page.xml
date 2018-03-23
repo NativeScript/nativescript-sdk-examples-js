@@ -6,6 +6,6 @@
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-long-press-xml -->
         <Label text="Long Press me!" longPress="onLongPress" textWrap="true"/>
-        <!-- <<>> gest-long-press-xml -->
+        <!-- << gest-long-press-xml -->
     </StackLayout>
 </Page>

@@ -1,16 +1,18 @@
-**API Reference for the** [Gestures Module](https://docs.nativescript.org/api-reference/modules/_ui_gestures_)
+ **API References**
 
-**API Reference for the** [GesturesTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturetypes)
-**API Reference for the** [GestureStateTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturestatetypes)
-**API Reference for the** [SwipeDirection Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.swipedirection)
- 
-**API Reference for the** [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
-**API Reference for the** [PinchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pinchgestureeventdata)
-**API Reference for the** [SwipeGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.swipegestureeventdata)
-**API Reference for the** [GestureEventDataWithState Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdatawithstate)
-**API Reference for the** [TouchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.touchgestureeventdata)
-**API Reference for the** [PanGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pangestureeventdata)
-**API Reference for the** [RotationGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.rotationgestureeventdata)
-**API Reference for the** [Pointer Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pointer)
+ * [Gestures Module](https://docs.nativescript.org/api-reference/modules/_ui_gestures_)
+ * [GesturesTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturetypes)
+ * [GestureStateTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturestatetypes)
+ * [SwipeDirection Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.swipedirection)
+ * [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
+ * [PinchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pinchgestureeventdata)
+ * [SwipeGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.swipegestureeventdata)
+ * [GestureEventDataWithState Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdatawithstate)
+ * [TouchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.touchgestureeventdata)
+ * [PanGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pangestureeventdata)
+ * [RotationGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.rotationgestureeventdata)
+ * [Pointer Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pointer)
+ * [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
 
-**API Reference for the** [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
+ **See Also**
+[Implementation of Zoom using `pinch` and Dran'n'Drop using `pan` gestures](https://github.com/NickIliev/nativescript-zoom-and-drag)
