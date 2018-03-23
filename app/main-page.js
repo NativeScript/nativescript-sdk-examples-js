@@ -13,6 +13,7 @@ const navigationLinks = [
     new link("Dialogs", "ui/dialogs/dialogs-page"),
     new link("Gestures", "ui/gestures/gestures-page"),
     new link("HtmlView", "ui/html-view/html-view-page"),
+    new link("Image", "ui/image/image-page"),
   
     new link("Layouts", "/layouts"),
     new link("TimePicker", "ui/time-picker/time-picker-page"),
@@ -28,7 +29,6 @@ const navigationLinks = [
     new link("Style", "/ui/styling/styling-page"),
     new link("Gestures", "/gestures"),
     
-    new link("Image", "/image"),
     new link("Label", "/label"),
     new link("ListPicker", "/list-picker"),
     new link("ListView", "/list-view"),

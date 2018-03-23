@@ -1,0 +1,24 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <!-- >> action-bar-gettings-started -->
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <!-- << action-bar-gettings-started -->
+
+    <ScrollView>
+        <StackLayout verticalAlignment="middle">
+            <!-- >> image-binding -->
+            <Image src="{{ imageUri }}" stretch="aspectFill" />
+            <!-- << image-binding -->
+            <!-- >> image-resource -->
+            <Image src="res://icon" stretch="aspectFill" />
+            <!-- << image-resource -->
+            <!-- >> image-app-folder -->
+            <Image src="~/images/logo.png" stretch="aspectFill" />
+            <!-- << image-app-folder  -->
+            <!-- >> image-online-url -->
+            <Image src="https://docs.nativescript.org/img/cli-getting-started/angular/chapter0/NativeScript_logo.png" stretch="aspectFill" />
+            <!-- << image-online-url -->
+        </StackLayout>
+    </ScrollView>
+</Page>
