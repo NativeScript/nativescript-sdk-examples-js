@@ -19,8 +19,7 @@ function onGridLoaded(args) {
         iconLabel.text = String.fromCharCode(0xff17b);
         lbl.text = "Android Applicaiton";
         // << (hide)
-    }
-    else if (application.ios) {
+    } else if (application.ios) {
         console.log("We are running on iOS device");
         // >> (hide)
         iconLabel.text = String.fromCharCode(0xf179);
