@@ -1,10 +1,10 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/tab-view/basics-tab-view/basics-tab-view-page"),
-    new link("TabView Styling/Binding", "/ui/tab-view/tab-view-styling-binding/tab-view-styling-binding-page"),
-    new link("TabView Icon Fonts", "/ui/tab-view/tab-view-icon-fonts/tab-view-icon-fonts-page"),
-    new link("TabView Code-Behind", "/ui/tab-view/create-tab-view/create-tab-view-page")
+    new link("Basics", "/ui/tab-view/basics/basics-page"),
+    new link("Styling", "/ui/tab-view/styling/styling-page"),
+    new link("Icon Fonts", "/ui/tab-view/icon-fonts/icon-fonts-page"),
+    new link("Code Behind", "/ui/tab-view/code-behind/code-behind-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

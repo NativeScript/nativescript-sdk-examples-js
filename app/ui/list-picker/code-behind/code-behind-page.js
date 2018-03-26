@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
     // >> create-list-picker-code
-    var listPicker = new listPickerModule.ListPicker();
+    const listPicker = new listPickerModule.ListPicker();
     listPicker.items = pokemonList;
     listPicker.selectedIndex = 9;
     // << create-list-picker-code

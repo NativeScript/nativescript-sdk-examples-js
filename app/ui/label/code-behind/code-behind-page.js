@@ -13,7 +13,7 @@ function onNavigatingTo(args) {
 
     // Styling a label via css type
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
-    let pageCSS = "label {background-color: #C6C6C6; color: #10C2B0; font-size: 14;} "
+    let pageCSS = "label {background-color: #C6C6C6; color: #10C2B0; font-size: 14;} ";
 
     const mySecondLabel = new labelModule.Label();
     mySecondLabel.text = "The quick brown fox jumps over the lazy dog.";
@@ -38,7 +38,7 @@ function onNavigatingTo(args) {
     };
     myFourthlabel.bind(bindingOptions, vm);
     vm.set("sourceProperty", expValue);
-    // set to the page css property the CSS style defined in the pageCSS 
+    // set to the page css property the CSS style defined in the pageCSS
     page.css = pageCSS;
     // << label-code-create
 

@@ -1,0 +1,26 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Multiple Templates Selector Function"/>
+	</Page.actionBar>
+
+    <GridLayout rows="*">
+        <!-- >> listview-create-selector-function-xml -->  
+        <ListView row="0" items="{{ listArray }}"  class="list-group" itemTemplateSelector="selectItemTemplate">
+            <ListView.itemTemplates>
+                <template key="even">
+                    <StackLayout class="list-group-item" style.backgroundColor="white">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true"/>
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+                <template key="odd">
+                    <StackLayout class="list-group-item" style.backgroundColor="gray">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true" />
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+            </ListView.itemTemplates>
+        </ListView>      
+        <!-- << listview-create-selector-function-xml -->
+    </GridLayout>
+</Page>

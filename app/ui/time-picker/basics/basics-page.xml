@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout rows="50 50 *" columns="* *" class="m-20 p-10">
+        <Label text="{{ hourResult }}" row="0" col="0" textWrap="true" />
+        <Label text="{{ minuteResult }}" row="0" col="1" textWrap="true" />
+        <Label text="{{ timeResult }}" row="1" col="0" colSpan="2" textWrap="true" />
+        <!-- >> creating-timepicker-xml -->
+        <TimePicker loaded="onPickerLoaded" verticalAlignment="center" row="2" col="0" colSpan="2" class="m-15"></TimePicker>
+        <!-- << creating-timepicker-xml -->
+    </GridLayout>
+</Page>

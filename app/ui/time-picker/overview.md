@@ -1,1 +1,5 @@
 NativeScript provides a TimePicker control that enables users to choose a time as a ready-to-use dialog. Every time part can be picked separately by its corresponding section of the control - for hour, minutes and AM/PM. 
+
+
+* [Basics](#basics)
+* [Binding](#binding)

@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+
+    <!-- >> creating-progress-xml -->
+    <StackLayout id="stackLayoutId">
+		    <Label text="{{ 'Result: ' + prResult}}" textWrap="true" />
+        
+    </StackLayout>
+    <!-- << creating-progress-xml -->
+</Page>

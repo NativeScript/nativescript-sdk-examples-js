@@ -1,9 +1,9 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/scroll-view/vertical-scroll-view/vertical-scroll-view-page"),
-    new link("Horizontal", "/ui/scroll-view/horizontal-scroll-view/horizontal-scroll-view-page"),
-    new link("Scroll Event", "/ui/scroll-view/scroll-view-event/scroll-view-event-page")
+    new link("Vertical", "/ui/scroll-view/vertical/vertical-page"),
+    new link("Horizontal", "/ui/scroll-view/horizontal/horizontal-page"),
+    new link("Events", "/ui/scroll-view/events/events-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

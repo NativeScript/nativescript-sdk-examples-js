@@ -22,8 +22,7 @@ function onNavigatingTo(args) {
         const activity = applicationModule.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
         vm.set("orientation", (orientationEnum === 1 ? enums.DeviceOrientation.portrait : enums.DeviceOrientation.landscape));
-    }
-    else if (applicationModule.ios) {
+    } else if (applicationModule.ios) {
         vm.set("orientation", "portrait");
     }
     page.bindingContext = vm;

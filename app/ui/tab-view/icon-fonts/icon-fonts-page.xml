@@ -1,0 +1,28 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Icon Fonts"/>
+	</Page.actionBar>
+
+   <GridLayout rows="*" columns="*">
+			 <TabView class="icon" selectedIndex="0">
+					 <TabView.items>
+							 <TabViewItem title="&#xe913;">
+									 <TabViewItem.view>
+											<StackLayout>
+													<Label text="First TabView item with Icon Font" textAlignment="center" textWrap="true" class="h2 m-x-auto" color="blue"/>
+													<Label text="&#xe913;" textWrap="true" class="h2 m-x-auto" color="blue"/>
+											</StackLayout>
+									 </TabViewItem.view>
+							 </TabViewItem>
+							 <TabViewItem title="&#xe908;">
+									 <TabViewItem.view>
+											<StackLayout>
+													<Label text="Second TabView item with Icon Font" textAlignment="center" textWrap="true" class="h2 m-x-auto" color="green"/>
+													<Label text="&#xe908;" textWrap="true" class="h2 m-x-auto" color="green"/>
+											</StackLayout>
+									 </TabViewItem.view>
+							 </TabViewItem>
+					 </TabView.items>
+			 </TabView>
+	 </GridLayout>
+</Page>

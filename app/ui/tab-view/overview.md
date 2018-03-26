@@ -2,3 +2,8 @@ The TabView component provides a simple way to navigate between different views 
 By default the TabView will load the view of the first tab, however it is possible to load alternative tabs when the app starts by setting the component’s `selectedIndex` property.
 
 <snippet id='text-view-require'/>
+
+* [Basics](#basics)
+* [Styling](#styling)
+* [Code Behind](#code-behind)
+* [Icon Fonts](#icon-fonts)

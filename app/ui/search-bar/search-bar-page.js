@@ -1,9 +1,9 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/search-bar/basics-search-bar/basics-search-bar-page"),
-    new link("SeachBar sample", "/ui/search-bar/clear-search-bar/clear-search-bar-page"),
-    new link("SeachBar (Code-behind)", "/ui/search-bar/create-search-bar/create-search-bar-page")
+    new link("Basics", "/ui/search-bar/basics/basics-page"),
+    new link("Events", "/ui/search-bar/events/events-page"),
+    new link("Code Behind", "/ui/search-bar/code-behind/code-behind-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
