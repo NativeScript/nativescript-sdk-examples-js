@@ -29,7 +29,7 @@ const navigationLinks = [
     new link("ListPicker", "/ui/list-picker/list-picker-page"),
     new link("ListView", "/ui/list-view/list-view-page"),
     new link("Progress", "/ui/progress/progress-page"),
-    new link("Formatted String", "/formatted-string"),
+    new link("Formatted String", "/ui/formatted-string/formatted-string-page"),
     new link("Trace Module", "/trace"),
     new link("Timer Module", "/timer"),
     new link("Placeholder", "/ui/placeholder/placeholder-page"),
