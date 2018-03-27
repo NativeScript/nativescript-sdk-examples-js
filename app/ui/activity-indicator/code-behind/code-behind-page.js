@@ -8,8 +8,6 @@ function onNavigatingTo(args) {
     const page = args.object;
     const myStsck = page.getViewById("myStack");
 
-    const vm = new Observable();
-
     // >> activity-indicator-code-behind
     const image = new Image();
     image.isLoading = true; // mock image downloading in progress
@@ -23,7 +21,5 @@ function onNavigatingTo(args) {
 
     myStsck.addChild(indicator);
     // << activity-indicator-code-behind
-    vm.set("snippet", "const image = new Image(); \nimage.isLoading = true; \n\nconst indicator = new ActivityIndicator(); \nindicator.bind({ \n    sourceProperty: 'isLoading',\n    targetProperty: 'busy\n}, image);'");
-    page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;

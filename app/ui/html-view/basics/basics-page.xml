@@ -2,7 +2,7 @@
     <Page.actionBar>
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
-    <StackLayout id="container" verticalAlignment="middle" horizontalAlignment="center">
+    <StackLayout id="container" verticalAlignment="middle" horizontalAlignment="center" margin="16">
         <!-- >> html-view-xml -->
         <HtmlView html="{{ htmlString }}"></HtmlView>
         <!-- << html-view-xml -->    
