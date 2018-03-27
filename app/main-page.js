@@ -15,8 +15,7 @@ const navigationLinks = [
     new link("HtmlView", "ui/html-view/html-view-page"),
     new link("Image", "ui/image/image-page"),
     new link("Image Cache", "ui/image-cache/image-cache-page"),
-
-    new link("Layouts", "/layouts"),
+    new link("Layouts", "ui/layouts/layouts-page"),
   
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
