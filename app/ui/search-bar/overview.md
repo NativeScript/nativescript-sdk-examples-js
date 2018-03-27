@@ -3,3 +3,7 @@ This module gives you the simple way to handle a `submit` event and a `clear` ev
 
 
 <snippet id='search-bar-require'/>
+
+* [Basics](#basics)
+* [Events](#events)
+* [Code Behind](#code-behind)

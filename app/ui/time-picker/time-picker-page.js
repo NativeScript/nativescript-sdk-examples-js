@@ -1,8 +1,8 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Configure Time Picker", "/ui/time-picker/configure-time-picker/configure-time-picker-page"),
-    new link("Time Picker Binding", "/ui/time-picker/time-picker-binding/time-picker-binding-page")
+    new link("Configure Time Picker", "/ui/time-picker/basics/basics-page"),
+    new link("Time Picker Binding", "/ui/time-picker/binding/binding-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

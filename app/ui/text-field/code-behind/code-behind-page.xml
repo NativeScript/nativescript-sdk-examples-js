@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+
+    <!-- >> creating-text-field-xml -->
+    <StackLayout id="stackLayoutId">
+        <Button text="{{ secureButton }}" tap="{{ onTap }}" />
+				<Label text="{{ 'Result: ' + tfResult}}" textWrap="true" />
+        
+    </StackLayout>
+    <!-- << creating-text-field-xml -->
+</Page>

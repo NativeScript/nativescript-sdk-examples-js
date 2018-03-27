@@ -1,9 +1,9 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/segmented-bar/basics-segmented-bar/basics-segmented-bar-page"),
-    new link("SegmentedBar Views", "/ui/segmented-bar/segmented-bar-views/segmented-bar-views-page"),
-    new link("SegmentedBar (Code-behind)", "/ui/segmented-bar/create-segmented-bar/create-segmented-bar-page")
+    new link("Basics", "/ui/segmented-bar/basics/basics-page"),
+    new link("SegmentedBar Views", "/ui/segmented-bar/views/views-page"),
+    new link("Code behind", "/ui/segmented-bar/code-behind/code-behind-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

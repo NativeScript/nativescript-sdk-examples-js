@@ -1,0 +1,47 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Multiple Templates"/>
+	</Page.actionBar>
+
+    <GridLayout rows="50 * 50  *">
+        
+        <Label text="Define multiple item templates and an item template selector in XML." textWrap="true" />
+        <!-- >> list-view-multy-template-xml -->
+        <ListView row="1" items="{{ listArray }}"  class="list-group" itemTemplateSelector="age > 18 ? 'green' : 'red'">
+            <ListView.itemTemplates>
+                <template key="green">
+                    <StackLayout class="list-group-item" style.backgroundColor="green">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true"/>
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+                <template key="red">
+                    <StackLayout class="list-group-item" style.backgroundColor="red">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true" />
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+            </ListView.itemTemplates>
+        </ListView>
+        <!-- << list-view-multy-template-xml -->
+        <Label row="2" text="Usage of ListView's $index" textWrap="true" />
+        <!-- >> list-view-multy-template-index-xml -->
+        <ListView row="3" items="{{ listArray }}"  class="list-group" itemTemplateSelector="$index % 2 === 0 ? 'even' : 'odd'">
+            <ListView.itemTemplates>
+                <template key="even">
+                    <StackLayout class="list-group-item" style.backgroundColor="white">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true"/>
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+                <template key="odd">
+                    <StackLayout class="list-group-item" style.backgroundColor="gray">
+                        <Label text="{{ 'Name: ' + name }}" class="h2" textWrap="true" />
+                        <Label text="{{ 'Age: ' + age }}"/>
+                    </StackLayout>
+                </template>
+            </ListView.itemTemplates>
+        </ListView>
+        <!-- << list-view-multy-template-index-xml -->
+    </GridLayout>
+</Page>

@@ -1,0 +1,23 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout rows="50 50 * 50 50 *">
+        <!-- >> list-view-create-xml -->
+        <Label row="0" text="Binding the ListView items property to collection" textWrap="true" />
+        <Button row="1" text="Add new item" tap="onTap" />
+        <ListView row="2" id="firstListView" items="{{ myItems }}" itemTap="listViewItemTap" class="list-group" />
+        <Label row="3" text="Define the ListView itemTemplate property" textWrap="true" />
+        <Button row="4" text="Add new item (Second ListView)" tap="onSecondTap" />
+        <ListView row="5" items="{{ mySecondItems }}" itemTap="secondListViewItemTap" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+                
+        <!-- << list-view-create-xml  -->
+    </GridLayout>
+</Page>

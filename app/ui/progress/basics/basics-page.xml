@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+    <GridLayout rows="*">
+        <!-- >> progress-create-xml -->
+        <StackLayout verticalAlign="center" row="0" height="100">
+            <Progress width="100%" value="{{ progressValue }}"  maxValue="{{ progressMaxValue }}" loaded="onProgressLoaded" class="p-20"/>
+        </StackLayout>
+        <!-- << progress-create-xml -->
+    </GridLayout>
+</Page>

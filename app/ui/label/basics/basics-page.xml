@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout rows="auto, *">
+        <!-- >> label-xml -->
+        <Label text="{{ title }}" textWrap="true" />
+        <!-- << label-xml -->
+    </GridLayout>
+</Page>

@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+    <!-- >> creating-tab-view-xml -->
+    <StackLayout id="stackLayoutId">
+        
+    </StackLayout>
+    <!-- << creating-tab-view-xml -->
+</Page>

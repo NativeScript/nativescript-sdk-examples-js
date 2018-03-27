@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+      <ActionBar title="Dynamic Creation"/>
+    </Page.actionBar>
+
+    <!-- >> creating-segmented-bar-xml -->
+    <StackLayout id="stackLayoutId">
+		<Label text="{{ 'Result(index): ' + sbResult}}" textWrap="true" />
+        
+    </StackLayout>
+    <!-- << creating-segmented-bar-xml -->
+</Page>

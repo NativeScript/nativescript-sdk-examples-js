@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout rows="auto, auto">
+        <!-- >> list-picker-xml -->
+        <StackLayout row="0">
+                <Label text="Use the slider to change ListPicker's selectedIndex" textWrap="true" class="h3 p-15 text-left"/>
+                <Slider loaded="onSliderLoaded" minValue="0" maxValue="{{ pokemons.length -1 }}" value="{{ index }}"  class="slider"/>
+        </StackLayout>
+        <ListPicker loaded="onListPickerLoaded" row="1" items="{{ pokemons }}" selectedIndex="{{ index }}"  class="p-15 picker" />
+        <!-- << list-picker-xml -->
+    </GridLayout>
+</Page>

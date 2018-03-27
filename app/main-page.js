@@ -14,8 +14,9 @@ const navigationLinks = [
     new link("Gestures", "ui/gestures/gestures-page"),
     new link("HtmlView", "ui/html-view/html-view-page"),
     new link("Image", "ui/image/image-page"),
-  
+
     new link("Layouts", "/layouts"),
+  
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
     new link("SearchBar", "/ui/search-bar/search-bar-page"),
@@ -27,13 +28,11 @@ const navigationLinks = [
     new link("TextView", "/ui/text-view/text-view-page"),
     new link("WebView", "/ui/web-view/web-view-page"),
     new link("Style", "/ui/styling/styling-page"),
-    new link("Gestures", "/gestures"),
-    
-    new link("Label", "/label"),
-    new link("ListPicker", "/list-picker"),
-    new link("ListView", "/list-view"),
+    new link("Label", "/ui/label/label-page"),
+    new link("ListPicker", "/ui/list-picker/list-picker-page"),
+    new link("ListView", "/ui/list-view/list-view-page"),
     new link("Progress", "/ui/progress/progress-page"),
-    new link("Formatted String", "/formatted-string"),
+    new link("Formatted String", "/ui/formatted-string/formatted-string-page"),
     new link("Trace Module", "/trace"),
     new link("Timer Module", "/timer"),
     new link("Placeholder", "/ui/placeholder/placeholder-page"),
@@ -42,8 +41,7 @@ const navigationLinks = [
     new link("Location", "/location"),
     new link("FPS Meter", "/fps-meter"),
     new link("HTTP Module", "/http"),
-    
-    
+
     new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
     new link("Modal page", "/modal-page"),

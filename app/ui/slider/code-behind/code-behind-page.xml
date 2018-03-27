@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+
+    <!-- >> creating-slider-xml -->
+    <StackLayout id="stackLayoutId">
+		    <Label text="{{ 'Result: ' + slResult}}" textWrap="true" />
+        
+    </StackLayout>
+    <!-- << creating-slider-xml -->
+</Page>
