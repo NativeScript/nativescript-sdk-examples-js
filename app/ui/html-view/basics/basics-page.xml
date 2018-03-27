@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <StackLayout id="container" verticalAlignment="middle" horizontalAlignment="center">
+        <!-- >> html-view-xml -->
+        <HtmlView html="{{ htmlString }}"></HtmlView>
+        <!-- << html-view-xml -->    
+    </StackLayout>
+</Page>
