@@ -1,4 +1,3 @@
-
 **API Reference for the** [Button Class](http://docs.nativescript.org/api-reference/classes/_ui_button_.button.html)
 
 **Native Component**
