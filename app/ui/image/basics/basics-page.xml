@@ -4,7 +4,7 @@
 	</Page.actionBar>
 
     <ScrollView>
-        <StackLayout verticalAlignment="middle">
+        <StackLayout id="container" verticalAlignment="middle">
             <!-- >> image-resource -->
             <Image src="res://icon" stretch="aspectFill" />
             <!-- << image-resource -->

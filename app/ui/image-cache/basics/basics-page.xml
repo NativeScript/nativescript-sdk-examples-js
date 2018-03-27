@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+
+    <ScrollView>
+        <StackLayout>
+            <!-- >> image-cache-basics-html -->
+            <Label text="Image Cache Usage" textWrap="true" />
+            
+            <Image src="{{ imageSource }}" stretch="aspectFill" />
+            <!-- << image-cache-basics-html -->
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -11,6 +11,7 @@ Using the `res://` prefix you can load a resource image. This is the suggested a
 
 Loading an image from application resources (in `App_Resources/<platform>`).
 <snippet id='image-resource'/>
+<snippet id='image-code-behdnd'/>
 
 ### Using Local Files
 

@@ -14,6 +14,7 @@ const navigationLinks = [
     new link("Gestures", "ui/gestures/gestures-page"),
     new link("HtmlView", "ui/html-view/html-view-page"),
     new link("Image", "ui/image/image-page"),
+    new link("Image Cache", "ui/image-cache/image-cache-page"),
 
     new link("Layouts", "/layouts"),
   
