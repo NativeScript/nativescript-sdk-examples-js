@@ -1,6 +1,8 @@
 const ListViewLinksModel = require("./links-view-model");
 const link = require("./link");
 const navigationLinks = [
+    new link("Observable", "/data/observable/observable-page"),
+
     new link("Application", "/application/application-page"),
     new link("Application Settings", "/application-settings/application-settings-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),
@@ -16,7 +18,7 @@ const navigationLinks = [
     new link("Image", "ui/image/image-page"),
     new link("Image Cache", "ui/image-cache/image-cache-page"),
     new link("Layouts", "ui/layouts/layouts-page"),
-  
+
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
     new link("SearchBar", "/ui/search-bar/search-bar-page"),

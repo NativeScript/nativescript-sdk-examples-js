@@ -1,6 +1,6 @@
+// >> image-cache-require
 const Cache = require("tns-core-modules/ui/image-cache").Cache;
-const Image = require("ui/image").Image;
-const ImageSource = require("image-source").ImageSource;
+// << image-cache-require
 const fromNativeSource = require("image-source").fromNativeSource;
 const fromFile = require("image-source").fromFile;
 
@@ -10,38 +10,48 @@ function onLoaded(args) {
     const page = args.object;
     const vm = new Observable();
 
+    cacheImage(vm);
+
+    page.bindingContext = vm;
+}
+exports.onLoaded = onLoaded;
+
+function cacheImage(viewModel) {
     // >> image-cache-code
-    let cache = new Cache();
+    const cache = new Cache();
     cache.placeholder = fromFile("~/images/logo.png");
     cache.maxRequests = 5;
+
+    // set the placeholder while the desired image is donwloaded
+    viewModel.set("imageSource", cache.placeholder);
+
     // Enable download while not scrolling
     cache.enableDownload();
 
-    let imageSource;
-    const url = "https://github.com/NativeScript.png";
+    let cachedImageSource;
+    const url = "https://avatars1.githubusercontent.com/u/7392261?v=4";
     // Try to read the image from the cache
-    let image = cache.get(url);
+    const image = cache.get(url);
+
     if (image) {
         // If present -- use it.
-        imageSource = fromNativeSource(image);
+        cachedImageSource = imageSource.fromNativeSource(image);
+        viewModel.set("imageSource", cachedImageSource);
     } else {
-        // If not present -- request its download.
+        // If not present -- request its download + put it in the cache.
         cache.push({
             key: url,
             url: url,
             completed: (image, key) => {
                 if (url === key) {
-                    imageSource = fromNativeSource(image);
+                    cachedImageSource = fromNativeSource(image);
+                    viewModel.set("imageSource", cachedImageSource); // set the downloaded iamge
                 }
             }
         });
     }
 
     // Disable download while scrolling
-    // cache.disableDownload();
-    // << image-cache-code
-
-    vm.set("imageSource", cache.placeholder);
-    page.bindingContezxt = vm;
+    cache.disableDownload();
+    // << image-cache-codes
 }
-exports.onLoaded = onLoaded;

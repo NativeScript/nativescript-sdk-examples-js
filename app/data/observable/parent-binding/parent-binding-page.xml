@@ -1,0 +1,19 @@
+<!-- >> parent-binding-xml -->
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Parents Binding"/>
+	</Page.actionBar>
+    <GridLayout rows="*" >
+        <ListView items="{{ items }}">
+            <!--Describing how the element will look like-->
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *">
+                    <Label text="{{ $value }}" col="0"/>
+                    <!--The TextField has a different bindingCotnext from the ListView, but has to use its properties. Thus the parents['ListView'] has to be used.-->
+                    <TextField text="{{ $parents['ListView'].test, $parents['ListView'].test }}" col="1"/>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>
+<!-- << parent-binding-xml -->

@@ -1,7 +1,7 @@
 const Image = require("ui/image").Image;
 const imageSourceModule = require("image-source");
 
-exports.onStackLoaded = function(args) {
+exports.onStackLoaded = function (args) {
     const stack = args.object;
     // >> image-image-source
     const image = new Image();
@@ -26,8 +26,8 @@ function usingBase64Strings() {
     // const imageSourceModule = require("image-source");
     const myImageSource = imageSourceModule.fromFile("~/images/logo.png");
     const imageAsBase64String = myImageSource.toBase64String("png"); // base64 string; default max image quality;
-    let base64ImageSource = imageSourceModule.fromBase64(imageAsBase64String);
+    const base64ImageSource = imageSourceModule.fromBase64(imageAsBase64String);
     // << using-base64-strings
 
     return base64ImageSource;
-};
+}
