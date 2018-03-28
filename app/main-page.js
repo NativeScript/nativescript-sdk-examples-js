@@ -40,8 +40,8 @@ const navigationLinks = [
     new link("Platform Module", "/platform/platform-page"),
     new link("Location", "/location"),
     new link("FPS Meter", "/fps-meter/fps-meter-page"),
-    new link("HTTP Module", "/http"),
-
+    new link("HTTP Module", "/http/http-page"),
+    new link("ImageSource", "/image-source/image-source-page"),
     new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
     new link("Modal page", "/modal-page"),
