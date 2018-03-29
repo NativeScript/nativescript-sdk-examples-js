@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Getting Started"/>
+		<ActionBar title="Load image"/>
 	</Page.actionBar>
 
     <StackLayout>
@@ -13,7 +13,7 @@
                 <Image row="3" src="{{ imageFromResourcesLocalFile }}" stretch="none" />
 
                 <Label row="4" text="Creating PNG image file from base64 string" textWrap="true" />
-                <Image row="5" width="100" height="100" src="{{ imageFromBase64 }}" stretch="none" />
+                <Image row="5" backgroundColor="green" src="{{ imageFromBase64 }}" stretch="none" />
             </GridLayout>
         </ScrollView>
     </StackLayout>

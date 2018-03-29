@@ -1,2 +1,2 @@
 
-**API Reference for the** [FPS Meter Class](https://docs.nativescript.org/api-reference/modules/_fps_meter_.html)
+**API Reference for the** [Image Source Class](https://docs.nativescript.org/api-reference/classes/_image_source_.imagesource)

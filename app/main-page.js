@@ -33,7 +33,7 @@ const navigationLinks = [
     new link("ListView", "/ui/list-view/list-view-page"),
     new link("Progress", "/ui/progress/progress-page"),
     new link("Formatted String", "/ui/formatted-string/formatted-string-page"),
-    new link("Trace Module", "/trace"),
+    new link("Trace Module", "/trace/trace-page"),
     new link("Timer Module", "/timer/timer-page"),
     new link("Placeholder", "/ui/placeholder/placeholder-page"),
     new link("Repeater", "/ui/repeater/repeater-page"),
