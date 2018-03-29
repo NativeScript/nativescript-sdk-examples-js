@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" >
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <StackLayout>
+        <!-- >> plain-object-binding-xml -->
+        <ListView items="{{ items }}" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="Date" class="list-group-item-heading" />
+                    <!-- use $value to bind plain objects (e.g. number, string, Date)-->
+                    <Label text="{{ $value }}" class="list-group-item-text" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        <!-- << plain-object-binding-xml -->
+    </StackLayout>
+</Page>

@@ -7,4 +7,3 @@
 **API Reference for** [BindingOptions Intergace](https://docs.nativescript.org/api-reference/interfaces/_ui_core_bindable_.bindingoptions)
 
 **See Also** [Data Binding Concepts in NativeScript](https://docs.nativescript.org/core-concepts/data-binding)
-
