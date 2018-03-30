@@ -1,0 +1,15 @@
+
+<!-- >> mvvm-xml -->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <Page.actionBar>
+		<ActionBar title="MVVM Pattern"/>
+	</Page.actionBar>
+    <StackLayout class="p-20">
+        <Label text="Tap the button" class="h1 text-center"/>
+        <!-- using the view model method `onTap` and property `message` -->
+        <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
+        <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+    </StackLayout>
+</Page>
+<!-- << mvvm-xml -->
+

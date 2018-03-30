@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+        <ActionBar title="Image Source" icon="" />
+    </Page.actionBar>
+    <ScrollView>
+        <StackLayout loaded="onStackLoaded" verticalAlignment="middle"/>
+    </ScrollView>
+</Page>

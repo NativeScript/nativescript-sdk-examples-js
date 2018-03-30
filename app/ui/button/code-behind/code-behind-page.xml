@@ -3,5 +3,5 @@
 		<ActionBar title="Dynamic Creation"/>
 	</Page.actionBar>
 
-    <StackLayout id="container"/>
+    <StackLayout id="container" verticalAlignment="middle"/>
 </Page>

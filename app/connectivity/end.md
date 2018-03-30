@@ -1,0 +1,1 @@
+**API Reference for the** [Connectivity Module](https://docs.nativescript.org/api-reference/modules/_connectivity_)

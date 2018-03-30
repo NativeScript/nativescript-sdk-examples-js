@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <!-- >> observable-basics-set-xml -->
+        <Label text="{{ myString }}" tap="{{ onLabelTap }}" textWrap="true" backgroundColor="{{ myNestedObject.favoriteColor.hisColor }}" class="h2 text-center"/>
+        <Label text="{{ myNumber }}" textWrap="true" backgroundColor="{{ myObject.myColor }}" class="h2 text-center" fontSize="{{ myNumber }}"/>
+        <Label text="{{ myBoolean }}" textWrap="true" backgroundColor="{{ myNestedObject.favoriteColor.hisColor }}" visibility="{{ myBoolean ? 'visible' : 'collapsed' }}" class="h2 text-center"/>
+        <Label text="{{ myObject.myColor }}" backgroundColor="{{ myObject.myColor }}" textWrap="true" class="h2 text-center"/>
+        <Label text="{{ myNestedObject.favoriteColor.hisColor }}" backgroundColor="{{ myNestedObject.favoriteColor.hisColor }}" textWrap="true" class="h2 text-center"/>
+        <!-- << observable-basics-set-xml -->
+    </StackLayout>
+</Page>
