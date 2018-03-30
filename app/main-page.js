@@ -3,7 +3,7 @@ const link = require("./link");
 const navigationLinks = [
     new link("Observable", "/data/observable/observable-page"),
     new link("Observable Array", "/data/observable-array/observable-array-page"),
-
+    new link("Virtual Array", "/data/virtual-array/virtual-array-page"),
     new link("Application", "/application/application-page"),
     new link("Application Settings", "/application-settings/application-settings-page"),
     new link("Action Bar", "ui/action-bar/action-bar-page"),

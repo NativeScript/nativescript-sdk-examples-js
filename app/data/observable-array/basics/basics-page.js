@@ -1,6 +1,6 @@
+// >> observable-array-require
 const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const ChangedData = require("tns-core-modules/data/observable-array").ChangedData;
-const ChangeType = require("tns-core-modules/data/observable-array").ChangeType;
+// << observable-array-require
 
 function onNavigatingTo(args) {
     const page = args.object;
@@ -23,15 +23,41 @@ function onNavigatingTo(args) {
     // << observable-array-item-index
 
     // >> observable-array-set-item
-    myObservableArray.on("change", (args) => {
-        console.log(args.index); // Index of the changed item.
-        console.log(args.action); // Action. In this case Update.
-        console.log(args.addedCount); // Number of added items. In this case 1.
-        console.log(args.removed); // Array of removed items. In this case with single item (1).
+    myObservableArray.on(ObservableArray.changeEvent, (args) => {
+        console.log(args.index); // Index of the changed item (in this case 7).
+        console.log(args.action); // Action (In this case "update")
+        console.log(args.addedCount); // Number of added items (In this case 1).
+        console.log(args.removed); // Array of removed items (in this case 33).
     });
     myObservableArray.setItem(7, 34); // at seventh (7) index setting value of 34
     // << observable-array-set-item
 
-    page.bindingContext = { items : myObservableArray };
+    // >> observable-array-push
+    myObservableArray.push(144);
+    // << observable-array-push
+
+    // >> observable-array-push-array
+    myObservableArray.push([377, 233]);
+    // << observable-array-push-array
+
+    // >> observable-array-reverse
+    myObservableArray.reverse();
+    // << observable-array-reverse
+
+    // >> observable-array-shift
+    myObservableArray.shift();
+    // << observable-array-shift
+
+    const myArray = new ObservableArray(myObservableArray);
+    // >> observable-array-sort
+    myArray.sort();
+    // << observable-array-sort
+
+    // >> observable-array-index-of
+    const index = myObservableArray.indexOf(13);
+    console.log(index);
+    // << observable-array-index-of
+
+    page.bindingContext = { items: myObservableArray };
 }
 exports.onNavigatingTo = onNavigatingTo;

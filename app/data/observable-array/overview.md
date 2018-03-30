@@ -1,1 +1,2 @@
-The `ObservableArray` class expands the known `Array` class by providng a capability of detecting and responding to changes of a collection of objects.
+The `ObservableArray` class expands the `Array` class by providng a capability of detecting and responding to changes of a collection of objects.
+The `ObservableArray` supports the known methods like `concat`, `push`, `reduce`, `slice`, `splice`, `reverse` and many more (full list [here](https://docs.nativescript.org/api-reference/classes/_data_observable_array_.observablearray)). 
