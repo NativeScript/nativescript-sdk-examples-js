@@ -1,0 +1,1 @@
+The `ObservableArray` class expands the known `Array` class by providng a capability of detecting and responding to changes of a collection of objects.

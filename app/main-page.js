@@ -2,6 +2,7 @@ const ListViewLinksModel = require("./links-view-model");
 const link = require("./link");
 const navigationLinks = [
     new link("Observable", "/data/observable/observable-page"),
+    new link("Observable Array", "/data/observable-array/observable-array-page"),
 
     new link("Application", "/application/application-page"),
     new link("Application Settings", "/application-settings/application-settings-page"),
