@@ -21,7 +21,6 @@ const navigationLinks = [
     new link("Image", "ui/image/image-page"),
     new link("Image Cache", "ui/image-cache/image-cache-page"),
     new link("Layouts", "ui/layouts/layouts-page"),
-
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
     new link("SearchBar", "/ui/search-bar/search-bar-page"),
@@ -38,17 +37,20 @@ const navigationLinks = [
     new link("ListView", "/ui/list-view/list-view-page"),
     new link("Progress", "/ui/progress/progress-page"),
     new link("Formatted String", "/ui/formatted-string/formatted-string-page"),
-    new link("Trace Module", "/trace"),
-    new link("Timer Module", "/timer"),
+    new link("Trace Module", "/trace/trace-page"),
+    new link("Timer Module", "/timer/timer-page"),
     new link("Placeholder", "/ui/placeholder/placeholder-page"),
     new link("Repeater", "/ui/repeater/repeater-page"),
-    new link("Platform Module", "/platform"),
+    new link("Platform Module", "/platform/platform-page"),
     new link("Location", "/location"),
-    new link("FPS Meter", "/fps-meter"),
-    new link("HTTP Module", "/http"),
-
+    new link("FPS Meter", "/fps-meter/fps-meter-page"),
+    new link("HTTP Module", "/http/http-page"),
+    new link("ImageSource", "/image-source/image-source-page"),
+    new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
-    new link("Modal page", "/modal-page")
+    new link("Modal page", "/modal-page"),
+    new link("Camera", "/camera"),
+    new link("XML Parser", "/xml-parser/xml-parser-page")
 ];
 
 function onNavigatingTo(args) {
