@@ -1,15 +1,10 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> action-bar-gettings-started -->
     <Page.actionBar>
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
-    <!-- << action-bar-gettings-started -->
 
     <ScrollView>
-        <StackLayout verticalAlignment="middle">
-            <!-- >> image-binding -->
-            <Image src="{{ imageUri }}" stretch="aspectFill" />
-            <!-- << image-binding -->
+        <StackLayout id="container" verticalAlignment="middle">
             <!-- >> image-resource -->
             <Image src="res://icon" stretch="aspectFill" />
             <!-- << image-resource -->

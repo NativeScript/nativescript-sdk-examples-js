@@ -1,0 +1,7 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <Page.actionBar>
+		<ActionBar title="Two-Way Binding"/>
+	</Page.actionBar>
+    <StackLayout loaded="onStackLayoutLoaded" class="p-20" />
+</Page>
