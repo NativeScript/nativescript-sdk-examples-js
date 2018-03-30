@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <StackLayout verticalAlignment="middle" class="page">
+        <Label text="This concept of the example is demonstrated in the code-behind!" textWrap="true" class="h3 text-center"/>
+    </StackLayout>
+</Page>

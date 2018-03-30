@@ -13,6 +13,7 @@ const navigationLinks = [
     new link("Borders", "ui/borders/borders-page"),
     new link("Color", "color/color-page"),
     new link("Connectivity", "/connectivity/connectivity-page"),
+    new link("Console", "/console/console-page"),
     new link("DatePicker", "ui/date-picker/date-picker-page"),
     new link("Dialogs", "ui/dialogs/dialogs-page"),
     new link("Gestures", "ui/gestures/gestures-page"),
@@ -47,8 +48,7 @@ const navigationLinks = [
     new link("HTTP Module", "/http"),
 
     new link("File System", "/file-system"),
-    new link("Modal page", "/modal-page"),
-    new link("Camera", "/camera")
+    new link("Modal page", "/modal-page")
 ];
 
 function onNavigatingTo(args) {
