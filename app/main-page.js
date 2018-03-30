@@ -16,7 +16,7 @@ const navigationLinks = [
     new link("Image", "ui/image/image-page"),
 
     new link("Layouts", "/layouts"),
-  
+
     new link("TimePicker", "ui/time-picker/time-picker-page"),
     new link("ScrollView", "/ui/scroll-view/scroll-view-page"),
     new link("SearchBar", "/ui/search-bar/search-bar-page"),
@@ -45,7 +45,8 @@ const navigationLinks = [
     new link("Connectivity", "/connectivity"),
     new link("File System", "/file-system"),
     new link("Modal page", "/modal-page"),
-    new link("Camera", "/camera")
+    new link("Camera", "/camera"),
+    new link("XML Parser", "/xml-parser/xml-parser-page")
 ];
 
 function onNavigatingTo(args) {

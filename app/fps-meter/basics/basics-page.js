@@ -19,7 +19,7 @@ function onNavigatingTo(args) {
 function toogleMeter(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
-    var status = appSettings.getBoolean("status");
+    const status = appSettings.getBoolean("status");
     if (status) {
         // >> stop-fps-meter
         fpsMeter.removeCallback(callbackId);

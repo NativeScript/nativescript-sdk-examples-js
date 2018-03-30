@@ -3,15 +3,17 @@ const ObservableArray = require("tns-core-modules/data/observable-array").Observ
 const traceModule = require("tns-core-modules/trace");
 const types = require("utils/types");
 // >> trace-create-custom-writer
-let array = new ObservableArray();
-var TimestampConsoleWriter = (function () {
-    
+const array = new ObservableArray();
+const TimestampConsoleWriter = (() => {
+
     function TimestampConsoleWriter() { }
     TimestampConsoleWriter.prototype.write = function (message, category, type) {
-      if (!console) return;
-   
-      var msgType = types.isUndefined(type) ? traceModule.messageType.log : type;
-   
+      if (!console) {
+        return;
+      }
+
+      const msgType = types.isUndefined(type) ? traceModule.messageType.log : type;
+
       switch (msgType) {
         case traceModule.messageType.log:
             array.push({
@@ -49,6 +51,7 @@ var TimestampConsoleWriter = (function () {
           break;
       }
     };
+
     return TimestampConsoleWriter;
   })();
 // << trace-create-custom-writer

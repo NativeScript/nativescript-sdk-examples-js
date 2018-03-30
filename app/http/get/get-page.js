@@ -39,10 +39,10 @@ function onButtonTap(args) {
     const button = args.object;
     const page = args.object.page;
     const vm = page.bindingContext;
-    const id = button.get("id")
-    let status = vm.get(id+"ResultVisible");
+    const id = button.get("id");
+    const status = vm.get(`${id}ResultVisible`);
 
-    if(!status){
+    if (!status) {
         switch (id) {
             case "getString":
                 getStringExample(vm);
@@ -74,18 +74,18 @@ function onButtonTap(args) {
     }
     switch (!status) {
         case true:
-                vm.set(id+"ResultButton", "Hide "+id+" result");
+                vm.set(`${id}ResultButton`, `Hide ${id} result`);
             break;
         case false:
-                vm.set(id+"ResultButton", "Show "+id+" result");
+                vm.set(`${id}ResultButton`, `Show ${id} result`);
             break;
         default:
             break;
     }
-    vm.set(id+"ResultVisible", !status);
+    vm.set(`${idResultVisible}, !status`);
 }
 
-function getStringExample(viewModel){
+function getStringExample(viewModel) {
     // >> get-string-code
     httpModule.getString("https://httpbin.org/get").then((r) => {
         viewModel.set("getStringResult", r);
@@ -97,14 +97,14 @@ function getStringExample(viewModel){
     });
     // << get-string-code
 }
-function getJSONExample(viewModel){
+function getJSONExample(viewModel) {
     // >> get-json-code
     httpModule.getJSON("https://httpbin.org/get").then((r) => {
         // >> (hide)
-        viewModel.set("host", r['headers']['Host']);
-        viewModel.set("userAgent", r['headers']['User-Agent']);
-        viewModel.set("origin", r['origin']);
-        viewModel.set("url", r['url']);
+        viewModel.set("host", r.headers.Host);
+        viewModel.set("userAgent", r.headers["User-Agent"]);
+        viewModel.set("origin", r.origin);
+        viewModel.set("url", r.url);
         // << (hide)
     }, (e) => {
         // >> (hide)
@@ -114,7 +114,7 @@ function getJSONExample(viewModel){
     });
     // << get-json-code
 }
-function getImageExample(viewModel){
+function getImageExample(viewModel) {
     // >> get-image-code
     httpModule.getImage("https://httpbin.org/image/jpeg").then((r) => {
         // getImage method returns ImageSource object
@@ -132,12 +132,15 @@ function getImageExample(viewModel){
     // << get-image-code
 }
 
-function getResponseStatusCodeExample(viewModel){
+function getResponseStatusCodeExample(viewModel) {
     // >> request-status-code
-    httpModule.request({ url: "https://httpbin.org/get", method: "GET" }).then((response) => {
+    httpModule.request({
+        url: "https://httpbin.org/get",
+        method: "GET"
+    }).then((response) => {
         // Argument (response) is HttpResponse
         // >> (hide)
-        var statusCode = response.statusCode;
+        const statusCode = response.statusCode;
         viewModel.set("statusCodeResult", statusCode);
         // << (hide)
     }, (e) => {
@@ -149,15 +152,18 @@ function getResponseStatusCodeExample(viewModel){
     // << request-status-code
 }
 
-function getResponseHeadersExample(viewModel){
+function getResponseHeadersExample(viewModel) {
     console.log("getResponseHeadersExample");
     // >> request-response-header
-    httpModule.request({ url: "https://httpbin.org/get", method: "GET" }).then((response) => {
+    httpModule.request({
+        url: "https://httpbin.org/get",
+        method: "GET"
+    }).then((response) => {
         // Argument (response) is HttpResponse
         // >> (hide)
-        viewModel.set("contentType", response['headers']['Content-Type']);
-        viewModel.set("date", response['headers']['Date']);
-        viewModel.set("server", response['headers']['Server']);
+        viewModel.set("contentType", response.headers["Content-Type"]);
+        viewModel.set("date", response.headers.Date);
+        viewModel.set("server", response.headers.Server);
         // << (hide)
     }, (e) => {
         // >> (hide)
@@ -168,12 +174,15 @@ function getResponseHeadersExample(viewModel){
     // << request-response-header
 }
 
-function getResponseContentExample(viewModel){
+function getResponseContentExample(viewModel) {
     // >> request-response-content
-    httpModule.request({ url: "https://httpbin.org/get", method: "GET" }).then((response) => {
+    httpModule.request({
+        url: "https://httpbin.org/get",
+        method: "GET"
+    }).then((response) => {
         // Content property of the response is HttpContent
         // The toString method allows you to get the response body as string.
-        var str = response.content.toString();
+        const str = response.content.toString();
         // >> (hide)
         viewModel.set("responseContentResult", str);
         // << (hide)
@@ -190,7 +199,7 @@ function getResponseContentExample(viewModel){
     // << request-response-content
 }
 
-function getFileExample(viewModel){
+function getFileExample(viewModel) {
     // >> get-file-code
     httpModule.getFile("https://raw.githubusercontent.com/NativeScript/NativeScript/master/tests/app/logo.png").then((resultFile) => {
         // The returned result will be File object
@@ -211,9 +220,9 @@ function getFileExample(viewModel){
     // << get-file-code
 }
 
-function getFileWithPathExample(viewModel){
+function getFileWithPathExample(viewModel) {
     // >> get-file-code-with-path
-    var filePath = fileSystemModule.path.join(fileSystemModule.knownFolders.currentApp().path, "test.png");
+    const filePath = fileSystemModule.path.join(fileSystemModule.knownFolders.currentApp().path, "test.png");
     httpModule.getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile) => {
         // The returned result will be File object
         // >> (hide)

@@ -1,7 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 const dialogs = require("tns-core-modules/ui/dialogs");
 // >> require-platform
-const platformModule  = require("tns-core-modules/platform");
+const platformModule = require("tns-core-modules/platform");
 // << require-platform
 
 // >> get-screen-device-info

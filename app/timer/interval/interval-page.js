@@ -1,7 +1,6 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
-const dialogs = require("tns-core-modules/ui/dialogs");
 // >> require-timer
-const timerModule  = require("tns-core-modules/timer");
+const timerModule = require("tns-core-modules/timer");
 // << require-timer
 const color = ["green", "yellow", "red"];
 let id;
@@ -14,7 +13,7 @@ function onNavigatingTo(args) {
     vm.set("buttonText", "Disable color change");
     // >> set-interval-example
     id = timerModule.setInterval(() => {
-        let randNumber = Math.floor(Math.random() * (color.length));
+        const randNumber = Math.floor(Math.random() * (color.length));
         vm.set("buttoncolor", color[randNumber]);
     }, 1000);
     // << set-interval-example
@@ -29,7 +28,7 @@ function onButtonTap(args) {
         vm.set("buttonText", "Enable color change");
     } else {
         id = timerModule.setInterval(() => {
-            let randNumber = Math.floor(Math.random() * (color.length));
+            const randNumber = Math.floor(Math.random() * (color.length));
             vm.set("buttoncolor", color[randNumber]);
         }, 1000);
 

@@ -1,8 +1,6 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 
-const timerModule  = require("tns-core-modules/timer");
-
-const counter  = 0;
+let counter = 0;
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
@@ -11,9 +9,8 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function  increase(args) {
-    let button = args.object;
-    const vm = button.page.bindingContext;
+function increase(args) {
+    const button = args.object;
     button.backgroundColor = new Color("#3078FE");
 
     setTimeout(() => {
@@ -23,8 +20,7 @@ function  increase(args) {
 }
 
 function decrease(args) {
-    let button = args.object;
-    const vm = button.page.bindingContext;
+    const button = args.object;
     button.backgroundColor = new Color("#3078FE");
 
     // >> settimeout-timer-code
@@ -36,5 +32,5 @@ function decrease(args) {
 }
 
 exports.onNavigatingTo = onNavigatingTo;
-exports.checkPlatformType = checkPlatformType;
-exports.deviceInfo = deviceInfo;
+exports.increase = increase;
+exports.decrease = decrease;

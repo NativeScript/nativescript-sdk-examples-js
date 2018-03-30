@@ -1,8 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 // >> require-http
-var httpModule = require("http");
+const httpModule = require("http");
 // << require-http
-const counter  = 0;
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
@@ -22,9 +21,12 @@ function makePostRequest(args) {
             url: "https://httpbin.org/post",
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            content: JSON.stringify({ username: vm.get("user"), password: vm.get("pass") })
+            content: JSON.stringify({
+                username: vm.get("user"),
+                password: vm.get("pass")
+            })
         }).then((response) => {
-            let result = response.content.toJSON();
+            const result = response.content.toJSON();
             // >> (hide)
             vm.set("isItemVisible", true);
             vm.set("message", result.json.username);

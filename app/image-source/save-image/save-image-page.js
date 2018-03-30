@@ -1,8 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
-const appSettings = require("application-settings");
 const imageSourceModule = require("tns-core-modules/image-source");
-var fileSystemModule = require("tns-core-modules/file-system");
-var imageAssetModule = require("tns-core-modules/image-asset");
+const fileSystemModule = require("tns-core-modules/file-system");
+const imageAssetModule = require("tns-core-modules/image-asset");
 
 function onNavigatingTo(args) {
     const page = args.object;
@@ -15,7 +14,7 @@ function onNavigatingTo(args) {
 }
 
 
-function makeCopyFromFile(args){
+function makeCopyFromFile(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
 
@@ -26,16 +25,16 @@ function makeCopyFromFile(args){
     const folderDest = fileSystemModule.knownFolders.documents();
     const pathDest = fileSystemModule.path.join(folderDest.path, "test.png");
     const saved = img.saveToFile(pathDest, "png");
-    if(saved){
+    if (saved) {
         console.log("Image saved successfully!");
         // >> (hide)
         vm.set("imageCopyPath", pathDest);
         // << (hide)
     }
-    // >> image-source-save-from-file
+    // << image-source-save-from-file
 
 }
-function makeCopyFromAsset(args){
+function makeCopyFromAsset(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     const folder = fileSystemModule.knownFolders.currentApp();
@@ -47,13 +46,13 @@ function makeCopyFromAsset(args){
         keepAspectRatio: true
     };
     // >> image-source-save-from-asset
-    let source = new imageSourceModule.ImageSource();
+    const source = new imageSourceModule.ImageSource();
     source.fromAsset(imageAsset)
     .then((imageSource) => {
-        let folder = fileSystemModule.knownFolders.documents().path;
-        let fileName = "test.png";
-        let path = fileSystemModule.path.join(folder, fileName);
-        let saved = imageSource.saveToFile(path, "png");
+        const folder = fileSystemModule.knownFolders.documents().path;
+        const fileName = "test.png";
+        const path = fileSystemModule.path.join(folder, fileName);
+        const saved = imageSource.saveToFile(path, "png");
         if (saved) {
             console.log("Image saved successfully!");
             // >> (hide)
@@ -62,20 +61,20 @@ function makeCopyFromAsset(args){
         }
     // << image-source-save-from-asset
     })
-    .catch((e)=>{
+    .catch((e) => {
         console.log("Error: ");
-        console.log(e)
-    })
+        console.log(e);
+    });
 }
 
-function makeBase64String(args){
+function makeBase64String(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> image-source-create-base64
     const folder = fileSystemModule.knownFolders.currentApp();
     const path = fileSystemModule.path.join(folder.path, "images/logo.png");
     const img = imageSourceModule.fromFile(path);
-    let base64String = img.toBase64String("png");
+    const base64String = img.toBase64String("png");
     // << image-source-create-base64
     vm.set("base64String", base64String);
 }
