@@ -10,6 +10,6 @@ THe article will shows basic and advanced binding techniques including the archi
 
 * [Basics](#basics)
 * [Two-Way Binding](#two-way)
+* [MPlain Object Binding](#plain-object-binding)
 * [Parent Binding](#parent-binding)
 * [MVVM Pattern in NativeScript](#mvvm-pattern)
-
