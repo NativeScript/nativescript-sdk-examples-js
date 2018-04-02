@@ -46,7 +46,7 @@ const navigationLinks = [
     new link("FPS Meter", "/fps-meter/fps-meter-page"),
     new link("HTTP Module", "/http/http-page"),
     new link("ImageSource", "/image-source/image-source-page"),
-    new link("File System", "/file-system"),
+    new link("File System", "/file-system/file-system-page"),
     new link("Modal page", "/modal-page"),
     new link("Camera", "/camera"),
     new link("XML Parser", "/xml-parser/xml-parser-page")

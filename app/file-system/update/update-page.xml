@@ -1,0 +1,24 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="setInterval"/>
+	</Page.actionBar>
+    <StackLayout>
+        <ScrollView>
+            <StackLayout class="form">
+                <StackLayout class="input-field">
+                    <Label text="File name" class="label" textWrap="true"></Label>
+                    <TextField class="input input-border" text="{{ fileName }}" hint="Enter new file name"></TextField>
+                </StackLayout>
+                <Button class="btn btn-primary btn-active" text="Change file name" tap="onFileRename"></Button>
+                <Label class="p-15" text="{{ fileSuccessMessage }}" textWrap="true" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}"></Label>
+
+                <StackLayout class="input-field">
+                    <Label text="Folder name" class="label" textWrap="true"></Label>
+                    <TextField class="input input-border" text="{{ folderName }}" hint="Enter new folder name"></TextField>
+                </StackLayout>
+                <Button class="btn btn-primary btn-active" text="Change folder name" tap="onFolderRename"></Button>
+                <Label class="p-15" text="{{ folderSuccessMessage }}" textWrap="true" visibility="{{ isFolderItemVisible ? 'visible' : 'collapsed' }}"></Label>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

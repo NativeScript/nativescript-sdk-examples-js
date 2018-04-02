@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
