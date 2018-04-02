@@ -1,7 +1,7 @@
 const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
 
 const Button = require("tns-core-modules/ui/button/").Button;
-// TODO: This should be in "pageNavigatingTo" but that method is defined in the Page base class
+
 exports.onNavigatingTo = function(args) {
     const page = args.object;
     const grid = page.getViewById("grid");
