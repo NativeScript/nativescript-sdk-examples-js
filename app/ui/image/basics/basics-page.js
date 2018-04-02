@@ -1,6 +1,6 @@
 const Image = require("tns-core-modules/ui/image").Image;
 
-function onNavigatingTo(args) {
+function onPageLoaded(args) {
     const page = args.pbject;
     const container = page.getViewById("container");
     // >> image-code-behdnd
@@ -10,4 +10,4 @@ function onNavigatingTo(args) {
     // << image-code-behdnd
     container.addChild(newImage);
 }
-exports.onNavigatingTo = onNavigatingTo;
+exports.onPageLoaded = onPageLoaded;

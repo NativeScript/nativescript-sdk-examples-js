@@ -32,6 +32,8 @@ function textFieldSecureStateChange(args) {
 }
 // displaying the TextField text in an Alert dialog
 function showText(args) {
+    const page = args.object.page;
+    const vm = page.bindingContext;
     dialogs.alert(`Text: ${vm.get("tfText")}`)
     .then(() => {
         console.log("Dialog closed!");

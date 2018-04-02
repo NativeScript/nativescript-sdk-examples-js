@@ -74,15 +74,15 @@ function onButtonTap(args) {
     }
     switch (!status) {
         case true:
-                vm.set(`${id}ResultButton`, `Hide ${id} result`);
+                vm.set(id + "ResultButton", `Hide ${id} result`);
             break;
         case false:
-                vm.set(`${id}ResultButton`, `Show ${id} result`);
+                vm.set(id + "ResultButton", `Show ${id} result`);
             break;
         default:
             break;
     }
-    vm.set(`${idResultVisible}, !status`);
+    vm.set(id + "ResultVisible", !status);
 }
 
 function getStringExample(viewModel) {

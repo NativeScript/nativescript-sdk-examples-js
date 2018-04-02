@@ -8,6 +8,6 @@
         <Button class="btn btn-primary btn-rounded-sm btn-active" text="Enable tracing" tap="enableTracing"/>
         <Button class="btn btn-primary btn-rounded-sm btn-active" text="Disable tracing" tap="disableTracing"/>
         <Button class="btn btn-primary btn-rounded-sm btn-active" text="isCategorySet (Debug category)" tap="checkIsDebugCategorySet"/>
-        <Button class="btn btn-primary btn-rounded-sm btn-active" text="isCategorySet (VisualTreeEvents category)" tap="checkIsDebugVisualTreeEventsSet"/>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" height="70"  text="isCategorySet (VisualTreeEvents category)" tap="checkIsDebugVisualTreeEventsSet"/>
     </StackLayout>
 </Page>
