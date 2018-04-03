@@ -23,19 +23,19 @@ function onCreateFile(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-create-all-code
-    let documents = fileSystemModule.knownFolders.documents();
-    let folder = documents.getFolder(vm.get("folderName") || "testFolder");
-    let file = folder.getFile((vm.get("fileName") || "testFile") + ".txt");
+    const documents = fileSystemModule.knownFolders.documents();
+    const folder = documents.getFolder(vm.get("folderName") || "testFolder");
+    const file = folder.getFile((vm.get("fileName") || "testFile") + ".txt");
 
     file.writeText(vm.get("fileTextContent") || "some random content")
-        .then(result => {
+        .then((result) => {
             file.readText()
-                .then(res => {
+                .then((res) => {
                     vm.set("successMessage", "Successfully saved in " + file.path);
                     vm.set("writtenContent", res);
                     vm.set("isItemVisible", true);
                 });
-        }).catch(err => {
+        }).catch((err) => {
             console.log(err);
         });
     // << fs-create-all-code

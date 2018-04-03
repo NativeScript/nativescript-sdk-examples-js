@@ -27,11 +27,11 @@ function onFileRename(args) {
     // >> fs-update-rename-file-code
     const fileName = vm.get("fileName");
     file.rename(fileName + ".txt")
-        .then(res => {
+        .then((res) => {
             // File Successfully Renamed.
             vm.set("fileSuccessMessage", `File renamed to:  ${fileName}.txt`);
             vm.set("isItemVisible", true);
-        }).catch(err => {
+        }).catch((err) => {
             // Error!
             console.log("Error: ");
             console.log(err);
@@ -49,11 +49,11 @@ function onFolderRename(args) {
     // >> fs-update-rename-folder-code
     const folderName = vm.get("folderName");
     myFolder.rename(folderName)
-        .then(res => {
+        .then((res) => {
             // Folder Successfully Renamed.
             vm.set("folderSuccessMessage", `Folder renamed to:  ${folderName}`);
             vm.set("isFolderItemVisible", true);
-        }).catch(err => {
+        }).catch((err) => {
             // Error!
             console.log("Error: ");
             console.log(err);

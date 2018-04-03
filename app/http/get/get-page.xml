@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="setInterval"/>
+		<ActionBar title="Get"/>
 	</Page.actionBar>
     <StackLayout>
         <ScrollView>
@@ -25,7 +25,7 @@
                 <Button row="9" col="0" colSpan="2"   text="{{ statusCodeResultButton }}" class="btn btn-outline btn-active" id="statusCode" tap="onButtonTap"/>
                 <Label row="10" col="0" colSpan="2" text="{{ 'The returned response status code is: ' + statusCodeResult }}" textWrap="true" visibility="{{ statusCodeResultVisible ? 'visible' : 'collapsed' }}"/>
                 
-                <Button row="11" col="0" colSpan="2"   text="{{ responseHeadersButton }}" class="btn btn-outline btn-active" id="responseHeaders" tap="onButtonTap"/>
+                <Button row="11" col="0" colSpan="2"   text="{{ responseHeadersResultButton }}" class="btn btn-outline btn-active" id="responseHeaders" tap="onButtonTap"/>
                 <Label class="p-15" row="12" col="0" text="Content-Type" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
                 <Label class="p-15" row="13" col="0" text="Date" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
                 <Label class="p-15" row="14" col="0" text="Server" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
@@ -34,7 +34,7 @@
                 <Label class="p-15" row="13" col="1" text="{{ date }}" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
                 <Label class="p-15" row="14" col="1" text="{{ server }}" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
                 
-                <Button row="15" col="0" colSpan="2" text="{{ responseContentButton }}" class="btn btn-outline btn-active" id="responseContent" tap="onButtonTap"/>
+                <Button row="15" col="0" colSpan="2" text="{{ responseContentResultButton }}" class="btn btn-outline btn-active" id="responseContent" tap="onButtonTap"/>
                 <TextView row="16" col="0" colSpan="2" text="{{ responseContentResult }}" editable="false" visibility="{{ responseContentResultVisible ? 'visible' : 'collapsed' }}"/>
 
                 <Button row="17" col="0" colSpan="2" text="{{ getFileResultButton }}" class="btn btn-outline btn-active" id="getFile" tap="onButtonTap"/>

@@ -6,11 +6,11 @@ function onNavigatingTo(args) {
     const vm = new Observable();
 
     // >> fs-paths-normalize-code
-    let documentsFolder = fileSystemModule.knownFolders.documents();
-    let currentAppFolder = fileSystemModule.knownFolders.currentApp();
-    let tempFolder = fileSystemModule.knownFolders.temp();
+    const documentsFolder = fileSystemModule.knownFolders.documents();
+    const currentAppFolder = fileSystemModule.knownFolders.currentApp();
+    const tempFolder = fileSystemModule.knownFolders.temp();
 
-    let testPath = "///test.txt";
+    const testPath = "///test.txt";
     // Get a normalized path such as <folder.path>/test.txt from <folder.path>///test.txt
     vm.set("documents", fileSystemModule.path.normalize(documentsFolder.path + testPath));
     vm.set("currentApp", fileSystemModule.path.normalize(currentAppFolder.path + testPath));
@@ -19,19 +19,19 @@ function onNavigatingTo(args) {
     // >> fs-paths-join-code
     // Generate a path like <documents.path>/myFiles/test.txt
     documentsFolder = fileSystemModule.knownFolders.documents();
-    let filePath = fileSystemModule.path.join(documentsFolder.path, "myFiles", "test.txt");
+    const filePath = fileSystemModule.path.join(documentsFolder.path, "myFiles", "test.txt");
     // << fs-paths-join-code
     console.log(filePath);
 
     // >> fs-paths-separator-code
     // An OS dependent path separator, "\" or "/".
-    let separator = fileSystemModule.path.separator;
+    const separator = fileSystemModule.path.separator;
     // << fs-paths-separator-code
     console.log(separator);
 
     // >> fs-paths-create-folder-code
-    let folderPath = fileSystemModule.path.join(fileSystemModule.knownFolders.documents().path, "music");
-    let folder = fileSystemModule.Folder.fromPath(folderPath);
+    const folderPath = fileSystemModule.path.join(fileSystemModule.knownFolders.documents().path, "music");
+    const folder = fileSystemModule.Folder.fromPath(folderPath);
     // << fs-paths-create-folder-code
     console.log(folder);
 
@@ -46,21 +46,21 @@ function onSaveContentToFile(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-paths-create-file-code
-    let documentsFolder = fileSystemModule.knownFolders.documents();
-    let path = fileSystemModule.path.join(documentsFolder.path, "FileFromPath.txt");
-    let file = fileSystemModule.File.fromPath(path);
+    const documentsFolder = fileSystemModule.knownFolders.documents();
+    const path = fileSystemModule.path.join(documentsFolder.path, "FileFromPath.txt");
+    const file = fileSystemModule.File.fromPath(path);
 
     // Writing text to the file.
     file.writeText(vm.get("textContentToBeSaved"))
-        .then(result => {
+        .then((result) => {
             // Succeeded writing to the file.
-            file.readText().then(res => {
+            file.readText().then((res) => {
                 // Succeeded read from file.
                 vm.set("isContentSaved", true);
                 vm.set("savedContent", res);
-                console.log("File content: " + res);
+                console.log(`File content:  ${res}`);
             });
-        }).catch(err => {
+        }).catch((err) => {
             console.log(err.stack);
         });
     // << fs-paths-create-file-code

@@ -21,10 +21,10 @@ function onDeleteFile(args) {
     if (file) {
         // >> fs-delete-file-code
         file.remove()
-            .then(res => {
+            .then((res) => {
                 // Success removing the file.
                 vm.set("resultMessage", "File successfully deleted!");
-            }).catch(err => {
+            }).catch((err) => {
                 console.log(err.stack);
             });
         // << fs-delete-file-code
@@ -40,10 +40,10 @@ function onDeleteFolder(args) {
         // >> fs-delete-folder-code
         // Remove a folder and recursively its content.
         myFolder.remove()
-            .then(fres => {
+            .then((fres) => {
                 // Success removing the folder.
                 vm.set("resultMessage", "Folder successfully deleted!");
-            }).catch(err => {
+            }).catch((err) => {
                 console.log(err.stack);
             });
         // << fs-delete-folder-code
@@ -58,10 +58,10 @@ function onClearFolder(args) {
     if (myFolder) {
         // >> fs-clear-folder-code
         myFolder.clear()
-            .then(res => {
+            .then((res) => {
                 // Successfully cleared the folder.
                 vm.set("resultMessage", "Folder successfully cleared!");
-            }).catch(err => {
+            }).catch((err) => {
                 console.log(err.stack);
             });
         // << fs-clear-folder-code

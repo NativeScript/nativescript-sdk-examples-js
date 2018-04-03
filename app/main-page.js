@@ -42,13 +42,12 @@ const navigationLinks = [
     new link("Placeholder", "/ui/placeholder/placeholder-page"),
     new link("Repeater", "/ui/repeater/repeater-page"),
     new link("Platform Module", "/platform/platform-page"),
-    new link("Location", "/location"),
     new link("FPS Meter", "/fps-meter/fps-meter-page"),
     new link("HTTP Module", "/http/http-page"),
+    new link("Fetch", "/fetch/fetch-page"),
     new link("ImageSource", "/image-source/image-source-page"),
     new link("File System", "/file-system/file-system-page"),
     new link("Modal page", "/modal-page"),
-    new link("Camera", "/camera"),
     new link("XML Parser", "/xml-parser/xml-parser-page")
 ];
 

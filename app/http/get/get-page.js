@@ -20,10 +20,10 @@ function onNavigatingTo(args) {
     vm.set("statusCodeResult", "");
     vm.set("statusCodeResultVisible", false);
 
-    vm.set("responseHeadersButton", "Show responseHeaders result");
+    vm.set("responseHeadersResultButton", "Show responseHeaders result");
     vm.set("responseHeadersResultVisible", false);
 
-    vm.set("responseContentButton", "Show responseContent result");
+    vm.set("responseContentResultButton", "Show responseContent result");
     vm.set("responseContentResultVisible", false);
 
     vm.set("getFileResultButton", "Show getFile result");
