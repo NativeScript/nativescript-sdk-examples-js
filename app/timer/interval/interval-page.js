@@ -11,6 +11,7 @@ function onNavigatingTo(args) {
     const vm = new Observable();
 
     vm.set("buttonText", "Disable color change");
+    vm.set("buttoncolor", "gray");
     // >> set-interval-example
     id = timerModule.setInterval(() => {
         const randNumber = Math.floor(Math.random() * (color.length));

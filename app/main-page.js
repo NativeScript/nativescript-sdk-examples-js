@@ -47,7 +47,7 @@ const navigationLinks = [
     new link("Fetch", "/fetch/fetch-page"),
     new link("ImageSource", "/image-source/image-source-page"),
     new link("File System", "/file-system/file-system-page"),
-    new link("Modal page", "/modal-page"),
+    // new link("Modal page", "/modal-page"),
     new link("XML Parser", "/xml-parser/xml-parser-page")
 ];
 
