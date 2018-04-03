@@ -1,0 +1,9 @@
+
+AbsoluteLayout {
+    background-color: lightgray;
+}
+
+Button {
+    padding:16;
+    height: 100;
+}
