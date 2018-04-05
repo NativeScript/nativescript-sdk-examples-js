@@ -5,7 +5,7 @@
 
     <GridLayout rows="*" columns="*">
 				<!-- >> tabs-limit-xml -->
-				<TabView id="tabViewContainer" androidTabsPosition="bottom">
+				<TabView id="tabViewContainer" androidOffscreenTabLimit="0">
 						<TabView.items>
 								<TabViewItem title="NativeScript">
 										<TabViewItem.view>

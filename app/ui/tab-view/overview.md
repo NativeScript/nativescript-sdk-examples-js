@@ -6,6 +6,7 @@ By default the TabView will load the view of the first tab, however it is possib
 * [Code Behind](#code-behind)
 * [Icon Fonts](#icon-fonts)
 * [Tabs Position](#tab-position)<sup>Android Secific<sup>
+* [Tabs Limit](#tab-limit)<sup>Android Secific<sup>
 
 <snippet id='text-view-require'/>
 

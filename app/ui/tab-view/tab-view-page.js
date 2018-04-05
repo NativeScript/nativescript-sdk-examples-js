@@ -11,6 +11,7 @@ function onNavigatingTo(args) {
     const page = args.object;
     if((platformModule.isAndroid) && (navigationLinks.filter(e => e.title === 'Tabs Position').length < 1)){
         navigationLinks.push(new link("Tabs Position", "/ui/tab-view/tabs-position/tabs-position-page"));
+        navigationLinks.push(new link("Tabs Limit", "/ui/tab-view/tabs-limit/tabs-limit-page"));
     }
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
