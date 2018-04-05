@@ -1,5 +1,6 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
+const platformModule = require("tns-core-modules/platform");
 const navigationLinks = [
     new link("Basics", "/ui/tab-view/basics/basics-page"),
     new link("Styling", "/ui/tab-view/styling/styling-page"),
@@ -8,6 +9,10 @@ const navigationLinks = [
 ];
 function onNavigatingTo(args) {
     const page = args.object;
+    if((platformModule.isAndroid) && (navigationLinks.filter(e => e.title === 'Tabs Position').length < 1)){
+        navigationLinks.push(new link("Tabs Position", "/ui/tab-view/tabs-position/tabs-position-page"));
+        navigationLinks.push(new link("Tabs Limit", "/ui/tab-view/tabs-limit/tabs-limit-page"));
+    }
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
         actionBarTitle: args.context.title
