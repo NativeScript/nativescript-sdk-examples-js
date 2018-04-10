@@ -27,20 +27,22 @@ function changeTab(args) {
 }
 // displaying the old and new TabView selectedIndex
 function onSelectedIndexChanged(args) {
-    const tabSelectedIndex = args.object.selectedIndex;
-    const page = args.object.page;
-    const vm = page.bindingContext;
-    if (tabSelectedIndex === 0) {
-        vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
-    } else if (tabSelectedIndex === 1) {
-        vm.set("tabSelectedIndexResult", "Stats Tab (tabSelectedIndex = 1 )");
-    } else if (tabSelectedIndex === 2) {
-        vm.set("tabSelectedIndexResult", "Settings Tab (tabSelectedIndex = 2 )");
+    if(args.oldIndex != -1){
+        const tabSelectedIndex = args.object.selectedIndex;
+        const page = args.object.page;
+        const vm = page.bindingContext;
+        if (tabSelectedIndex === 0) {
+            vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
+        } else if (tabSelectedIndex === 1) {
+            vm.set("tabSelectedIndexResult", "Stats Tab (tabSelectedIndex = 1 )");
+        } else if (tabSelectedIndex === 2) {
+            vm.set("tabSelectedIndexResult", "Settings Tab (tabSelectedIndex = 2 )");
+        }
+        dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
+        .then(() => {
+            console.log("Dialog closed!");
+        });
     }
-    dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
-    .then(() => {
-        console.log("Dialog closed!");
-    });
 }
 exports.onNavigatingTo = onNavigatingTo;
 exports.changeTab = changeTab;
