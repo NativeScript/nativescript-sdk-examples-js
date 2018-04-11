@@ -1,34 +1,27 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <Page.actionBar>
-		<ActionBar title="Tabs Position"/>
+	<Page.actionBar>
+		<ActionBar title="Tabs Position" />
 	</Page.actionBar>
-
-    <GridLayout rows="*" columns="*">
-				<!-- >> tabs-limit-xml -->
-				<TabView id="tabViewContainer" androidOffscreenTabLimit="0">
-						<TabView.items>
-								<TabViewItem title="NativeScript">
-										<TabViewItem.view>
-												<StackLayout>
-														<Label text="NativeScript" class="m-15 h2 text-left" color="blue"/>
-														<ScrollView>
-															<StackLayout height="100%">
-																<Label text="{{content}}" textWrap="true" class="m-15"/>
-															</StackLayout>
-														</ScrollView>
-												</StackLayout>
-										</TabViewItem.view>
-								</TabViewItem>
-								<TabViewItem title="Icon">
-										<TabViewItem.view>
-												<StackLayout>
-														<Image class="m-t-30 m-b-15" src="res://icon" width="80" height="80"/>
-														<Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"/>
-												</StackLayout>		
-										</TabViewItem.view>
-								</TabViewItem>
-						</TabView.items>
-				</TabView>
-				<!-- << tabs-limit-xml -->
-		</GridLayout>
+	<GridLayout rows="*" columns="*">
+		<!-- >> tabs-limit-xml -->
+		<TabView id="tabViewContainer" androidOffscreenTabLimit="0">
+			<TabViewItem title="NativeScript">
+				<StackLayout>
+					<Label text="NativeScript" class="m-15 h2 text-left" color="blue" />
+					<ScrollView>
+						<StackLayout height="100%">
+							<Label text="{{content}}" textWrap="true" class="m-15" />
+						</StackLayout>
+					</ScrollView>
+				</StackLayout>
+			</TabViewItem>
+			<TabViewItem title="Icon">
+				<StackLayout>
+					<Image class="m-t-30 m-b-15" src="res://icon" width="80" height="80" />
+					<Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue" />
+				</StackLayout>
+			</TabViewItem>
+		</TabView>
+		<!-- << tabs-limit-xml -->
+	</GridLayout>
 </Page>
