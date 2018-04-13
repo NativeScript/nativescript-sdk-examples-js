@@ -158,7 +158,7 @@ function getComponents(cwd, components, currentDir, jenkinsPosition) {
                 fs.appendFileSync(componentArticleFile, "---\n\n",  {encoding:'utf8'});
             });
 
-            //End.md
+            // End.md
             var subDirPath = overview.replace("/overview.md", "");
             var end = path.join(subDirPath, "end.md");
             var endContents = fs.readFileSync(end,  {encoding:'utf8'});
