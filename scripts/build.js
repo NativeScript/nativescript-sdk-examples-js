@@ -128,6 +128,7 @@ function getComponents(cwd, components, currentDir, jenkinsPosition) {
 
                 // Header
                 var prettyArticleHeader = prettify(articleHeader);
+                prettyArticleHeader = prettyArticleHeader.replace(/Ios|IOS/, "iOS");
                 fs.appendFileSync(componentArticleFile, "## " + prettyArticleHeader + "\n\n",  {encoding:'utf8'});
 
                 // Content
