@@ -6,6 +6,7 @@ exports.onNavigatingTo = function (args) {
     const page = args.object;
     // >> grid-layout-code
     const myGrid = new GridLayout();
+    
     // >> (hide)
     const btn1 = new Button();
     btn1.backgroundColor = "#0099CC";

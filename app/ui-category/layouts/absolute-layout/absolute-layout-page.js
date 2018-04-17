@@ -8,6 +8,7 @@ exports.onNavigatingTo = function(args) {
 
     // >> absolute-layout-code-behind
     const absoluteLayout = new AbsoluteLayout();
+
     // >> (hide)
     const button1 = new Button();
     button1.text = "Left: 10, Top: 5";
@@ -30,19 +31,14 @@ exports.onNavigatingTo = function(args) {
 
     AbsoluteLayout.setLeft(button1, 10);
     AbsoluteLayout.setTop(button1, 5);
-
     AbsoluteLayout.setLeft(button2, 30);
     AbsoluteLayout.setTop(button2, 80);
-
     AbsoluteLayout.setLeft(button3, 150);
     AbsoluteLayout.setTop(button3, 25);
-
     AbsoluteLayout.setLeft(button4, 70);
     AbsoluteLayout.setTop(button4, 150);
-
-    // >> (hide)
-    stack.removeChildren();
-    // << (hide)
-    stack.addChild(absoluteLayout);
     // << absolute-layout-code-behind
+
+    stack.removeChildren();
+    stack.addChild(absoluteLayout);
 };
