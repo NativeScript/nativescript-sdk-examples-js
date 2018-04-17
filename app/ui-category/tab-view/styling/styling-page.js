@@ -27,7 +27,7 @@ function changeTab(args) {
 }
 // displaying the old and new TabView selectedIndex
 function onSelectedIndexChanged(args) {
-    if(args.oldIndex != -1){
+    if (args.oldIndex !== -1) {
         const tabSelectedIndex = args.object.selectedIndex;
         const page = args.object.page;
         const vm = page.bindingContext;
@@ -39,9 +39,9 @@ function onSelectedIndexChanged(args) {
             vm.set("tabSelectedIndexResult", "Settings Tab (tabSelectedIndex = 2 )");
         }
         dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
-        .then(() => {
-            console.log("Dialog closed!");
-        });
+            .then(() => {
+                console.log("Dialog closed!");
+            });
     }
 }
 exports.onNavigatingTo = onNavigatingTo;

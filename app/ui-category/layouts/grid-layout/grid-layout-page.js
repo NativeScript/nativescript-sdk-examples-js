@@ -2,12 +2,12 @@ const GridLayout = require("tns-core-modules/ui/layouts/grid-layout").GridLayout
 const ItemSpec = require("tns-core-modules/ui/layouts/grid-layout").ItemSpec;
 const Button = require("tns-core-modules/ui/button/").Button;
 
-exports.onNavigatingTo = function(args) {
+exports.onNavigatingTo = function (args) {
     const page = args.object;
     // >> grid-layout-code
     const myGrid = new GridLayout();
     // >> (hide)
-    const btn1 = new Button(); 
+    const btn1 = new Button();
     btn1.backgroundColor = "#0099CC";
     const btn2 = new Button();
     btn2.backgroundColor = "#FFFF66";
@@ -39,7 +39,7 @@ exports.onNavigatingTo = function(args) {
     // Set rowSpan property on views
     GridLayout.setRowSpan(btn3, 2);
     GridLayout.setRowSpan(btn4, 2);
-    
+
     // Set column property on views
     GridLayout.setColumn(btn1, 0);
     GridLayout.setColumn(btn2, 1);

@@ -28,7 +28,7 @@
         "curly": "error",
         "default-case": "error",
         "dot-location": [
-            "error",
+            "warn",
             "property"
         ],
         "dot-notation": "error",
@@ -54,6 +54,7 @@
             }
         ],
         "no-caller": "error",
+        "no-case-declarations": "warn",
         "no-catch-shadow": "error",
         "no-confusing-arrow": "error",
         "no-console": "off",

@@ -1,7 +1,7 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "/ui/html-view/basics/basics-page")
+    new link("Basics", "/ui-category/html-view/basics/basics-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

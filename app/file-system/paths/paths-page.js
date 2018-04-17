@@ -6,7 +6,7 @@ function onNavigatingTo(args) {
     const vm = new Observable();
 
     // >> fs-paths-normalize-code
-    const documentsFolder = fileSystemModule.knownFolders.documents();
+    let documentsFolder = fileSystemModule.knownFolders.documents();
     const currentAppFolder = fileSystemModule.knownFolders.currentApp();
     const tempFolder = fileSystemModule.knownFolders.temp();
 

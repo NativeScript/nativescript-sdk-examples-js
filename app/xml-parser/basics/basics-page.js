@@ -39,8 +39,10 @@ const onEventCallback = (event) => {
                 significantText:null
             });
             break;
+
         case xmlModule.ParserEventType.Text:
             const significantText = event.data.trim();
+
             if (significantText !== "") {
                 source.push({
                     eventType:event.eventType,
