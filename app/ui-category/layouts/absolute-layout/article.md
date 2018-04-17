@@ -7,5 +7,5 @@ The `AbsoluteLayout` will not enforce any layout constraints on its elements and
 Basic usage and definition of `AbsoluteLayout` and the properties `left` and `top` to position its children views within the layout.
 <snippet id='absolute-layout-html'/>
 
-Creating of `AbsoluteLayout` in JavaScript.
+Creating `AbsoluteLayout` programmatically.
 <snippet id='absolute-layout-code-behind'/>
