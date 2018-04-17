@@ -26,7 +26,7 @@ function onFileRename(args) {
     const vm = page.bindingContext;
     // >> fs-update-rename-file-code
     const fileName = vm.get("fileName");
-    file.rename(fileName + ".txt")
+    file.rename(`${fileName}.txt`)
         .then((res) => {
             // File Successfully Renamed.
             vm.set("fileSuccessMessage", `File renamed to:  ${fileName}.txt`);

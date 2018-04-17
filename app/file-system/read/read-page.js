@@ -13,7 +13,7 @@ function onNavigatingTo(args) {
         "Open source framework for building truly native mobile apps" +
         "with Angular, TypeScript or JavaScript.";
 
-    const documents = fileSystemModule.knownFolders.documents();
+    let documents = fileSystemModule.knownFolders.documents();
     const folder = documents.getFolder(folderName);
     const file = folder.getFile(fileName);
 
@@ -21,9 +21,9 @@ function onNavigatingTo(args) {
         .then((result) => {
             // >> fs-read-text-code
             file.readText()
-                .then(res => {
+                .then((res) => {
                     vm.set("writtenContent", res);
-                }).catch(err => {
+                }).catch((err) => {
                     console.log(err.stack);
                 });
             // << fs-read-text-code
@@ -81,7 +81,7 @@ function onReadSync(args) {
     if (saved) {
         const imageFile = fileSystemModule.File.fromPath(path);
         const binarySource = imageFile.readSync((err) => {
-            console.log("Error:" + err);
+            console.log(err);
         });
         console.log(this.binarySource);
         // << fs-read-sync-code

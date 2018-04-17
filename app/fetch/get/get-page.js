@@ -53,23 +53,21 @@ function onButtonTap(args) {
     }
     switch (!status) {
         case true:
-                vm.set(id + "ResultButton", `Hide ${id} result`);
+                vm.set(`${id}ResultVisible`, `Hide ${id} result`);
             break;
         case false:
-                vm.set(id + "ResultButton", `Show ${id} result`);
+                vm.set(`${id}ResultVisible`, `Show ${id} result`);
             break;
         default:
             break;
     }
-    vm.set(id + "ResultVisible", !status);
+    vm.set(`${id}ResultVisible`, !status);
 }
 
 function getStringExample(viewModel) {
     // >> get-string-code-fetch
     fetch("https://httpbin.org/get")
-    .then((response) => {
-        return response.text();
-    })
+    .then((response) => response.text())
     .then((r) => {
         viewModel.set("getStringResult", r);
     }).catch((e) => {
@@ -83,9 +81,7 @@ function getStringExample(viewModel) {
 function getJSONExample(viewModel) {
     // >> get-json-code-fetch
     fetch("https://httpbin.org/get")
-    .then((response) => {
-        return response.json();
-    })
+    .then((response) => response.json())
     .then((r) => {
         // >> (hide)
         viewModel.set("host", r.headers.Host);
@@ -93,10 +89,10 @@ function getJSONExample(viewModel) {
         viewModel.set("origin", r.origin);
         viewModel.set("url", r.url);
         // << (hide)
-    }).catch((e) => {
+    }).catch((err) => {
         // >> (hide)
         console.log("Error: ");
-        console.log(e);
+        console.log(err);
         // << (hide)
     });
     // << get-json-code-fetch
@@ -109,10 +105,10 @@ function getResponseStatusCodeExample(viewModel) {
         const status = response.status;
         viewModel.set("statusCodeResult", status);
         // << (hide)
-    }).catch((e) => {
+    }).catch((err) => {
         // >> (hide)
         console.log("Error: ");
-        console.log(e);
+        console.log(err);
         // << (hide)
     });
     // << request-status-code-fetch
@@ -122,16 +118,14 @@ function getResponseHeadersExample(viewModel) {
     console.log("getResponseHeadersExample");
     // >> request-response-header-fetch
     fetch("https://httpbin.org/get")
-    .then((r) => {
-        return r.json();
-    })
+    .then((r) => r.json())
     .then((response) => {
         // >> (hide)
         console.log("Header");
         console.log(response);
         viewModel.set("acceptEncoding", response.headers["Accept-Encoding"]);
         viewModel.set("userAgent", response.headers["User-Agent"]);
-        viewModel.set("host", response.headers["Host"]);
+        viewModel.set("host", response.headers.Host);
         // << (hide)
     }).catch((e) => {
         // >> (hide)
@@ -145,9 +139,7 @@ function getResponseHeadersExample(viewModel) {
 function getResponseFormDataExample(viewModel) {
     // >> request-response-form-data
     fetch("https://httpbin.org/get")
-    .then((result) => {
-        return result.formData();
-    })
+    .then((result) => result.formData())
     .then((response) => {
         // >> (hide)
         viewModel.set("responseFormDataResult", response);

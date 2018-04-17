@@ -15,25 +15,21 @@ function makePostRequest(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fetch-post
-        fetch("https://httpbin.org/post", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                username: vm.get("user"),
-                password: vm.get("pass")
-            })
+    fetch("https://httpbin.org/post", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: vm.get("user"),
+            password: vm.get("pass")
         })
-        .then((r) => {
-            return r.json();
-        })
+    }).then((r) => r.json())
         .then((response) => {
             const result = response.json;
             // >> (hide)
             vm.set("isItemVisible", true);
             vm.set("message", result.username);
             // << (hide)
-        })
-        .catch((e) => {
+        }).catch((e) => {
             // >> (hide)
             console.log("Error: ");
             console.log(e);

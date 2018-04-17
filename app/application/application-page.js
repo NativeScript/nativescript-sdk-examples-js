@@ -8,7 +8,7 @@ const navigationLinks = [
 ];
 function onNavigatingTo(args) {
     const page = args.object;
-    if((platformModule.isIOS) && (navigationLinks.filter(e => e.title === 'iOS Notification Observer').length < 1)){
+    if ((platformModule.isIOS) && (navigationLinks.filter((e) => e.title === "iOS Notification Observer").length < 1)) {
         navigationLinks.push(new link("iOS Notification Observer", "/application/ios-notification-observer/ios-notification-observer-page"));
     }
     page.bindingContext = new ListViewLinksModel({

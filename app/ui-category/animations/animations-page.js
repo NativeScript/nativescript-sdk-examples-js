@@ -1,9 +1,9 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Animated Properties", "/ui/animations/animating-properties/animating-properties-page"),
-    new link("Chained Animations", "/ui/animations/chaining-animations/chaining-animations-page"),
-    new link("Animating Multiple Views", "/ui/animations/multiple-views/multiple-views-page")
+    new link("Animated Properties", "/ui-category/animations/animating-properties/animating-properties-page"),
+    new link("Chained Animations", "/ui-category/animations/chaining-animations/chaining-animations-page"),
+    new link("Animating Multiple Views", "/ui-category/animations/multiple-views/multiple-views-page")
 ];
 
 // >> animations-imports
