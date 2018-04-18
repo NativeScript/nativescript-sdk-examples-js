@@ -2,9 +2,9 @@ const ListViewLinksModel = require("../links-view-model");
 const link = require("../link");
 const platformModule = require("tns-core-modules/platform");
 const navigationLinks = [
-    new link("Check Platform", "/application/check-platform/check-platform-page"),
-    new link("Application Events", "/application/application-events/application-events-page"),
-    new link("Android Broadcast Receiver", "/application/android-broadcast-receiver/android-broadcast-receiver-page")
+    new link("Check Platform", "application/check-platform/check-platform-page"),
+    new link("Application Events", "application/application-events/application-events-page"),
+    new link("Android Broadcast Receiver", "application/android-broadcast-receiver/android-broadcast-receiver-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
