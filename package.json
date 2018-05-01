@@ -1,8 +1,24 @@
 {
-  "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "name": "nativescript-sdk-examples-js",
+  "description": "NativeScript SDK Examples",
+  "author": "Telerik <support@telerik.com>",
+  "version": "0.1.0",
+  "homepage": "https://github.com/NativeScript/nativescript-sdk-examples-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/nativescript-sdk-examples-js"
+  },
+  "bugs": {
+    "url": "https://github.com/NativeScript/nativescript-sdk-examples-js/issues"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "SDK",
+    "example",
+    "documentation"
+  ],
+  "license": "Apache-2.0",
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-ios": {
