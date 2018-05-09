@@ -1,4 +1,4 @@
-The methods propvided by timer module allows execution of code fragment at specific time interval.
+The methods provided by timer module allows execution of code fragment at specific time interval.
 Methods:
 * `setTimeout`
 * `setInterval`
