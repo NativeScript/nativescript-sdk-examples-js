@@ -1,4 +1,4 @@
-There are some limitations when styling `DatePicker` component, casued by the way the different native
+There are some limitations when styling `DatePicker` component, caused by the way the different native
 controls works on Android and on iOS. One major difference is that on Android we can control the font color by modifying the `colors.xml` file
 in `App_Resources/Android/values/colors.xml` while on iOS we can directly use the CSS property `color`.
 <snippet id='date-picker-styles'/>
