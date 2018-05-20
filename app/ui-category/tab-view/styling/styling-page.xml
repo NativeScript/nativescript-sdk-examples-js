@@ -4,7 +4,7 @@
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
 		<!-- >> tab-view-binding-xml -->
-		<TabView selectedIndex="{{tabSelectedIndex}}" selectedIndexChanged="onSelectedIndexChanged" selectedColor="#FF0000" iosIconRenderingMode="alwaysOriginal" androidSelectedTabHighlightColor="red">
+		<TabView selectedIndex="{{tabSelectedIndex}}" selectedIndexChanged="onSelectedIndexChanged" selectedTabTextColor="#FF0000" iosIconRenderingMode="alwaysOriginal" androidSelectedTabHighlightColor="red">
 			<TabViewItem title="Profile" iconSource="res://icon">
 				<StackLayout>
 					<Label text="{{ tabSelectedIndexResult }}" class="h2 m-t-16 text-center" textWrap="true" />
