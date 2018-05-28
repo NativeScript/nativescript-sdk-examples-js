@@ -1,0 +1,27 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"  loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Gradients"/>
+	</Page.actionBar>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout class="bottom-gradient" height="200" marginTop="16">
+                <Label text="background: linear-gradient(to bottom, orangered, green, lightblue);" textWrap="true" />
+            </StackLayout>
+            <StackLayout class="left-gradient" height="200" marginTop="16">
+                <Label text="background: linear-gradient(to left, orangered, green, lightblue);" textWrap="true" />
+            </StackLayout>
+            <StackLayout class="right-gradient" height="200" marginTop="16">
+                <Label text="background: linear-gradient(to right, orangered, green, lightblue);" textWrap="true" />
+            </StackLayout>
+            <StackLayout class="degree-gradient" height="200" marginTop="16">
+                <Label text="background: linear-gradient(45deg, orangered, green, lightblue);" textWrap="true" />
+            </StackLayout>
+            <StackLayout class="two-color-gradient" height="200" marginTop="16">
+                <Label text="background: linear-gradient(-45deg, orangered, lightblue);" textWrap="true" />
+            </StackLayout>
+            <StackLayout class="background-image" height="200" marginTop="16">
+                <Label text="background-image:linear-gradient(to bottom, orangered, green, lightblue);" textWrap="true" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
