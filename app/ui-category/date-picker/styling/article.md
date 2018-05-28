@@ -11,7 +11,6 @@ To achieve that, go to `app/App_Resources/Android/values-v21/styles.xml` and mod
 <style name="AppTheme" parent="AppThemeBase">
     <item name="android:datePickerStyle">@style/CalendarDatePicker</item>
 </style>
-
 <style name="CalendarDatePicker" parent="android:Widget.Material.Light.DatePicker">
     <item name="android:datePickerMode">calendar</item>
     <item name="colorPrimary">@color/ns_blue</item>
