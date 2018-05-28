@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "4.0.0"
+    "tns-core-modules": "^4.2.0-2018-05-28-03"
   },
   "devDependencies": {
     "babel-traverse": "6.26.0",

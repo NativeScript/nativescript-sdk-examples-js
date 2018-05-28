@@ -3,6 +3,7 @@
 		<ActionBar title="Icon Fonts" />
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
+		<!-- >> tabview-icon-font-html -->
 		<TabView class="icon" selectedIndex="0">
 			<TabViewItem title="&#xe913;">
 				<StackLayout>
@@ -17,5 +18,6 @@
 				</StackLayout>
 			</TabViewItem>
 		</TabView>
+		<!-- << tabview-icon-font-html -->
 	</GridLayout>
 </Page>

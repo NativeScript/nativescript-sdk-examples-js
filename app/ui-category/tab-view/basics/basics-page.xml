@@ -10,7 +10,7 @@
 					<Label text="NativeScript" class="m-15 h2 text-left" color="blue" />
 					<ScrollView>
 						<StackLayout height="100%">
-							<Label text="{{content}}" textWrap="true" class="m-15" />
+							<Label text="{{ content }}" textWrap="true" class="m-15" />
 						</StackLayout>
 					</ScrollView>
 				</StackLayout>

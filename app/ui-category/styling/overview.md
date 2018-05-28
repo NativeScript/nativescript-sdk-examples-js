@@ -1,3 +1,1 @@
-In The following sample is demostrated different scenarios for setting css to the page and setting CSS selectors.
-
-<snippet id='switch-require'/>
+In the following article, we are demostrating different scenarios for setting CSS styles via classes, selectors, IDs and use cases for setting CSS via code-behind files.

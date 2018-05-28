@@ -1,0 +1,32 @@
+/* >> gradient-styling */
+/* Setting linear gradients */
+
+Label {
+    padding: 8;
+    color:white;
+}
+
+.bottom-gradient {
+    background: linear-gradient(to bottom, orangered, green, lightblue);
+}
+
+.left-gradient {
+    background: linear-gradient(to left, orangered, green, lightblue);
+}
+
+.right-gradient {
+    background: linear-gradient(to right, orangered, green, lightblue);
+}
+
+.degree-gradient {
+    background: linear-gradient(45deg, orangered, green, lightblue);
+}
+
+.two-color-gradient {
+    background: linear-gradient(-45deg, orangered, lightblue);
+}
+
+.background-image {
+    background-image:linear-gradient(to bottom, orangered, green, lightblue);
+}
+/* << gradient-styling */
