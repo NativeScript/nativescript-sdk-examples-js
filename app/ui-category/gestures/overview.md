@@ -1,6 +1,6 @@
 ---
 title: Gestures - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: The Gesture class provides functionality, which allows interaction with the UI component in the application. We can subscribe or unsubscribe via `on` and `off`methods for one or all available gestures like `Tap`, `Double Tap` , `Long Press`, `Pan` , `Pinch` , `Swipe` , `Rotation`  and `Touch`. The examples demonstrate their usage in some basic scenarios.
 position: 24
 slug: gestures
 ---

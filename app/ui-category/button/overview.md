@@ -1,6 +1,6 @@
 ---
 title: Button - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: The Button provides abstraction over Android's widget.Button and iOS's UIButton. This component can be defined via XML or Code-Behind and we can set up its text value and set up tap event handler, which will be fired on button click.
 position: 20
 slug: button
 ---

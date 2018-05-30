@@ -1,6 +1,6 @@
 ---
 title: HtmlView - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: HtmlView is UI component, which allows representing a static HTML content in NativeScript, The component supports a limited number of CSS styling properties. The examples cover some basics scenarios.
 position: 26
 slug: html-view
 ---

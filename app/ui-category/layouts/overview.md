@@ -1,6 +1,6 @@
 ---
 title: Layouts - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: NativeScript provides a collection of several layouts' structures(StackLayout, GridLayout, AbsoluteLayout, DockLayout, FlexboxLayout, WrapLayout), which are used for setting up the position of the views on the screen. The examples cover the main scenarios for using those layout containers inside a NativeScript project.
 position: 30
 slug: layouts
 ---

@@ -1,6 +1,6 @@
 ---
 title: TextField - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: TextField component is an abstraction over iOS's UITextField  and Android's widget.EditText, which allows the user to type a text in the app. The module provides some specific properties like `secure`  and `autocapitalizationType`, which helps to set up further the control. 
 position: 43
 slug: text-field
 ---

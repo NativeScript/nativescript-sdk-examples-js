@@ -1,6 +1,6 @@
 ---
 title: ActivityIndicator - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: ActivityIndicator is an abstraction over Android's ProgressBar and iOS's UActivityIndicatorView.  This UI component is used for displaying the progress while running background operations (e.g loading image, data, accepting a request). The ActivityIndicator's value could be controlled via its `busy` property. 
 position: 17
 slug: activity-indicator
 ---

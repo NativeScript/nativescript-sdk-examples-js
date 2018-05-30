@@ -1,6 +1,7 @@
 ---
 title: FormattedString - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: 
+FormattedString is a special class, which provides a support various text transformations and decorations. This class can be used in all text-related components like Label, TextView, TextField and Button.
 position: 23
 slug: formatted-string
 ---

@@ -1,6 +1,6 @@
 ---
 title: WebView - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: The WebView module allows loading Web page inside a NativeScript application or displaying static HTML content with rich CSS. The component can be used for more advanced scenarios and for displaying dynamic HTML content.
 position: 46
 slug: web-view
 ---

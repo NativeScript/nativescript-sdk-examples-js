@@ -1,6 +1,6 @@
 ---
 title: ScrollView - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: ScrollView class allows displaying scrollable area, which has content that is larger than its bounds. The view enables changing its orientation(horizontal, vertical) via its orientation property and handling scroll event, which indicates if the user is scrolling the content.
 position: 36
 slug: scroll-view
 ---

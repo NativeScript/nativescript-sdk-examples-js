@@ -1,6 +1,6 @@
 ---
 title: Repeater - NativeScript JavaScript
-description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+description: The Repeater is a widget which allows displaying a collection of data, which is presented in an array. The component can be defined via XML or Code-Behind, and we can change the displayed data via its items property.
 position: 35
 slug: repeater
 ---
