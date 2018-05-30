@@ -95,14 +95,6 @@ function getComponents(cwd, components, currentDir, jenkinsPosition) {
 
             var componentPrettyHeader = prettify(componentHeader);
 
-            // Jenkins Header
-            fs.appendFileSync(componentArticleFile, "---\n",  {encoding:'utf8'});
-            fs.appendFileSync(componentArticleFile, "title: " + componentPrettyHeader + "\n",  {encoding:'utf8'});
-            fs.appendFileSync(componentArticleFile, "description: " + componentPrettyHeader + " SDK Examples" + "\n",  {encoding:'utf8'});
-            fs.appendFileSync(componentArticleFile, "position: " + jenkinsPosition++  + "\n",  {encoding:'utf8'});
-            fs.appendFileSync(componentArticleFile, "slug: " + componentHeader + "\n",  {encoding:'utf8'});
-            fs.appendFileSync(componentArticleFile, "---\n\n",  {encoding:'utf8'});
-
             // Component Markdown Header
             fs.appendFileSync(componentArticleFile, "# " + componentPrettyHeader + "\n\n",  {encoding:'utf8'});
 
