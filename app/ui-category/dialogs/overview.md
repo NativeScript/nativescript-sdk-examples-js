@@ -1,3 +1,9 @@
+---
+title: Dialogs - NativeScript JavaScript
+description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+position: 22
+slug: dialogs
+---
 NativeScript lets us create dialogs in your app in a manner similar to the web browser. 
 We can create alerts, confirmations, prompts, logins and dialogs that require action.
 The module `tns-core-modules/ui/dialogs` is loaded globally in every NativeScript application so 

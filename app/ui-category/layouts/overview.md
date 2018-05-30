@@ -1,3 +1,9 @@
+---
+title: Layouts - NativeScript JavaScript
+description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+position: 30
+slug: layouts
+---
 NativeScript provides a recursive layout system that sizes and positions views on the screen.
 `Layout` is the base class for all views that provide positioning of child elements.
 We can use the various layout containers to position elements. 

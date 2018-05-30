@@ -1,3 +1,9 @@
+---
+title: Animations - NativeScript JavaScript
+description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+position: 18
+slug: animations
+---
 One of the ways to improve the attractiveness of your application is by adding animations. 
 NativeScript exposes a simple and easy, but powerful enough API to allow animating almost every native element in your application.
 

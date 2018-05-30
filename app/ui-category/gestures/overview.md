@@ -1,3 +1,9 @@
+---
+title: Gestures - NativeScript JavaScript
+description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+position: 24
+slug: gestures
+---
 This module allows users to interact with an app via a set of different gestures. 
 NativeScript provides a variety of APIs to help you create gestures.
 
