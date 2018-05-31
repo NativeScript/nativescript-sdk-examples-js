@@ -1,9 +1,3 @@
----
-title: Application Module - NativeScript JavaScript
-description: Application Module provides abstraction over the platform-specific funcitonality. This module allows handling application events and creating platform-specific logic.
-position: 1
-slug: application
----
 
 The Application module provides abstraction over the platform-specific Application implementations. 
 The module lets you manage the lifecycle of your NativeScript applications from starting the application 

@@ -1,9 +1,3 @@
----
-title: TabView - NativeScript JavaScript
-description: The TabView modules allow navigating between different views by tapping on some of the tabs or by swiping between the views. The component provides the needed functionality for setting up the active tab via the selectedIndex property and handling the tab change event via selectedIndexChangedEvent. We can also specify the number of the preloaded tabs for android with androidOffscreenTabLimit property and the tabs position with the androidTabsPosition property.
-position: 42
-slug: tab-view
----
 The TabView component provides a simple way to navigate between different views by tapping on some of the tabs or by swiping between the views.
 By default the TabView will load the view of the first tab, however it is possible to load alternative tabs when the app starts by setting the component’s `selectedIndex` property.
 
