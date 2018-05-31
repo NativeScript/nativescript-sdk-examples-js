@@ -40,8 +40,15 @@ function showText(args) {
         console.log("Dialog closed!");
     });
 }
+function onTextViewLoaded(args) {
+    var textView = args.object;
+    textView.on("textChange", function (args) {
+        console.dir(args);
+    });
+}
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.textViewEditStateChange = textViewEditStateChange;
 exports.showText = showText;
+exports.onTextViewLoaded = onTextViewLoaded;
 // << text-view-binding-code
