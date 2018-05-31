@@ -41,8 +41,8 @@ function showText(args) {
     });
 }
 function onTextViewLoaded(args) {
-    var textView = args.object;
-    textView.on("textChange", function (args) {
+    const textView = args.object;
+    textView.on("textChange", (args) => {
         console.dir(args);
     });
 }

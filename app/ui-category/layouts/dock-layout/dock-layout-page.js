@@ -8,7 +8,6 @@ exports.onNavigatingTo = function(args) {
 
     // >> dock-layout-code
     const myDockLayout = new DockLayout();
-    
     // >> (hide)
     const button1 = new Button();
     button1.text = "Left";

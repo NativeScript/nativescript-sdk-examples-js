@@ -8,21 +8,21 @@ function onNavigatingTo(args) {
     vm.set("date", TODAY);
     vm.set("minDate", new Date(1975, 0, 29));
     vm.set("maxDate", new Date(2045, 4, 12));
-    
+
     page.bindingContext = vm;
 }
 function onDatePickerLoaded(args) {
-    var datePicker = args.object;
-    datePicker.on("dateChange", function (args) {
+    const datePicker = args.object;
+    datePicker.on("dateChange", (args) => {
         console.dir(args);
     });
-    datePicker.on("dayChange", function (args) {
+    datePicker.on("dayChange", (args) => {
         console.dir(args);
     });
-    datePicker.on("monthChange", function (args) {
+    datePicker.on("monthChange", (args) => {
         console.dir(args);
     });
-    datePicker.on("yearChange", function (args) {
+    datePicker.on("yearChange", (args) => {
         console.dir(args);
     });
 }
