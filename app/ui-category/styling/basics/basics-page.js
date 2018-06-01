@@ -23,7 +23,6 @@ function onPageLoaded(args) {
     const btnStyledViaID = new Button();
     btnStyledViaID.text = "Button with ID";
     btnStyledViaID.id = "myButton";
-    
     // >> (hide)
     stacklayout.addChild(btn);
     stacklayout.addChild(btnWithClass);

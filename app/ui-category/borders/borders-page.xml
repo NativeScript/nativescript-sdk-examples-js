@@ -1,6 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:myList="components" navigatingTo="onNavigatingTo">
-    <Page.actionBar>
-		<ActionBar title="{{ actionBarTitle == null ? '' : actionBarTitle }}" icon="" class="action-bar"/>
-	</Page.actionBar>
-	<myList:list/>
-</Page>

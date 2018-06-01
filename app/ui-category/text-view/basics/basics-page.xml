@@ -11,7 +11,7 @@
 			<Label text="{{ 'Result: ' + tvResult}}" textWrap="true" />
 			
 			<Label text="Enter text:" class="label"></Label>
-			<TextView text="{{ tvText }}" hint="{{ tvHint }}"  editable="{{ editState }}"
+			<TextView loaded="onTextViewLoaded" text="{{ tvText }}" hint="{{ tvHint }}"  editable="{{ editState }}"
 				class="input input-border"></TextView>
 		</StackLayout>
 		<!-- << textview-xml-binding -->
