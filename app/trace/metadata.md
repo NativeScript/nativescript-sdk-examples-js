@@ -1,6 +1,6 @@
 ---
-title: Application Module - NativeScript JavaScript
-description: Application Module provides abstraction over the platform-specific funcitonality. This module allows handling application events and creating platform-specific logic.
-position: 1
-slug: application
+title: Trace module
+description: Trace module provides functionality for accessing diagnostic information about the application at runtime. This module can be used for debugging, and for obtaining detailed info about internal workings. 
+position: 14
+slug: trace
 ---

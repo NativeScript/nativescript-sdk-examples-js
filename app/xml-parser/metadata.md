@@ -1,6 +1,6 @@
 ---
-title: Application Module - NativeScript JavaScript
-description: Application Module provides abstraction over the platform-specific funcitonality. This module allows handling application events and creating platform-specific logic.
-position: 1
-slug: application
+title: XML parser
+description: The XML module provides functionality, which allows parsing an XML content in NativeSciprt. The module enables searching for specific attribute and its value or taking the data(e.g. `text` value) locked between the XML elements.
+position: 15
+slug: xml-parser
 ---
