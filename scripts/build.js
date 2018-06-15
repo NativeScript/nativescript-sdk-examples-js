@@ -64,7 +64,7 @@ function gatherArticles(cwd, appDir, articlesDir, jenkinsPosition) {
 
         var subDirPath = path.join(appDir, subDir);
 
-        // Gather all component overviews in the subdirs - ui-category, data-category
+        // Gather all component overviews in the subdirs - ns-ui-widgets-category, data-category
         var components = glob.sync(subDirPath + "/*/overview.md").filter(function (file) { 
             return !path.parse(file).dir.endsWith(CATEGORY);
         }).sort(compareFiles);

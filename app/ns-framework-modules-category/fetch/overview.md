@@ -1,0 +1,1 @@
+The Fetch module allows submitting GET and POST requests to a remote server. The module provides functionality for handling content with different formats(String values, JSON objects, FormData content).
