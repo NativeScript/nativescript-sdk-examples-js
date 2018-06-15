@@ -4,6 +4,3 @@ Methods:
 * `setInterval`
 
 <snippet id='require-timer'/>
-
-* [Interval](#interval)
-* [Timeout](#timeout)

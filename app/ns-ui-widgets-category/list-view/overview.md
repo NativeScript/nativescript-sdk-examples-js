@@ -4,9 +4,3 @@ The NativeScript modules provides a custom component which simplifies the way na
 
 
 <snippet id='require-list-view'/>
-
-* [Basics](#basics)
-* [Code Behind](#code-behind)
-* [Events](#events)
-* [Multiple Templates](#multiple-templates)
-* [Multiple Templates Selector Function](#multiple-templates-selector-function)

@@ -1,16 +1,6 @@
 This module allows users to interact with an app via a set of different gestures. 
 NativeScript provides a variety of APIs to help you create gestures.
 
-* [Overview](#overview)
-* [Tap](#tap)
-* [Double Tap](#double-tap)
-* [Long Press](#long-press)
-* [Pan](#pan)
-* [Pinch](#pinch)
-* [Swipe](#swipe)
-* [Rotation](#rotation)
-* [Touch](#touch)
-
 ## Overview
 
 Gestures, such as `tap`, `slide` and `pinch`, allow users to interact with your app by manipulating UI elements on the screen.

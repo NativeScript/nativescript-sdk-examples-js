@@ -4,7 +4,3 @@ To handle the state change event you can use the `checkedChange` property, which
 Another useful feature of the component is the `isEnable` property, which gives the functionality to make the component inactive.
 
 <snippet id='switch-require'/>
-
-* [Basics](#basics)
-* [Styling](#styling)
-* [Code Behind](#code-behind)

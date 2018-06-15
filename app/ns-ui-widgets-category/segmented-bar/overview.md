@@ -7,7 +7,3 @@ The specific `SegmentedBar` properties are:
  - `selectedIndexChange`
 
 <snippet id='segmented-bar-require'/>
-
-* [Basics](#basics)
-* [Code Behind](#code-behind)
-* [Views](#views)

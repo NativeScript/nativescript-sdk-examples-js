@@ -7,9 +7,3 @@ After the code has met the following requirements, data-binding can be used out 
 - The data object should raise a `propertyChange` event for every change in the value of its property in order to notify all of the listeners interested in the change.
 
 THe article will shows basic and advanced binding techniques including the architectural pattern used in NativeScript framework - MVVM (Model-View-ViewModel).
-
-* [Basics](#basics)
-* [Two-Way Binding](#two-way)
-* [MPlain Object Binding](#plain-object-binding)
-* [Parent Binding](#parent-binding)
-* [MVVM Pattern in NativeScript](#mvvm-pattern)

@@ -10,7 +10,6 @@ const navigationLinks = [
     new link("ActivityIndicator", "ns-ui-widgets-category/activity-indicator/activity-indicator-page"),
     new link("Animations", "ns-ui-widgets-category/animations/animations-page"),
     new link("Button", "ns-ui-widgets-category/button/button-page"),
-    new link("Borders", "ns-ui-widgets-category/borders/borders-page"),
     new link("Color", "ns-framework-modules-category/color/color-page"),
     new link("Connectivity", "ns-framework-modules-category/connectivity/connectivity-page"),
     new link("Console", "ns-framework-modules-category/console/console-page"),

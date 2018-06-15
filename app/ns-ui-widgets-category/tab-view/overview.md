@@ -1,13 +1,6 @@
 The TabView component provides a simple way to navigate between different views by tapping on some of the tabs or by swiping between the views.
 By default the TabView will load the view of the first tab, however it is possible to load alternative tabs when the app starts by setting the component’s `selectedIndex` property.
 
-* [Basics](#basics)
-* [Styling](#styling)
-* [Code Behind](#code-behind)
-* [Icon Fonts](#icon-fonts)
-* [Tabs Position](#tab-position)<sup>Android Secific<sup>
-* [Tabs Limit](#tab-limit)<sup>Android Secific<sup>
-
 <snippet id='text-view-require'/>
 
 The general behaviour of the TabView component is to load its items demand. This means that every TabViewItem view will be loaded when it is shown and will be unloaded when it disappears. Respectively loaded and unloaded events will be fired while showing or hiding each view. However, there are some specifics for each platform(iOS and Android), which are described in the notes below.
