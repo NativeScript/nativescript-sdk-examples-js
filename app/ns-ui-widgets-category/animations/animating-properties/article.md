@@ -16,9 +16,10 @@ In every animation, you can control the following properties:
 `iterations`: Specifies how many times the animation should be played.
 `curve`: The speed curve of the animation. Available options are defined below.
 
-Property value types.
-| JavaScript Property   | Value Description     |
-|:----------------------|:----------------|
+Property values:  
+
+| JavaScript Property   | Value Description             |
+|:----------------------|:------------------------------|
 | `backgroundColor`     | Accepts hex or `Color` value. |
 | `curve`               | Timing funciton that uses the `AnimationCurve` enumeration. |
 | `delay`               | Delay the animation start in milliseconds. |
@@ -28,6 +29,7 @@ Property value types.
 | `rotate`              | Number value for degrees (0 - 360 degrees). |
 | `scale`               | Object value `{ x:1, y:2 }` (1 = Original scale). |
 | `translate`           | Object value `{ x:100, y:200 }` (Translate by given DIPs). |
+
 
 The first example will change the background color of a `view` from "red" to "green". 
 <snippet id='animating-background-color'/>

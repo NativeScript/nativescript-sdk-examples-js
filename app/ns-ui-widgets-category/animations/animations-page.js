@@ -3,7 +3,8 @@ const link = require("../../link");
 const navigationLinks = [
     new link("Animated Properties", "ns-ui-widgets-category/animations/animating-properties/animating-properties-page"),
     new link("Chained Animations", "ns-ui-widgets-category/animations/chaining-animations/chaining-animations-page"),
-    new link("Animating Multiple Views", "ns-ui-widgets-category/animations/multiple-views/multiple-views-page")
+    new link("Animating Multiple Views", "ns-ui-widgets-category/animations/multiple-views-animation/multiple-views-page"),
+    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-page")
 ];
 
 // >> animations-imports
