@@ -1,0 +1,10 @@
+Label {
+    color: white;
+    margin: 8;
+    vertical-align: middle;
+}
+
+GridLayout {
+    background-color: blue;
+    margin: 8;
+}
