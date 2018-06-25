@@ -5,7 +5,7 @@
     <ScrollView>
         <!-- >> rotating-example-xml -->
         <GridLayout rows="auto, *, *, *, *" columns="*, *" backgroundColor="white">
-            <Button row="0" text="Animate" tap="animate" class="btn btn-primary btn-active" />
+            <Button row="0" col="0" colSpan="2" text="Animate" tap="animate" class="btn btn-primary btn-active" />
             <GridLayout row="1" col="0" colSpan="2" id="myFirstView" width="400" height="40" >
                 <Label text="Default originX / originY (0.5)" horizontalAlignment="center"/>
             </GridLayout>
