@@ -28,7 +28,7 @@ function onNavigatingTo(args) {
         console.log("Tapped");
     });
 
-    // when the observable was created recursivly chaning the ensted object's property will trigger propertyChange
+    // when the observable was created recursivly, changing the nested object's property will trigger propertyChange
     viewModel.get("myNestedObject").favoriteColor.hisColor = "Lightblue"; // myNestedObject.favoriteColor.myColor is now "Lightblue"
 
     // bind the view-model to the view's bindingContext property (in this case the curent page)

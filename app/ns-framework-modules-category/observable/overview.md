@@ -6,4 +6,4 @@ After the code has met the following requirements, data-binding can be used out 
 - For two-way data binding, the target property should be a dependency property.
 - The data object should raise a `propertyChange` event for every change in the value of its property in order to notify all of the listeners interested in the change.
 
-THe article will shows basic and advanced binding techniques including the architectural pattern used in NativeScript framework - MVVM (Model-View-ViewModel).
+The article will show basic and advanced binding techniques including the architectural pattern used in NativeScript framework - MVVM (Model-View-ViewModel).
