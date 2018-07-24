@@ -39,8 +39,23 @@ describe("aplications scenarios", () => {
     });
 
     it(`Application Events`, async () => {
-        const batteryIndicator = await driver.findElementByText("Portrait", "contains");
-        chai.assert.isTrue(await batteryIndicator.isDisplayed(), "Portrait is not visible");
+        let oriantation = await driver.findElementByText("Portrait", "contains");
+        chai.assert.isTrue(await oriantation.isDisplayed(), "Portrait is not visible");
+
+        await driver.setOrientation("LANDSCAPE");
+        oriantation = await driver.findElementByText("Landscape", "contains");
+        chai.assert.isTrue(await oriantation.isDisplayed(), "LANDSCAPE is not visible");
+
+        await driver.setOrientation("PORTRAIT");
+        oriantation = await driver.findElementByText("Portrait", "contains");
+        chai.assert.isTrue(await oriantation.isDisplayed(), "Portrait is not visible");
+
+        await driver.backgroundApp(2);
+        const suspendSuspendEvent = await driver.findElementByText("The appication was suspended!", "contains");
+        chai.assert.isTrue(await suspendSuspendEvent.isDisplayed(), "suspendSuspendEvent is not thrown"); 
+
+        const suspendResumeEvent = await driver.findElementByText("The appication was resumed", "contains");
+        chai.assert.isTrue(await suspendResumeEvent.isDisplayed(), "suspendResumeEvent is not thrown"); 
     });
 
     it(`Check Platform`, async () => {

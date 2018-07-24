@@ -2,9 +2,12 @@
     <Page.actionBar>
 		<ActionBar title="" icon="" class="action-bar"/>
 	</Page.actionBar>
-	<GridLayout rows="*, *  *" columns="*" class="m-20" loaded="onGridLoaded" unloaded="onGridUnloaded">
+	<GridLayout rows="*, auto,  auto, auto, auto, *" columns="*" class="m-20" loaded="onGridLoaded" unloaded="onGridUnloaded">
 		<Label row="0" text="{{ 'Using orientationChanged event \nCurrent orientation: ' + orientation }}" fontSize="14" textWrap="true" />
 		<Label row="1" text="{{ orientation === 'portrait' ? '&#xf10b; Portrait' : '&#xf03e; Landscape' }}" fontSize="24" textWrap="true" class="fa"/>
-		<Label row="2" text="{{ info }}" textWrap="true" fontSize="14"/>
+		<Label row="2" text="{{ displayedEvent }}" fontSize="14" textWrap="true" class="fa"/>
+		<Label row="3" text="{{ suspendEvent }}" fontSize="14" textWrap="true" class="fa"/>
+		<Label row="4" text="{{ resumeEvent }}" fontSize="14" textWrap="true" class="fa"/>
+		<Label row="5" text="{{ info }}" textWrap="true" fontSize="14"/>
 	</GridLayout>
 </Page>
