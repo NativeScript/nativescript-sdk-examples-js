@@ -7,6 +7,6 @@ before("start server", async () => {
 });
 
 after("stop server", async () => {
-    //await driver.quit();
+    await driver.quit();
     await nsAppium.stopServer();
 });

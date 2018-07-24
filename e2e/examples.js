@@ -18,4 +18,5 @@ exports.examples = {
     animations: new Example("Animations", ["Animated Properties", "Animating Multiple Views", "Chained Animations", "Properties originX and originY"]),
     application: new Example("Application", ["Android Broadcast Receiver", "Application Events", "Check Platform"]),
     applicationSettings: new Example("Application Settings", ["Basics"]),
+    button: new Example("Button", ["Basics", "Code-Behind", "Styling"]),
 }
