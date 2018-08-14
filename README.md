@@ -1,8 +1,8 @@
 # nativescript-sdk-examples-js
 
-This repo contains the code of the [NativeScript Core Cookbook](http://docs.nativescript.org/cookbook/overview.html) companion application.
+This repo contains the code of the [NativeScript UI Widgets](https://docs.nativescript.org/ui/components) and [NativeScript Framework Modules](https://docs.nativescript.org/ns-framework-modules/application).
 
-You can get the source code of the application and start exploring the code there, or you can [read the documentation  articles](http://docs.nativescript.org/cookbook/overview.html) associated with each of the examples. The application is also very useful as a NativeScript playground - you can use the source code as a starting point and modify them to fit your app needs.
+You can get the source code of the application and start exploring the code there, or you can [read the documentation  articles](https://docs.nativescript.org/ui/components) associated with each of the examples. The application is also very useful as a NativeScript playground - you can use the source code as a starting point and modify them to fit your app needs.
 
 It is very easy to contribute to the samples and we encourage you to contribute any samples you think that will be useful for other developers. If you need a sample that is missing, please [open a new issue](https://github.com/NativeScript/nativescript-sdk-examples-js/issues) so that other member of the community can help you.
 
