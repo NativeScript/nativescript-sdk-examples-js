@@ -47,7 +47,7 @@ const navigationLinks = [
     new link("Fetch", "ns-framework-modules-category/fetch/fetch-page"),
     new link("ImageSource", "ns-framework-modules-category/image-source/image-source-page"),
     new link("File System", "ns-framework-modules-category/file-system/file-system-page"),
-    // new link("Modal page", "/modal-page"),
+    new link("Modal page", "ns-ui-widgets-category/modal-page/modal-page"),
     new link("XML Parser", "ns-framework-modules-category/xml-parser/xml-parser-page")
 ];
 

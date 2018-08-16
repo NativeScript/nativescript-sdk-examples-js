@@ -1,0 +1,12 @@
+<!-- >> modal-page-xml-action-bar -->
+<Page backgroundColor="green" showingModally="onShowingModally">
+    <Page.actionBar>
+        <ActionBar backgroundColor="red" title="Modal page" icon="">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout backgroundColor="lightGreen">
+        <Label text="Modal page with ActionBar" style="text-align:center;" textWrap="true" />
+        <Button text="Close Modal" tap="onCloseModal"/>
+    </StackLayout>
+</Page>
+<!-- << modal-page-xml-action-bar -->
