@@ -1,0 +1,8 @@
+<!-- >> first-modal-page-xml-navigation -->
+<Page backgroundColor="green" showingModally="onShowingModally">
+    <StackLayout backgroundColor="lightGreen">
+        <Button text="Navigate To Second Page" tap="onNavigate"/>
+        <Button text="Close Modal" tap="onCloseModal"/>
+    </StackLayout>
+</Page>
+<!-- << first-modal-page-xml-navigation -->
