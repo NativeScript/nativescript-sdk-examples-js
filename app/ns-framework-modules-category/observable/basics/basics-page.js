@@ -4,39 +4,64 @@ const fromObject = require("tns-core-modules/data/observable").fromObject;
 const fromObjectRecursive = require("tns-core-modules/data/observable").fromObjectRecursive;
 // << observable-basics-imports
 
-function onNavigatingTo(args) {
-    // >> observable-basics-set
-    const page = args.object;
-
+function onNavigatedTo(args) {
+    console.log("onNavigatedTo BASICS");
+    // >> observable-class
     // creating an Observable and setting title propertu with a string value
     const viewModel = new Observable();
-    viewModel.set("myString", "Jonh Doe");
-    viewModel.set("myNumber", 42);
-    viewModel.set("myBoolean", true);
 
-    // fromObject creates an Observable instance and sets its properties according to the supplied JS object
-    viewModel.set("myObject", fromObject({ "myColor": "Lightgray" }));
+    // String binding using set with key-value
+    viewModel.set("clientName", "Jonh Doe");
 
-    // fromObjectRecursive will create new Observable for each nested object (expect arrays and functions)
-    viewModel.set("myNestedObject", fromObjectRecursive({
-        client: "JohnDoe",
-        favoriteColor: { hisColor: "Green" } // hisColor is an Observable
-    }));
+    // Number binding using set with key-value
+    viewModel.set("mySize", 24);
 
-    // Binding function on event
-    viewModel.set("onLabelTap", () => {
-        console.log("Tapped");
+    // Boolean binding using set with key-value
+    viewModel.set("isVisible", true);
+
+    // Binding event callback using set with key-value
+    viewModel.set("onLabelTap", (args) => {
+        // args is of type EventData
+        console.log("Tapped on", args.object); // <Label>
+        console.log("Name: ", args.object.text); // The text value
     });
 
-    // when the observable was created recursivly, changing the nested object's property will trigger propertyChange
-    viewModel.get("myNestedObject").favoriteColor.hisColor = "Lightblue"; // myNestedObject.favoriteColor.myColor is now "Lightblue"
+    // using get to obtain the value of specific key
+    console.log(viewModel.get("clientName")); // Jonh Doe
+    console.log(viewModel.get("mySize")); // 42
+    console.log(viewModel.get("isVisible")); // true
 
-    // bind the view-model to the view's bindingContext property (in this case the curent page)
-    page.bindingContext = viewModel;
-    // << observable-basics-set
+    // bind the view-model to the view's bindingContext property (e.g. the curent page or  view from navigatingTo or loaded event)
+    const view = args.object;
+    view.bindingContext = viewModel;
+    // << observable-class
+
+    // >> observable-from-object
+    // fromObject creates an Observable instance and sets its properties according to the supplied JS object
+    const newViewModel = fromObject({ "myColor": "Lightgray" });
+    // the above is equal to
+    /*
+        let newViewModel = new Observable();
+        newViewModel.set("myColor", "Lightgray");
+    */
+    // << observable-from-object
+
+    // >> observable-from-object-recursive
+    // fromObjectRecursive will create new Observable for each nested object (expect arrays and functions)
+    const nestedViewModel = fromObjectRecursive({
+        client: "John Doe",
+        favoriteColor: { hisColor: "Green" } // hisColor is an Observable (using recursive creation of Observables)
+    });
+    // the above is equal to
+    /*
+        let newViewModel2 = new Observable();
+        newViewModel2.set("client", "John Doe");
+        newViewModel2.set("favoriteColor", fromObject( {hisColor: "Green" }));
+    */
+    // << observable-from-object-recursive
 
     // >> property-change-event
-    viewModel.addEventListener(Observable.propertyChangeEvent, (args) => {
+    const myListener = viewModel.addEventListener(Observable.propertyChangeEvent, (args) => {
         // args is of type PropertyChangeData
         console.log("propertyChangeEvent [eventName]: ", args.eventName);
         console.log("propertyChangeEvent [propertyName]: ", args.propertyName);
@@ -44,15 +69,12 @@ function onNavigatingTo(args) {
         console.log("propertyChangeEvent [oldValue]: ", args.oldValue);
     });
     // << property-change-event
-
-    viewModel.set("myNumber", 24); // will trigger propertyChangeEvent
-
-    // >> observable-basics-get
-    console.log(viewModel.get("muString")); // Jonh Doe
-    console.log(viewModel.get("myNumber")); // 42
-    console.log(viewModel.get("myBoolean")); // true
-    console.log(viewModel.get("myObject").myColor); // Red
-    console.log(viewModel.get("myNestedObject").favoriteColor); // { "hisColor": "Lightblue" }
-    // << observable-basics-get
 }
-exports.onNavigatingTo = onNavigatingTo;
+exports.onNavigatedTo = onNavigatedTo;
+
+// dummy funciton for snippet demonstrationg
+function removeListener() {
+    // >> property-change-event-remove-listener
+    viewModel.removeEventListener(Observable.propertyChangeEvent, myListener);
+    // << property-change-event-remove-listener
+}
