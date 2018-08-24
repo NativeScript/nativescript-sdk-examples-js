@@ -25,7 +25,9 @@ function onButtonTap(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     if (status) {
+    // >> clear-interval-example
         timerModule.clearInterval(id);
+    // << clear-interval-example
         vm.set("buttonText", "Enable color change");
     } else {
         id = timerModule.setInterval(() => {

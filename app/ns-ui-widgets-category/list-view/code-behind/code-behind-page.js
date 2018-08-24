@@ -18,7 +18,7 @@ function onNavigatingTo(args) {
     const page = args.object;
     // >> create-list-view-code
     const container = page.getViewById("container");
-    
+
     const listView = new listViewModule.ListView();
     listView.className = "list-group";
     listView.items = listViewArray;
@@ -40,7 +40,7 @@ function onNavigatingTo(args) {
                 console.log("Dialog closed!");
             });
     });
-    
+
     container.addChild(listView);
     // << create-list-view-code
 }
