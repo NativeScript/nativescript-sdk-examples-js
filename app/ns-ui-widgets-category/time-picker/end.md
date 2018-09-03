@@ -1,5 +1,5 @@
 
-**API Reference for the** [TimePicker Class](http://docs.nativescript.org/api-reference/modules/_ui_time_picker_.html)
+**API Reference for the** [TimePicker](http://docs.nativescript.org/api-reference/modules/_ui_time_picker_.html) Class
 
 **Native Component**
 
