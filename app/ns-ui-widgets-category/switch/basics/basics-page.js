@@ -1,55 +1,23 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> switch-checked-change-event
-function onNavigatingTo(args) {
+const Observable = require("tns-core-modules/data/observable").Observable;
+
+function onPageLoaded(args) {
     const page = args.object;
-    // set up the initial values for the switch components
-    const vm = new observableModule.Observable();
-    vm.set("buttonText", "Disable first switch");
-    vm.set("firstSwitchState", "OFF");
+    const vm = new Observable();
     vm.set("secondSwitchState", "ON");
-    vm.set("firstSwitch", false);
-    vm.set("secondSwitch", true);
-    vm.set("isEnabledSwitch", true);
-    // handle checked change
-    vm.on(observableModule.Observable.propertyChangeEvent, (propertyChangeData) => {
-        if (propertyChangeData.propertyName === "firstSwitch") {
-            if (propertyChangeData.value) {
-                vm.set("firstSwitchState", "ON");
-            } else {
-                vm.set("firstSwitchState", "OFF");
-            }
-        }
-    });
-    page.bindingContext = vm;
-}
-// handle checked change
-function switchLoaded(args) {
-    const switchComponent = args.object;
-    switchComponent.on("checkedChange", (sargs) => {
-        console.log("checkedChange ", sargs.object.checked);
-        const page = sargs.object.page;
-        const vm = page.bindingContext;
-        if (sargs.object.checked) {
+    // >> switch-checked-change-event
+    // set up the initial values for the switch components
+    const mySwitch = page.getViewById("my-switch");
+    mySwitch.on("checkedChange", (args) => {
+        console.log("checkedChange ", args.object.checked);
+        // >> (hide)
+        if (args.object.checked) {
             vm.set("secondSwitchState", "ON");
         } else {
             vm.set("secondSwitchState", "OFF");
         }
+        // << (hide)
     });
+    // << switch-checked-change-event
+    page.bindingContext = vm;
 }
-// setting up isEnabled property
-function onTap(args) {
-    const page = args.object;
-    const vm = page.bindingContext;
-    const isEnabledSwitch = vm.get("isEnabledSwitch");
-    vm.set("isEnabledSwitch", !isEnabledSwitch);
-    if (isEnabledSwitch) {
-        vm.set("buttonText", "Enable first switch");
-    } else {
-        vm.set("buttonText", "Disable first switch");
-    }
-}
-
-exports.switchLoaded = switchLoaded;
-exports.onNavigatingTo = onNavigatingTo;
-exports.onTap = onTap;
-// << switch-checked-change-event
+exports.onPageLoaded = onPageLoaded;
