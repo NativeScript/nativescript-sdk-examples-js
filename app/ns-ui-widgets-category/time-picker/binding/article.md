@@ -1,7 +1,3 @@
-Set up properties TimePicker while using data binding.
-
-XML
+The example below demonstrates setting up TimePicker's properties while using data binding.
 <snippet id='binding-timepicker-xml'/>
-
-JavaScript
 <snippet id='time-picker-binding-code'/>
