@@ -38,5 +38,18 @@ function onNavigatingTo(args) {
     console.log(noBoolKey);
     // << app-settings-no-key-code
 
+    // >> app-settings-remove-entry
+    appSettings.setBoolean("myTempEntry", true);
+    console.log(appSettings.hasKey("myTempEntry")); // true as here the key-value exist
+    appSettings.remove("myTempEntry");
+    console.log(appSettings.hasKey("myTempEntry")); // false as now the key-value is removed.
+    // << app-settings-remove-entry
 }
 exports.onNavigatingTo = onNavigatingTo;
+
+function clearAll() {
+    // >> app-settings-clear-all
+    // Removes all values.
+    appSettings.clear();
+    // << app-settings-clear-all
+}

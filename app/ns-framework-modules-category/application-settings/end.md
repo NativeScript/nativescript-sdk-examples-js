@@ -1,4 +1,4 @@
-**API Reference for the** [Application Settings module](https://docs.nativescript.org/api-reference/modules/_application_settings_)
+**API Reference for the** [Application Settings](https://docs.nativescript.org/api-reference/modules/_application_settings_) module
 
 **Native Component**
 
