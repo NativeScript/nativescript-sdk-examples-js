@@ -1,8 +1,4 @@
-In the following example is shown, how to create Switch via Code-behind
+The following example shows how to create a Switch widget via the code-behind file.
 
-
-XML
-<snippet id='creating-switch-xml'/>
-
-JavaScript
 <snippet id='creating-switch-code'/>
+<snippet id='creating-switch-xml'/>
