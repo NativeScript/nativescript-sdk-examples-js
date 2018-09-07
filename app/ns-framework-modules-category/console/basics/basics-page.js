@@ -1,5 +1,5 @@
 exports.onNavigatedTo = function (args) {
-    let jsonObj = {
+    const jsonObj = {
         objProp: "I am Object!", objProp2:
         {
             objProp3: "I am Object!",
@@ -12,7 +12,7 @@ exports.onNavigatedTo = function (args) {
         },
         objProp8: "I am Object!",
         objProp9: ["item", "item"]
-    }
+    };
     // >> console-common
     console.log("NativeScript Playground!");
     console.log({ objProp: "I am Object!" });
