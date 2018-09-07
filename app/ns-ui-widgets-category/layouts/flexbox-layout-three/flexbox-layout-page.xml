@@ -1,0 +1,164 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Flexbox Layout (flexWrap, justifyContent)"/>
+	</Page.actionBar>
+	<ScrollView>
+    <FlexboxLayout flexDirection="column">
+        <!-- flexWrap: wrap; alignContent: flex-start -->
+        <Label text="wrap" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <!-- >> flexbox-wrap-xml -->
+        <FlexboxLayout flexWrap="wrap" alignContent="flex-start" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <!-- Use flexWrapBefore to control explicit line wrapping -->
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <!-- Use flexWrapBefore to control explicit line wrapping -->
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!-- << flexbox-wrap-xml -->
+
+        <!-- >> flexbox-wrap-reverse-xml -->
+        <!-- flexWrap: wrap-reverse; alignContent: flex-start -->
+        <Label text="wrap-reverse" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <FlexboxLayout flexWrap="wrap-reverse" alignContent="flex-start" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!-- << flexbox-wrap-reverse-xml -->
+
+        <!-- >> flexbox-justify-end-xml -->
+        <!-- justifyContent: flex-end; flexWrap: wrap  -->
+        <Label text="justifyContent: flex-end" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <FlexboxLayout flexWrap="wrap" justifyContent="flex-end" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!-- << flexbox-justify-end-xml -->
+
+        <!-- >> flexbox-justify-center-xml -->
+        <!-- justifyContent: center; flexWrap: wrap  -->
+        <Label text="justifyContent: center" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <FlexboxLayout flexWrap="wrap" justifyContent="center" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!-- << flexbox-justify-center-xml -->
+
+        <!-- >> flexbox-justify-space-between-xml -->
+        <!-- justifyContent: space-between; flexWrap: wrap  -->
+        <Label text="justifyContent: space-between" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <FlexboxLayout flexWrap="wrap" justifyContent="space-between" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!-- << flexbox-justify-space-between-xml -->
+
+        <!-- >> flexbox-justify-space-around-xml -->
+        <!-- justifyContent: space-around; flexWrap: wrap -->
+        <Label text="justifyContent: space-around" class="h4 p-t-15 p-l-15 p-r-15" textWrap="true"/>
+        <FlexboxLayout flexWrap="wrap" justifyContent="space-around" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label flexWrapBefore="true" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="Nullam" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T:Question" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S:Medium" borderRadius="5" backgroundColor="#FFD900"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="duplicate" borderRadius="5" backgroundColor="#A6BBC8"/>
+        </FlexboxLayout>
+        <!--<< flexbox-justify-space-around-xml -->
+
+        <!-- >> flexbox-multiple-settings-xml -->
+        <!-- flexDirection; column; flexWrap: wrap-reverse; alignContent: flex-start + items w/ alignSelf options -->
+        <Label text="flexDirection; column; flexWrap: wrap-reverse; alignContent: flex-start + items w/ alignSelf options" class="h4 p-t-15 p-l-15 p-r-15"
+            textWrap="true"/>
+        <FlexboxLayout flexDirection="column" flexWrap="nowrap" alignContent="flex-start" class="p-15" backgroundColor="lightgray">
+            <Label class="h3 p-15" text="Gihub issue labels:"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822" color="white"/>
+            <Label alignSelf="auto" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Feature" borderRadius="5" backgroundColor="green"
+                color="white"/>
+            <Label alignSelf="center" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="3 - In Progress" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label alignSelf="stretch" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: Ullamcorper" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label alignSelf="flex-end" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Vulputate" borderRadius="5" backgroundColor="green"
+                color="white"/>
+            <Label alignSelf="flex-start" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="2 - Egestas magna" borderRadius="5" backgroundColor="#A6BBC8"/>
+            <Label alignSelf="baseline" class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="S: High" borderRadius="5" backgroundColor="#F93822"
+                color="white"/>
+            <Label class="p-5 m-l-15 m-r-15 m-b-15 text-center" text="T: Phasellus" borderRadius="5" backgroundColor="green" color="white"/>
+        </FlexboxLayout>
+        <!-- << flexbox-multiple-settings-xml -->
+    </FlexboxLayout>
+
+</ScrollView>
+</Page>

@@ -1,1 +1,0 @@
-The FlexboxLayout is a non-conforming implementation of the [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) based on an existing Apache-2 licensed flexbox implementation hosted on [github.com/google/flexbox-layout](https://github.com/google/flexbox-layout).

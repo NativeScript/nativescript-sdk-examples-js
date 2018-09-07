@@ -1,0 +1,47 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Flexbox Layout (order, flexGrow and flexShrink)"/>
+	</Page.actionBar>
+	<ScrollView>
+    <FlexboxLayout flexDirection="column">
+        <Label text="Set flexGrow to 1 accomodate into any extra space" class="h3 p-l-20 p-t-15 text-left" textWrap="true"/>
+        <!-- >> flexbox-grow-xml -->
+        <FlexboxLayout flexDirection="row" class="p-15" color="white">
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#965251" text="Item"/>
+            <!-- Set flexGrow to 1 accomodate into any extra space -->
+            <Label flexGrow="1" class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Flex-Grow 1"/>
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#F69256" text="Item"/>
+        </FlexboxLayout>
+        <!-- << flexbox-grow-xml -->
+        <Label text="Using flexGrow with multiple elements" class="h3 p-l-20 p-t-15 text-left" textWrap="true"/>
+        <!-- >> flexbox-grow-two-xml -->
+        <FlexboxLayout flexDirection="row" align-content="space-between" class="p-15" color="white">
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="No Flex-Grow"/>
+            <Label flexGrow="1" class="p-15 text-center font-weight-bold" backgroundColor="#F69256" text="Flex-Grow 1"/>
+        </FlexboxLayout>
+        <!-- << flexbox-grow-two-xml -->
+
+        <Label text="Control the order in which elements appear in the flex container" class="h3 p-l-20 p-t-15 text-left" textWrap="true"/>
+        <!-- >> flexbox-order-xml -->
+        <FlexboxLayout flexDirection="row" class="p-15" color="white">
+            <!-- Control the order in which elements appear in the flex container -->
+            <Label order="3" class="p-15 text-center font-weight-bold" backgroundColor="#965251" text="First"/>
+            <Label order="2" class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Second"/>
+            <Label order="1" class="p-15 text-center font-weight-bold" backgroundColor="#F69256" text="Third"/>
+        </FlexboxLayout>
+        <!-- << flexbox-order-xml -->
+
+        <Label text="flexShrink usage" class="h3 p-l-20 p-t-15 text-left" textWrap="true"/>
+        <!-- >> flexbox-shrink-xml -->
+        <FlexboxLayout flexDirection="row" class="p-15" color="white" width="300">
+            <!-- flexShrink this defines the ability for a flex item to shrink if necessary. Default shrink = 1 -->
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Shrink 1"/>
+            <Label flexShrink="0" class="p-15 text-center font-weight-bold" backgroundColor="#F69256" text="Shrink 0"/>
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Shrink 1"/>
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Shrink 1"/>
+            <Label class="p-15 text-center font-weight-bold" backgroundColor="#d2b29b" text="Shrink 1"/>
+        </FlexboxLayout>
+        <!-- << flexbox-shrink-xml -->
+    </FlexboxLayout>
+</ScrollView>
+</Page>
