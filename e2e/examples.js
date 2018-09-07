@@ -19,4 +19,6 @@ exports.examples = {
     application: new Example("Application", ["Android Broadcast Receiver", "Application Events", "Check Platform"]),
     applicationSettings: new Example("Application Settings", ["Basics"]),
     button: new Example("Button", ["Basics", "Code-Behind", "Styling"]),
+    color: new Example("Color", ["Basics"]),
+    connectivity: new Example("Connectivity", ["Basics"]),
 }
