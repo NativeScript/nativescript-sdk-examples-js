@@ -1,7 +1,7 @@
 The code samples show, how we could use gestures in WebView for both platforms iOS and Android.
 
 XML
-<snippet id='web-gestures-html'/>
+<snippet id='web-gestures-xml'/>
 
 JavaScript
 <snippet id='webview-js-gestures'/>

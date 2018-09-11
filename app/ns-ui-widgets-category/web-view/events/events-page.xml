@@ -1,0 +1,24 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="WebView events"/>
+	</Page.actionBar>
+
+   <StackLayout>
+        <StackLayout>
+        <!-- >> web-events-xml -->
+            <GridLayout rows="50 50 50 *" columns="* *">
+                <Button row="0" col="0" text="Load first url" tap="loadFirst" />
+                <Button row="0" col="1" text="Load second url" tap="loadSecond" />
+                <Button row="1" col="0" colSpan="2" text="Reload page" tap="onReload" />
+                <Label row="2" col="0" colSpan="2" text="{{ 'Url: ' + webViewSrc }}" textWrap="true" class="p-12" />
+                
+                <WebView id="webview" row="3" col="0" colSpan="2" loadStarted="onLoadStarted" loadFinished="onLoadFinished" src="{{ webViewSrc }}" />
+                <GridLayout class="indicator" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}" row="0" col="0" rowSpan="4" colSpan="2">
+                        <ActivityIndicator width="100" height="100" busy="true"/>
+                </GridLayout>
+            </GridLayout>
+            
+        <!-- << web-events-xml -->
+        </StackLayout>
+    </StackLayout>
+</Page>
