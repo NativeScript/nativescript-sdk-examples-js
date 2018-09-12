@@ -1,6 +1,6 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
-const firstUrl = 'https://google.com/';
-const secondUrl = 'https://www.nativescript.org/';
+const firstUrl = "https://google.com/";
+const secondUrl = "https://www.nativescript.org/";
 // >> webview-js-gestures
 function onNavigatingTo(args) {
     const page = args.object;
@@ -10,12 +10,12 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onLoadStarted(args){
+function onLoadStarted(args) {
     const page = args.object;
     const vm = page.bindingContext;
     vm.set("isItemVisible", true);
     let message;
-    if(!args.error){
+    if (!args.error) {
         // >> (hide)
         console.log("--------------------------------------");
         console.log("Load Start");
@@ -24,24 +24,24 @@ function onLoadStarted(args){
         console.log(`Url: ${args.url}`);
         console.log("--------------------------------------");
         // << (hide)
-        message = "WebView started loading of " + args.url;
-    } else{
+        message = `WebView started loading of ${args.url}`;
+    } else {
         // >> (hide)
         console.log("--------------------------------------");
         console.log(`EventName: ${args.eventName}`);
         console.log(`Error: ${args.error}`);
         console.log("--------------------------------------");
         // << (hide)
-        message = "Error loading " + args.url + ": " + args.error;
+        message = `Error loading  ${args.url} : ${args.error}`;
     }
     console.log(message);
-    
+
 }
-function onLoadFinished(args){
+function onLoadFinished(args) {
     const page = args.object;
     const vm = page.bindingContext;
     let message;
-    if(!args.error){
+    if (!args.error) {
         // >> (hide)
         console.log("--------------------------------------");
         console.log("Load Finished");
@@ -50,15 +50,15 @@ function onLoadFinished(args){
         console.log(`Url: ${args.url}`);
         console.log("--------------------------------------");
         // << (hide)
-        message = "WebView finished loading of " + args.url;
-    } else{
+        message = `WebView finished loading of  ${args.url}`;
+    } else {
         // >> (hide)
         console.log("--------------------------------------");
         console.log(`EventName: ${args.eventName}`);
         console.log(`Error: ${args.error}`);
         console.log("--------------------------------------");
         // << (hide)
-        message = "Error loading " + args.url + ": " + args.error;
+        message = `Error loading ${args.url} : ${args.error}`;
     }
     console.log(message);
     // >> (hide)
@@ -80,7 +80,7 @@ function loadSecond(args) {
     vm.set("webViewSrc", secondUrl);
 }
 
-function onReload(args){
+function onReload(args) {
     const page = args.object.page;
     webview = page.getViewById("webview");
     webview.reload();

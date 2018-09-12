@@ -16,6 +16,7 @@ function onWebViewLoaded(webargs) {
     const vm = page.bindingContext;
     const webview = webargs.object;
     vm.set("result", "WebView is still loading...");
+    vm.set("enabled", false);
 
     webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
         let message = "";
@@ -32,9 +33,22 @@ function onWebViewLoaded(webargs) {
 // going to the previous page if such is available
 function goBack(args) {
     const page = args.object.page;
+    const vm = page.bindingContext;
     const webview = page.getViewById("myWebView");
     if (webview.canGoBack) {
         webview.goBack();
+        vm.set("enabled", true);
+    }
+}
+// going forward if a page is available
+function goForward(args) {
+    const page = args.object.page;
+    const vm = page.bindingContext;
+    const webview = page.getViewById("myWebView");
+    if (webview.canGoForward) {
+        webview.goForward();
+    } else {
+        vm.set("enabled", false);
     }
 }
 // changing WebView source
@@ -43,6 +57,7 @@ function submit(args) {
     const vm = page.bindingContext;
     const textField = args.object;
     const text = textField.text;
+    vm.set("enabled", false);
     if (text.substring(0, 4) === "http") {
         vm.set("webViewSrc", text);
         textField.dismissSoftInput();
@@ -57,4 +72,5 @@ exports.onNavigatingTo = onNavigatingTo;
 exports.onWebViewLoaded = onWebViewLoaded;
 exports.submit = submit;
 exports.goBack = goBack;
+exports.goForward = goForward;
 // << setting-url-webview
