@@ -13,7 +13,7 @@ let lowMemoryListener;
 let orientationChangedListener;
 let uncaughtErrorListener;
 
-function onNavigatingTo(args) {
+const onNavigatingTo = args => {
     const page = args.object;
     vm = new Observable();
     vm.set("actionBarTitle", args.context.actionBarTitle);
@@ -22,32 +22,39 @@ function onNavigatingTo(args) {
         const activity = applicationModule.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
         vm.set("orientation", (orientationEnum === 1 ? enums.DeviceOrientation.portrait : enums.DeviceOrientation.landscape));
+        vm.set("resumeEvent", "");
+        vm.set("resumeEvent", "");
+        vm.set("launchEvent", "");
+        vm.set("displayedEvent", "");
     } else if (applicationModule.ios) {
         vm.set("orientation", "portrait");
     }
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
 }
-exports.onNavigatingTo = onNavigatingTo;
-function onGridLoaded(args) {
+const onGridLoaded = args => {
     // >> application-events
     launchListener = applicationModule.on(applicationModule.launchEvent, (args) => {
         // The root view for this Window on iOS or Activity for Android.
         // If not set a new Frame will be created as a root view in order to maintain backwards compatibility.
         console.log("Root View: ", args.root);
         console.log("The appication was launched!");
+        vm.set("resumeEvent", "The appication was launched!");
     });
     suspendListener = applicationModule.on(applicationModule.suspendEvent, (args) => {
         console.log("The appication was suspended!");
+        vm.set("suspendEvent", "The appication was suspended!");
     });
     resumeListener = applicationModule.on(applicationModule.resumeEvent, (args) => {
         console.log("The appication was resumed!");
+        vm.set("resumeEvent", "The appication was resumed!");
     });
     exitListener = applicationModule.on(applicationModule.exitEvent, (args) => {
         console.log("The appication was closed!");
     });
     displayedListener = applicationModule.on(applicationModule.displayedEvent, (args) => {
-        console.log("NativeScript displayedEvent");
+        console.log("NativeScript displayedEvent!");
+        vm.set("displayedEvent", "The appication is displayed!");
     });
     lowMemoryListener = applicationModule.on(applicationModule.lowMemoryEvent, (args) => {
         // the instance that has raidsed the event
@@ -64,8 +71,8 @@ function onGridLoaded(args) {
     });
     // << application-events
 }
-exports.onGridLoaded = onGridLoaded;
-function onGridUnloaded() {
+
+const onGridUnloaded = () => {
     // >> application-events-off
     // import { off as applicationOff } from "tns-core-modules/applicaiton";
     applicationModule.off(applicationModule.launchEvent, launchListener);
@@ -78,4 +85,7 @@ function onGridUnloaded() {
     applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-off
 }
+
+exports.onNavigatingTo = onNavigatingTo;
+exports.onGridLoaded = onGridLoaded;
 exports.onGridUnloaded = onGridUnloaded;
