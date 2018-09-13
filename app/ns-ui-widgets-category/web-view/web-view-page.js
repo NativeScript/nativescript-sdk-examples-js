@@ -3,7 +3,8 @@ const link = require("../../link");
 const navigationLinks = [
     new link("BasicWebView", "ns-ui-widgets-category/web-view/basics/basics-page"),
     new link("WebView source", "ns-ui-widgets-category/web-view/source-load/source-load-page"),
-    new link("Gestures", "ns-ui-widgets-category/web-view/gestures/gestures-page")
+    new link("Gestures", "ns-ui-widgets-category/web-view/gestures/gestures-page"),
+    new link("Events", "ns-ui-widgets-category/web-view/events/events-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
