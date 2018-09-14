@@ -1,10 +1,10 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
 	<Page.actionBar>
-		<ActionBar title="Getting Started" />
+		<ActionBar title="Tabs Position" />
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
-		<!-- >> tab-view-basics-xml -->
-		<TabView id="tabViewContainer">
+		<!-- >> android-offscreen-tab-limit-xml -->
+		<TabView id="tabViewContainer" androidOffscreenTabLimit="0">
 			<TabViewItem title="First Tab" iconSource="res://icon">
 				<StackLayout>
 					<Label text="First Tab" textWrap="true" class="m-15 h2 text-left" color="blue" />
@@ -16,6 +16,6 @@
 				</StackLayout>
 			</TabViewItem>
 		</TabView>
-		<!-- << tab-view-basics-xml -->
+		<!-- << android-offscreen-tab-limit-xml -->
 	</GridLayout>
 </Page>

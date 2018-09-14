@@ -5,9 +5,8 @@ const dialogs = require("tns-core-modules/ui/dialogs");
 const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
 const Label = require("tns-core-modules/ui/label").Label;
 
-function onPageLoaded(args) {
-    const page = args.object;
-    const stackLayout = page.getViewById("stackLayoutId");
+function onLoaded(args) {
+    const stackLayout = args.object;
 
     // >> creating-tab-view-code
 
@@ -51,5 +50,5 @@ function onPageLoaded(args) {
     stackLayout.addChild(tabView);
 }
 
-exports.onPageLoaded = onPageLoaded;
+exports.onLoaded = onLoaded;
 
