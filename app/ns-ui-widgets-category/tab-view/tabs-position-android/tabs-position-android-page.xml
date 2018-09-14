@@ -1,21 +1,21 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd">
 	<Page.actionBar>
-		<ActionBar title="Styling" />
+		<ActionBar title="Tabs Position" />
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
-		<!-- >> tab-view-styling-xml -->
-		<TabView id="tabViewContainer" selectedTabTextColor="purple" tabBackgroundColor="yellow" androidSelectedTabHighlightColor="red">
-			<TabViewItem title="First Tab" iconSource="res://icon" textTransform="lowercase">
+		<!-- >> android-tabs-position-xml -->
+		<TabView id="tabViewContainer" androidTabsPosition="bottom">
+			<TabViewItem title="First Tab" iconSource="res://icon">
 				<StackLayout>
 					<Label text="First Tab" textWrap="true" class="m-15 h2 text-left" color="blue" />
 				</StackLayout>
 			</TabViewItem>
-			<TabViewItem title="Second Tab" iconSource="res://icon" textTransform="lowercase">
+			<TabViewItem title="Second Tab" iconSource="res://icon">
 				<StackLayout>
 					<Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue" />
 				</StackLayout>
 			</TabViewItem>
 		</TabView>
-		<!-- << tab-view-styling-xml -->
+		<!-- << android-tabs-position-xml -->
 	</GridLayout>
 </Page>

@@ -4,14 +4,15 @@ const platformModule = require("tns-core-modules/platform");
 const navigationLinks = [
     new link("Basics", "ns-ui-widgets-category/tab-view/basics/basics-page"),
     new link("Styling", "ns-ui-widgets-category/tab-view/styling/styling-page"),
-    new link("Icon Fonts", "ns-ui-widgets-category/tab-view/icon-fonts/icon-fonts-page"),
-    new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-page")
+    new link("Title Icon Fonts", "ns-ui-widgets-category/tab-view/title-icon-fonts/title-icon-fonts-page"),
+    new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-page"),
+    new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
-    if ((platformModule.isAndroid) && (navigationLinks.filter((e) => e.title === "Tabs Position").length < 1)) {
-        navigationLinks.push(new link("Tabs Position", "/ns-ui-widgets-category/tab-view/tabs-position/tabs-position-page"));
-        navigationLinks.push(new link("Tabs Limit", "/ns-ui-widgets-category/tab-view/tabs-limit/tabs-limit-page"));
+    if ((platformModule.isAndroid) && (navigationLinks.filter((e) => e.title === "Tabs Position Android").length < 1)) {
+        navigationLinks.push(new link("Tabs Position Android", "/ns-ui-widgets-category/tab-view/tabs-position-android/tabs-position-android-page"));
+        navigationLinks.push(new link("Offscreen Tab Limit Android", "/ns-ui-widgets-category/tab-view/offscreen-tab-limit-android/offscreen-tab-limit-android-page"));
     }
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,

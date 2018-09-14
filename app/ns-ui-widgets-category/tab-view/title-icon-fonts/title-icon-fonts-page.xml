@@ -4,7 +4,7 @@
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
 		<!-- >> tabview-icon-font-html -->
-		<TabView class="icon" selectedIndex="0">
+		<TabView id="tabViewContainer" class="icon">
 			<TabViewItem title="&#xe913;">
 				<StackLayout>
 					<Label text="First TabView item with Icon Font" textAlignment="center" textWrap="true" class="h2 m-x-auto" color="blue" />
