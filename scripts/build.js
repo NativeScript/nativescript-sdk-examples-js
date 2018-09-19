@@ -137,7 +137,14 @@ function getComponents(cwd, components, currentDir, jenkinsPosition) {
             articles.forEach(function (article) {
                 var articleDirName = path.dirname(article);
                 var articleHeader = path.basename(articleDirName);
-
+                
+                var pathTypeScriptFiles = glob.sync(articleDirName + "/*.ts")
+                pathTypeScriptFiles.forEach(function (filePath) {
+                    var fpath = filePath.slice(0, -3);
+                    if(fs.existsSync(fpath + ".js")){
+                        fs.removeSync(fpath + ".js");
+                    }
+                })
                 // Header
                 var prettyArticleHeader = prettify(articleHeader);
                 prettyArticleHeader = prettyArticleHeader.replace(/Ios|IOS/, "iOS");

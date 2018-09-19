@@ -39,7 +39,7 @@ function ListViewLinksModel(info) {
         });
     });
     viewModel.set("onButtonTap", (args) => {
-        let value = viewModel.get("showTypeScriptExamples")
+        const value = viewModel.get("showTypeScriptExamples");
         viewModel.set("showTypeScriptExamples", !value);
     });
 
