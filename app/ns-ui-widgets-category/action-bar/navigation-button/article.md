@@ -1,6 +1,7 @@
 The `NavigationButton` component is a common abstraction over the iOS back button and the Android navigation button.
 
-
+<snippet id='action-bar-nav-btn-xml'/>
+<snippet id='action-bar-nav-btn-js'/>
 
 ### iOS Specifics
 

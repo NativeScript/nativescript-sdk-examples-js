@@ -1,11 +1,11 @@
+<!-- >> action-bar-hide-show-xml -->
 <Page actionBarHidden="{{ abHidden }}" xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> action-bar-gettings-started -->
     <Page.actionBar>
 		<ActionBar title="ActionBar"></ActionBar>
 	</Page.actionBar>
-    <!-- << action-bar-gettings-started -->
 
     <StackLayout verticalAlignment="middle"> 
         <Button text="{{ abHidden ? 'Show ActionBar' : 'Hide ActionBar' }}" tap="onTap" textWrap="true" class="fa" />
     </StackLayout>
 </Page>
+<!-- << action-bar-hide-show-xml -->

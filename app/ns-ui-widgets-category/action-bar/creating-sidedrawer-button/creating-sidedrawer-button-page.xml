@@ -1,5 +1,5 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> action-bar-gettings-started -->
+    <!-- >> action-bar-sidedrawer-btn-xml -->
     <Page.actionBar>
 		<ActionBar title="SideDrawer Button">
             <android>
@@ -10,7 +10,7 @@
             </ios>
         </ActionBar>
 	</Page.actionBar>
-    <!-- << action-bar-gettings-started -->
+    <!-- << action-bar-sidedrawer-btn-xml -->
 
     <StackLayout verticalAlignment="middle"> 
         <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>

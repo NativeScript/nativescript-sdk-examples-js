@@ -1,5 +1,7 @@
 You can define additional action buttons using the `actionItems` collection:
 
+<snippet id='items-actionbar-xml'/>
+<snippet id='items-actionbar-js'/>
 
 ### Positioning
 

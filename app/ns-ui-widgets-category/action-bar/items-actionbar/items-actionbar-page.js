@@ -1,3 +1,4 @@
+// >> items-actionbar-js
 const Observable = require("tns-core-modules/data/observable").Observable;
 
 function onNavigatingTo(args) {
@@ -7,14 +8,15 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onShare(){
+function onShare () {
     console.log("share tap");
 }
 
-function onDelete(){
+function onDelete () {
     console.log("delete tap");
 }
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onShare = onShare;
 exports.onDelete = onDelete;
+// << items-actionbar-js

@@ -13,7 +13,7 @@ let lowMemoryListener;
 let orientationChangedListener;
 let uncaughtErrorListener;
 
-const onNavigatingTo = args => {
+const onNavigatingTo = (args) => {
     const page = args.object;
     vm = new Observable();
     vm.set("actionBarTitle", args.context.actionBarTitle);
@@ -32,7 +32,7 @@ const onNavigatingTo = args => {
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
 }
-const onGridLoaded = args => {
+const onGridLoaded = (args) => {
     // >> application-events
     launchListener = applicationModule.on(applicationModule.launchEvent, (args) => {
         // The root view for this Window on iOS or Activity for Android.
