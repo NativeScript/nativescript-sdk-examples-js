@@ -9,7 +9,7 @@ class Item {
     }
 
     get key() {
-        return this.k
+        return this.k;
     }
 
     get value() {

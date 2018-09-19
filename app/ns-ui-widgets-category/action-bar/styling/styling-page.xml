@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <!-- >> actionbar-style-xml -->
+    <Page.actionBar>
+		<ActionBar title="ActionBar Style">
+            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back"></NavigationButton>
+            <ActionItem ios.systemIcon="2" android.systemIcon="ic_menu_edit" ios.position="right"></ActionItem>
+        </ActionBar>
+	</Page.actionBar>
+    <!-- << actionbar-style-xml -->
+
+    <StackLayout verticalAlignment="middle"> 
+        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
+    </StackLayout>
+</Page>

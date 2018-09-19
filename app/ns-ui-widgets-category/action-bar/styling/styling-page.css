@@ -1,0 +1,12 @@
+Label {
+    background-color: orangered;
+    color: white;
+    margin:8;
+    padding: 16;
+}
+/* >> action-bar-style-css */
+ActionBar {
+    background-color:  #3C5AFD;
+    color: white;
+}
+/* << action-bar-style-css */

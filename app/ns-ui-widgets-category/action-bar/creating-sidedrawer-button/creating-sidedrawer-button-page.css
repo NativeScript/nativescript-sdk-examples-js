@@ -1,0 +1,10 @@
+ActionBar {
+    background-color:  #3C5AFD;
+    color: white;
+}
+Label{
+    background-color: orangered;
+    color: white;
+    margin:8;
+    padding: 16;
+}

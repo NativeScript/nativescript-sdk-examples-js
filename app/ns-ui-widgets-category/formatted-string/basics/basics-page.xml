@@ -8,7 +8,7 @@
     <Label class="h3 p-15 m-15 text-left">
         <FormattedString>
             <Span text="Words " color="#006600" ></Span>
-            <Span text="with " color="#990000" fontAttributes="Bold"></Span>
+            <Span text="with " color="#990000" fontWeight="Bold"></Span>
             <Span text="different " color="#ffcc00"></Span>
             <Span text="color."></Span>
         </FormattedString>

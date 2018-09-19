@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <!-- >> action-bar-setting-app-icon -->
+    <Page.actionBar>
+		<ActionBar title="App Icon Demo" android.icon="res://icon" android.iconVisibility="always"></ActionBar>
+	</Page.actionBar>
+    <!-- << action-bar-setting-app-icon -->
+
+    <StackLayout verticalAlignment="middle"> 
+        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
+    </StackLayout>
+</Page>
