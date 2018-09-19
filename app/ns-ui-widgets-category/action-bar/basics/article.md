@@ -3,6 +3,8 @@ We can additionally set an icon to use in your ActionBar on Android with the `ic
 
 Here’s what a basic usage of the `title` and `icon` properties looks like:
 <snippet id='action-bar-gettings-started'/>
+<snippet id='action-bar-basics-js'/>
+<snippet id='action-bar-basics-ts'/>
 
 > Note: The icon can only be set in Android platform. It is hidden by default, but you can explicitly control its visibility with the `android.iconVisibility' property.
 

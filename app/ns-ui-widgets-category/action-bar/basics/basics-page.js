@@ -1,5 +1,5 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
-
+// >> action-bar-basics-js
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
@@ -8,3 +8,4 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;
+// << action-bar-basics-js

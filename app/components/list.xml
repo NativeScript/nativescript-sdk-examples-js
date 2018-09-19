@@ -1,7 +1,18 @@
-<ListView items="{{ links }}" class="list-group" itemTap="{{ onItemTap }}">
+<GridLayout rows="auto *" columns="">
+	<Button row="0" visibility="{{ tsclinks ? 'visible' : 'collapsed' }}" text="{{ showTypeScriptExamples ? 'Show JavaScript Examples' : 'Show TypeScript Examples' }}" tap="{{ onButtonTap }}" />
+	<ListView row="1" visibility="{{ showTypeScriptExamples ? 'collapsed' : 'visible' }}" items="{{ links }}" class="list-group" itemTap="{{ onItemTap }}">
 	<ListView.itemTemplate>
 		<StackLayout class="list-group-item">
 			<Label text="{{ title }}" class="list-group-item-heading" />
 		</StackLayout>
 	</ListView.itemTemplate>
-</ListView>
+	</ListView>
+	<ListView row="1" visibility="{{ showTypeScriptExamples ? 'visible' : 'collapsed' }}" items="{{ tsclinks }}" class="list-group" itemTap="{{ onSecondItemTap }}">
+		<ListView.itemTemplate>
+			<StackLayout class="list-group-item">
+				<Label backgroundColor="green" text="{{ title }}" class="list-group-item-heading" />
+			</StackLayout>
+		</ListView.itemTemplate>
+	</ListView>
+</GridLayout>
+
