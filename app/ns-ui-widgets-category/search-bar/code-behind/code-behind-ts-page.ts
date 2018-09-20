@@ -1,27 +1,29 @@
-const observableModule = require("tns-core-modules/data/observable");
-const dialogs = require("tns-core-modules/ui/dialogs");
-// >> search-bar-require
-const searchBarModule = require("tns-core-modules/ui/search-bar");
-// << search-bar-require
-// >> creating-search-bar-code
+import {Observable, EventData} from "tns-core-modules/data/observable";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout"
+// >> search-bar-import
+import {SearchBar} from "tns-core-modules/ui/search-bar";
+// << search-bar-import
+// >> creating-search-bar-code-ts
 function onPageLoaded(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
-    const stackLayout = page.getViewById("stackLayoutId");
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
+    const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
 
     vm.set("sbResult", "");
     // creating new SearchBar
-    const searchBar = new searchBarModule.SearchBar();
+    const searchBar = new SearchBar();
     // set up SearchBar submit event
-    searchBar.on(searchBarModule.SearchBar.submitEvent, (args) => {
-        console.log("Search for ", args.object.text);
-        dialogs.alert(`Search for ${args.object.text}`)
+    searchBar.on(SearchBar.submitEvent, (args: EventData) => {
+        console.log("Search for ", (<SearchBar>args.object).text);
+        dialogs.alert(`Search for ${(<SearchBar>args.object).text}`)
         .then(() => {
             console.log("Dialog closed!");
         });
     });
     // set up SearchBar clear event
-    searchBar.on(searchBarModule.SearchBar.clearEvent, (args) => {
+    searchBar.on(SearchBar.clearEvent, () => {
         console.log("Clear");
         dialogs.alert("Clear SearchBar text")
         .then(() => {
@@ -30,7 +32,7 @@ function onPageLoaded(args) {
     });
 
     searchBar.on("textChange", (args) => {
-        vm.set("sbResult", args.object.text);
+        vm.set("sbResult", (<SearchBar>args.object).text);
     });
 
 
@@ -40,4 +42,4 @@ function onPageLoaded(args) {
 }
 
 exports.onPageLoaded = onPageLoaded;
-// << creating-search-bar-code
+// << creating-search-bar-code-ts

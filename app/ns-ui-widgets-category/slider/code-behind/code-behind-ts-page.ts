@@ -1,12 +1,14 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> slider-require
-const sliderModule = require("tns-core-modules/ui/slider");
-// << slider-require
-// >> creating-slider-code
-function onPageLoaded(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
-    const stackLayout = page.getViewById("stackLayoutId");
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+// >> slider-import 
+import {Slider} from "tns-core-modules/ui/slider";
+// << slider-import
+// >> creating-slider-code-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
+    const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
 
     vm.set("slResult", 22);
     // creating new Switch and binding the value property
@@ -14,19 +16,17 @@ function onPageLoaded(args) {
         sourceProperty: "age",
         targetProperty: "value"
     };
-    const sliderComponent = new sliderModule.Slider();
+    const sliderComponent = new Slider();
     sliderComponent.bind(options, vm);
     // setting slider.value to 22
     vm.set("age", 22);
 
     sliderComponent.on("valueChange", (args) => {
-        vm.set("slResult", args.object.value);
+        vm.set("slResult", (<Slider>args.object).value);
     });
 
     stackLayout.addChild(sliderComponent);
 
     page.bindingContext = vm;
 }
-
-exports.onPageLoaded = onPageLoaded;
-// << creating-slider-code
+// << creating-slider-code-ts

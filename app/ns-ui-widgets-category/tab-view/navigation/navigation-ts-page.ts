@@ -1,16 +1,17 @@
-const observableModule = require("tns-core-modules/data/observable");
-const dialogs = require("tns-core-modules/ui/dialogs");
-// >> tab-view-navigation-code
-function onLoaded(args) {
-    const tabView = args.object;
-    const vm = new observableModule.Observable();
+import {Observable} from "tns-core-modules/data/observable";
+import {TabView, SelectedIndexChangedEventData} from "tns-core-modules/ui/tab-view";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+// >> tab-view-navigation-code-ts
+export function onLoaded(args) {
+    const tabView:TabView = <TabView> args.object;
+    const vm = new Observable();
     vm.set("tabSelectedIndex", 0);
     vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
 
     tabView.bindingContext = vm;
 }
 
-function changeTab(args) {
+export function changeTab(args) {
     const vm = args.object.bindingContext;
     const tabSelectedIndex = vm.get("tabSelectedIndex");
     if (tabSelectedIndex === 0) {
@@ -22,10 +23,10 @@ function changeTab(args) {
     }
 }
 // displaying the old and new TabView selectedIndex
-function onSelectedIndexChanged(args) {
+export function onSelectedIndexChanged(args: SelectedIndexChangedEventData) {
     if (args.oldIndex !== -1) {
         const newIndex = args.newIndex;
-        const vm = args.object.bindingContext;
+        const vm = (<TabView>args.object).bindingContext;
         if (newIndex === 0) {
             vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
         } else if (newIndex === 1) {
@@ -39,7 +40,4 @@ function onSelectedIndexChanged(args) {
             });
     }
 }
-exports.onLoaded = onLoaded;
-exports.changeTab = changeTab;
-exports.onSelectedIndexChanged = onSelectedIndexChanged;
-// << tab-view-navigation-code
+// << tab-view-navigation-code-ts
