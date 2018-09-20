@@ -1,0 +1,20 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Delete"/>
+	</Page.actionBar>
+    <StackLayout class="form">
+        <ScrollView>
+            <StackLayout>
+                <Label class="p-t-15 p-l-15 p-r-15" text="{{ 'Created folder: ' + myFolderPath }}" textWrap="true"/>
+                <Label class="p-t-15 p-l-15 p-r-15" text="{{ 'Created file: ' + myFilePath }}" textWrap="true"/>
+                <StackLayout>
+                    <Button class="btn btn-primary btn-active" text="Delete File" tap="onDeleteFile" textWrap="true"/>
+                    <Button class="btn btn-primary btn-active" text="Delete Folder" tap="onDeleteFolder" textWrap="true"/>
+                    <Button class="btn btn-primary btn-active" text="Clear Folder" tap="onClearFolder" textWrap="true"/>
+                    <Button class="btn btn-primary btn-active" text="Reset" tap="onReset" textWrap="true"/>
+                </StackLayout> 
+                <Label class="p-b-15 p-l-15 font-weight-bold" text="{{ resultMessage }}" textWrap="true"/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

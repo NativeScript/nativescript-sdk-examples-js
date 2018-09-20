@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="setInterval"/>
+	</Page.actionBar>
+
+    <StackLayout>
+        <StackLayout class="stacklayoutStyle" backgroundColor="{{ buttoncolor }}">
+            <Label text="{{ 'Color:' + buttoncolor }}" textWrap="true"/>
+        </StackLayout>
+        <Button class="btn btn-primary btn-active" text="{{ buttonText }}" tap="onButtonTap"/>
+    </StackLayout>
+</Page>

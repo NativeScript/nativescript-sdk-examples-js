@@ -1,0 +1,14 @@
+button, label, stack-layout {
+    horizontal-align: center;    
+}
+
+.icon {
+   font-family: 'icomoon';
+}
+
+GridLayout {
+    padding: 0;
+    margin-left: 0;
+    margin-top: 10;
+    margin-bottom: 10;
+}
