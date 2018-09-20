@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+		<!-- >> search-bar-basics-xml -->
+		<StackLayout class="p-20">
+       <SearchBar id="searchBar" hint="{{sbHint}}" text="{{sbText}}" clear="onClear" submit="onSubmit" />
+    </StackLayout>
+		<!-- << search-bar-basics-xml -->
+</Page>

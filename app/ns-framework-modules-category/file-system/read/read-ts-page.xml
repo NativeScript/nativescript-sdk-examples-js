@@ -1,0 +1,36 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="setInterval"/>
+	</Page.actionBar>
+    <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <GridLayout rows="auto, auto, *" columns="*">
+                    <Label class="p-15 font-weight-bold" row="0" text="Reading from a File" textWrap="true"/>
+                    <Label class="p-l-15 p-r-15 p-b-15" row="1" text="{{ 'Reading content from : ' + filePath }}" textWrap="true"/>
+                    <Label class="p-l-15 p-r-15 p-b-15" row="2" text="{{ writtenContent }}" textWrap="true"/>
+                </GridLayout>
+
+                <GridLayout rows="auto, auto, auto, *" columns="*">
+                    <Label class="p-15 font-weight-bold" row="0" text="Reading/writing binary data from/to a File" textWrap="true"/>
+                    <Label class="p-l-15 p-r-15 p-b-15" row="1" text="'Read and use binary data from icon.png" textWrap="true"/>
+                    <Button class="btn btn-primary btn-active" row="2" text="read sync" tap="onReadSync"/>
+                    <TextView class="p-15" row="3" text="{{ binarySource }}" editable="false"/>
+                </GridLayout>
+
+                <GridLayout rows="auto, *" columns="*">
+                    <Label class="p-15 font-weight-bold" row="0" text="Enumerate documents folder content" textWrap="true"/>
+                    <ListView items="{{ folderEntities }}" class="list-group" row="1">
+                        <ListView.itemTemplate>
+                            <GridLayout class="list-group-item" rows="auto, auto, auto" columns="*">
+                                <Label row="0" text="{{ 'File name: ' + name }}" textWrap="true"/>
+                                <Label row="1" text="{{ 'File path: ' + path }}" textWrap="true"/>
+                                <Label row="2" text="{{ 'Date modified: ' + lastModified }}" textWrap="true"/>
+                            </GridLayout>
+                        </ListView.itemTemplate>
+                    </ListView>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

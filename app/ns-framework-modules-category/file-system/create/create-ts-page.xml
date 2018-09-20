@@ -1,0 +1,28 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Create"/>
+	</Page.actionBar>
+    <StackLayout>
+       <ScrollView>
+            <StackLayout class="form">
+                <StackLayout class="input-field">
+                    <Label class="label" text="Folder Name" textWrap="true"/>
+                    <TextField class="input input-border" hint="Enter Folder Name" text="{{ folderName }}" editable="true"/>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label class="label" text="File Name" textWrap="true"/>
+                    <TextField class="input input-border" hint="Enter File Name" text="{{ fileName }}" editable="true"/>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label class="label" text="Text Content" textWrap="true"/>
+                    <TextField class="input input-border" hint="Enter Text Content" text="{{ fileTextContent }}" editable="true"/>
+                </StackLayout>
+                <Button class="btn btn-primary btn-active" text="Create" tap="onCreateFile"/>
+                <GridLayout rows="*, *" columns="*" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}">
+                    <Label class="body p-15" row="0" text="{{ successMessage }}" textWrap="true"/>
+                    <Label class="body p-15" row="1" text="{{ 'File content: ' + writtenContent }}" textWrap="true"/>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>
