@@ -6,7 +6,6 @@ export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;
     // set up the initial values for the slider components
     const vm = new Observable();
-
     vm.set("currentValue", 10);
     vm.set("sliderValue", 10);
     vm.set("fontSize", 20);
@@ -14,7 +13,6 @@ export function onNavigatingTo(args) {
     vm.set("firstMaxValue", 100);
     // handle value change
     vm.on(Observable.propertyChangeEvent, (propertyChangeData: PropertyChangeData) => {
-
         if (propertyChangeData.propertyName === "sliderValue") {
             vm.set("currentValue", propertyChangeData.value);
         }
@@ -31,4 +29,3 @@ export function onSliderLoaded(args) {
     });
 }
 // << slider-value-change-event-ts
-

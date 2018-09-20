@@ -10,7 +10,6 @@ export function onPageLoaded(args) {
     const vm = new Observable();
     const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
 
-
     vm.set("slResult", 22);
     // creating new Switch and binding the value property
     const options = {
