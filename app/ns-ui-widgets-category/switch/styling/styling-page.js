@@ -1,6 +1,6 @@
 
 const observableModule = require("tns-core-modules/data/observable");
-// >> text-field-binding-code
+// >> switch-styling-code
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new observableModule.Observable();
@@ -30,4 +30,4 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;
-// << text-field-binding-code
+// << switch-styling-code

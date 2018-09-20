@@ -1,27 +1,29 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> switch-require
-const switchModule = require("tns-core-modules/ui/switch");
-// << switch-require
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+// >> switch-import
+import {Switch} from "tns-core-modules/ui/switch";
+// << switch-import
 
-// >> creating-switch-code
-function onPageLoaded(args) {
-    const page = args.object;
+// >> creating-switch-code-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
     // >> (hide)
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("swResult", "false");
     // << (hide)
-    const stackLayout = page.getViewById("stackLayoutId");
+    const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
     // creating new Switch and binding the checked property
-    const mySwitch = new switchModule.Switch();
+    const mySwitch = new Switch();
     const options = {
         sourceProperty: "isChecked",
         targetProperty: "checked"
     };
     mySwitch.bind(options, vm);
     mySwitch.on("checkedChange", (args) => {
-        console.log(args.object.checked);
+        console.log((<Switch>args.object).checked);
         // >> (hide)
-        vm.set("swResult", args.object.checked);
+        vm.set("swResult", (<Switch>args.object).checked);
         // << (hide)
     });
 
@@ -36,6 +38,4 @@ function onPageLoaded(args) {
     stackLayout.addChild(mySwitch);
     page.bindingContext = vm;
 }
-exports.onPageLoaded = onPageLoaded;
- // << creating-switch-code
-
+ // << creating-switch-code-ts

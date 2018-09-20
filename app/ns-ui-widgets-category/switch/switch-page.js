@@ -7,7 +7,6 @@ const navigationLinks = [
 ];
 const navigationLinksTsc = [
     new link("Basics", "ns-ui-widgets-category/switch/basics/basics-ts-page"),
-    new link("Switch Styling", "ns-ui-widgets-category/switch/styling/styling-ts-page"),
     new link("Code Behind", "ns-ui-widgets-category/switch/code-behind/code-behind-ts-page")
 ];
 function onNavigatingTo(args) {

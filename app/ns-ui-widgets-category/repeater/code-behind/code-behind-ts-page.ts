@@ -1,22 +1,21 @@
-const observableArrayModule = require("tns-core-modules/data/observable-array");
-const stackLayoutModule = require("tns-core-modules/ui/layouts/stack-layout");
-// >> repeater-require
-const repeaterModule = require("tns-core-modules/ui/repeater");
-// << repeater-require
-// >> creating-repeater-code
-function onPageLoaded(args) {
-    const page = args.object;
-    const stackLayoutContainer = page.getViewById("stackLayoutId");
-    const secondColorsArray = new observableArrayModule.ObservableArray(["red", "green", "blue"]);
+import { ObservableArray } from"tns-core-modules/data/observable-array";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+import {Page} from "tns-core-modules/ui/page";
+// >> repeater-import
+import {Repeater} from "tns-core-modules/ui/repeater";
+// << repeater-import
+// >> creating-repeater-code-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
+    const stackLayoutContainer: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
+    const secondColorsArray = new ObservableArray(["red", "green", "blue"]);
 
-    const repeater = new repeaterModule.Repeater();
-    const stackLayout = new stackLayoutModule.StackLayout();
+    const repeater = new Repeater();
+    const stackLayout = new StackLayout();
     stackLayout.orientation = "horizontal";
     repeater.itemsLayout = stackLayout;
     repeater.items = secondColorsArray;
 
     stackLayoutContainer.addChild(repeater);
 }
-
-exports.onPageLoaded = onPageLoaded;
-// << creating-repeater-code
+// << creating-repeater-code-ts

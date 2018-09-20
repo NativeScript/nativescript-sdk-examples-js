@@ -1,14 +1,16 @@
-const observableModule = require("tns-core-modules/data/observable");
-const dialogs = require("tns-core-modules/ui/dialogs");
-// >> search-bar-basics-code
-function onNavigatingTo(args) {
-    const page = args.object;
+import {Observable, PropertyChangeData} from "tns-core-modules/data/observable";
+import {SearchBar} from "tns-core-modules/ui/search-bar";
+import {Page} from "tns-core-modules/ui/page";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+// >> search-bar-basics-code-ts
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     // binding SegmentedBar `text` abd `hint` properties
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("sbHint", "Search");
     vm.set("sbText", "");
     // handle text change event
-    vm.on(observableModule.Observable.propertyChangeEvent, (propertyChangeData) => {
+    vm.on(Observable.propertyChangeEvent, (propertyChangeData:PropertyChangeData) => {
         if (propertyChangeData.propertyName === "sbText") {
             console.log("SearchBar text changed! New value: ", propertyChangeData.value);
         }
@@ -17,8 +19,8 @@ function onNavigatingTo(args) {
 }
 
 // Handle SearchBar `submit` event.
-function onSubmit(args) {
-    const searchbar = args.object;
+export function onSubmit(args) {
+    const searchbar: SearchBar = <SearchBar> args.object;
     console.log("Search submit result: ", searchbar.text);
     dialogs.alert(`You are searching for ${searchbar.text}`)
     .then(() => {
@@ -27,15 +29,11 @@ function onSubmit(args) {
 }
 
 // Handle SearchBar `clear` event.
-function onClear(args) {
+export function onClear() {
     console.log("clear search-bar text");
     dialogs.alert("clear search-bar text")
     .then(() => {
         console.log("Dialog closed!");
     });
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onSubmit = onSubmit;
-exports.onClear = onClear;
-// << search-bar-basics-code
+// << search-bar-basics-code-ts
