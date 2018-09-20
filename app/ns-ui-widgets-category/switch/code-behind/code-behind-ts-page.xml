@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+    <!-- >> creating-switch-xml -->
+    <!-- The Layout that will hold the dynamically created Switch -->
+    <StackLayout id="stackLayoutId" class="m-15 text-center" width="80%" height="80%">
+		  <Label text="{{ 'Result: ' + swResult}}" textWrap="true" class="h2"/>
+    </StackLayout>
+    <!-- << creating-switch-xml -->
+</Page>

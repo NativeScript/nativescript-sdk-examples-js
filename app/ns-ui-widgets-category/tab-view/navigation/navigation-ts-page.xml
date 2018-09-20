@@ -1,0 +1,29 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+	<Page.actionBar>
+		<ActionBar title="Navigation" />
+	</Page.actionBar>
+	<GridLayout rows="*" columns="*">
+		<!-- >> tab-view-navigation-xml -->
+		<TabView loaded="onLoaded" selectedIndex="{{tabSelectedIndex}}" selectedIndexChanged="onSelectedIndexChanged">
+			<TabViewItem title="Profile">
+				<StackLayout>
+					<Label text="{{ tabSelectedIndexResult }}" class="h2 m-t-16 text-center" textWrap="true" />
+					<Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+				</StackLayout>
+			</TabViewItem>
+			<TabViewItem title="Stats">
+				<StackLayout>
+					<Label text="{{ tabSelectedIndexResult }}" class="h2 m-t-16 text-center" textWrap="true" />
+					<Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+				</StackLayout>
+			</TabViewItem>
+			<TabViewItem title="Settings">
+				<StackLayout>
+					<Label text="{{ tabSelectedIndexResult }}" class="h2 m-t-16 text-center" textWrap="true" />
+					<Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+				</StackLayout>
+			</TabViewItem>
+		</TabView>
+		<!-- << tab-view-navigation-xml -->
+	</GridLayout>
+</Page>

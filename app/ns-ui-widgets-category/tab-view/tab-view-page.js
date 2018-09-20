@@ -8,6 +8,10 @@ const navigationLinks = [
     new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-page"),
     new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation")
 ];
+const navigationLinksTsc = [
+    new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-ts-page"),
+    new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation-ts-page")
+];
 function onNavigatingTo(args) {
     const page = args.object;
     if ((platformModule.isAndroid) && (navigationLinks.filter((e) => e.title === "Tabs Position Android").length < 1)) {
@@ -16,7 +20,9 @@ function onNavigatingTo(args) {
     }
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples:false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

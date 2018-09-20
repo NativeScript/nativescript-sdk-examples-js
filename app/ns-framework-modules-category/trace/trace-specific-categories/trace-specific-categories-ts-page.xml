@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Trace Categories"/>
+	</Page.actionBar>
+
+    <StackLayout >
+        <Label class="h3 m-15 text-center" text="Tracing specific categories of events example." textWrap="true"/>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" text="Enable tracing" tap="enableTracing"/>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" text="Disable tracing" tap="disableTracing"/>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" text="isCategorySet (Debug category)" tap="checkIsDebugCategorySet"/>
+        <Button class="btn btn-primary btn-rounded-sm btn-active" height="70"  text="isCategorySet (VisualTreeEvents category)" tap="checkIsDebugVisualTreeEventsSet"/>
+    </StackLayout>
+</Page>

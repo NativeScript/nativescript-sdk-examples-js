@@ -1,0 +1,23 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Post"/>
+	</Page.actionBar>
+    <StackLayout class="form">
+        <StackLayout class="input-field">
+            <Label class="label" text="Username" textWrap="true"/>
+            <TextField class="input input-border" hint="Enter Username" text="{{ user }}" editable="true"/>
+        </StackLayout>
+
+        <StackLayout class="input-field">
+            <Label class="label" text="Password" textWrap="true"/>
+            <TextField class="input input-border" hint="Enter Password" text="{{ pass }}" secure="true" editable="true"/>
+        </StackLayout>
+
+        <Button class="btn btn-primary btn-active" text="Submit" tap="makePostRequest"/>
+        <GridLayout class="bg-primary p-15 m-15" rows="*, *" columns="*" borderRadius="2">
+            <Label row="0" class="text-center p-15" text="Data successfully send by user: " visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}"
+                verticalAligment="center" colSpan="2" textWrap="true"/>
+            <Label row="1" class="h1 text-center p-15" text="{{ message }}" verticalAligment="center" colSpan="2" textWrap="true"/>
+        </GridLayout>
+    </StackLayout>
+</Page>

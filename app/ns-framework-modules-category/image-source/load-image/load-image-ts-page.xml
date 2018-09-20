@@ -1,0 +1,20 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Load image"/>
+	</Page.actionBar>
+
+    <StackLayout>
+        <ScrollView>
+            <GridLayout rows="50, auto, 50, auto, 50, auto, auto, 50, auto, 50, auto, 50, auto, auto, auto, 50, auto, 50, auto, auto, auto, auto, 50, auto, auto, auto, auto" columns="*">
+                <Label row="0" text="Load image using resource name" textWrap="true" />
+                <Image row="1" src="{{ imageFromResources }}" stretch="none" />
+                
+                <Label row="2" text="Load image from a local file" textWrap="true" />
+                <Image row="3" src="{{ imageFromResourcesLocalFile }}" stretch="none" />
+
+                <Label row="4" text="Creating PNG image file from base64 string" textWrap="true" />
+                <Image row="5" backgroundColor="green" src="{{ imageFromBase64 }}" stretch="none" />
+            </GridLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

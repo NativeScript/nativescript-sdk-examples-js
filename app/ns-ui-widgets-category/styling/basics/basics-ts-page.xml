@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"  loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Styling Basics"/>
+	</Page.actionBar>
+    <StackLayout id="container" class="gradient" height="500">
+        <!-- >> css-theme-plugin -->
+        <!-- Using nativescript-theme plugin predefined CSS classes -->
+        <!-- More at https://docs.nativescript.org/ui/theme -->
+       <Label text="Sample label" class="h2 text-left m-16" textWrap="true" />
+       <!-- << css-theme-plugin -->
+    </StackLayout>
+</Page>
