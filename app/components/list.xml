@@ -10,7 +10,7 @@
 	<ListView row="1" visibility="{{ showTypeScriptExamples ? 'visible' : 'collapsed' }}" items="{{ tsclinks }}" class="list-group" itemTap="{{ onSecondItemTap }}">
 		<ListView.itemTemplate>
 			<StackLayout class="list-group-item">
-				<Label backgroundColor="green" text="{{ title }}" class="list-group-item-heading" />
+				<Label text="{{ title + ' - TypeScript' }}" class="list-group-item-heading" />
 			</StackLayout>
 		</ListView.itemTemplate>
 	</ListView>
