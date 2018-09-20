@@ -1,12 +1,14 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> segmented-bar-require
-const segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
-// << segmented-bar-require
-// >> creating-segmented-bar-code
-function onPageLoaded(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
-    const stackLayout = page.getViewById("stackLayoutId");
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout"
+// >> segmented-bar-import
+import {SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData} from "tns-core-modules/ui/segmented-bar";
+// << segmented-bar-import
+// >> creating-segmented-bar-code-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
+    const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
 
     vm.set("sbResult", 0);
     // creating new SegmentedBar and binding the selectedIndex property
@@ -14,15 +16,15 @@ function onPageLoaded(args) {
         sourceProperty: "sbindex",
         targetProperty: "selectedIndex"
     };
-    const segmentedBar = new segmentedBarModule.SegmentedBar();
+    const segmentedBar = new SegmentedBar();
     const items = [];
-    const item1 = new segmentedBarModule.SegmentedBarItem();
+    const item1 = new SegmentedBarItem();
     item1.title = "Item1";
     items.push(item1);
-    const item2 = new segmentedBarModule.SegmentedBarItem();
+    const item2 = new SegmentedBarItem();
     item2.title = "Item2";
     items.push(item2);
-    const item3 = new segmentedBarModule.SegmentedBarItem();
+    const item3 = new SegmentedBarItem();
     item3.title = "Item3";
     items.push(item3);
     segmentedBar.items = items;
@@ -31,14 +33,12 @@ function onPageLoaded(args) {
     // setting SegmentedBar selected index to 0
     vm.set("sbindex", 0);
 
-    segmentedBar.on("selectedIndexChange", (args) => {
-        vm.set("sbResult", args.object.selectedIndex);
+    segmentedBar.on("selectedIndexChange", (args: SelectedIndexChangedEventData) => {
+        vm.set("sbResult", (<SegmentedBar>args.object).selectedIndex);
     });
 
     stackLayout.insertChild(segmentedBar, 0);
 
     page.bindingContext = vm;
 }
-
-exports.onPageLoaded = onPageLoaded;
-// << creating-segmented-bar-code
+// << creating-segmented-bar-code-ts

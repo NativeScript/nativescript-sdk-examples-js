@@ -1,9 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> segmented-bar-view-code
-function onNavigatingTo(args) {
-    const page = args.object;
+import { Observable } from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import {SegmentedBar, SelectedIndexChangedEventData} from "tns-core-modules/ui/segmented-bar";
+// >> segmented-bar-view-code-ts
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     // set up the SelectedBar selected index
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("prop", 0);
     vm.set("sbSelectedIndex", 0);
     vm.set("visibility1", true);
@@ -13,13 +15,13 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function sbLoaded(args) {
+export function sbLoaded(args) {
     // handle selected index change
-    const segmentedBarComponent = args.object;
-    segmentedBarComponent.on("selectedIndexChange", (sbargs) => {
-        const page = sbargs.object.page;
+    const segmentedBarComponent: SegmentedBar = <SegmentedBar> args.object;
+    segmentedBarComponent.on("selectedIndexChange", (sbargs: SelectedIndexChangedEventData) => {
+        const page = (<SegmentedBar>sbargs.object).page;
         const vm = page.bindingContext;
-        const selectedIndex = sbargs.object.selectedIndex;
+        const selectedIndex = (<SegmentedBar>sbargs.object).selectedIndex;
         vm.set("prop", selectedIndex);
         switch (selectedIndex) {
             case 0:
@@ -42,7 +44,4 @@ function sbLoaded(args) {
         }
     });
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.sbLoaded = sbLoaded;
-// << segmented-bar-view-code
+// << segmented-bar-view-code-ts

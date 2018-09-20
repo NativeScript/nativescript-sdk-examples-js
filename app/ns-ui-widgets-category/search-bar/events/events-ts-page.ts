@@ -1,6 +1,8 @@
-const observableModule = require("tns-core-modules/data/observable");
-const observableArrayModule = require("tns-core-modules/data/observable-array");
-// >> clear-search-bar-submit
+import {Observable} from "tns-core-modules/data/observable";
+import {ObservableArray} from "tns-core-modules/data/observable-array";
+import {Page} from "tns-core-modules/ui/page";
+import {SearchBar} from "tns-core-modules/ui/search-bar"
+// >> clear-search-bar-submit-ts
 
 const arrayItems = [
     { name: "United States" },
@@ -11,22 +13,22 @@ const arrayItems = [
     { name: "Spain" },
     { name: "Italy" }
 ];
-function onNavigatingTo(args) {
-    const page = args.object;
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     // set up the ListView items
-    const vm = new observableModule.Observable();
-    const myItems = new observableArrayModule.ObservableArray(arrayItems);
+    const vm = new Observable();
+    const myItems = new ObservableArray(arrayItems);
 
     vm.set("myItems", myItems);
 
     page.bindingContext = vm;
 }
 // search for country
-function onSubmit(args) {
-    const searchBar = args.object;
+export function onSubmit(args) {
+    const searchBar: SearchBar = <SearchBar> args.object;
     const searchValue = searchBar.text.toLowerCase();
 
-    const myItems = new observableArrayModule.ObservableArray();
+    const myItems = new ObservableArray();
     if (searchValue !== "") {
         for (let i = 0; i < arrayItems.length; i++) {
             if (arrayItems[i].name.toLowerCase().indexOf(searchValue) !== -1) {
@@ -34,29 +36,25 @@ function onSubmit(args) {
             }
         }
     }
-    const page = searchBar.page;
+    const page: Page = <Page> searchBar.page;
     const vm = page.bindingContext;
     vm.set("myItems", myItems);
 }
 // clear SearchBar text and load ListView initial data
-function onClear(args) {
-    const searchBar = args.object;
+export function onClear(args) {
+    const searchBar: SearchBar = <SearchBar> args.object;
     searchBar.text = "";
     searchBar.hint = "Search for a country and press enter";
 
-    const myItems = new observableArrayModule.ObservableArray();
+    const myItems = new ObservableArray();
     arrayItems.forEach((item) => {
 
         myItems.push(item);
 
     });
 
-    const page = searchBar.page;
+    const page: Page = <Page> searchBar.page;
     const vm = page.bindingContext;
     vm.set("myItems", myItems);
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onSubmit = onSubmit;
-exports.onClear = onClear;
-// << clear-search-bar-submit
+// << clear-search-bar-submit-ts

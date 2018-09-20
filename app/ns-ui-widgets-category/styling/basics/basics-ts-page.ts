@@ -1,11 +1,11 @@
-const Button = require("tns-core-modules/ui/button").Button;
-const Label = require("tns-core-modules/ui/label").Label;
-
-// >> style-code-behind
-function onPageLoaded(args) {
-    const page = args.object;
+import {Button} from "tns-core-modules/ui/button";
+import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+// >> style-code-behind-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
     // >> (hide)
-    const stacklayout = page.getViewById("container");
+    const stacklayout: StackLayout = <StackLayout> page.getViewById("container");
     // << (hide)
 
     page.css = "Button { background-color: red; color: white; } .testClass { color: blue; } #myButton { color: yellow; } .testClass:pressed { color: green; }";
@@ -29,6 +29,4 @@ function onPageLoaded(args) {
     stacklayout.addChild(btnStyledViaID);
     // << (hide)
 }
-// << style-code-behind
-exports.onPageLoaded = onPageLoaded;
-
+// << style-code-behind-ts

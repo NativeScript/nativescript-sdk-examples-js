@@ -1,15 +1,20 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> scroll-view-event-code
-function onNavigatingTo(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+// >> search-bar-import
+import {ScrollEventData, ScrollView} from "tns-core-modules/ui/scroll-view"
+// << search-bar-import
+// >> scroll-view-event-code-ts
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
 
     vm.set("status", "not scrolling");
 
     page.bindingContext = vm;
 }
-function onScroll(args) {
-    const page = args.object.page;
+export function onScroll(args: ScrollEventData) {
+    const scrollview: ScrollView = <ScrollView> args.object;
+    const page: Page = <Page> scrollview.page;
     const vm = page.bindingContext;
     vm.set("status", "scrolling");
     setTimeout(() => {
@@ -19,7 +24,4 @@ function onScroll(args) {
     console.log(`scrollX:  ${args.scrollX}`);
     console.log(`scrollY: ${args.scrollY}`);
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onScroll = onScroll;
-// << scroll-view-event-code
+// << scroll-view-event-code-ts

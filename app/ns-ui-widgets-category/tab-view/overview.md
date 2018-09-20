@@ -2,6 +2,7 @@ The `TabView` component provides a simple way to navigate between different view
 By default the `TabView` will load the view of the first tab, however it's possible to load alternative tabs when the app starts by setting the component’s `selectedIndex` property.
 
 <snippet id='tab-view-require'/>
+<snippet id='tab-view-import'/>
 
 The general behavior of the `TabView` component is to load its items on demand. This means that every `TabViewItem` view will be loaded when it is shown and will be unloaded when it disappears. Respectively, the `loaded` and `unloaded` events will be fired when navigating between views. However, there are some specifics for each platform (iOS and Android), which are described in the notes below.
 

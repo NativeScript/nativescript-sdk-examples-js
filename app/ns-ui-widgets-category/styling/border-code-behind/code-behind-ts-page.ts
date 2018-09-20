@@ -1,8 +1,9 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const Color = require("tns-core-modules/color").Color;
-
-exports.onNavigatingTo = function(args) {
-    const page = args.object;
+import {Observable} from "tns-core-modules/data/observable";
+import {Color} from "tns-core-modules/color";
+import {Page} from "tns-core-modules/ui/page";
+import {Label} from "tns-core-modules/ui/label";
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
 
     const vm = new Observable();
     const cssSnippet = "label.borderWidth = 2;\nlabel.borderColor = new Color'orangered');\nlabel.borderRadius = 10;";
@@ -11,16 +12,16 @@ exports.onNavigatingTo = function(args) {
     page.bindingContext = vm;
 };
 
-exports.onLabelLoaded = function(args) {
-    const label = args.object;
+export function onLabelLoaded(args) {
+    const label: Label = <Label> args.object;
     label.backgroundColor = new Color("lightslategray");
-    label.color = "#FFFFFF";
+    label.color = new Color("#FFFFFF");
     label.fontSize = 14;
     label.padding = 16;
 
-    // >> border-radius-code
+    // >> border-radius-code-ts
     label.borderWidth = 2;
     label.borderColor = new Color("orangered");
     label.borderRadius = 10;
-    // << border-radius-code
+    // << border-radius-code-ts
 };

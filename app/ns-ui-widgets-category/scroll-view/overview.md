@@ -8,3 +8,4 @@ The possible values of `orientation` are:
 It is possible to handle the `scroll` event of the View by binding to the ScrollView’s `scroll` event.
 
 <snippet id='search-bar-require'/>
+<snippet id='search-bar-import'/>
