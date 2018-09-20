@@ -19,7 +19,9 @@ function ListViewLinksModel(info) {
 
     const viewModel = new observableModule.fromObject({
         "links": new observableArrayModule.ObservableArray(info.links),
-        "actionBarTitle": info.actionBarTitle
+        "actionBarTitle": info.actionBarTitle,
+        "showTypeScriptExamples": info.showTypeScriptExamples ? info.showTypeScriptExamples : false,
+        "tsclinks": info.tsclinks ? new observableArrayModule.ObservableArray(info.tsclinks) : undefined
     });
 
     viewModel.set("onItemTap", (args) => {
@@ -28,6 +30,17 @@ function ListViewLinksModel(info) {
             moduleName: linkItem.link,
             context: { "title": linkItem.title }
         });
+    });
+    viewModel.set("onSecondItemTap", (args) => {
+        const linkItem = viewModel.get("tsclinks").getItem(args.index);
+        frameModule.topmost().navigate({
+            moduleName: linkItem.link,
+            context: { "title": linkItem.title }
+        });
+    });
+    viewModel.set("onButtonTap", (args) => {
+        const value = viewModel.get("showTypeScriptExamples");
+        viewModel.set("showTypeScriptExamples", !value);
     });
 
     return viewModel;

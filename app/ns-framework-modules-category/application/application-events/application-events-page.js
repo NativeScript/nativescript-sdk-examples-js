@@ -31,7 +31,7 @@ const onNavigatingTo = (args) => {
     }
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
-}
+};
 const onGridLoaded = (args) => {
     // >> application-events
     launchListener = applicationModule.on(applicationModule.launchEvent, (args) => {
@@ -70,7 +70,7 @@ const onGridLoaded = (args) => {
         console.log("NativeScript Error: ", args.error);
     });
     // << application-events
-}
+};
 
 const onGridUnloaded = () => {
     // >> application-events-off
@@ -84,7 +84,7 @@ const onGridUnloaded = () => {
     applicationModule.off(applicationModule.orientationChangedEvent, orientationChangedListener);
     applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-off
-}
+};
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onGridLoaded = onGridLoaded;

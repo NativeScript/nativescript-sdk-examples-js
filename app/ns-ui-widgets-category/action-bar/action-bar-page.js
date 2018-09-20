@@ -12,11 +12,16 @@ const navigationLinks = [
     new link("Styling", "ns-ui-widgets-category/action-bar/styling/styling-page"),
     new link("Creating SideDrawer button", "ns-ui-widgets-category/action-bar/creating-sidedrawer-button/creating-sidedrawer-button-page")
 ];
+const navigationLinksTsc = [
+    new link("Basics TypeScript", "ns-ui-widgets-category/action-bar/basics/basics-ts-page")
+];
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples:false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

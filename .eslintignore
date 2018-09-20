@@ -5,3 +5,4 @@ hooks/*
 platforms/*
 dist/*
 scripts/*
+app/**/**/**/*-ts-*.js

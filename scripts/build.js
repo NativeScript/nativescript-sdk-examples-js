@@ -137,7 +137,7 @@ function getComponents(cwd, components, currentDir, jenkinsPosition) {
             articles.forEach(function (article) {
                 var articleDirName = path.dirname(article);
                 var articleHeader = path.basename(articleDirName);
-
+                
                 // Header
                 var prettyArticleHeader = prettify(articleHeader);
                 prettyArticleHeader = prettyArticleHeader.replace(/Ios|IOS/, "iOS");
