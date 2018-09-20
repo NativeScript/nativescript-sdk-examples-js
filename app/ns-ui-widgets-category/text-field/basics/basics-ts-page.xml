@@ -73,6 +73,7 @@
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label class="label" text="Date" textWrap="true"></Label>
+
                     <TextField hint="Enter date" 
                             text='{{testDate, testDate | dateConverter(dateFormat)}}' 
                             secure="false"
@@ -84,6 +85,7 @@
                             focus="onFocus" 
                             blur="onBlur" 
                             class="input input-border"/>
+
                 </StackLayout>
             </StackLayout>        
         </ScrollView>

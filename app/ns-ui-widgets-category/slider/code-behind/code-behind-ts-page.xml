@@ -3,6 +3,7 @@
 		<ActionBar title="Dynamic Creation"/>
 	</Page.actionBar>
 
+
     <StackLayout id="stackLayoutId">
 		    <Label text="{{ 'Result: ' + slResult}}" textWrap="true" />
         

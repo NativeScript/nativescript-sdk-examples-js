@@ -27,6 +27,7 @@ export function onSelectedIndexChanged(args: SelectedIndexChangedEventData) {
     if (args.oldIndex !== -1) {
         const newIndex = args.newIndex;
         const vm = (<TabView>args.object).bindingContext;
+
         if (newIndex === 0) {
             vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");
         } else if (newIndex === 1) {

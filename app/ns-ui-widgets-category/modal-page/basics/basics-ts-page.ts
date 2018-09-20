@@ -8,6 +8,7 @@ export function openModal(args) {
     const context = { username:"test_username", password:"test" };
     const fullscreen = true;
     mainView.showModal(modalPageModulets, context, (username, password) => {
+
         // Receive data from the modal page. e.g. username & password
         alert(`Username: ${username} : Password: ${password}`);
     }, fullscreen);
