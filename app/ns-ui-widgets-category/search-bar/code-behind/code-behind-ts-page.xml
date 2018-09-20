@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+      <ActionBar title="Dynamic Creation"/>
+    </Page.actionBar>
+
+    <!-- >> creating-search-bar-xml -->
+    <StackLayout id="stackLayoutId">
+		<Label text="{{ 'Result(text): ' + sbResult}}" textWrap="true" />
+        
+    </StackLayout>
+    <!-- << creating-search-bar-xml -->
+</Page>

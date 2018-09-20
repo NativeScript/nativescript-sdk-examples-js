@@ -1,0 +1,62 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Get"/>
+	</Page.actionBar>
+    <StackLayout>
+        <ScrollView>
+            <GridLayout rows="50, auto, 50, auto, auto, auto, auto, 50, auto, 50, auto, 50, auto, auto, auto, 50, auto, 50, auto, auto, auto, auto, 50, auto, auto, auto, auto" columns="*, 2*">
+                <Button row="0" col="0" colSpan="2" text="{{ getStringResultButton }}" class="btn btn-outline btn-active" id="getString" tap="onButtonTap"/>
+                <TextView row="1" col="0" colSpan="2" text="{{ getStringResult }}" editable="false" visibility="{{ getStringResultVisible ? 'visible' : 'collapsed' }}"/>
+                
+                <Button row="2" col="0" colSpan="2" text="{{ getJSONResultButton }}" class="btn btn-outline btn-active" id="getJSON" tap="onButtonTap"/>
+                <Label class="p-15" row="3" col="0" text="Host" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="4" col="0" text="User-Agent" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="5" col="0" text="Origin" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="6" col="0" text="Url" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Label class="p-15" row="3" col="1" text="{{ host }}" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="4" col="1" text="{{ userAgent }}" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="5" col="1" text="{{ origin }}" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="6" col="1" text="{{ url }}" textWrap="true" visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}"/>
+                
+                <Button row="7" col="0" colSpan="2" text="{{ getImageResultButton }}" class="btn btn-outline btn-active" id="getImage" tap="onButtonTap"/>
+                <Image row="8" col="0" colSpan="2" width="{{ imageWidth }}" height="{{ imageHeight }}" src="{{ getImageResult }}" stretch="none" visibility="{{ getImageResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Button row="9" col="0" colSpan="2"   text="{{ statusCodeResultButton }}" class="btn btn-outline btn-active" id="statusCode" tap="onButtonTap"/>
+                <Label row="10" col="0" colSpan="2" text="{{ 'The returned response status code is: ' + statusCodeResult }}" textWrap="true" visibility="{{ statusCodeResultVisible ? 'visible' : 'collapsed' }}"/>
+                
+                <Button row="11" col="0" colSpan="2"   text="{{ responseHeadersResultButton }}" class="btn btn-outline btn-active" id="responseHeaders" tap="onButtonTap"/>
+                <Label class="p-15" row="12" col="0" text="Content-Type" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="13" col="0" text="Date" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="14" col="0" text="Server" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                
+                <Label class="p-15" row="12" col="1" text="{{ contentType }}" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="13" col="1" text="{{ date }}" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="14" col="1" text="{{ server }}" textWrap="true" visibility="{{ responseHeadersResultVisible ? 'visible' : 'collapsed' }}"/>
+                
+                <Button row="15" col="0" colSpan="2" text="{{ responseContentResultButton }}" class="btn btn-outline btn-active" id="responseContent" tap="onButtonTap"/>
+                <TextView row="16" col="0" colSpan="2" text="{{ responseContentResult }}" editable="false" visibility="{{ responseContentResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Button row="17" col="0" colSpan="2" text="{{ getFileResultButton }}" class="btn btn-outline btn-active" id="getFile" tap="onButtonTap"/>
+                <Label class="p-15" row="18" col="0" text="Name" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="19" col="0" text="Extension" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="20" col="0" text="Path" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Label class="p-15" row="18" col="1" text="{{ name }}" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="19" col="1" text="{{ extension }}" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="20" col="1" text="{{ path }}" textWrap="true" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Image row="21" col="0" colSpan="2" width="{{ getFileImageWidth }}" height="{{ getFileImageHeight }}" src="{{ getFileResult }}" stretch="none" visibility="{{ getFileResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Button row="22" col="0" colSpan="2" text="{{ getFileWithPathResultButton }}" class="btn btn-outline btn-active" id="getFileWithPath" tap="onButtonTap"/>
+                <Label class="p-15" row="23" col="0" text="Name" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="24" col="0" text="Extension" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="25" col="0" text="Path" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+
+                <Label class="p-15" row="23" col="1" text="{{ name_get_file_with_path }}" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="24" col="1" text="{{ extension_get_file_with_path }}" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Label class="p-15" row="25" col="1" text="{{ path_get_file_with_path }}" textWrap="true" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+                <Image row="26" col="0" colSpan="2" width="{{ getFileWithPathImageWidth }}" height="{{ getFileWithPathHeight }}" src="{{ getFileWithPathResult }}" stretch="none" visibility="{{ getFileWithPathResultVisible ? 'visible' : 'collapsed' }}"/>
+            </GridLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>
