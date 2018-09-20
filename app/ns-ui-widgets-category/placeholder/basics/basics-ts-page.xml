@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+	<!-- >> placeholder-xml -->
+	<StackLayout>
+		<Placeholder creatingView="creatingView" />
+	</StackLayout>
+	<!-- << placeholder-xml -->
+</Page>

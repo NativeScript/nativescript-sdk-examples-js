@@ -53,6 +53,7 @@
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.2.1",
     "tar.gz": "^1.0.7",
+    "tns-platform-declarations": "4.2.1",
     "nativescript-dev-typescript": "~0.7.0",
     "tslint": "^5.4.2",
     "typescript": "~2.7.2",
