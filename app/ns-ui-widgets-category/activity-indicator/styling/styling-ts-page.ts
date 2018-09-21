@@ -6,13 +6,13 @@ function onNavigatingTo(args) {
     const vm = new Observable();
     vm.set("isLoading", true);
 
-    // >> large-ios-indicator
+    // >> large-ios-indicator-ts
     if (isIOS) {
         const indicator = page.getViewById("myIndicator");
         // accessing the native iOS API https://developer.apple.com/documentation/uikit/uiactivityindicatorviewstyle
         indicator.ios.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
     }
-    // << large-ios-indicator
+    // << large-ios-indicator-ts
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;

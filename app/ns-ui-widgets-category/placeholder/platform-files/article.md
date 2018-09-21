@@ -8,4 +8,4 @@ The example shows how to define the native widget via `Placeholder`, while using
 
 * <file name>.**ios**.js`
 <snippet id='placeholder-code-ios'/>
-<snippet id='placeholder-code-ios-ts'/>
+<snippet id='placeholder-code-android-ts'/>
