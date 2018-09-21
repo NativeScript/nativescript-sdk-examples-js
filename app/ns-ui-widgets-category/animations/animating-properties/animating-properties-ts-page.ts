@@ -1,21 +1,19 @@
-// >> animation-curve-imports
-// AnimationCurveEnum: ease, easeIn, easeInOut, easeOut, linear, spring
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
-// << animation-curve-imports
-const Animation = require("tns-core-modules/ui/animation").Animation;
-const Color = require("tns-core-modules/color").Color;
-let animation;
-let myView;
+// >> animation-curve-imports-ts
+// AnimationCurve enumeration: ease, easeIn, easeInOut, easeOut, linear, spring
+import { AnimationCurve } from "tns-core-modules/ui/enums";
+import { Animation, AnimationDefinition } from "tns-core-modules/ui/animation";
+import { Color } from "tns-core-modules/color";
+// << animation-curve-imports-ts
+import { View } from "tns-core-modules/ui/core/view";
+let animation: Animation;
 
-function onLoaded(args) {
-    const page = args.object;
-    myView = page.getViewById("lbl");
-}
-exports.onLoaded = onLoaded;
+export function animate(args) {
+    let button = args.object;
+    let page =  button.page;
+    let view = <View>page.getViewById("lbl");
 
-function animate(args) {
-    // >> animation-properties
-    myView.animate({
+    // >> animation-properties-ts
+    view.animate({
         backgroundColor: new Color("#414b7d"),
         curve: AnimationCurve.easeOut,
         delay: 300,
@@ -36,16 +34,15 @@ function animate(args) {
     }).catch((e) => {
         console.log(e.message);
     });
-    // << animation-properties
+    // << animation-properties-ts
 }
-exports.animate = animate;
 
-function animateTarget(args) {
-    // >> animation-target
-    const myView = args.object;
+export function animateTarget(args) {
+    // >> animation-target-ts
+    const view = args.object;
 
-    const animationDefinition = {
-        target: myView, // provide the view to animate
+    const animationDefinition: AnimationDefinition = {
+        target: view, // provide the view to animate
         curve: AnimationCurve.easeOut,
         duration: 1000,
         scale: {
@@ -66,28 +63,26 @@ function animateTarget(args) {
         }).catch((e) => {
             console.log(e.message);
         });
-    // << animation-target
+    // << animation-target-ts
 }
-exports.animateTarget = animateTarget;
 
-function cancelAnimation() {
-    // >> animation-cancel
+export function cancelAnimation() {
+    // >> animation-cancel-ts
     animation.cancel();
-    // << animation-cancel
+    // << animation-cancel-ts
 }
 
-function demonstrateSimpleAnimations(args) {
+export function demonstrateSimpleAnimations(args) {
     const view = args.object;
-
-    // >> animating-background-color
+    // >> animating-background-color-ts
     view.backgroundColor = new Color("red");
     view.animate({
         backgroundColor: new Color("green"),
         duration: 2000
     });
-    // << animating-background-color
+    // << animating-background-color-ts
 
-    // >> using-animation-curve-enum
+    // >> using-animation-curve-enum-ts
     view.animate({
         translate: {
             x: 0,
@@ -96,9 +91,9 @@ function demonstrateSimpleAnimations(args) {
         duration: 1000,
         curve: AnimationCurve.easeIn
     });
-    // << using-animation-curve-enum
+    // << using-animation-curve-enum-ts
 
-    // >> creating-cubic-bezier
+    // >> creating-cubic-bezier-ts
     view.animate({
         translate: {
             x: 0,
@@ -107,5 +102,5 @@ function demonstrateSimpleAnimations(args) {
         duration: 1000,
         curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
-    // << creating-cubic-bezier
+    // << creating-cubic-bezier-ts
 }
