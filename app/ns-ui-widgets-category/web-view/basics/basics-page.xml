@@ -3,7 +3,7 @@
 		<ActionBar title="Getting Started"/>
 	</Page.actionBar>
 
-    <!-- >> web-view-html -->
+    <!-- >> web-view-xml -->
     <GridLayout rows="75 * 50">
         <GridLayout row="0" rows="*" columns="50 * 50" class="form">
             <Button class="btn btn-primary btn-active icon" row="0" col="0" text="&#xea44;" tap="goBack"/>
@@ -14,5 +14,5 @@
         <WebView row="1" loaded="onWebViewLoaded" id="myWebView" src="{{ webViewSrc }}" />
         <Label row="2" text="{{ result }}" />
     </GridLayout>
-    <!-- << web-view-html -->
+    <!-- << web-view-xml -->
 </Page>

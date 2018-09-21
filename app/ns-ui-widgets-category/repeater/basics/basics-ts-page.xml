@@ -3,7 +3,6 @@
 		<ActionBar title="Getting Started"/>
 	</Page.actionBar>
     <GridLayout rows="50 50 * 50 50 *">
-        <!-- >> repeater-create-xml -->
         <Label row="0" text="Binding the Repeater items property to collection" textWrap="true" />
         <Button row="1" text="Add new item" tap="onTap" />
         <ScrollView row="2">
@@ -21,6 +20,5 @@
                 </Repeater.itemTemplate>
             </Repeater>
         </ScrollView>
-        <!-- << repeater-create-xml -->
     </GridLayout>
 </Page>

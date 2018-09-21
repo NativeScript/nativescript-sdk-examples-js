@@ -24,21 +24,11 @@
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label class="label" text="Keyboard types" row="8" col="0" textWrap="true"></Label>
-                    <!-- >> return-key-type-done-textfield-xml -->
                     <TextField class="input input-border" autocorrect="false" hint="done" text="" returnKeyType="done"/>
-                    <!-- << return-key-type-done-textfield-xml -->
-                    <!-- >> return-key-type-go-textfield-xml -->
                     <TextField class="input input-border" autocorrect="false" hint="go" text="" returnKeyType="go"/>
-                    <!-- << return-key-type-go-textfield-xml -->
-                    <!-- >> return-key-type-next-textfield-xml -->
                     <TextField class="input input-border" autocorrect="false" hint="next" text="" returnKeyType="next"/>
-                    <!-- << return-key-type-next-textfield-xml -->
-                    <!-- >> return-key-type-search-textfield-xml -->
                     <TextField class="input input-border" autocorrect="false" hint="search" text="" returnKeyType="search"/>
-                    <!-- << return-key-type-search-textfield-xml -->
-                    <!-- >> return-key-type-send-textfield-xml -->
                     <TextField class="input input-border" autocorrect="false" hint="send" text="" returnKeyType="send"/>
-                    <!-- << return-key-type-send-textfield-xml -->
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label class="label" text="Auto-correct" row="13" col="0" textWrap="true"></Label>
@@ -83,7 +73,6 @@
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label class="label" text="Date" textWrap="true"></Label>
-                    <!-- >> sample-ui-textfield-xml -->
                     <TextField hint="Enter date" 
                             text='{{testDate, testDate | dateConverter(dateFormat)}}' 
                             secure="false"
@@ -95,7 +84,6 @@
                             focus="onFocus" 
                             blur="onBlur" 
                             class="input input-border"/>
-                    <!-- << sample-ui-textfield-xml -->
                 </StackLayout>
             </StackLayout>        
         </ScrollView>

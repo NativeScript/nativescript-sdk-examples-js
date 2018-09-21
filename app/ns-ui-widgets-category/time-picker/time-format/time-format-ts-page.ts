@@ -1,9 +1,9 @@
-// >> timepicker-time-format-code
-const isAndroid = require("tns-core-modules/platform").isAndroid;
-const isIOS = require("tns-core-modules/platform").isIOS;
+// >> timepicker-time-format-code-ts
+import {isAndroid, isIOS} from "tns-core-modules/platform";
+import { TimePicker } from "tns-core-modules/ui/time-picker";
 
-function onPickerLoaded(args) {
-    const timePicker = args.object;
+export function onPickerLoaded(args) {
+    const timePicker: TimePicker = <TimePicker> args.object;
 
     if (isAndroid) {
         timePicker.android.setIs24HourView(java.lang.Boolean.TRUE);
@@ -18,5 +18,4 @@ function onPickerLoaded(args) {
         timePicker.minute = 59;
     }
 }
-exports.onPickerLoaded = onPickerLoaded;
-// << timepicker-time-format-code
+// << timepicker-time-format-code-ts

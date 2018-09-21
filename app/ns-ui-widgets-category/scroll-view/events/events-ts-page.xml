@@ -3,7 +3,6 @@
 		<ActionBar title="Events"/>
 	</Page.actionBar>
     <StackLayout>
-        <!-- >> scroll-event-html -->
         <StackLayout borderRadius="2" backgroundColor="#0099CC" class="m-b-5" height="50">
             <Label text="{{ status }}" class="h2 text-center" color="white"></Label>
         </StackLayout>
@@ -27,6 +26,5 @@
                 <Label class="h3 m-5" height="50" row="15" text="Title 15"/>
             </GridLayout>
         </ScrollView>
-        <!-- << scroll-event-html -->
     </StackLayout>
 </Page>

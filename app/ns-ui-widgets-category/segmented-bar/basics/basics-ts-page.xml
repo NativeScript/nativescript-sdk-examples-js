@@ -3,7 +3,6 @@
 		<ActionBar title="Getting Started"/>
 	</Page.actionBar>
     <GridLayout rows="auto *" >
-		<!-- >> segmented-bar-xml -->
 		<SegmentedBar row="0"  class="m-5" selectedIndex="{{ sbSelectedIndex }}">
 			<SegmentedBar.items>
 				<SegmentedBarItem title="Item 1" />
@@ -11,7 +10,6 @@
 				<SegmentedBarItem title="Item 3" />
 			</SegmentedBar.items>
 		</SegmentedBar>
-		<!-- << segmented-bar-xml -->
 		<Label row="1" text="{{ 'Selected item with index: ' + prop }}" textWrap="true" verticalAlign="center" class="h2 p-15 text-center"/>
 	</GridLayout>
 </Page>

@@ -3,11 +3,9 @@
 		<ActionBar title="WebView gestures"/>
 	</Page.actionBar>
 
-    <!-- >> web-gestures-xml -->
      <GridLayout rows="50 50 *">
         <Label row="0" text="{{ touchResult }}" textWrap="true" />
         <Label row="1" text="{{ panResult }}" textWrap="true" />
         <WebView row="2" loaded="onWebViewLoaded"  touch="webViewTouch" pan="webViewPan" src="{{ webViewSrc }}" />
     </GridLayout>
-    <!-- << web-gestures-xml -->
 </Page>

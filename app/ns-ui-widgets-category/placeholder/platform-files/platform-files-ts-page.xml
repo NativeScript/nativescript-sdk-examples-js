@@ -2,9 +2,7 @@
     <Page.actionBar>
 		<ActionBar title="Platform files"/>
 	</Page.actionBar>
-	<!-- >> placeholder-platform-xml -->
 	<StackLayout>
 		<Placeholder creatingView="creatingView"/>
 	</StackLayout>
-	<!-- << placeholder-platform-xml -->
 </Page>

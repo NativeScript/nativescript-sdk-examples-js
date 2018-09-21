@@ -1,16 +1,17 @@
-const observableModule = require("tns-core-modules/data/observable");
-const dialogs = require("tns-core-modules/ui/dialogs");
-// >> text-field-binding-code
-function onNavigatingTo(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
+import {Observable, PropertyChangeData} from "tns-core-modules/data/observable";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Page } from "tns-core-modules/ui/page";
+// >> text-field-binding-code-ts
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
     vm.set("tfHint", "Enter text");
     vm.set("tfText", "");
     vm.set("tfResult", "");
     vm.set("secureState", false);
     vm.set("buttonText", "Enable TextField's secure");
     // handling TextField text change
-    vm.on(observableModule.Observable.propertyChangeEvent, (propertyChangeData) => {
+    vm.on(Observable.propertyChangeEvent, (propertyChangeData: PropertyChangeData) => {
         if (propertyChangeData.propertyName === "tfText") {
             vm.set("tfResult", propertyChangeData.value);
         }
@@ -18,8 +19,8 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 // changing TextField secure property value on button tap
-function textFieldSecureStateChange(args) {
-    const page = args.object.page;
+export function textFieldSecureStateChange(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
 
     const secureState = vm.get("secureState");
@@ -31,16 +32,12 @@ function textFieldSecureStateChange(args) {
     }
 }
 // displaying the TextField text in an Alert dialog
-function showText(args) {
-    const page = args.object.page;
+export function showText(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
     dialogs.alert(`Text: ${vm.get("tfText")}`)
     .then(() => {
         console.log("Dialog closed!");
     });
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.textFieldSecureStateChange = textFieldSecureStateChange;
-exports.showText = showText;
-// << text-field-binding-code
+// << text-field-binding-code-ts
