@@ -6,10 +6,10 @@ function onNavigatingTo(args) {
     vm.set("title", "Creating SideDrawer Button \nAction Bar Example");
     page.bindingContext = vm;
 }
+exports.onNavigatingTo = onNavigatingTo;
+
 function showSideDrawer(args) {
     console.log("Show SideDrawer tapped.");
     // Show sidedrawer ...
 }
-
-exports.onNavigatingTo = onNavigatingTo;
 exports.showSideDrawer = showSideDrawer;

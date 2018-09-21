@@ -1,17 +1,19 @@
 // >> action-bar-nav-btn-js
-const Observable = require("tns-core-modules/data/observable").Observable;
+const fromObject = require("tns-core-modules/data/observable").fromObject;
 
-function onNavigatingTo(args) {
+exports.onNavigatingTo = function(args) {
     const page = args.object;
-    const vm = new Observable();
-    vm.set("title", "Navigation Button \nAction Bar Example");
-    page.bindingContext = vm;
-}
-function onNavBtnTap() {
+    page.bindingContext = fromObject({
+        title: "ActionBar's Navigation Button demo"
+    });
+};
+
+exports.onNavBtnTap = function(args) {
     // This code will be called only in Android.
     console.log("Navigation button tapped!");
-}
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onNavBtnTap = onNavBtnTap;
+    const navigationButton = args.object;
+    const frame = navigationButton.page.frame;
+    frame.goBack();
+};
 // << action-bar-nav-btn-js

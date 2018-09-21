@@ -2,6 +2,7 @@ You can explicitly control the visibility of the `ActionBar` by setting the `act
 
 <snippet id='action-bar-hide-show-xml'/>
 <snippet id='action-bar-hide-show-js'/>
+<snippet id='action-bar-hide-show-ts'/>
 
 In **Android**, the application bar is visible by default and shows the name of the application as title. The navigation button is visible only when it is explicitly defined in the application.
 

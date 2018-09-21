@@ -1,0 +1,9 @@
+<Page actionBarHidden="{{ abHidden }}" xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="ActionBar"></ActionBar>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle"> 
+        <Button text="{{ abHidden ? 'Show ActionBar' : 'Hide ActionBar' }}" tap="onTap" textWrap="true" class="fa" />
+    </StackLayout>
+</Page>
