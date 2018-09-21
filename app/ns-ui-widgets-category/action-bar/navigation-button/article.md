@@ -2,6 +2,7 @@ The `NavigationButton` component is a common abstraction over the iOS back butto
 
 <snippet id='action-bar-nav-btn-xml'/>
 <snippet id='action-bar-nav-btn-js'/>
+<snippet id='action-bar-nav-btn-ts'/>
 
 ### iOS Specifics
 

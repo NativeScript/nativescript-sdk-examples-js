@@ -6,3 +6,4 @@ platforms/*
 dist/*
 scripts/*
 app/**/**/**/*-ts-*.js
+app/app.js

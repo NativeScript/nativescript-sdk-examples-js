@@ -1,22 +1,18 @@
 // >> items-actionbar-js
-const Observable = require("tns-core-modules/data/observable").Observable;
+const fromObject = require("tns-core-modules/data/observable").fromObject;
 
-function onNavigatingTo(args) {
+exports.onNavigatingTo = function(args) {
     const page = args.object;
-    const vm = new Observable();
-    vm.set("title", "Items \nAction Bar Example");
-    page.bindingContext = vm;
-}
+    page.bindingContext = fromObject({
+        title: "Items \n\nDemonstrating action items properties and position"
+    });
+};
 
-function onShare () {
+exports.onShare = function() {
     console.log("share tap");
-}
+};
 
-function onDelete () {
+exports.onDelete = function() {
     console.log("delete tap");
-}
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onShare = onShare;
-exports.onDelete = onDelete;
+};
 // << items-actionbar-js

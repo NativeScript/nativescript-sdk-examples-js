@@ -1,6 +1,5 @@
 // >> action-bar-hide-show-js
 const Observable = require("tns-core-modules/data/observable").Observable;
-
 let value = false;
 
 function onNavigatingTo(args) {
@@ -9,6 +8,7 @@ function onNavigatingTo(args) {
     vm.set("abHidden", value);
     page.bindingContext = vm;
 }
+exports.onNavigatingTo = onNavigatingTo;
 
 function onTap(args) {
     const page = args.object.page;
@@ -16,7 +16,5 @@ function onTap(args) {
     value = !value;
     vm.set("abHidden", value);
 }
-
-exports.onNavigatingTo = onNavigatingTo;
 exports.onTap = onTap;
 // << action-bar-hide-show-js

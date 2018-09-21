@@ -46,3 +46,6 @@ package-lock.json
 webpack.config.js
 e2e/reports
 test-results.xml
+
+# linter & formatters config files
+.prettierrc

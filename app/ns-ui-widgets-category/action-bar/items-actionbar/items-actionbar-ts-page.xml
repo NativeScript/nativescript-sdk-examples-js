@@ -1,5 +1,4 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> items-actionbar-xml -->
     <Page.actionBar>
 		<ActionBar title="Action Items">
             <ActionItem tap="onShare"
@@ -10,8 +9,6 @@
                 android.position="popup"></ActionItem>
         </ActionBar>
 	</Page.actionBar>
-    <!-- << items-actionbar-xml -->
-
     <StackLayout verticalAlignment="middle"> 
         <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
     </StackLayout>

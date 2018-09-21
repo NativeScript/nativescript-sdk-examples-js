@@ -1,0 +1,5 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+	<StackLayout verticalAlignment="middle">
+		<Label text="&#xff05a; Code-behind creation of ActionBar - See the source files for more details" textWrap="true" class="fa" />
+	</StackLayout>
+</Page>
