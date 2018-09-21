@@ -29,10 +29,6 @@ export function onPageLoaded(args) {
         sourceProperty: "username",
         targetProperty: "text"
     };
-<<<<<<< HEAD
-
-=======
->>>>>>> 31ceff7cdfbd228c5b4a2c98b23c3478e4b238ed
     const firstTextField = new TextField();
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);

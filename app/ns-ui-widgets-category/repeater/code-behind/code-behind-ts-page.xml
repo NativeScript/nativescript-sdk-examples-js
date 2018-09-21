@@ -7,7 +7,4 @@
 		    <Label text="{{ 'Result: ' + prResult}}" textWrap="true" />
         
     </StackLayout>
-<<<<<<< HEAD
-=======
 </Page>
->>>>>>> 31ceff7cdfbd228c5b4a2c98b23c3478e4b238ed

@@ -1,5 +1,6 @@
 import {Observable} from "tns-core-modules/data/observable";
 import {Page} from "tns-core-modules/ui/page";
+import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout"
 // >> progress-import
 import {Progress} from "tns-core-modules/ui/progress";
 // << progress-import
@@ -7,7 +8,7 @@ import {Progress} from "tns-core-modules/ui/progress";
 export function onPageLoaded(args) {
     const page:Page = <Page>args.object;
     const vm = new Observable();
-    const stackLayout = page.getViewById("stackLayoutId");
+    const stackLayout = <StackLayout> page.getViewById("stackLayoutId");
 
     vm.set("prResult", 0);
     // creating new Switch and binding the value property
@@ -18,7 +19,7 @@ export function onPageLoaded(args) {
     }, 300);
 
     progress.on("valueChange", (args) => {
-        vm.set("prResult", args.object.value);
+        vm.set("prResult", (<Progress>args.object).value);
     });
 
     stackLayout.addChild(progress);
