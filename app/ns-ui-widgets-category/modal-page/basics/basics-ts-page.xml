@@ -8,5 +8,9 @@
         <Button text="Open modal" tap="openModal" textWrap="true" />
         
     </GridLayout>
+<<<<<<< HEAD
 </Page>
 
+=======
+</Page>
+>>>>>>> 31ceff7cdfbd228c5b4a2c98b23c3478e4b238ed

@@ -7,4 +7,8 @@
         <Label text="Modal page with ActionBar" style="text-align:center;" textWrap="true" />
         <Button text="Close Modal" tap="onCloseModal"/>
     </StackLayout>
+<<<<<<< HEAD
 </Page>
+=======
+</Page>
+>>>>>>> 31ceff7cdfbd228c5b4a2c98b23c3478e4b238ed
