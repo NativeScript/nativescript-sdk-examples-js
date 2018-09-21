@@ -24,7 +24,4 @@ export function onLabelLoaded(args) {
     label.borderColor = new Color("orangered");
     label.borderRadius = 10;
     // << border-radius-code-ts
-<<<<<<< HEAD
-=======
-};
->>>>>>> 31ceff7cdfbd228c5b4a2c98b23c3478e4b238ed
+}

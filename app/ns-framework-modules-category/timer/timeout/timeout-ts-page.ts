@@ -1,39 +1,37 @@
-// const Observable = require("tns-core-modules/data/observable").Observable;
-// const Color = require("tns-core-modules/color").Color;
+import {Observable} from "tns-core-modules/data/observable";
+import {Color} from "tns-core-modules/color";
+import {Page} from "tns-core-modules/ui/page";
+import {Button} from "tns-core-modules/ui/button";
 
-// let counter = 1;
-// function onNavigatingTo(args) {
-//     const page = args.object;
-//     const vm = new Observable();
+let counter = 1;
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
 
-//     vm.set("counter", counter);
-//     page.bindingContext = vm;
-// }
+    vm.set("counter", counter);
+    page.bindingContext = vm;
+}
 
-// function increase(args) {
-//     const button = args.object;
-//     const vm = button.page.bindingContext;
-//     button.backgroundColor = new Color("#3078FE");
+export function increase(args) {
+    const button: Button = <Button> args.object;
+    const vm = button.page.bindingContext;
+    button.backgroundColor = new Color("#3078FE");
 
-//     setTimeout(() => {
-//         vm.set("counter", counter++);
-//         button.backgroundColor = new Color("#30BCFF");
-//     }, 1000);
-// }
+    setTimeout(() => {
+        vm.set("counter", counter++);
+        button.backgroundColor = new Color("#30BCFF");
+    }, 1000);
+}
 
-// function decrease(args) {
-//     const button = args.object;
-//     const vm = button.page.bindingContext;
-//     button.backgroundColor = new Color("#3078FE");
+export function decrease(args) {
+    const button: Button = <Button> args.object;
+    const vm = button.page.bindingContext;
+    button.backgroundColor = new Color("#3078FE");
 
-//     // >> settimeout-timer-code
-//     setTimeout(() => {
-//         vm.set("counter", counter--);
-//         button.backgroundColor = new Color("#30BCFF");
-//     }, 1000);
-//     // << settimeout-timer-code
-// }
-
-// exports.onNavigatingTo = onNavigatingTo;
-// exports.increase = increase;
-// exports.decrease = decrease;
+    // >> settimeout-timer-code-ts
+    setTimeout(() => {
+        vm.set("counter", counter--);
+        button.backgroundColor = new Color("#30BCFF");
+    }, 1000);
+    // << settimeout-timer-code-ts
+}
