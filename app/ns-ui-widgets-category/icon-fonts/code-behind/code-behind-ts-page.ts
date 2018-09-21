@@ -1,7 +1,8 @@
-const Observable = require("data/observable").Observable;
-// >> icon-font-code-behind-code
-function onPageLoaded(args) {
-    const page = args.object;
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+// >> icon-font-code-behind-code-ts
+export function onPageLoaded(args) {
+    const page: Page = <Page> args.object;
     const viewModel = new Observable();
     const glyphs = [];
     let charCode = 0xe903;
@@ -14,5 +15,4 @@ function onPageLoaded(args) {
     viewModel.set("glyphs", glyphs);
     page.bindingContext = viewModel;
 }
-exports.onPageLoaded = onPageLoaded;
-// << icon-font-code-behind-code
+// << icon-font-code-behind-code-ts

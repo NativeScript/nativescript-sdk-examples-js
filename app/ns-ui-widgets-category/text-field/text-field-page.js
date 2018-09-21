@@ -9,8 +9,7 @@ const navigationLinks = [
 const navigationLinksTsc = [
     new link("Basics", "ns-ui-widgets-category/text-field/basics/basics-ts-page"),
     new link("Binding", "ns-ui-widgets-category/text-field/binding/binding-ts-page"),
-    new link("Code Behind", "ns-ui-widgets-category/text-field/code-behind/code-behind-ts-page"),
-    new link("Keyboard Type", "ns-ui-widgets-category/text-field/keyboard-type/keyboard-type-ts-page")
+    new link("Code Behind", "ns-ui-widgets-category/text-field/code-behind/code-behind-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

@@ -3,7 +3,6 @@
 		<ActionBar title="Navigation" />
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
-		<!-- >> tab-view-navigation-xml -->
 		<TabView loaded="onLoaded" selectedIndex="{{tabSelectedIndex}}" selectedIndexChanged="onSelectedIndexChanged">
 			<TabViewItem title="Profile">
 				<StackLayout>
@@ -24,6 +23,5 @@
 				</StackLayout>
 			</TabViewItem>
 		</TabView>
-		<!-- << tab-view-navigation-xml -->
 	</GridLayout>
 </Page>

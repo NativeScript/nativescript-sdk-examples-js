@@ -3,10 +3,8 @@
 		<ActionBar title="Dynamic Creation"/>
 	</Page.actionBar>
 
-    <!-- >> creating-repeater-xml -->
     <StackLayout id="stackLayoutId">
 		    <Label text="{{ 'Result: ' + prResult}}" textWrap="true" />
         
     </StackLayout>
-    <!-- << creating-repeater-xml -->
 </Page>

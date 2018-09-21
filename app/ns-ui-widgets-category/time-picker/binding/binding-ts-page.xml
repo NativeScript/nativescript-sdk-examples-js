@@ -10,7 +10,6 @@
         <Label text="{{ 'Min minute: ' + tpMinMinute }}" row="1" col="1" textWrap="true" />
         <Label text="{{ 'minuteInterval: ' + tpminuteInterval }}" row="2" col="0" colSpan="2" textWrap="true" />
         <Label text="{{ 'Time result: ' + timeResult }}" row="3" col="0" colSpan="2" textWrap="true" fontWeight="bold"/>
-        <!-- >> binding-timepicker-xml -->
         <TimePicker loaded="onPickerLoaded" 
                     hour="{{ tphour }}" minute="{{ tpminute }}" 
                     minuteInterval="{{ tpminuteInterval }}"
@@ -18,6 +17,5 @@
                     minHour="{{ tpMinHour }}" minMinute="{{ tpMinMinute }}" 
                     verticalAlignment="center" row="4" col="0" colSpan="2" class="m-15">
         </TimePicker>
-        <!-- << binding-timepicker-xml -->
     </GridLayout>
 </Page>

@@ -1,57 +1,51 @@
-// >> web-view-src-local-file
-const Observable = require("tns-core-modules/data/observable").Observable;
-const webViewModule = require("tns-core-modules/ui/web-view");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var observable_1 = require("tns-core-modules/data/observable");
+var web_view_1 = require("tns-core-modules/ui/web-view");
 function onNavigatingTo(args) {
-    const page = args.object;
-    const vm = new Observable();
-    // loading the WebView source while providing a HTML code
+    var page = args.object;
+    var vm = new observable_1.Observable();
     vm.set("firstWebViewSRC", "<!DOCTYPE html><html><head><title>MyTitle</title><meta charset='utf-8' /></head><body><span style='color:#0099CC; text-align: center;'>First WebView</span></body></html>");
     vm.set("resultFirstWebView", "");
-    // loading the WebView source from a local file
     vm.set("secondWebViewSRC", "~/ns-ui-widgets-category/web-view/source-load/test.html");
     vm.set("resultSecondWebView", "");
     page.bindingContext = vm;
 }
-
+exports.onNavigatingTo = onNavigatingTo;
 function onFirstWebViewLoaded(webargs) {
-    const page = webargs.object.page;
-    const vm = page.bindingContext;
-    const webview = webargs.object;
+    var page = webargs.object.page;
+    var vm = page.bindingContext;
+    var webview = webargs.object;
     vm.set("resultFirstWebView", "First WebView is still loading...");
-    // handling WebView load finish event
-    webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
-        let message = "";
+    webview.on(web_view_1.WebView.loadFinishedEvent, function (args) {
+        var message = "";
         if (!args.error) {
-            message = `First WebView finished loading of ${args.url}`;
-        } else {
-            message = `Error loading first WebView ${args.url} : ${args.error}`;
+            message = "First WebView finished loading of " + args.url;
         }
-
+        else {
+            message = "Error loading first WebView " + args.url + " : " + args.error;
+        }
         vm.set("resultFirstWebView", message);
         console.log("First WebView message - ", message);
     });
 }
-
+exports.onFirstWebViewLoaded = onFirstWebViewLoaded;
 function onSecondWebViewLoaded(webargs) {
-    const page = webargs.object.page;
-    const vm = page.bindingContext;
-    const webview = webargs.object;
+    var page = webargs.object.page;
+    var vm = page.bindingContext;
+    var webview = webargs.object;
     vm.set("resultSecondWebView", "Second WebView is still loading...");
-
-    webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
-        let message = "";
+    webview.on(web_view_1.WebView.loadFinishedEvent, function (args) {
+        var message = "";
         if (!args.error) {
-            message = `Second WebView finished loading of ${args.url}`;
-        } else {
-            message = `Error loading second WebView  ${args.url} : ${args.error}`;
+            message = "Second WebView finished loading of " + args.url;
         }
-
+        else {
+            message = "Error loading second WebView  " + args.url + " : " + args.error;
+        }
         vm.set("resultSecondWebView", message);
         console.log("Second WebView message - ", message);
     });
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onFirstWebViewLoaded = onFirstWebViewLoaded;
 exports.onSecondWebViewLoaded = onSecondWebViewLoaded;
-// << web-view-src-local-file
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic291cmNlLWxvYWQtdHMtcGFnZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInNvdXJjZS1sb2FkLXRzLXBhZ2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSwrREFBNEQ7QUFDNUQseURBQW9FO0FBRXBFLHdCQUErQixJQUFJO0lBQy9CLElBQU0sSUFBSSxHQUFnQixJQUFJLENBQUMsTUFBTSxDQUFDO0lBQ3RDLElBQU0sRUFBRSxHQUFHLElBQUksdUJBQVUsRUFBRSxDQUFDO0lBRTVCLEVBQUUsQ0FBQyxHQUFHLENBQUMsaUJBQWlCLEVBQUUsMktBQTJLLENBQUMsQ0FBQztJQUN2TSxFQUFFLENBQUMsR0FBRyxDQUFDLG9CQUFvQixFQUFFLEVBQUUsQ0FBQyxDQUFDO0lBRWpDLEVBQUUsQ0FBQyxHQUFHLENBQUMsa0JBQWtCLEVBQUUseURBQXlELENBQUMsQ0FBQztJQUN0RixFQUFFLENBQUMsR0FBRyxDQUFDLHFCQUFxQixFQUFFLEVBQUUsQ0FBQyxDQUFDO0lBQ2xDLElBQUksQ0FBQyxjQUFjLEdBQUcsRUFBRSxDQUFDO0FBQzdCLENBQUM7QUFWRCx3Q0FVQztBQUVELDhCQUFxQyxPQUFPO0lBQ3hDLElBQU0sSUFBSSxHQUFnQixPQUFPLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQztJQUM5QyxJQUFNLEVBQUUsR0FBRyxJQUFJLENBQUMsY0FBYyxDQUFDO0lBQy9CLElBQU0sT0FBTyxHQUFzQixPQUFPLENBQUMsTUFBTSxDQUFDO0lBQ2xELEVBQUUsQ0FBQyxHQUFHLENBQUMsb0JBQW9CLEVBQUUsbUNBQW1DLENBQUMsQ0FBQztJQUVsRSxPQUFPLENBQUMsRUFBRSxDQUFDLGtCQUFPLENBQUMsaUJBQWlCLEVBQUUsVUFBQyxJQUFtQjtRQUN0RCxJQUFJLE9BQU8sR0FBRyxFQUFFLENBQUM7UUFDakIsRUFBRSxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQztZQUNkLE9BQU8sR0FBRyx1Q0FBcUMsSUFBSSxDQUFDLEdBQUssQ0FBQztRQUM5RCxDQUFDO1FBQUMsSUFBSSxDQUFDLENBQUM7WUFDSixPQUFPLEdBQUcsaUNBQStCLElBQUksQ0FBQyxHQUFHLFdBQU0sSUFBSSxDQUFDLEtBQU8sQ0FBQztRQUN4RSxDQUFDO1FBRUQsRUFBRSxDQUFDLEdBQUcsQ0FBQyxvQkFBb0IsRUFBRSxPQUFPLENBQUMsQ0FBQztRQUN0QyxPQUFPLENBQUMsR0FBRyxDQUFDLDBCQUEwQixFQUFFLE9BQU8sQ0FBQyxDQUFDO0lBQ3JELENBQUMsQ0FBQyxDQUFDO0FBQ1AsQ0FBQztBQWpCRCxvREFpQkM7QUFFRCwrQkFBc0MsT0FBTztJQUN6QyxJQUFNLElBQUksR0FBZ0IsT0FBTyxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUM7SUFDOUMsSUFBTSxFQUFFLEdBQUcsSUFBSSxDQUFDLGNBQWMsQ0FBQztJQUMvQixJQUFNLE9BQU8sR0FBcUIsT0FBTyxDQUFDLE1BQU0sQ0FBQztJQUNqRCxFQUFFLENBQUMsR0FBRyxDQUFDLHFCQUFxQixFQUFFLG9DQUFvQyxDQUFDLENBQUM7SUFFcEUsT0FBTyxDQUFDLEVBQUUsQ0FBQyxrQkFBTyxDQUFDLGlCQUFpQixFQUFFLFVBQUMsSUFBbUI7UUFDdEQsSUFBSSxPQUFPLEdBQUcsRUFBRSxDQUFDO1FBQ2pCLEVBQUUsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUM7WUFDZCxPQUFPLEdBQUcsd0NBQXNDLElBQUksQ0FBQyxHQUFLLENBQUM7UUFDL0QsQ0FBQztRQUFDLElBQUksQ0FBQyxDQUFDO1lBQ0osT0FBTyxHQUFHLG1DQUFpQyxJQUFJLENBQUMsR0FBRyxXQUFNLElBQUksQ0FBQyxLQUFPLENBQUM7UUFDMUUsQ0FBQztRQUVELEVBQUUsQ0FBQyxHQUFHLENBQUMscUJBQXFCLEVBQUUsT0FBTyxDQUFDLENBQUM7UUFDdkMsT0FBTyxDQUFDLEdBQUcsQ0FBQywyQkFBMkIsRUFBRSxPQUFPLENBQUMsQ0FBQztJQUN0RCxDQUFDLENBQUMsQ0FBQztBQUNQLENBQUM7QUFqQkQsc0RBaUJDIiwic291cmNlc0NvbnRlbnQiOlsiLy8gPj4gd2ViLXZpZXctc3JjLWxvY2FsLWZpbGUtdHNcbmltcG9ydCB7T2JzZXJ2YWJsZX0gZnJvbSBcInRucy1jb3JlLW1vZHVsZXMvZGF0YS9vYnNlcnZhYmxlXCI7XG5pbXBvcnQge1dlYlZpZXcsIExvYWRFdmVudERhdGF9IGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL3VpL3dlYi12aWV3XCI7XG5pbXBvcnQge1BhZ2V9IGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL3VpL3BhZ2VcIjtcbmV4cG9ydCBmdW5jdGlvbiBvbk5hdmlnYXRpbmdUbyhhcmdzKSB7XG4gICAgY29uc3QgcGFnZTogUGFnZSA9IDxQYWdlPiBhcmdzLm9iamVjdDtcbiAgICBjb25zdCB2bSA9IG5ldyBPYnNlcnZhYmxlKCk7XG4gICAgLy8gbG9hZGluZyB0aGUgV2ViVmlldyBzb3VyY2Ugd2hpbGUgcHJvdmlkaW5nIGEgSFRNTCBjb2RlXG4gICAgdm0uc2V0KFwiZmlyc3RXZWJWaWV3U1JDXCIsIFwiPCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PHRpdGxlPk15VGl0bGU8L3RpdGxlPjxtZXRhIGNoYXJzZXQ9J3V0Zi04JyAvPjwvaGVhZD48Ym9keT48c3BhbiBzdHlsZT0nY29sb3I6IzAwOTlDQzsgdGV4dC1hbGlnbjogY2VudGVyOyc+Rmlyc3QgV2ViVmlldzwvc3Bhbj48L2JvZHk+PC9odG1sPlwiKTtcbiAgICB2bS5zZXQoXCJyZXN1bHRGaXJzdFdlYlZpZXdcIiwgXCJcIik7XG4gICAgLy8gbG9hZGluZyB0aGUgV2ViVmlldyBzb3VyY2UgZnJvbSBhIGxvY2FsIGZpbGVcbiAgICB2bS5zZXQoXCJzZWNvbmRXZWJWaWV3U1JDXCIsIFwifi9ucy11aS13aWRnZXRzLWNhdGVnb3J5L3dlYi12aWV3L3NvdXJjZS1sb2FkL3Rlc3QuaHRtbFwiKTtcbiAgICB2bS5zZXQoXCJyZXN1bHRTZWNvbmRXZWJWaWV3XCIsIFwiXCIpO1xuICAgIHBhZ2UuYmluZGluZ0NvbnRleHQgPSB2bTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIG9uRmlyc3RXZWJWaWV3TG9hZGVkKHdlYmFyZ3MpIHtcbiAgICBjb25zdCBwYWdlOiBQYWdlID0gPFBhZ2U+IHdlYmFyZ3Mub2JqZWN0LnBhZ2U7XG4gICAgY29uc3Qgdm0gPSBwYWdlLmJpbmRpbmdDb250ZXh0O1xuICAgIGNvbnN0IHdlYnZpZXc6IFdlYlZpZXcgPSA8V2ViVmlldz4gd2ViYXJncy5vYmplY3Q7XG4gICAgdm0uc2V0KFwicmVzdWx0Rmlyc3RXZWJWaWV3XCIsIFwiRmlyc3QgV2ViVmlldyBpcyBzdGlsbCBsb2FkaW5nLi4uXCIpO1xuICAgIC8vIGhhbmRsaW5nIFdlYlZpZXcgbG9hZCBmaW5pc2ggZXZlbnRcbiAgICB3ZWJ2aWV3Lm9uKFdlYlZpZXcubG9hZEZpbmlzaGVkRXZlbnQsIChhcmdzIDpMb2FkRXZlbnREYXRhKSA9PiB7XG4gICAgICAgIGxldCBtZXNzYWdlID0gXCJcIjtcbiAgICAgICAgaWYgKCFhcmdzLmVycm9yKSB7XG4gICAgICAgICAgICBtZXNzYWdlID0gYEZpcnN0IFdlYlZpZXcgZmluaXNoZWQgbG9hZGluZyBvZiAke2FyZ3MudXJsfWA7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICBtZXNzYWdlID0gYEVycm9yIGxvYWRpbmcgZmlyc3QgV2ViVmlldyAke2FyZ3MudXJsfSA6ICR7YXJncy5lcnJvcn1gO1xuICAgICAgICB9XG5cbiAgICAgICAgdm0uc2V0KFwicmVzdWx0Rmlyc3RXZWJWaWV3XCIsIG1lc3NhZ2UpO1xuICAgICAgICBjb25zb2xlLmxvZyhcIkZpcnN0IFdlYlZpZXcgbWVzc2FnZSAtIFwiLCBtZXNzYWdlKTtcbiAgICB9KTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIG9uU2Vjb25kV2ViVmlld0xvYWRlZCh3ZWJhcmdzKSB7XG4gICAgY29uc3QgcGFnZTogUGFnZSA9IDxQYWdlPiB3ZWJhcmdzLm9iamVjdC5wYWdlO1xuICAgIGNvbnN0IHZtID0gcGFnZS5iaW5kaW5nQ29udGV4dDtcbiAgICBjb25zdCB3ZWJ2aWV3OiBXZWJWaWV3ID0gPFdlYlZpZXc+d2ViYXJncy5vYmplY3Q7XG4gICAgdm0uc2V0KFwicmVzdWx0U2Vjb25kV2ViVmlld1wiLCBcIlNlY29uZCBXZWJWaWV3IGlzIHN0aWxsIGxvYWRpbmcuLi5cIik7XG5cbiAgICB3ZWJ2aWV3Lm9uKFdlYlZpZXcubG9hZEZpbmlzaGVkRXZlbnQsIChhcmdzOiBMb2FkRXZlbnREYXRhKSA9PiB7XG4gICAgICAgIGxldCBtZXNzYWdlID0gXCJcIjtcbiAgICAgICAgaWYgKCFhcmdzLmVycm9yKSB7XG4gICAgICAgICAgICBtZXNzYWdlID0gYFNlY29uZCBXZWJWaWV3IGZpbmlzaGVkIGxvYWRpbmcgb2YgJHthcmdzLnVybH1gO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgbWVzc2FnZSA9IGBFcnJvciBsb2FkaW5nIHNlY29uZCBXZWJWaWV3ICAke2FyZ3MudXJsfSA6ICR7YXJncy5lcnJvcn1gO1xuICAgICAgICB9XG5cbiAgICAgICAgdm0uc2V0KFwicmVzdWx0U2Vjb25kV2ViVmlld1wiLCBtZXNzYWdlKTtcbiAgICAgICAgY29uc29sZS5sb2coXCJTZWNvbmQgV2ViVmlldyBtZXNzYWdlIC0gXCIsIG1lc3NhZ2UpO1xuICAgIH0pO1xufVxuLy8gPDwgd2ViLXZpZXctc3JjLWxvY2FsLWZpbGUtdHNcbiJdfQ==

@@ -1,7 +1,9 @@
-const observableModule = require("tns-core-modules/data/observable");
+import {fromObject} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import {TextField} from "tns-core-modules/ui/text-field";
 // setting up the format for the TextField text
-function onNavigatingTo(args) {
-    const page = args.object;
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     const dateConverter = {
         toView(value, format) {
             let result = format;
@@ -26,24 +28,24 @@ function onNavigatingTo(args) {
         }
     };
 
-    const vm = observableModule.fromObject({
+    const vm = fromObject({
         dateConverter,
         dateFormat: "DD/MM/YYYY",
         testDate: new Date()
     });
     page.bindingContext = vm;
 }
-// >> textfield-handle-submit-event
-function firstTfLoaded(args) {
-    const firstTextfield = args.object;
+// >> textfield-handle-submit-event-ts
+export function firstTfLoaded(args) {
+    const firstTextfield: TextField = <TextField> args.object;
     setTimeout(() => {
         firstTextfield.focus(); // Shows the soft input method, ususally a soft keyboard.
     }, 100);
 }
 
-function onReturnPress(args) {
+export function onReturnPress(args) {
     // returnPress event will be triggered when user submits a value
-    const textField = args.object;
+    const textField: TextField = <TextField> args.object;
     // Gets or sets the placeholder text.
     console.log(textField.hint);
     // Gets or sets the input text.
@@ -72,22 +74,15 @@ function onReturnPress(args) {
     }, 100);
 }
 
-function onFocus(args) {
+export function onFocus(args) {
     // focus event will be triggered when the users enters the TextField
     console.log("onFocus event");
 }
 
-function onBlur(args) {
+export function onBlur(args) {
     // blur event will be triggered when the user leaves the TextField
-    const textField = args.object;
+    const textField:TextField = <TextField> args.object;
     textField.dismissSoftInput();
     console.log("onBlur event");
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.firstTfLoaded = firstTfLoaded;
-exports.firstTfLoaded = firstTfLoaded;
-exports.onReturnPress = onReturnPress;
-exports.onFocus = onFocus;
-exports.onBlur = onBlur;
-// << textfield-handle-submit-event
+// << textfield-handle-submit-event-ts

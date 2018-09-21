@@ -1,10 +1,11 @@
-// >> main-page-js-action-bar
-const modalPage = "./ns-ui-widgets-category/modal-page/custom-actionbar/modal-root";
+// >> main-page-ts-action-bar
+import {Page} from "tns-core-modules/ui/page";
 
-function openModal(args) {
-    const mainpage = args.object.page;
+const modalPage = "ns-ui-widgets-category/modal-page/custom-actionbar/modal-ts-root";
+
+export function openModal(args) {
+    const mainpage: Page = <Page> args.object.page;
     const context = "some context";
     mainpage.showModal(modalPage, context, () => {}, true);
 }
-exports.openModal = openModal;
-// << main-page-js-action-bar
+// << main-page-ts-action-bar

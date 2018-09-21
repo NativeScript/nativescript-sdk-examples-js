@@ -1,20 +1,18 @@
-
-const Observable = require("tns-core-modules/data/observable").Observable;
-const TimePicker = require("tns-core-modules/ui/time-picker").TimePicker;
-
-function onNavigatingTo(args) {
-    const page = args.object;
+import {Observable, EventData} from "tns-core-modules/data/observable";
+import {TimePicker} from "tns-core-modules/ui/time-picker";
+import { Page } from "tns-core-modules/ui/page";
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     const vm = new Observable();
     vm.set("hourResult", "Hour: ...");
     vm.set("minuteResult", "Minute: ...");
     vm.set("timeResult", "Time: ...");
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-// >> time-picker-configure-code
-function onPickerLoaded(args) {
-    const timePicker = args.object;
+// >> time-picker-configure-code-ts
+export function onPickerLoaded(args) {
+    const timePicker: TimePicker = <TimePicker> args.object;
 
     // Configurable properties of TimePicker
     timePicker.hour = 10;
@@ -27,13 +25,13 @@ function onPickerLoaded(args) {
     // timePicker.time = new Date();
 
     // handling 'timeChange' event via code behind
-    timePicker.on("timeChange", (args) => {
+    timePicker.on("timeChange", (args: any) => {
         // args is of type PropertyChangeData
         console.log("Picked TIME: ", args.value);
         console.log("Previous TIME: ", args.oldValue);
 
         // >> (hide)
-        const page = args.object.page;
+        const page: Page = <Page> args.object.page;
         const vm = page.bindingContext;
         vm.set("hourResult", `Hour: ${args.object.hour}`);
         vm.set("minuteResult", `Minute: ${args.object.minute}`);
@@ -41,5 +39,4 @@ function onPickerLoaded(args) {
         // << (hide)
     });
 }
-exports.onPickerLoaded = onPickerLoaded;
-// << time-picker-configure-code
+// << time-picker-configure-code-ts

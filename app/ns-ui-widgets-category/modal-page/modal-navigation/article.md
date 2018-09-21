@@ -3,11 +3,15 @@ With NativeScript version 4.0.0 and above, we can navigate within a modal page. 
 Main page
 <snippet id='main-page-xml-navigation' />
 <snippet id='main-page-js-navigation' />
+<snippet id='main-page-ts-navigation' />
 Modal root
 <snippet id='modal-root-xml-navigation' />
+<snippet id='modal-root-xml-navigation-ts' />
 First modal page
 <snippet id='first-modal-page-xml-navigation' />
 <snippet id='first-modal-page-js-navigation' />
+<snippet id='first-modal-page-ts-navigation' />
 Second modal page
 <snippet id='second-modal-page-xml-navigation' />
 <snippet id='second-modal-page-js-navigation' />
+<snippet id='second-modal-page-ts-navigation' />

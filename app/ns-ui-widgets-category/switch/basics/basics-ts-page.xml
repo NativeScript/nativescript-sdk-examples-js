@@ -4,8 +4,6 @@
 	</Page.actionBar>
     <StackLayout class="m-15 text-center" width="80%" height="80%">
         <Label text="{{ 'Switch state: ' + secondSwitchState }}" textWrap="true" class="h2"/>
-        <!-- >> switch-basics-xml -->
         <Switch checked="true" isEnabled="true" id="my-switch"/>
-        <!-- << switch-basics-xml -->
     </StackLayout>
 </Page>

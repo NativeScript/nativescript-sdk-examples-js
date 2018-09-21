@@ -4,8 +4,6 @@
 	</Page.actionBar>
 
     <StackLayout class="m-20 p-10 text-center">
-        <!-- >> timepicker-time-format-xml -->
         <TimePicker loaded="onPickerLoaded"></TimePicker>
-        <!-- << timepicker-time-format-xml -->
     </StackLayout>
 </Page>

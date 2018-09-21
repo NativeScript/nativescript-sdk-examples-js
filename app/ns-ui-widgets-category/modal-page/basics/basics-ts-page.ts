@@ -1,14 +1,15 @@
-// >> main-page-js
-const modalPageModule = "./ns-ui-widgets-category/modal-page/basics/modal-page";
+// >> main-page-ts
+import {Button} from "tns-core-modules/ui/button";
 
-function openModal(args) {
-    const mainView = args.object;
+const modalPageModulets = "/ns-ui-widgets-category/modal-page/basics/modal-ts-page";
+
+export function openModal(args) {
+    const mainView: Button = <Button> args.object;
     const context = { username:"test_username", password:"test" };
     const fullscreen = true;
-    mainView.showModal(modalPageModule, context, (username, password) => {
+    mainView.showModal(modalPageModulets, context, (username, password) => {
         // Receive data from the modal page. e.g. username & password
         alert(`Username: ${username} : Password: ${password}`);
     }, fullscreen);
 }
-exports.openModal = openModal;
-// << main-page-js
+// << main-page-ts
