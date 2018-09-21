@@ -4,7 +4,6 @@
 	</Page.actionBar>
 
     <StackLayout class="form">
-		<!-- >> textfield-xml-binding -->
 		<Button text="{{ buttonText }}" class="btn btn-primary btn-active" tap="textFieldSecureStateChange"></Button>
 		<Button text="Show text" class="btn btn-outline btn-active" tap="showText"></Button>
 		<StackLayout class="input-field">
@@ -14,6 +13,5 @@
 			<TextField hint="{{ tfHint }}" text="{{ tfText }}" secure="{{ secureState }}"/>
 			
 		</StackLayout>
-		<!-- << textfield-xml-binding -->
 	</StackLayout>
 </Page>

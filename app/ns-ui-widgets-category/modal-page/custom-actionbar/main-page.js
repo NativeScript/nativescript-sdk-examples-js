@@ -1,5 +1,5 @@
 // >> main-page-js-action-bar
-const modalPage = "./ns-ui-widgets-category/modal-page/custom-actionbar/modal-root";
+const modalPage = "ns-ui-widgets-category/modal-page/custom-actionbar/modal-root";
 
 function openModal(args) {
     const mainpage = args.object.page;

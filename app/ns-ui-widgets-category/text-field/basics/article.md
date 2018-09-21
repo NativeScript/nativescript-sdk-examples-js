@@ -1,5 +1,3 @@
-<snippet id="textfield-require">
-
 # Return press, Focus, Blur Events 
 TextField provides multiple properties and several events for handling the user input and interaction.
 To submit a value use the `returnPress` event along with the [returnKeyType](#return-key-type) property.
@@ -8,8 +6,8 @@ To handle an interaction when the user leaves TextField use the `blur` event.
 To explicitly show and hide a keyboard, we can call the methods `focus` and `dismissSoftInput`.
 
 <snippet id='sample-ui-textfield-xml'/>
-
 <snippet id='textfield-handle-submit-event'/>
+<snippet id='textfield-handle-submit-event-ts'/>
 
 
 # Return Key Type

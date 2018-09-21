@@ -1,9 +1,12 @@
-// >> setting-url-webview
-const Observable = require("tns-core-modules/data/observable").Observable;
-const dialogs = require("tns-core-modules/ui/dialogs");
-const webViewModule = require("tns-core-modules/ui/web-view");
-function onNavigatingTo(args) {
-    const page = args.object;
+// >> setting-url-webview-ts
+import {Observable} from "tns-core-modules/data/observable";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+import {WebView, LoadEventData} from "tns-core-modules/ui/web-view";
+import { Page } from "tns-core-modules/ui/page";
+import { TextField } from "tns-core-modules/ui/text-field";
+
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     const vm = new Observable();
     vm.set("webViewSrc", "https://docs.nativescript.org/");
     vm.set("result", "");
@@ -11,14 +14,14 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 // handling WebView load finish event
-function onWebViewLoaded(webargs) {
-    const page = webargs.object.page;
+export function onWebViewLoaded(webargs) {
+    const page: Page = <Page> webargs.object.page;
     const vm = page.bindingContext;
-    const webview = webargs.object;
+    const webview: WebView = <WebView> webargs.object;
     vm.set("result", "WebView is still loading...");
     vm.set("enabled", false);
 
-    webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
+    webview.on(WebView.loadFinishedEvent, (args: LoadEventData) => {
         let message = "";
         if (!args.error) {
             message = `WebView finished loading of ${args.url}`;
@@ -31,20 +34,20 @@ function onWebViewLoaded(webargs) {
     });
 }
 // going to the previous page if such is available
-function goBack(args) {
-    const page = args.object.page;
+export function goBack(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
-    const webview = page.getViewById("myWebView");
+    const webview: WebView = <WebView> page.getViewById("myWebView");
     if (webview.canGoBack) {
         webview.goBack();
         vm.set("enabled", true);
     }
 }
 // going forward if a page is available
-function goForward(args) {
-    const page = args.object.page;
+export function goForward(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
-    const webview = page.getViewById("myWebView");
+    const webview: WebView = <WebView> page.getViewById("myWebView");
     if (webview.canGoForward) {
         webview.goForward();
     } else {
@@ -52,10 +55,10 @@ function goForward(args) {
     }
 }
 // changing WebView source
-function submit(args) {
-    const page = args.object.page;
+export function submit(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
-    const textField = args.object;
+    const textField: TextField = <TextField> args.object;
     const text = textField.text;
     vm.set("enabled", false);
     if (text.substring(0, 4) === "http") {
@@ -68,9 +71,4 @@ function submit(args) {
         });
     }
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onWebViewLoaded = onWebViewLoaded;
-exports.submit = submit;
-exports.goBack = goBack;
-exports.goForward = goForward;
-// << setting-url-webview
+// << setting-url-webview-ts

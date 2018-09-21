@@ -1,12 +1,14 @@
-const observableModule = require("tns-core-modules/data/observable");
-// >> textfield-require
-const textFieldModule = require("tns-core-modules/ui/text-field");
-// << textfield-require
-// >> creating-text-field-code
-function onPageLoaded(args) {
-    const page = args.object;
-    const vm = new observableModule.Observable();
-    const stackLayout = page.getViewById("stackLayoutId");
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+// >> textfield-import
+import {TextField} from "tns-core-modules/ui/text-field";
+// << textfield-import
+// >> creating-text-field-code-ts
+export function onPageLoaded(args) {
+    const page = <Page> args.object;
+    const vm = new Observable();
+    const stackLayout: StackLayout = <StackLayout>page.getViewById("stackLayoutId");
 
     vm.set("username", "john");
     vm.set("tfResult", "");
@@ -27,13 +29,13 @@ function onPageLoaded(args) {
         sourceProperty: "username",
         targetProperty: "text"
     };
-    const firstTextField = new textFieldModule.TextField();
+    const firstTextField = new TextField();
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener
     firstTextField.on("textChange", (args) => {
 
-        vm.set("tfResult", args.object.text);
+        vm.set("tfResult", (<TextField>args.object).text);
     });
 
 
@@ -42,7 +44,7 @@ function onPageLoaded(args) {
         sourceProperty: "secure",
         targetProperty: "secure"
     };
-    const secondTextField = new textFieldModule.TextField();
+    const secondTextField = new TextField();
     secondTextField.bind(secondOptions, vm);
 
     stackLayout.addChild(firstTextField);
@@ -50,6 +52,4 @@ function onPageLoaded(args) {
 
     page.bindingContext = vm;
 }
-
-exports.onPageLoaded = onPageLoaded;
-// << creating-text-field-code
+// << creating-text-field-code-ts

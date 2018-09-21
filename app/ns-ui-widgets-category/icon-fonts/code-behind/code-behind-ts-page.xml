@@ -2,7 +2,6 @@
     <Page.actionBar>
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
-    <!-- >> icon-font-code-behind-xml -->
     <GridLayout>
         <ListView class="icon list-group" items="{{ glyphs }}">
             <ListView.itemTemplate>
@@ -13,5 +12,4 @@
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>
-    <!-- << icon-font-code-behind-xml -->
 </Page>

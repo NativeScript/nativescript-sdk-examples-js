@@ -1,4 +1,3 @@
-<!-- >> modal-page-xml-action-bar -->
 <Page backgroundColor="green" showingModally="onShowingModally">
     <Page.actionBar>
         <ActionBar backgroundColor="red" title="Modal page" icon="">
@@ -9,4 +8,3 @@
         <Button text="Close Modal" tap="onCloseModal"/>
     </StackLayout>
 </Page>
-<!-- << modal-page-xml-action-bar -->

@@ -1,17 +1,19 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import {Observable} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page"
+import { WebView } from "tns-core-modules/ui/web-view/web-view";
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
-// >> webview-js-gestures
-function onNavigatingTo(args) {
-    const page = args.object;
+// >> webview-js-gestures-ts
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
     const vm = new Observable();
     vm.set("webViewSrc", secondUrl);
     vm.set("isItemVisible", true);
     page.bindingContext = vm;
 }
 
-function onLoadStarted(args) {
-    const page = args.object;
+export function onLoadStarted(args) {
+    const page: Page = <Page> args.object;
     const vm = page.bindingContext;
     vm.set("isItemVisible", true);
     let message;
@@ -37,8 +39,8 @@ function onLoadStarted(args) {
     console.log(message);
 
 }
-function onLoadFinished(args) {
-    const page = args.object;
+export function onLoadFinished(args) {
+    const page = (<Page> args.object);
     const vm = page.bindingContext;
     let message;
     if (!args.error) {
@@ -68,28 +70,21 @@ function onLoadFinished(args) {
     // << (hide)
 }
 
-function loadFirst(args) {
-    const page = args.object.page;
+export function loadFirst(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
     vm.set("webViewSrc", firstUrl);
 }
 
-function loadSecond(args) {
-    const page = args.object.page;
+export function loadSecond(args) {
+    const page: Page = <Page> args.object.page;
     const vm = page.bindingContext;
     vm.set("webViewSrc", secondUrl);
 }
 
-function onReload(args) {
-    const page = args.object.page;
-    webview = page.getViewById("webview");
+export function onReload(args) {
+    const page: Page = <Page> args.object.page;
+    const webview: WebView = <WebView> page.getViewById("webview");
     webview.reload();
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onLoadStarted = onLoadStarted;
-exports.onLoadFinished = onLoadFinished;
-exports.loadFirst = loadFirst;
-exports.loadSecond = loadSecond;
-exports.onReload = onReload;
-// << webview-js-gestures
+// << webview-js-gestures-ts

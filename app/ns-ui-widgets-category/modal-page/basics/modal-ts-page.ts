@@ -1,21 +1,20 @@
-// >> modal-page-js
-const observableModule = require("tns-core-modules/data/observable");
+// >> modal-page-ts
+import {fromObject} from "tns-core-modules/data/observable";
+import {Page} from "tns-core-modules/ui/page";
 let closeCallback;
 
-function onShownModally(args) {
+export function onShownModally(args) {
     const context = args.context;
     closeCallback = args.closeCallback;
-    const page = args.object;
-    page.bindingContext = observableModule.fromObject(context);
+    const page: Page = <Page> args.object;
+    page.bindingContext = fromObject(context);
 }
-exports.onShownModally = onShownModally;
 
-function onLoginButtonTap(args) {
-    const page = args.object.page;
+export function onLoginButtonTap(args) {
+    const page: Page = <Page> args.object.page;
     const bindingContext = page.bindingContext;
     const username = bindingContext.get("username");
     const password = bindingContext.get("password");
     closeCallback(username, password);
 }
-exports.onLoginButtonTap = onLoginButtonTap;
-// << modal-page-js
+// << modal-page-ts
