@@ -29,11 +29,8 @@ export function onPageLoaded(args) {
         sourceProperty: "username",
         targetProperty: "text"
     };
-<<<<<<< HEAD
+
     const firstTextField = new TextField();
-=======
-    const firstTextField = new textFieldModule.TextField();
->>>>>>> examples folders
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener

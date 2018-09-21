@@ -10,7 +10,6 @@
 				<SegmentedBarItem title="Item 3" />
 			</SegmentedBar.items>
 		</SegmentedBar>
-
 		<Label row="1" text="{{ 'Selected item with index: ' + prop }}" textWrap="true" verticalAlign="center" class="h2 p-15 text-center"/>
 	</GridLayout>
 </Page>

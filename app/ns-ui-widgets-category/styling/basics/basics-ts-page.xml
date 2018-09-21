@@ -6,6 +6,5 @@
         <!-- Using nativescript-theme plugin predefined CSS classes -->
         <!-- More at https://docs.nativescript.org/ui/theme -->
        <Label text="Sample label" class="h2 text-left m-16" textWrap="true" />
-
     </StackLayout>
 </Page>

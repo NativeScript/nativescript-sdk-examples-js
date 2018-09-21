@@ -3,7 +3,6 @@
 		<ActionBar title="SegmentedBar views"/>
 	</Page.actionBar>
     <GridLayout rows="auto *" >
-
 		<SegmentedBar row="0" loaded="sbLoaded" class="m-5" selectedIndex="{{ sbSelectedIndex }}">
 			<SegmentedBar.items>
 				<SegmentedBarItem title="Item 1" />

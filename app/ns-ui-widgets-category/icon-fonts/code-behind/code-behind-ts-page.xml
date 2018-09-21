@@ -12,5 +12,4 @@
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>
-
 </Page>
