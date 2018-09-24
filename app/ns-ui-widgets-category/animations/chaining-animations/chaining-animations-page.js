@@ -8,33 +8,28 @@ function onLoaded(args) {
     myView.animate({
         opacity: 0,
         duration: duration
-    })
-        .then(() => myView.animate({
+    }).then(() => myView.animate({
             opacity: 1,
             duration: duration
-        }))
-        .then(() => myView.animate({
+        })).then(() => myView.animate({
             translate: {
                 x: 200,
                 y: 200
             },
             duration: duration
-        }))
-        .then(() => myView.animate({
+        })).then(() => myView.animate({
             translate: {
                 x: 0,
                 y: 0
             },
             duration: duration
-        }))
-        .then(() => myView.animate({
+        })).then(() => myView.animate({
             scale: {
                 x: 5,
                 y: 5
             },
             duration: duration
-        }))
-        .then(() => myView.animate({
+        })).then(() => myView.animate({
             scale: {
                 x: 1,
                 y: 1
@@ -48,8 +43,7 @@ function onLoaded(args) {
         .then(() => myView.animate({
             rotate: 0,
             duration: duration
-        }))
-        .then(() => {
+        })).then(() => {
             console.log("Animation finished");
         }).catch((e) => {
             console.log(e.message);

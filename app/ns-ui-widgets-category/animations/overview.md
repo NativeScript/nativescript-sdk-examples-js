@@ -8,13 +8,7 @@ more information about CSS Animations vsm be found in this section, while the cu
 
 The following classes, interfaces and enums can be explicitly used in your applications.
 <snippet id='animation-import'/>
-```TypeScript
-// Full list of animating properties at https://docs.nativescript.org/api-reference/interfaces/_ui_animation_.animationdefinition
-import {
-    AnimationDefinition,
-    Pair // Pair: Defines a pair of values (horizontal and vertical) for translate and scale animations.
-} from "tns-core-modules/ui/animation");
-```
+<snippet id='animation-import-ts'/>
 
 <snippet id='animation-curve-imports'/>
 <snippet id='animations-imports'/>

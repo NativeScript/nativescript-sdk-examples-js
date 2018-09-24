@@ -1,0 +1,25 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+	<Page.actionBar>
+		<ActionBar title="Properties orignX and originY" />
+	</Page.actionBar>
+    <ScrollView>
+        <GridLayout rows="auto, *, *, *, *" columns="*, *" backgroundColor="white">
+            <Button row="0" col="0" colSpan="2" text="Animate" tap="animate" class="btn btn-primary btn-active" />
+            <GridLayout row="1" col="0" colSpan="2" id="myFirstView" automationText="myFirstView" width="400" height="40" >
+                <Label text="Default originX / originY (0.5)" horizontalAlignment="center"/>
+            </GridLayout>
+            <GridLayout row="2" col="0" colSpan="2" id="mySecondView" automationText="mySecondView" width="400" height="40" >
+                <Label text="originX = 1"  horizontalAlignment="right"/>
+            </GridLayout>
+            <GridLayout row="3" col="0" colSpan="2" id="myThirdView" automationText="myThirdView" width="400" height="40" >
+                <Label text="originX = 0"  horizontalAlignment="left"/>
+            </GridLayout>
+            <GridLayout row="4" col="0" id="myForthView" automationText="myForthView" width="100" height="300" >
+                <Label text="originY = 1" verticalAlignment="bottom"/>
+            </GridLayout>
+            <GridLayout row="4" col="1" id="myFifthView" automationText="myFifthView" width="100" height="300" >
+                <Label text="originY = 0" verticalAlignment="top"/>
+            </GridLayout>
+        </GridLayout>
+    </ScrollView>
+</Page>
