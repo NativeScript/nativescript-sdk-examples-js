@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+		<ActionBar title="Confirm"/>
+	</Page.actionBar>
+	    <StackLayout verticalAlignment="middle">
+        <Button text="Show Confirm Dialog" tap="showConfirmDialog" class="btn btn-primary btn-active"/>
+    </StackLayout>
+</Page>

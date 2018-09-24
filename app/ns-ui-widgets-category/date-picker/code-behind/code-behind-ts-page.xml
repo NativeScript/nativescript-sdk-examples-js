@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Code-Behind"/>
+	</Page.actionBar>
+    <StackLayout verticalAlignment="middle" loaded="onStackLoaded" />
+</Page>

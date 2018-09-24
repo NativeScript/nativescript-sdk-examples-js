@@ -4,6 +4,8 @@ with keys `title`, `message`, `okBUttonText`, and `cancelable`(Android only prop
 
 Alert with string message (Web browser style).
 <snippet id='dialog-alert-web'/>
+<snippet id='dialog-alert-web-ts'/>
 
 Alert with `AlertOptions` object.
 <snippet id='dialog-alert'/>
+<snippet id='dialog-alert-ts'/>
