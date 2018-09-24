@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-double-tap-xml -->
-        <Label text="Double Tap me!" doubleTap="onDoubleTap" textWrap="true"/>
+        <Label text="Double Tap me!" doubleTap="onDoubleTap" />
         <!-- << gest-double-tap-xml -->
     </StackLayout>
 </Page>

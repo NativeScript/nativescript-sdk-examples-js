@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-pan-xml -->
-        <Label text="Pan me!" pan="onPan" textWrap="true"/>
+        <Label text="Pan me!" pan="onPan"/>
         <!-- << gest-pan-xml -->
     </StackLayout>
 </Page>

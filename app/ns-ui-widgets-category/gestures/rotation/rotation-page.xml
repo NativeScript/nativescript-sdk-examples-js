@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-rotation-xml -->
-        <Label text="Rotate me!" rotation="onRotation" textWrap="true"/>
+        <Label text="Rotate me!" rotation="onRotation"/>
         <!-- << gest-rotation-xml -->
     </StackLayout>
 </Page>

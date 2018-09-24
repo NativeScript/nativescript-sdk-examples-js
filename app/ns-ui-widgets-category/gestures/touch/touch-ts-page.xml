@@ -1,11 +1,9 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Tap"/>
+		<ActionBar title="Touch"/>
 	</Page.actionBar>
 
     <StackLayout verticalAlignment="middle">
-        <!-- >> gest-tap-xml -->
-        <Label text="Tap me!" tap="onTap"/>
-        <!-- << gest-tap-xml -->
+        <Label text="Touch me!" touch="onTouch"/>
     </StackLayout>
 </Page>
