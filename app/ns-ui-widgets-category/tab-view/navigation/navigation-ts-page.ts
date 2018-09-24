@@ -1,9 +1,9 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {TabView, SelectedIndexChangedEventData} from "tns-core-modules/ui/tab-view";
+import { Observable } from "tns-core-modules/data/observable";
+import { TabView, SelectedIndexChangedEventData } from "tns-core-modules/ui/tab-view";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 // >> tab-view-navigation-code-ts
 export function onLoaded(args) {
-    const tabView:TabView = <TabView> args.object;
+    const tabView: TabView = <TabView>args.object;
     const vm = new Observable();
     vm.set("tabSelectedIndex", 0);
     vm.set("tabSelectedIndexResult", "Profile Tab (tabSelectedIndex = 0 )");

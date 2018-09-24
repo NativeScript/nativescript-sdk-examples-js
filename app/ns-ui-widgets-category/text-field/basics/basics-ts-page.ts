@@ -1,9 +1,9 @@
-import {fromObject} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {TextField} from "tns-core-modules/ui/text-field";
+import { fromObject } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { TextField } from "tns-core-modules/ui/text-field";
 // setting up the format for the TextField text
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const dateConverter = {
         toView(value, format) {
             let result = format;
@@ -37,7 +37,7 @@ export function onNavigatingTo(args) {
 }
 // >> textfield-handle-submit-event-ts
 export function firstTfLoaded(args) {
-    const firstTextfield: TextField = <TextField> args.object;
+    const firstTextfield: TextField = <TextField>args.object;
     setTimeout(() => {
         firstTextfield.focus(); // Shows the soft input method, ususally a soft keyboard.
     }, 100);
@@ -45,7 +45,7 @@ export function firstTfLoaded(args) {
 
 export function onReturnPress(args) {
     // returnPress event will be triggered when user submits a value
-    const textField: TextField = <TextField> args.object;
+    const textField: TextField = <TextField>args.object;
     // Gets or sets the placeholder text.
     console.log(textField.hint);
     // Gets or sets the input text.
@@ -81,7 +81,7 @@ export function onFocus(args) {
 
 export function onBlur(args) {
     // blur event will be triggered when the user leaves the TextField
-    const textField:TextField = <TextField> args.object;
+    const textField: TextField = <TextField>args.object;
     textField.dismissSoftInput();
     console.log("onBlur event");
 }

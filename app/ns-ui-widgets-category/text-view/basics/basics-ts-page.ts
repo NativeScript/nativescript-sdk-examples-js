@@ -44,8 +44,8 @@ export function showText(args) {
 }
 export function onTextViewLoaded(args) {
     const textView: TextView = <TextView>args.object;
-    textView.on("textChange", (args) => {
-        console.dir(args);
+    textView.on("textChange", (argstv) => {
+        console.dir(argstv);
     });
 }
 // << text-view-binding-code-ts

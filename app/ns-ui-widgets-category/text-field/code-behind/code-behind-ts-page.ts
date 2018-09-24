@@ -1,12 +1,12 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
+import { Observable } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 // >> textfield-import
-import {TextField} from "tns-core-modules/ui/text-field";
+import { TextField } from "tns-core-modules/ui/text-field";
 // << textfield-import
 // >> creating-text-field-code-ts
 export function onPageLoaded(args) {
-    const page = <Page> args.object;
+    const page = <Page>args.object;
     const vm = new Observable();
     const stackLayout: StackLayout = <StackLayout>page.getViewById("stackLayoutId");
 
@@ -33,9 +33,9 @@ export function onPageLoaded(args) {
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener
-    firstTextField.on("textChange", (args) => {
+    firstTextField.on("textChange", (argstf) => {
 
-        vm.set("tfResult", (<TextField>args.object).text);
+        vm.set("tfResult", (<TextField>argstf.object).text);
     });
 
 

@@ -1,6 +1,6 @@
 // >> time-picker-binding-code-ts
-import {Observable} from "tns-core-modules/data/observable";
-import {TimePicker} from "tns-core-modules/ui/time-picker"
+import { Observable } from "tns-core-modules/data/observable";
+import { TimePicker } from "tns-core-modules/ui/time-picker";
 // setting up the initial values for the TimePicker component
 export function onNavigatingTo(args) {
     const page = args.object;
@@ -19,7 +19,7 @@ export function onNavigatingTo(args) {
 }
 
 export function onPickerLoaded(eventData) {
-    const timePicker: TimePicker = <TimePicker> eventData.object;
+    const timePicker: TimePicker = <TimePicker>eventData.object;
     // handling 'time change' via code behind
     timePicker.on("timeChange", (args: any) => {
         // args is of type PropertyChangeData
