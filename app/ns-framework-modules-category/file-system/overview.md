@@ -4,6 +4,7 @@ such as files, folders, known folders, paths, separators, etc.
 To use this module:
 
 <snippet id='fs-create-require'/>
+<snippet id='fs-create-import'/>
 
 All file system operations have synchronous and asynchronous forms.
 

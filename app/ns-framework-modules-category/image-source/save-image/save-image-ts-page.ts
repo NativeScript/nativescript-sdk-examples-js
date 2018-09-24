@@ -1,86 +1,81 @@
-// const Observable = require("tns-core-modules/data/observable").Observable;
-// const imageSourceModule = require("tns-core-modules/image-source");
-// const fileSystemModule = require("tns-core-modules/file-system");
-// const imageAssetModule = require("tns-core-modules/image-asset");
+import {Observable} from "tns-core-modules/data/observable";
+import {ImageSource, fromFile } from "tns-core-modules/image-source";
+import {path, knownFolders, Folder} from "tns-core-modules/file-system";
+import {ImageAsset} from "tns-core-modules/image-asset";
+import {Page} from "tns-core-modules/ui/page"
 
-// function onNavigatingTo(args) {
-//     const page = args.object;
-//     const vm = new Observable();
-//     vm.set("fps", "0");
-//     const folder = fileSystemModule.knownFolders.currentApp();
-//     const path = fileSystemModule.path.join(folder.path, "images/logo.png");
-//     vm.set("imagePath", path);
-//     page.bindingContext = vm;
-// }
-
-
-// function makeCopyFromFile(args) {
-//     const page = args.object.page;
-//     const vm = page.bindingContext;
-
-//     const folder = fileSystemModule.knownFolders.currentApp();
-//     const imagePath = fileSystemModule.path.join(folder.path, "images/logo.png");
-//     // >> image-source-save-from-file
-//     const img = imageSourceModule.fromFile(imagePath);
-//     const folderDest = fileSystemModule.knownFolders.documents();
-//     const pathDest = fileSystemModule.path.join(folderDest.path, "test.png");
-//     const saved = img.saveToFile(pathDest, "png");
-//     if (saved) {
-//         console.log("Image saved successfully!");
-//         // >> (hide)
-//         vm.set("imageCopyPath", pathDest);
-//         // << (hide)
-//     }
-//     // << image-source-save-from-file
-
-// }
-// function makeCopyFromAsset(args) {
-//     const page = args.object.page;
-//     const vm = page.bindingContext;
-//     const folder = fileSystemModule.knownFolders.currentApp();
-//     const pathImage = fileSystemModule.path.join(folder.path, "images/logo.png");
-//     const imageAsset = new imageAssetModule.ImageAsset(pathImage);
-//     imageAsset.options = {
-//         width: 100,
-//         height: 100,
-//         keepAspectRatio: true
-//     };
-//     // >> image-source-save-from-asset
-//     const source = new imageSourceModule.ImageSource();
-//     source.fromAsset(imageAsset)
-//     .then((imageSource) => {
-//         const folder = fileSystemModule.knownFolders.documents().path;
-//         const fileName = "test.png";
-//         const path = fileSystemModule.path.join(folder, fileName);
-//         const saved = imageSource.saveToFile(path, "png");
-//         if (saved) {
-//             console.log("Image saved successfully!");
-//             // >> (hide)
-//             vm.set("imageAssetCopyPath", path);
-//             // << (hide)
-//         }
-//     // << image-source-save-from-asset
-//     })
-//     .catch((e) => {
-//         console.log("Error: ");
-//         console.log(e);
-//     });
-// }
-
-// function makeBase64String(args) {
-//     const page = args.object.page;
-//     const vm = page.bindingContext;
-//     // >> image-source-create-base64
-//     const folder = fileSystemModule.knownFolders.currentApp();
-//     const path = fileSystemModule.path.join(folder.path, "images/logo.png");
-//     const img = imageSourceModule.fromFile(path);
-//     const base64String = img.toBase64String("png");
-//     // << image-source-create-base64
-//     vm.set("base64String", base64String);
-// }
+export function onNavigatingTo(args) {
+    const page: Page = <Page> args.object;
+    const vm = new Observable();
+    vm.set("fps", "0");
+    const folder = knownFolders.currentApp();
+    const filePath = path.join(folder.path, "images/logo.png");
+    vm.set("imagePath", filePath);
+    page.bindingContext = vm;
+}
 
 
-// exports.onNavigatingTo = onNavigatingTo;
-// exports.makeCopyFromFile = makeCopyFromFile;
-// exports.makeCopyFromAsset = makeCopyFromAsset;
-// exports.makeBase64String = makeBase64String;
+export function makeCopyFromFile(args) {
+    const page: Page = <Page> args.object.page;
+    const vm = page.bindingContext;
+
+    const folder: Folder = <Folder> knownFolders.currentApp();
+    const imagePath = path.join(folder.path, "images/logo.png");
+    // >> image-source-save-from-file-ts
+    const img: ImageSource = <ImageSource> fromFile(imagePath);
+    const folderDest = knownFolders.documents();
+    const pathDest = path.join(folderDest.path, "test.png");
+    const saved: boolean = img.saveToFile(pathDest, "png");
+    if (saved) {
+        console.log("Image saved successfully!");
+        // >> (hide)
+        vm.set("imageCopyPath", pathDest);
+        // << (hide)
+    }
+    // << image-source-save-from-file-ts
+
+}
+export function makeCopyFromAsset(args) {
+    const page: Page = <Page> args.object.page;
+    const vm = page.bindingContext;
+    const folder: Folder = <Folder> knownFolders.currentApp();
+    const pathImage = path.join(folder.path, "images/logo.png");
+    const imageAsset = new ImageAsset(pathImage);
+    imageAsset.options = {
+        width: 100,
+        height: 100,
+        keepAspectRatio: true
+    };
+    // >> image-source-save-from-asset-ts
+    const source = new ImageSource();
+    source.fromAsset(imageAsset)
+    .then((imageSource: ImageSource) => {
+        const folderPath: string =  knownFolders.documents().path;
+        const fileName = "test.png";
+        const filePath = path.join(folderPath, fileName);
+        const saved: boolean = imageSource.saveToFile(filePath, "png");
+        if (saved) {
+            console.log("Image saved successfully!");
+            // >> (hide)
+            vm.set("imageAssetCopyPath", path);
+            // << (hide)
+        }
+    // << image-source-save-from-asset-ts
+    })
+    .catch((e) => {
+        console.log("Error: ");
+        console.log(e);
+    });
+}
+
+export function makeBase64String(args) {
+    const page: Page = <Page> args.object.page;
+    const vm = page.bindingContext;
+    // >> image-source-create-base64-ts
+    const folder: Folder = <Folder> knownFolders.currentApp();
+    const filePath: string = path.join(folder.path, "images/logo.png");
+    const img: ImageSource = <ImageSource> fromFile(filePath);
+    const base64String = img.toBase64String("png");
+    // << image-source-create-base64-ts
+    vm.set("base64String", base64String);
+}

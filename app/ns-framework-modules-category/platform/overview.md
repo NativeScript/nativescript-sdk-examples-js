@@ -17,3 +17,4 @@ Also with its help, you could get information about the device screen:
 * Screen width Pixels
 
 <snippet id='require-platform'/>
+<snippet id='impor-platform'/>

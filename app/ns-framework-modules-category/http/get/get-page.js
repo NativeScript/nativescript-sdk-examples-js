@@ -82,7 +82,7 @@ function onButtonTap(args) {
         default:
             break;
     }
-    vm.set(`${id}ResultButton`, !status);
+    vm.set(`${id}ResultVisible`, !status);
 }
 
 function getStringExample(viewModel) {
