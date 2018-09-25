@@ -8,6 +8,7 @@ export function containerLoaded(args: EventData) {
     const newImage = new Image();
     newImage.src = "res://icon";
     newImage.stretch = "aspectFill";
+
     // << image-code-behdnd-ts
     container.addChild(newImage);
 }

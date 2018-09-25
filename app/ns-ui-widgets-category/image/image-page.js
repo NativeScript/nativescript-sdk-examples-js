@@ -9,8 +9,7 @@ const navigationLinks = [
 const navigationLinksTsc = [
     new link("Basics", "ns-ui-widgets-category/image/basics/basics-ts-page"),
     new link("Binding", "ns-ui-widgets-category/image/binding/binding-ts-page"),
-    new link("Image Source", "ns-ui-widgets-category/image/image-source/image-source-ts-page"),
-    new link("Stretching", "ns-ui-widgets-category/image/stretching/stretching-ts-page")
+    new link("Image Source", "ns-ui-widgets-category/image/image-source/image-source-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

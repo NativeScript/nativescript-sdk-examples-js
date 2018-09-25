@@ -1,16 +1,18 @@
-const imageSourceModule = require("tns-core-modules/image-source");
-const Image = require("tns-core-modules/ui/image").Image;
-const Label = require("tns-core-modules/ui/label").Label;
+import { fromBase64, fromResource }  from "tns-core-modules/image-source";
+import { Image } from "tns-core-modules/ui/image";
+import { Label } from "tns-core-modules/ui/label";
 
-exports.onStackLoaded = function (args) {
+export function onStackLoaded(args) {
     const stack = args.object;
-    // >> image-image-source
+    // >> image-image-source-ts
+    // import { fromResource }  from "tns-core-modules/image-source";
+    // import { Image } from "tns-core-modules/ui/image";
     const image = new Image();
-    const imageSource = imageSourceModule.fromResource("icon");
+    const imageSource = fromResource("icon");
     image.imageSource = imageSource;
     image.height = 100;
     image.stretch = "aspectFit";
-    // << image-image-source
+    // << image-image-source-ts
 
     const lbl = new Label();
     lbl.text = "Image created via fromResource() method";
@@ -31,15 +33,15 @@ exports.onStackLoaded = function (args) {
 
     stack.addChild(lbl2);
     stack.addChild(imageFromBase64);
-};
+}
 
 function usingBase64Strings() {
-    // >> using-base64-strings
-    // const imageSourceModule = require("image-source");
-    const myImageSource = imageSourceModule.fromResource("icon");
+    // >> using-base64-strings-ts
+    // import { fromBase64, fromResource }  from "tns-core-modules/image-source";
+    const myImageSource = fromResource("icon");
     const imageAsBase64String = myImageSource.toBase64String("png", 100); // base64 string; default max image quality;
-    const base64ImageSource = imageSourceModule.fromBase64(imageAsBase64String);
-    // << using-base64-strings
+    const base64ImageSource = fromBase64(imageAsBase64String);
+    // << using-base64-strings-ts
 
     return base64ImageSource;
 }
