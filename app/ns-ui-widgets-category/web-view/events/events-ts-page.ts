@@ -3,7 +3,7 @@ import { Page } from "tns-core-modules/ui/page";
 import { WebView } from "tns-core-modules/ui/web-view/web-view";
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
-// >> webview-js-gestures-ts
+// >> webview-ts-events
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();
@@ -87,4 +87,4 @@ export function onReload(args) {
     const webview: WebView = <WebView>page.getViewById("webview");
     webview.reload();
 }
-// << webview-js-gestures-ts
+// << webview-ts-events
