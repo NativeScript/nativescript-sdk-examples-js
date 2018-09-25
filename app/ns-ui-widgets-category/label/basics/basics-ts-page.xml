@@ -4,8 +4,6 @@
 	</Page.actionBar>
 
     <GridLayout rows="*">
-        <!-- >> label-xml -->
         <Label id="lbl" text="{{ title }}" textWrap="true" />
-        <!-- << label-xml -->
     </GridLayout>
 </Page>

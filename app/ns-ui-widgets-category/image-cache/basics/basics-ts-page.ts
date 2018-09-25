@@ -51,5 +51,5 @@ function cacheImage(viewModel) {
 
     // Disable download while scrolling
     cache.disableDownload();
-    // << image-cache-codes-ts
+    // << image-cache-code-ts
 }
