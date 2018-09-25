@@ -3,7 +3,6 @@ const modalPageModule = "/ns-ui-widgets-category/modal-page/basics/modal-page";
 
 function openModal(args) {
     const mainView = args.object;
-    console.log(mainView)
     const context = { username:"test_username", password:"test" };
     const fullscreen = true;
     mainView.showModal(modalPageModule, context, (username, password) => {

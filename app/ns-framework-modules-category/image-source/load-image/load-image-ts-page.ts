@@ -1,5 +1,6 @@
+// tslint:disable:max-line-length
 import { Observable } from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page"
+import {Page} from "tns-core-modules/ui/page";
 // >> import-image-source
 import {ImageSource, fromFile, fromResource, fromBase64} from "tns-core-modules/image-source";
 // << import-image-source

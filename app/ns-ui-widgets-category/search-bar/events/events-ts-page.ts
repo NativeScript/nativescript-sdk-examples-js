@@ -1,7 +1,7 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import {Page} from "tns-core-modules/ui/page";
-import {SearchBar} from "tns-core-modules/ui/search-bar"
+import { Observable } from "tns-core-modules/data/observable";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Page } from "tns-core-modules/ui/page";
+import { SearchBar } from "tns-core-modules/ui/search-bar";
 // >> clear-search-bar-submit-ts
 
 const arrayItems = [
@@ -14,7 +14,7 @@ const arrayItems = [
     { name: "Italy" }
 ];
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     // set up the ListView items
     const vm = new Observable();
     const myItems = new ObservableArray(arrayItems);
@@ -25,7 +25,7 @@ export function onNavigatingTo(args) {
 }
 // search for country
 export function onSubmit(args) {
-    const searchBar: SearchBar = <SearchBar> args.object;
+    const searchBar: SearchBar = <SearchBar>args.object;
     const searchValue = searchBar.text.toLowerCase();
 
     const myItems = new ObservableArray();
@@ -36,13 +36,13 @@ export function onSubmit(args) {
             }
         }
     }
-    const page: Page = <Page> searchBar.page;
+    const page: Page = <Page>searchBar.page;
     const vm = page.bindingContext;
     vm.set("myItems", myItems);
 }
 // clear SearchBar text and load ListView initial data
 export function onClear(args) {
-    const searchBar: SearchBar = <SearchBar> args.object;
+    const searchBar: SearchBar = <SearchBar>args.object;
     searchBar.text = "";
     searchBar.hint = "Search for a country and press enter";
 
@@ -53,7 +53,7 @@ export function onClear(args) {
 
     });
 
-    const page: Page = <Page> searchBar.page;
+    const page: Page = <Page>searchBar.page;
     const vm = page.bindingContext;
     vm.set("myItems", myItems);
 }

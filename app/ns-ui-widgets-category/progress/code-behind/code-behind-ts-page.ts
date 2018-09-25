@@ -1,14 +1,14 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout"
+import { Observable } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 // >> progress-import
-import {Progress} from "tns-core-modules/ui/progress";
+import { Progress } from "tns-core-modules/ui/progress";
 // << progress-import
 // >> creating-progress-code-ts
 export function onPageLoaded(args) {
-    const page:Page = <Page>args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
-    const stackLayout = <StackLayout> page.getViewById("stackLayoutId");
+    const stackLayout = <StackLayout>page.getViewById("stackLayoutId");
 
     vm.set("prResult", 0);
     // creating new Switch and binding the value property
@@ -18,8 +18,8 @@ export function onPageLoaded(args) {
         progress.value += 2;
     }, 300);
 
-    progress.on("valueChange", (args) => {
-        vm.set("prResult", (<Progress>args.object).value);
+    progress.on("valueChange", (pargs) => {
+        vm.set("prResult", (<Progress>pargs.object).value);
     });
 
     stackLayout.addChild(progress);

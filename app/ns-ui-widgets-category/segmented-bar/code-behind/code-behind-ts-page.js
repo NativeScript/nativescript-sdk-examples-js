@@ -25,8 +25,8 @@ function onPageLoaded(args) {
     segmentedBar.items = items;
     segmentedBar.bind(options, vm);
     vm.set("sbindex", 0);
-    segmentedBar.on("selectedIndexChange", function (args) {
-        vm.set("sbResult", args.object.selectedIndex);
+    segmentedBar.on("selectedIndexChange", function (sbargs) {
+        vm.set("sbResult", sbargs.object.selectedIndex);
     });
     stackLayout.insertChild(segmentedBar, 0);
     page.bindingContext = vm;

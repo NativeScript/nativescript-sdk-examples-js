@@ -1,12 +1,12 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {File, Folder, knownFolders} from "tns-core-modules/file-system";
+import { Observable } from "tns-core-modules/data/observable";
+import { File, Folder, knownFolders } from "tns-core-modules/file-system";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import { Page } from "tns-core-modules/ui/page";
 
 let file: File;
 let myFolder: Folder;
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
 
     const documents: Folder = knownFolders.documents();
@@ -24,7 +24,7 @@ export function onNavigatingTo(args) {
 }
 
 export function onFileRename(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-update-rename-file-code-ts
     const fileName: string = vm.get("fileName");
@@ -38,15 +38,15 @@ export function onFileRename(args) {
             console.log("Error: ");
             console.log(err);
             dialogs.alert(err)
-            .then(() => {
-                console.log("Dialog closed!");
-            });
+                .then(() => {
+                    console.log("Dialog closed!");
+                });
         });
     // << fs-update-rename-file-code-ts
 }
 
 export function onFolderRename(args) {
-    const page:Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-update-rename-folder-code-ts
     const folderName: string = vm.get("folderName");
@@ -60,9 +60,9 @@ export function onFolderRename(args) {
             console.log("Error: ");
             console.log(err);
             dialogs.alert(err)
-            .then(() => {
-                console.log("Dialog closed!");
-            });
+                .then(() => {
+                    console.log("Dialog closed!");
+                });
         });
     // << fs-update-rename-folder-code-ts
 }

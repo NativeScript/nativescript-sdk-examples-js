@@ -1,7 +1,7 @@
 import {Observable} from "tns-core-modules/data/observable";
 import {Page} from "tns-core-modules/ui/page";
 import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
-// >> slider-import 
+// >> slider-import
 import {Slider} from "tns-core-modules/ui/slider";
 // << slider-import
 // >> creating-slider-code-ts
@@ -21,8 +21,8 @@ export function onPageLoaded(args) {
     // setting slider.value to 22
     vm.set("age", 22);
 
-    sliderComponent.on("valueChange", (args) => {
-        vm.set("slResult", (<Slider>args.object).value);
+    sliderComponent.on("valueChange", (slargs) => {
+        vm.set("slResult", (<Slider>slargs.object).value);
     });
 
     stackLayout.addChild(sliderComponent);

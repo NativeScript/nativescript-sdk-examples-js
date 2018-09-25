@@ -1,15 +1,15 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {knownFolders, File, Folder} from "tns-core-modules/file-system";
-import {Page} from "tns-core-modules/ui/page";
+import { Observable } from "tns-core-modules/data/observable";
+import { knownFolders, File, Folder } from "tns-core-modules/file-system";
+import { Page } from "tns-core-modules/ui/page";
 
 let file: File;
 let myFolder: Folder;
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
-    const documents: Folder = <Folder> knownFolders.documents();
-    myFolder = <Folder> documents.getFolder("TestFolderName");
-    file = <File> myFolder.getFile("TestFileName.txt");
+    const documents: Folder = <Folder>knownFolders.documents();
+    myFolder = <Folder>documents.getFolder("TestFolderName");
+    file = <File>myFolder.getFile("TestFileName.txt");
     vm.set("myFolderPath", myFolder.path);
     vm.set("myFilePath", file.path);
     vm.set("resultMessage", "");
@@ -17,7 +17,7 @@ export function onNavigatingTo(args) {
 }
 
 export function onDeleteFile(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     if (file) {
         // >> fs-delete-file-code-ts
@@ -35,7 +35,7 @@ export function onDeleteFile(args) {
 }
 
 export function onDeleteFolder(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     if (myFolder) {
         // >> fs-delete-folder-code-ts
@@ -54,7 +54,7 @@ export function onDeleteFolder(args) {
 }
 
 export function onClearFolder(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     if (myFolder) {
         // >> fs-clear-folder-code-ts
@@ -72,11 +72,11 @@ export function onClearFolder(args) {
 }
 
 export function onReset(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
-    const documents: Folder = <Folder> knownFolders.documents();
-    myFolder = <Folder> documents.getFolder("TestFolderName");
-    file = <File> myFolder.getFile("TestFileName.txt");
+    const documents: Folder = <Folder>knownFolders.documents();
+    myFolder = <Folder>documents.getFolder("TestFolderName");
+    file = <File>myFolder.getFile("TestFileName.txt");
     vm.set("resultMessage", "Reset");
 }
 

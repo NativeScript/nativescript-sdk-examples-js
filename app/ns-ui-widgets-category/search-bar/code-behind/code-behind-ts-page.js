@@ -9,9 +9,9 @@ function onPageLoaded(args) {
     var stackLayout = page.getViewById("stackLayoutId");
     vm.set("sbResult", "");
     var searchBar = new search_bar_1.SearchBar();
-    searchBar.on(search_bar_1.SearchBar.submitEvent, function (args) {
-        console.log("Search for ", args.object.text);
-        dialogs.alert("Search for " + args.object.text)
+    searchBar.on(search_bar_1.SearchBar.submitEvent, function (sbargs) {
+        console.log("Search for ", sbargs.object.text);
+        dialogs.alert("Search for " + sbargs.object.text)
             .then(function () {
             console.log("Dialog closed!");
         });
@@ -23,8 +23,8 @@ function onPageLoaded(args) {
             console.log("Dialog closed!");
         });
     });
-    searchBar.on("textChange", function (args) {
-        vm.set("sbResult", args.object.text);
+    searchBar.on("textChange", function (sbargs) {
+        vm.set("sbResult", sbargs.object.text);
     });
     stackLayout.addChild(searchBar);
     page.bindingContext = vm;

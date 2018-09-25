@@ -6,9 +6,9 @@ function onPageLoaded(args) {
     var vm = new observable_1.Observable();
     vm.set("secondSwitchState", "ON");
     var mySwitch = page.getViewById("my-switch");
-    mySwitch.on("checkedChange", function (args) {
-        console.log("checkedChange ", args.object.checked);
-        if (args.object.checked) {
+    mySwitch.on("checkedChange", function (swargs) {
+        console.log("checkedChange ", swargs.object.checked);
+        if (swargs.object.checked) {
             vm.set("secondSwitchState", "ON");
         }
         else {

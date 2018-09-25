@@ -1,11 +1,12 @@
-import {Button} from "tns-core-modules/ui/button";
-import {Page} from "tns-core-modules/ui/page";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+// tslint:disable:max-line-length
+import { Button } from "tns-core-modules/ui/button";
+import { Page } from "tns-core-modules/ui/page";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 // >> style-code-behind-ts
 export function onPageLoaded(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     // >> (hide)
-    const stacklayout: StackLayout = <StackLayout> page.getViewById("container");
+    const stacklayout: StackLayout = <StackLayout>page.getViewById("container");
     // << (hide)
 
     page.css = "Button { background-color: red; color: white; } .testClass { color: blue; } #myButton { color: yellow; } .testClass:pressed { color: green; }";

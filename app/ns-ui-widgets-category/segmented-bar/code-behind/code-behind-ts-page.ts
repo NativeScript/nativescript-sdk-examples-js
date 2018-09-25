@@ -1,14 +1,14 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout"
+import { Observable } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 // >> segmented-bar-import
-import {SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData} from "tns-core-modules/ui/segmented-bar";
+import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
 // << segmented-bar-import
 // >> creating-segmented-bar-code-ts
 export function onPageLoaded(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
-    const stackLayout: StackLayout = <StackLayout> page.getViewById("stackLayoutId");
+    const stackLayout: StackLayout = <StackLayout>page.getViewById("stackLayoutId");
 
     vm.set("sbResult", 0);
     // creating new SegmentedBar and binding the selectedIndex property
@@ -33,8 +33,8 @@ export function onPageLoaded(args) {
     // setting SegmentedBar selected index to 0
     vm.set("sbindex", 0);
 
-    segmentedBar.on("selectedIndexChange", (args: SelectedIndexChangedEventData) => {
-        vm.set("sbResult", (<SegmentedBar>args.object).selectedIndex);
+    segmentedBar.on("selectedIndexChange", (sbargs: SelectedIndexChangedEventData) => {
+        vm.set("sbResult", (<SegmentedBar>sbargs.object).selectedIndex);
     });
 
     stackLayout.insertChild(segmentedBar, 0);

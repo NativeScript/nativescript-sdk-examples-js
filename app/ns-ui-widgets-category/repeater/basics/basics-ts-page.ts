@@ -1,12 +1,12 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import {Page} from "tns-core-modules/ui/page";
-import { Repeater } from "tns-core-modules/ui/repeater"
+import { Observable } from "tns-core-modules/data/observable";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Page } from "tns-core-modules/ui/page";
+import { Repeater } from "tns-core-modules/ui/repeater";
 // >> repeater-create-code-ts
 const colors = ["red", "green", "blue"];
 const secondColorsArray = new ObservableArray(["red", "green", "blue"]);
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
 
     vm.set("myItems", colors);
@@ -16,8 +16,8 @@ export function onNavigatingTo(args) {
 }
 // << repeater-create-code-ts
 export function onTap(args) {
-    const page: Page = <Page> args.object.page;
-    const repeater: Repeater = <Repeater> page.getViewById("firstRepeater");
+    const page: Page = <Page>args.object.page;
+    const repeater: Repeater = <Repeater>page.getViewById("firstRepeater");
     // >> repeater-array-ts
     colors.push("yellow");
     // Manually trigger the update so that the new color is shown.

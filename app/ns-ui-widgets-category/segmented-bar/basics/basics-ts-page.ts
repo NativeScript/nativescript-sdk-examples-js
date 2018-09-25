@@ -1,8 +1,8 @@
-import {Observable, PropertyChangeData} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
+import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
 // >> segmented-bar-index-change-event-ts
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     // set up the SegmentedBar selected index
     const vm = new Observable();
     vm.set("prop", 0);

@@ -1,7 +1,7 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
 // >> fs-create-import
-import {knownFolders, Folder, File} from "tns-core-modules/file-system";
+import { knownFolders, Folder, File } from "tns-core-modules/file-system";
 // << fs-create-import
 
 export function onNavigatingTo(args) {
@@ -21,12 +21,12 @@ export function onNavigatingTo(args) {
 }
 
 export function onCreateFile(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-create-all-code-ts
-    const documents:Folder = <Folder> knownFolders.documents();
-    const folder: Folder = <Folder> documents.getFolder(vm.get("folderName") || "testFolder");
-    const file: File = <File> folder.getFile(`${(vm.get("fileName") || "testFile")}`+`.txt`);
+    const documents: Folder = <Folder>knownFolders.documents();
+    const folder: Folder = <Folder>documents.getFolder(vm.get("folderName") || "testFolder");
+    const file: File = <File>folder.getFile(`${(vm.get("fileName") || "testFile")}` + `.txt`);
 
     file.writeText(vm.get("fileTextContent") || "some random content")
         .then(() => {

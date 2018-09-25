@@ -1,13 +1,13 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {setBoolean, getBoolean} from "application-settings";
-import {Page} from "tns-core-modules/ui/page";
+import { Observable } from "tns-core-modules/data/observable";
+import { setBoolean, getBoolean } from "application-settings";
+import { Page } from "tns-core-modules/ui/page";
 // >> import-fps-meter
-import {removeCallback, start, stop, addCallback} from "tns-core-modules/fps-meter";
+import { removeCallback, start, stop, addCallback } from "tns-core-modules/fps-meter";
 // << import-fps-meter
 
 let callbackId;
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
     vm.set("fps", "0");
     vm.set("minfps", "0");
@@ -18,7 +18,7 @@ export function onNavigatingTo(args) {
 
 
 export function toogleMeter(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     const status: boolean = getBoolean("status");
     if (status) {
@@ -30,8 +30,8 @@ export function toogleMeter(args) {
     } else {
         // >> start-fps-meter-ts
         callbackId = addCallback((fps, minFps) => {
-                vm.set("fps", fps.toFixed(2));
-                vm.set("minfps", minFps.toFixed(2));
+            vm.set("fps", fps.toFixed(2));
+            vm.set("minfps", minFps.toFixed(2));
         });
 
         start();

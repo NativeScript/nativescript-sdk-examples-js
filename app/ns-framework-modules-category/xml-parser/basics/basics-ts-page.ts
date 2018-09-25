@@ -1,6 +1,6 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import {Page} from "tns-core-modules/ui/page";
+import { Observable } from "tns-core-modules/data/observable";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Page } from "tns-core-modules/ui/page";
 // >> import-xml-module
 import * as xmlModule from "tns-core-modules/xml";
 // << import-xml-module
@@ -13,31 +13,31 @@ const onEventCallback = (event) => {
                 for (const attributeName in event.attributes) {
                     if (event.attributes.hasOwnProperty(attributeName)) {
                         source.push({
-                            eventType:event.eventType,
-                            elementName:event.elementName,
+                            eventType: event.eventType,
+                            elementName: event.elementName,
                             attributeName: attributeName,
-                            result:event.attributes[attributeName],
+                            result: event.attributes[attributeName],
                             significantText: null
                         });
                     }
                 }
             } else {
                 source.push({
-                    eventType:event.eventType,
-                    elementName:event.elementName,
-                    attributeName:null,
-                    result:null,
-                    significantText:null
+                    eventType: event.eventType,
+                    elementName: event.elementName,
+                    attributeName: null,
+                    result: null,
+                    significantText: null
                 });
             }
             break;
         case xmlModule.ParserEventType.EndElement:
             source.push({
-                eventType:event.eventType,
-                elementName:event.elementName,
-                attributeName:null,
-                result:null,
-                significantText:null
+                eventType: event.eventType,
+                elementName: event.elementName,
+                attributeName: null,
+                result: null,
+                significantText: null
             });
             break;
 
@@ -46,11 +46,11 @@ const onEventCallback = (event) => {
 
             if (significantText !== "") {
                 source.push({
-                    eventType:event.eventType,
-                    elementName:null,
+                    eventType: event.eventType,
+                    elementName: null,
                     attributeName: null,
-                    result:null,
-                    significantText:significantText
+                    result: null,
+                    significantText: significantText
                 });
             }
             break;
@@ -67,7 +67,7 @@ const onErrorCallback = (error) => {
 const xmlParser = new xmlModule.XmlParser(onEventCallback, onErrorCallback);
 // >> (hide)
 export function onNavigatingTo(args) {
-    const page:Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
     vm.set("source", source);
 
@@ -76,7 +76,7 @@ export function onNavigatingTo(args) {
 
 export function parseXMLButton(args) {
     source.splice(0);
-// << (hide)
+    // << (hide)
     xmlParser.parse(`
     <Document>
         <First attr1=\ "attribute1\" attr2=\ "attribute2\">I am first</First>
@@ -86,5 +86,5 @@ export function parseXMLButton(args) {
         </Third>
     </Document>
     `);
-// << parse-method-ts
+    // << parse-method-ts
 }

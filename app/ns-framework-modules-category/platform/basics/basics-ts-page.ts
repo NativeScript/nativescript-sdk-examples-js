@@ -1,8 +1,8 @@
-import {Observable} from "tns-core-modules/data/observable";
+import { Observable } from "tns-core-modules/data/observable";
 const dialogs = require("tns-core-modules/ui/dialogs");
-import {Page} from "tns-core-modules/ui/page"
+import { Page } from "tns-core-modules/ui/page";
 // >> import-platform
-import {device, screen, isAndroid, isIOS} from"tns-core-modules/platform";
+import { device, screen, isAndroid, isIOS } from "tns-core-modules/platform";
 // << import-platform
 
 // >> get-screen-device-info-ts
@@ -39,13 +39,13 @@ export function checkPlatformType(args) {
         message = "You are using IOS device";
     }
     dialogs.alert(message)
-    .then(() => {
-        console.log("Dialog closed!");
-    });
+        .then(() => {
+            console.log("Dialog closed!");
+        });
 }
 
 export function deviceInfo(args) {
-    const page: Page = <Page >args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     const isItemVisible = vm.get("isItemVisible");
     if (isItemVisible) {

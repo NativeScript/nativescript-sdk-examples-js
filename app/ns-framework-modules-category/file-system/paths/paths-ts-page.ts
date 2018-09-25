@@ -1,12 +1,12 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {knownFolders, path, Folder, File} from "tns-core-modules/file-system";
-import {Page} from "tns-core-modules/ui/page"
+import { Observable } from "tns-core-modules/data/observable";
+import { knownFolders, path, Folder, File } from "tns-core-modules/file-system";
+import { Page } from "tns-core-modules/ui/page";
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
 
     // >> fs-paths-normalize-code-ts
-    let documentsFolder: Folder = <Folder> knownFolders.documents();
+    let documentsFolder: Folder = <Folder>knownFolders.documents();
     const currentAppFolder = knownFolders.currentApp();
     const tempFolder = knownFolders.temp();
 
@@ -18,7 +18,7 @@ export function onNavigatingTo(args) {
     // << fs-paths-normalize-code-ts
     // >> fs-paths-join-code-ts
     // Generate a path like <documents.path>/myFiles/test.txt
-    documentsFolder = <Folder> knownFolders.documents();
+    documentsFolder = <Folder>knownFolders.documents();
     const filePath: string = path.join(documentsFolder.path, "myFiles", "test.txt");
     // << fs-paths-join-code-ts
     console.log(filePath);
@@ -31,7 +31,7 @@ export function onNavigatingTo(args) {
 
     // >> fs-paths-create-folder-code-ts
     const folderPath: string = path.join(knownFolders.documents().path, "music");
-    const folder: Folder = <Folder> Folder.fromPath(folderPath);
+    const folder: Folder = <Folder>Folder.fromPath(folderPath);
     // << fs-paths-create-folder-code-ts
     console.log(folder);
 
@@ -43,10 +43,10 @@ export function onNavigatingTo(args) {
 }
 
 export function onSaveContentToFile(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-paths-create-file-code-ts
-    const documentsFolder: Folder = <Folder> knownFolders.documents();
+    const documentsFolder: Folder = <Folder>knownFolders.documents();
     const filePath: string = path.join(documentsFolder.path, "FileFromPath.txt");
     const file: File = File.fromPath(filePath);
 

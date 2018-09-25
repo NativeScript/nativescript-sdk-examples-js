@@ -10,7 +10,6 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;
-;
 function onLabelLoaded(args) {
     var label = args.object;
     label.backgroundColor = new color_1.Color("lightslategray");

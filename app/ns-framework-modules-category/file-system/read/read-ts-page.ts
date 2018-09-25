@@ -1,11 +1,11 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {ObservableArray} from "tns-core-modules/data/observable-array";
-import {knownFolders, path, File, Folder} from "tns-core-modules/file-system";
-import {fromResource, ImageSource} from "tns-core-modules/image-source";
+import { Observable } from "tns-core-modules/data/observable";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { knownFolders, path, File, Folder } from "tns-core-modules/file-system";
+import { fromResource, ImageSource } from "tns-core-modules/image-source";
 import { Page } from "tns-core-modules/ui/page";
 
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
     const array = new ObservableArray();
     const folderName: string = "NativeScript";
@@ -15,7 +15,7 @@ export function onNavigatingTo(args) {
         "with Angular, TypeScript or JavaScript.";
 
     let documents: Folder = knownFolders.documents();
-    const folder:Folder = documents.getFolder(folderName);
+    const folder: Folder = documents.getFolder(folderName);
     const file: File = folder.getFile(fileName);
 
     file.writeText(fileTextContent)
@@ -58,7 +58,7 @@ export function onNavigatingTo(args) {
     console.log(`Does Text.txt exists: ${exists}`);
     // << fs-file-exists-check-code-ts
     // >> fs-folder-exists-check-code-ts
-    const temp: Folder = <Folder> knownFolders.temp();
+    const temp: Folder = <Folder>knownFolders.temp();
     const tempExists: boolean = Folder.exists(temp.path);
     console.log(`Does temp folder exists: ${tempExists}`);
     // << fs-folder-exists-check-code-ts
@@ -71,7 +71,7 @@ export function onNavigatingTo(args) {
 }
 
 export function onReadSync(args) {
-    const page: Page = <Page> args.object.page;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-read-sync-code-ts
     const image: ImageSource = fromResource("icon");

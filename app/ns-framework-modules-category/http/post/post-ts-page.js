@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var observable_1 = require("tns-core-modules/data/observable");
-7;
 var http_1 = require("tns-core-modules/http");
 function onNavigatingTo(args) {
     var page = args.object;

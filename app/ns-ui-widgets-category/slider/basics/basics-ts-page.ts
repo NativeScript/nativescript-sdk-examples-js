@@ -1,9 +1,9 @@
-import {Observable, PropertyChangeData} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {Slider} from "tns-core-modules/ui/slider";
+import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
+import { Slider } from "tns-core-modules/ui/slider";
 // >> slider-value-change-event-ts
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     // set up the initial values for the slider components
     const vm = new Observable();
     vm.set("currentValue", 10);
@@ -21,7 +21,7 @@ export function onNavigatingTo(args) {
 }
 // handle value change
 export function onSliderLoaded(args) {
-    const sliderComponent: Slider = <Slider> args.object;
+    const sliderComponent: Slider = <Slider>args.object;
     sliderComponent.on("valueChange", (sargs) => {
         const page = (<Slider>sargs.object).page;
         const vm = page.bindingContext;

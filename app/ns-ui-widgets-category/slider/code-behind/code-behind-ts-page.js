@@ -14,8 +14,8 @@ function onPageLoaded(args) {
     var sliderComponent = new slider_1.Slider();
     sliderComponent.bind(options, vm);
     vm.set("age", 22);
-    sliderComponent.on("valueChange", function (args) {
-        vm.set("slResult", args.object.value);
+    sliderComponent.on("valueChange", function (slargs) {
+        vm.set("slResult", slargs.object.value);
     });
     stackLayout.addChild(sliderComponent);
     page.bindingContext = vm;

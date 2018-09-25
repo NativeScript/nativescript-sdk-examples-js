@@ -1,12 +1,13 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {path, knownFolders, File} from "tns-core-modules/file-system";
-import {Page} from "tns-core-modules/ui/page";
-import { getFile, getImage, getJSON, getString, request, HttpResponse } from"tns-core-modules/http";
+// tslint:disable:max-line-length
+import { Observable } from "tns-core-modules/data/observable";
+import { path, knownFolders, File } from "tns-core-modules/file-system";
+import { Page } from "tns-core-modules/ui/page";
+import { getFile, getImage, getJSON, getString, request, HttpResponse } from "tns-core-modules/http";
 import { Button } from "tns-core-modules/ui/button";
 import { ImageSource } from "tns-core-modules/image-source";
 
 export function onNavigatingTo(args) {
-    const page: Page = <Page> args.object;
+    const page: Page = <Page>args.object;
     const vm = new Observable();
 
     vm.set("getStringResultButton", "Show getString result");
@@ -38,11 +39,11 @@ export function onNavigatingTo(args) {
 }
 
 export function onButtonTap(args) {
-    const button: Button = <Button> args.object;
-    const page: Page = <Page> args.object.page;
+    const button: Button = <Button>args.object;
+    const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     const id: string = button.get("id");
-    const status:boolean = vm.get(`${id}ResultVisible`);
+    const status: boolean = vm.get(`${id}ResultVisible`);
 
     if (!status) {
         switch (id) {
@@ -76,10 +77,10 @@ export function onButtonTap(args) {
     }
     switch (!status) {
         case true:
-                vm.set(`${id}ResultButton`, `Hide ${id} result`);
+            vm.set(`${id}ResultButton`, `Hide ${id} result`);
             break;
         case false:
-                vm.set(`${id}ResultButton`, `Show ${id} result`);
+            vm.set(`${id}ResultButton`, `Show ${id} result`);
             break;
         default:
             break;
@@ -225,7 +226,7 @@ function getFileExample(viewModel) {
 function getFileWithPathExample(viewModel) {
     // >> get-file-code-with-path-ts
     const filePath: string = path.join(knownFolders.currentApp().path, "test.png");
-    getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile :File) => {
+    getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile: File) => {
         // The returned result will be File object
         // >> (hide)
         viewModel.set("name_get_file_with_path", resultFile.name);

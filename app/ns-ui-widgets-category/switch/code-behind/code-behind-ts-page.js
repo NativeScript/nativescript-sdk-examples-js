@@ -13,9 +13,9 @@ function onPageLoaded(args) {
         targetProperty: "checked"
     };
     mySwitch.bind(options, vm);
-    mySwitch.on("checkedChange", function (args) {
-        console.log(args.object.checked);
-        vm.set("swResult", args.object.checked);
+    mySwitch.on("checkedChange", function (swargs) {
+        console.log(swargs.object.checked);
+        vm.set("swResult", swargs.object.checked);
     });
     vm.set("isChecked", true);
     stackLayout.addChild(mySwitch);

@@ -12,8 +12,8 @@ function onPageLoaded(args) {
     setInterval(function () {
         progress.value += 2;
     }, 300);
-    progress.on("valueChange", function (args) {
-        vm.set("prResult", args.object.value);
+    progress.on("valueChange", function (pargs) {
+        vm.set("prResult", pargs.object.value);
     });
     stackLayout.addChild(progress);
     page.bindingContext = vm;

@@ -1,9 +1,9 @@
 // >> second-modal-page-ts-navigation
-import {Page} from "tns-core-modules/ui/page";
+import { Page } from "tns-core-modules/ui/page";
 
 export function onGoBack(args) {
     const view = args.object;
-    const page: Page = <Page> view.page;
+    const page: Page = <Page>view.page;
 
     page.frame.goBack();
 }
