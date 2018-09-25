@@ -5,11 +5,16 @@ const navigationLinks = [
     new link("Horizontal", "ns-ui-widgets-category/scroll-view/horizontal/horizontal-page"),
     new link("Events", "ns-ui-widgets-category/scroll-view/events/events-page")
 ];
+const navigationLinksTsc = [
+    new link("Events", "ns-ui-widgets-category/scroll-view/events/events-page")
+];
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples:false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

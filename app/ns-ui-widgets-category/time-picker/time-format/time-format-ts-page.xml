@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Time Format (24-hour)"/>
+	</Page.actionBar>
+
+    <StackLayout class="m-20 p-10 text-center">
+        <TimePicker loaded="onPickerLoaded"></TimePicker>
+    </StackLayout>
+</Page>

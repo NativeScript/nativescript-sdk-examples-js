@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+    <StackLayout loaded="onLoaded" />
+</Page>

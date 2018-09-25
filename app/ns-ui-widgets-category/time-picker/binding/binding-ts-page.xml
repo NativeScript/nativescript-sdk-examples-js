@@ -1,0 +1,21 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Properties binding"/>
+	</Page.actionBar>
+
+    <GridLayout rows="50 50 50 50 *" columns="* *" class="m-20 p-10 text-center">
+        <Label text="{{ 'Max hour: ' + tpMaxHour }}" row="0" col="0" textWrap="true" />
+        <Label text="{{ 'Max minute: ' + tpMaxHour }}" row="0" col="1" textWrap="true" />
+        <Label text="{{ 'Min hours: ' + tpMinHour }}" row="1" col="0" textWrap="true" />
+        <Label text="{{ 'Min minute: ' + tpMinMinute }}" row="1" col="1" textWrap="true" />
+        <Label text="{{ 'minuteInterval: ' + tpminuteInterval }}" row="2" col="0" colSpan="2" textWrap="true" />
+        <Label text="{{ 'Time result: ' + timeResult }}" row="3" col="0" colSpan="2" textWrap="true" fontWeight="bold"/>
+        <TimePicker loaded="onPickerLoaded" 
+                    hour="{{ tphour }}" minute="{{ tpminute }}" 
+                    minuteInterval="{{ tpminuteInterval }}"
+                    maxHour="{{ tpMaxHour }}" maxMinute="{{ tpMaxMinute }}"
+                    minHour="{{ tpMinHour }}" minMinute="{{ tpMinMinute }}" 
+                    verticalAlignment="center" row="4" col="0" colSpan="2" class="m-15">
+        </TimePicker>
+    </GridLayout>
+</Page>

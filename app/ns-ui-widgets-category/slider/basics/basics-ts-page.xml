@@ -1,0 +1,20 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+    <StackLayout>
+        <GridLayout class="m-15" rows="auto auto" columns="50 * 50">
+            <Label row="0" colSpan="3" class="h2 p-15" text="{{ currentValue }}" textWrap="true"/>
+            <Label row="1" col="0" text="&#xe90b;" textWrap="true" fontSize="15" class="icon"/>
+            <Slider row="1" col="1" value="{{ sliderValue }}"  minValue="{{ firstMinValue }}" maxValue="{{ firstMaxValue }}"/>
+            <Label row="1" col="2" text="&#xe90b;" textWrap="true" fontSize="20" class="icon"/>
+        </GridLayout>
+
+        <GridLayout rows="auto auto" columns="50 * 50">
+            <Label row="0" colSpan="3" text="&#xe901;" fontSize="{{ fontSize }}" textWrap="true" class="icon"/>
+            <Label row="1" col="0" text="min" textWrap="true" fontSize="15"/>
+            <Slider loaded="onSliderLoaded" row="1" col="1" value="20"  minValue="15" maxValue="100"/>
+            <Label row="1" col="2" text="max" textWrap="true" fontSize="20"/>
+        </GridLayout>
+    </StackLayout>
+</Page>

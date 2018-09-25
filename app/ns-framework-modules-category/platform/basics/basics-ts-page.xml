@@ -1,0 +1,54 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+<ScrollView orientation="vertical">
+    <StackLayout orientation="vertical">
+        <Button text="Check platform type" class="btn btn-primary btn-active" tap="checkPlatformType"/>
+        <Button text="{{ deviceInfoButton }}" class="btn btn-outline btn-active" tap="deviceInfo"/>
+        <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto" columns="auto auto" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}">
+            <Label class="m-15" col="0" row="0" text="Device model: " textWrap="true"/>
+            <Label class="m-15" col="1" row="0" text="{{ deviceInformationmodel }} " textWrap="true"/>
+
+            <Label class="m-15" col="0" row="1" text="Device deviceType: " textWrap="true"/>
+            <Label class="m-15" col="1" row="1" text="{{ deviceInformationdeviceType }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="2" text="Device os: " textWrap="true"/>
+            <Label class="m-15" col="1" row="2" text="{{ deviceInformationos }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="3" text="Device osVersion: " textWrap="true"/>
+            <Label class="m-15" col="1" row="3" text="{{ deviceInformationosVersion }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="4" text="Device sdkVersion: " textWrap="true"/>
+            <Label class="m-15" col="1" row="4" text="{{ deviceInformationsdkVersion }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="5" text="Device language: " textWrap="true"/>
+            <Label class="m-15" col="1" row="5" text="{{ deviceInformationlanguage }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="6" text="Device manufacturer: " textWrap="true"/>
+            <Label class="m-15" col="1" row="6" text="{{ deviceInformationmanufacturer }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="7" text="Device uuid: " textWrap="true"/>
+            <Label class="m-15" col="1" row="7" text="{{ deviceInformationuuid }}" textWrap="true"/>
+        </GridLayout>
+        <Button text="{{ screenInfoButton }}" class="btn btn-outline btn-active" tap="screenInfo"/>
+        <GridLayout rows="auto, auto, auto, auto, auto" columns="auto auto" visibility="{{ isItemVisibleScreenInfo ? 'visible' : 'collapsed' }}">
+            <Label class="m-15" col="0" row="0" text="Screen height DIPs: " textWrap="true"/>
+            <Label class="m-15" col="1" row="0" text="{{ screenInformationheightDIPs }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="1" text="Screen height Pixels: " textWrap="true"/>
+            <Label class="m-15" col="1" row="1" text="{{ screenInformationheightPixels }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="2" text="Screen scale: " textWrap="true"/>
+            <Label class="m-15" col="1" row="2" text="{{ screenInformationscale }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="3" text="Screen width DIPs: " textWrap="true"/>
+            <Label class="m-15" col="1" row="3" text="{{ screenInformationwidthDIPs }}" textWrap="true"/>
+
+            <Label class="m-15" col="0" row="4" text="Screen width Pixels: " textWrap="true"/>
+            <Label class="m-15" col="1" row="4" text="{{ screenInformationwidthPixels }}" textWrap="true"/>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>
+</Page>

@@ -5,3 +5,4 @@ XML
 
 Add WebView `src` from local file
 <snippet id='web-view-src-local-file'/>
+<snippet id='web-view-src-local-file-ts'/>

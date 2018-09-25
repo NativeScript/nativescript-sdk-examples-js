@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="WebView gestures"/>
+	</Page.actionBar>
+
+     <GridLayout rows="50 50 *">
+        <Label row="0" text="{{ touchResult }}" textWrap="true" />
+        <Label row="1" text="{{ panResult }}" textWrap="true" />
+        <WebView row="2" loaded="onWebViewLoaded"  touch="webViewTouch" pan="webViewPan" src="{{ webViewSrc }}" />
+    </GridLayout>
+</Page>

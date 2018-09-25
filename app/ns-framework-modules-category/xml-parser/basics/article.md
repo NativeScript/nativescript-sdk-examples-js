@@ -2,6 +2,8 @@ The example demonstrates how to create parser event, which is needed for separat
 
 Declaring `ParserEvent` callback method.
 <snippet id='parser-event'/>
+<snippet id='parser-event-ts'/>
 
 Calling `parse` method.
 <snippet id='parse-method'/>
+<snippet id='parse-method-ts'/>

@@ -1,7 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
-// >> webview-js-gestures
+// >> webview-js-events
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
@@ -92,4 +92,4 @@ exports.onLoadFinished = onLoadFinished;
 exports.loadFirst = loadFirst;
 exports.loadSecond = loadSecond;
 exports.onReload = onReload;
-// << webview-js-gestures
+// << webview-js-events

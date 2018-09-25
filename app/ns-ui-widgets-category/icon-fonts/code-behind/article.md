@@ -3,5 +3,5 @@ The example shows, how to use setup the `font-family` property via CSS and how t
 
 <snippet id='icon-font-code-behind-xml'/>
 <snippet id='icon-font-code-behind-code'/>
+<snippet id='icon-font-code-behind-code-ts'/>
 <snippet id='icon-font-code-behind-css'/>
-

@@ -1,0 +1,41 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Save Image"/>
+	</Page.actionBar>
+
+    <StackLayout >
+        <ScrollView>
+            <GridLayout rows="50 auto, 50, auto 50, auto auto, 50, auto, 50, auto, auto, 50, auto" columns="*">
+                <Label row="0" class="h2" text="Save image to PNG file" textWrap="true" />
+                
+                <Image row="1" src="{{ imagePath }}" stretch="none" />
+            
+                <Button row="2" text="Save the Image" tap="makeCopyFromFile" />
+
+                <Image row="3" src="{{ imageCopyPath }}" stretch="none" />
+                
+                <Label row="4" class="h4" text="{{'New image copy was made(path: '+imageCopyPath+' )'}}" visibility="{{ imageCopyPath !== undefined ? 'visible' : 'collapsed' }}" textWrap="true" />
+
+                <Label row="5" class="h2" text="Save image from image asset to PNG file" textWrap="true" />
+                
+                <Image row="6" src="{{ imagePath }}" stretch="none" />
+            
+                <Button row="7" text="Save the Image" tap="makeCopyFromAsset" />
+
+                <Image row="8" src="{{ imageAssetCopyPath }}" stretch="none" />
+                
+                <Label row="9" class="h4" text="{{'New image copy was made(path: '+imageAssetCopyPath+' )'}}" visibility="{{ imageCopyPath !== undefined ? 'visible' : 'collapsed' }}" textWrap="true" />
+
+                <Label row="10" class="h2" text="Creating base64 string from PNG image file" textWrap="true" />
+                
+                <Image row="11" src="{{ imagePath }}" stretch="none" />
+            
+                <Button row="12" text="Generate Base64String" tap="makeBase64String" />
+                
+                <Label row="13" class="h4" text="{{'Base64String( '+base64String+' )'}}" visibility="{{ base64String !== undefined ? 'visible' : 'collapsed' }}" textWrap="true" />
+                
+            
+            </GridLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

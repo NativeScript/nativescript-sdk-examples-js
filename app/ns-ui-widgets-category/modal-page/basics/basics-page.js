@@ -1,5 +1,5 @@
 // >> main-page-js
-const modalPageModule = "./ns-ui-widgets-category/modal-page/basics/modal-page";
+const modalPageModule = "/ns-ui-widgets-category/modal-page/basics/modal-page";
 
 function openModal(args) {
     const mainView = args.object;
@@ -9,6 +9,7 @@ function openModal(args) {
         // Receive data from the modal page. e.g. username & password
         alert(`Username: ${username} : Password: ${password}`);
     }, fullscreen);
+
 }
 exports.openModal = openModal;
 // << main-page-js

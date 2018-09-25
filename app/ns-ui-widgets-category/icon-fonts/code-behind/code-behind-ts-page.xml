@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <GridLayout>
+        <ListView class="icon list-group" items="{{ glyphs }}">
+            <ListView.itemTemplate>
+                <GridLayout class="list-group-item active" rows="* *">
+                    <Label color="#FF6666" class="m-5" fontSize="34" row="0" textWrap="true" text="{{'Icon: ' + icon + ' ' }}" class="icon"/>
+                    <Label color="#66ccff" class="m-5" fontSize="18" row="1" textWrap="true" text="{{'Icon code: ' + code }}" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

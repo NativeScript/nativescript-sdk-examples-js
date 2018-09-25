@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="WebView local source"/>
+	</Page.actionBar>
+
+   <StackLayout>
+    <StackLayout>
+        <GridLayout rows="100 50 * 50" columns="*">
+            <WebView row="0" col="0" loaded="onFirstWebViewLoaded" src="{{ firstWebViewSRC }}"/>
+            <Label row="1" text="{{ resultFirstWebView }}" textWrap="true" />
+            <WebView row="2" col="0" loaded="onSecondWebViewLoaded" src="{{ secondWebViewSRC }}"/>
+            <Label row="3" text="{{ resultSecondWebView }}" textWrap="true" />
+        </GridLayout>
+    </StackLayout>
+</StackLayout>
+</Page>

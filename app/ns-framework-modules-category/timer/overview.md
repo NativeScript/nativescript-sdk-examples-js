@@ -4,3 +4,4 @@ Methods:
 * `setInterval`
 
 <snippet id='require-timer'/>
+<snippet id='import-timer'/>

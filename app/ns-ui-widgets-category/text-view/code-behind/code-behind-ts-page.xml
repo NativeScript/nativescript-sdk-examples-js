@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+    <StackLayout id="stackLayoutId">
+        <Button text="Disable third TextView" tap="{{ onTap }}" />
+        
+    </StackLayout>
+</Page>

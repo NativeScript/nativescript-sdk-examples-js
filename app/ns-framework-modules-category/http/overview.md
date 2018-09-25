@@ -9,3 +9,4 @@ With its methods, we could request a data from a remote server and to represent 
 
 
 <snippet id='require-http'/>
+<snippet id='import-http'/>

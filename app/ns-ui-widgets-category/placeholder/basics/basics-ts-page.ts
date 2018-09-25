@@ -1,10 +1,10 @@
 // >> placeholder-import
-import {Placeholder} from "tns-core-modules/ui/placeholder";
+import { Placeholder } from "tns-core-modules/ui/placeholder";
 // << placeholder-import
-import {isIOS, isAndroid} from "tns-core-modules/platform";
+import { isIOS, isAndroid } from "tns-core-modules/platform";
 import { ad } from "tns-core-modules/utils/utils";
 // >> placeholder-code-ts
- export function creatingView(args) {
+export function creatingView(args) {
     let nativeView;
     if (isIOS) {
         nativeView = UITextView.new();

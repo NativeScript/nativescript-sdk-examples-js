@@ -1,0 +1,23 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Custom Trace Writer"/>
+	</Page.actionBar>
+
+    <GridLayout class="border-gridLayout">
+        <ListView items="{{ array }}"  class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto auto auto auto" columns="auto *" class="list-group-item">
+                    <Label class="list-group-item-heading" row="0" col="0" text="Message type: "/>
+                    <Label class="list-group-item-text" row="1" col="0" text="Date: "/>
+                    <Label class="list-group-item-text" row="2" col="0" text="Category: "/>
+                    <Label class="list-group-item-text" row="3" col="0" text="Message: "/>
+
+                    <Label class="list-group-item-heading" row="0" col="1" textWrap="true" text="{{ messageType }}"/>
+                    <Label class="list-group-item-text" row="1" col="1" textWrap="true" text="{{ date }}"/>
+                    <Label class="list-group-item-text" row="2" col="1" textWrap="true" text="{{ category }}"/>
+                    <Label class="list-group-item-text" row="3" col="1" textWrap="true" text="{{ message }}"/>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

@@ -1,0 +1,30 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout rows="auto *" columns="*">
+        <Button row="0" class="btn btn-primary btn-active" text="Parse xml" tap="parseXMLButton"/>
+        <ListView row="1" items="{{ source }}">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto auto auto auto auto auto auto auto auto auto auto" columns="* *">
+                    <Label row="0" col="0" text="Attribute" class="attr-label" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" textWrap="true" />
+                    <Label row="0" col="0" text="Text Result" class="text-label" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" textWrap="true" />
+                    <Label row="0" col="0" text="Element<tag>" class="element-label" visibility="{{ significantText === null && attributeName === null ? 'visible' : 'collapsed' }}" textWrap="true" />
+
+                    <Label class="p-15" row="1" col="0" text="Type" textWrap="true"/>
+                    <Label class="p-15" row="1" col="1" textWrap="true" text="{{ eventType }}"/>
+                    <Label class="p-15" visibility="{{ elementName != null ? 'visible' : 'collapsed' }}" row="2" col="0" text="Element Name: " textWrap="true"/>
+                    <Label class="p-15" visibility="{{ elementName != null ? 'visible' : 'collapsed' }}" row="2" col="1" textWrap="true" text="{{ elementName }}"/>
+                    <Label class="p-15" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" row="3" col="0" text="Attribute Name: " textWrap="true"/>
+                    <Label class="p-15" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" row="3" col="1" textWrap="true" text="{{ attributeName }}"/>
+                    <Label class="p-15" visibility="{{ result != null ? 'visible' : 'collapsed' }}" row="4" col="0" text="Result: " textWrap="true"/>
+                    <Label class="p-15" visibility="{{ result != null ? 'visible' : 'collapsed' }}" row="4" col="1" textWrap="true" text="{{ result }}"/>
+                    <Label class="p-15" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" row="5" col="0" text="Text result: " textWrap="true"/>
+                    <Label class="p-15" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" row="5" col="1" textWrap="true" text="{{ significantText }}"/>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>
+<!-- source.push({attributes: false, eventType:event.eventType, elementName:event.elementName, attributeName: null, result: null, significantText: null}); -->
