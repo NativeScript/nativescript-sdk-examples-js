@@ -8,7 +8,7 @@ import { Label } from "tns-core-modules/ui/label";
 export function onLoaded(args) {
     const stackLayout: StackLayout = <StackLayout>args.object;
 
-    // >> creating-tab-view-code-code-ts
+    // >> creating-tab-view-code-ts
 
     // creating TabView Item content body
     const stackLayout0 = new StackLayout();
