@@ -6,6 +6,7 @@ const navigationLinks = [
 const navigationLinksTsc = [
     new link("Basics", "ns-framework-modules-category/connectivity/basics/basics-ts-page")
 ];
+
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
