@@ -1,38 +1,38 @@
-// >> connectivity-require
-const connectivityModule = require("tns-core-modules/connectivity");
-// << connectivity-require
+// >> connectivity-require-ts
+import { connectionType, getConnectionType, startMonitoring, stopMonitoring }from "tns-core-modules/connectivity";
+// << connectivity-require-ts
 
-exports.onNavigatedTo = function(args) {
+export function onNavigatedTo(args) {
     const page = args.object;
     let connectionTypeString;
 
-    // >> connectivity-type
+    // >> connectivity-type-ts
     // result is ConnectionType enumeration (none, wifi or mobile)
-    const myConnectionType = connectivityModule.getConnectionType();
+    const myConnectionType = getConnectionType();
 
     switch (myConnectionType) {
-        case connectivityModule.connectionType.none:
+        case connectionType.none:
             // Denotes no Internet connection.
             console.log("No connection");
             // >> (hide)
             connectionTypeString = "No Internet connectivity!";
             // << (hide)
             break;
-        case connectivityModule.connectionType.wifi:
+        case connectionType.wifi:
             // Denotes a WiFi connection.
             console.log("WiFi connection");
             // >> (hide)
             connectionTypeString = "WiFI connectivity!";
             // << (hide)
             break;
-        case connectivityModule.connectionType.mobile:
+        case connectionType.mobile:
             // Denotes a mobile connection, i.e. cellular network or WAN.
             console.log("Mobile connection");
             // >> (hide)
             connectionTypeString = "Mobile connectivity!";
             // << (hide)
             break;
-        case connectivityModule.connectionType.ethernet:
+        case connectionType.ethernet:
             // Denotes a ethernet connection.
             console.log("Ethernet connection");
             // >> (hide)
@@ -50,28 +50,34 @@ exports.onNavigatedTo = function(args) {
         default:
             break;
     }
-    // << connectivity-type
+    // << connectivity-type-ts
 
-    // >> connectivity-monitoring
-    connectivityModule.startMonitoring((newConnectionType) => {
+    // >> connectivity-monitoring-ts
+    startMonitoring((newConnectionType) => {
         switch (newConnectionType) {
-            case connectivityModule.connectionType.none:
+            case connectionType.none:
                 console.log("Connection type changed to none.");
                 break;
-            case connectivityModule.connectionType.wifi:
+            case connectionType.wifi:
                 console.log("Connection type changed to WiFi.");
                 break;
-            case connectivityModule.connectionType.mobile:
+            case connectionType.mobile:
                 console.log("Connection type changed to mobile.");
                 break;
+            case connectionType.ethernet:
+                console.log("Connection type changed to ethernet.");
+                break;
+            // case connectionType.bluetooth:
+            //     // feature coming in NativeScript 5.0.0
+            //     console.log("Connection type changed to bluetooth.");
+            //     break;
             default:
                 break;
         }
     });
 
     // Explicitly stopping the monitoring
-    connectivityModule.stopMonitoring();
-    // << connectivity-monitoring
-
+    stopMonitoring();
+    // << connectivity-monitoring-ts
     page.bindingContext = { connectionType: connectionTypeString };
-};
+}
