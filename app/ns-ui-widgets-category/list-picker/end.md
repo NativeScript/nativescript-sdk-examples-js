@@ -1,5 +1,3 @@
-**API Reference for** [ListPicker Class](http://docs.nativescript.org/api-reference/modules/_ui_list_picker_.html)
-
 **Native Component**
 
 | Android                | iOS      |

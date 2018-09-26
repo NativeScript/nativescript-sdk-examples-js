@@ -2,9 +2,9 @@
     <Page.actionBar>
 		<ActionBar title="Getting Started"/>
 	</Page.actionBar>
-    <GridLayout rows="auto, auto, auto" columns="*">
-        <!-- >> list-picker-key-value-pairs-xml -->
-        <StackLayout row="0" col="0" class="m-15" backgroundColor="#efa640">
+    <StackLayout>
+        
+        <StackLayout class="m-15" backgroundColor="#efa640">
             <Label class="h3 p-15 m-15 text-center">
                 <FormattedString>
                     <Span text="Role: " color="#006600" ></Span>
@@ -18,14 +18,10 @@
                 </FormattedString>
             </Label>
         </StackLayout>
-        <StackLayout backgroundColor="#4286f4" row="1" col="0" class="m-15">
+        <StackLayout backgroundColor="#4286f4" class="m-15">
             <Label  text="Footballers names"  textWrap="true" textWeight="600" class="text-center"/>
         </StackLayout>
-        
-        
         <ListPicker 
-            row="2"
-            col="0"
             loaded="onListPickerLoaded"
             items="{{ items }}"
             textField="name"
@@ -33,6 +29,5 @@
             selectedIndex="{{ index }}"
             selectedValue="{{ selectedItem }}">
         </ListPicker>
-        <!-- << list-picker-key-value-pairs-xml -->
-    </GridLayout>
+    </StackLayout>
 </Page>

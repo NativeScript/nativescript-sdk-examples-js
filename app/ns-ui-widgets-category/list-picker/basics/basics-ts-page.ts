@@ -1,21 +1,21 @@
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { EventData, fromObject } from "tns-core-modules/data/observable";
+import { Page } from "tns-core-modules/ui/page";
 
-function onNavigatingTo(args) {
-    // >> list-picker-code-behind
+export function onNavigatingTo(args: EventData) {
+    // >> list-picker-code-behind-ts
     const pokemonList = ["Bulbasaur", "Parasect", "Venonat", "Venomoth", "Diglett",
         "Dugtrio", "Meowth", "Persian", "Psyduck", "Arcanine", "Poliwrath", "Machoke"];
 
-    const page = args.object;
+    const page = <Page>args.object;
     const vm = fromObject({
         pickerItems: pokemonList,
         index: 2
     });
     page.bindingContext = vm;
-    // << list-picker-code-behind
+    // << list-picker-code-behind-ts
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-function onSliderLoaded(args) {
+export function onSliderLoaded(args) {
     const sliderComponent = args.object;
     sliderComponent.on("valueChange", (sargs) => {
         const page = sargs.object.page;
@@ -24,9 +24,8 @@ function onSliderLoaded(args) {
         vm.set("index", sargs.object.value);
     });
 }
-exports.onSliderLoaded = onSliderLoaded;
 
-function onListPickerLoaded(args) {
+export function onListPickerLoaded(args) {
     const listPickerComponent = args.object;
     const vm = listPickerComponent.page.bindingContext;
     listPickerComponent.on("selectedIndexChange", (lpargs) => {
@@ -35,4 +34,3 @@ function onListPickerLoaded(args) {
         console.log(`ListPicker selected index: ${listPicker.selectedIndex}`);
     });
 }
-exports.onListPickerLoaded = onListPickerLoaded;

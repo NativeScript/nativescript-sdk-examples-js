@@ -1,6 +1,6 @@
 // >> wrap-layout-import
 const WrapLayout = require("tns-core-modules/ui/layouts/wrap-layout").WrapLayout;
-// >> wrap-layout-import
+// << wrap-layout-import
 const Button = require("tns-core-modules/ui/button/").Button;
 
 exports.onNavigatingTo = function (args) {
