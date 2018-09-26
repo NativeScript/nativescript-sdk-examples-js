@@ -1,6 +1,3 @@
-
-**API Reference for the** [ListView Class](http://docs.nativescript.org/api-reference/modules/_ui_list_view_.html)
-
 **Native Component**
 
 | Android                | iOS      |

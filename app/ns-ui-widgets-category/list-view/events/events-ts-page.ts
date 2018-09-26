@@ -1,6 +1,7 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const dialogs = require("tns-core-modules/ui/dialogs");
+import { Observable } from "tns-core-modules/data/observable";
+import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { alert } from "tns-core-modules/ui/dialogs";
+import { ItemEventData } from "tns-core-modules/ui/list-view";
 
 const listArray = new ObservableArray([
     {
@@ -44,7 +45,7 @@ const moreListItems = new ObservableArray([
 ]);
 
 let loadMore = true;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -52,19 +53,17 @@ function onNavigatingTo(args) {
 
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
-// >> list-view-events
+// >> list-view-events-ts
 // The event will be raise when an item inside the ListView is tapped.
-function onItemTap(args) {
+export function onItemTap(args: ItemEventData) {
     const index = args.index;
-    dialogs.alert(`ListView item tap ${index}`).then(() => {
+    alert(`ListView item tap ${index}`).then(() => {
         console.log("Dialog closed!");
     });
 }
-exports.onItemTap = onItemTap;
-
-// The event will be raised when the ListView is scrolled so that the last item is visible. This even is intended to be used to add additional data in the ListView.
-function onLoadMoreItems(args) {
+// The event will be raised when the ListView is scrolled so that the last item is visible.
+// This even is intended to be used to add additional data in the ListView.
+export function onLoadMoreItems(args: ItemEventData) {
     if (loadMore) {
         console.log("ListView -> LoadMoreItemsEvent");
         setTimeout(() => {
@@ -98,5 +97,4 @@ function onLoadMoreItems(args) {
         loadMore = false;
     }
 }
-exports.onLoadMoreItems = onLoadMoreItems;
-// << list-view-events
+// << list-view-events-ts

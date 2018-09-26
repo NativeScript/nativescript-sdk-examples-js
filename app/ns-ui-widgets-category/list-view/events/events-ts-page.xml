@@ -3,7 +3,6 @@
 		<ActionBar title="Events"/>
 	</Page.actionBar>
     <GridLayout rows="*">
-        <!-- >> list-view-events-xml -->
         <ListView row="0" items="{{ listArray }}" itemTap="onItemTap" loadMoreItems="onLoadMoreItems" class="list-group">
             <ListView.itemTemplate>
                 <StackLayout class="list-group-item">
@@ -11,6 +10,5 @@
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>  
-        <!-- << list-view-events-xml -->
     </GridLayout>
 </Page>
