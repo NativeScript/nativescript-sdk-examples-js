@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+	<Page.actionBar>
+			<ActionBar title="Grid Layout" />
+	</Page.actionBar>
+	<GridLayout rows="*, *, *, *" columns="100, *, auto">
+		<Button text="1" row="0" col="0" />
+		<Button text="2" row="0" col="1" />
+		<Button text="3" row="0" rowSpan="2" col="2" />
+		<Button text="4" row="1" rowSpan="2" col="0" colSpan="2" />
+		<Button text="5" row="2" col="2" />
+		<Button text="6" row="3" col="0" colSpan="3" />
+	</GridLayout>
+</Page>

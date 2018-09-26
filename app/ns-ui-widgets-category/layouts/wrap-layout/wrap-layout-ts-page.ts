@@ -1,11 +1,13 @@
-// >> wrap-layout-import
-const WrapLayout = require("tns-core-modules/ui/layouts/wrap-layout").WrapLayout;
-// >> wrap-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
+import { EventData } from "tns-core-modules/data/observable";
+import { Button } from "tns-core-modules/ui/button";
+import { Page } from "tns-core-modules/ui/page";
+// >> wrap-layout-import-ts
+import { WrapLayout } from "tns-core-modules/ui/layouts/wrap-layout";
+// << wrap-layout-import-ts
 
-exports.onNavigatingTo = function (args) {
-    const page = args.object;
-    // >> wrap-layout-code-behind
+export function onNavigatingTo(args: EventData) {
+    const page = <Page>args.object;
+    // >> wrap-layout-code-behind-ts
     const myWrap = new WrapLayout();
     // >> (hide)
     const button1 = new Button();
@@ -45,7 +47,7 @@ exports.onNavigatingTo = function (args) {
     myWrap.addChild(button3);
     myWrap.addChild(button4);
     myWrap.addChild(button5);
-    // << wrap-layout-code-behind
+    // << wrap-layout-code-behind-ts
 
     page.content = myWrap;
-};
+}

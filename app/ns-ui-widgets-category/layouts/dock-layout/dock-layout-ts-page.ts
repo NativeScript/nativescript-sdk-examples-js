@@ -1,13 +1,14 @@
-// >> dock-layout-import
-const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
-// << dock-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
+// >> dock-layout-import-ts
+import { DockLayout } from "tns-core-modules/ui/layouts/dock-layout";
+// << dock-layout-import-ts
+import { Button } from "tns-core-modules/ui/button/";
+import { Color } from "tns-core-modules/color/";
 
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const grid = page.getViewById("grid");
 
-    // >> dock-layout-code
+    // >> dock-layout-code-ts
     const myDockLayout = new DockLayout();
     // >> (hide)
     const button1 = new Button();
@@ -22,7 +23,7 @@ exports.onNavigatingTo = function(args) {
     const button4 = new Button();
     button4.text = "Bottom";
     button4.backgroundColor = "#B3B3D7";
-    button4.color = "lightgray";
+    button4.color = new Color("lightgray");
     const button5 = new Button();
     button5.text = "Fill";
     button5.backgroundColor = "#CCFFFF";
@@ -34,14 +35,12 @@ exports.onNavigatingTo = function(args) {
     myDockLayout.addChild(button5);
     myDockLayout.stretchLastChild = true;
 
-    // const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
     DockLayout.setDock(button1, "left");
     DockLayout.setDock(button2, "right");
     DockLayout.setDock(button3, "top");
     DockLayout.setDock(button4, "bottom");
-    // << dock-layout-code
+    // << dock-layout-code-ts
 
     grid.removeChildren();
     grid.addChild(myDockLayout);
-
-};
+}

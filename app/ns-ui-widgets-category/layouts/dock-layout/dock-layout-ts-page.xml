@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+	<Page.actionBar>
+		<ActionBar title="Dock Layout"/>
+	</Page.actionBar>
+	<GridLayout id="grid">
+		<DockLayout stretchLastChild="true">
+			<Button dock="Left" text="left"/>
+			<Button dock="Right" text="right"/>
+			<Button dock="Bottom" text="bottom"/>
+			<Button dock="Top" text="top"/>
+			<Button text="Fill"/>
+		</DockLayout>
+	</GridLayout>
+</Page>

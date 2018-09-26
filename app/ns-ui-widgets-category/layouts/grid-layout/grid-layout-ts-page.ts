@@ -1,10 +1,12 @@
-const GridLayout = require("tns-core-modules/ui/layouts/grid-layout").GridLayout;
-const ItemSpec = require("tns-core-modules/ui/layouts/grid-layout").ItemSpec;
-const Button = require("tns-core-modules/ui/button/").Button;
+import { Button } from "tns-core-modules/ui/button";
+import { Page } from "tns-core-modules/ui/page";
+// >> grid-layout-import-ts
+import { GridLayout, ItemSpec } from "tns-core-modules/ui/layouts/grid-layout";
+// << grid-layout-import-ts
 
-exports.onNavigatingTo = function (args) {
-    const page = args.object;
-    // >> grid-layout-code
+export function onNavigatingTo(args) {
+    const page = <Page>args.object;
+    // >> grid-layout-code-ts
     const myGrid = new GridLayout();
     // >> (hide)
     const button1 = new Button();
@@ -73,7 +75,7 @@ exports.onNavigatingTo = function (args) {
     myGrid.addRow(secondRow);
     myGrid.addRow(thirdRow);
     myGrid.addRow(forthRowq);
-    // << grid-layout-code
+    // << grid-layout-code-ts
 
     page.content = myGrid;
-};
+}

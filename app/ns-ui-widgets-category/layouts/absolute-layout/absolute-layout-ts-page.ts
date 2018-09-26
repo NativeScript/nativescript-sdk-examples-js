@@ -1,14 +1,14 @@
-// >> absolute-layout-import
-const AbsoluteLayout = require("tns-core-modules/ui/layouts/absolute-layout").AbsoluteLayout;
-// << absolute-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
-const Color = require("tns-core-modules/color/").Color;
+// >> absolute-layout-import-ts
+import { AbsoluteLayout } from "tns-core-modules/ui/layouts/absolute-layout";
+// << absolute-layout-import-ts
+import { Button } from "tns-core-modules/ui/button/";
+import { Color } from "tns-core-modules/color/";
 // TODO: This should be in "pageNavigatingTo" but that method is defined in the Page base class
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const stack = page.getViewById("stack");
 
-    // >> absolute-layout-code-behind
+    // >> absolute-layout-code-behind-ts
     const absoluteLayout = new AbsoluteLayout();
 
     // >> (hide)
@@ -39,8 +39,8 @@ exports.onNavigatingTo = function(args) {
     AbsoluteLayout.setTop(button3, 25);
     AbsoluteLayout.setLeft(button4, 70);
     AbsoluteLayout.setTop(button4, 150);
-    // << absolute-layout-code-behind
+    // << absolute-layout-code-behind-ts
 
     stack.removeChildren();
     stack.addChild(absoluteLayout);
-};
+}

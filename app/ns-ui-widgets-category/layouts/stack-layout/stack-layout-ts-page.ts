@@ -1,11 +1,13 @@
-// >> stack-layout-import
-const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
-// << stack-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
+import { EventData } from "tns-core-modules/data/observable/";
+import { Button } from "tns-core-modules/ui/button/";
+import { Page } from "tns-core-modules/ui/page/";
+// >> stack-layout-import-ts
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+// << stack-layout-import-ts
 
-exports.onNavigatingTo = function (args) {
-    const page = args.object;
-    // >> stack-layout-code-behind
+export function onNavigatingTo(args: EventData) {
+    const page = <Page>args.object;
+    // >> stack-layout-code-behind-ts
     const myStack = new StackLayout();
     // Set the orientation property
     myStack.orientation = "horizontal";
@@ -28,7 +30,6 @@ exports.onNavigatingTo = function (args) {
     myStack.addChild(button1);
     myStack.addChild(button2);
     myStack.addChild(button3);
-    // << stack-layout-code-behind
-
+    // << stack-layout-code-behind-ts
     page.content = myStack;
-};
+}

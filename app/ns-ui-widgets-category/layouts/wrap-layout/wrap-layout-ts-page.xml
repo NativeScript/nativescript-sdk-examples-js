@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+			<ActionBar title="Wrap Layout"/>
+	</Page.actionBar>
+	<ScrollView>
+		<WrapLayout>
+			<Button text="1" width="150" height="100" backgroundColor="#0099CC"></Button>
+			<Button text="2" width="100" height="150" backgroundColor="#FFFF66"></Button>
+			<Button text="3" width="200" height="120" backgroundColor="#8C489F"></Button>
+			<Button text="4" width="100" height="50"  backgroundColor="#CCFFFF"></Button>
+			<Button text="5" width="250" height="100" backgroundColor="#AA0078"></Button>
+		</WrapLayout>
+	</ScrollView>
+</Page>

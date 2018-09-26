@@ -1,3 +1,12 @@
+The [`FlexboxLayout`](http://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_layout_.html) is the NativeScript's abstraction of the known Flexbox from the Web development. 
+
+### Directions
+
+This establishes the main-axis, thus defining the direction flex items are placed in the flex container. 
+Flexbox is (aside from optional wrapping) a single-direction layout concept. 
+Think of flex items as primarily laying out either in horizontal rows or vertical columns.
+<snippet id='flexbox-direction-xml'/>
+
 ### Wrap
 By default, flex items will all try to fit onto one line. 
 You can change that and allow the items to wrap as needed with this property. 
@@ -34,7 +43,22 @@ The first item will have one unit of space against the container edge, but two u
 Multiple settings example
 <snippet id='flexbox-multiple-settings-xml'/>
 
-**API Reference for** [FlexboxLayout Module](http://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_layout_.html)
-**API Reference for** [FlexboxLayout Class](http://docs.nativescript.org/api-reference/classes/_ui_layouts_flexbox_layout_.flexboxlayout.html)
+### Flexbox (order and shrink)
+This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. 
+It dictates what amount of the available space inside the flex container the item should take up.
 
+If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. 
+If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).
+
+<snippet id='flexbox-grow-xml'/>
+
+### Flex order
+By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container.
+
+<snippet id='flexbox-order-xml'/>
+
+### Flex shrink
+This defines the ability for a flex item to shrink if necessary
+
+<snippet id='flexbox-shrink-xml'/>
 
