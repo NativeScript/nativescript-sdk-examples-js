@@ -1,8 +1,8 @@
-// >> application-import
-const applicationModule = require("tns-core-modules/application");
-// << application-import
-const Observable = require("tns-core-modules/data/observable").Observable;
-const enums = require("ui/enums");
+// >> application-import-ts
+import * as applicationModule from "tns-core-modules/application";
+// << application-import-ts
+import { Observable } from "tns-core-modules/data/observable";
+import * as enums from "tns-core-modules/ui/enums";
 let vm;
 let launchListener;
 let suspendListener;
@@ -13,15 +13,20 @@ let lowMemoryListener;
 let orientationChangedListener;
 let uncaughtErrorListener;
 
-const onNavigatingTo = (args) => {
-    const page = args.object;
+export const onNavigatingTo = (navigatedData) => {
+    const page = navigatedData.object;
     vm = new Observable();
-    vm.set("actionBarTitle", args.context.actionBarTitle);
+    vm.set("actionBarTitle", navigatedData.context.actionBarTitle);
     vm.set("info", "Refer to the code-behind files \nfor Application Events snippets");
     if (applicationModule.android) {
         const activity = applicationModule.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
-        vm.set("orientation", (orientationEnum === 1 ? enums.DeviceOrientation.portrait : enums.DeviceOrientation.landscape));
+        vm.set(
+            "orientation",
+            orientationEnum === 1
+                ? enums.DeviceOrientation.portrait
+                : enums.DeviceOrientation.landscape
+        );
         vm.set("resumeEvent", "");
         vm.set("resumeEvent", "");
         vm.set("launchEvent", "");
@@ -30,12 +35,11 @@ const onNavigatingTo = (args) => {
         vm.set("orientation", "portrait");
     }
     page.bindingContext = vm;
-    page.actionBar.title = args.context.title;
+    page.actionBar.title = navigatedData.context.title;
 };
-exports.onNavigatingTo = onNavigatingTo;
 
-const onGridLoaded = (args) => {
-    // >> application-events
+export const onGridLoaded = (eventData) => {
+    // >> application-events-ts
     launchListener = applicationModule.on(applicationModule.launchEvent, (args) => {
         // The root view for this Window on iOS or Activity for Android.
         // If not set a new Frame will be created as a root view in order to maintain backwards compatibility.
@@ -71,12 +75,11 @@ const onGridLoaded = (args) => {
         // UnhandledErrorEventData.error: NativeScriptError
         console.log("NativeScript Error: ", args.error);
     });
-    // << application-events
+    // << application-events-ts
 };
-exports.onGridLoaded = onGridLoaded;
 
-const onGridUnloaded = () => {
-    // >> application-events-off
+export const onGridUnloaded = () => {
+    // >> application-events-off-ts
     applicationModule.off(applicationModule.launchEvent, launchListener);
     applicationModule.off(applicationModule.resumeEvent, resumeListener);
     applicationModule.off(applicationModule.suspendEvent, suspendListener);
@@ -85,6 +88,6 @@ const onGridUnloaded = () => {
     applicationModule.off(applicationModule.lowMemoryEvent, lowMemoryListener);
     applicationModule.off(applicationModule.orientationChangedEvent, orientationChangedListener);
     applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
-    // << application-events-off
+    // << application-events-off-ts
 };
-exports.onGridUnloaded = onGridUnloaded;
+

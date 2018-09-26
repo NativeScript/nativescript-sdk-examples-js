@@ -1,15 +1,15 @@
-const Color = require("tns-core-modules/color").Color;
-const knownColors = require("tns-core-modules/color/known-colors");
+import { Color } from "tns-core-modules/color";
+import * as knownColors from "tns-core-modules/color/known-colors";
 
-exports.onNavigatedTo = function(args) {
+export function onNavigatedTo(args) {
     // >> color-compare
     const red = new Color("#FF0000");
     const isRed = red.equals(new Color("red"));
     console.log("Are both colors identical: ", isRed);
     // << color-compare
-};
+}
 
-exports.onLabel1Loaded = function(args) {
+export function onLabel1Loaded(args) {
     const label = args.object;
 
     // >> color-hex-full
@@ -18,9 +18,9 @@ exports.onLabel1Loaded = function(args) {
     // << color-hex-full
 
     label.backgroundColor = color;
-};
+}
 
-exports.onLabel2Loaded = function(args) {
+export function onLabel2Loaded(args) {
     const label = args.object;
 
     // >> color-hex-short
@@ -29,9 +29,9 @@ exports.onLabel2Loaded = function(args) {
     // << color-hex-short
 
     label.backgroundColor = color;
-};
+}
 
-exports.onLabel3Loaded = function(args) {
+export function onLabel3Loaded(args) {
     const label = args.object;
 
     // >> color-rgba
@@ -40,9 +40,9 @@ exports.onLabel3Loaded = function(args) {
     // << color-rgba
 
     label.backgroundColor = color;
-};
+}
 
-exports.onLabel4Loaded = function(args) {
+export function onLabel4Loaded(args) {
     const label = args.object;
 
     // >> color-rgba-full
@@ -51,16 +51,16 @@ exports.onLabel4Loaded = function(args) {
     // << color-rgba-full
 
     label.backgroundColor = color;
-};
+}
 
-exports.onLabel5Loaded = function(args) {
+export function onLabel5Loaded(args) {
     const label = args.object;
 
     // >> color-color-name
     // Creates the color from thw known colors list
-    const color = new Color(knownColors.Khaki);
+    // import * as knownColors from "tns-core-modules/color/known-colors";
+    const color = new Color(knownColors.OrangeRed);
     // << color-color-name
 
     label.backgroundColor = color;
-};
-
+}

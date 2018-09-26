@@ -1,9 +1,13 @@
-const application = require("tns-core-modules/application");
+import { EventData } from "tns-core-modules/data/observable";
+import { NavigatedData, Page } from "tns-core-modules/ui/page";
+import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
+import { Label } from "tns-core-modules/ui/label";
+import * as application from "tns-core-modules/application";
 
-function onGridLoaded(args) {
-    const grid = args.object;
-    const lbl = grid.getViewById("lbl");
-    const iconLabel = grid.getViewById("iconLabel");
+export function onGridLoaded(args: EventData) {
+    const grid = <GridLayout>args.object;
+    const lbl = <Label>grid.getViewById("lbl");
+    const iconLabel = <Label>grid.getViewById("iconLabel");
     iconLabel.className = "fa";
     iconLabel.textAlignment = "center";
     iconLabel.verticalAlignment = "middle";
@@ -11,7 +15,7 @@ function onGridLoaded(args) {
     lbl.textAlignment = "center";
     lbl.verticalAlignment = "middle";
     lbl.fontSize = 24;
-    // >> application-platform-js
+    // >> application-platform-ts
     if (application.android) {
         console.log("We are running on Android device!");
         // >> (hide)
@@ -25,11 +29,10 @@ function onGridLoaded(args) {
         lbl.text = "iOS Applicaiton";
         // << (hide)
     }
-    // << application-platform-js
+    // << application-platform-ts
 }
-exports.onGridLoaded = onGridLoaded;
-function onNavigatingTo(args) {
-    const page = args.object;
+
+export function onNavigatingTo(args: NavigatedData) {
+    const page = <Page>args.object;
     page.actionBar.title = args.context.title;
 }
-exports.onNavigatingTo = onNavigatingTo;
