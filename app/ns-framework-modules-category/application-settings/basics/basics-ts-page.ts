@@ -29,7 +29,7 @@ export function onNavigatingTo(args) {
     console.log(username);
     // << app-settings-string-code-ts
 
-    // >> app-settings-number-code
+    // >> app-settings-number-code-ts
     appSettings.setNumber("locationX", 54.321);
     const locationX = parseFloat(appSettings.getNumber("locationX").toFixed(3));
     items.push(new Item("locationX", `${locationX}`));
