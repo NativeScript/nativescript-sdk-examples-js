@@ -1,23 +1,15 @@
 // >> app-settings-require
 const appSettings = require("application-settings");
+// << app-settings-require
 const fromObject = require("data/observable").fromObject;
 
 class Item {
-    constructor(keyValue, itemValue) {
-        this.k = keyValue;
-        this.i = itemValue;
-    }
-
-    get key() {
-        return this.k;
-    }
-
-    get value() {
-        return this.i;
+    constructor(key, item) {
+        this.key = key;
+        this.item = item;
     }
 }
 
-// << app-settings-require
 function onNavigatingTo(args) {
     // >> app-settings-bool-code
     const items = [];
@@ -68,7 +60,6 @@ function onNavigatingTo(args) {
     });
 
     page.bindingContext = viewModel;
-
 }
 exports.onNavigatingTo = onNavigatingTo;
 

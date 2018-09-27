@@ -1,16 +1,19 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+const fromObject = require("tns-core-modules/data/observable").fromObject;
 
-const pokemonList = ["Bulbasaur", "Parasect", "Venonat", "Venomoth", "Diglett",
-"Dugtrio", "Meowth", "Persian", "Psyduck", "Arcanine", "Poliwrath", "Machoke"];
-// >> list-picker-code-behind
 function onNavigatingTo(args) {
+    // >> list-picker-code-behind
+    const pokemonList = ["Bulbasaur", "Parasect", "Venonat", "Venomoth", "Diglett",
+        "Dugtrio", "Meowth", "Persian", "Psyduck", "Arcanine", "Poliwrath", "Machoke"];
 
     const page = args.object;
-    const vm = new Observable();
-    vm.set("pokemons", pokemonList);
-    vm.set("index", 0);
+    const vm = fromObject({
+        pickerItems: pokemonList,
+        index: 2
+    });
     page.bindingContext = vm;
+    // << list-picker-code-behind
 }
+exports.onNavigatingTo = onNavigatingTo;
 
 function onSliderLoaded(args) {
     const sliderComponent = args.object;
@@ -21,6 +24,7 @@ function onSliderLoaded(args) {
         vm.set("index", sargs.object.value);
     });
 }
+exports.onSliderLoaded = onSliderLoaded;
 
 function onListPickerLoaded(args) {
     const listPickerComponent = args.object;
@@ -31,7 +35,4 @@ function onListPickerLoaded(args) {
         console.log(`ListPicker selected index: ${listPicker.selectedIndex}`);
     });
 }
-// << list-picker-code-behind
-exports.onNavigatingTo = onNavigatingTo;
-exports.onSliderLoaded = onSliderLoaded;
 exports.onListPickerLoaded = onListPickerLoaded;

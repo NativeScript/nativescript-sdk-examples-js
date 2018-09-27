@@ -2,15 +2,15 @@
 const connectivityModule = require("tns-core-modules/connectivity");
 // << connectivity-require
 
-exports.onNavigatedTo = function (args) {
+exports.onNavigatedTo = function(args) {
     const page = args.object;
     let connectionTypeString;
 
     // >> connectivity-type
     // result is ConnectionType enumeration (none, wifi or mobile)
-    const connectionType = connectivityModule.getConnectionType();
+    const myConnectionType = connectivityModule.getConnectionType();
 
-    switch (connectionType) {
+    switch (myConnectionType) {
         case connectivityModule.connectionType.none:
             // Denotes no Internet connection.
             console.log("No connection");
@@ -32,6 +32,21 @@ exports.onNavigatedTo = function (args) {
             connectionTypeString = "Mobile connectivity!";
             // << (hide)
             break;
+        case connectivityModule.connectionType.ethernet:
+            // Denotes a ethernet connection.
+            console.log("Ethernet connection");
+            // >> (hide)
+            connectionTypeString = "Ethernet connectivity!";
+            // << (hide)
+            break;
+        // Bluetooth functionality in master branch (to be released with 5.0.0)
+        // case connectionType.bluetooth:
+        //     // Denotes a ethernet connection.
+        //     console.log("Bluetooth connection");
+        //     // >> (hide)
+        //     connectionTypeString = "Bluetooth connectivity!";
+        //     // << (hide)
+        //     break;
         default:
             break;
     }

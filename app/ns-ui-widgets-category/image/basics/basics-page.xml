@@ -12,7 +12,7 @@
             <Image src="~/images/logo.png" stretch="aspectFill" />
             <!-- << image-app-folder  -->
             <!-- >> image-online-url -->
-            <Image src="https://docs.nativescript.org/img/cli-getting-started/angular/chapter0/NativeScript_logo.png" stretch="aspectFill" />
+            <Image src="https://www.nativescript.org/images/default-source/Blogs/ns-logo_share_600x315.png" stretch="aspectFill" />
             <!-- << image-online-url -->
         </StackLayout>
     </ScrollView>

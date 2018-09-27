@@ -4,11 +4,17 @@ const navigationLinks = [
     new link("Get", "ns-framework-modules-category/fetch/get/get-page"),
     new link("Post", "ns-framework-modules-category/fetch/post/post-page")
 ];
+const navigationLinksTsc = [
+    new link("Get", "ns-framework-modules-category/fetch/get/get-ts-page"),
+    new link("Post", "ns-framework-modules-category/fetch/post/post-ts-page")
+];
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples: false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

@@ -5,16 +5,17 @@ const fromObjectRecursive = require("tns-core-modules/data/observable").fromObje
 // << observable-basics-imports
 
 function onNavigatedTo(args) {
-    console.log("onNavigatedTo BASICS");
+    console.log("onLoaded BASICS");
     // >> observable-class
     // creating an Observable and setting title propertu with a string value
+    const page = args.object;
     const viewModel = new Observable();
 
     // String binding using set with key-value
     viewModel.set("clientName", "Jonh Doe");
 
     // Number binding using set with key-value
-    viewModel.set("mySize", 24);
+    viewModel.set("mySize", 26);
 
     // Boolean binding using set with key-value
     viewModel.set("isVisible", true);
@@ -32,8 +33,7 @@ function onNavigatedTo(args) {
     console.log(viewModel.get("isVisible")); // true
 
     // bind the view-model to the view's bindingContext property (e.g. the curent page or  view from navigatingTo or loaded event)
-    const view = args.object;
-    view.bindingContext = viewModel;
+    page.bindingContext = viewModel;
     // << observable-class
 
     // >> observable-from-object

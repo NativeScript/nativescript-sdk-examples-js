@@ -1,0 +1,13 @@
+Label {
+    background-color: blue;
+    color: white;
+    margin:8;
+    padding: 6;
+}
+
+#info {
+    background-color: orangered;
+    color: white;
+    margin:8;
+    padding: 16;
+}

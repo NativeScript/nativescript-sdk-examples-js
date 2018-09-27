@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-touch-xml -->
-        <Label text="Touch me!" touch="onTouch" textWrap="true"/>
+        <Label text="Touch me!" touch="onTouch"/>
         <!-- << gest-touch-xml -->
     </StackLayout>
 </Page>

@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-swipe-xml -->
-        <Label text="Swipe me!" swipe="onSwipe" textWrap="true"/>
+        <Label text="Swipe me!" swipe="onSwipe"/>
         <!-- << gest-swipe-xml -->
     </StackLayout>
 </Page>

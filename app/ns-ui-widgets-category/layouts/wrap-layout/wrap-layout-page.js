@@ -1,4 +1,6 @@
+// >> wrap-layout-import
 const WrapLayout = require("tns-core-modules/ui/layouts/wrap-layout").WrapLayout;
+// << wrap-layout-import
 const Button = require("tns-core-modules/ui/button/").Button;
 
 exports.onNavigatingTo = function (args) {
@@ -6,43 +8,43 @@ exports.onNavigatingTo = function (args) {
     // >> wrap-layout-code-behind
     const myWrap = new WrapLayout();
     // >> (hide)
-    const btn1 = new Button();
-    btn1.backgroundColor = "#0099CC";
-    btn1.width = 150;
-    btn1.height = 100;
-    btn1.margin = 4;
+    const button1 = new Button();
+    button1.backgroundColor = "#0099CC";
+    button1.width = 150;
+    button1.height = 100;
+    button1.margin = 4;
 
-    const btn2 = new Button();
-    btn2.backgroundColor = "#FFFF66";
-    btn2.width = 100;
-    btn2.height = 150;
-    btn2.margin = 4;
+    const button2 = new Button();
+    button2.backgroundColor = "#FFFF66";
+    button2.width = 100;
+    button2.height = 150;
+    button2.margin = 4;
 
-    const btn3 = new Button();
-    btn3.backgroundColor = "#8C489F";
-    btn3.width = 200;
-    btn3.height = 120;
-    btn3.margin = 4;
+    const button3 = new Button();
+    button3.backgroundColor = "#8C489F";
+    button3.width = 200;
+    button3.height = 120;
+    button3.margin = 4;
 
-    const btn4 = new Button();
-    btn4.backgroundColor = "#CCFFFF";
-    btn4.width = 100;
-    btn4.height = 50;
-    btn4.margin = 4;
+    const button4 = new Button();
+    button4.backgroundColor = "#CCFFFF";
+    button4.width = 100;
+    button4.height = 50;
+    button4.margin = 4;
 
-    const btn5 = new Button();
-    btn5.backgroundColor = "#AA0078";
-    btn5.width = 250;
-    btn5.height = 100;
-    btn5.margin = 4;
+    const button5 = new Button();
+    button5.backgroundColor = "#AA0078";
+    button5.width = 250;
+    button5.height = 100;
+    button5.margin = 4;
     // << (hide)
 
     // Add views to stack layout
-    myWrap.addChild(btn1);
-    myWrap.addChild(btn2);
-    myWrap.addChild(btn3);
-    myWrap.addChild(btn4);
-    myWrap.addChild(btn5);
+    myWrap.addChild(button1);
+    myWrap.addChild(button2);
+    myWrap.addChild(button3);
+    myWrap.addChild(button4);
+    myWrap.addChild(button5);
     // << wrap-layout-code-behind
 
     page.content = myWrap;

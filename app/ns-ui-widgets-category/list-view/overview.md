@@ -2,5 +2,5 @@ Using a ListView control inside NativeScript app requires some special attention
 
 The NativeScript modules provides a custom component which simplifies the way native ListView is used. 
 
-
 <snippet id='require-list-view'/>
+<snippet id='require-list-view-ts'/>

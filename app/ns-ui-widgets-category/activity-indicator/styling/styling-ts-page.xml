@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+        <ActionBar title="Styling" icon="" />
+    </Page.actionBar>
+    <StackLayout verticalAlignment="middle">
+        <ActivityIndicator id="myIndicator"
+                            busy="{{ isLoading }}"
+                            backgroundColor="lightgray"
+                            borderRadius="50"
+                            color="blue" 
+                            width="100" 
+                            height="100"/>               
+    </StackLayout>
+</Page>

@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="" icon="" class="action-bar"/>
+	</Page.actionBar>
+    <GridLayout rows="*, *" columns="*" class="m-20" loaded="onGridLoaded">
+        <Label row="0" id="iconLabel" textWrap="true" />
+        <Label row="1" id="lbl" textWrap="true" />
+    </GridLayout>
+</Page>

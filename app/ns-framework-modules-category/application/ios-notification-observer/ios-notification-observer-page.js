@@ -18,7 +18,6 @@ function onNavigatedTo(args) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
     // >> app-ios-observer-code
     if (application.ios) {
-        // import { ios as iosUtils } from "tns-core-modules/utils/utils";
         utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryMonitoringEnabled = true;
         vm.set("batteryLife", +(utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1));
         observer = application.ios.addNotificationObserver(UIDeviceBatteryLevelDidChangeNotification, (notification) => {

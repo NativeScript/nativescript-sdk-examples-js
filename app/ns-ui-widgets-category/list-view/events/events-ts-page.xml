@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Events"/>
+	</Page.actionBar>
+    <GridLayout rows="*">
+        <ListView row="0" items="{{ listArray }}" itemTap="onItemTap" loadMoreItems="onLoadMoreItems" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>  
+    </GridLayout>
+</Page>

@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Dynamic Creation"/>
+	</Page.actionBar>
+    <!-- >> listview-create-code-behind-xml -->
+    <StackLayout id="container"/>
+    <!-- << listview-create-code-behind-xml -->
+</Page>

@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Rotation"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Label text="Rotate me!" rotation="onRotation"/>
+    </StackLayout>
+</Page>

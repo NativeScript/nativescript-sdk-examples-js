@@ -1,4 +1,4 @@
-const Observable = require("data/observable").Observable;
+const Observable = require("tns-core-modules/data/observable").Observable;
 // >> html-view-require
 const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 // << html-view-require

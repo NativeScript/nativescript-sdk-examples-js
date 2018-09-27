@@ -12,13 +12,12 @@ function onNavigatingTo(args) {
     // >> formatted-string-label-code
     const label = new Label();
 
-    const formattedStringLabel = new FormattedString();
     const firstLabelSpan = new Span();
-    const secondLabelSpan = new Span();
-
     firstLabelSpan.text = "Formatted String ";
+    const secondLabelSpan = new Span();
     secondLabelSpan.text = "Label";
 
+    const formattedStringLabel = new FormattedString();
     formattedStringLabel.spans.push(firstLabelSpan);
     formattedStringLabel.spans.push(secondLabelSpan);
 

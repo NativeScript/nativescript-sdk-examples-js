@@ -7,13 +7,14 @@ MVVM facilitates a separation of development of the graphical user interface fro
 
 The biggest benefit of separating models, views, and view models, is that you are able to use two-way data binding; that is, changes to data in the model get instantly reflected on the view, and vice versa. The other big benefit is code reuse, as you're often able to reuse models and view models across views.
 
-Complete example demonstrating MVVM pattern in NativeScript application.
+Complete example demonstrating MVVM pattern in NativeScript application with Plaing JavaScript and with TypeScript (using `Class`).
 
-ViewModel (`main-view-model.js`)
+Plain JavaScript
 <snippet id='mvvm-view-model'/>
-
-Code-Behind Page (`main-page.js`)
 <snippet id='mvvm-code-behind'/>
-
-XML Layout (`main-page.xml`)
 <snippet id='mvvm-xml'/>
+
+TypeScript
+<snippet id='mvvm-view-model-ts'/>
+<snippet id='mvvm-code-behind-ts'/>
+<snippet id='mvvm-xml-ts'/>

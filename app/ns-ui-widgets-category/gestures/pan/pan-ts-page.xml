@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Pan"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle" width="100%">
+        <Label text="Pan me!" pan="onPan" height="200" width="200" textAlignment="center" verticalAlignment="middle" class="m-10"/>
+        <Label text="{{ 'deltaX: ' + deltaX }}" width="100%" height="60" class="m-10"/>
+        <Label text="{{ 'deltaY: ' + deltaY }}" width="100%" height="60" class="m-10"/>
+    </StackLayout>
+</Page>

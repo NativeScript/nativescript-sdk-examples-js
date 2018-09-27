@@ -1,7 +1,6 @@
 Label {
-    background-color: lightslategray;
+    border-color: lightslategray;
     border-radius: 20;
-    color: white;
     font-size: 26;
     horizontal-align: center;
     padding: 15;

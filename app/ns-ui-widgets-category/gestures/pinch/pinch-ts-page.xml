@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Pinch"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Label text="Pinch me!" pinch="onPinch" />
+    </StackLayout>
+</Page>

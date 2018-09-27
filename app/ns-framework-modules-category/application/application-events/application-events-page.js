@@ -1,6 +1,6 @@
-// >> application-events-import
+// >> application-import
 const applicationModule = require("tns-core-modules/application");
-// << application-events-import
+// << application-import
 const Observable = require("tns-core-modules/data/observable").Observable;
 const enums = require("ui/enums");
 let vm;
@@ -32,6 +32,8 @@ const onNavigatingTo = (args) => {
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
 };
+exports.onNavigatingTo = onNavigatingTo;
+
 const onGridLoaded = (args) => {
     // >> application-events
     launchListener = applicationModule.on(applicationModule.launchEvent, (args) => {
@@ -71,10 +73,10 @@ const onGridLoaded = (args) => {
     });
     // << application-events
 };
+exports.onGridLoaded = onGridLoaded;
 
 const onGridUnloaded = () => {
     // >> application-events-off
-    // import { off as applicationOff } from "tns-core-modules/applicaiton";
     applicationModule.off(applicationModule.launchEvent, launchListener);
     applicationModule.off(applicationModule.resumeEvent, resumeListener);
     applicationModule.off(applicationModule.suspendEvent, suspendListener);
@@ -85,7 +87,4 @@ const onGridUnloaded = () => {
     applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-off
 };
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onGridLoaded = onGridLoaded;
 exports.onGridUnloaded = onGridUnloaded;

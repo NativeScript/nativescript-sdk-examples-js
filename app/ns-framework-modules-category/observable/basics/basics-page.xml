@@ -1,20 +1,20 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
     <Page.actionBar>
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
 
-    <StackLayout class="m-8 text-center">
-        <Label text="Binding Basics" textWrap="true" class="h2 p-15" />
+    <StackLayout class="m-8 text-center" height="500">
+        <Label text="Binding Basics in NativeScript" textWrap="true" class="h2 p-15" />
         <TextField hint="" text="{{ clientName }}" backgroundColor="lightgray"/>
         <!-- >> observable-class-xml -->
         <!-- Using basic string binding and tap event callback binding-->
-        <Label text="{{ clientName }}" tap="{{ onLabelTap }}" textWrap="true" class="h2"/>
+        <Label text="{{ clientName }}" tap="{{ onLabelTap }}" textWrap="true" class="h2" color="red"/>
 
         <!-- Example for using binding with concatenation (text prop) and for using binding to change font-size -->
         <Label text="{{ 'font-size:' + mySize }}" textWrap="true" fontSize="{{ mySize }}"/>
 
         <!-- Example demonstrating the boolean property usage with visibility and ternary expression-->
-        <Label text="{{ isVisible }}" textWrap="true" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}"/>
+        <Label text="{{ isVisible }}" textWrap="true" visibility="{{ isItemVisible, isItemVisible ? 'visible' : 'collapsed' }}"/>
         <!-- << observable-class-xml -->
-    </StackLayout>
+    </StackLayout> 
 </Page>

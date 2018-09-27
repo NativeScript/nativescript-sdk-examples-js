@@ -1,24 +1,27 @@
 // >> list-view-create-code
-const Observable = require("tns-core-modules/data/observable").Observable;
-const titlesArray = [
-    { title: "The Da Vinci Code" },
-    { title: "Harry Potter and the Chamber of Secrets" },
-    { title: "The Alchemist" },
-    { title: "The Godfather" },
-    { title: "Goodnight Moon" },
-    { title: "The Hobbit" }
-];
+const fromObject = require("tns-core-modules/data/observable").fromObject;
 
 function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new Observable();
-
-    // Setting the listview binding source
-    vm.set("myTitles", titlesArray);
-
+    const vm = fromObject({
+        // Setting the listview binding source
+        myTitles: [
+            { title: "The Da Vinci Code" },
+            { title: "Harry Potter and the Chamber of Secrets" },
+            { title: "The Alchemist" },
+            { title: "The Godfather" },
+            { title: "Goodnight Moon" },
+            { title: "The Hobbit" }
+        ]
+    });
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;
+
+function onListViewLoaded(args) {
+    const listView = args.object;
+}
+exports.onListViewLoaded = onListViewLoaded;
 
 function onItemTap(args) {
     const index = args.index;
@@ -31,10 +34,9 @@ function onTap(args) {
     const page = args.object.page;
     // >> list-view-refresh
     const listView = page.getViewById("listView");
-
-    titlesArray.push({ title: "Game of Thrones" });
-// Manually trigger the update so that the new color is shown.
-listView.refresh();
+    page.bindingContext.myTitles.push({ title: "Game of Thrones" });
+    // Manually trigger the update so that the new color is shown.
+    listView.refresh();
     // << list-view-refresh
 
 }

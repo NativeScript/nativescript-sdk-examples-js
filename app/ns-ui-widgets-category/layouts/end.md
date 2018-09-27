@@ -1,1 +1,0 @@
-**API Reference for** [StackLayout Class](http://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_.html)

@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Long Press"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Label text="Long Press me!" longPress="onLongPress" textWrap="true"/>
+    </StackLayout>
+</Page>

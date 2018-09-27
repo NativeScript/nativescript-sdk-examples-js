@@ -21,7 +21,12 @@ Example
 myView.on("tap", () => {
     console.log("myView tapped!");
 })
-```   
+```
+```TypeScript
+myView.on("tap", () => {
+    console.log("myView tapped!");
+})
+``` 
 
 Gestures events can also be implemented directly in the XML layout by providing the callback method.
 ```XML
@@ -29,6 +34,11 @@ Gestures events can also be implemented directly in the XML layout by providing 
 ```
 ```JavaScript
 exports.onTap = function(args) {
+    console.log("Label tapped!");
+};
+```
+```TypeScript
+export function onTap(args) {
     console.log("Label tapped!");
 };
 ```

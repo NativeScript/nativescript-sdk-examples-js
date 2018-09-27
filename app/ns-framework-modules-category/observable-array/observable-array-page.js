@@ -1,13 +1,18 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-framework-modules-category/basics/basics-page")
+    new link("Basics", "ns-framework-modules-category/observable-array/basics/basics-page")
+];
+const navigationLinksTsc = [
+    new link("Basics", "ns-framework-modules-category/observable-array/basics/basics-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples: false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

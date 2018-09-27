@@ -1,6 +1,5 @@
-// >> application-require-js
 const application = require("tns-core-modules/application");
-// << application-require-js
+
 function onGridLoaded(args) {
     const grid = args.object;
     const lbl = grid.getViewById("lbl");

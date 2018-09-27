@@ -7,50 +7,50 @@ exports.onNavigatingTo = function (args) {
     // >> grid-layout-code
     const myGrid = new GridLayout();
     // >> (hide)
-    const btn1 = new Button();
-    btn1.backgroundColor = "#0099CC";
-    const btn2 = new Button();
-    btn2.backgroundColor = "#FFFF66";
-    const btn3 = new Button();
-    btn3.backgroundColor = "#AA0078";
-    const btn4 = new Button();
-    btn4.backgroundColor = "#8C489F";
-    const btn5 = new Button();
-    btn5.backgroundColor = "#CCFFFF";
-    const btn6 = new Button();
-    btn6.backgroundColor = "#0099CC";
+    const button1 = new Button();
+    button1.backgroundColor = "#0099CC";
+    const button2 = new Button();
+    button2.backgroundColor = "#FFFF66";
+    const button3 = new Button();
+    button3.backgroundColor = "#AA0078";
+    const button4 = new Button();
+    button4.backgroundColor = "#8C489F";
+    const button5 = new Button();
+    button5.backgroundColor = "#CCFFFF";
+    const button6 = new Button();
+    button6.backgroundColor = "#0099CC";
     // << (hide)
     // Add views to grid layout
-    myGrid.addChild(btn1);
-    myGrid.addChild(btn2);
-    myGrid.addChild(btn3);
-    myGrid.addChild(btn4);
-    myGrid.addChild(btn5);
-    myGrid.addChild(btn6);
+    myGrid.addChild(button1);
+    myGrid.addChild(button2);
+    myGrid.addChild(button3);
+    myGrid.addChild(button4);
+    myGrid.addChild(button5);
+    myGrid.addChild(button6);
 
     // Set row property on views
-    GridLayout.setRow(btn1, 0);
-    GridLayout.setRow(btn2, 0);
-    GridLayout.setRow(btn3, 0);
-    GridLayout.setRow(btn4, 1);
-    GridLayout.setRow(btn5, 2);
-    GridLayout.setRow(btn6, 3);
+    GridLayout.setRow(button1, 0);
+    GridLayout.setRow(button2, 0);
+    GridLayout.setRow(button3, 0);
+    GridLayout.setRow(button4, 1);
+    GridLayout.setRow(button5, 2);
+    GridLayout.setRow(button6, 3);
 
     // Set rowSpan property on views
-    GridLayout.setRowSpan(btn3, 2);
-    GridLayout.setRowSpan(btn4, 2);
+    GridLayout.setRowSpan(button3, 2);
+    GridLayout.setRowSpan(button4, 2);
 
     // Set column property on views
-    GridLayout.setColumn(btn1, 0);
-    GridLayout.setColumn(btn2, 1);
-    GridLayout.setColumn(btn3, 2);
-    GridLayout.setColumn(btn4, 0);
-    GridLayout.setColumn(btn5, 2);
-    GridLayout.setColumn(btn6, 0);
+    GridLayout.setColumn(button1, 0);
+    GridLayout.setColumn(button2, 1);
+    GridLayout.setColumn(button3, 2);
+    GridLayout.setColumn(button4, 0);
+    GridLayout.setColumn(button5, 2);
+    GridLayout.setColumn(button6, 0);
 
     // Set colSpan property on views
-    GridLayout.setColumnSpan(btn4, 2);
-    GridLayout.setColumnSpan(btn6, 3);
+    GridLayout.setColumnSpan(button4, 2);
+    GridLayout.setColumnSpan(button6, 3);
 
     // Create columns specification (e.g. columns=""100, *, auto"")
     // ItemSpec second argumenter is of type GridUnitType ("pixel, "star", "auto")

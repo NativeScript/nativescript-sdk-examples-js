@@ -6,11 +6,11 @@
     <GridLayout rows="*">
     <android>
         <!-- >> label-styling-xml -->
-        <Label text="&#xff17b; Sample label" class="my-label" />
+        <Label text="&#xff17b; Sample label" class="fa my-label border" />
         <!-- << label-styling-xml -->
      </android>
      <ios>
-        <Label text="&#xf179; Sample label!" class="my-label" />
+        <Label text="&#xf179; Sample label!" class="fa my-label border" />
      </ios> 
     </GridLayout>
 </Page>

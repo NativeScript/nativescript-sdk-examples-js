@@ -1,4 +1,6 @@
+// >> stack-layout-import
 const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
+// << stack-layout-import
 const Button = require("tns-core-modules/ui/button/").Button;
 
 exports.onNavigatingTo = function (args) {
@@ -8,24 +10,24 @@ exports.onNavigatingTo = function (args) {
     // Set the orientation property
     myStack.orientation = "horizontal";
     // >> (hide)
-    const btn1 = new Button();
-    btn1.backgroundColor = "#0099CC";
-    btn1.width = 100;
-    btn1.margin = 8;
-    const btn2 = new Button();
-    btn2.backgroundColor = "#CCFFFF";
-    btn2.width = 100;
-    btn2.margin = 8;
-    const btn3 = new Button();
-    btn3.backgroundColor = "#8C489F";
-    btn3.width = 100;
-    btn3.margin = 8;
+    const button1 = new Button();
+    button1.backgroundColor = "#0099CC";
+    button1.width = 100;
+    button1.margin = 8;
+    const button2 = new Button();
+    button2.backgroundColor = "#CCFFFF";
+    button2.width = 100;
+    button2.margin = 8;
+    const button3 = new Button();
+    button3.backgroundColor = "#8C489F";
+    button3.width = 100;
+    button3.margin = 8;
     // << (hide)
 
     // Add views to stack layout
-    myStack.addChild(btn1);
-    myStack.addChild(btn2);
-    myStack.addChild(btn3);
+    myStack.addChild(button1);
+    myStack.addChild(button2);
+    myStack.addChild(button3);
     // << stack-layout-code-behind
 
     page.content = myStack;

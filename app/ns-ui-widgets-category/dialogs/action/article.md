@@ -4,6 +4,8 @@ with keys `title`, `message`, `cancelBUttonText`, `actions`, and `cancelable`(An
 
 Action with parameters (Web browser style).
 <snippet id='dialog-action-web'/>
+<snippet id='dialog-action-web-ts'/>
 
 Action with `ActionOptions` object.
 <snippet id='dialog-action'/>
+<snippet id='dialog-action-ts'/>
