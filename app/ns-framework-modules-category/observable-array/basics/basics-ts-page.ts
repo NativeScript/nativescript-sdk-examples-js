@@ -23,7 +23,7 @@ export function onNavigatingTo(data) {
     // << observable-array-item-index-ts
 
     // >> observable-array-set-item-ts
-    myObservableArray.on(ObservableArray.changeEvent, (args: ChangedData) => {
+    myObservableArray.on(ObservableArray.changeEvent, (args: any) => {
         console.log(args.index); // Index of the changed item (in this case 7).
         console.log(args.action); // Action (In this case "update")
         console.log(args.addedCount); // Number of added items (In this case 1).
