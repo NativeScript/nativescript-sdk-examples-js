@@ -1,11 +1,15 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Pan"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
+   
+
+    <StackLayout verticalAlignment="middle" width="100%">
         <!-- >> gest-pan-xml -->
-        <Label text="Pan me!" pan="onPan" textWrap="true"/>
+        <Label text="Pan me!" pan="onPan"/>
         <!-- << gest-pan-xml -->
+        <Label text="{{ 'deltaX: ' + deltaX }}" width="90%" height="60" />
+        <Label text="{{ 'deltaY: ' + deltaY }}" width="90%" height="60" />
     </StackLayout>
 </Page>

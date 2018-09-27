@@ -2,3 +2,4 @@ Another common case in working with bindings is requesting access to the parent 
 
 <snippet id='parent-binding-xml'/>
 <snippet id='parent-binding-code'/>
+<snippet id='parent-binding-code-ts'/>

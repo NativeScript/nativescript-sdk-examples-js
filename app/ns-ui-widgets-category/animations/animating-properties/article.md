@@ -33,9 +33,11 @@ Property values:
 
 The first example will change the background color of a `view` from "red" to "green". 
 <snippet id='animating-background-color'/>
+<snippet id='animating-background-color-ts'/>
 
 The following example shows a test case where all the properties are used in single animation.
 <snippet id='animation-properties'/>
+<snippet id='animation-properties-ts'/>
 
 By default, an animation moves with a linear speed without acceleration or deceleration. This might look unnatural and different from the real world where objects need time to reach their top speed and can't stop immediately. The animation curve (sometimes called an easing or timing function) is used to give animations an illusion of inertia. It controls the animation speed by modifying the fraction of the duration. NativeScript comes with a number of predefined animation curves defined in [`AnimationCurve` enumeration](https://docs.nativescript.org/api-reference/modules/_ui_enums_.animationcurve).
 
@@ -47,6 +49,7 @@ By default, an animation moves with a linear speed without acceleration or decel
 
 In NativeScript, the animation curve is represented by the `AnimationCurve` enumeration and can be specified with the curve property of the animation.
 <snippet id='using-animation-curve-enum'/>
+<snippet id='using-animation-curve-enum-ts'/>
 
 [Experiment with the different animation timing functions in the NativeScript Playground](https://play.nativescript.org/?template=play-tsc&id=RE7NqF&v=53)
 
@@ -59,10 +62,13 @@ Once you find an animation path you like, simply copy and paste the cubic bezier
 There should be four numbers (X,Y coordinates for each of the two points in the animation).
 
 <snippet id='creating-cubic-bezier'/>
+<snippet id='creating-cubic-bezier-ts'/>
 
 To animate a target view (or to create a complex animation for multiple views/layouts) we can an array of `AnimationDefinition` and pass it to the `Animation` constructor.
 Using the `target` proerty in the definition, allows us full control of the animation object via code.
 <snippet id='animation-target'/>
+<snippet id='animation-target-ts'/>
 
 Cancelling an animation via the `cancel` method.
 <snippet id='animation-cancel'/>
+<snippet id='animation-cancel-ts'/>

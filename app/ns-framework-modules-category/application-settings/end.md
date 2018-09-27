@@ -1,5 +1,3 @@
-**API Reference for the** [Application Settings](https://docs.nativescript.org/api-reference/modules/_application_settings_) module
-
 **Native Component**
 
 | Android               | iOS      |

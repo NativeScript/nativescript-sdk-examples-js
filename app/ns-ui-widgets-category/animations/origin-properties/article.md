@@ -5,4 +5,5 @@ To obtain more control over our animations, we can use `originX` and `originY`pr
 By default, the value of 0.5 (for both X and Y coordinate) is placing the ideal centre of our view. To create complex rotation animations, we can change the origin properties. In the example below, we are demonstrating how to rotate a view against different `originX` and `originY` points.
 
 <snippet id='rotating-example'/>
+<snippet id='rotating-example-ts'/>
 <snippet id='rotating-example-xml'/>

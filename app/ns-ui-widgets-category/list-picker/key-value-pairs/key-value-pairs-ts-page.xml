@@ -1,0 +1,33 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+    <StackLayout>
+        
+        <StackLayout class="m-15" backgroundColor="#efa640">
+            <Label class="h3 p-15 m-15 text-center">
+                <FormattedString>
+                    <Span text="Role: " color="#006600" ></Span>
+                    <Span text="{{ selectedItem }}" color="#990000" textWeight="600" ></Span>
+                </FormattedString>
+            </Label>
+            <Label class="h3 p-15 m-15 text-center">
+                <FormattedString>
+                    <Span text="Selected index: " color="#006600" ></Span>
+                    <Span text="{{ index }}" color="#990000" fontAttributes="Bold"></Span>
+                </FormattedString>
+            </Label>
+        </StackLayout>
+        <StackLayout backgroundColor="#4286f4" class="m-15">
+            <Label  text="Footballers names"  textWrap="true" textWeight="600" class="text-center"/>
+        </StackLayout>
+        <ListPicker 
+            loaded="onListPickerLoaded"
+            items="{{ items }}"
+            textField="name"
+            valueField="role"
+            selectedIndex="{{ index }}"
+            selectedValue="{{ selectedItem }}">
+        </ListPicker>
+    </StackLayout>
+</Page>

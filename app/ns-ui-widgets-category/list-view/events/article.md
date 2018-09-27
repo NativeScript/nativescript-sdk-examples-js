@@ -2,3 +2,4 @@ In the example is shown how to set up `itemTap` and `loadMoreItems` events as we
 
 <snippet id='list-view-events-xml'/>
 <snippet id='list-view-events'/>
+<snippet id='list-view-events-ts'/>

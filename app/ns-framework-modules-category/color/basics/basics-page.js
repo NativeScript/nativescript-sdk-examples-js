@@ -1,4 +1,5 @@
 const Color = require("tns-core-modules/color").Color;
+const knownColors = require("tns-core-modules/color/known-colors");
 
 exports.onNavigatedTo = function(args) {
     // >> color-compare
@@ -57,7 +58,7 @@ exports.onLabel5Loaded = function(args) {
 
     // >> color-color-name
     // Creates the color from thw known colors list
-    const color = new Color("orangered");
+    const color = new Color(knownColors.Khaki);
     // << color-color-name
 
     label.backgroundColor = color;

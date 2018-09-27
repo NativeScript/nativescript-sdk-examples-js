@@ -5,6 +5,7 @@ The example is demonstrating two-way binding via code-behind. The `TextField` ac
 Then when the user inputs new string into the `TextField`, the two-way binding will update the label's `text` property simultaneously.
 
 <snippet id='two-way-binding-code'/>
+<snippet id='two-way-binding-code-ts'/>
 
 To create a binding in XML, a source object is needed, which will be created the same way, as in the example above. Then the binding is described in the XML (using a mustache syntax). 
 With an XML declaration, only the names of the properties are set - for the target: text, and for source: textSource. 

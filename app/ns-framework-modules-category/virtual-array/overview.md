@@ -1,2 +1,2 @@
-The `VirtualArray` class is an advanced array-like class that helps to load items on demand.
+The [`VirtualArray`](https://docs.nativescript.org/api-reference/modules/_data_virtual_array_) is an advanced array-like class that helps to load items on demand.
 Through property `loadSize` and the `itemLoadingEvent`, the virtual array is used to load items only when needed.

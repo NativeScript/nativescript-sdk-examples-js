@@ -1,4 +1,3 @@
-
 const AnimationCurveEnum = require("tns-core-modules/ui/enums").AnimationCurve;
 let myView;
 

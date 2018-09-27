@@ -6,4 +6,5 @@ platforms/*
 dist/*
 scripts/*
 app/**/**/**/*-ts-*.js
-app/app.js
+app/app.js 
+app/ns-framework-modules-category/observable/mvvm-pattern/main-view-model-ts

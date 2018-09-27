@@ -2,3 +2,4 @@ A very common case is to provide a list (array) of plain elements (numbers, date
 
 <snippet id='plain-object-binding-xml'/>
 <snippet id='plain-object-binding-code'/>
+<snippet id='plain-object-binding-code-ts'/>

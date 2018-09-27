@@ -1,5 +1,6 @@
+// >> dock-layout-import
 const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
-
+// << dock-layout-import
 const Button = require("tns-core-modules/ui/button/").Button;
 
 exports.onNavigatingTo = function(args) {

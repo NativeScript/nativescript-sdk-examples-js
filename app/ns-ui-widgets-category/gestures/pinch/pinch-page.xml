@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-pinch-xml -->
-        <Label text="Pinch me!" pinch="onPinch" textWrap="true"/>
+        <Label text="Pinch me!" pinch="onPinch" />
         <!-- << gest-pinch-xml -->
     </StackLayout>
 </Page>

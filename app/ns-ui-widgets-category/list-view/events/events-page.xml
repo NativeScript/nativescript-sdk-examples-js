@@ -2,7 +2,6 @@
     <Page.actionBar>
 		<ActionBar title="Events"/>
 	</Page.actionBar>
-
     <GridLayout rows="*">
         <!-- >> list-view-events-xml -->
         <ListView row="0" items="{{ listArray }}" itemTap="onItemTap" loadMoreItems="onLoadMoreItems" class="list-group">
@@ -11,8 +10,7 @@
                     <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
                 </StackLayout>
             </ListView.itemTemplate>
-        </ListView>
-                
+        </ListView>  
         <!-- << list-view-events-xml -->
     </GridLayout>
 </Page>

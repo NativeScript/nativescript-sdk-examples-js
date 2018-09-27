@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Tap"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Label text="Tap me!" tap="onTap"/>
+    </StackLayout>
+</Page>

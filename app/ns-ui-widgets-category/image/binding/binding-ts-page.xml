@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Binding"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Image src="{{ imageUri }}" width="100" height="100" stretch="aspectFill" />
+    </StackLayout>
+</Page>

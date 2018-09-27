@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <StackLayout verticalAlignment="middle">
+        <DatePicker loaded="onDatePickerLoaded" date="{{ date }}" minDate="{{ minDate }}" maxDate="{{ maxDate }}"></DatePicker>
+        <DatePicker loaded="onDatePickerLoaded" day="20" month="04" year="1980"></DatePicker>
+    </StackLayout>
+</Page>

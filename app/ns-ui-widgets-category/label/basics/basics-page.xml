@@ -3,9 +3,9 @@
 		<ActionBar title="Getting Started"/>
 	</Page.actionBar>
 
-    <GridLayout rows="auto, *">
+    <GridLayout rows="*">
         <!-- >> label-xml -->
-        <Label text="{{ title }}" textWrap="true" />
+        <Label id="lbl" text="{{ title }}" textWrap="true" />
         <!-- << label-xml -->
     </GridLayout>
 </Page>

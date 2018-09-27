@@ -7,6 +7,13 @@ const navigationLinks = [
     new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-page")
 ];
 
+const navigationLinksTsc = [
+    new link("Animated Properties", "ns-ui-widgets-category/animations/animating-properties/animating-properties-ts-page"),
+    new link("Chained Animations", "ns-ui-widgets-category/animations/chaining-animations/chaining-animations-ts-page"),
+    new link("Animating Multiple Views", "ns-ui-widgets-category/animations/multiple-views-animation/multiple-views-ts-page"),
+    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-ts-page")
+];
+
 // >> animations-imports
 // Full list of animating properties at https://docs.nativescript.org/api-reference/interfaces/_ui_animation_.animationdefinition
 const AnimationDefinition = require("tns-core-modules/ui/animation").AnimationDefinition;
@@ -19,7 +26,9 @@ function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
-        actionBarTitle: args.context.title
+        actionBarTitle: args.context.title,
+        showTypeScriptExamples: false,
+        tsclinks: navigationLinksTsc
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

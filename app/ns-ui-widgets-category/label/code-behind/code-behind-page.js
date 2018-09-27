@@ -13,13 +13,13 @@ function onNavigatingTo(args) {
 
     // Styling a label via css type
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
-    let pageCSS = "label {background-color: #C6C6C6; color: #10C2B0; font-size: 14;} ";
+    let pageCSS = "label {background-color: #C6C6C6; color: #bc7474; font-size: 14; padding:10;} ";
 
     const mySecondLabel = new labelModule.Label();
     mySecondLabel.text = "The quick brown fox jumps over the lazy dog.";
     // Styling a label via css class
     mySecondLabel.className = "title";
-    pageCSS += ".title {background-color: #7974bc; color: #54ff5f; font-size: 20;} ";
+    pageCSS += ".title {background-color: #7974bc; color: #54ff5f; font-size: 20; padding:10;} ";
 
     const myThirdLabel = new labelModule.Label();
     myThirdLabel.text = "The quick brown fox jumps over the lazy dog.";
@@ -27,10 +27,12 @@ function onNavigatingTo(args) {
     myThirdLabel.textWrap = true;
     // Styling a label via css control identifier
     myThirdLabel.id = "testLabel";
-    pageCSS += "#testLabel {background-color: #bc7474; color: #8754ff; font-size: 25;}";
+    pageCSS += "#testLabel {background-color: #bc7474; color: whitesmoke; font-size: 25; padding:10;}";
 
     // Binding text property of a label to an observable model
     const myFourthlabel = new labelModule.Label();
+    myFourthlabel.textAlignment = "center";
+    myFourthlabel.fontSize = 24;
     const expValue = "Expected Value";
     const bindingOptions = {
         sourceProperty: "sourceProperty",

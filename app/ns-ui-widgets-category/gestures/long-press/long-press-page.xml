@@ -5,7 +5,7 @@
 
     <StackLayout verticalAlignment="middle">
         <!-- >> gest-long-press-xml -->
-        <Label text="Long Press me!" longPress="onLongPress" textWrap="true"/>
+        <Label text="Long Press me!" longPress="onLongPress"/>
         <!-- << gest-long-press-xml -->
     </StackLayout>
 </Page>

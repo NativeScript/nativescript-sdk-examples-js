@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+			<ActionBar title="Stack Layout"/>
+		</Page.actionBar>
+	<ScrollView>
+		<StackLayout orientation="vertical">
+			<Button text="Button 1" backgroundColor="#0099CC" width="100" margin="8"></Button>
+			<Button text="Button 2" backgroundColor="#CCFFFF" width="100" margin="8"></Button>
+			<Button text="Button 3" backgroundColor="#8C489F" width="100" margin="8"></Button>
+		</StackLayout>
+	</ScrollView>
+</Page>

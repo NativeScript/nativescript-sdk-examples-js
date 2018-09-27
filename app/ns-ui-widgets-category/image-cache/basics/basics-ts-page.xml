@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+
+    <ScrollView>
+        <StackLayout backgroundColor="lightgray">
+            <Label text="Using cached image" textWrap="true" class="h2 text-center" />
+            <Image src="{{ imageSource }}" stretch="aspectFill" />
+        </StackLayout>
+    </ScrollView>
+</Page>

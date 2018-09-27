@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Swipe"/>
+	</Page.actionBar>
+
+    <StackLayout verticalAlignment="middle">
+        <Label text="Swipe me!" swipe="onSwipe"/>
+    </StackLayout>
+</Page>
