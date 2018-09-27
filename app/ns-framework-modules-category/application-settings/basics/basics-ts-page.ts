@@ -43,7 +43,7 @@ export function onNavigatingTo(args) {
     console.log(someKey);
     // << app-settings-default-value-code-ts
 
-    // >> app-settings-no-value-code
+    // >> app-settings-no-value-code-ts
     // will return undefined if there is no value for "noSuchKey"
     const defaultValue = appSettings.getString("noSuchKey");
     items.push(new Item("noSuchKey", `${defaultValue}`));
