@@ -35,6 +35,7 @@ const navigationLinks = [
     new link("Label", "ns-ui-widgets-category/label/label-page"),
     new link("ListPicker", "ns-ui-widgets-category/list-picker/list-picker-page"),
     new link("ListView", "ns-ui-widgets-category/list-view/list-view-page"),
+    new link("Page", "ns-ui-widgets-category/page/page-page"),
     new link("Progress", "ns-ui-widgets-category/progress/progress-page"),
     new link("Formatted String", "ns-ui-widgets-category/formatted-string/formatted-string-page"),
     new link("Trace Module", "ns-framework-modules-category/trace/trace-page"),
