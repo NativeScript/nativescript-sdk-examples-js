@@ -1,0 +1,8 @@
+<Page loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Frame Creation"/>
+	</Page.actionBar>
+    <StackLayout>
+        <Label text="See the code-behind and NativeScript documentaiton for detailed information" class="h2 text-center p-20" textWrap="true"/>
+    </StackLayout>
+</Page>

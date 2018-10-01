@@ -1,0 +1,8 @@
+<Page loaded="onLoaded" >
+    <Page.actionBar>
+		<ActionBar title="Getting Frame Reference"/>
+	</Page.actionBar>
+    <StackLayout>
+        <Label text="See the code-behind and NativeScript documentaiton for detailed information" class="h2 text-center p-20" textWrap="true"/>
+    </StackLayout>
+</Page>
