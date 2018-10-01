@@ -1,6 +1,8 @@
 <!-- >> page-creation-xml -->
-<!-- main-page.xml-->
 <Page loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Page Creation"/>
+	</Page.actionBar>
     <!-- Each page can have only a single root view -->
     <StackLayout>
         <!-- content here -->

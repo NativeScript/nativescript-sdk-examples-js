@@ -6,4 +6,4 @@ slug: page
 previous_url: /navigation
 environment: nativescript
 ---
-example-order: page-creation, page-reference
+example-order: page-creation, page-reference, page-events

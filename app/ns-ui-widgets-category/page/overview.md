@@ -1,3 +1,3 @@
 NativeScript applications consist of pages that represent the separate application screens.
 
-Pages are instances of the `Page` class from the [`Page`](https://docs.nativescript.org/api-reference/modules/_ui_page_) module. To navigate between pages, you can use the methods of the `Frame` (https://docs.nativescript.org/api-reference/modules/_ui_frame_) module. This article will provides guidelines for creating and accessing pages, using page events with the related event data and implementing page navigation.
+Pages are instances of the `Page` class from the [`Page`](https://docs.nativescript.org/api-reference/modules/_ui_page_) module. To navigate between pages, you can use the methods of the [`Frame`] (https://docs.nativescript.org/api-reference/modules/_ui_frame_) module. This article will provides guidelines for creating and accessing pages, using page events with the related event data and implementing page navigation.

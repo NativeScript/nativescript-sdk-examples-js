@@ -1,0 +1,28 @@
+<!-- >> page-events-xml -->
+<Page navigatedFrom="onNavigatedFrom"
+      navigatedTo="onNavigatedTo"
+      loaded="onPageLoaded"
+      navigatingFrom="onNavigatingFrom"
+      navigatingTo="onNavigatingTo"
+      unloaded="onUnloaded" 
+      layoutChanged="onLayoutChanged">
+    <!-- >> (hide) -->
+    <Page.actionBar>
+		<ActionBar title="Page Events"/>
+	</Page.actionBar>
+    <!-- Each page can have only a single root view -->
+    <StackLayout verticalAlignment="center" textAlignment="center">
+        <!-- content here -->
+        <Label text="Page Events order (entering page)" class="h2 text-center" textWrap="true" />
+        <Label text=" >>> navigatingTo " class="h3 text-center" textWrap="true" />
+        <Label text=" >>> loaded " class="h3 text-center" textWrap="true" />
+        <Label text=" >>> navigatedTo " class="h3 text-center" textWrap="true" />
+
+        <Label text="Page Events order (leaving page)" class="h2 text-center" textWrap="true" />
+        <Label text=" <<< navigatingFrom " class="h3 text-center" textWrap="true" />
+        <Label text=" <<< unloaded " class="h3 text-center" textWrap="true" />
+        <Label text=" <<< navigatedFrom " class="h3 text-center" textWrap="true" />
+    </StackLayout>
+    <!-- << (hide) -->
+</Page>
+<!-- << page-events-xml -->

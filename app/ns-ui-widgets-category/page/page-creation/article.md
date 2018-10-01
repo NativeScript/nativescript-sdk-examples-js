@@ -1,4 +1,4 @@
-Pages represent the separate screens of your application. Each page is an instance of the [`Page`](http://docs.nativescript.org/api-reference/classes/_ui_page_.page.html) module. Each class instance inherits the [`ContentView`](http://docs.nativescript.org/api-reference/classes/_ui_content_view_.contentview.html) property which holds the root visual element of the UI.
+Pages represent the separate screens of your application. Each page is an instance of the `Page` class.
 
 NativeScript provides two approaches to instantiating your pages.
 
