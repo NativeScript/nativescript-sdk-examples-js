@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "eslint": "~4.19.0",
-    "extract-text-webpack-plugin": "~3.0.2",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.0",
     "nativescript-dev-webpack": "^0.16.2",
