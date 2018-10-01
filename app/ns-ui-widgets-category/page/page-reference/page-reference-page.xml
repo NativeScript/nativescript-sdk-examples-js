@@ -1,0 +1,8 @@
+<Page loaded="onPageLoaded" navigatedTo="onNavigatedTo" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Page Reference"/>
+	</Page.actionBar>
+    <StackLayout loaded="onStackLoaded">
+        <Button text="Get Page Reference" tap="onButtonTapped" />
+    </StackLayout>
+</Page>

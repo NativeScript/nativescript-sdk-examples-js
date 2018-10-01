@@ -1,10 +1,10 @@
-// >> page-basics-js
+// >> page-creation-js
 function onPageLoaded(args) {
     console.log("Page Loaded");
     const page = args.object;
 }
 exports.onPageLoaded = onPageLoaded;
-// << page-basics-js
+// << page-creation-js
 
 /*
 // >> page-code-create-js

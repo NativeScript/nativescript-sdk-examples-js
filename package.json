@@ -20,7 +20,10 @@
   ],
   "license": "Apache-2.0",
   "nativescript": {
-    "id": "org.nativescript.nativescriptsdkexamplesjs"
+    "id": "org.nativescript.nativescriptsdkexamplesjs",
+    "tns-android": {
+      "version": "5.0.0-2018-09-28-195532-01"
+    }
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",

@@ -1,4 +1,4 @@
-<!-- >> page-basics-xml -->
+<!-- >> page-creation-xml -->
 <!-- main-page.xml-->
 <Page loaded="onPageLoaded">
     <!-- Each page can have only a single root view -->
@@ -7,4 +7,4 @@
         <Label text="Hello, world!"/>
     </StackLayout>
 </Page>
-<!-- << page-basics-xml -->
+<!-- << page-creation-xml -->
