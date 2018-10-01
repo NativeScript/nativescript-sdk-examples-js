@@ -18,7 +18,7 @@ export function createPage(): Page {
 // << page-code-create-ts
 */
 
-// >> page-basics-ts
+// >> page-creation-ts
 // main-page.ts
 import { EventData } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
@@ -27,4 +27,4 @@ export function onPageLoaded(args: EventData): void {
     console.log("Page Loaded");
     const page = args.object as Page;
 }
-// << page-basics-ts
+// << page-creation-ts

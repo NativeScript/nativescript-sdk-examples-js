@@ -1,10 +1,12 @@
-<!-- >> page-basics-xml -->
-<!-- main-page.xml-->
+<!-- >> page-creation-xml -->
 <Page loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Page Creation"/>
+	</Page.actionBar>
     <!-- Each page can have only a single root view -->
     <StackLayout>
         <!-- content here -->
         <Label text="Hello, world!"/>
     </StackLayout>
 </Page>
-<!-- << page-basics-xml -->
+<!-- << page-creation-xml -->
