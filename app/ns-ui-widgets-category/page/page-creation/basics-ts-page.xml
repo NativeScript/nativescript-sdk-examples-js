@@ -1,0 +1,8 @@
+<!-- main-page.xml-->
+<Page loaded="onPageLoaded">
+    <!-- Each page can have only a single root view -->
+    <StackLayout>
+        <!-- content here -->
+        <Label text="Hello, world!"/>
+    </StackLayout>
+</Page>
