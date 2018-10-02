@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+        <ActionBar title="Second Page" icon="">
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*" columns="*">
+        <Label text="Second Page" textWrap="true" class="h2 text-center m-20" />
+    </GridLayout>
+</Page>
+
+
