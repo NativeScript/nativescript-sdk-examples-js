@@ -32,10 +32,10 @@ function onNavigatingTo(args) {
     items.push(new Item("locationX", `${locationX}`));
     console.log(locationX);
     // << app-settings-number-code
-    
+
     // >> app-settings-remove-entry
-	// will remove the setting for a key
-	appSettings.remove("keyToRemove");
+    // will remove the setting for a key
+    appSettings.remove("keyToRemove");
     // << app-settings-remove-entry
 
     // >> app-settings-default-value-code
