@@ -6,9 +6,9 @@ To get a reference to the `Frame` instance you need use the following methods or
 <snippet id='frame-reference-topmost-ts'/>
 
 - the [`getFrameById`](https://docs.nativescript.org/api-reference/modules/_ui_frame_#getFrameById) method from the `tns-core-modules/ui/frame` module. This method allows you to get a reference to a `Frame` by a **id** that you specified on the element. Note that this searches for already navigated frames and won't find frames that are not yet displayed like in a modal view for example.
-<snippet id='rame-reference-get-id-xml'/>
-<snippet id='rame-reference-get-id'/>
-<snippet id='rame-reference-get-id-ts'/>
+<snippet id='frame-reference-get-id-xml'/>
+<snippet id='frame-reference-get-id'/>
+<snippet id='frame-reference-get-id-ts'/>
 
 - the `frame` property of [`Page`](https://docs.nativescript.org/api-reference/classes/_ui_page_.page) instance. Each `Page` instance carries information about the frame object which navigated to it in the `frame`  property. This lets you navigate with the `frame` property as well. 
 <snippet id='frame-reference-via-frame-prop'/>
