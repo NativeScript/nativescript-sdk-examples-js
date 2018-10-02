@@ -4,8 +4,6 @@
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="*" columns="*">
-        <Label text="Second Page" textWrap="true" class="h2 text-center m-20" />
+        <Label row="0" text="Second Page" textWrap="true" class="h2 text-center m-20" />
     </GridLayout>
 </Page>
-
-
