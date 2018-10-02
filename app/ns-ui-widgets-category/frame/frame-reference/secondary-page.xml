@@ -1,0 +1,10 @@
+<Page loaded="onLoaded" >
+    <Page.actionBar>
+		<ActionBar title="Getting Frame Reference"/>
+	</Page.actionBar>
+    <GridLayout rows="100, *" columns="">
+        <Button row="0" text="Tap to navigate within the Frame" tap="onTap" />
+        <Frame row="1" id="my-frame" defaultPage="default-page"/>
+    </GridLayout>
+</Page>
+
