@@ -1,0 +1,9 @@
+<!-- >> second-modal-view-xml-navigation -->
+<Page class="page">
+    <StackLayout>
+        <Label style="text-align:center;"  text="Second view"/>
+        <Button text="Navigate Back" tap="onGoBack"/>
+        <Button text="Close Modal" tap="onCloseModal"/>
+    </StackLayout>
+</Page>
+<!-- << second-modal-view-xml-navigation -->

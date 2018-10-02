@@ -1,0 +1,10 @@
+<Page backgroundColor="green" showingModally="onShowingModally">
+    <Page.actionBar>
+        <ActionBar backgroundColor="red" title="Modal view" icon="">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout backgroundColor="lightGreen">
+        <Label text="Modal view with ActionBar" style="text-align:center;" textWrap="true" />
+        <Button text="Close Modal" tap="onCloseModal"/>
+    </StackLayout>
+</Page>

@@ -1,0 +1,13 @@
+<!-- >> main-page-xml-action-bar -->
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Modal view Navigation"/>
+	</Page.actionBar>
+
+    <GridLayout rows="auto, *">
+        
+        <Button text="Open modal" tap="openModal" textWrap="true" />
+        
+    </GridLayout>
+</Page>
+<!-- << main-page-xml-action-bar -->
