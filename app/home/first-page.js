@@ -11,6 +11,7 @@ exports.navigate = function() {
 };
 // << (hide)
 // << frame-navigate-base
+
 exports.navigateByModule = function() {
     // >> frame-navigate-module
     const frame = getFrameById("my-frame");
