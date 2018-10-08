@@ -5,7 +5,7 @@ export function navigate() {
     // << (hide)
     // Example using `getFrameById(frameId)` to get a `Frame` reference
     // As an alternative, we could use `topmost()` method or `page.frame` property
-    const frame = getFrameById("my-unique-frame");
+    const frame = getFrameById("my-frame-id");
     frame.navigate("home/second-page");
     // >> (hide)
 }
@@ -16,7 +16,7 @@ import { NavigationEntry } from "tns-core-modules/ui/frame";
 
 export function navigateByModule() {
     // >> frame-navigate-module-ts
-    const frame = getFrameById("my-unique-frame");
+    const frame = getFrameById("my-frame-id");
 
     // import { NavigationEntry } from "tns-core-modules/ui/frame";
     const navigationEntry: NavigationEntry = {

@@ -1,0 +1,7 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" actionBarHidden="true">
+    <GridLayout rows="*" columns="*">
+        <!-- >> frame-nav-dynamic-page-ts -->
+        <Frame id="my-frame-id" defaultPage="home/first-ts-page"/>
+        <!-- << frame-nav-dynamic-page-ts -->
+    </GridLayout>
+</Page>

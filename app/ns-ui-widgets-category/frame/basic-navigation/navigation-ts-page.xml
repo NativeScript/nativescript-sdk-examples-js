@@ -1,7 +1,7 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd"  actionBarHidden="true">
     <GridLayout rows="*" columns="*">
         <!-- >> frame-nav-default-page-ts -->
-        <Frame id="my-unique-frame" defaultPage="home/first-ts-page"/>
+        <Frame id="my-frame-id" defaultPage="home/first-ts-page"/>
         <!-- << frame-nav-default-page-ts -->
     </GridLayout>
 </Page>

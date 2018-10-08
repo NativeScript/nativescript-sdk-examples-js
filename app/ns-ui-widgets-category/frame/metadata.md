@@ -6,4 +6,4 @@ slug: frame
 previous_url: /navigation
 environment: nativescript
 ---
-example-order: frame-creation, frame-reference
+example-order: frame-creation, frame-reference, basic-navigation, dynamic-navigation
