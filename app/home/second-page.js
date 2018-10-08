@@ -1,9 +1,12 @@
-const fromObject = require("tns-core-modules/data/observable").fromObject;
-
+// >> nav-context-receive
 function onNavigatedTo(args) {
     const page = args.object;
-    const context = page.navigationContext;
+    const navigationContext = page.navigationContext;
 
-    page.bindingContext = fromObject(context);
+    // The navigation event arguments are of type NavigatedData and provide another way to grab the passed context
+    const context = args.context;
+
+    page.bindingContext = navigationContext;
 }
 exports.onNavigatedTo = onNavigatedTo;
+// << nav-context-receive

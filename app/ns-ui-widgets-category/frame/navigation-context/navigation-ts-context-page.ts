@@ -21,3 +21,16 @@ export function onNavigate(args: EventData) {
     frame.navigate(navEntryWithContext);
 }
 // << nav-context-pass-ts
+
+// >> nav-context-pass-binding-ts
+const navEntryWithBindingContext: NavigationEntry = {
+    moduleName: "home/second-ts-page",
+    // when using bindingContext the landing page will automatically
+    // receive and set this object as page.bindingContext with navigatedTo event
+    bindingContext: {
+        name: "John",
+        age: 25,
+        isProgramer: true
+    }
+};
+// << nav-context-pass-binding-ts
