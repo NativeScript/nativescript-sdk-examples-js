@@ -1,0 +1,5 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <GridLayout rows="*" columns="*">
+        <Button text="Navigate and Pass Contexy" tap="onNavigate"  class="btn btn-primary btn-active"/>
+    </GridLayout>
+</Page>

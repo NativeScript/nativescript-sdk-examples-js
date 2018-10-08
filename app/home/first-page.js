@@ -1,4 +1,4 @@
-
+// >> frame-navigate-base
 const getFrameById = require("tns-core-modules/ui/frame").getFrameById;
 // >> (hide)
 exports.navigate = function() {
