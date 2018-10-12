@@ -1,0 +1,5 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" actionBarHidden="true">
+    <GridLayout rows="*" columns="*">
+        <Frame id="my-frame-id" defaultPage="home/first-ts-page"/>
+    </GridLayout>
+</Page>

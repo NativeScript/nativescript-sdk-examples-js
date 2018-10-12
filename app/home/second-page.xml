@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+        <ActionBar title="Sub Page" icon="">
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout>
+        <Label text="Sub Page" textWrap="true" class="h2 text-center m-20" />
+        <Label text="{{ name }}" textWrap="true" />
+        <Label text="{{ age }}" textWrap="true" />
+        <Label text="{{ isProgramer }}" textWrap="true" />
+    </StackLayout>
+</Page>

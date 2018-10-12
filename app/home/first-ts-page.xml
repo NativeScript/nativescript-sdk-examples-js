@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+        <ActionBar title="First Page" icon="">
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*, *" columns="*">
+        <Label row="0" text="First Page (TS)" textWrap="true" class="h2 text-center m-20" />
+        <StackLayout row="1" >
+            <Button text="Navigate to Second (via page name)" tap="navigate" class="btn btn-primary btn-active m-20" />
+            <Button text="Navigate To Second (via navigationEntry)" tap="navigateByModule" class="btn btn-primary btn-active m-20" />
+        </StackLayout>
+    </GridLayout>
+</Page>
