@@ -11,7 +11,6 @@ export function onNavigatingTo(args) {
 
     vm.set("myItems", colors);
     vm.set("mySecondItems", secondColorsArray);
-
     page.bindingContext = vm;
 }
 // << repeater-create-code-ts
