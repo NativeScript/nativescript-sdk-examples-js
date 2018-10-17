@@ -19,6 +19,8 @@ function showLoginDialog() {
         okButtonText: "Login",
         cancelButtonText: "Cancel",
         neutralButtonText: "Neutral",
+        userNameHint: "Enter your username",
+        passwordHint: "Enter your password",
         userName: "Username",
         password: "Password"
     };
