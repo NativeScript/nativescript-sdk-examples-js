@@ -86,9 +86,9 @@ export function getJSONExample(viewModel) {
         // >> (hide)
         viewModel.set("host", r.headers.Host);
         viewModel.set("userAgent", r.headers["User-Agent"]);
+        // << (hide)
         viewModel.set("origin", r.origin);
         viewModel.set("url", r.url);
-        // << (hide)
     }).catch((err) => {
         // >> (hide)
         console.log("Error: ");
@@ -102,9 +102,9 @@ export function getResponseStatusCodeExample(viewModel) {
     fetch("https://httpbin.org/get").then((response) => {
         // >> (hide)
         console.log(response);
+        // << (hide)
         const status = response.status;
         viewModel.set("statusCodeResult", status);
-        // << (hide)
     }).catch((err) => {
         // >> (hide)
         console.log("Error: ");
@@ -120,9 +120,9 @@ export function getResponseHeadersExample(viewModel) {
     fetch("https://httpbin.org/get")
     .then((r) => r.json())
     .then((response) => {
-        // >> (hide)
         console.log("Header");
         console.log(response);
+        // >> (hide)
         viewModel.set("acceptEncoding", response.headers["Accept-Encoding"]);
         viewModel.set("userAgent", response.headers["User-Agent"]);
         viewModel.set("host", response.headers.Host);
