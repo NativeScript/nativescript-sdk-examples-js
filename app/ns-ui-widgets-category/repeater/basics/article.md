@@ -1,4 +1,4 @@
-The example shows how to define Repeater in the XML and hoe to load its data. 
+The example shows how to define Repeater in the XML and how to load its data. 
 
 <snippet id='repeater-create-xml'/>
 
