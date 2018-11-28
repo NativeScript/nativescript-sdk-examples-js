@@ -7,6 +7,7 @@ var glob = require("glob");
 var rimraf = require("rimraf");
 var pjson = require('../package.json');
 var child_process = require('child_process');
+var tar = require('tar');
 
 const CATEGORY = "-category";
 
