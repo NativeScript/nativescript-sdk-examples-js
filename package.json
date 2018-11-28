@@ -23,25 +23,22 @@
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-android": {
       "version": "5.0.0"
-    },
-    "tns-ios": {
-      "version": "5.0.0"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "^5.0.1"
+    "tns-core-modules": "^5.0.5"
   },
   "devDependencies": {
-    "eslint": "~4.19.0",
+    "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
-    "markdown-snippet-injector": "^0.2.0",
-    "nativescript-dev-typescript": "~0.7.4",
-    "nativescript-dev-webpack": "^0.17.0",
+    "markdown-snippet-injector": "^0.2.2",
+    "nativescript-dev-typescript": "~0.7.6",
+    "nativescript-dev-webpack": "^0.18.0",
     "tar.gz": "^1.0.7",
-    "tns-platform-declarations": "^4.2.1",
-    "tslint": "^5.4.2",
-    "typescript": "~2.7.2"
+    "tns-platform-declarations": "^5.0.5",
+    "tslint": "^5.11.0",
+    "typescript": "~3.1.6"
   },
   "scripts": {
     "lint": "eslint \"app/**/*.js\"",
