@@ -218,7 +218,7 @@
             "error",
             "never"
         ],
-        "wrap-iife": "error",
+        "wrap-iife": "off",
         "wrap-regex": "error",
         "yield-star-spacing": "error",
         "yoda": [
