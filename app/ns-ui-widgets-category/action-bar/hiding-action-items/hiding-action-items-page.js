@@ -1,6 +1,6 @@
 // >> action-bar-hiding-action-items-js
 const fromObject = require("tns-core-modules/data/observable").fromObject;
-// >> (hide)
+
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = fromObject({
@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
     });
 }
 exports.onNavigatingTo = onNavigatingTo;
-// << (hide)
+
 function onEdit(args) {
     const page = args.object.page;
     page.bindingContext.set("isEditing", true);
