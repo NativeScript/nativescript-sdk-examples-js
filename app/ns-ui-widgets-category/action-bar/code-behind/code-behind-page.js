@@ -8,7 +8,11 @@ function onLoaded(args) {
     const newActionBar = new ActionBar();
     newActionBar.title = "Code-Behind ActionBar";
     const newNavigaitonButton = new NavigationButton();
+    // for ios
     newNavigaitonButton.text = "Go Back";
+    // for android
+    newNavigaitonButton.android.systemIcon = "ic_menu_back";
+    // or newNavigaitonButton.icon = "~\images\nav-image.png";
     newActionBar.navigationButton = newNavigaitonButton;
 
     page.actionBar = newActionBar;
