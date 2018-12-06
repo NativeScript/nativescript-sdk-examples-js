@@ -1,6 +1,6 @@
 The `Label` widget comes with `text` property.
 
-SetTING a label in XML page and how to bind its text property.
+Setting a label in XML page and how to bind its text property.
 <snippet id='label-xml'/>
 <snippet id='label-text-binding'/>
 <snippet id='label-text-binding-ts'/>
