@@ -39,7 +39,7 @@ exports.onNavigatingTo = function (args) {
     button5.margin = 4;
     // << (hide)
 
-    // Add views to stack layout
+    // Add views to wrap layout
     myWrap.addChild(button1);
     myWrap.addChild(button2);
     myWrap.addChild(button3);
