@@ -3,4 +3,4 @@ In a NativeScript application, `TabView` has an `items` property which could be 
 XML
 <snippet id='tab-view-basics-xml'/>
 
-> Note: If you have set the `iconSource` property on a `TabViewItem`, but are not seeing any icons next to the title, this might be because the icon is not present in your App_Resources folder. See the [Working with Images]({%slug images#load-images-from-a-resource %}) article for information on how to add and reference your resource images.
+> Note: If you have set the `iconSource` property on a `TabViewItem`, but are not seeing any icons next to the title, this might be because the icon is not present in your App_Resources folder. See the [Working with Images]({%slug image-resources#load-images-from-a-resource %}) article for information on how to add and reference your resource images.
