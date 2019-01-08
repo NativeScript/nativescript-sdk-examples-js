@@ -98,8 +98,14 @@ export function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
+// >> list-view-multy-template-code-ts
+export function selectItemTemplateAge(item, index, items) {
+    return item.age > 18 ? "green" : "red";
+}
+// << list-view-multy-template-code-ts
+
 // >> listview-create-selector-function-code-ts
 export function selectItemTemplate(item, index, items) {
-    return item.age % 2 === 0 ? "even" : "odd";
+    return index % 2 === 0 ? "even" : "odd";
 }
 // << listview-create-selector-function-code-ts
