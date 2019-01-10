@@ -5,3 +5,7 @@ In case your item template selector involves complicated logic which cannot be e
 <snippet id='listview-create-selector-function-xml'/>
 <snippet id='listview-create-selector-function-code'/>
 <snippet id='listview-create-selector-function-code-ts'/>
+
+<snippet id='list-view-multy-template-xml'/>
+<snippet id='list-view-multy-template-code'/>
+<snippet id='list-view-multy-template-code-ts'/>
