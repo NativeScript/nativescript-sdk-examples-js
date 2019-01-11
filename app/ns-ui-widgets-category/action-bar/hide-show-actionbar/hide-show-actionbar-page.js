@@ -1,3 +1,4 @@
+const app = require("tns-core-modules/application");
 // >> action-bar-hide-show-js
 const Observable = require("tns-core-modules/data/observable").Observable;
 let value = false;
@@ -18,3 +19,28 @@ function onTap(args) {
 }
 exports.onTap = onTap;
 // << action-bar-hide-show-js
+function onPageUnloaded(){
+    let rootView = app.getRootView();
+    rootView.actionBarVisibility = "auto";
+}
+exports.onPageUnloaded = onPageUnloaded;
+// >> action-bar-action-bar-visibiloty-js
+function onAutoTap(args) {
+    let rootView = app.getRootView();
+    console.log(rootView)
+    rootView.actionBarVisibility = "auto";
+}
+exports.onAutoTap = onAutoTap;
+function onNeverTap(args) {
+    let rootView = app.getRootView();
+    console.log(rootView.actionBarVisibility);
+    rootView.actionBarVisibility = "never";
+    console.log(rootView.actionBarVisibility);
+}
+exports.onNeverTap = onNeverTap;
+function onAlwaysTap(args) {
+    let rootView = app.getRootView();
+    rootView.actionBarVisibility = "always";
+}
+exports.onAlwaysTap = onAlwaysTap;
+// << action-bar-action-bar-visibiloty-js

@@ -7,3 +7,9 @@ You can explicitly control the visibility of the `ActionBar` by setting the `act
 In **Android**, the application bar is visible by default and shows the name of the application as title. The navigation button is visible only when it is explicitly defined in the application.
 
 In **iOS**, if the application bar is empty (e.g., no title or action items are defined), it is hidden on the first page and automatically shown after navigation to host the navigation button. If the ActionBar is not empty (e.g., there is a title or action items defined) it will be shown on first page, too.
+
+Other option for controling the visibility is to set up `actionBarVisibility` property directly to the Frame. We have three option values `auto`, `never`, `always`
+
+<snippet id='frame-reference-get-id-xml'/>
+<snippet id='action-bar-action-bar-visibiloty-js'/>
+<snippet id='action-bar-action-bar-visibiloty-ts'/>
