@@ -4,15 +4,18 @@
 	</Page.actionBar>
 	<GridLayout rows="*" columns="*">
 		<!-- >> tab-view-styling-xml -->
-		<TabView id="tabViewContainer" selectedTabTextColor="purple" tabBackgroundColor="yellow" androidSelectedTabHighlightColor="red">
-			<TabViewItem title="First Tab" iconSource="res://icon" textTransform="lowercase">
+		<TabView selectedTabTextColor="white" 
+				 tabBackgroundColor="orangered"
+				 tabTextFontSize="16"
+				 androidSelectedTabHighlightColor="green">
+			<TabViewItem title="First tab" iconSource="res://icon" textTransform="capitalize">
 				<StackLayout>
-					<Label text="First Tab" textWrap="true" class="m-15 h2 text-left" color="blue" />
+					<Label text="First Tab" textWrap="true" class="m-15 h2 text-center" color="blue" />
 				</StackLayout>
 			</TabViewItem>
-			<TabViewItem title="Second Tab" iconSource="res://icon" textTransform="lowercase">
+			<TabViewItem title="Second tab" iconSource="res://icon" textTransform="capitalize">
 				<StackLayout>
-					<Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue" />
+					<Label text="Second Tab" textWrap="true" class="m-15 h2 text-center" color="blue" />
 				</StackLayout>
 			</TabViewItem>
 		</TabView>
