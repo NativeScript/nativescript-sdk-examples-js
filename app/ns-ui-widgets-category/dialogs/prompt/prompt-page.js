@@ -20,7 +20,8 @@ function showPromptDialog() {
         cancelButtonText: "Cancel",
         neutralButtonText: "Neutral",
         defaultText: "Default",
-        inputType: "password" // text, password, or email
+        inputType: "text", // email, number, text, password, or email
+        capitalizationType: "sentences" // all, none, sentences or words
     };
     prompt(promptOptions).then((r) => {
         console.log("Dialog result: ", r.result);
