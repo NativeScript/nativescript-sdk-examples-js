@@ -14,7 +14,7 @@ export function onNavigatedTo(args) {
 
 export function showPromptDialog() {
     // >> dialog-prompt-ts
-    // import { prompt, PromptOptions, PromptResult } from "tns-core-modules/ui/dialogs";
+    // import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "tns-core-modules/ui/dialogs";
     const promptOptions: PromptOptions = {
         title: "Your title",
         message: "Your message",
