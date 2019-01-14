@@ -22,29 +22,35 @@ export function onTap(args: GestureEventData) {
     vm.set("abHidden", value);
 }
 // << action-bar-hide-show-ts
-function onPageUnloaded(){
-    let rootView:Frame = <Frame>app.getRootView();
+function onPageUnloaded() {
+    let rootView: Frame = <Frame>app.getRootView();
     rootView.actionBarVisibility = "auto";
 }
 exports.onPageUnloaded = onPageUnloaded;
 // >> action-bar-action-bar-visibiloty-ts
 function onAutoTap(args) {
-    let rootView:Frame = <Frame>app.getRootView();
-    console.log(rootView)
+    const page = (<Button>args.object).page;
+    const vm = page.bindingContext;
+    let rootView: Frame = <Frame>app.getRootView();
     rootView.actionBarVisibility = "auto";
+    vm.set("abHidden", false);
 }
 exports.onAutoTap = onAutoTap;
 function onNeverTap(args) {
-    let rootView:Frame = <Frame>app.getRootView();
-    console.log(rootView.actionBarVisibility);
+    const page = (<Button>args.object).page;
+    const vm = page.bindingContext;
+    let rootView: Frame = <Frame>app.getRootView();
     rootView.actionBarVisibility = "never";
-    console.log(rootView.actionBarVisibility);
+    vm.set("abHidden", true);
 }
 exports.onNeverTap = onNeverTap;
 function onAlwaysTap(args) {
-    let rootView:Frame = <Frame>app.getRootView();
+    const page = (<Button>args.object).page;
+    const vm = page.bindingContext;
+    let rootView: Frame = <Frame>app.getRootView();
     rootView.actionBarVisibility = "always";
     rootView.requestLayout();
+    vm.set("abHidden", false);
 }
 exports.onAlwaysTap = onAlwaysTap;
 // << action-bar-action-bar-visibiloty-ts

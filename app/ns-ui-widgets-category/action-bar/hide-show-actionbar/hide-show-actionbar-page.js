@@ -19,28 +19,34 @@ function onTap(args) {
 }
 exports.onTap = onTap;
 // << action-bar-hide-show-js
-function onPageUnloaded(){
-    let rootView = app.getRootView();
+function onPageUnloaded() {
+    const rootView = app.getRootView();
     rootView.actionBarVisibility = "auto";
 }
 exports.onPageUnloaded = onPageUnloaded;
 // >> action-bar-action-bar-visibiloty-js
 function onAutoTap(args) {
-    let rootView = app.getRootView();
-    console.log(rootView)
+    const page = args.object.page;
+    const vm = page.bindingContext;
+    const rootView = app.getRootView();
     rootView.actionBarVisibility = "auto";
+    vm.set("abHidden", false);
 }
 exports.onAutoTap = onAutoTap;
 function onNeverTap(args) {
-    let rootView = app.getRootView();
-    console.log(rootView.actionBarVisibility);
+    const page = args.object.page;
+    const vm = page.bindingContext;
+    const rootView = app.getRootView();
     rootView.actionBarVisibility = "never";
-    console.log(rootView.actionBarVisibility);
+    vm.set("abHidden", true);
 }
 exports.onNeverTap = onNeverTap;
 function onAlwaysTap(args) {
-    let rootView = app.getRootView();
+    const page = args.object.page;
+    const vm = page.bindingContext;
+    const rootView = app.getRootView();
     rootView.actionBarVisibility = "always";
+    vm.set("abHidden", false);
 }
 exports.onAlwaysTap = onAlwaysTap;
 // << action-bar-action-bar-visibiloty-js

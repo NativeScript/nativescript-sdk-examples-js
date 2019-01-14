@@ -4,9 +4,9 @@
 		<ActionBar title="ActionBar"></ActionBar>
 	</Page.actionBar>
     <GridLayout verticalAlignment="middle" rows="50 100 50 100 100 100">
-        <Label text="Page's actionBarHidden property" textWrap="true" />
+        <Label color="black" text="Page's actionBarHidden property" textWrap="true" />
         <Button row="1" text="{{ abHidden ? 'Show ActionBar' : 'Hide ActionBar' }}" tap="onTap" textWrap="true" class="fa" />
-        <Label row="2" text="Frame's actionBarVisibility property" textWrap="true" />
+        <Label color="black" row="2" text="Frame's actionBarVisibility property" textWrap="true" />
         <Button row="3" text="auto" tap="onAutoTap" textWrap="true" class="fa" />
         <Button row="4" text="never" tap="onNeverTap" textWrap="true" class="fa" />
         <Button row="5" text="always" tap="onAlwaysTap" textWrap="true" class="fa" />

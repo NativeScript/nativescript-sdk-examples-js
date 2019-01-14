@@ -8,7 +8,13 @@ In **Android**, the application bar is visible by default and shows the name of 
 
 In **iOS**, if the application bar is empty (e.g., no title or action items are defined), it is hidden on the first page and automatically shown after navigation to host the navigation button. If the ActionBar is not empty (e.g., there is a title or action items defined) it will be shown on first page, too.
 
-Other option for controling the visibility is to set up `actionBarVisibility` property directly to the Frame. We have three option values `auto`, `never`, `always`
+Тhе `actionBarVisibility` is a property that used to control the visibility the Navigation Bar in iOS and the Action Bar in Android for the whole application. It should be set directly to the `Frame` and has three option values `auto`, `never`, `always`. 
+
+`auto` - this is the default `actionBarVisibility` value and allows to specify the `ActionBar` visibility for each `Page` individually. 
+`never` - this value hides the `ActionBar` for the whole application.
+`always` - this one specifies that the `ActionBar` component should always be displayed.
+
+> Note: If you have set up some of the two properties(`never`, `always`) and you need to hide/show the `ActionBar` immediately in the currently loaded page, you need to set `Page`'s `actionBarHidden` property to `true` or `false`.
 
 <snippet id='frame-reference-get-id-xml'/>
 <snippet id='action-bar-action-bar-visibiloty-js'/>
