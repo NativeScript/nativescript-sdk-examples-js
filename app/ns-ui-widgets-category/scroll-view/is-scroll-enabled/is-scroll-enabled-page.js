@@ -3,13 +3,13 @@ const observableModule = require("tns-core-modules/data/observable");
 
 function onPageLoaded(args) {
     const page = args.object;
-    page.bindingContext = observableModule.fromObject({ isScrollEnabledProperty: true });
+    page.bindingContext = observableModule.fromObject({ scrollEnabled: true });
 }
 
 function onTap(args) {
     const page = args.object.page;
     const viewModel = page.bindingContext;
-    viewModel.isScrollEnabledProperty = !viewModel.isScrollEnabledProperty;
+    viewModel.scrollEnabled = !viewModel.scrollEnabled;
 
 }
 
