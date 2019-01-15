@@ -1,4 +1,4 @@
-import { prompt, PromptOptions, PromptResult } from "tns-core-modules/ui/dialogs";
+import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "tns-core-modules/ui/dialogs";
 export function onNavigatedTo(args) {
     /*
     // >> dialog-prompt-web-ts
@@ -14,7 +14,7 @@ export function onNavigatedTo(args) {
 
 export function showPromptDialog() {
     // >> dialog-prompt-ts
-    // import { prompt, PromptOptions, PromptResult } from "tns-core-modules/ui/dialogs";
+    // import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "tns-core-modules/ui/dialogs";
     const promptOptions: PromptOptions = {
         title: "Your title",
         message: "Your message",
@@ -22,7 +22,8 @@ export function showPromptDialog() {
         cancelButtonText: "Cancel",
         neutralButtonText: "Neutral",
         defaultText: "Default",
-        inputType: "password" // text, password, or email
+        inputType: inputType.text, // email, number, text, password, or email
+        capitalizationType: capitalizationType.sentences // all. none, sentences or words
     };
     prompt(promptOptions).then((r: PromptResult) => {
         console.log("Dialog result: ", r.result);
