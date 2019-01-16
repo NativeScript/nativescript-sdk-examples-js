@@ -22,7 +22,7 @@ function cacheImage(viewModel) {
     cache.placeholder = fromFile("~/images/logo.png");
     cache.maxRequests = 5;
 
-    // set the placeholder while the desired image is donwloaded
+    // set the placeholder while the desired image is downloaded
     viewModel.set("imageSource", cache.placeholder);
 
     // Enable download while not scrolling
