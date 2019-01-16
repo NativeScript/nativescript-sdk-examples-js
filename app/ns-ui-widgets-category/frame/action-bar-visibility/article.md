@@ -1,4 +1,4 @@
-Тhе `actionBarVisibility` is a property that controls the visibility the Navigation Bar in iOS and the Action Bar in Android for the current `Frame`. It should be set directly to the `Frame` and has three option values `auto`, `never`, `always`. 
+Тhе `actionBarVisibility` is a property that controls the visibility of the Navigation Bar in iOS and the Action Bar in Android for the current `Frame`. It should be set directly to the `Frame` and has three option values `auto`, `never`, `always`. 
 
 * `auto` - this is the default `actionBarVisibility` value and allows to specify the `ActionBar` visibility for each `Page` individually. 
 
