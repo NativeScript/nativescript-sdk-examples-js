@@ -2,7 +2,7 @@
 
 * `auto` - this is the default `actionBarVisibility` value and allows to specify the `ActionBar` visibility for each `Page` individually. 
 
-* `never` - this value hides the `ActionBar` for the whole application.
+* `never` - this value hides the `ActionBar` for the current `Frame`.
 
 * `always` - this one specifies that the `ActionBar` component should always be displayed.
 
