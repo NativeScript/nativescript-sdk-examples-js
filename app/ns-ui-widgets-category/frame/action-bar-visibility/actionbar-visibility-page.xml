@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" android:actionBarHidden="true">nsa
+    <GridLayout verticalAlignment="middle" rows="50 *" columns="*">
+        <Label class="labelClass h3 p-5 text-center " row="0" text="Frame's actionBarVisibility property" textWrap="true" />
+        <GridLayout row="1">
+            <!-- >> frame-action-bar-visibility -->
+            <Frame id="my-frame-id" actionBarVisibility="never" defaultPage="home/home-page"/>
+            <!-- << frame-action-bar-visibility -->
+        </GridLayout>
+    </GridLayout>
+</Page>

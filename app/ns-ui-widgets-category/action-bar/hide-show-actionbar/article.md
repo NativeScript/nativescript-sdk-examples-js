@@ -1,4 +1,4 @@
-You can explicitly control the visibility of the `ActionBar` by setting the `actionBarHidden` property of the `Page`.
+You can explicitly control the visibility of the `ActionBar` by setting the `actionBarHidden` property of the `Page`or setting the `Frame`'s [`actionBarVisibility`]({% slug frame %}) property.
 
 <snippet id='action-bar-hide-show-xml'/>
 <snippet id='action-bar-hide-show-js'/>
