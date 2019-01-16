@@ -22,7 +22,7 @@ function cacheImage(viewModel) {
     cache.placeholder = fromFile("~/images/logo.png");
     cache.maxRequests = 5;
 
-    // set the placeholder while the desired image is donwloaded
+    // set the placeholder while the desired image is downloaded
     viewModel.set("imageSource", cache.placeholder);
 
     // Enable download while not scrolling
@@ -45,7 +45,7 @@ function cacheImage(viewModel) {
             completed: (image, key) => {
                 if (url === key) {
                     cachedImageSource = fromNativeSource(image);
-                    viewModel.set("imageSource", cachedImageSource); // set the downloaded iamge
+                    viewModel.set("imageSource", cachedImageSource); // set the downloaded image
                 }
             }
         });
