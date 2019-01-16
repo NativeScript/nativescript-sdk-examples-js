@@ -45,7 +45,7 @@ function cacheImage(viewModel) {
             completed: (image, key) => {
                 if (url === key) {
                     cachedImageSource = fromNativeSource(image);
-                    viewModel.set("imageSource", cachedImageSource); // set the downloaded iamge
+                    viewModel.set("imageSource", cachedImageSource); // set the downloaded image
                 }
             }
         });
