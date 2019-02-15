@@ -1,11 +1,11 @@
 
 import * as applicationModule from "tns-core-modules/application";
+import { android as androidApp } from "tns-core-modules/application";
 import { Observable } from "tns-core-modules/data/observable";
 import { isAndroid } from "tns-core-modules/platform";
 import { Page, NavigatedData } from "tns-core-modules/ui/page";
-
 let vm;
-let receiver;
+
 export function onNavigatingTo(args: NavigatedData) {
     const page = <Page>args.object;
     page.actionBar.title = "";
@@ -19,12 +19,23 @@ export function onNavigatingTo(args: NavigatedData) {
 
 export function onNavigatedTo(args: NavigatedData) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
+
+    // >> app-class-properties
+    // import { android as androidApp } from "tns-core-modules/application";
+    let isPaused = androidApp.paused; // e.g. false
+    let packageName = androidApp.packageName; // The package ID e.g. org.nativescript.nativescriptsdkexamplesng
+    let nativeApp = androidApp.nativeApp; // The native APplication reference
+    let foregroundActivity = androidApp.foregroundActivity; // The current Activity reference
+    let currentContext = androidApp.currentContext; // The current Android context
+    let context = androidApp.context; console.log(context); // The current Android context
+    // << app-class-properties
+
     // >> broadcast-receiver-ts
     if (isAndroid) {
         // use tns-platform-dclarations to access native APIs (e.g. android.content.Intent)
-        receiver = applicationModule.android.registerBroadcastReceiver(
+        applicationModule.android.registerBroadcastReceiver(
             android.content.Intent.ACTION_BATTERY_CHANGED,
-            (context, intent) => {
+            (androidContext, intent) => {
                 const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
                 const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
                 const percent = (level / scale) * 100.0;
@@ -37,7 +48,7 @@ export function onNavigatedTo(args: NavigatedData) {
 export function onUnloaded() {
     if (isAndroid) {
         // >> broadcast-receiver-remove-ts
-        applicationModule.android.unregisterBroadcastReceiver(receiver);
+        applicationModule.android.unregisterBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED);
         // << broadcast-receiver-remove-ts
     }
 }

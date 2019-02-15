@@ -3,7 +3,7 @@ const applicationModule = require("tns-core-modules/application");
 const Observable = require("tns-core-modules/data/observable").Observable;
 const platformModule = require("tns-core-modules/platform");
 let vm;
-let receiver;
+
 function onNavigatingTo(args) {
     const page = args.object;
     page.actionBar.title = "";
@@ -20,7 +20,7 @@ function onNavigatedTo(args) {
     // >> broadcast-receiver
     if (platformModule.isAndroid) {
         // use tns-platform-dclarations to acces native APIs (e.g. ndroid.content.Intent)
-        receiver = applicationModule.android.registerBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED, (context, intent) => {
+        applicationModule.android.registerBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED, (context, intent) => {
             const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
             const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
             const percent = (level / scale) * 100.0;
@@ -33,7 +33,7 @@ exports.onNavigatedTo = onNavigatedTo;
 function onUnloaded() {
     if (platformModule.isAndroid) {
         // >> broadcast-receiver-remove
-        applicationModule.android.unregisterBroadcastReceiver(receiver);
+        applicationModule.android.unregisterBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED);
         // << broadcast-receiver-remove
     }
 }
