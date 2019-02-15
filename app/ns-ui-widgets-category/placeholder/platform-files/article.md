@@ -2,10 +2,10 @@ The example shows how to define the native widget via `Placeholder`, while using
 
 <snippet id='placeholder-platform-xml'/>
 
-* <file name>.**android**.js`
+* <file name>.**android**.js
 <snippet id='placeholder-code-android'/>
 <snippet id='placeholder-code-android-ts'/>
 
-* <file name>.**ios**.js`
+* <file name>.**ios**.js
 <snippet id='placeholder-code-ios'/>
 <snippet id='placeholder-code-ios-ts'/>
