@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Code-behind"/>
+	</Page.actionBar>
+	<!-- >> code-behind-placeholder-xml -->
+	<StackLayout loaded="onLayoutLoaded">
+	</StackLayout>
+	<!-- << code-behind-placeholder-xml -->
+</Page>
