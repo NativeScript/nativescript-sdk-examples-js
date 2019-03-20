@@ -35,6 +35,6 @@ The widgets that inherit from [`EditableTextBase`](https://docs.nativescript.org
 ### Email
  - Android: [TYPE_CLASS_TEXT](http://developer.android.com/reference/android/text/InputType.html#TYPE_CLASS_TEXT) | [TYPE_TEXT_VARIATION_EMAIL_ADDRESS](http://developer.android.com/reference/android/text/InputType.html#TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
  - iOS:  [UIKeyboardTypeEmailAddress](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType)
- - ![email](/img/modules/keyboard/email.png "email")
+ - ![email](../img/modules/keyboard/email.png "email")
 
  <snippet id='textfield-keyboard-type-email'/>
