@@ -2,7 +2,7 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 import { enable, disable, categories, setCategories, messageType, clearWriters, addWriter } from "tns-core-modules/trace";
-import { isUndefined } from "utils/types";
+import { isUndefined } from "tns-core-modules/utils/types";
 import { Page } from "tns-core-modules/ui/page";
 // >> trace-create-custom-writer-ts
 const array = new ObservableArray();

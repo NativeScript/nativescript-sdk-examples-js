@@ -1,17 +1,17 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
     <Page.actionBar>
-		<ActionBar title="Basics"/>
+		<ActionBar title="Icon Fonts (via code)"/>
 	</Page.actionBar>
-    <!-- >> icon-font-code-behind-xml -->
     <GridLayout>
-        <ListView class="icon list-group" items="{{ glyphs }}">
+        <!-- >> icon-font-code-behind-xml -->
+        <ListView items="{{ glyphs }}">
             <ListView.itemTemplate>
-                <GridLayout class="list-group-item active" rows="* *">
-                    <Label color="#FF6666" class="m-5" fontSize="34" row="0" textWrap="true" text="{{'Icon: ' + icon + ' ' }}" class="icon"/>
-                    <Label color="#66ccff" class="m-5" fontSize="18" row="1" textWrap="true" text="{{'Icon code: ' + code }}" />
-                </GridLayout>
+                <StackLayout orientation="horizontal">
+                    <Label text="{{ icon }}" class="ico"/><!-- the icon (glyph) -->
+                    <Label text="{{ code }}" /><!-- the icon code -->
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
+        <!-- << icon-font-code-behind-xml -->
     </GridLayout>
-    <!-- << icon-font-code-behind-xml -->
 </Page>
