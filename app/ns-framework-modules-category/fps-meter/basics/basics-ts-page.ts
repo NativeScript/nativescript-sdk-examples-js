@@ -1,5 +1,5 @@
 import { Observable } from "tns-core-modules/data/observable";
-import { setBoolean, getBoolean } from "application-settings";
+import { setBoolean, getBoolean } from "tns-core-modules/application-settings";
 import { Page } from "tns-core-modules/ui/page";
 // >> import-fps-meter
 import { removeCallback, start, stop, addCallback } from "tns-core-modules/fps-meter";
