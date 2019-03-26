@@ -17,6 +17,6 @@
 /* << icon-font-code-behind-css */
 
 Label {
-  margin: 8;
+  margin: 8 32 8 32;
   font-size: 32;
 }

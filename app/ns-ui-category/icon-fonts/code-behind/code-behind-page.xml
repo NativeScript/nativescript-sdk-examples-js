@@ -3,13 +3,15 @@
 		<ActionBar title="Icon Fonts (via code)"/>
 	</Page.actionBar>
     <GridLayout>
+        <!-- >> icon-font-code-behind-xml -->
         <ListView items="{{ glyphs }}">
             <ListView.itemTemplate>
-                <StackLayout orientation="horizontal">
-                    <Label text="{{ icon }}" class="ico"/>
-                    <Label text="{{ code }}" />
+                <StackLayout orientation="horizontal" horizontalAlignment="center">
+                    <Label text="{{ icon }}" class="ico"/><!-- the icon (glyph) -->
+                    <Label text="{{ code }}" /><!-- the icon code -->
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>
+        <!-- << icon-font-code-behind-xml -->
     </GridLayout>
 </Page>
