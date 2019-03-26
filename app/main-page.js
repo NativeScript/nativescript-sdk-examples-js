@@ -17,7 +17,7 @@ const navigationLinks = [
     new link("Dialogs", "ns-ui-widgets-category/dialogs/dialogs-page"),
     new link("Gestures", "ns-ui-widgets-category/gestures/gestures-page"),
     new link("HtmlView", "ns-ui-widgets-category/html-view/html-view-page"),
-    new link("IconFonts", "ns-ui-widgets-category/icon-fonts/icon-fonts-page"),
+    new link("IconFonts", "ns-ui-category/icon-fonts/icon-fonts-page"),
     new link("Image", "ns-ui-widgets-category/image/image-page"),
     new link("Image Cache", "ns-ui-widgets-category/image-cache/image-cache-page"),
     new link("Layouts", "ns-ui-widgets-category/layouts/layouts-page"),
