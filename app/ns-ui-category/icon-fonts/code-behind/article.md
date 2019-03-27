@@ -8,12 +8,12 @@ The example shows, how to use setup the `font-family` property via CSS and how t
 
 And the result is:
 
-![sample-app](../img/modules/icon-fonts/sample-app.png "Sample App")
+![sample-app](./img/modules/icon-fonts/sample-app.png "Sample App")
 
 Example for icon font glyphs:
 
-![icomoon](../img/modules/icon-fonts/icomoon.png "Icomoon")
+![icomoon](./img/modules/icon-fonts/icomoon.png "Icomoon")
 
 Example for icon font folder location:
 
-![icon-fonts](../img/modules/icon-fonts/fonts-folder.png "Fonts Folder")
+![icon-fonts](./img/modules/icon-fonts/fonts-folder.png "Fonts Folder")
