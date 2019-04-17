@@ -2,7 +2,7 @@
 	<Page.actionBar>
 		<ActionBar title="Cookbook" icon="" class="action-bar" />
 	</Page.actionBar>
-	<StackLayout>
+	<GridLayout>
 		<ListView items="{{ links }}" class="list-group" itemTap="{{ onItemTap }}">
 			<ListView.itemTemplate>
 				<StackLayout class="list-group-item">
@@ -10,5 +10,5 @@
 				</StackLayout>
 			</ListView.itemTemplate>
 		</ListView>
-	</StackLayout>
+	</GridLayout>
 </Page>

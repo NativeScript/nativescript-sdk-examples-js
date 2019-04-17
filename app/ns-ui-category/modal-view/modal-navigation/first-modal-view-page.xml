@@ -1,5 +1,5 @@
 <!-- >> first-modal-view-xml-navigation -->
-<Page backgroundColor="green" showingModally="onShowingModally">
+<Page backgroundColor="green" loaded="onPageLoaded">
     <StackLayout backgroundColor="lightGreen">
         <Button text="Navigate" tap="onNavigate"/>
         <Button text="Close Modal" tap="onCloseModal"/>

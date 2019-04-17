@@ -6,10 +6,10 @@ function onNavigate(args) {
 }
 exports.onNavigate = onNavigate;
 
-function onShowingModally(args) {
-    console.log("onShowingModally");
+function onPageLoaded(args) {
+    console.log("onPageLoaded");
 }
-exports.onShowingModally = onShowingModally;
+exports.onPageLoaded = onPageLoaded;
 
 function onCloseModal(args) {
     args.object.closeModal();

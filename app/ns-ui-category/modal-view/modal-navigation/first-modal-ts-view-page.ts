@@ -6,8 +6,8 @@ export function onNavigate(args) {
     page.frame.navigate("ns-ui-category/modal-view/modal-navigation/second-modal-ts-view-page");
 }
 
-export function onShowingModally(args) {
-    console.log("onShowingModally");
+export function onPageLoaded(args) {
+    console.log("onPageLoaded");
 }
 
 export function onCloseModal(args) {
