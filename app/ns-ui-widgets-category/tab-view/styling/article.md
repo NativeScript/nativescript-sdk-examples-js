@@ -1,6 +1,8 @@
 The `TabView` component has the following unique styling properties:
 
-* `selectedTabTextColor` (corresponding CSS property `selected-tab-text-color` ) - Changes the color of the text, while selecting some of the tabs.
+* `tabTextColor` (corresponding CSS property `tab-text-color` ) - Changes the text color for the tabs.
+
+* `selectedTabTextColor` (corresponding CSS property `selected-tab-text-color` ) - Changes the color of the text for the selected tab.
 
 * `tabBackgroundColor` (corresponding CSS property `tab-background-color`) - Sets the background color of the tabs.
 
