@@ -1,3 +1,5 @@
 <!-- >> modal-root-xml-navigation -->
-<Frame defaultPage="ns-ui-category/modal-view/modal-navigation/first-modal-view-page"/>
+<Frame defaultPage="ns-ui-category/modal-view/modal-navigation/first-modal-view-page"
+       shownModally="onShownModally" 
+       showingModally="onShowingModally"/>
 <!-- << modal-root-xml-navigation -->
