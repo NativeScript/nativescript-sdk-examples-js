@@ -33,14 +33,17 @@ export function onNavigatedTo(args: NavigatedData) {
     // >> broadcast-receiver-ts
     if (isAndroid) {
         // use tns-platform-dclarations to access native APIs (e.g. android.content.Intent)
+        let receiverCallback = (androidContext, intent) => {
+            const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
+            const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
+            const percent = (level / scale) * 100.0;
+            vm.set("batteryLife", percent.toString());
+        };
+
         applicationModule.android.registerBroadcastReceiver(
             android.content.Intent.ACTION_BATTERY_CHANGED,
-            (androidContext, intent) => {
-                const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
-                const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
-                const percent = (level / scale) * 100.0;
-                vm.set("batteryLife", percent.toString());
-            });
+            receiverCallback
+        );
     }
     // << broadcast-receiver-ts
 }
