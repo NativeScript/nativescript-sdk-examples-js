@@ -20,12 +20,17 @@ function onNavigatedTo(args) {
     // >> broadcast-receiver
     if (platformModule.isAndroid) {
         // use tns-platform-dclarations to acces native APIs (e.g. ndroid.content.Intent)
-        applicationModule.android.registerBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED, (context, intent) => {
+        const receiverCallback = (androidContext, intent) => {
             const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
             const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
             const percent = (level / scale) * 100.0;
             vm.set("batteryLife", percent.toString());
-        });
+        };
+
+        applicationModule.android.registerBroadcastReceiver(
+            android.content.Intent.ACTION_BATTERY_CHANGED,
+            receiverCallback
+        );
     }
     // << broadcast-receiver
 }
