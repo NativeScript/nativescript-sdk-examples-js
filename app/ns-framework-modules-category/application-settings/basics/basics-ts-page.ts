@@ -31,8 +31,9 @@ export function onNavigatingTo(args) {
     appSettings.setNumber("locationX", 54.321);
     const locX = appSettings.getNumber("locationX").toFixed(3);
 
-    // Note: The MIN & MAX number ranges are limited by the JavaScript number implementation - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-    // On Android, the native method is also setting java.lang.Float which might lead to approximations during the conversion.
+    // Note: The MIN & MAX number ranges are limited by the JavaScript number implementation
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+    // On Android, the native method is also setting java.lang.Float which leads to approximations during conversion.
     // For really large numbers (e.g. like the value from getDate()) use setString and save the values as strings.
     // << app-settings-number-code-ts
     const locationX = parseFloat(locX);
