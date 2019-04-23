@@ -1,12 +1,12 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Interval", "ns-framework-modules-category/timer/interval/interval-page"),
-    new link("Timeout", "ns-framework-modules-category/timer/timeout/timeout-page")
+    new link("Interval", "ns-framework-modules-category/timer/setting-interval/interval-page"),
+    new link("Timeout", "ns-framework-modules-category/timer/setting-timeout/timeout-page")
 ];
 const navigationLinksTsc = [
-    new link("Interval", "ns-framework-modules-category/timer/interval/interval-ts-page"),
-    new link("Timeout", "ns-framework-modules-category/timer/timeout/timeout-ts-page")
+    new link("Interval", "ns-framework-modules-category/timer/setting-interval/interval-ts-page"),
+    new link("Timeout", "ns-framework-modules-category/timer/setting-timeout/timeout-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
