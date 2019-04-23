@@ -35,7 +35,7 @@ const onNavigatingTo = (args) => {
 exports.onNavigatingTo = onNavigatingTo;
 
 const onGridLoaded = (args) => {
-    // >> application-events
+    // >> application-events-launch
     launchListener = (args) => {
         // The root view for this Window on iOS or Activity for Android.
         // If not set a new Frame will be created as a root view in order to maintain backwards compatibility.
@@ -44,47 +44,63 @@ const onGridLoaded = (args) => {
         vm.set("resumeEvent", "The appication was launched!");
     };
     applicationModule.on(applicationModule.launchEvent, launchListener);
+    // << application-events-launch
 
+    // >> application-events-suspend
     suspendListener = (args) => {
         console.log("The appication was suspended!");
         vm.set("suspendEvent", "The appication was suspended!");
     };
     applicationModule.on(applicationModule.suspendEvent, suspendListener);
+    // << application-events-suspend
 
+    // >> application-events-resume
     resumeListener = (args) => {
         console.log("The appication was resumed!");
         vm.set("resumeEvent", "The appication was resumed!");
     };
     applicationModule.on(applicationModule.resumeEvent, resumeListener);
+    // << application-events-resume
 
+    // >> application-events-exit
     exitListener = (args) => {
         console.log("The appication was closed!");
     };
     applicationModule.on(applicationModule.exitEvent, exitListener);
+    // << application-events-exit
 
-    displayedListener = applicationModule.on(applicationModule.displayedEvent, (args) => {
+    // >> application-events-displayed
+    displayedListener = (args) => {
         console.log("NativeScript displayedEvent!");
         vm.set("displayedEvent", "The appication is displayed!");
-    });
+    };
+    applicationModule.on(applicationModule.displayedEvent, displayedListener);
+    // << application-events-displayed
+
+    // >> application-events-low-memory
     lowMemoryListener = (args) => {
         // the instance that has raidsed the event
         console.log("Instance: ", args.object);
     };
     applicationModule.on(applicationModule.lowMemoryEvent, lowMemoryListener);
+    // << application-events-low-memory
 
+    // >> application-events-orientation
     orientationChangedListener = (args) => {
         // orientationChangedEventData.newValue: "portrait" | "landscape" | "unknown"
         console.log("Orientation: ", args.newValue);
         vm.set("orientation", args.newValue);
     };
     applicationModule.on(applicationModule.orientationChangedEvent, orientationChangedListener);
+    // << application-events-orientation
 
+    // >> application-events-error
     uncaughtErrorListener = (args) => {
         // UnhandledErrorEventData.error: NativeScriptError
         console.log("NativeScript Error: ", args.error);
     };
     applicationModule.on(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
-    // << application-events
+    // << application-events-error
 };
 exports.onGridLoaded = onGridLoaded;
 
