@@ -1,10 +1,16 @@
+### ObservableArray Module Import
+
 Using the `ObservableArray` requires the related module.
 <snippet id='observable-array-require'/>
 <snippet id='observable-array-require-ts'/>
 
+### Creating an ObservableArray
+
 Creating an `ObservableArray` with different class constructors.
 <snippet id='observable-array-creation'/>
 <snippet id='observable-array-creation-ts'/>
+
+### Get, Set and Push Array Item
 
 One difference with the base array implementation is in the way the items are accessed through their index.
 While in the common JS array we would do `array[index]` with an `ObservableArray` we need to use `getItem(index)` method.
@@ -23,6 +29,8 @@ Using `push()` method to add multiple elements from source array to the `Observa
 <snippet id='observable-array-push-array'/>
 <snippet id='observable-array-push-array-ts'/>
 
+### Reverse, Shift, and Sort operations
+
 Using `reverse()` method to reverse the elements order of the `ObservableArray`.
 <snippet id='observable-array-reverse'/>
 <snippet id='observable-array-reverse-ts'/>
@@ -34,6 +42,8 @@ Using `shift()` method to remove the first element of the array.
 Using `sort()` method to sort the array. This method can accept a comparing function.
 <snippet id='observable-array-sort'/>
 <snippet id='observable-array-sort-ts'/>
+
+### Getting Item Index
 
 Using `indexOf(item)` method to get the index of the desired item in the array.
 <snippet id='observable-array-index-of'/>

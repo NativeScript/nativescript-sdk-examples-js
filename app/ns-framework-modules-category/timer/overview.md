@@ -3,5 +3,7 @@ Methods:
 * `setTimeout`
 * `setInterval`
 
+### Timer Module Import
+
 <snippet id='require-timer'/>
 <snippet id='import-timer'/>
