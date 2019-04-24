@@ -17,7 +17,7 @@ The [`fromObject`](https://docs.nativescript.org/api-reference/modules/_data_obs
 
 ### Creating Observable with **fromObjectRecursive** Method
 
-The [`fromObjectRecursive`](https://docs.nativescript.org/api-reference/modules/_data_observable_#fromobjectrecursive) method creates an Observable instance and sets its properties according to the supplied JavaScript object. This function will create new Observable for each nested object (expect arrays and functions) from supplied JavaScript object.
+The [`fromObjectRecursive`](https://docs.nativescript.org/api-reference/modules/_data_observable_#fromobjectrecursive) method creates an Observable instance and sets its properties according to the supplied JavaScript object. This function will create new Observable for each nested object (except for arrays and functions) from supplied JavaScript object.
 <snippet id='observable-from-object-recursive'/>
 <snippet id='observable-from-object-recursive-ts'/>
 
