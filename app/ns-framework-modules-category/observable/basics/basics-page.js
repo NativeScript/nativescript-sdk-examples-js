@@ -47,7 +47,7 @@ function onNavigatedTo(args) {
     // << observable-from-object
 
     // >> observable-from-object-recursive
-    // fromObjectRecursive will create new Observable for each nested object (expect arrays and functions)
+    // fromObjectRecursive will create new Observable for each nested object (except arrays and functions)
     const nestedViewModel = fromObjectRecursive({
         client: "John Doe",
         favoriteColor: { hisColor: "Green" } // hisColor is an Observable (using recursive creation of Observables)
