@@ -3,14 +3,14 @@ const observableModule = require("tns-core-modules/data/observable");
 const switchModule = require("tns-core-modules/ui/switch");
 // << switch-require
 
-// >> creating-switch-code
+
 function onPageLoaded(args) {
     const page = args.object;
-    // >> (hide)
     const vm = new observableModule.Observable();
     vm.set("swResult", "false");
-    // << (hide)
     const stackLayout = page.getViewById("stackLayoutId");
+
+    // >> creating-switch-code
     // creating new Switch and binding the checked property
     const mySwitch = new switchModule.Switch();
     const options = {
@@ -33,9 +33,9 @@ function onPageLoaded(args) {
         <Switch checked="{{ isChecked }}">
     */
 
+    // adding the created element to already existing layout
     stackLayout.addChild(mySwitch);
+    // << creating-switch-code
     page.bindingContext = vm;
 }
 exports.onPageLoaded = onPageLoaded;
- // << creating-switch-code
-

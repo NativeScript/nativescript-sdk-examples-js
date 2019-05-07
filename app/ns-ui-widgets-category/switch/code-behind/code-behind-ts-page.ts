@@ -5,14 +5,12 @@ import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { Switch } from "tns-core-modules/ui/switch";
 // << switch-import
 
-// >> creating-switch-code-ts
 export function onPageLoaded(args) {
     const page: Page = <Page>args.object;
-    // >> (hide)
     const vm = new Observable();
     vm.set("swResult", "false");
-    // << (hide)
     const stackLayout: StackLayout = <StackLayout>page.getViewById("stackLayoutId");
+    // >> creating-switch-code-ts
     // creating new Switch and binding the checked property
     const mySwitch = new Switch();
     const options = {
@@ -35,7 +33,8 @@ export function onPageLoaded(args) {
         <Switch checked="{{ isChecked }}">
     */
 
+    // Adding the created element to already existing layout
     stackLayout.addChild(mySwitch);
+    // << creating-switch-code-ts
     page.bindingContext = vm;
 }
- // << creating-switch-code-ts

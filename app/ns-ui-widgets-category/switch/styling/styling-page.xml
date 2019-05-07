@@ -5,14 +5,16 @@
     <StackLayout >
 			<StackLayout class="example-container">
 				<!-- >> switch-styling-xml -->
-				<GridLayout rows="auto auto auto" columns="* auto" class="m-5">
-					<Label class="h3 m-15" text="{{ firstSwitchResult }}" textWrap="true" row="0" col="0"/>
-					<Switch  class="m-15 firstSwitchStyle" checked="{{ firstSwitch }}"	row="0" col="1"/>
-					<Label class="h3 m-15" text="{{ secondSwitchResult }}" textWrap="true" row="1" col="0"/>
-					<Switch  class="m-15 secondSwitchStyle" checked="{{ secondSwitch }}" row="1" col="1"/>
-					<Label class="h3 m-15" text="{{ thirdSwitchResult }}" textWrap="true" row="2" col="0"/>
-					<Switch class="m-15 thirdSwitchStyle" checked="{{ thirdSwitch }}"	row="2" col="1"/>
-				</GridLayout>
+				<!-- Styling via inline properties -->
+				<Switch color="yellow"
+								backgroundColor="green"
+								offBackgroundColor="red"
+								checked="{{ firstSwitch }}"/>
+				<!-- Srtyling via CSS class  (refer to the CSS file) -->
+				<Switch  class="m-15 secondSwitchStyle" checked="{{ secondSwitch }}"/>
+
+				<!-- Styling colors & opacity via CSS class (refer to the CSS file) -->
+				<Switch class="m-15 thirdSwitchStyle" checked="{{ thirdSwitch }}"	/>
 				<!-- << switch-styling-xml -->
 			</StackLayout>
 		</StackLayout>
