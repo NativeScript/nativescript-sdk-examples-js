@@ -40,7 +40,7 @@ exports.onNavigatedTo = function(args) {
             // << (hide)
             break;
         case connectivityModule.connectionType.bluetooth:
-            // Denotes a ethernet connection.
+            // Denotes a bluetooth connection.
             console.log("Bluetooth connection");
             // >> (hide)
             connectionTypeString = "Bluetooth connectivity!";
