@@ -39,14 +39,13 @@ export function onNavigatedTo(args) {
             connectionTypeString = "Ethernet connectivity!";
             // << (hide)
             break;
-        // Bluetooth functionality in master branch (to be released with 5.0.0)
-        // case connectionType.bluetooth:
-        //     // Denotes a ethernet connection.
-        //     console.log("Bluetooth connection");
-        //     // >> (hide)
-        //     connectionTypeString = "Bluetooth connectivity!";
-        //     // << (hide)
-        //     break;
+        case connectionType.bluetooth:
+            // Denotes a ethernet connection.
+            console.log("Bluetooth connection");
+            // >> (hide)
+            connectionTypeString = "Bluetooth connectivity!";
+            // << (hide)
+            break;
         default:
             break;
     }
@@ -67,10 +66,9 @@ export function onNavigatedTo(args) {
             case connectionType.ethernet:
                 console.log("Connection type changed to ethernet.");
                 break;
-            // case connectionType.bluetooth:
-            //     // feature coming in NativeScript 5.0.0
-            //     console.log("Connection type changed to bluetooth.");
-            //     break;
+            case connectionType.bluetooth:
+                console.log("Connection type changed to bluetooth.");
+                break;
             default:
                 break;
         }
