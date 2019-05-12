@@ -1,7 +1,7 @@
 Getting a reference to the current `Page` instance is a common scenario. The below examples are demonstrating different approaches to get `Page` reference.
 
 ### Reference via page events
-The common navigaiton events and the View's `loaded` and `unloaded` event can be used to get a page reference.
+The common navigation events and the View's `loaded` and `unloaded` event can be used to get a page reference.
 <snippet id='page-reference-via-event'/>
 <snippet id='page-reference-via-event-ts'/>
 
