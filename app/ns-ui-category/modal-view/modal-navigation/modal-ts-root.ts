@@ -7,7 +7,6 @@ export function onShowingModally(args: ShownModallyData) {
 
 export function onShownModally(args: ShownModallyData) {
     // args is of type ShownModallyData
-    console.log(` ${args.closeCallback}`);
     console.log(` ${args.context}`);
     console.log(` ${args.eventName}`); // shownModally
     console.log(` ${args.object}`);
