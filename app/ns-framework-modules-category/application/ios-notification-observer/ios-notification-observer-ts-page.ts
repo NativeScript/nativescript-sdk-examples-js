@@ -44,7 +44,7 @@ export function onNavigatedTo(args) {
             "batteryLife",
             + (utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1)
         );
-        observer = application.ios.addNotificationObserver(
+        observer = iosApp.addNotificationObserver(
             UIDeviceBatteryLevelDidChangeNotification,
             notification => {
                 vm.set(
@@ -60,7 +60,7 @@ export function onNavigatedTo(args) {
 export function onUnloaded() {
     if (isIOS) {
         // >> app-ios-observer-remove-ts
-        application.ios.removeNotificationObserver(observer, UIDeviceBatteryLevelDidChangeNotification);
+        iosApp.removeNotificationObserver(observer, UIDeviceBatteryLevelDidChangeNotification);
         // << app-ios-observer-remove-ts
     }
 }
