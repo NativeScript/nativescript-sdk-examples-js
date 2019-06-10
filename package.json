@@ -22,7 +22,7 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-android": {
-      "version": "5.4.0-rc-2019-04-02-110853-01"
+      "version": "5.4.0"
     }
   },
   "dependencies": {
