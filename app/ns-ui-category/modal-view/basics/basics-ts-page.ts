@@ -1,15 +1,18 @@
 // >> main-view-ts
 import { Button } from "tns-core-modules/ui/button";
-
+import { ShowModalOptions } from "tns-core-modules/ui/core/view";
 const modalViewModulets = "ns-ui-category/modal-view/basics/modal-ts-view-page";
 
 export function openModal(args) {
     const mainView: Button = <Button>args.object;
-    const context = { username: "test_username", password: "test" };
-    const fullscreen = true;
-    mainView.showModal(modalViewModulets, context, (username, password) => {
-        // Receive data from the modal view. e.g. username & password
-        alert(`Username: ${username} : Password: ${password}`);
-    }, fullscreen);
+    const option: ShowModalOptions = {
+        context: { username: "test_username", password: "test" },
+        closeCallback: (username, password) => {
+            // Receive data from the modal view. e.g. username & password
+            alert(`Username: ${username} : Password: ${password}`);
+        },
+        fullscreen: true
+    };
+    mainView.showModal(modalViewModulets, option);
 }
 // << main-view-ts
