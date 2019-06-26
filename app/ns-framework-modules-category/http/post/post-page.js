@@ -1,6 +1,6 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 // >> require-http
-const httpModule = require("http");
+const httpModule = require("tns-core-modules/http");
 // << require-http
 function onNavigatingTo(args) {
     const page = args.object;
