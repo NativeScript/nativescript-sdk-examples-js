@@ -1,7 +1,6 @@
 // >> app-settings-native-access-ts
 import { getNativeApplication } from "tns-core-modules/application";
 import { isAndroid, isIOS } from "tns-core-modules/platform";
-import * as utils from "tns-core-modules/utils/utils";
 
 export function getAll() {
     if (isAndroid) {
