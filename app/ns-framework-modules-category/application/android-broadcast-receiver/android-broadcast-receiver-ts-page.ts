@@ -26,8 +26,7 @@ export function onNavigatedTo(args: NavigatedData) {
     let packageName = androidApp.packageName; // The package ID e.g. org.nativescript.nativescriptsdkexamplesng
     let nativeApp = androidApp.nativeApp; // The native APplication reference
     let foregroundActivity = androidApp.foregroundActivity; // The current Activity reference
-    let currentContext = androidApp.currentContext; // The current Android context
-    let context = androidApp.context; console.log(context); // The current Android context
+    let context = androidApp.context; // The current Android context
     // << app-class-properties
 
     // >> broadcast-receiver-ts

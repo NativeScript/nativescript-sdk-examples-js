@@ -2,7 +2,6 @@ import * as application from "tns-core-modules/application";
 import { Observable } from "tns-core-modules/data/observable";
 import { isIOS } from "tns-core-modules/platform";
 import { ios as iosApp } from "tns-core-modules/application";
-import * as utilsModule from "tns-core-modules/utils/utils";
 
 let vm;
 let observer;
@@ -39,17 +38,17 @@ export function onNavigatedTo(args) {
 
     // >> app-ios-observer-code-ts
     if (isIOS) {
-        utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryMonitoringEnabled = true;
+        UIDevice.currentDevice.batteryMonitoringEnabled = true;
         vm.set(
             "batteryLife",
-            + (utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1)
+            +(UIDevice.currentDevice.batteryLevel * 100).toFixed(1)
         );
         observer = iosApp.addNotificationObserver(
             UIDeviceBatteryLevelDidChangeNotification,
             notification => {
                 vm.set(
                     "batteryLife",
-                    + (utilsModule.ios.getter(UIDevice, UIDevice.currentDevice).batteryLevel * 100).toFixed(1)
+                    +(UIDevice.currentDevice.batteryLevel * 100).toFixed(1)
                 );
             }
         );
