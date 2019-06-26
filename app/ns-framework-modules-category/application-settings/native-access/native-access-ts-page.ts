@@ -19,7 +19,7 @@ export function getAll() {
     } else if (isIOS) {
         // tslint:disable-next-line
         // Note: If using TypeScript you will need tns-platform-declarations plugin to access the native APIs like NSUserDefaults
-        const userDefaults = utils.ios.getter(NSUserDefaults, NSUserDefaults.standardUserDefaults);
+        const userDefaults = NSUserDefaults.standardUserDefaults;
         const dictionaryUserDefaults = userDefaults.dictionaryRepresentation();
 
         const allKeys = dictionaryUserDefaults.allKeys;
