@@ -8,7 +8,7 @@ const navigationLinks = [
     // new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation")
 ];
 const navigationLinksTsc = [
-    // new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-ts-page"),
+    new link("Basics", "ns-ui-widgets-category/bottom-navigation/basics/basics-ts-page")
     // new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation-ts-page")
 ];
 function onNavigatingTo(args) {
@@ -17,7 +17,7 @@ function onNavigatingTo(args) {
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
         actionBarTitle: args.context.title,
-        showTypeScriptExamples:false,
+        showTypeScriptExamples: false,
         tsclinks: navigationLinksTsc
     });
 }
