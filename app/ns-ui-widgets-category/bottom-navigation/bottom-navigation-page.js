@@ -1,16 +1,18 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-ui-widgets-category/bottom-navigation/basics/basics-page")
-    // new link("Styling", "ns-ui-widgets-category/tab-view/styling/styling-page"),
-    // new link("Title Icon Fonts", "ns-ui-widgets-category/tab-view/title-icon-fonts/title-icon-fonts-page"),
-    // new link("Code Behind", "ns-ui-widgets-category/tab-view/code-behind/code-behind-page"),
-    // new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation")
+    new link("Usage", "ns-ui-widgets-category/bottom-navigation/usage/usage-page"),
+    new link("Usage", "ns-ui-widgets-category/bottom-navigation/styling/styling-page"),
+    new link("Events", "ns-ui-widgets-category/bottom-navigation/events/events-page"),
+    new link("Properties", "ns-ui-widgets-category/bottom-navigation/properties/properties-page")
 ];
 const navigationLinksTsc = [
-    new link("Basics", "ns-ui-widgets-category/bottom-navigation/basics/basics-ts-page")
-    // new link("Navigation", "ns-ui-widgets-category/tab-view/navigation/navigation-ts-page")
+    new link("Usage", "ns-ui-widgets-category/bottom-navigation/usage/usage-ts-page"),
+    new link("Usage", "ns-ui-widgets-category/bottom-navigation/styling/styling-ts-page"),
+    new link("Events", "ns-ui-widgets-category/bottom-navigation/events/events-ts-page"),
+    new link("Properties", "ns-ui-widgets-category/bottom-navigation/properties/properties-page")
 ];
+
 function onNavigatingTo(args) {
     const page = args.object;
 

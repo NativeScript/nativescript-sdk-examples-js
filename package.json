@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "next"
+    "tns-core-modules": "^6.0.0-rc-2019-07-03-223248-02"
   },
   "devDependencies": {
     "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.4",
-    "nativescript-dev-webpack": "next",
+    "nativescript-dev-webpack": "^1.0.0-next-2019-06-28-135258-05",
     "tar.gz": "^1.0.7",
     "tns-platform-declarations": "next",
     "tslint": "5.11.0",
