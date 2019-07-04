@@ -1,7 +1,7 @@
 import { Label } from "tns-core-modules/ui/label";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { Color } from "tns-core-modules/color/color";
-// >> bottom-navigation-events-tsc
+// >> bottom-navigation-properties-tsc
 import { EventData } from "tns-core-modules/data/observable";
 import { BottomNavigation, TabStrip, TabStripItem, TabContentItem } from "tns-core-modules/ui/bottom-navigation";
 
@@ -29,7 +29,7 @@ export function onBottomNavLoaded(args: EventData) {
 
     console.log(bottomNav.nativeView);
 }
-// << bottom-navigation-events-tsc
+// << bottom-navigation-properties-tsc
 
 function createTabStrip() {
     const tabStrip: TabStrip = new TabStrip();

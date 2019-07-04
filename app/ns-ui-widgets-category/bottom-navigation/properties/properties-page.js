@@ -1,7 +1,7 @@
 const Label = require("tns-core-modules/ui/label").Label;
 const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
 const Color = require("tns-core-modules/color/color").Color;
-// >> bottom-navigation-events-js
+// >> bottom-navigation-properties-js
 const TabStrip = require("tns-core-modules/ui/bottom-navigation").TabStrip;
 const TabStripItem = require("tns-core-modules/ui/bottom-navigation").TabStripItem;
 const TabContentItem = require("tns-core-modules/ui/bottom-navigation").TabContentItem;
@@ -33,7 +33,7 @@ exports.onBottomNavLoaded = (args) => {
     */
     console.log("bottomNav.nativeView: ", bottomNav.nativeView);
 };
-// << bottom-navigation-events-js
+// << bottom-navigation-properties-js
 
 function createTabStrip() {
     // TabStrip

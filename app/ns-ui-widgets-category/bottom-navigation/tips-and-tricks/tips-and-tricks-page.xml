@@ -2,7 +2,7 @@
      <Page.actionBar>
 		<ActionBar title="BottomNavigation - Usage"/>
 	</Page.actionBar>
-    <!-- >> bottom-navigation-basics-xml -->
+
     <BottomNavigation selectedIndex="1">
 
         <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
@@ -30,5 +30,5 @@
         </TabContentItem>
 
     </BottomNavigation>
-    <!-- << bottom-navigation-basics-xml -->
+
 </Page>
