@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "^6.0.0-rc-2019-07-03-223248-02"
+    "tns-core-modules": "^6.0.0-rc-2019-07-04-111808-02"
   },
   "devDependencies": {
     "eslint": "~5.9.0",
