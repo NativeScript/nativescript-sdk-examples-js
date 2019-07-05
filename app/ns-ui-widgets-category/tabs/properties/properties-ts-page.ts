@@ -1,35 +1,38 @@
 import { Label } from "tns-core-modules/ui/label";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { Color } from "tns-core-modules/color/color";
-// >> bottom-navigation-properties-tsc
+// >> tabs-properties-tsc
 import { EventData } from "tns-core-modules/data/observable";
-import { BottomNavigation, TabStrip, TabStripItem, TabContentItem } from "tns-core-modules/ui/bottom-navigation";
+import { Tabs, TabStrip, TabStripItem, TabContentItem } from "tns-core-modules/ui/tabs";
 
-export function onBottomNavLoaded(args: EventData) {
-    const bottomNav = args.object as BottomNavigation;
+export function onTabsLoaded(args: EventData) {
+    const tabs = args.object as Tabs;
 
     /*
         Using the items property to assign array of TabContentItem componentns
         Note: The number of TabContentItem components should be equal to the number of TabStripItem components
     */
     const tabContentItemsArray: Array<TabContentItem> = createTabsContentArray();
-    bottomNav.items = tabContentItemsArray;
+    tabs.items = tabContentItemsArray;
 
     /*
         Using the tabStrip property to createa a TabStrip with multiple TabStripItems (tabs)
         Note: The number of TabStripItem components should be equal to the number of TabContentItem components
     */
     const tabStrip = createTabStrip();
-    bottomNav.tabStrip = tabStrip;
+    tabs.tabStrip = tabStrip;
 
     /*
-        Using the selectedIndex property
+        Using the Tabs properties
     */
-    bottomNav.selectedIndex = 1;
+    tabs.selectedIndex = 1;
+    tabs.swipeEnabled = true;
+    tabs.offscreenTabLimit = 1;
+    tabs.tabsPosition = "top";
 
-    console.log(bottomNav.nativeView);
+    console.log(tabs.nativeView);
 }
-// << bottom-navigation-properties-tsc
+// << tabs-properties-tsc
 
 function createTabStrip() {
     const tabStrip: TabStrip = new TabStrip();

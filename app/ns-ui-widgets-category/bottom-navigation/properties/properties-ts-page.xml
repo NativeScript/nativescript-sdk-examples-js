@@ -4,5 +4,5 @@
 	</Page.actionBar>
     <!-- >> bottom-navigation-properties-tsc-xml -->
     <BottomNavigation loaded="onBottomNavLoaded"></BottomNavigation>
-    <!-- << bottom-navigation-basics-tsc-xml -->
+    <!-- << bottom-navigation-properties-tsc-xml -->
 </Page>

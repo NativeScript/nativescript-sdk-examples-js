@@ -21,24 +21,21 @@
   "license": "Apache-2.0",
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
-    "tns-ios": {
-      "version": "6.0.0-2019-06-27-154632-01"
-    },
     "tns-android": {
-      "version": "6.0.0-2019-06-28-082007-01"
+      "version": "6.0.0-rc-2019-07-04-174325-01"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "^6.0.0-rc-2019-07-04-111808-02"
+    "tns-core-modules": "rc"
   },
   "devDependencies": {
     "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.4",
-    "nativescript-dev-webpack": "^1.0.0-next-2019-06-28-135258-05",
+    "nativescript-dev-webpack": "next",
     "tar.gz": "^1.0.7",
-    "tns-platform-declarations": "next",
+    "tns-platform-declarations": "rc",
     "tslint": "5.11.0",
     "typescript": "3.4.1"
   },

@@ -51,7 +51,8 @@ const navigationLinks = [
     new link("File System", "ns-framework-modules-category/file-system/file-system-page"),
     new link("Modal view", "ns-ui-category/modal-view/modal-view-examples-page"),
     new link("XML Parser", "ns-framework-modules-category/xml-parser/xml-parser-page"),
-    new link("BottomNavigation", "ns-ui-widgets-category/bottom-navigation/bottom-navigation-page")
+    new link("BottomNavigation", "ns-ui-widgets-category/bottom-navigation/bottom-navigation-page"),
+    new link("Tabs", "ns-ui-widgets-category/tabs/tabs-page")
 ];
 
 function onNavigatingTo(args) {

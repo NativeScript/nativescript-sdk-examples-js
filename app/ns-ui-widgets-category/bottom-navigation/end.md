@@ -1,4 +1,4 @@
-**API Reference for the** [BottomNavigation Class](http://docs.nativescript.org/api-reference/classes/_ui_bottom_navigation_.button.html)
+**API Reference for the** [BottomNavigation Class](https://docs.nativescript.org/api-reference/classes/_ui_tab_navigation_bottom_navigation_.bottomnavigation)
 
 **Native Component**
 

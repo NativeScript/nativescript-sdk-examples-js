@@ -1,0 +1,29 @@
+<Page navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Tabs - Events"/>
+	</Page.actionBar>
+    <!-- >> tabs-events-xml -->
+    <Tabs selectedIndex="1" loaded="onTabsLoaded">
+
+        <!-- The Tabs tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+        <TabStrip>
+            <TabStripItem title="Home" iconSource="res://baseline_home_black_24pt"></TabStripItem>
+            <TabStripItem title="Account" iconSource="res://baseline_account_balance_black_24pt"></TabStripItem>
+        </TabStrip>
+
+        <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+        <TabContentItem>
+            <GridLayout rows="*, *">
+                <Label row="0" text="Home Page" class="h2 text-center" color="orangered"></Label>
+                <Label row="1" text="{{ 'newIndex: ' +  selectedIndex }}" class="h2 text-center"></Label>
+            </GridLayout>
+        </TabContentItem>
+        <TabContentItem>
+            <GridLayout rows="*, *">
+                 <Label row="0" text="Account Page" class="h2 text-center"></Label>
+                 <Label row="1" text="{{ 'selectednewIndexIndex: ' +  selectedIndex }}" class="h2 text-center"></Label>
+            </GridLayout>
+        </TabContentItem>
+    </Tabs>
+    <!-- << tabs-events-xml -->
+</Page>

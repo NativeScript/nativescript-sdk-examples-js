@@ -1,6 +1,6 @@
-// >> bottom-navigation-events-tsc
+// >> tabs-events-tsc
 import { EventData, fromObject } from "tns-core-modules/data/observable";
-import { BottomNavigation, SelectedIndexChangedEventData } from "tns-core-modules/ui/bottom-navigation";
+import { Tabs, SelectedIndexChangedEventData } from "tns-core-modules/ui/tabs";
 // >> (hide)
 import { Page } from "tns-core-modules/ui/page";
 
@@ -13,12 +13,12 @@ export function onNavigatingTo(args: EventData) {
     page.bindingContext = vm;
 }
 // << (hide)
-export function onBottomNavLoaded(args: EventData) {
-    // Using the loaded event to ger a reference to the BottomNavigation
-    const bottomNavigation = args.object as BottomNavigation;
+export function onTabsLoaded(args: EventData) {
+    // Using the loaded event to ger a reference to the Tabs
+    const tabs = args.object as Tabs;
 
     // Using selectedIndexChanged
-    bottomNavigation.on(BottomNavigation.selectedIndexChangedEvent, (data: SelectedIndexChangedEventData) => {
+    tabs.on(Tabs.selectedIndexChangedEvent, (data: SelectedIndexChangedEventData) => {
         const oldIndex: number = data.oldIndex;
         const newIndex: number = data.newIndex;
         console.log(`oldIndex: ${oldIndex}; newIndex: ${newIndex}`);
@@ -26,4 +26,4 @@ export function onBottomNavLoaded(args: EventData) {
         (<any>args.object).page.bindingContext.set("selectedIndex", newIndex);
     });
 }
-// << bottom-navigation-events-tsc
+// << tabs-events-tsc
