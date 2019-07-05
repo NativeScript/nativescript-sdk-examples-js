@@ -87,8 +87,13 @@ function createContent(index) {
     stack.verticalAlignment = "middle";
     stack.addChild(label);
 
+    // Testing the offscreenTabLimit property
     stack.on("loaded", (args) => {
-        console.log(`Loaded [${(args.object).getViewById("label").text}] - testing offscreenTabLimit property)`)
+        console.log(`>>> Loaded [${(args.object).getViewById("label").text}]`);
+    });
+
+    stack.on("unloaded", (args) => {
+        console.log(`>>> Unloaded [${(args.object).getViewById("label").text}]`);
     });
 
     return stack;

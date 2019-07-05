@@ -82,11 +82,11 @@ function createContent(index: number) {
     stack.addChild(label);
 
     stack.on("loaded", (args) => {
-        console.log(`Loaded [${(<any>args.object).getViewById("label").text}]`)
+        console.log(`Loaded [${(<any>args.object).getViewById("label").text}]`);
     })
 
     stack.on("unloaded", (args) => {
-        console.log(`UNLOADED [${(<any>args.object).getViewById("label").text}]`)
+        console.log(`UNLOADED [${(<any>args.object).getViewById("label").text}]`);
     })
 
     return stack;
