@@ -28,8 +28,12 @@ exports.onTabsLoaded = (args) => {
     */
     tabs.selectedIndex = 1;
     tabs.swipeEnabled = true;
+
+    /*
+        offscreenTabLimit:  Sets the number of TabContentItem to be preloaded.
+    */
     tabs.offscreenTabLimit = 1;
-    tabs.tabsPosition = "top";
+    tabs.tabsPosition = "top"; //  Suppported values: 'top' or 'bottom'
 
     /*
         Using the nativeView property (correspnding to tabs.ios or tabs.android depending on the used platform)
