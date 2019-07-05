@@ -30,7 +30,7 @@ exports.onTabsLoaded = (args) => {
     tabs.swipeEnabled = true;
     tabs.offscreenTabLimit = 1;
     tabs.tabsPosition = "top";
-    
+
     /*
         Using the nativeView property (correspnding to tabs.ios or tabs.android depending on the used platform)
     */
@@ -45,13 +45,13 @@ function createTabStrip() {
 
     // An array of TabStripItem
     const tabStripItems = [];
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 5; index++) {
         // Each item is of type TabStripItem
         const item = new TabStripItem();
         /*
             Using TabStripItem title property
         */
-        item.title = `${index === 0 ? "Home" : (index === 1 ? "Account" : "Search")}`;
+        item.title = `Tab ${index + 1}`;
         /*
             Using TabStripItem title property
         */
@@ -66,7 +66,7 @@ function createTabStrip() {
 function createTabsContentArray() {
     // array of TabContentItem
     const arr = [];
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 5; index++) {
         // item is of type TabContentItem
         const item = new TabContentItem();
         // The createContent is a custom method that returns a StackLayout with a Label as a chils
@@ -79,12 +79,17 @@ function createTabsContentArray() {
 
 function createContent(index) {
     const label = new Label();
-    label.text = `${index === 0 ? "Home" : (index === 1 ? "Account" : "Search")}`;
+    label.text = `Content ${index + 1}`;
     label.className = "h2 text-center";
     label.color = new Color("red");
+    label.id = "label";
     const stack = new StackLayout();
     stack.verticalAlignment = "middle";
     stack.addChild(label);
+
+    stack.on("loaded", (args) => {
+        console.log(`Loaded [${(args.object).getViewById("label").text}] - testing offscreenTabLimit property)`)
+    });
 
     return stack;
 }

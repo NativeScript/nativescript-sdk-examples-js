@@ -38,16 +38,12 @@ function createTabStrip() {
     const tabStrip: TabStrip = new TabStrip();
     tabStrip.iosIconRenderingMode = "automatic"; // iOS only (automatic is the default value)
     const tabStripItems: Array<TabStripItem> = [];
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 5; index++) {
         const item: TabStripItem = new TabStripItem();
         /*
             Using TabStripItem title property
         */
-        item.title = `Tab ${index === 0
-            ? "res://baseline_home_black_24pt"
-            : (index === 1
-                ? "res://baseline_account_balance_black_24pt"
-                : "res://baseline_search_black_24pt")}`;
+        item.title = `Tab ${index + 1}`;
         /*
             Using TabStripItem title property
         */
@@ -65,7 +61,7 @@ function createTabStrip() {
 
 function createTabsContentArray() {
     const arr: Array<TabContentItem> = [];
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 5; index++) {
         const item: TabContentItem = new TabContentItem();
         // The createContent is a custom method that returns a StackLayout with a Label as a chils
         item.view = createContent(index);
@@ -77,12 +73,21 @@ function createTabsContentArray() {
 
 function createContent(index: number) {
     const label = new Label();
-    label.text = `${index === 0 ? "Home" : (index === 1 ? "Account" : "Search")}`;
+    label.text = `Content ${index + 1}`;
     label.className = "h2 text-center";
     label.color = new Color("red");
+    label.id = "label";
     const stack = new StackLayout();
     stack.verticalAlignment = "middle";
     stack.addChild(label);
+
+    stack.on("loaded", (args) => {
+        console.log(`Loaded [${(<any>args.object).getViewById("label").text}]`)
+    })
+
+    stack.on("unloaded", (args) => {
+        console.log(`UNLOADED [${(<any>args.object).getViewById("label").text}]`)
+    })
 
     return stack;
 }
