@@ -3,32 +3,33 @@
 		<ActionBar title="BottomNavigation - Usage"/>
 	</Page.actionBar>
 
-    <BottomNavigation selectedIndex="1">
+    <!-- BottomNavigation supports the CSS properties `background-color` and `color` -->
+    <BottomNavigation selectedIndex="1" class="bottom-nav">
 
-        <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+        <!-- TabStripItem supports the CSS pseudo selector :active (see theming-page.css) -->
         <TabStrip>
-            <TabStripItem title="Home" iconSource="res://baseline_home_black_18pt"></TabStripItem>
-            <TabStripItem title="Account" iconSource="res://baseline_account_balance_black_18pt"></TabStripItem>
-            <TabStripItem title="Search" iconSource="res://baseline_search_black_18pt"></TabStripItem>
+            <TabStripItem class="tabstripitem-active" title="Home" iconSource="res://baseline_home_black_24pt"></TabStripItem>
+            <TabStripItem class="tabstripitem-active" title="Account" iconSource="res://baseline_account_balance_black_24pt"></TabStripItem>
+            <TabStripItem class="tabstripitem-active" title="Search" iconSource="res://baseline_search_black_24pt"></TabStripItem>
         </TabStrip>
 
-        <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
-        <TabContentItem>
+        <!-- TabContentItem supports the CSS property `color` -->
+        <TabContentItem class="first-tabcontent">
             <GridLayout>
-                <Label text="Home Page" class="h2 text-center"></Label>
+                <Label text="Home Page" class="h2 text-center" verticalAlignment="middle"></Label>
             </GridLayout>
         </TabContentItem>
-        <TabContentItem>
+        <TabContentItem class="second-tabcontent">
             <GridLayout>
-                <Label text="Account Page" class="h2 text-center"></Label>
+                <Label text="Account Page" class="h2 text-center" verticalAlignment="middle"></Label>
             </GridLayout>
         </TabContentItem>
-        <TabContentItem>
+        <TabContentItem class="third-tabcontent">
             <GridLayout>
-                <Label text="Search Page" class="h2 text-center"></Label>
+                <Label text="Search Page" class="h2 text-center" verticalAlignment="middle"></Label>
             </GridLayout>
         </TabContentItem>
 
     </BottomNavigation>
-
+ 
 </Page>

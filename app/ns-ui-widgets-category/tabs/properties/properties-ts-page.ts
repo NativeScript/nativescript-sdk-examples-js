@@ -83,11 +83,11 @@ function createContent(index: number) {
 
     stack.on("loaded", (args) => {
         console.log(`Loaded [${(<any>args.object).getViewById("label").text}]`);
-    })
+    });
 
     stack.on("unloaded", (args) => {
         console.log(`UNLOADED [${(<any>args.object).getViewById("label").text}]`);
-    })
+    });
 
     return stack;
 }
