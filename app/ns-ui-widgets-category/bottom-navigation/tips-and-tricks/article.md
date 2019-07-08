@@ -1,1 +1,0 @@
-<!-- TODO add sections for fonticon and icon size guidelines (@2x, @3x and drawables) here -->

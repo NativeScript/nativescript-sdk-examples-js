@@ -1,5 +1,5 @@
-/* >> bottom-nav-theming-css */
-BottomNavigation.bottom-nav {
+/* >> tabs-theming-css */
+Tabs.tabs {
     background-color: orangered;
     color: gold;
 }
@@ -7,7 +7,7 @@ BottomNavigation.bottom-nav {
 TabStripItem.tabstripitem-active {
     background-color: teal;
 }
-/* The :active CSS pseudo selector support for TabStripItem */
+  
 TabStripItem.tabstripitem-active:active {
     background-color: yellowgreen;
 } 
@@ -15,10 +15,12 @@ TabStripItem.tabstripitem-active:active {
 TabContentItem.first-tabcontent {
     color: olive;
 }
+
 TabContentItem.second-tabcontent {
     color: aquamarine;
 }
+
 TabContentItem.third-tabcontent {
     color: antiquewhite;
 }
-/* << bottom-nav-theming-css */
+/* << tabs-theming-css */
