@@ -7,7 +7,7 @@ BottomNavigation.bottom-nav {
 TabStripItem.tabstripitem-active {
     background-color: teal;
 }
-/* The :active CSS pseudo selector support for TabStripItem */
+
 TabStripItem.tabstripitem-active:active {
     background-color: yellowgreen;
 } 
