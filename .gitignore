@@ -44,7 +44,6 @@ bin/
 gen/
 
 package-lock.json
-webpack.config.js
 e2e/reports
 test-results.xml
 
