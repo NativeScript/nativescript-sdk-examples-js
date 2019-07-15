@@ -1,0 +1,16 @@
+Image {
+    height: 60;
+    margin: 16;
+    width: 60;
+}
+.font-awesome {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+}
+
+.font-size {
+    font-size: 96;
+}
+
+.color {
+    color: blue;
+}

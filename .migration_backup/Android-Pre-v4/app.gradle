@@ -1,0 +1,23 @@
+// Add your native dependencies here:
+
+// Uncomment to add recyclerview:1.1.0-alpha06 dependency
+// dependencies {
+//	 compile 'androidx.recyclerview:recyclerview:1.1.0-alpha06'
+// }
+
+android {  
+  defaultConfig {  
+    generatedDensities = []
+    applicationId = "org.nativescript.nativescriptsdkexamplesjs" 
+    
+    //override supported platforms
+    // ndk {
+    //       abiFilters.clear()
+    //   		abiFilters "armeabi-v7a"
+ 		// }
+  
+  }  
+  aaptOptions {  
+    additionalParameters "--no-version-vectors"  
+  }  
+} 
