@@ -40,11 +40,7 @@ function createTabStrip() {
         /*
             Using TabStripItem title property
         */
-        item.title = `Tab ${index === 0
-            ? "res://baseline_home_black_24pt"
-            : (index === 1
-                ? "res://baseline_account_balance_black_24pt"
-                : "res://baseline_search_black_24pt")}`;
+        item.title = `Tab ${index}`;
         /*
             Using TabStripItem title property
         */

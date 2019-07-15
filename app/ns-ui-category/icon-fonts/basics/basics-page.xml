@@ -23,5 +23,8 @@
         <!-- Using IcoMoon-Free.ttf -->
         <Label text="&#xe904;" class="ico"/>
         <!-- << icon-font-xml-def -->
+
+        <!-- Using font icons in Images requires the font:// prefix -->
+        <Image src="font://&#xf019;" class="far"></Image>
     </StackLayout>
 </Page>

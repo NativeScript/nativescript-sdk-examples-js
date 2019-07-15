@@ -4,7 +4,6 @@
 	</Page.actionBar>
     <!-- >> bottom-navigation-events-xml -->
     <BottomNavigation selectedIndex="1" loaded="onBottomNavLoaded">
-
         <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
         <TabStrip>
             <TabStripItem title="Home" iconSource="res://baseline_home_black_24pt"></TabStripItem>
