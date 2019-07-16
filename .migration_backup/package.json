@@ -22,23 +22,23 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-android": {
-      "version": "6.0.0-rc-2019-07-04-174325-01"
+      "version": "6.0.0"
     },
     "tns-ios": {
-      "version": "6.0.0-rc-2019-07-04-095546-01"
+      "version": "6.0.0"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "rc"
+    "tns-core-modules": "6.0.1"
   },
   "devDependencies": {
     "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.4",
-    "nativescript-dev-webpack": "next",
+    "nativescript-dev-webpack": "1.0.0",
     "tar.gz": "^1.0.7",
-    "tns-platform-declarations": "rc",
+    "tns-platform-declarations": "6.0.1",
     "tslint": "5.11.0",
     "typescript": "3.4.1"
   },

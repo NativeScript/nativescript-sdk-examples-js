@@ -1,18 +1,16 @@
 <Page>
      <Page.actionBar>
-		<ActionBar title="Tabs - Tips and Tricks"/>
+		<ActionBar title="BottomNavigation - Usage"/>
 	</Page.actionBar>
-
-    <Tabs selectedIndex="1">
-
-        <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+    <!-- >> tabs-tips-icons-js -->
+    <Tabs selectedIndex="1" class="fas font-size">
+        <!-- Using icon fonts for each TabStripItem -->
         <TabStrip>
-            <TabStripItem title="Home" iconSource="res://baseline_home_black_18pt"></TabStripItem>
-            <TabStripItem title="Account" iconSource="res://baseline_account_balance_black_18pt"></TabStripItem>
-            <TabStripItem title="Search" iconSource="res://baseline_search_black_18pt"></TabStripItem>
+            <TabStripItem title="Home" iconSource="font://&#xf015;"></TabStripItem>
+            <TabStripItem title="Account" iconSource="font://&#xf2bd;"></TabStripItem>
+            <TabStripItem title="Search" iconSource="font://&#xf002;"></TabStripItem>
         </TabStrip>
-
-        <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+        
         <TabContentItem>
             <GridLayout>
                 <Label text="Home Page" class="h2 text-center"></Label>
@@ -30,5 +28,5 @@
         </TabContentItem>
 
     </Tabs>
-
+    <!-- << tabs-tips-icons-js -->
 </Page>
