@@ -1,27 +1,8 @@
-The prefix of the `src` value specifies where the image will be loaded form. 
-The possible options are:
+### Icon Fonts in Image
 
-### Using Resources
+Using the `font://` prefix, you can load a resource image while setting up an icon code provided by an icon font. By setting up this prefix, a new image will be generated, which will be set as an ImageView resource. While using this functionality, we need to specify the `font-size`, which will calculate the size of the generated image base on the device's dpi. For further configuration on size of the displayed image, we can config the view's `width` and `height` properties.
 
-Using the `res://` prefix you can load a resource image. This is the suggested approach, as it uses the native methods for loading the best image for the current device screen density and resolution.
-
-Loading an image from application resources (in `App_Resources/<platform>`).
-<snippet id='image-resource'/>
-
-Loading an image from application resources (in `App_Resources/<platform>`) via code-behind.
-<snippet id='image-code-behdnd'/>
-<snippet id='image-code-behdnd-ts'/>
-
-### Using Local Files
-
-Using the `~/` prefix, you can load images relative to the App folder inside your project.
-
-Loading an image from the local file system. In the example below the full path of the image is `<project-folder>/app/images/logo.png`
-<snippet id='image-app-folder'/>
-
-### Using Online Resources
-
-Web images have an http:// or https:// prefix. When such an image is loaded, an asynchronous http request will be sent and the image will be shown if the request is successful.
-
-Loading an image from URL. For large images use `loadMode` property to avoid blocking of the UI (see the [best practices](https://docs.nativescript.org/best-practices/images-optimisations) article for more information)
-<snippet id='image-online-url'/>
+<snippet id='image-icon-fonts-xml'/>
+<snippet id='image-icon-fonts-css'/>
+<snippet id='image-icon-fonts-js'/>
+<snippet id='image-icon-fonts-ts'/>

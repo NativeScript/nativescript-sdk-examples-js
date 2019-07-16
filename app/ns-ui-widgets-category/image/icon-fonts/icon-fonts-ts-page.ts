@@ -4,15 +4,14 @@ import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
 
 export function containerLoaded(args: EventData) {
     const container = <GridLayout>args.object;
-    // >> image-code-behdnd-ts
+    // >> image-icon-fonts-ts
     const newImage = new Image();
     const imageString = String.fromCharCode(0xF10B)
     newImage.src = "font://"+imageString;
-    // newImage.stretch = "aspectFill";
     newImage.className = "font-awesome font-size";
     newImage.width = 49;
     newImage.height = 49;
-    // << image-code-behdnd-ts
+    // << image-icon-fonts-ts
     container.addChild(newImage);
     GridLayout.setRow(newImage, 3);
     GridLayout.setColumn(newImage, 0);

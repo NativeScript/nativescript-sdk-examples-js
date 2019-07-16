@@ -1,5 +1,5 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> action-bar-icon-fonts -->
+    <!-- >> actionbar-icon-fonts-xml -->
     <Page.actionBar>
 		<ActionBar>
             <!-- >> (hide) -->
@@ -13,7 +13,7 @@
             </ActionBar.actionItems>
         </ActionBar>
 	</Page.actionBar>
-    <!-- << action-bar-icon-fonts -->
+    <!-- << actionbar-icon-fonts-xml -->
 
     <StackLayout verticalAlignment="middle"> 
         <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
