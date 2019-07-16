@@ -8,6 +8,7 @@ report
 
 app/**/*.map
 app/**/*-ts-*.js
+.migration_backup/
 
 .DS_Store
 **/*.log

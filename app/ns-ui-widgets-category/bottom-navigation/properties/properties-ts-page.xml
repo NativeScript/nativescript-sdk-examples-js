@@ -1,0 +1,8 @@
+<Page>
+     <Page.actionBar>
+		<ActionBar title="BottomNavigation - Usage"/>
+	</Page.actionBar>
+    <!-- >> bottom-navigation-properties-tsc-xml -->
+    <BottomNavigation loaded="onBottomNavLoaded"></BottomNavigation>
+    <!-- << bottom-navigation-properties-tsc-xml -->
+</Page>

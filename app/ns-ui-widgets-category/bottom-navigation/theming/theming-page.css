@@ -1,0 +1,24 @@
+/* >> bottom-nav-theming-css */
+BottomNavigation.bottom-nav {
+    background-color: orangered;
+    color: gold;
+}
+
+TabStripItem.tabstripitem-active {
+    background-color: teal;
+}
+
+TabStripItem.tabstripitem-active:active {
+    background-color: yellowgreen;
+} 
+
+TabContentItem.first-tabcontent {
+    color: olive;
+}
+TabContentItem.second-tabcontent {
+    color: aquamarine;
+}
+TabContentItem.third-tabcontent {
+    color: antiquewhite;
+}
+/* << bottom-nav-theming-css */
