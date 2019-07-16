@@ -9,7 +9,7 @@
                  
                 <ActionItem icon="font://&#xF359;" class="font-awesome font-size color" ios.position="left" tap="navigateBack"/>
                 
-                <ActionItem icon="font://&#xF141;" style="font-family:'Font Awesome 5 Free', 'fa-regular-400';" class="font-size color" ios.position="right"/>
+                <ActionItem icon="font://&#xF2b9;" style="font-family:'Font Awesome 5 Free', 'fa-regular-400';" class="font-size color" ios.position="right"/>
             </ActionBar.actionItems>
         </ActionBar>
 	</Page.actionBar>
