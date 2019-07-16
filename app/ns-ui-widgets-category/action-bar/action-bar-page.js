@@ -30,6 +30,7 @@ const navigationLinks = [
     "Hiding ActionItems",
     "ns-ui-widgets-category/action-bar/hiding-action-items/hiding-action-items-page"
   ),
+  new link("Icon Fonts", "ns-ui-widgets-category/action-bar/icon-fonts/icon-fonts-page"),
   new link("Styling", "ns-ui-widgets-category/action-bar/styling/styling-page"),
   new link(
     "Creating SideDrawer button",

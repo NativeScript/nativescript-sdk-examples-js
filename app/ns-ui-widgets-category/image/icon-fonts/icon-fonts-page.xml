@@ -1,0 +1,17 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Icon fonts"/>
+	</Page.actionBar>
+
+    <ScrollView> 
+    <!-- >> image-icon-fonts-xml -->
+        <GridLayout rows="*, *" columns="*, *" height="300" loaded="containerLoaded" verticalAlignment="middle">
+        
+            <Image row="0" col="0" src="font://&#xF2b9;" class="font-awesome"/>
+
+            <Image row="0" col="1" src="font://&#xF359;" style="font-family: 'Font Awesome 5 Free', 'fa-regular-400';" class="font-awesome color"/>
+
+        </GridLayout>
+    <!-- << image-icon-fonts-xml -->
+    </ScrollView>
+</Page>

@@ -1,0 +1,21 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <!-- >> actionbar-icon-fonts-xml -->
+    <Page.actionBar>
+		<ActionBar>
+            <!-- >> (hide) -->
+            <NavigationButton text="Back" visibility="collapsed" />
+            <!-- << (hide) -->
+            <ActionBar.actionItems>
+                 
+                <ActionItem icon="font://&#xF359;" class="font-awesome font-size color" ios.position="left" tap="navigateBack"/>
+                
+                <ActionItem icon="font://&#xF2b9;" style="font-family:'Font Awesome 5 Free', 'fa-regular-400';" class="font-size color" ios.position="right"/>
+            </ActionBar.actionItems>
+        </ActionBar>
+	</Page.actionBar>
+    <!-- << actionbar-icon-fonts-xml -->
+
+    <StackLayout verticalAlignment="middle"> 
+        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
+    </StackLayout>
+</Page>
