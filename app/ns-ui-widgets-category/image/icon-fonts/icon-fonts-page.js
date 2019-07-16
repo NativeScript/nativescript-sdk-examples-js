@@ -4,8 +4,8 @@ function containerLoaded(args) {
     const container = args.object;
     // >> image-icon-fonts-js
     const newImage = new Image();
-    const imageString = String.fromCharCode(0xF10B)
-    newImage.src = "font://"+imageString;
+    const imageString = String.fromCharCode(0xF10B);
+    newImage.src = `font://${imageString}`;
     newImage.className = "font-awesome font-size";
     newImage.width = 49;
     newImage.height = 49;

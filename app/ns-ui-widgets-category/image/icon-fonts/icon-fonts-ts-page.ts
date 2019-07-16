@@ -6,8 +6,8 @@ export function containerLoaded(args: EventData) {
     const container = <GridLayout>args.object;
     // >> image-icon-fonts-ts
     const newImage = new Image();
-    const imageString = String.fromCharCode(0xF10B)
-    newImage.src = "font://"+imageString;
+    const imageString = String.fromCharCode(0xF10B);
+    newImage.src = "font://" + imageString;
     newImage.className = "font-awesome font-size";
     newImage.width = 49;
     newImage.height = 49;
