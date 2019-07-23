@@ -8,6 +8,7 @@ NativeScript lets you animate the following properties:
 `translateX` and `translateY`
 `scaleX` and `scaleY`
 `rotate`
+`width` and `height`
 
 In every animation, you can control the following properties:
 
