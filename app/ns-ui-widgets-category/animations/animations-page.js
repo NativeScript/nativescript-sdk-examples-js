@@ -4,14 +4,16 @@ const navigationLinks = [
     new link("Animated Properties", "ns-ui-widgets-category/animations/animating-properties/animating-properties-page"),
     new link("Chained Animations", "ns-ui-widgets-category/animations/chaining-animations/chaining-animations-page"),
     new link("Animating Multiple Views", "ns-ui-widgets-category/animations/multiple-views-animation/multiple-views-page"),
-    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-page")
+    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-page"),
+    new link("Properties width and height", "ns-ui-widgets-category/animations/width-height-properties/width-height-properties-page")
 ];
 
 const navigationLinksTsc = [
     new link("Animated Properties", "ns-ui-widgets-category/animations/animating-properties/animating-properties-ts-page"),
     new link("Chained Animations", "ns-ui-widgets-category/animations/chaining-animations/chaining-animations-ts-page"),
     new link("Animating Multiple Views", "ns-ui-widgets-category/animations/multiple-views-animation/multiple-views-ts-page"),
-    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-ts-page")
+    new link("Properties originX and originY", "ns-ui-widgets-category/animations/origin-properties/property-origin-ts-page"),
+    new link("Properties width and height", "ns-ui-widgets-category/animations/width-height-properties/width-height-properties-ts-page")
 ];
 
 // >> animations-imports
