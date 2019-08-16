@@ -25,6 +25,17 @@
         <!-- << icon-font-xml-def -->
 
         <!-- Using font icons in Images requires the font:// prefix -->
-        <Image src="font://&#xf019;" class="far"></Image>
+        <Image src="font://&#xf015;" stretch="none" class="fas"></Image>
+
+        <!-- >> icon-font-xml-images -->
+        <!-- 
+            In case, when the stretch property is set to aspectFit or aspectFill
+            the font-sizde will be disreagarderd and the image will take the vailable space
+            assigned through width/height or through its parent size
+
+            Setting the stretch property to none will allow using the font-size property
+        -->
+        <Image src="font://&#xf51e;" stretch="none" class="fas"></Image>
+        <!-- << icon-font-xml-images -->
     </StackLayout>
 </Page>

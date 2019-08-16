@@ -1,11 +1,11 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-ui-category/icon-fonts/basics/basics-page"),
-    new link("Code Behind", "ns-ui-category/icon-fonts/code-behind/code-behind-page")
+    new link("Usage", "ns-ui-category/icon-fonts/usage/usage-page"),
+    new link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-page")
 ];
 const navigationLinksTsc = [
-    new link("Code Behind", "ns-ui-category/icon-fonts/code-behind/code-behind-ts-page")
+    new link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;
