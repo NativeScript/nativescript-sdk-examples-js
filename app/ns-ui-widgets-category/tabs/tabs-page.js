@@ -1,5 +1,6 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
+
 const navigationLinks = [
     new link("Usage", "ns-ui-widgets-category/tabs/usage/usage-page"),
     new link("Theming", "ns-ui-widgets-category/tabs/theming/theming-page"),
