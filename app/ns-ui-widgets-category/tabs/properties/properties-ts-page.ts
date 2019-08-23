@@ -64,7 +64,7 @@ function createTabsContentArray() {
     for (let index = 0; index < 5; index++) {
         const item: TabContentItem = new TabContentItem();
         // The createContent is a custom method that returns a StackLayout with a Label as a chils
-        item.view = createContent(index);
+        item.content = createContent(index);
         arr.push(item);
     }
 
