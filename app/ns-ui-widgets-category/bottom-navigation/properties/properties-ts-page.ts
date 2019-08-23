@@ -60,7 +60,7 @@ function createTabsContentArray() {
     const arr: Array<TabContentItem> = [];
     for (let index = 0; index < 3; index++) {
         const item: TabContentItem = new TabContentItem();
-        // The createContent is a custom method that returns a StackLayout with a Label as a chils
+        // The createContent is a custom method that returns a StackLayout with a Label as a child
         item.content = createContent(index);
         arr.push(item);
     }
