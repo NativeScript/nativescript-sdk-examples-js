@@ -11,9 +11,9 @@ Example 1 (`ListView` in `ScrollView`):
 <ScrollView>
     <StackLayout>
         <ListView height="150" items="{{ myTitles }}">
-                <ListView.itemTemplate>
+                <ng-template let-item="item">
                     <!-- ....... -->
-                </ListView.itemTemplate>
+                </ng-template let-item="item">
         </ListView>
     </StackLayout>
 </ScrollView>
@@ -21,12 +21,12 @@ Example 1 (`ListView` in `ScrollView`):
 Example 2 (`ScrollView` in `ListView`): 
 ```XML
 <ListView items="{{ myTitles }}">
-	<ListView.itemTemplate>
+	 <ng-template let-item="item">
 		<StackLayout class="list-group-item">
 			<ScrollView height="150" >
                 <!-- ....... -->
             </ScrollView>
 		</StackLayout>
-	</ListView.itemTemplate>
+	</ng-template let-item="item">
 </ListView>
 ```
