@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd">
     <!-- >> action-bar-custom-title-view-xml -->
     <Page.actionBar>
 		<ActionBar title="test">
@@ -11,8 +11,4 @@
         </ActionBar>
 	</Page.actionBar>
     <!-- << action-bar-custom-title-view-xml -->
-
-    <StackLayout verticalAlignment="middle"> 
-        <Label text="{{ '&#xff05a; ' + title }}" class="fa labelClass" textWrap="true"/>
-    </StackLayout>
 </Page>

@@ -4,8 +4,7 @@ const fromObject = require("tns-core-modules/data/observable").fromObject;
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = fromObject({
-        isEditing: false,
-        title: "Hiding Action Items"
+        isEditing: false
     });
 }
 exports.onNavigatingTo = onNavigatingTo;

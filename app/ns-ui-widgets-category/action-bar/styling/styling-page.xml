@@ -1,14 +1,25 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <!-- >> actionbar-style-xml -->
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <!-- >> actionbar-icon-fonts-xml -->
     <Page.actionBar>
-		<ActionBar title="ActionBar Style">
-            <NavigationButton text="Go Back" android.systemIcon="ic_menu_back"></NavigationButton>
-            <ActionItem ios.systemIcon="2" android.systemIcon="ic_menu_edit" ios.position="right"></ActionItem>
+		<ActionBar>
+            <!-- Explicitly hiding the NavigaitonBar to prevent the default one on iOS-->
+            <NavigationButton text="Back" visibility="collapsed" />
+            
+            <ActionBar.actionItems>
+                <!-- Using the icon property and Icon Fonts -->
+                <ActionItem position="left" icon="font://&#xf0a8;" class="fas" tap="goBack"/>
+                
+                <!-- Creating custom views for ActionItem-->
+                <ActionItem ios.position="right">
+                        <!-- <GridLayout rows="*" columns="*" width="100"> -->
+                            <Button row="0" col="0" text="Theme"  />
+                        <!-- </GridLayout> -->
+                </ActionItem>
+            </ActionBar.actionItems>
         </ActionBar>
 	</Page.actionBar>
-    <!-- << actionbar-style-xml -->
-
-    <StackLayout verticalAlignment="middle"> 
-        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
-    </StackLayout>
+    <!-- << actionbar-icon-fonts-xml -->
+<StackLayout>
+    <Button text="Theme" class="-primary -rounded-lg" />
+</StackLayout>
 </Page>

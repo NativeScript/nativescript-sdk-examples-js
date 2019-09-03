@@ -10,9 +10,5 @@
                 visibility="{{ isEditing ? 'visible' : 'collapse' }}"/>
         </ActionBar>
 	</Page.actionBar>
-    <StackLayout verticalAlignment="middle"> 
-        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
-        <Label text="Press the edit ActionItem (top-right corner) to hide/show additional action bar items" textWrap="true" />
-    </StackLayout>
 </Page>
 <!-- << action-bar-hiding-action-items-xml -->

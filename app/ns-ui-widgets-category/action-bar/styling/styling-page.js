@@ -1,10 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+const frameModule = require("tns-core-modules/ui/frame");
 
-function onNavigatingTo(args) {
-    const page = args.object;
-    const vm = new Observable();
-    vm.set("title", "Styling \nAction Bar Example");
-    vm.set("snippet", "<ActionBar title=\"Gettings Started\" class=\"action-bar\"/>");
-    page.bindingContext = vm;
+function goBack() {
+    frameModule.topmost().goBack();
 }
-exports.onNavigatingTo = onNavigatingTo;
+exports.goBack = goBack;

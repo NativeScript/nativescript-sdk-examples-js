@@ -9,7 +9,4 @@
                 android.position="popup"></ActionItem>
         </ActionBar>
 	</Page.actionBar>
-    <StackLayout verticalAlignment="middle"> 
-        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
-    </StackLayout>
 </Page>

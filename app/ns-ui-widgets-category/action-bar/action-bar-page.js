@@ -1,7 +1,7 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-  new link("Basics", "ns-ui-widgets-category/action-bar/basics/basics-page"),
+  new link("Usage", "ns-ui-widgets-category/action-bar/usage/usage-page"),
   new link(
     "Code-Behind",
     "ns-ui-widgets-category/action-bar/code-behind/code-behind-page"
@@ -15,10 +15,6 @@ const navigationLinks = [
     "ns-ui-widgets-category/action-bar/setting-app-icon-android/setting-app-icon-android-page"
   ),
   new link(
-    "Navigation button",
-    "ns-ui-widgets-category/action-bar/navigation-button/navigation-button-page"
-  ),
-  new link(
     "Items",
     "ns-ui-widgets-category/action-bar/items-actionbar/items-actionbar-page"
   ),
@@ -30,7 +26,6 @@ const navigationLinks = [
     "Hiding ActionItems",
     "ns-ui-widgets-category/action-bar/hiding-action-items/hiding-action-items-page"
   ),
-  new link("Icon Fonts", "ns-ui-widgets-category/action-bar/icon-fonts/icon-fonts-page"),
   new link("Styling", "ns-ui-widgets-category/action-bar/styling/styling-page"),
   new link(
     "Creating SideDrawer button",
@@ -39,6 +34,7 @@ const navigationLinks = [
 ];
 
 const navigationLinksTsc = [
+  new link("Usage", "ns-ui-widgets-category/action-bar/usage/usage-ts-page"),
   new link(
     "Code-Behind",
     "ns-ui-widgets-category/action-bar/code-behind/code-behind-ts-page"
@@ -54,10 +50,6 @@ const navigationLinksTsc = [
   new link(
     "Items",
     "ns-ui-widgets-category/action-bar/items-actionbar/items-actionbar-ts-page"
-  ),
-  new link(
-    "Navigation button",
-    "ns-ui-widgets-category/action-bar/navigation-button/navigation-button-ts-page"
   )
 ];
 

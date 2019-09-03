@@ -3,9 +3,5 @@
     <Page.actionBar>
 		<ActionBar title="ActionBar"></ActionBar>
 	</Page.actionBar>
-
-    <StackLayout verticalAlignment="middle"> 
-        <Button text="{{ abHidden ? 'Show ActionBar' : 'Hide ActionBar' }}" tap="onTap" textWrap="true" class="fa" />
-    </StackLayout>
 </Page>
 <!-- << action-bar-hide-show-xml -->

@@ -22,15 +22,15 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-android": {
-      "version": "6.0.2"
+      "version": "6.1.0-rc-2019-08-30-013300-03"
     },
     "tns-ios": {
-      "version": "6.0.1"
+      "version": "6.1.0-rc-2019-09-03-093220-01"
     }
   },
   "dependencies": {
-    "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "next"
+    "nativescript-theme-core": "^2.0.11",
+    "tns-core-modules": "^6.1.0"
   },
   "devDependencies": {
     "eslint": "~5.9.0",

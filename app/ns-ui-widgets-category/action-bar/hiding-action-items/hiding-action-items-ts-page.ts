@@ -8,8 +8,7 @@ import { GestureEventData } from "tns-core-modules/ui/gestures";
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;
     page.bindingContext = fromObject({
-        isEditing: false,
-        title: "Hiding Action Items"
+        isEditing: false
     });
 }
 // << (hide)
