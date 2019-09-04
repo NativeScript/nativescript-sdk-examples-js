@@ -1,30 +1,31 @@
 /* >> bottom-nav-theming-css */
-BottomNavigation.bottom-nav {
-    background-color: orangered;
-    color: gold;
-}
-
-TabStrip {
-    font: 15 arial, sans-serif;
-}
-
-TabStripItem.tabstripitem-active {
+TabStripItem.tabstripitem {
     background-color: teal;
 }
 
-TabStripItem.tabstripitem-active:active {
+TabStripItem.tabstripitem:active {
     background-color: yellowgreen;
-    font: 24 'Times New Roman', Times, serif;
 } 
 
 TabContentItem.first-tabcontent {
+    background-color: seashell;
     color: olive;
-    font: italic bold 12 Georgia, serif;
 }
 TabContentItem.second-tabcontent {
+    background-color: slategray;
     color: aquamarine;
 }
 TabContentItem.third-tabcontent {
+    background-color: blueviolet;
     color: antiquewhite;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.t-36 {
+    font-size: 36;
 }
 /* << bottom-nav-theming-css */

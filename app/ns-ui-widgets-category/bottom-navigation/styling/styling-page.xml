@@ -1,0 +1,43 @@
+<Page>
+     <Page.actionBar>
+		<ActionBar title="BottomNavigation - Usage"/>
+	</Page.actionBar>
+<!-- >> bottom-nav-theming-xml -->
+    <!-- BottomNavigation supports the CSS properties `background-color` and `color` -->
+    <BottomNavigation selectedIndex="1" class="bottom-nav">
+
+        <!-- TabStripItem supports the CSS pseudo selector :active (see theming-page.css) -->
+        <TabStrip>
+            <TabStripItem class="tabstripitem">
+                <Label text="Home"></Label>
+                <Image src="font://&#xf015;" class="fas t-36"></Image>
+            </TabStripItem>
+            <TabStripItem class="tabstripitem">
+                <Label text="Account"></Label>
+                <Image src="font://&#xf007;" class="fas t-36"></Image>
+            </TabStripItem>
+            <TabStripItem class="tabstripitem">
+                <Label text="Search"></Label>
+                <Image src="font://&#xf00e;" class="fas t-36"></Image>
+            </TabStripItem>
+        </TabStrip>
+
+        <TabContentItem class="first-tabcontent">
+            <GridLayout>
+                <Label text="Home Page" horizontalAlignment="center" verticalAlignment="middle"/>
+            </GridLayout>
+        </TabContentItem>
+        <TabContentItem class="second-tabcontent">
+            <GridLayout>
+                <Label text="Account Page" horizontalAlignment="center" verticalAlignment="middle"/>
+            </GridLayout>
+        </TabContentItem>
+        <TabContentItem class="third-tabcontent">
+            <GridLayout>
+                <Label text="Search Page" horizontalAlignment="center" verticalAlignment="middle"/>
+            </GridLayout>
+        </TabContentItem>
+
+    </BottomNavigation>
+ <!-- << bottom-nav-theming-xml -->
+</Page>

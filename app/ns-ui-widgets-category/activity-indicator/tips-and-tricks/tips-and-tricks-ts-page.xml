@@ -1,8 +1,8 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-        <ActionBar title="Basics" icon="" />
+        <ActionBar title="Tips and Tricks" icon="" />
     </Page.actionBar>
     <StackLayout verticalAlignment="middle">
-        <ActivityIndicator busy="{{ isLoading }}" />
+        <ActivityIndicator loaded="onLoaded"  busy="true" backgroundColor="red" width="100" height="100"/>
     </StackLayout>
 </Page>

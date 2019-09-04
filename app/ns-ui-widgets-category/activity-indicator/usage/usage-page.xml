@@ -4,7 +4,7 @@
     </Page.actionBar>
     <StackLayout verticalAlignment="middle">
         <!-- >> activity-indicator-setting-busy -->
-        <ActivityIndicator busy="{{ isLoading }}" />
+        <ActivityIndicator busy="{{ isBusy }}" loaded="indicatorLoaded"/>
         <!-- << activity-indicator-setting-busy -->
     </StackLayout>
 </Page>
