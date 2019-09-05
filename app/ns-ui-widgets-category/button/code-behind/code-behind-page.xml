@@ -2,6 +2,7 @@
     <Page.actionBar>
 		<ActionBar title="Dynamic Creation"/>
 	</Page.actionBar>
-
+    <!-- >> button-code-create-xml -->
     <StackLayout id="container" verticalAlignment="middle"/>
+    <!-- << button-code-create-xml -->
 </Page>

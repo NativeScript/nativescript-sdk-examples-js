@@ -1,5 +1,5 @@
-The `Button` widget comes with `text` property and a `tap` handler.
-The example demonstrates how to set a button in XML page and use the `tap` callback.
-<snippet id='button-xml'/>
+A `Button` component can execute custom logic via its `tap` event. Handling the event is as easy as using `(tap)` in  HTML, and implementing a tap handler in your component.
+
+<snippet id='button-tap-event-xml'/>
 <snippet id='button-tap-event'/>
 <snippet id='button-tap-event-ts'/>

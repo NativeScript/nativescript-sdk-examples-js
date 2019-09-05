@@ -3,8 +3,8 @@
 		<ActionBar title="Basics"/>
 	</Page.actionBar>
     <StackLayout verticalAlignment="middle">
-        <!-- >> date-picker-styling -->
-        <DatePicker day="20" month="04" year="1980" class="date-picker"></DatePicker>
-        <!-- << date-picker-styling -->
+        <!-- >> styling-datepicker-xml -->
+        <DatePicker year="1980" month="4" day="20" class="date-picker"></DatePicker>
+        <!-- << styling-datepicker-xml -->
     </StackLayout>
 </Page>

@@ -1,16 +1,23 @@
 /* >> button-css-styles */
 .my-button {
-    background-color: orangered;
-    border-radius: 5;
-    color: white;
-    font-family: FontAwesome;
-    font-size: 24;
-    vertical-align: middle;
-    width: 80%;
+    android-elevation: 4;
+    background-color: lightseagreen;
+    border-color: darkolivegreen;
+    border-radius: 20;
+    border-width: 1;
+    color: whitesmoke;
+    font-size: 18;
+    font-weight: bold;
 }
 
 .my-button:active {
-    background-color: lightslategray;
-    color:white;
+    android-elevation: 8;
+    background-color: whitesmoke;
+    border-color: darkolivegreen;
+    border-radius: 20;
+    border-width: 1;
+    color: lightseagreen;
+    font-size: 18;
+    font-weight: bold;
 }
 /* << button-css-styles */
