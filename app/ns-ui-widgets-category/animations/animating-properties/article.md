@@ -30,6 +30,8 @@ Property values:
 | `rotate`              | Number value for degrees (0 - 360 degrees). |
 | `scale`               | Object value `{ x:1, y:2 }` (1 = Original scale). |
 | `translate`           | Object value `{ x:100, y:200 }` (Translate by given DIPs). |
+| `width`               | Number value. |
+| `height`               | Number value. |
 
 
 The first example will change the background color of a `view` from "red" to "green". 
