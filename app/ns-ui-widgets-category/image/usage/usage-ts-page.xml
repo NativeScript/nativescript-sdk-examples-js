@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <ScrollView>
+        <StackLayout loaded="containerLoaded" verticalAlignment="middle">
+            <Image src="res://icon" stretch="aspectFill" />
+            <Image src="~/images/logo.png" stretch="aspectFill" />
+            <Image src="https://www.nativescript.org/images/default-source/Blogs/ns-logo_share_600x315.png" stretch="aspectFill" />
+            <Image src="{{ imageUri }}" width="100" height="100" stretch="aspectFill" />
+        </StackLayout>
+    </ScrollView>
+</Page>
