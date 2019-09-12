@@ -1,11 +1,13 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Swipe"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <!-- >> gest-swipe-xml -->
-        <Label text="Swipe me!" swipe="onSwipe"/>
-        <!-- << gest-swipe-xml -->
+    <StackLayout >
+        <Label text="Apply swipe gesture inside the box" class="h3 p-15 text-left" />
+        <!-- >> swipe-xml -->
+        <GridLayout swipe="onSwipe" class="bg-primary p-15 m-15" width="200" height="200"></GridLayout>
+        <!-- << swipe-xml -->
+        <Label text="{{'Swipe direction : ' + direction}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left" />
     </StackLayout>
 </Page>

@@ -3,9 +3,12 @@
 		<ActionBar title="Double Tap"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <!-- >> gest-double-tap-xml -->
-        <Label text="Double Tap me!" doubleTap="onDoubleTap" />
-        <!-- << gest-double-tap-xml -->
+    <StackLayout>
+        <Label class="h3 p-15" text="Apply double tap gesture inside the box"/>
+        <!-- >> double-tap-xml -->
+        <GridLayout class="bg-primary p-15 m-15" width="200" height="200" doubleTap="onDoubleTap">
+            <Image class="img-rounded" src="res://icon" stretch="none"/>
+        </GridLayout>
+        <!-- << double-tap-xml -->
     </StackLayout>
 </Page>

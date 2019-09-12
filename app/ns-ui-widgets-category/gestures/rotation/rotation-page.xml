@@ -1,11 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo"  loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Rotation"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <!-- >> gest-rotation-xml -->
-        <Label text="Rotate me!" rotation="onRotation"/>
-        <!-- << gest-rotation-xml -->
+    <StackLayout >
+        <Label text="Apply rotation gesture inside the box" class="h3 p-15 text-left" />
+        <!-- >> rotation-xml -->
+        <GridLayout rotation="onRotation" class="bg-primary p-15 m-15" width="200" height="200"></GridLayout>
+        <!-- << rotation-xml -->
+        <Label text="{{'Rotation angle: ' + angle}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
+        <Label text="{{'Rotation state: ' + state}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
     </StackLayout>
 </Page>

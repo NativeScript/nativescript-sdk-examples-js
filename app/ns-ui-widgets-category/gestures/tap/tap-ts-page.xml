@@ -1,9 +1,12 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
 		<ActionBar title="Tap"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <Label text="Tap me!" tap="onTap"/>
+    <StackLayout >
+        <Label text="Apply tap gesture inside the box" class="h3 p-15 text-left"/>
+        <GridLayout tap="onTap" class="bg-primary p-15 m-15" width="200" height="200">
+            <Image src="res://icon" stretch="none" class="img-rounded"/>
+        </GridLayout>
     </StackLayout>
 </Page>

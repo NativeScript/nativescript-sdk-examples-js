@@ -1,7 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
-// >> html-view-require
+// >> html-view-code-behind
 const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
-// << html-view-require
+// >> (hide)
 
 function onPageLoaded(args) {
     const page = args.object;
@@ -17,12 +17,13 @@ function onPageLoaded(args) {
     container.addChild(createHtmlView());
 }
 exports.onPageLoaded = onPageLoaded;
-
+// << (hide)
 function createHtmlView() {
-    // >> html-view-code-behind
+    
     const myHtmlView = new HtmlView();
     myHtmlView.html = "<span><h1><font color=\"blue\">NativeScript HtmlView</font></h1></br><h3>This component accept simple HTML strings</h3></span>";
-    // << html-view-code-behind
+    
 
     return myHtmlView;
 }
+// << html-view-code-behind

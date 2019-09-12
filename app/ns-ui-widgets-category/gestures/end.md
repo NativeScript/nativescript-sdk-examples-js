@@ -1,18 +1,36 @@
- **API References**
+## Events
 
- * [Gestures Module](https://docs.nativescript.org/api-reference/modules/_ui_gestures_)
- * [GesturesTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturetypes)
- * [GestureStateTypes Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturestatetypes)
- * [SwipeDirection Enumaration](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.swipedirection)
- * [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
- * [PinchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pinchgestureeventdata)
- * [SwipeGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.swipegestureeventdata)
- * [GestureEventDataWithState Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdatawithstate)
- * [TouchGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.touchgestureeventdata)
- * [PanGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pangestureeventdata)
- * [RotationGestureEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.rotationgestureeventdata)
- * [Pointer Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pointer)
- * [GesturesEventData Interface](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata)
+Each interactive view in NativeScript can access the gesture events it will raise on user interaction.
 
- **See Also**
-[Implementation of Zoom using `pinch` and Dran'n'Drop using `pan` gestures](https://github.com/NickIliev/nativescript-zoom-and-drag)
+| Name     | Description    |
+|----------|----------------|
+| `tap`    | Emitted when the view is tapped.|
+| `doubleTap`    | Emitted when the view is double tapped.|
+| `touch`    | Emitted when the view is touched. Returns action state from [`TouchGestureEventData`](https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.touchgestureeventdata) |
+| `longPress`    | Emitted when the view is tapped and hold. Returns `state`. |
+| `pan`    | Emitted when the view is paned. Rewturns `deltaX` and `deltaY` coordinates as numbers. |
+| `pinch`    | Emitted when the view is pinched. Returns `scale` |
+| `swipe`    | Emitted when the view is swiped left/right. Returns `direction` as [`SwipeDirection`](https://docs.nativescript.org/api-reference/enums/_ui_gestures_.swipedirection) |
+
+## API References
+
+| Name     | Type    | API Reference Link |
+|----------|---------|--------------------|
+| `tns-core-modules/ui/gestures` | `Module` | https://docs.nativescript.org/api-reference/modules/_ui_gestures_ |
+| `GestureTypes` | `enum` | https://docs.nativescript.org/api-reference/enums/_ui_gestures_.gesturetypes |
+| `GestureStateTypes` | `enum` | https://docs.nativescript.org/api-reference/modules/_ui_gestures_ |
+| `SwipeDirection` | `enum` | https://docs.nativescript.org/api-reference/modules/_ui_gestures_ |
+| `GestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdata |
+| `GestureEventDataWithState` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.gestureeventdatawithstate |
+| `PanGestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pangestureeventdata |
+| `PinchGestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pinchgestureeventdata |
+| `RotationGestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.rotationgestureeventdata |
+| `SwipeGestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.swipegestureeventdata |
+| `TouchGestureEventData` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.touchgestureeventdata |
+| `Pointer` | `interface` | https://docs.nativescript.org/api-reference/interfaces/_ui_gestures_.pointer |
+
+## Native Component
+
+| Android               | iOS      |
+|:----------------------|:---------|
+| [android.widget.Button](http://developer.android.com/reference/android/widget/Button.html) | [UIButton](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIButton_Class/) | 

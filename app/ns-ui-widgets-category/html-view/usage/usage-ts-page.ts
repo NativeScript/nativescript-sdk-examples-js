@@ -1,9 +1,9 @@
 import { EventData, Observable } from "tns-core-modules/data/observable";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { Page } from "tns-core-modules/ui/page";
-// >> html-view-require-ts
+// >> html-view-code-behind-ts
 import { HtmlView } from "tns-core-modules/ui/html-view";
-// << html-view-require-ts
+// >> (hide)
 
 function onPageLoaded(args: EventData) {
     const page = <Page>args.object;
@@ -21,16 +21,16 @@ function onPageLoaded(args: EventData) {
     container.addChild(createHtmlView());
 }
 exports.onPageLoaded = onPageLoaded;
-
+// << (hide)
 function createHtmlView() {
-    // >> html-view-code-behind-ts
     const myHtmlView = new HtmlView();
 
     myHtmlView.html = `<span>
         <h1><font color=\"blue\">NativeScript HtmlView</font></h1></br>
         <h3>This component accept simple HTML strings</h3>
     </span>`;
-    // << html-view-code-behind-ts
+    
 
     return myHtmlView;
 }
+// << html-view-code-behind-ts

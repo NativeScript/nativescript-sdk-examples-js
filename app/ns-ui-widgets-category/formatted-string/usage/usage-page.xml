@@ -1,0 +1,57 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+	<Page.actionBar>
+		<ActionBar title="Usage" />
+	</Page.actionBar>
+	<StackLayout>
+		<!-- >> formatted-string-label-xml -->
+		<Label>
+			<FormattedString>
+				<Span text="Words " color="#006600">
+				</Span>
+				<Span text="with " color="#990000" fontWeight="Bold">
+				</Span>
+				<Span text="different " color="#ffcc00">
+				</Span>
+				<Span text="color.">
+				</Span>
+			</FormattedString>
+		</Label>
+		<!-- << formatted-string-label-xml -->
+		<!-- >> formatted-string-textfield-xml -->
+		<TextField>
+			<FormattedString>
+				<Span text="Formatted " fontSize="16">
+				</Span>
+				<Span text="String " fontSize="18">
+				</Span>
+				<Span text="TextField" fontSize="22">
+				</Span>
+			</FormattedString>
+		</TextField>
+		<!-- << formatted-string-textfield-xml -->
+		<!-- >> formatted-string-textview-xml -->
+		<TextView>
+			<FormattedString>
+				<Span text="Formatted ">
+				</Span>
+				<Span text="String ">
+				</Span>
+				<Span text="TextView" fontSize="20" color="#990000">
+				</Span>
+			</FormattedString>
+		</TextView>
+		<!-- << formatted-string-textview-xml -->
+		<!-- >> formatted-string-button-xml -->
+		<Button class="-primary p-8">
+			<FormattedString>
+				<Span text="Formatted ">
+				</Span>
+				<Span text="String ">
+				</Span>
+				<Span text="Button" backgroundColor="#0066ff">
+				</Span>
+			</FormattedString>
+		</Button>
+		<!-- << formatted-string-button-xml -->
+	</StackLayout>
+</Page>
