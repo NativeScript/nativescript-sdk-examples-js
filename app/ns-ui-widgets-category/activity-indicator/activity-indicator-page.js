@@ -6,12 +6,12 @@ const navigationLinks = [
         "ns-ui-widgets-category/activity-indicator/basics/basics-page"
     ),
     new link(
-        "Styling",
-        "ns-ui-widgets-category/activity-indicator/styling/styling-page"
-    ),
-    new link(
         "Code-Behind",
         "ns-ui-widgets-category/activity-indicator/code-behind/code-behind-page"
+    ),
+    new link(
+        "Styling",
+        "ns-ui-widgets-category/activity-indicator/styling/styling-page"
     )
 ];
 
@@ -23,6 +23,10 @@ const navigationLinksTsc = [
     new link(
         "Code-Behind",
         "ns-ui-widgets-category/activity-indicator/code-behind/code-behind-ts-page"
+    ),
+    new link(
+        "Styling",
+        "ns-ui-widgets-category/activity-indicator/styling/styling-ts-page"
     )
 ];
 
