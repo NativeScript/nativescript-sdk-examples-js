@@ -3,7 +3,7 @@ import { EventData, fromObject } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
 
 export function onNavigatingTo(args: EventData) {
-    
+
     const items = ["Batman", "Joker", "Bane"];
 
     const page = <Page>args.object;
@@ -11,7 +11,7 @@ export function onNavigatingTo(args: EventData) {
         items: items
     });
     page.bindingContext = vm;
-    
+
 }
 
 // << picker-styling-code-behind-ts

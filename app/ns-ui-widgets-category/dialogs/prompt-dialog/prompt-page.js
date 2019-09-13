@@ -1,6 +1,6 @@
 // >> dialog-prompt
 function showPromptDialog() {
-    
+
     const promptOptions = {
         title: "Hey There",
         defaultText: " Enter your mood ",
@@ -13,9 +13,9 @@ function showPromptDialog() {
         capitalizationType: "sentences" // all, none, sentences or words
     };
     prompt(promptOptions).then((result) => {
-        console.log("Hello, " + result.text);
+        console.log(`Hello, ${result.text}`);
     });
-    
+
 }
 exports.showPromptDialog = showPromptDialog;
 // << dialog-prompt

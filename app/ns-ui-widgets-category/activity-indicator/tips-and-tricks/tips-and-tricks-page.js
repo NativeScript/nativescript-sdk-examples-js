@@ -8,7 +8,7 @@ function onLoaded(args) {
         // accessing the native iOS API https://developer.apple.com/documentation/uikit/uiactivityindicatorviewstyle
         view.ios.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
     }
-    
+
 }
 exports.onLoaded = onLoaded;
 // << large-ios-indicator

@@ -10,11 +10,11 @@ export function onNavigatingTo(args: EventData) {
     view.bindingContext = vm;
 }
 
-export function indicatorLoaded(args: EventData){
+export function indicatorLoaded(args: EventData) {
     let activityIndicator = args.object as ActivityIndicator;
-    activityIndicator.on("busyChange", (aiargs: EventData)=>{
+    activityIndicator.on("busyChange", (aiargs: EventData) => {
         let indicator = aiargs.object as ActivityIndicator;
         console.log("indicator.busy changed to: " + indicator.busy);
-    })
+    });
 }
 // << activity-indicator-setting-busy-code-ts

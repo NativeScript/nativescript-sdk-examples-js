@@ -14,7 +14,7 @@ function onTap(args) {
     let count = vm.get("counter");
     vm.set("counter", ++count);
     // << (hide)
-    alert("Tapped " + count + " times!");
+    alert(`Tapped ${count} times!`);
 }
 exports.onTap = onTap;
 // << button-tap-event

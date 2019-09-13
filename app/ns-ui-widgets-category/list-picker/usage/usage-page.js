@@ -2,13 +2,12 @@
 const fromObject = require("tns-core-modules/data/observable").fromObject;
 const years = [1980, 1990, 2000, 2010, 2020];
 function onNavigatingTo(args) {
-console.log(years)
     const page = args.object;
     const vm = fromObject({
         years: years
     });
     page.bindingContext = vm;
-    
+
 }
 exports.onNavigatingTo = onNavigatingTo;
 

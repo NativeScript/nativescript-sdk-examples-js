@@ -27,9 +27,7 @@ function createHtmlView() {
 
     myHtmlView.html = `<span>
         <h1><font color=\"blue\">NativeScript HtmlView</font></h1></br>
-        <h3>This component accept simple HTML strings</h3>
-    </span>`;
-    
+        <h3>This component accept simple HTML strings</h3></span>`;
 
     return myHtmlView;
 }

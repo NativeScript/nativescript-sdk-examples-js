@@ -22,7 +22,7 @@ export function onPan(args: PanGestureEventData) {
 // << gest-pan-ts
 
 export function onPageLoaded(args) {
-    const page:Page = args.object;
+    const page: Page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }

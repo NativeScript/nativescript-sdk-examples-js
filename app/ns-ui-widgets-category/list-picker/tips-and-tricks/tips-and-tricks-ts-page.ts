@@ -21,7 +21,8 @@ export function onListPickerLoaded(args: EventData) {
     const listPicker = <ListPicker>args.object;
     listPicker.on("selectedIndexChange", (lpargs) => {
         const picker = <ListPicker>lpargs.object;
-        console.log(`ListPicker selected value: ${(<any>picker).selectedValue} ListPicker selected index: ${picker.selectedIndex}`);
+        console.log(`ListPicker selected value: ${(<any>picker).selectedValue}`);
+        console.log(`ListPicker selected index: ${picker.selectedIndex}`);
     });
 }
 // << list-picker-key-value-pairs-code-behind-ts

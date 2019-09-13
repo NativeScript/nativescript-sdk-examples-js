@@ -8,7 +8,6 @@ export function onNavigatingTo(args: EventData) {
     const container = <StackLayout>page.getViewById("container");
     const vm = new Observable();
 
-    
     const myLabel = new Label();
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
 

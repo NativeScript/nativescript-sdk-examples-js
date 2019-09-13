@@ -4,15 +4,13 @@ import { Page } from "tns-core-modules/ui/page";
 import { ListPicker } from "tns-core-modules/ui/list-picker/list-picker";
 const years = [1980, 1990, 2000, 2010, 2020];
 export function onNavigatingTo(args: EventData) {
-    
-    
 
     const page = <Page>args.object;
     const vm = fromObject({
         years: years
     });
     page.bindingContext = vm;
-    
+
 }
 
 export function onListPickerLoaded(fargs) {

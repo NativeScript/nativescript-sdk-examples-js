@@ -1,6 +1,6 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
-import {GridLayout} from "tns-core-modules/ui/layouts/grid-layout"
+import {GridLayout} from "tns-core-modules/ui/layouts/grid-layout";
 // >> gest-swipe-ts
 import { SwipeGestureEventData } from "tns-core-modules/ui/gestures";
 
@@ -19,7 +19,7 @@ export function onSwipe(args: SwipeGestureEventData) {
 }
 // << gest-swipe-ts
 export function onPageLoaded(args) {
-    const page:Page = args.object;
+    const page: Page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }

@@ -1,6 +1,6 @@
 // >> dialog-login
 function showLoginDialog() {
-    
+
     const loginOptions = {
         title: "Login Form",
         message: "Enter your credentials",
@@ -15,7 +15,7 @@ function showLoginDialog() {
     login(loginOptions).then((loginResult) => {
         console.log(loginResult.result);
     });
-    
+
 }
 exports.showLoginDialog = showLoginDialog;
 // << dialog-login

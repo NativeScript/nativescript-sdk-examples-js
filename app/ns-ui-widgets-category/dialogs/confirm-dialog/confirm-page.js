@@ -1,6 +1,6 @@
 // >> dialog-confirm
 function showConfirmDialog() {
-    
+
     const confirmOptions = {
         title: "Race selection",
         message: "Are you sure you want to be a Unicorn?",
@@ -12,7 +12,7 @@ function showConfirmDialog() {
         .then((result) => {
             console.log(result);
         });
-    
+
 }
 exports.showConfirmDialog = showConfirmDialog;
 // << dialog-confirm

@@ -2,8 +2,7 @@
 import { action, ActionOptions } from "tns-core-modules/ui/dialogs";
 
 export function showActionDialog() {
-    
-    
+
     const actionOptions: ActionOptions = {
         title: "Race selection",
         message: "Choose your race",

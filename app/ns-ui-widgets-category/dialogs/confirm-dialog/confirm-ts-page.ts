@@ -2,7 +2,7 @@
 import { confirm, ConfirmOptions } from "tns-core-modules/ui/dialogs";
 
 export function showConfirmDialog() {
-    
+
     const confirmOptions: ConfirmOptions = {
         title: "Race selection",
         message: "Are you sure you want to be a Unicorn?",
@@ -14,6 +14,6 @@ export function showConfirmDialog() {
         .then((result) => {
             console.log(result);
         });
-    
+
 }
 // << dialog-confirm-ts

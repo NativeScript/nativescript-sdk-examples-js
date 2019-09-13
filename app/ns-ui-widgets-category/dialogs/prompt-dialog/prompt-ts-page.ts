@@ -2,7 +2,7 @@
 import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "tns-core-modules/ui/dialogs";
 
 export function showPromptDialog() {
-    
+
     const promptOptions: PromptOptions = {
         title: "Hey There",
         defaultText: " Enter your mood ",
@@ -17,6 +17,6 @@ export function showPromptDialog() {
     prompt(promptOptions).then((result: PromptResult) => {
         console.log("Hello, " + result.text);
     });
-    
+
 }
 // << dialog-prompt-ts

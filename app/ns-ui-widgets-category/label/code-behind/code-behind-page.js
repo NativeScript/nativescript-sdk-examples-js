@@ -6,7 +6,6 @@ function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
     const vm = new observableModule.Observable();
-    
 
     const myLabel = new labelModule.Label();
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
@@ -42,7 +41,6 @@ function onNavigatingTo(args) {
     vm.set("sourceProperty", expValue);
     // set to the page css property the CSS style defined in the pageCSS
     page.css = pageCSS;
-    
 
     container.addChild(myLabel);
     container.addChild(mySecondLabel);

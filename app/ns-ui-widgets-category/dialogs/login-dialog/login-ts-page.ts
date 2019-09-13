@@ -17,6 +17,6 @@ export function showLoginDialog() {
     login(loginOptions).then((loginResult: LoginResult) => {
         console.log(loginResult.result);
     });
-    
+
 }
 // << dialog-login-ts

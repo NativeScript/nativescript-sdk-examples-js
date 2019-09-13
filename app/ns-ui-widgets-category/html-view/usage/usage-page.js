@@ -19,10 +19,9 @@ function onPageLoaded(args) {
 exports.onPageLoaded = onPageLoaded;
 // << (hide)
 function createHtmlView() {
-    
+
     const myHtmlView = new HtmlView();
     myHtmlView.html = "<span><h1><font color=\"blue\">NativeScript HtmlView</font></h1></br><h3>This component accept simple HTML strings</h3></span>";
-    
 
     return myHtmlView;
 }

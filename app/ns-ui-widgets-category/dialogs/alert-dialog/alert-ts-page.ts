@@ -2,7 +2,7 @@
 import { alert, AlertOptions } from "tns-core-modules/ui/dialogs";
 
 export function showAlertDialog() {
-    
+
     const alertOptions: AlertOptions = {
         title: "Race selection",
         message: "Race chosen: Unicorn",
@@ -13,6 +13,6 @@ export function showAlertDialog() {
     alert(alertOptions).then(() => {
         console.log("Race chosen!");
     });
-    
+
 }
 // << dialog-alert-ts

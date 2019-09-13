@@ -5,7 +5,7 @@ const navigationLinks = [
     new link("Styling", "ns-ui-widgets-category/bottom-navigation/styling/styling-page")
 ];
 const navigationLinksTsc = [
-    
+
 ];
 
 function onNavigatingTo(args) {

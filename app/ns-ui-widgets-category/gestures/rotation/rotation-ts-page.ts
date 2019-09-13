@@ -18,9 +18,9 @@ export function onRotation(args: RotationGestureEventData) {
         vm.set("state", args.state);
 
         if (this.state === 3) {
-            let grid = <GridLayout>args.object;
-            grid.rotate = 0;
-            grid.animate({
+            let layout = <GridLayout>args.object;
+            layout.rotate = 0;
+            layout.animate({
                 rotate: args.rotation,
                 duration: 200
             });
@@ -29,7 +29,7 @@ export function onRotation(args: RotationGestureEventData) {
 }
 // << gest-rotation-ts
 export function onPageLoaded(args) {
-    const page:Page = args.object;
+    const page: Page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }

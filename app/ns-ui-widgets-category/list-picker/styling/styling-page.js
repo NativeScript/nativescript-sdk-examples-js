@@ -2,7 +2,7 @@
 const fromObject = require("tns-core-modules/data/observable").fromObject;
 
 function onNavigatingTo(args) {
-    
+
     const items = ["Batman", "Joker", "Bane"];
 
     const page = args.object;
@@ -10,7 +10,7 @@ function onNavigatingTo(args) {
         items: items
     });
     page.bindingContext = vm;
-    
+
 }
 exports.onNavigatingTo = onNavigatingTo;
 
