@@ -1,11 +1,11 @@
-// >> require-list-picker
+// >> create-list-picker-code
 const ListPicker = require("tns-core-modules/ui/list-picker").ListPicker;
-// << require-list-picker
+
 
 function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
-    // >> create-list-picker-code
+    
     const listPicker = new ListPicker();
     listPicker.items = [
         "NativeScript Core - JavaScript",
@@ -16,7 +16,8 @@ function onNavigatingTo(args) {
         "NativeScript Sidekick"
     ];
     listPicker.selectedIndex = 0;
-    // << create-list-picker-code
+    
     container.addChild(listPicker);
 }
 exports.onNavigatingTo = onNavigatingTo;
+// << create-list-picker-code

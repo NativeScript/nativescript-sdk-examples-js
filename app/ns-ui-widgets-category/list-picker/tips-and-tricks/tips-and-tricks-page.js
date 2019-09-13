@@ -19,11 +19,9 @@ exports.onNavigatingTo = onNavigatingTo;
 
 function onListPickerLoaded(args) {
     const listPicker = args.object;
-    const vm = listPicker.page.bindingContext;
     listPicker.on("selectedIndexChange", (lpargs) => {
-        vm.set("index", listPicker.selectedIndex);
-        console.log(`ListPicker selected value: ${listPicker.selectedValue}`);
-        console.log(`ListPicker selected index: ${listPicker.selectedIndex}`);
+        const picker = lpargs.object;
+        console.log(`ListPicker selected value: ${picker.selectedValue} ListPicker selected index: ${picker.selectedIndex}`);
     });
 }
 exports.onListPickerLoaded = onListPickerLoaded;

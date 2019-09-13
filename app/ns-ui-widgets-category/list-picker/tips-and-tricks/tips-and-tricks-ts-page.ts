@@ -19,11 +19,9 @@ export function onNavigatingTo(args: EventData) {
 
 export function onListPickerLoaded(args: EventData) {
     const listPicker = <ListPicker>args.object;
-    const vm = listPicker.page.bindingContext;
     listPicker.on("selectedIndexChange", (lpargs) => {
-        vm.set("index", listPicker.selectedIndex);
-        console.log(`ListPicker selected value: ${(<any>listPicker).selectedValue}`);
-        console.log(`ListPicker selected index: ${listPicker.selectedIndex}`);
+        const picker = <ListPicker>lpargs.object;
+        console.log(`ListPicker selected value: ${(<any>picker).selectedValue} ListPicker selected index: ${picker.selectedIndex}`);
     });
 }
 // << list-picker-key-value-pairs-code-behind-ts

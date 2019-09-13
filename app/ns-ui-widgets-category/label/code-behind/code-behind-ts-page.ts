@@ -1,15 +1,14 @@
 import { EventData, Observable }  from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-// >> require-label-ts
+// >> label-code-create-ts
 import { Label } from "tns-core-modules/ui/label";
-// << require-label-ts
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;
     const container = <StackLayout>page.getViewById("container");
     const vm = new Observable();
 
-    // >> label-code-create-ts
+    
     const myLabel = new Label();
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
 
@@ -44,7 +43,6 @@ export function onNavigatingTo(args: EventData) {
     vm.set("sourceProperty", expValue);
     // set to the page css property the CSS style defined in the pageCSS
     page.css = pageCSS;
-    // << label-code-create-ts
 
     container.addChild(myLabel);
     container.addChild(mySecondLabel);
@@ -52,3 +50,4 @@ export function onNavigatingTo(args: EventData) {
     container.addChild(myFourthlabel);
     page.bindingContext = vm;
 }
+// << label-code-create-ts
