@@ -2,7 +2,7 @@
   "name": "nativescript-sdk-examples-js",
   "description": "NativeScript SDK Examples",
   "author": "Telerik <support@telerik.com>",
-  "version": "0.1.0",
+  "version": "0.1.0", 
   "homepage": "https://github.com/NativeScript/nativescript-sdk-examples-js",
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptsdkexamplesjs",
     "tns-android": {
-      "version": "6.1.0-rc-2019-08-30-013300-03"
+      "version": "6.1.0"
     },
     "tns-ios": {
-      "version": "6.1.0-rc-2019-09-03-093220-01"
+      "version": "6.1.0"
     }
   },
   "dependencies": {
@@ -36,7 +36,7 @@
     "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.4",
-    "nativescript-dev-webpack": "1.1.1",
+    "nativescript-dev-webpack": "~1.2.0",
     "tar.gz": "^1.0.7",
     "tns-platform-declarations": "next",
     "tslint": "5.11.0",

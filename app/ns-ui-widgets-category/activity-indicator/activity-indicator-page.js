@@ -6,14 +6,14 @@ const navigationLinks = [
         "ns-ui-widgets-category/activity-indicator/usage/usage-page"
     ),
     new link(
-        "Styling",
-        "ns-ui-widgets-category/activity-indicator/styling/styling-page"
-    ),
-    new link(
         "Code-Behind",
         "ns-ui-widgets-category/activity-indicator/code-behind/code-behind-page"
     ),
-    new link("Tips & Tricks", "ns-ui-widgets-category/activity-indicator/tips-and-tricks/tips-and-tricks-page")
+    new link("Tips & Tricks", "ns-ui-widgets-category/activity-indicator/tips-and-tricks/tips-and-tricks-page"),
+    new link(
+        "Styling",
+        "ns-ui-widgets-category/activity-indicator/styling/styling-page"
+    )
 ];
 
 const navigationLinksTsc = [
