@@ -1,6 +1,6 @@
 <Page>
      <Page.actionBar>
-		<ActionBar title="BottomNavigation - Usage"/>
+		<ActionBar title="Tabs - Styling"/>
 	</Page.actionBar>
 
     <Tabs class="bottom-nav">

@@ -1,6 +1,6 @@
 <Page>
      <Page.actionBar>
-		<ActionBar title="BottomNavigation - Usage"/>
+		<ActionBar title="BottomNavigation - Styling"/>
 	</Page.actionBar>
 <!-- >> bottom-nav-theming-xml -->
     <!-- BottomNavigation supports the CSS properties `background-color` and `color` -->
