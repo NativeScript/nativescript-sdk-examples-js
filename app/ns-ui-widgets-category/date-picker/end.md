@@ -1,7 +1,45 @@
-**API Reference for** [DatePicker Class](http://docs.nativescript.org/api-reference/modules/_ui_date_picker_.html)
+## Tips And Tricks
 
-**Native Component**
+### Creating DatePicker via Code-Behind
+Using a `DatePicker` in code-behind files requires the `tns-core-modules/ui/date-picker` module.
+<snippet id='date-picker-require'/>
+<snippet id='date-picker-require-ts'/>
 
-| Android                | iOS      |
-|:-----------------------|:---------|
-| [android.widget.DatePicker](http://developer.android.com/reference/android/widget/DatePicker.html) | [UIDatePicker](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDatePicker_Class/index.html) | 
+Creating and controlling `DatePicker` programmatically.
+<snippet id='date-picker-code-behind'/>
+<snippet id='date-picker-code-behind-ts'/>
+
+
+## Properties
+
+| Name     | Type     | Description    |
+|----------|----------|----------------|
+| `date`   | `Date`   | Gets or sets the entire date as `Date` object. |
+| `minDate`| `Date`   | Gets or sets the min date |
+| `maxDate`| `Date`   | Gets or sets the max date |
+| `day`    | `number` | Gets or sets the day. The days start from 1. |
+| `month`  | `number` | Gets or sets the month. The months start from 1. |
+| `year`   | `number` | Gets or sets the year. |
+
+## Events
+
+| Name     | Description    |
+|----------|----------------|
+| `dateChange`    | Emitted when the `date` property is changed. |
+| `dayChange`     | Emitted when the `day` property is changed. |
+| `monthChange`   | Emitted when the `month` property is changed. |
+| `yearChange`    | Emitted when the `year` property is changed. |
+
+## API References
+
+| Name     | Type    |
+|----------|---------|
+| [tns-core-modules/ui/date-picker](https://docs.nativescript.org/api-reference/modules/_ui_date_picker_ ) | `Module` |
+| [DatePicker](https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker) | `Class`  | 
+
+## Native Component
+
+| Android               | iOS      |
+|:----------------------|:---------|
+| [android.widget.DatePicker](http://developer.android.com/reference/android/widget/DatePicker.html)  | [UIDatePicker](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDatePicker_Class/index.html) | 
+

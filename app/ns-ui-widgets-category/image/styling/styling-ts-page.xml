@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Icon fonts"/>
+	</Page.actionBar>
+    <ScrollView> 
+        <StackLayout height="100%"  class="m-15" backgroundColor="lightgray" loaded="containerLoaded">
+            <Image row="0" col="0" src="font://&#xF2b9;" class="fas t-36"/>
+
+            <!-- Image with stretch property ("none", "aspectFill" and "aspectFit") -->
+            <Image src="res://logo_white_bg" stretch="aspectFill"/>
+        </StackLayout>
+    </ScrollView>
+</Page>

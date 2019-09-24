@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar titile="Usage"/>
+	</Page.actionBar>
+
+   <StackLayout class="m-15">
+        <!-- >> button-tap-event-xml -->
+        <Button text="Tap me!" tap="onTap"></Button>
+        <!-- << button-tap-event-xml -->
+    </StackLayout>
+</Page>

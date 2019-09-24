@@ -1,8 +1,0 @@
-<Page>
-     <Page.actionBar>
-		<ActionBar title="Tabs - Properties"/>
-	</Page.actionBar>
-    <!-- >> tabs-properties-tsc-xml -->
-    <Tabs loaded="onTabsLoaded"></Tabs>
-    <!-- << tabs-properties-tsc-xml -->
-</Page>

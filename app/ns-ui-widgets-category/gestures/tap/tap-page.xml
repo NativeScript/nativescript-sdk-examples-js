@@ -3,9 +3,14 @@
 		<ActionBar title="Tap"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <!-- >> gest-tap-xml -->
-        <Label text="Tap me!" tap="onTap"/>
-        <!-- << gest-tap-xml -->
+    <StackLayout >
+        <Label text="Apply tap gesture inside the box" class="h3 p-15 text-left"/>
+        <!-- >> tap-xml -->
+        <GridLayout tap="onTap" class="bg-primary p-15 m-15" width="200" height="200">
+            <!-- >> (hide) -->
+            <Image src="res://icon" stretch="none" class="img-rounded"/>
+            <!-- << (hide) -->
+        </GridLayout>
+        <!-- << tap-xml -->
     </StackLayout>
 </Page>

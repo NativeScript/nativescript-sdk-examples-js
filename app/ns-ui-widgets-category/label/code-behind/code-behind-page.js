@@ -1,12 +1,11 @@
 const observableModule = require("tns-core-modules/data/observable");
-// >> require-label
+// >> label-code-create
  const labelModule = require("tns-core-modules/ui/label");
-// << require-label
+
 function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
     const vm = new observableModule.Observable();
-    // >> label-code-create
 
     const myLabel = new labelModule.Label();
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
@@ -42,7 +41,6 @@ function onNavigatingTo(args) {
     vm.set("sourceProperty", expValue);
     // set to the page css property the CSS style defined in the pageCSS
     page.css = pageCSS;
-    // << label-code-create
 
     container.addChild(myLabel);
     container.addChild(mySecondLabel);
@@ -51,3 +49,4 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 exports.onNavigatingTo = onNavigatingTo;
+// << label-code-create

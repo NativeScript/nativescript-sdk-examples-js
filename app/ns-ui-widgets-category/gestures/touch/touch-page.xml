@@ -1,11 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Touch"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <!-- >> gest-touch-xml -->
-        <Label text="Touch me!" touch="onTouch"/>
-        <!-- << gest-touch-xml -->
+    <StackLayout>
+        <Label class="h3 p-15 text-left" text="Apply touch gesture inside the box"/>
+        <!-- >> touch-xml -->
+        <GridLayout touch="onTouch" class="bg-primary p-15 m-15" width="200" height="200" ></GridLayout>
+        <Label text="{{'Box touched at X: ' + coordX}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
+        <Label text="{{'Box touched at Y: ' + coordY}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
+        <!-- << touch-xml -->
     </StackLayout>
 </Page>

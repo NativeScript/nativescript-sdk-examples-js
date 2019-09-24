@@ -1,9 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
     <Page.actionBar>
 		<ActionBar title="Pinch"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
-        <Label text="Pinch me!" pinch="onPinch" />
+   <StackLayout >
+        <Label text="Apply pinch gesture inside the box" class="h3 p-15 text-left" />
+
+        <GridLayout pinch="onPinch" class="bg-primary p-15 m-15" width="200" height="200"></GridLayout>
+
+        <Label text="{{'Pinch scale: ' + scale}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left" />
+        <Label text="{{'Pinch state: ' + state}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left" />
     </StackLayout>
 </Page>

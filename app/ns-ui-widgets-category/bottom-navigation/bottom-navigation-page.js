@@ -2,17 +2,10 @@ const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
     new link("Usage", "ns-ui-widgets-category/bottom-navigation/usage/usage-page"),
-    new link("Theming", "ns-ui-widgets-category/bottom-navigation/theming/theming-page"),
-    new link("Events", "ns-ui-widgets-category/bottom-navigation/events/events-page"),
-    // new link("Properties", "ns-ui-widgets-category/bottom-navigation/properties/properties-page"),
-    new link("Tips & Tricks", "ns-ui-widgets-category/bottom-navigation/tips-and-tricks/tips-and-tricks-page")
+    new link("Styling", "ns-ui-widgets-category/bottom-navigation/styling/styling-page")
 ];
 const navigationLinksTsc = [
-    new link("Usage", "ns-ui-widgets-category/bottom-navigation/usage/usage-ts-page"),
-    new link("Theming", "ns-ui-widgets-category/bottom-navigation/theming/theming-ts-page"),
-    new link("Events", "ns-ui-widgets-category/bottom-navigation/events/events-ts-page"),
-    // new link("Properties", "ns-ui-widgets-category/bottom-navigation/properties/properties-ts-page"),
-    new link("Tips & Tricks", "ns-ui-widgets-category/bottom-navigation/tips-and-tricks/tips-and-tricks-ts-page")
+
 ];
 
 function onNavigatingTo(args) {

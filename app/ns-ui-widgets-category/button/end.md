@@ -1,6 +1,34 @@
-**API Reference for the** [Button Class](http://docs.nativescript.org/api-reference/classes/_ui_button_.button.html)
+## Tips And Tricks
 
-**Native Component**
+### Creating Button via Code-Behind
+Creating a `Button` programmatically with `text` value and a `tap` callback.
+<snippet id='button-code-create-xml' />
+<snippet id='button-code-create' />
+<snippet id='button-code-create-ts' />
+
+## Properties
+
+| Name     | Type    | Description    |
+|----------|---------|----------------|
+| `text`   | `string` | Gets or sets the label of the button. |
+
+## Events
+
+| Name     | Description    |
+|----------|----------------|
+| `tap`    | Emitted when the button is tapped.|
+| `loaded`               | Emitted when the view is loaded.                 |
+| `unloaded`             | Emitted when the view is unloaded.               |
+| `layoutChanged`        | Emitted when the layout bounds of a view changes due to layout processing. |
+
+## API References
+
+| Name     | Type    | 
+|----------|---------|
+| [tns-core-modules/ui/button](https://docs.nativescript.org/api-reference/modules/_ui_button_) | `Module` | 
+| [Button](http://docs.nativescript.org/api-reference/classes/_ui_button_.button.html) | `Class` | 
+
+## Native Component
 
 | Android               | iOS      |
 |:----------------------|:---------|

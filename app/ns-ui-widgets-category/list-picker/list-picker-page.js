@@ -1,14 +1,14 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-ui-widgets-category/list-picker/basics/basics-page"),
+    new link("Usage", "ns-ui-widgets-category/list-picker/usage/usage-page"),
     new link("Code-Behind", "ns-ui-widgets-category/list-picker/code-behind/code-behind-page"),
-    new link("Key-Value Pairs", "ns-ui-widgets-category/list-picker/key-value-pairs/key-value-pairs-page")
+    new link("Tips and Tricks", "ns-ui-widgets-category/list-picker/tips-and-tricks/tips-and-tricks-page")
 ];
 const navigationLinksTsc = [
-    new link("Basics", "ns-ui-widgets-category/list-picker/basics/basics-ts-page"),
+    new link("Usage", "ns-ui-widgets-category/list-picker/usage/usage-ts-page"),
     new link("Code-Behind", "ns-ui-widgets-category/list-picker/code-behind/code-behind-ts-page"),
-    new link("Key-Value Pairs", "ns-ui-widgets-category/list-picker/key-value-pairs/key-value-pairs-ts-page")
+    new link("Tips and Tricks", "ns-ui-widgets-category/list-picker/tips-and-tricks/tips-and-tricks-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

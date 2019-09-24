@@ -2,7 +2,7 @@
   "name": "nativescript-sdk-examples-js",
   "description": "NativeScript SDK Examples",
   "author": "Telerik <support@telerik.com>",
-  "version": "0.1.0",
+  "version": "0.1.0", 
   "homepage": "https://github.com/NativeScript/nativescript-sdk-examples-js",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     }
   },
   "dependencies": {
-    "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "next"
+    "nativescript-theme-core": "^2.0.11",
+    "tns-core-modules": "^6.1.0"
   },
   "devDependencies": {
     "eslint": "~5.9.0",

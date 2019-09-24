@@ -2,13 +2,14 @@ const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
     new link(
-        "Basics",
-        "ns-ui-widgets-category/activity-indicator/basics/basics-page"
+        "Usage",
+        "ns-ui-widgets-category/activity-indicator/usage/usage-page"
     ),
     new link(
         "Code-Behind",
         "ns-ui-widgets-category/activity-indicator/code-behind/code-behind-page"
     ),
+    new link("Tips & Tricks", "ns-ui-widgets-category/activity-indicator/tips-and-tricks/tips-and-tricks-page"),
     new link(
         "Styling",
         "ns-ui-widgets-category/activity-indicator/styling/styling-page"
@@ -17,17 +18,14 @@ const navigationLinks = [
 
 const navigationLinksTsc = [
     new link(
-        "Basics",
-        "ns-ui-widgets-category/activity-indicator/basics/basics-ts-page"
+        "Usage",
+        "ns-ui-widgets-category/activity-indicator/usage/usage-ts-page"
     ),
     new link(
         "Code-Behind",
         "ns-ui-widgets-category/activity-indicator/code-behind/code-behind-ts-page"
     ),
-    new link(
-        "Styling",
-        "ns-ui-widgets-category/activity-indicator/styling/styling-ts-page"
-    )
+    new link("Tips & Tricks", "ns-ui-widgets-category/activity-indicator/tips-and-tricks/tips-and-tricks-ts-page")
 ];
 
 function onNavigatingTo(args) {

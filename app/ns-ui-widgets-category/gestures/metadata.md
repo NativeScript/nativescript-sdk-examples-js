@@ -4,3 +4,4 @@ description: The Gesture class provides functionality, which allows interaction 
 position: 240
 slug: gestures
 ---
+example-order: tap, double-tap, touch, swipe, long-press, pan, pinch, rotation

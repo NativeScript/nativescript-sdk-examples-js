@@ -4,4 +4,4 @@ description: The NativeScript's Tabs component provides a simple way to navigate
 position: 418
 slug: tabs
 ---
-example-order: usage, theming, properties, events, tips-and-tricks
+example-order: usage, styling

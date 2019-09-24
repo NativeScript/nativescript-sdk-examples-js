@@ -1,7 +1,0 @@
-<Page>
-     <Page.actionBar>
-		<ActionBar title="Tabs - Properties"/>
-	</Page.actionBar>
-
-    <Tabs loaded="onTabsLoaded"></Tabs>
-</Page>

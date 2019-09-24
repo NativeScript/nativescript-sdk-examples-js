@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+    <StackLayout>
+  
+        <ListPicker 
+            loaded="onListPickerLoaded"
+            items="{{ items }}"
+            textField="name"
+            valueField="role"
+            selectedIndex="{{ index }}"
+            selectedValue="{{ selectedItem }}">
+        </ListPicker>
+    </StackLayout>
+</Page>

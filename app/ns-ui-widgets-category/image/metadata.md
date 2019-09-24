@@ -4,3 +4,4 @@ description: The Image is UI widget, which is a common abstraction over iOS's UI
 position: 270
 slug: image
 ---
+example-order: usage, styling

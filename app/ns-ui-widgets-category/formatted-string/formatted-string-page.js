@@ -1,7 +1,7 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-ui-widgets-category/formatted-string/basics/basics-page"),
+    new link("Usage", "ns-ui-widgets-category/formatted-string/usage/usage-page"),
     new link("Code-Behind", "ns-ui-widgets-category/formatted-string/code-behind/code-behind-page")
 ];
 const navigationLinksTsc = [

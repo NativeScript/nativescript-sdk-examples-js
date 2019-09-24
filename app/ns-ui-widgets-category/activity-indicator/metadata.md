@@ -4,3 +4,4 @@ description: ActivityIndicator is an abstraction over Android's ProgressBar and 
 position: 170
 slug: activity-indicator
 ---
+example-order: usage, styling, tips-and-tricks

@@ -3,9 +3,14 @@
 		<ActionBar title="Long Press"/>
 	</Page.actionBar>
 
-    <StackLayout verticalAlignment="middle">
+    <StackLayout>
+        <Label class="h3 p-15 text-left" text="Apply long press gesture inside the box"/>
         <!-- >> gest-long-press-xml -->
-        <Label text="Long Press me!" longPress="onLongPress"/>
+        <GridLayout class="bg-primary p-15 m-15" width="200" height="200" longPress="onLongPress">
+            <!-- >> (hide) -->
+            <Image class="img-rounded" src="res://icon" stretch="none"/> 
+            <!-- << (hide) -->
+        </GridLayout>
         <!-- << gest-long-press-xml -->
     </StackLayout>
 </Page>

@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <GridLayout>
+        <!-- >> picker-styling-xml -->
+        <ListPicker items="{{ items }}" class="picker"/>
+        <!-- << picker-styling-xml -->
+    </GridLayout>
+</Page>

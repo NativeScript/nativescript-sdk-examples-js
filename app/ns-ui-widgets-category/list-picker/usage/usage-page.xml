@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <FlexboxLayout flexDirection="column">
+        <!-- >> list-picker-xml -->
+        <ListPicker items="{{ years }}" selectedIndex="0" loaded="onListPickerLoaded" />
+        <!-- << list-picker-xml -->
+    </FlexboxLayout>
+</Page>

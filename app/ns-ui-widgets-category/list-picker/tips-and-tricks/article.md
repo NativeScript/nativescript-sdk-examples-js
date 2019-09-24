@@ -1,0 +1,12 @@
+### Using key-value pairs
+This functionality provides a simple way to specify the text field, which will be displayed in the ListPicker and the value field which will be returned as a result. In this scenario, when we are setting JSON object to the ListPicker's source, we should set up the `textField` and `valueField` properties, which will specify the displayed and result values. In the example below we are setting `textField` to `name` and `valueField` to `role`. This means that all properties marked as `name` will be displayed in the component and as a result, we will receive their corresponding `role`. We are receiving the selected value via `selectedValue` property, which can also be accessed via code-behind.
+
+<snippet id='list-picker-key-value-pairs-xml'/>
+<snippet id='list-picker-key-value-pairs-code-behind'/>
+<snippet id='list-picker-key-value-pairs-code-behind-ts'/>
+
+### Creating ListPicker via Code-Behind
+
+Creating a `ListPicker` programmatically while setting items source and default selected index.
+<snippet id='create-list-picker-code' />
+<snippet id='create-list-picker-code-ts' />

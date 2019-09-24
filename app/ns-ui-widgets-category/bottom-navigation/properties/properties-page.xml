@@ -1,7 +1,0 @@
-<Page>
-     <Page.actionBar>
-		<ActionBar title="BottomNavigation - Usage"/>
-	</Page.actionBar>
-
-    <BottomNavigation loaded="onBottomNavLoaded"></BottomNavigation>
-</Page>

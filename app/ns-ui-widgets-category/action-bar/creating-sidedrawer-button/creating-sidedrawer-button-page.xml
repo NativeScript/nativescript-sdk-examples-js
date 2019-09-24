@@ -11,8 +11,4 @@
         </ActionBar>
 	</Page.actionBar>
     <!-- << action-bar-sidedrawer-btn-xml -->
-
-    <StackLayout verticalAlignment="middle"> 
-        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
-    </StackLayout>
 </Page>

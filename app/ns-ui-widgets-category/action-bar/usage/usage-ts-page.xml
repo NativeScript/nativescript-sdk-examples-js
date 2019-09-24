@@ -1,0 +1,16 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <!-- >> action-bar-gettings-started -->
+    <Page.actionBar>
+        <ActionBar title="ActionBar Title" icon="">
+            <NavigationButton icon="res://ic_arrow_back_black_24dp" tap="goBack" />
+            <ActionBar.actionItems>
+                <ActionItem icon="font://&#xf013;" class="fas" ios.position="right" tap="openSettings" />
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
+    <!-- << action-bar-gettings-started -->
+
+    <StackLayout verticalAlignment="middle"> 
+        <Label text="{{ '&#xff05a; ' + title }}" textWrap="true" class="fa"/>
+    </StackLayout>
+</Page>

@@ -5,11 +5,13 @@
 
    
 
-    <StackLayout verticalAlignment="middle" width="100%">
-        <!-- >> gest-pan-xml -->
-        <Label text="Pan me!" pan="onPan"/>
-        <!-- << gest-pan-xml -->
-        <Label text="{{ 'deltaX: ' + deltaX }}" width="90%" height="60" />
-        <Label text="{{ 'deltaY: ' + deltaY }}" width="90%" height="60" />
+    <StackLayout>
+        <Label text="Apply pan gesture inside the box" class="h3 p-15 text-left" />
+        <!-- >> pan-xml -->
+        <GridLayout pan="onPan" class="bg-primary p-15 m-15" width="200" height="200" ></GridLayout>
+        <!-- << pan-xml -->
+        <Label text="{{'Pan deltaX: ' + deltaX}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
+        <Label text="{{'Pan deltaY: ' + deltaY}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
+        <Label text="{{'Pan state: ' + state}}" textWrap="true" class="h3 p-l-15 p-r-15 p-t-15 text-left"/>
     </StackLayout>
 </Page>

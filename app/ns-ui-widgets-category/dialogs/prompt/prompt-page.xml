@@ -1,8 +1,0 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
-    <Page.actionBar>
-		<ActionBar title="Prompt"/>
-	</Page.actionBar>
-	    <StackLayout verticalAlignment="middle">
-        <Button text="Show Prompt Dialog" tap="showPromptDialog" class="btn btn-primary btn-active"/>
-    </StackLayout>
-</Page>
