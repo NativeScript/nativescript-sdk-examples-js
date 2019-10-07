@@ -5,6 +5,6 @@ export function goBack() {
     topmost().goBack();
 }
 export function openSettings() {
-    // implement the cusotm logic
+    // implement the custom logic
 }
 // << action-bar-basic-usage-sdk-ts
