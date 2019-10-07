@@ -1,0 +1,25 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" >
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+	<!-- >> scroll-view-verical-xml -->
+	<!-- 
+        The default value of the orientation property is 'vertical'. 
+        The ScrollView also supports 'horizontal' as orientation value 
+    -->
+    <ScrollView orientation="vertical">
+        <GridLayout rows="200 200 200 200 200 200 200 200 200 200">
+            <Label class="m-10" row="0" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="1" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="2" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="3" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="4" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="5" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="6" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="7" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="8" text="Some text content follows here..." textWrap="true"/>
+            <Label class="m-10" row="9" text="Some text content follows here..." textWrap="true"/>
+        </GridLayout>
+    </ScrollView>
+	<!-- << scroll-view-verical-xml -->
+</Page>
