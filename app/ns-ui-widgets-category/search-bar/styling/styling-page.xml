@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+	<Page.actionBar>
+		<ActionBar title="Events" />
+	</Page.actionBar>
+	<!-- >> search-bar-styling-js -->
+	<StackLayout>
+		<SearchBar hint="Search" color="yellow" backgroundColor="red" textFieldHintColor="whitesmoke" textFieldBackgroundColor="orangered" />
+	</StackLayout>
+	<!-- << search-bar-styling-js -->
+</Page>
