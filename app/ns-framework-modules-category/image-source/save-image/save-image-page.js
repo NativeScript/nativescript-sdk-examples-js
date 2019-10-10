@@ -59,12 +59,12 @@ function makeCopyFromAsset(args) {
             vm.set("imageAssetCopyPath", path);
             // << (hide)
         }
-    // << image-source-save-from-asset
     })
     .catch((e) => {
         console.log("Error: ");
         console.log(e);
     });
+    // << image-source-save-from-asset
 }
 
 function makeBase64String(args) {
