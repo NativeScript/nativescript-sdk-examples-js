@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+	<Page.actionBar>
+		<ActionBar title="Binding" />
+	</Page.actionBar>
+	<StackLayout>
+		<!-- >> textfield-xml-styling -->
+		<TextField hint="Enter text" color="orangered" backgroundColor="lightyellow" />
+		<!-- << textfield-xml-styling -->
+	</StackLayout>
+</Page>

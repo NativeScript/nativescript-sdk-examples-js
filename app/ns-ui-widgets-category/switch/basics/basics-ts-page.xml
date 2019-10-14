@@ -1,9 +1,0 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
-    <Page.actionBar>
-		<ActionBar title="Getting Started"/>
-	</Page.actionBar>
-    <StackLayout class="m-15 text-center" width="80%" height="80%">
-        <Label text="{{ 'Switch state: ' + secondSwitchState }}" textWrap="true" class="h2"/>
-        <Switch checked="true" isEnabled="true" id="my-switch"/>
-    </StackLayout>
-</Page>

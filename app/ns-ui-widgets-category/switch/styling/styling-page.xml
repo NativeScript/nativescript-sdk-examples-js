@@ -1,21 +1,10 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <Page.actionBar>
-		<ActionBar title="Styling"/>
+	<Page.actionBar>
+		<ActionBar title="Styling" />
 	</Page.actionBar>
-    <StackLayout >
-			<StackLayout class="example-container">
-				<!-- >> switch-styling-xml -->
-				<!-- Styling via inline properties -->
-				<Switch color="yellow"
-								backgroundColor="green"
-								offBackgroundColor="red"
-								checked="{{ firstSwitch }}"/>
-				<!-- Srtyling via CSS class  (refer to the CSS file) -->
-				<Switch  class="m-15 secondSwitchStyle" checked="{{ secondSwitch }}"/>
-
-				<!-- Styling colors & opacity via CSS class (refer to the CSS file) -->
-				<Switch class="m-15 thirdSwitchStyle" checked="{{ thirdSwitch }}"	/>
-				<!-- << switch-styling-xml -->
-			</StackLayout>
-		</StackLayout>
+	<StackLayout>
+		<!-- >> switch-styling-xml -->
+		<Switch color="yellow" backgroundColor="green" offBackgroundColor="red"/>
+		<!-- << switch-styling-xml -->
+	</StackLayout>
 </Page>

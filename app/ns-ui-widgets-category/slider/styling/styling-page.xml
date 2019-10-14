@@ -1,0 +1,11 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Styling"/>
+	</Page.actionBar>
+    <StackLayout>
+        <!-- >> styling-slider-xml -->
+        <Slider value="10" minValue="0" maxValue="100"
+				backgroundColor="green" color="red" />
+        <!-- << styling-slider-xml -->
+    </StackLayout>
+</Page>
