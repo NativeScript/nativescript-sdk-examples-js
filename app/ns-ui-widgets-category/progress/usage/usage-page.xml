@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+    <GridLayout rows="*">
+        <!-- >> progress-create-xml -->
+        <StackLayout verticalAlign="center" height="100" class="p-20">
+            <Progress value="25" maxValue="100"  loaded="onProgressLoaded"/>
+        </StackLayout>
+        <!-- << progress-create-xml -->
+    </GridLayout>
+</Page>

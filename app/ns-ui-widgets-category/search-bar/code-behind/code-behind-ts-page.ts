@@ -6,7 +6,7 @@ import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import { SearchBar } from "tns-core-modules/ui/search-bar";
 // << search-bar-import
 // >> creating-search-bar-code-ts
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();
     const stackLayout: StackLayout = <StackLayout>page.getViewById("stackLayoutId");
@@ -41,5 +41,4 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
 // << creating-search-bar-code-ts
