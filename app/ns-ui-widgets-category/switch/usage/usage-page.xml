@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+    <StackLayout >
+        <!-- >> switch-basics-xml -->
+        <Switch checked="true" loaded="onSwitchLoaded"/>
+        <!-- << switch-basics-xml -->
+    </StackLayout>
+</Page>

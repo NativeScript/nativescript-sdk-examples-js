@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+    <StackLayout class="m-15 text-center" width="80%" height="80%">
+        <Switch checked="true" loaded="onSwitchLoaded"/>
+    </StackLayout>
+</Page>

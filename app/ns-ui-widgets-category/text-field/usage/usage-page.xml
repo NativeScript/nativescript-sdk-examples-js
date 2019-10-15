@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded">
+	<Page.actionBar>
+		<ActionBar title="Getting Started" />
+	</Page.actionBar>
+	<StackLayout>
+		<!-- >> sample-ui-textfield-html -->
+		<TextField loaded="onTextFieldLoaded" hint="Enter Date" text="{{viewDate}}" secure="false" keyboardType="datetime" returnKeyType="done" autocorrect="false" maxLength="10" />
+		<!-- << sample-ui-textfield-html -->
+	</StackLayout>
+</Page>

@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Getting Started"/>
+	</Page.actionBar>
+
+    <StackLayout>
+		<TextView loaded="onTextViewLoaded" hint="Enter Date" text="{{ viewDate }}" secure="false" keyboardType="datetime" returnKeyType="done" autocorrect="false" maxLength="10">
+		</TextView>
+	</StackLayout>
+</Page>

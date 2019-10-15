@@ -4,3 +4,4 @@ description: Slider module provides abstraction over iOS's UISlider and Android'
 position: 390
 slug: slider
 ---
+example-order: usage, styling
