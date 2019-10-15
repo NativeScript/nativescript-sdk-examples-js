@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+	<Page.actionBar>
+		<ActionBar title="Usage" />
+	</Page.actionBar>
+	<GridLayout>
+		<Label text="Refer to the code-behind file for Color module usage" textWrap="true" class="h3 text-center m-20" />
+	</GridLayout>
+</Page>

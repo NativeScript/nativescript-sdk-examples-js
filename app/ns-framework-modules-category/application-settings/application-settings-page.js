@@ -1,12 +1,10 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-framework-modules-category/application-settings/basics/basics-page"),
-    new link("Native Access", "ns-framework-modules-category/application-settings/native-access/native-access-page")
+    new link("Usage", "ns-framework-modules-category/application-settings/usage/usage-page")
 ];
 const navigationLinksTsc = [
-    new link("Basics", "ns-framework-modules-category/application-settings/basics/basics-ts-page"),
-    new link("Native Access", "ns-framework-modules-category/application-settings/native-access/native-access-ts-page")
+    new link("Usage", "ns-framework-modules-category/application-settings/usage/usage-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

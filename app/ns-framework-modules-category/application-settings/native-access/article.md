@@ -1,3 +1,0 @@
-One of the main advantages of NativeScript is the direct access to the native APIs for both Android and iOS. The `application-module` functionality can be extended with native logic just as every other module and widget in NativeScript. The below example demonstrates how to access all stored keys using the native APIs on Android and iOS.
-<snippet id='app-settings-native-access'/>
-<snippet id='app-settings-native-access-ts'/>

@@ -1,10 +1,10 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
 const navigationLinks = [
-    new link("Basics", "ns-framework-modules-category/color/basics/basics-page")
+    new link("Usage", "ns-framework-modules-category/color/usage/usage-page")
 ];
 const navigationLinksTsc = [
-    new link("Basics", "ns-framework-modules-category/color/basics/basics-ts-page")
+    new link("Usage", "ns-framework-modules-category/color/usage/usage-ts-page")
 ];
 function onNavigatingTo(args) {
     const page = args.object;

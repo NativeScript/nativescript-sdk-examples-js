@@ -1,6 +1,12 @@
-**API Reference for the** [Color Class](https://docs.nativescript.org/api-reference/classes/_color_.color.html)
+## API References
 
-**Native Component**
+| Name     | Type    | 
+|----------|---------|
+| [tns-core-modules/color](https://docs.nativescript.org/api-reference/modules/_color_) | `Module` | 
+| [Color](https://docs.nativescript.org/api-reference/classes/_color_.color.html) | `Class` | 
+| [tns-core-modules/known-colors](https://docs.nativescript.org/api-reference/modules/_color_known_colors_) | `Module` | 
+
+## Native Component
 
 | Android               | iOS      |
 |:----------------------|:---------|
