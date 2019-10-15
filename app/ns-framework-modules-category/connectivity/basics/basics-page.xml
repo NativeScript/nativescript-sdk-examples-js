@@ -1,8 +1,0 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
-    <Page.actionBar>
-		<ActionBar title="Basics"/>
-	</Page.actionBar>
-    <StackLayout verticalAlignment="middle" class="page">
-        <Label text="{{ connectionType }}" textWrap="true" class="h2 text-center"/>
-    </StackLayout>
-</Page>

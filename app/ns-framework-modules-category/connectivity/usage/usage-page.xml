@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+    <Page.actionBar>
+		<ActionBar title="Basics"/>
+	</Page.actionBar>
+    <GridLayout class="p-15" rows="*" columns="*">
+        <Label text="{{ connectionType }}" textWrap="true" class="h1 p-15 text-center font-weight-bold"/>
+    </GridLayout>
+</Page>
