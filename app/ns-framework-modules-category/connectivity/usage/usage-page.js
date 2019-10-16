@@ -1,57 +1,38 @@
-// >> connectivity-require
+// >> connectivity-start-code-js
 const connectivityModule = require("tns-core-modules/connectivity");
-// << connectivity-require
+
 
 exports.onNavigatedTo = function(args) {
     const page = args.object;
     let connectionTypeString;
 
-    // >> connectivity-type
-    // result is ConnectionType enumeration (none, wifi or mobile)
-    const myConnectionType = connectivityModule.getConnectionType();
+    const type = connectivityModule.getConnectionType();
 
-    switch (myConnectionType) {
+    switch (type) {
         case connectivityModule.connectionType.none:
-            // Denotes no Internet connection.
             console.log("No connection");
-            // >> (hide)
             connectionTypeString = "No Internet connectivity!";
-            // << (hide)
             break;
         case connectivityModule.connectionType.wifi:
-            // Denotes a WiFi connection.
             console.log("WiFi connection");
-            // >> (hide)
             connectionTypeString = "WiFI connectivity!";
-            // << (hide)
             break;
         case connectivityModule.connectionType.mobile:
-            // Denotes a mobile connection, i.e. cellular network or WAN.
             console.log("Mobile connection");
-            // >> (hide)
             connectionTypeString = "Mobile connectivity!";
-            // << (hide)
             break;
         case connectivityModule.connectionType.ethernet:
-            // Denotes a ethernet connection.
             console.log("Ethernet connection");
-            // >> (hide)
             connectionTypeString = "Ethernet connectivity!";
-            // << (hide)
             break;
         case connectivityModule.connectionType.bluetooth:
-            // Denotes a bluetooth connection.
             console.log("Bluetooth connection");
-            // >> (hide)
             connectionTypeString = "Bluetooth connectivity!";
-            // << (hide)
             break;
         default:
             break;
     }
-    // << connectivity-type
 
-    // >> connectivity-monitoring
     connectivityModule.startMonitoring((newConnectionType) => {
         switch (newConnectionType) {
             case connectivityModule.connectionType.none:
@@ -74,9 +55,9 @@ exports.onNavigatedTo = function(args) {
         }
     });
 
-    // Explicitly stopping the monitoring
+    // Stoping the connection monitoring
     connectivityModule.stopMonitoring();
-    // << connectivity-monitoring
 
     page.bindingContext = { connectionType: connectionTypeString };
 };
+// << connectivity-start-code-js

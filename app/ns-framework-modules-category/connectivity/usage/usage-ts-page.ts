@@ -1,57 +1,37 @@
-// >> connectivity-require-ts
+// >> connectivity-start-code-ts
 import { connectionType, getConnectionType, startMonitoring, stopMonitoring }from "tns-core-modules/connectivity";
-// << connectivity-require-ts
 
 export function onNavigatedTo(args) {
     const page = args.object;
     let connectionTypeString;
 
-    // >> connectivity-type-ts
-    // result is ConnectionType enumeration (none, wifi or mobile)
-    const myConnectionType = getConnectionType();
+    const type = getConnectionType();
 
-    switch (myConnectionType) {
+    switch (type) {
         case connectionType.none:
-            // Denotes no Internet connection.
             console.log("No connection");
-            // >> (hide)
             connectionTypeString = "No Internet connectivity!";
-            // << (hide)
             break;
         case connectionType.wifi:
-            // Denotes a WiFi connection.
             console.log("WiFi connection");
-            // >> (hide)
             connectionTypeString = "WiFI connectivity!";
-            // << (hide)
             break;
         case connectionType.mobile:
-            // Denotes a mobile connection, i.e. cellular network or WAN.
             console.log("Mobile connection");
-            // >> (hide)
             connectionTypeString = "Mobile connectivity!";
-            // << (hide)
             break;
         case connectionType.ethernet:
-            // Denotes a ethernet connection.
             console.log("Ethernet connection");
-            // >> (hide)
             connectionTypeString = "Ethernet connectivity!";
-            // << (hide)
             break;
         case connectionType.bluetooth:
-            // Denotes a bluetooth connection.
             console.log("Bluetooth connection");
-            // >> (hide)
             connectionTypeString = "Bluetooth connectivity!";
-            // << (hide)
             break;
         default:
             break;
     }
-    // << connectivity-type-ts
 
-    // >> connectivity-monitoring-ts
     startMonitoring((newConnectionType) => {
         switch (newConnectionType) {
             case connectionType.none:
@@ -74,8 +54,9 @@ export function onNavigatedTo(args) {
         }
     });
 
-    // Explicitly stopping the monitoring
+    // Stoping the connection monitoring
     stopMonitoring();
-    // << connectivity-monitoring-ts
+
     page.bindingContext = { connectionType: connectionTypeString };
 }
+// << connectivity-start-code-ts
