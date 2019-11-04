@@ -5,7 +5,7 @@ function goBack() {
     frameModule.topmost().goBack();
 }
 function openSettings() {
-    // implement the cusotm logic
+    // implement the custom logic
 }
 exports.goBack = goBack;
 exports.openSettings = openSettings;
