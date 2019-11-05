@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+    <GridLayout>
+        <Label text="Refer to the code-behind and the console for details" textWrap="true"/>
+    </GridLayout>
+</Page>
