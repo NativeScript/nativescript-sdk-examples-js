@@ -1,3 +1,4 @@
+// tslint:disable:max-line-length
 // >> get-screen-device-info-ts
 import { device, screen, isAndroid, isIOS } from "tns-core-modules/platform";
 

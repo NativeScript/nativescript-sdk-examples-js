@@ -1,4 +1,8 @@
+### HTTP Get
+
 The example demonstrates different ways, how we could receive content from a server while making HTTP GET request.
+<snippet id='require-http-get'/>
+<snippet id='import-http-get'/>
 
 The `getString` method allows us to make a request and to get the response body as a string value.
 <snippet id='get-string-code'/>
@@ -33,3 +37,12 @@ The example demonstrates how to download a file while using `getFile` method.
 In the `getFile` method we could also specify the path, where the file to be saved. This scenario is demonstrated in the example below, where the image file will be kept in the current application folder.
 <snippet id='get-file-code-with-path'/>
 <snippet id='get-file-code-with-path-ts'/>
+
+### HTTP Post
+
+The example demonstrates, how to make HTTP POST request and how to get request response.
+<snippet id='require-http-post'/>
+<snippet id='import-http-post'/>
+
+<snippet id='http-post'/>
+<snippet id='http-post-ts'/>

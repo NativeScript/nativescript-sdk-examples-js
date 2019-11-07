@@ -7,6 +7,3 @@ With its methods, we could request a data from a remote server and to represent 
 * `getFile`
 * `request`
 
-
-<snippet id='require-http'/>
-<snippet id='import-http'/>
