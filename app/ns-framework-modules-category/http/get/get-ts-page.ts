@@ -2,7 +2,9 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { path, knownFolders, File } from "tns-core-modules/file-system";
 import { Page } from "tns-core-modules/ui/page";
+// >> import-http-get
 import { getFile, getImage, getJSON, getString, request, HttpResponse } from "tns-core-modules/http";
+// << import-http-get
 import { Button } from "tns-core-modules/ui/button";
 import { ImageSource } from "tns-core-modules/image-source";
 

@@ -1,8 +1,8 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 const fileSystemModule = require("tns-core-modules/file-system");
-
+// >> require-http-get
 const httpModule = require("tns-core-modules/http");
-
+// << require-http-get
 function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();

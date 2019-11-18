@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+		<ActionBar title="Usage"/>
+	</Page.actionBar>
+    <GridLayout rows="*, *" columns="*">
+        <Button row="0" text="Start FPSMeter" tap="startFPSMeter"/>
+        <Button row="1" text="Stop FPSMeter" tap="stopFPSMeter"/>
+    </GridLayout>
+</Page>

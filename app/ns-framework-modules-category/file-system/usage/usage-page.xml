@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <Page.actionBar>
-		<ActionBar title="Create"/>
+		<ActionBar title="Usage"/>
 	</Page.actionBar>
     <StackLayout>
        <ScrollView>

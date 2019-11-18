@@ -1,8 +1,8 @@
 import { Observable } from "tns-core-modules/data/observable";
 import { Page } from "tns-core-modules/ui/page";
-// >> import-http
+// >> import-http-post
 import { request, getFile, getImage, getJSON, getString } from "tns-core-modules/http";
-// << import-http
+// << import-http-post
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();

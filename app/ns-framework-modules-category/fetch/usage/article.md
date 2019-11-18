@@ -1,3 +1,5 @@
+### Get
+
 The example demonstrates different ways, how we could receive content from a server while making HTTP GET request.
 
 Get requests response body as a string value.
@@ -19,3 +21,10 @@ With `fetch` we can make a request and check the response status code by accessi
 The example demonstrates, how to get the request-response header and how to access the available data in it.
 <snippet id='request-response-header-fetch'/>
 <snippet id='request-response-header-fetch-ts'/>
+
+### Post
+
+The example shows how to create POST request while using NativeScript fetch.
+
+<snippet id='fetch-post'/>
+<snippet id='fetch-post-ts'/>
