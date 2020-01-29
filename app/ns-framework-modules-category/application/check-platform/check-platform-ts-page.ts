@@ -8,7 +8,7 @@ export function onGridLoaded(args: EventData) {
     const grid = <GridLayout>args.object;
     const lbl = <Label>grid.getViewById("lbl");
     const iconLabel = <Label>grid.getViewById("iconLabel");
-    iconLabel.className = "fa";
+    iconLabel.className = "far";
     iconLabel.textAlignment = "center";
     iconLabel.verticalAlignment = "middle";
     iconLabel.fontSize = 40;

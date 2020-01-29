@@ -4,7 +4,7 @@ function onGridLoaded(args) {
     const grid = args.object;
     const lbl = grid.getViewById("lbl");
     const iconLabel = grid.getViewById("iconLabel");
-    iconLabel.className = "fa";
+    iconLabel.className = "far";
     iconLabel.textAlignment = "center";
     iconLabel.verticalAlignment = "middle";
     iconLabel.fontSize = 40;
