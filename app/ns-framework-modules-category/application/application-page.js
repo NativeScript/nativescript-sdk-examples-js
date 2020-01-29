@@ -27,13 +27,13 @@ function onNavigatingTo(args) {
         navigationLinks.push(
             new link(
                 "iOS Notification Observer",
-                "/application/ios-notification-observer/ios-notification-observer-page"
+                "ns-framework-modules-category/application/ios-notification-observer/ios-notification-observer-page"
             )
         );
         navigationLinksTsc.push(
             new link(
                 "iOS Notification Observer",
-                "/application/ios-notification-observer/ios-notification-observer-ts-page"
+                "ns-framework-modules-category/application/ios-notification-observer/ios-notification-observer-ts-page"
             )
         );
     } else if (platformModule.isAndroid && navigationLinks.filter((e) => e.title === "Android Broadcast Receiver").length < 1) {

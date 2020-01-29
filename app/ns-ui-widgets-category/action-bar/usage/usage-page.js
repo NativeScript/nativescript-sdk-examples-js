@@ -2,7 +2,7 @@
 const frameModule = require("tns-core-modules/ui/frame");
 
 function goBack() {
-    frameModule.topmost().goBack();
+    frameModule.Frame.topmost().goBack();
 }
 function openSettings() {
     // implement the custom logic

@@ -1,8 +1,8 @@
 
 // >> frame-reference-topmost
-const topmost = require("tns-core-modules/ui/frame").topmost;
+const Frame = require("tns-core-modules/ui/frame").Frame;
 
-const topmostFrame = topmost();
+const topmostFrame = Frame.topmost();
 // << frame-reference-topmost
 
 // >> frame-reference-get-id

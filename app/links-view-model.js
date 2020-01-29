@@ -26,14 +26,14 @@ function ListViewLinksModel(info) {
 
     viewModel.set("onItemTap", (args) => {
         const linkItem = viewModel.get("links").getItem(args.index);
-        frameModule.topmost().navigate({
+        frameModule.Frame.topmost().navigate({
             moduleName: linkItem.link,
             context: { "title": linkItem.title }
         });
     });
     viewModel.set("onSecondItemTap", (args) => {
         const linkItem = viewModel.get("tsclinks").getItem(args.index);
-        frameModule.topmost().navigate({
+        frameModule.Frame.topmost().navigate({
             moduleName: linkItem.link,
             context: { "title": linkItem.title }
         });

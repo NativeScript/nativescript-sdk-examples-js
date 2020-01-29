@@ -1,7 +1,7 @@
 // >> frame-reference-topmost-ts
-import { Frame, topmost } from "tns-core-modules/ui/frame";
+import { Frame } from "tns-core-modules/ui/frame";
 
-const topmostFrame: Frame = topmost();
+const topmostFrame: Frame = Frame.topmost();
 // << frame-reference-topmost-ts
 
 // >> frame-reference-get-id-ts
