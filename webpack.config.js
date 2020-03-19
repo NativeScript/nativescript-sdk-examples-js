@@ -14,18 +14,23 @@ const hashSalt = Date.now().toString();
 
 module.exports = env => {
     // Add your custom Activities, Services and other Android app components here.
-    const appComponents = [
+    const appComponents = env.appComponents || [];
+    appComponents.push(...[
         "tns-core-modules/ui/frame",
         "tns-core-modules/ui/frame/activity",
-    ];
+    ]);
 
-    const platform = env && (env.android && "android" || env.ios && "ios");
+    const platform = env && (env.android && "android" || env.ios && "ios" || env.platform);
     if (!platform) {
         throw new Error("You need to provide a target platform!");
     }
 
     const platforms = ["ios", "android"];
     const projectRoot = __dirname;
+
+    if (env.platform) {
+        platforms.push(env.platform);
+    }
 
     // Default destination inside platforms/<platform>/...
     const dist = resolve(projectRoot, nsWebpack.getAppPath(platform, projectRoot));
@@ -58,9 +63,8 @@ module.exports = env => {
     const appFullPath = resolve(projectRoot, appPath);
     const hasRootLevelScopedModules = nsWebpack.hasRootLevelScopedModules({ projectDir: projectRoot });
     let coreModulesPackageName = "tns-core-modules";
-    const alias = {
-        '~': appFullPath
-    };
+    const alias = env.alias || {};
+    alias['~'] = appFullPath;
 
     if (hasRootLevelScopedModules) {
         coreModulesPackageName = "@nativescript/core";
@@ -70,7 +74,8 @@ module.exports = env => {
 
     const entryModule = nsWebpack.getEntryModule(appFullPath, platform);
     const entryPath = `.${sep}${entryModule}.ts`;
-    const entries = { bundle: entryPath };
+    const entries = env.entries || {};
+    entries.bundle = entryPath;
 
     const tsConfigPath = resolve(projectRoot, "tsconfig.tns.json");
 
@@ -250,7 +255,7 @@ module.exports = env => {
             new CleanWebpackPlugin(itemsToClean, { verbose: !!verbose }),
             // Copy assets to out dir. Add your own globs as needed.
             new CopyWebpackPlugin([
-                { from: { glob: "ns-ui-widgets-category/web-view/source-load/*.html" } }, 
+                { from: { glob: "ns-ui-widgets-category/web-view/source-load/*.html" } },
                 { from: { glob: "ns-ui-widgets-category/placeholder/platform-files/*.ts" } },
                 { from: { glob: "fonts/**" } },
                 { from: { glob: "**/*.jpg" } },
