@@ -8,15 +8,15 @@
 
         <!-- TabStripItem supports the CSS pseudo selector :active (see theming-page.css) -->
         <TabStrip>
-            <TabStripItem class="tabstripitem">
+            <TabStripItem>
                 <Label text="Home"></Label>
                 <Image src="font://&#xf015;" class="fas t-36"></Image>
             </TabStripItem>
-            <TabStripItem class="tabstripitem">
+            <TabStripItem>
                 <Label text="Account"></Label>
                 <Image src="font://&#xf007;" class="fas t-36"></Image>
             </TabStripItem>
-            <TabStripItem class="tabstripitem">
+            <TabStripItem>
                 <Label text="Search"></Label>
                 <Image src="font://&#xf00e;" class="fas t-36"></Image>
             </TabStripItem>
