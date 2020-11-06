@@ -19,7 +19,7 @@ function onNavigatedTo(args) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
     // >> broadcast-receiver
     if (platformModule.isAndroid) {
-        // use tns-platform-dclarations to acces native APIs (e.g. android.content.Intent)
+        // use tns-platform-declarations to acces native APIs (e.g. android.content.Intent)
         const receiverCallback = (androidContext, intent) => {
             const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
             const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
