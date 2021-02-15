@@ -1,6 +1,6 @@
 ### Default page
 To load a default (initial) page in your application use the `defaultPage` property of the `Frame` element.
-With the example below the applicaiton will load a page located in `<project-folder>/app/home/first-page.xml`
+With the example below the application will load a page located in `<project-folder>/app/home/first-page.xml`
 <snippet id='frame-nav-default-page'/>
 
 ### Navigate by page name
@@ -13,7 +13,7 @@ The `navigate` method accepst [`NavigationEntry`](https://docs.nativescript.org/
 <snippet id='frame-navigate-module'/>
 <snippet id='frame-navigate-module-ts'/>
 
-Full list of the NavigaitonEntry properties. Note that all of them are optional. Even the `moduleName` is optional, as alternatively you can pass a dynamically created page via `create`.
+Full list of the NavigationEntry properties. Note that all of them are optional. Even the `moduleName` is optional, as alternatively you can pass a dynamically created page via `create`.
 
 - [animated](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry#animated) - True to navigate to the new Page using animated transitions, false otherwise.
 - [backstackVisible](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry#backstackVisible) - True to record the navigation in the backstack, false otherwise. If the parameter is set to false then the Page will be displayed but once navigated from it will not be able to be navigated back to.
@@ -109,7 +109,7 @@ _custom-transition.ios.js/ts_
 
 Each frame tracks the pages the user has visited in a navigation stack. To go back to a previous page, 
 you need to use the [`goBack`](https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame#goback) method of the current frame instance.
-To veify that back navigation is possible, you can use the [`canGoBack`](https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame#cangoback) boolean property.
+To verify that back navigation is possible, you can use the [`canGoBack`](https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame#cangoback) boolean property.
 
 <snippet id='frame-navigate-go-back'/>
 <snippet id='frame-navigate-go-back-ts'/>
