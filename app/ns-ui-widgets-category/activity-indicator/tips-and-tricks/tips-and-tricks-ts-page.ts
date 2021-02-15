@@ -1,5 +1,5 @@
 // >> large-ios-indicator-ts
-import { isIOS } from "tns-core-modules/platform";
+import { isIOS } from "@nativescript/core";
 import {ActivityIndicator} from "tns-core-modules/ui/activity-indicator";
 
 export function onLoaded(args) {

@@ -1,6 +1,6 @@
 import * as application from "tns-core-modules/application";
 import { Observable } from "tns-core-modules/data/observable";
-import { isIOS } from "tns-core-modules/platform";
+import { isIOS } from "@nativescript/core";
 import { ios as iosApp } from "tns-core-modules/application";
 
 let vm;

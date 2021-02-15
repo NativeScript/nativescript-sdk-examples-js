@@ -1,6 +1,6 @@
 const application = require("tns-core-modules/application");
 const Observable = require("tns-core-modules/data/observable").Observable;
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 const utilsModule = require("tns-core-modules/utils/utils");
 let vm;
 let observer;

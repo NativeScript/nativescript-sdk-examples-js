@@ -1,5 +1,5 @@
 const placeholderModule = require("tns-core-modules/ui/placeholder");
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 const utils = require("tns-core-modules/utils/utils");
 // >> code-behind-placeholder-code
 function onLayoutLoaded (ltargs) {

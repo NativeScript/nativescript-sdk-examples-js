@@ -1,5 +1,5 @@
 import { Placeholder } from "tns-core-modules/ui/placeholder";
-import { isIOS, isAndroid } from "tns-core-modules/platform";
+import { isIOS, isAndroid } from "@nativescript/core";
 import { ad } from "tns-core-modules/utils/utils";
 import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
 // >> code-behind-placeholder-code-ts

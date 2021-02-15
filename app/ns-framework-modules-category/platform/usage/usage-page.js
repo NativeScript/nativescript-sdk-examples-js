@@ -1,5 +1,5 @@
 // >> get-screen-device-info
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 
 function onNavigatingTo(args) {
     console.log(`Running on Android? ${platformModule.isAndroid}`);
