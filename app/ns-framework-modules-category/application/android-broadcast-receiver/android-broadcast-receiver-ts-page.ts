@@ -31,7 +31,7 @@ export function onNavigatedTo(args: NavigatedData) {
 
     // >> broadcast-receiver-ts
     if (isAndroid) {
-        // use tns-platform-dclarations to access native APIs (e.g. android.content.Intent)
+        // use tns-platform-declarations to access native APIs (e.g. android.content.Intent)
         let receiverCallback = (androidContext, intent) => {
             const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
             const scale = intent.getIntExtra(android.os.BatteryManager.EXTRA_SCALE, -1);
