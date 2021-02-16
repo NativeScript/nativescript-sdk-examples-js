@@ -25,7 +25,7 @@
       "version": "6.5.0"
     },
     "tns-ios": {
-      "version": "6.5.0"
+      "version": "6.5.4"
     }
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "markdown-snippet-injector": "^0.2.4",
     "nativescript-dev-webpack": "^1.5.1",
     "tar.gz": "^1.0.7",
+    "tns-ios": "6.5.4",
     "tns-platform-declarations": "^6.4.2",
     "tslint": "5.11.0",
     "typescript": "3.4.5"
