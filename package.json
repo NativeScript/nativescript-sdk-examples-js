@@ -19,29 +19,20 @@
     "documentation"
   ],
   "license": "Apache-2.0",
-  "nativescript": {
-    "id": "org.nativescript.nativescriptsdkexamplesjs",
-    "tns-android": {
-      "version": "6.5.0"
-    },
-    "tns-ios": {
-      "version": "6.5.4"
-    }
-  },
   "dependencies": {
     "nativescript-theme-core": "^2.0.24",
-    "tns-core-modules": "^6.5.0"
+    "@nativescript/core": "7.2.1"
   },
   "devDependencies": {
     "eslint": "~5.9.0",
     "fs-extra": "^0.30.0",
     "markdown-snippet-injector": "^0.2.4",
-    "nativescript-dev-webpack": "^1.5.1",
     "tar.gz": "^1.0.7",
-    "tns-ios": "6.5.4",
-    "tns-platform-declarations": "^6.4.2",
     "tslint": "5.11.0",
-    "typescript": "3.4.5"
+    "typescript": "4.1.5",
+    "@nativescript/ios": "7.2.0",
+    "@nativescript/types": "7.2.0",
+    "@nativescript/webpack": "4.1.0"
   },
   "scripts": {
     "lint": "eslint \"app/**/*.js\"",
@@ -57,5 +48,6 @@
     "postbuild": "npm run inject && npm run archive",
     "e2e": "mocha --opts ./e2e/config/mocha.opts",
     "update-webpack": "./node_modules/.bin/update-ns-webpack --deps --configs"
-  }
+  },
+  "main": "app.js"
 }
