@@ -1,6 +1,6 @@
 // >> timepicker-time-format-code
-const isAndroid = require("tns-core-modules/platform").isAndroid;
-const isIOS = require("tns-core-modules/platform").isIOS;
+const isAndroid = require("@nativescript/core").isAndroid;
+const isIOS = require("@nativescript/core").isIOS;
 
 function onPickerLoaded(args) {
     const timePicker = args.object;

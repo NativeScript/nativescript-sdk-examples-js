@@ -1,6 +1,6 @@
 const ListViewLinksModel = require("../../links-view-model");
 const link = require("../../link");
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 const navigationLinks = [
     new link("Basics", "ns-ui-widgets-category/tab-view/basics/basics-page"),
     new link("Styling", "ns-ui-widgets-category/tab-view/styling/styling-page"),

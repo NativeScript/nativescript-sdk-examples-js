@@ -1,6 +1,6 @@
 import { AnimationCurve } from "tns-core-modules/ui/enums";
 import * as frameModule from "tns-core-modules/ui/frame";
-import { isAndroid, isIOS } from "tns-core-modules/platform";
+import { isAndroid, isIOS } from "@nativescript/core";
 
 // >> frame-navigate-base-ts
 import { getFrameById } from "tns-core-modules/ui/frame";

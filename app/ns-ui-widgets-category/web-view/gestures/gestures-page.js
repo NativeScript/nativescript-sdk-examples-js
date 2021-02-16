@@ -2,7 +2,7 @@ const Observable = require("tns-core-modules/data/observable").Observable;
 // >> webview-require
 const webViewModule = require("tns-core-modules/ui/web-view");
 // << webview-require
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 // >> webview-js-gestures
 function onNavigatingTo(args) {
     const page = args.object;

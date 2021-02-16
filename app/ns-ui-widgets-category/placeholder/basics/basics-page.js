@@ -1,7 +1,7 @@
 // >> placeholder-require
 const placeholderModule = require("tns-core-modules/ui/placeholder");
 // << placeholder-require
-const platformModule = require("tns-core-modules/platform");
+const platformModule = require("@nativescript/core");
 const utils = require("tns-core-modules/utils/utils");
 // >> placeholder-code
 function creatingView(args) {

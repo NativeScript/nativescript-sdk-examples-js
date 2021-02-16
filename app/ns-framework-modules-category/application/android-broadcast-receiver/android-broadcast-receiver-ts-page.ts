@@ -2,7 +2,7 @@
 import * as applicationModule from "tns-core-modules/application";
 import { android as androidApp } from "tns-core-modules/application";
 import { Observable } from "tns-core-modules/data/observable";
-import { isAndroid } from "tns-core-modules/platform";
+import { isAndroid } from "@nativescript/core";
 import { Page, NavigatedData } from "tns-core-modules/ui/page";
 let vm;
 

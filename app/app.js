@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var application = require("tns-core-modules/application");
-var platformModule = require("tns-core-modules/platform");
+var platformModule = require("@nativescript/core");
 var applicationSettingsModule = require("tns-core-modules/application-settings");
 var deepLinkDataModule = require("./shared/deep-link-data");
 if (platformModule.isIOS) {

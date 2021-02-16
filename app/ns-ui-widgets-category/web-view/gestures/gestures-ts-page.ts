@@ -4,7 +4,7 @@ import { Page } from "tns-core-modules/ui/page";
 // >> webview-import
 import { WebView } from "tns-core-modules/ui/web-view";
 // << webview-import
-import { isAndroid } from "tns-core-modules/platform";
+import { isAndroid } from "@nativescript/core";
 // >> webview-js-gestures-ts
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

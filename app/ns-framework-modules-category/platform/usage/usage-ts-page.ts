@@ -1,6 +1,6 @@
 // tslint:disable:max-line-length
 // >> get-screen-device-info-ts
-import { device, screen, isAndroid, isIOS } from "tns-core-modules/platform";
+import { device, screen, isAndroid, isIOS } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     console.log(`Running on Android? ${isAndroid}`);

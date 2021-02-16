@@ -4,7 +4,7 @@ You can use this file to perform app-level initialization, but the primary
 purpose of the file is to pass control to the app’s first module.
 */
 import * as application from "tns-core-modules/application";
-import * as platformModule from "tns-core-modules/platform";
+import * as platformModule from "@nativescript/core";
 import * as applicationSettingsModule from"tns-core-modules/application-settings";
 import {Frame} from "tns-core-modules/ui/frame";
 const deepLinkDataModule = require("./shared/deep-link-data");
