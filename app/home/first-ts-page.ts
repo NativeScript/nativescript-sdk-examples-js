@@ -54,6 +54,8 @@ export function navigateWithClearHistory() {
     // << frame-navigate-clearhistory-ts
 }
 
+import { Enums } from "@nativescript/core";
+
 export function navigateWithTransition() {
     // >> frame-navigate-transitions-ts
     const frame = Frame.getFrameById("my-frame-id");
