@@ -1,6 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 // >> date-picker-dates
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -12,9 +12,9 @@ function onNavigatingTo(args) {
 
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-function onDatePickerLoaded(args) {
+
+export function onDatePickerLoaded(args) {
     const datePicker = args.object;
     datePicker.on("dateChange", (args) => {
         console.dir(args);
@@ -29,5 +29,4 @@ function onDatePickerLoaded(args) {
         console.dir(args);
     });
 }
-exports.onDatePickerLoaded = onDatePickerLoaded;
 // << date-picker-dates

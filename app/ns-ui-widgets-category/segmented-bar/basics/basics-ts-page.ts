@@ -1,5 +1,5 @@
-import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable, PropertyChangeData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> segmented-bar-index-change-event-ts
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

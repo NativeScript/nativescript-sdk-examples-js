@@ -12,7 +12,7 @@ In the example above, the items source property (`myTitles`) is an array and its
 
 > **Tip:** Instead of manually triggering the UI update with the help of ListView's `refresh` method, NativeScript provides the `ObservableArray`. Using an `ObservableArray` for your listview's items surce will make its members an observable objects and adding/removing an array item will automatically update the UI.
 ```TypeScript
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+import { ObservableArray } from "@nativescript/core";
 // Change the items source from Array to the NativeScript's ObservableArray
 const titlesArray = new ObservableArray([
     { title: "The Da Vinci Code" },

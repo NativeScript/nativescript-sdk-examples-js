@@ -1,9 +1,4 @@
-// >> require-list-view
-const listViewModule = require("tns-core-modules/ui/list-view");
-// << require-list-view
-const dialogs = require("tns-core-modules/ui/dialogs");
-const Label = require("tns-core-modules/ui/label").Label;
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+import { Dialogs, Label, ListView, ObservableArray } from "@nativescript/core";
 
 const listViewArray = new ObservableArray([
     { title: "The Da Vinci Code" },
@@ -14,16 +9,16 @@ const listViewArray = new ObservableArray([
     { title: "The Hobbit" }
 ]);
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     // >> create-list-view-code
     const container = page.getViewById("container");
 
-    const listView = new listViewModule.ListView();
+    const listView = new ListView();
     listView.className = "list-group";
     listView.items = listViewArray;
     // The itemLoading event is used to create the UI for each item that is shown in the ListView.
-    listView.on(listViewModule.ListView.itemLoadingEvent, (args) => {
+    listView.on(ListView.itemLoadingEvent, (args) => {
         if (!args.view) {
             // Create label if it is not already created.
             args.view = new Label();
@@ -32,10 +27,10 @@ function onNavigatingTo(args) {
         (args.view).text = listViewArray.getItem(args.index).title;
 
     });
-    listView.on(listViewModule.ListView.itemTapEvent, (args) => {
+    listView.on(ListView.itemTapEvent, (args) => {
         const tappedItemIndex = args.index;
         const tappedItemView = args.view;
-        dialogs.alert(`Index: ${tappedItemIndex} View: ${tappedItemView}`)
+        Dialogs.alert(`Index: ${tappedItemIndex} View: ${tappedItemView}`)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -44,4 +39,4 @@ function onNavigatingTo(args) {
     container.addChild(listView);
     // << create-list-view-code
 }
-exports.onNavigatingTo = onNavigatingTo;
+

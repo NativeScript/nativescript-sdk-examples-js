@@ -1,8 +1,8 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> import-xml-module
-import * as xmlModule from "tns-core-modules/xml";
+import * as xmlModule from "@nativescript/core";
 // << import-xml-module
 const source = new ObservableArray();
 // >> parser-event-ts

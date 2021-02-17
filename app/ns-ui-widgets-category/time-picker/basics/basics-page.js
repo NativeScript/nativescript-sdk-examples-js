@@ -1,8 +1,7 @@
 
-const Observable = require("tns-core-modules/data/observable").Observable;
-const TimePicker = require("tns-core-modules/ui/time-picker").TimePicker;
+import { Observable, TimePicker } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     vm.set("hourResult", "Hour: ...");
@@ -10,10 +9,10 @@ function onNavigatingTo(args) {
     vm.set("timeResult", "Time: ...");
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 
 // >> time-picker-configure-code
-function onPickerLoaded(args) {
+export function onPickerLoaded(args) {
     const timePicker = args.object;
 
     // Configurable properties of TimePicker
@@ -41,5 +40,4 @@ function onPickerLoaded(args) {
         // << (hide)
     });
 }
-exports.onPickerLoaded = onPickerLoaded;
 // << time-picker-configure-code

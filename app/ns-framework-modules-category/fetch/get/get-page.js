@@ -1,6 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -23,7 +23,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onButtonTap(args) {
+export function onButtonTap(args) {
     const button = args.object;
     const page = args.object.page;
     const vm = page.bindingContext;
@@ -154,5 +154,3 @@ function getResponseFormDataExample(viewModel) {
     // << request-response-form-data
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onButtonTap = onButtonTap;

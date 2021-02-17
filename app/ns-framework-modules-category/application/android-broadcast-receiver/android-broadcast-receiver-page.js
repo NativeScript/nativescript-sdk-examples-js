@@ -1,24 +1,23 @@
-
-const applicationModule = require("tns-core-modules/application");
-const Observable = require("tns-core-modules/data/observable").Observable;
-const platformModule = require("tns-core-modules/platform");
+import { AndroidApplication } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
+import { isAndroid } from "@nativescript/core";
 let vm;
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.actionBar.title = "";
     vm = new Observable();
     vm.set("info", "Using Android Broadcast Receiver \nto check the battery life");
     vm.set("batteryLife", "0");
-    vm.set("isAndroid", platformModule.isAndroid);
+    vm.set("isAndroid", isAndroid);
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
 }
-exports.onNavigatingTo = onNavigatingTo;
-function onNavigatedTo(args) {
+
+export function onNavigatedTo(args) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
     // >> broadcast-receiver
-    if (platformModule.isAndroid) {
+    if (isAndroid) {
         // use tns-platform-declarations to acces native APIs (e.g. android.content.Intent)
         const receiverCallback = (androidContext, intent) => {
             const level = intent.getIntExtra(android.os.BatteryManager.EXTRA_LEVEL, -1);
@@ -27,19 +26,19 @@ function onNavigatedTo(args) {
             vm.set("batteryLife", percent.toString());
         };
 
-        applicationModule.android.registerBroadcastReceiver(
+        AndroidApplication.android.registerBroadcastReceiver(
             android.content.Intent.ACTION_BATTERY_CHANGED,
             receiverCallback
         );
     }
     // << broadcast-receiver
 }
-exports.onNavigatedTo = onNavigatedTo;
-function onUnloaded() {
-    if (platformModule.isAndroid) {
+
+export function onUnloaded() {
+    if (isAndroid) {
         // >> broadcast-receiver-remove
-        applicationModule.android.unregisterBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED);
+        AndroidApplication.android.unregisterBroadcastReceiver(android.content.Intent.ACTION_BATTERY_CHANGED);
         // << broadcast-receiver-remove
     }
 }
-exports.onUnloaded = onUnloaded;
+

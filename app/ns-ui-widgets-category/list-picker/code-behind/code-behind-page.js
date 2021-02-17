@@ -1,8 +1,8 @@
 // >> create-list-picker-code
-const ListPicker = require("tns-core-modules/ui/list-picker").ListPicker;
+import { ListPicker } from "@nativescript/core";
 
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
 
@@ -19,5 +19,5 @@ function onNavigatingTo(args) {
 
     container.addChild(listPicker);
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << create-list-picker-code

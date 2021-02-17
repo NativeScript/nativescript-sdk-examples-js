@@ -1,8 +1,7 @@
 // >> timepicker-time-format-code
-const isAndroid = require("tns-core-modules/platform").isAndroid;
-const isIOS = require("tns-core-modules/platform").isIOS;
+import { isAndroid, isIOS } from "@nativescript/core";
 
-function onPickerLoaded(args) {
+export function onPickerLoaded(args) {
     const timePicker = args.object;
 
     if (isAndroid) {
@@ -18,5 +17,4 @@ function onPickerLoaded(args) {
         timePicker.minute = 59;
     }
 }
-exports.onPickerLoaded = onPickerLoaded;
 // << timepicker-time-format-code

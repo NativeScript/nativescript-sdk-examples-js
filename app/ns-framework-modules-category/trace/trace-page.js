@@ -1,14 +1,14 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Custom Trace Writer", "ns-framework-modules-category/trace/custom-trace-writer/custom-trace-writer-page"),
-    new link("Trace Specific Categories", "ns-framework-modules-category/trace/trace-specific-categories/trace-specific-categories-page")
+    new Link("Custom Trace Writer", "ns-framework-modules-category/trace/custom-trace-writer/custom-trace-writer-page"),
+    new Link("Trace Specific Categories", "ns-framework-modules-category/trace/trace-specific-categories/trace-specific-categories-page")
 ];
 const navigationLinksTsc = [
-    new link("Custom Trace Writer", "ns-framework-modules-category/trace/custom-trace-writer/custom-trace-writer-ts-page"),
-    new link("Trace Specific Categories", "ns-framework-modules-category/trace/trace-specific-categories/trace-specific-categories-ts-page")
+    new Link("Custom Trace Writer", "ns-framework-modules-category/trace/custom-trace-writer/custom-trace-writer-ts-page"),
+    new Link("Trace Specific Categories", "ns-framework-modules-category/trace/trace-specific-categories/trace-specific-categories-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -17,4 +17,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

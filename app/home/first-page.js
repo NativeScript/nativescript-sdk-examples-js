@@ -1,20 +1,22 @@
 // >> frame-navigate-base
-const getFrameById = require("tns-core-modules/ui/frame").getFrameById;
+import * as AndroidTransitionType from "@nativescript/core/ui/transition";
+import { Frame, Transition } from "@nativescript/core";
+
 // >> (hide)
-exports.navigate = function() {
+export function navigate() {
     // << (hide)
-    // Example using `getFrameById(frameId)` to get a `Frame` reference
+    // Example using `Frame.getFrameById(frameId)` to get a `Frame` reference
     // As an alternative, we could use `topmost()` method or `page.frame` property
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
     frame.navigate("home/second-page");
     // >> (hide)
-};
+}
 // << (hide)
 // << frame-navigate-base
 
-exports.navigateByModule = function() {
+export function navigateByModule() {
     // >> frame-navigate-module
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
     const navigationEntry = {
         moduleName: "home/second-page",
@@ -23,11 +25,11 @@ exports.navigateByModule = function() {
     };
     frame.navigate(navigationEntry);
     // << frame-navigate-module
-};
+}
 
-exports.navigateWithBackstackVisible = function() {
+export function navigateWithBackstackVisible() {
     // >> frame-navigate-backstackvisible
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
     const navigationEntry = {
         moduleName: "home/second-page",
@@ -35,11 +37,11 @@ exports.navigateWithBackstackVisible = function() {
     };
     frame.navigate(navigationEntry);
     // << frame-navigate-backstackvisible
-};
+}
 
-exports.navigateWithClearHistory = function() {
+export function navigateWithClearHistory() {
     // >> frame-navigate-clearhistory
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
     const navigationEntry = {
         moduleName: "home/second-page",
@@ -47,11 +49,11 @@ exports.navigateWithClearHistory = function() {
     };
     frame.navigate(navigationEntry);
     // << frame-navigate-clearhistory
-};
+}
 
-exports.navigateWithTransition = function() {
+export function navigateWithTransition() {
         // >> frame-navigate-transitions
-        const frame = getFrameById("my-frame-id");
+        const frame = Frame.getFrameById("my-frame-id");
 
         const navigationEntry = {
             moduleName: "home/second-page",
@@ -67,20 +69,20 @@ exports.navigateWithTransition = function() {
         // << frame-navigate-transitions
 
         // >> frame-navigate-default-transition
-        // const getFrameById = require("tns-core-modules/ui/frame").getFrameById;
-        // const myFrame = getFrameById("firstFrame");
+        // import { Frame } from "@nativescript/core";
+        // const myFrame = Frame.getFrameById("firstFrame");
         myFrame.transition = { name: "flip" };
         myFrame.navigate("main-page");
         // << frame-navigate-default-transition
 
         // >> frame-navigate-defailt-transition-app
-        // const frameModule = require("tns-core-modules/ui/frame");
-        frameModule.Frame.defaultTransition = { name: "fade" };
+        // import { Frame } from "@nativescript/core";
+        Frame.defaultTransition = { name: "fade" };
         // << frame-navigate-defailt-transition-app
-};
+}
 
 
-exports.navigatePlatformSpecificTransitions = function() {
+export function navigatePlatformSpecificTransitions() {
     // >> frame-navigate-platform-specific-transitions
     const navigationEntry = {
         moduleName: "main-page",
@@ -97,15 +99,14 @@ exports.navigatePlatformSpecificTransitions = function() {
             curve: "easeOut"
         }
     };
-    const frame = getFrameById("my-frame");
+    const frame = Frame.getFrameById("my-frame");
     frame.navigate(navigationEntry);
     // << frame-navigate-platform-specific-transitions
-};
+}
 
 // >> frame-navigate-custom-transitions-android-ts
-const transition = require("tns-core-modules/ui/transition");
 const floatType = java.lang.Float.class.getField("TYPE").get(null);
-const CustomTransition = (function (_super) {
+export const CustomTransition = (function (_super) {
     __extends(CustomTransition, _super);
     function CustomTransition() {
         _super.apply(this, arguments);
@@ -113,13 +114,13 @@ const CustomTransition = (function (_super) {
     CustomTransition.prototype.createAndroidAnimator = function(transitionType) {
         const scaleValues = java.lang.reflect.Array.newInstance(floatType, 2);
         switch (transitionType) {
-            case transition.AndroidTransitionType.enter:
-            case transition.AndroidTransitionType.popEnter:
+            case AndroidTransitionType.AndroidTransitionType.enter:
+            case AndroidTransitionType.AndroidTransitionType.popEnter:
                 scaleValues[0] = 0;
                 scaleValues[1] = 1;
                 break;
-            case transition.AndroidTransitionType.exit:
-            case transition.AndroidTransitionType.popExit:
+            case AndroidTransitionType.AndroidTransitionType.exit:
+            case AndroidTransitionType.AndroidTransitionType.popExit:
                 scaleValues[0] = 1;
                 scaleValues[1] = 0;
                 break;
@@ -141,13 +142,12 @@ const CustomTransition = (function (_super) {
     };
 
     return CustomTransition;
-})(transition.Transition);
-exports.CustomTransition = CustomTransition;
+})(Transition.Transition);
 // << frame-navigate-custom-transitions-android-ts
 
 // >> frame-navigate-custom-transitions-ios-ts
-// const transition = require("tns-core-modules/ui/transition");
-const CustomTransitionIOS = (function (_super) {
+// import { Transition } from "@nativescript/core";
+export const CustomTransitionIOS = (function (_super) {
     __extends(CustomTransition, _super);
     function CustomTransition() {
         _super.apply(this, arguments);
@@ -175,15 +175,14 @@ const CustomTransitionIOS = (function (_super) {
     };
 
     return CustomTransitionIOS;
-})(transition.Transition);
-exports.CustomTransitionIOS = CustomTransitionIOS;
+})(Transition.Transition);
 // << frame-navigate-custom-transitions-ios-ts
 
 
-exports.goBack = function() {
+export function goBack() {
     // >> frame-navigate-go-back
-    // const getFrameById = require("tns-core-modules/ui/frame").getFrameById;
-    const myFrame = getFrameById("my-frame");
+    // import { Frame } from "@nativescript/core";
+    const myFrame = Frame.getFrameById("my-frame");
     myFrame.goBack();
     // << frame-navigate-go-back
-};
+}

@@ -1,97 +1,96 @@
-const observableModule = require("tns-core-modules/data/observable");
-const observableArrayModule = require("tns-core-modules/data/observable-array");
+import { Observable, ObservableArray, fromObject } from "@nativescript/core";
 
-const listArray = new observableArrayModule.ObservableArray(
+const listArray = new ObservableArray(
     [
-        observableModule.fromObject({
+        fromObject({
             name:"Joyce Dean",
             age: 20
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Joel Robertson",
             age: 15
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Sherman Martin",
             age: 35
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Lela Richardson",
             age: 40
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Jackie Maldonado",
             age: 17
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Kathryn Byrd",
             age:18
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Ervin Powers",
             age: 50
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Leland Warner",
             age: 12
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Nicholas Bowers",
             age: 45
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Alex Soto",
             age: 46
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Naomi Carson",
             age: 11
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Rufus Edwards",
             age: 65
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Ian Ellis",
             age: 17
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Pat Vasquez",
             age: 20
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Chelsea Burton",
             age: 30
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Karl Bates",
             age: 20
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Evan Rivera",
             age: 40
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Tony Lawson",
             age: 16
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Wallace Little",
             age: 20
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Carrie Tran",
             age: 23
         }),
-        observableModule.fromObject({
+        fromObject({
             name:"Tyler Washington",
             age: 18
         })
     ]
 );
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
 
     vm.set("listArray", listArray);
 
@@ -99,16 +98,14 @@ function onNavigatingTo(args) {
 }
 
 // >> list-view-multy-template-code
-function selectItemTemplateAge(item, index, items) {
+export function selectItemTemplateAge(item, index, items) {
     return item.age > 18 ? "green" : "red";
 }
 // << list-view-multy-template-code
 
 // >> listview-create-selector-function-code
-function selectItemTemplate(item, index, items) {
+export function selectItemTemplate(item, index, items) {
     return index % 2 === 0 ? "even" : "odd";
 }
 // << listview-create-selector-function-code
-exports.onNavigatingTo = onNavigatingTo;
-exports.selectItemTemplateAge = selectItemTemplateAge;
-exports.selectItemTemplate = selectItemTemplate;
+

@@ -1,6 +1,7 @@
 // >> creating-colors-code-js
-const Color = require("tns-core-modules/color").Color;
-const colors = require("tns-core-modules/color/known-colors");
+import { OrangeRed, isKnownName } from "@nativescript/core/color/known-colors";
+import { Color } from "@nativescript/core";
+
 function createColor() {
     // Using hex values to create color;
     const colorHex = new Color("#FF00CC");
@@ -15,12 +16,12 @@ function createColor() {
 
     // Using string values to create colors
     const namedColor = "orangered";
-    const isKnown = colors.isKnownName(namedColor);
+    const isKnown = isKnownName(namedColor);
     if (isKnown) {
         const colorName = new Color(namedColor);
     }
 
     // Using supported known colors from tns-core-modules/color/known-colors
-    const colorKnownName = new Color(colors.OrangeRed);
+    const colorKnownName = new Color(OrangeRed);
 }
 // << creating-colors-code-js

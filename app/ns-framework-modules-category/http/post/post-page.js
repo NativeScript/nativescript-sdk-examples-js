@@ -1,8 +1,7 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Http, Observable } from "@nativescript/core";
 // >> require-http-post
-const httpModule = require("tns-core-modules/http");
 // << require-http-post
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -13,11 +12,11 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function makePostRequest(args) {
+export function makePostRequest(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> http-post
-        httpModule.request({
+        Http.request({
             url: "https://httpbin.org/post",
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -40,5 +39,4 @@ function makePostRequest(args) {
     // << http-post
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.makePostRequest = makePostRequest;
+

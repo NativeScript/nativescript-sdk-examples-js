@@ -1,8 +1,7 @@
-const fromObject = require("data/observable").fromObject;
-const TextField = require("ui/text-field").TextField;
-const Label = require("ui/label").Label;
+import { Label, TextField, fromObject } from "@nativescript/core";
 
-function onStackLayoutLoaded(args) {
+
+export function onStackLayoutLoaded(args) {
     const stackLayout = args.object;
 
     // >> two-way-binding-code
@@ -42,4 +41,3 @@ function onStackLayoutLoaded(args) {
     targetLabel.bind(labelBindingOptions, observableSource);
     // << two-way-binding-code
 }
-exports.onStackLayoutLoaded = onStackLayoutLoaded;

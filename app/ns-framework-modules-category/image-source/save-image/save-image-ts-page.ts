@@ -1,8 +1,8 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ImageSource, fromFile } from "tns-core-modules/image-source";
-import { path, knownFolders, Folder } from "tns-core-modules/file-system";
-import { ImageAsset } from "tns-core-modules/image-asset";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { ImageSource } from "@nativescript/core";
+import { path, knownFolders, Folder } from "@nativescript/core";
+import { ImageAsset } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
@@ -22,7 +22,7 @@ export function makeCopyFromFile(args) {
     const folder: Folder = <Folder>knownFolders.currentApp();
     const imagePath = path.join(folder.path, "images/logo.png");
     // >> image-source-save-from-file-ts
-    const img: ImageSource = <ImageSource>fromFile(imagePath);
+    const img: ImageSource = <ImageSource> ImageSource.fromFileSync(imagePath);
     const folderDest = knownFolders.documents();
     const pathDest = path.join(folderDest.path, "test.png");
     const saved: boolean = img.saveToFile(pathDest, "png");
@@ -74,7 +74,7 @@ export function makeBase64String(args) {
     // >> image-source-create-base64-ts
     const folder: Folder = <Folder>knownFolders.currentApp();
     const filePath: string = path.join(folder.path, "images/logo.png");
-    const img: ImageSource = <ImageSource>fromFile(filePath);
+    const img: ImageSource = <ImageSource> ImageSource.fromFileSync(filePath);
     const base64String = img.toBase64String("png");
     // << image-source-create-base64-ts
     vm.set("base64String", base64String);

@@ -1,6 +1,4 @@
-const observableModule = require("tns-core-modules/data/observable");
-const observableArrayModule = require("tns-core-modules/data/observable-array");
-const frameModule = require("tns-core-modules/ui/frame");
+import { Frame, ObservableArray, fromObject } from "@nativescript/core";
 
 function linksSort(value) {
     value.sort((a, b) => {
@@ -16,24 +14,24 @@ function linksSort(value) {
 function ListViewLinksModel(info) {
     info = info || {};
     linksSort(info.links);
-
-    const viewModel = new observableModule.fromObject({
-        "links": new observableArrayModule.ObservableArray(info.links),
+    const viewModel = new fromObject({
+        "links": new ObservableArray(info.links),
         "actionBarTitle": info.actionBarTitle,
         "showTypeScriptExamples": info.showTypeScriptExamples ? info.showTypeScriptExamples : false,
-        "tsclinks": info.tsclinks ? new observableArrayModule.ObservableArray(info.tsclinks) : undefined
+        "tsclinks": info.tsclinks ? new ObservableArray(info.tsclinks) : undefined
     });
 
     viewModel.set("onItemTap", (args) => {
         const linkItem = viewModel.get("links").getItem(args.index);
-        frameModule.Frame.topmost().navigate({
+        console.log("linkItem", linkItem);
+        Frame.topmost().navigate({
             moduleName: linkItem.link,
             context: { "title": linkItem.title }
         });
     });
     viewModel.set("onSecondItemTap", (args) => {
         const linkItem = viewModel.get("tsclinks").getItem(args.index);
-        frameModule.Frame.topmost().navigate({
+        Frame.topmost().navigate({
             moduleName: linkItem.link,
             context: { "title": linkItem.title }
         });
@@ -46,4 +44,4 @@ function ListViewLinksModel(info) {
     return viewModel;
 }
 
-module.exports = ListViewLinksModel;
+export default ListViewLinksModel;

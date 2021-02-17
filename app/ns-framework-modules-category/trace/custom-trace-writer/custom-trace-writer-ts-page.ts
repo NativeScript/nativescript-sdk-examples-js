@@ -1,9 +1,8 @@
 // tslint:disable:max-line-length
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { enable, disable, categories, setCategories, messageType, clearWriters, addWriter } from "tns-core-modules/trace";
-import { isUndefined } from "tns-core-modules/utils/types";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
+import { Utils , Trace} from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> trace-create-custom-writer-ts
 const array = new ObservableArray();
 class TimestampConsoleWriter {
@@ -14,10 +13,10 @@ class TimestampConsoleWriter {
             return;
         }
 
-        const msgType = isUndefined(type) ? messageType.log : type;
+        const msgType = Utils.isUndefined(type) ? Trace.messageType.log : type;
 
         switch (msgType) {
-            case messageType.log:
+            case Trace.messageType.log:
                 array.push({
                     "messageType": "log",
                     "date": new Date().toISOString(),
@@ -25,7 +24,7 @@ class TimestampConsoleWriter {
                     "category": category
                 });
                 break;
-            case messageType.info:
+            case Trace.messageType.info:
                 array.push({
                     "messageType": "info",
                     "date": new Date().toISOString(),
@@ -33,7 +32,7 @@ class TimestampConsoleWriter {
                     "category": category
                 });
                 break;
-            case messageType.warn:
+            case Trace.messageType.warn:
                 array.push({
                     "messageType": "warning",
                     "date": new Date().toISOString(),
@@ -41,7 +40,7 @@ class TimestampConsoleWriter {
                     "category": category
                 });
                 break;
-            case messageType.error:
+            case Trace.messageType.error:
                 array.push({
                     "messageType": "error",
                     "date": new Date().toISOString(),
@@ -58,15 +57,15 @@ class TimestampConsoleWriter {
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();
-    disable();
+    Trace.disable();
     // >> trace-add-custom-writer-ts
-    setCategories(categories.Navigation);
-    enable();
+    Trace.setCategories(Trace.categories.Navigation);
+    Trace.enable();
     // >> (hide)
     vm.set("array", array);
     // << (hide)
-    clearWriters();
-    addWriter(new TimestampConsoleWriter());
+    Trace.clearWriters();
+    Trace.addWriter(new TimestampConsoleWriter());
     // << trace-add-custom-writer-ts
     page.bindingContext = vm;
 }

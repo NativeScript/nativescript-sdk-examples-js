@@ -1,5 +1,5 @@
 // >> nav-context-pass
-exports.onNavigate = function(args) {
+export function onNavigate(args) {
     const button = args.object;
     const page = button.page;
     const frame = page.frame;
@@ -14,7 +14,7 @@ exports.onNavigate = function(args) {
     };
 
     frame.navigate(navEntryWithContext);
-};
+}
 // << nav-context-pass
 // >> nav-context-pass-binding
 const navEntryWithBindingContext = {

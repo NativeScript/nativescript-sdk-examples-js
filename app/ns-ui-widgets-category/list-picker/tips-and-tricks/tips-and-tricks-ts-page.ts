@@ -1,7 +1,7 @@
 // >> list-picker-key-value-pairs-code-behind-ts
-import { EventData, fromObject } from "tns-core-modules/data/observable";
-import { ListPicker } from "tns-core-modules/ui/list-picker";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, fromObject } from "@nativescript/core";
+import { ListPicker } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

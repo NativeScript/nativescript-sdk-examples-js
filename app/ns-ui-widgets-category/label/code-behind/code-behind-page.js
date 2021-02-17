@@ -1,26 +1,25 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Label, Observable } from "@nativescript/core";
 // >> label-code-create
- const labelModule = require("tns-core-modules/ui/label");
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
 
-    const myLabel = new labelModule.Label();
+    const myLabel = new Label();
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
 
     // Styling a label via css type
     myLabel.text = "The quick brown fox jumps over the lazy dog.";
     let pageCSS = "label {background-color: #C6C6C6; color: #bc7474; font-size: 14; padding:10;} ";
 
-    const mySecondLabel = new labelModule.Label();
+    const mySecondLabel = new Label();
     mySecondLabel.text = "The quick brown fox jumps over the lazy dog.";
     // Styling a label via css class
     mySecondLabel.className = "title";
     pageCSS += ".title {background-color: #7974bc; color: #54ff5f; font-size: 20; padding:10;} ";
 
-    const myThirdLabel = new labelModule.Label();
+    const myThirdLabel = new Label();
     myThirdLabel.text = "The quick brown fox jumps over the lazy dog.";
     // Turning on text wrapping for a label
     myThirdLabel.textWrap = true;
@@ -29,7 +28,7 @@ function onNavigatingTo(args) {
     pageCSS += "#testLabel {background-color: #bc7474; color: whitesmoke; font-size: 25; padding:10;}";
 
     // Binding text property of a label to an observable model
-    const myFourthlabel = new labelModule.Label();
+    const myFourthlabel = new Label();
     myFourthlabel.textAlignment = "center";
     myFourthlabel.fontSize = 24;
     const expValue = "Expected Value";
@@ -48,5 +47,5 @@ function onNavigatingTo(args) {
     container.addChild(myFourthlabel);
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << label-code-create

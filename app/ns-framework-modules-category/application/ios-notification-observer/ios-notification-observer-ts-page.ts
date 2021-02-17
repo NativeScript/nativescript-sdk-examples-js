@@ -1,7 +1,6 @@
-import * as application from "tns-core-modules/application";
-import { Observable } from "tns-core-modules/data/observable";
-import { isIOS } from "tns-core-modules/platform";
-import { ios as iosApp } from "tns-core-modules/application";
+import * as application from "@nativescript/core";
+import { isIOS } from "@nativescript/core";
+import { Application, Observable } from "@nativescript/core";
 
 let vm;
 let observer;
@@ -23,17 +22,17 @@ export function onNavigatedTo(args) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
 
     // >> app-class-properties-ios
-    // import { ios as iosApp } from "tns-core-modules/application";
+    // import { ios as Application.ios } from "@nativescript/core";
 
     // https://developer.apple.com/documentation/uikit/uiapplicationdelegate?language=objc
-    let delegate = iosApp.delegate; // the iOS application delegate
+    let delegate = Application.ios.delegate; // the iOS application delegate
 
-    let nativeApp = iosApp.nativeApp; // The native iOS app
+    let nativeApp = Application.ios.nativeApp; // The native iOS app
 
     // https://developer.apple.com/documentation/uikit/uiwindow/1621581-rootviewcontroller?language=objc
-    let rootController = iosApp.rootController; // the iOS rootViewController
+    let rootController = Application.ios.rootController; // the iOS rootViewController
 
-    let window = iosApp.window; // UIWindow
+    let window = Application.ios.window; // UIWindow
     // << app-class-properties-ios
 
     // >> app-ios-observer-code-ts
@@ -43,7 +42,7 @@ export function onNavigatedTo(args) {
             "batteryLife",
             +(UIDevice.currentDevice.batteryLevel * 100).toFixed(1)
         );
-        observer = iosApp.addNotificationObserver(
+        observer = Application.ios.addNotificationObserver(
             UIDeviceBatteryLevelDidChangeNotification,
             notification => {
                 vm.set(
@@ -59,7 +58,7 @@ export function onNavigatedTo(args) {
 export function onUnloaded() {
     if (isIOS) {
         // >> app-ios-observer-remove-ts
-        iosApp.removeNotificationObserver(observer, UIDeviceBatteryLevelDidChangeNotification);
+        Application.ios.removeNotificationObserver(observer, UIDeviceBatteryLevelDidChangeNotification);
         // << app-ios-observer-remove-ts
     }
 }

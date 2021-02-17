@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> import-timer
-import { setInterval, clearInterval } from "tns-core-modules/timer";
+import { Utils } from "@nativescript/core";
 // << import-timer
 const color = ["green", "yellow", "red"];
 let id;
@@ -14,7 +14,7 @@ export function onNavigatingTo(args) {
     vm.set("buttonText", "Disable color change");
     vm.set("buttoncolor", "gray");
     // >> set-interval-example-ts
-    id = setInterval(() => {
+    id = Utils.setInterval(() => {
         const randNumber = Math.floor(Math.random() * (color.length));
         vm.set("buttoncolor", color[randNumber]);
     }, 1000);
@@ -27,11 +27,11 @@ export function onButtonTap(args) {
     const vm = page.bindingContext;
     if (status) {
         // >> clear-interval-example-ts
-        clearInterval(id);
+        Utils.clearInterval(id);
         // << clear-interval-example-ts
         vm.set("buttonText", "Enable color change");
     } else {
-        id = setInterval(() => {
+        id = Utils.setInterval(() => {
             const randNumber = Math.floor(Math.random() * (color.length));
             vm.set("buttoncolor", color[randNumber]);
         }, 1000);

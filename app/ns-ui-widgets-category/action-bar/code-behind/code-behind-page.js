@@ -1,8 +1,7 @@
 // >> actionbar-code-behind
-const ActionBar = require("tns-core-modules/ui/action-bar").ActionBar;
-const NavigationButton = require("tns-core-modules/ui/action-bar").NavigationButton;
+import { ActionBar, NavigationButton } from "@nativescript/core";
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
 
     const newActionBar = new ActionBar();
@@ -18,5 +17,4 @@ function onLoaded(args) {
     page.actionBar = newActionBar;
     page.actionBarHidden = false;
 }
-exports.onLoaded = onLoaded;
 // << actionbar-code-behind

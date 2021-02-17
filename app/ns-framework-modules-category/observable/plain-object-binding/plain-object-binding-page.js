@@ -1,7 +1,7 @@
 // >> plain-object-binding-code
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     const list = [];
@@ -15,5 +15,5 @@ function onNavigatingTo(args) {
 
     page.bindingContext = viewModel;
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << plain-object-binding-code

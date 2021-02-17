@@ -1,8 +1,8 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { knownFolders, path, File, Folder } from "tns-core-modules/file-system";
-import { fromResource, ImageSource } from "tns-core-modules/image-source";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
+import { knownFolders, path, File, Folder } from "@nativescript/core";
+import { ImageSource } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
@@ -74,7 +74,7 @@ export function onReadSync(args) {
     const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> fs-read-sync-code-ts
-    const image: ImageSource = fromResource("icon");
+    const image: ImageSource = ImageSource.fromResourceSync("icon");
     const folder: Folder = knownFolders.documents();
     const filePath: string = path.join(folder.path, "Test.png");
     const saved = image.saveToFile(filePath, "png");

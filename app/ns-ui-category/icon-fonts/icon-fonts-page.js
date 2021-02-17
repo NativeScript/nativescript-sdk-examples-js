@@ -1,13 +1,13 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Usage", "ns-ui-category/icon-fonts/usage/usage-page"),
-    new link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-page")
+    new Link("Usage", "ns-ui-category/icon-fonts/usage/usage-page"),
+    new Link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-page")
 ];
 const navigationLinksTsc = [
-    new link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-ts-page")
+    new Link("Tips & Tricks", "ns-ui-category/icon-fonts/tips-and-tricks/tips-and-tricks-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -16,4 +16,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

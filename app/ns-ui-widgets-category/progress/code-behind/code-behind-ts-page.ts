@@ -1,8 +1,8 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 // >> progress-import
-import { Progress } from "tns-core-modules/ui/progress";
+import { Progress } from "@nativescript/core";
 // << progress-import
 // >> creating-progress-code-ts
 export function onPageLoaded(args) {

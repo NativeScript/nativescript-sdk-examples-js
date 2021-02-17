@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { File, Folder, knownFolders } from "tns-core-modules/file-system";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { File, Folder, knownFolders } from "@nativescript/core";
+import * as dialogs from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 let file: File;
 let myFolder: Folder;

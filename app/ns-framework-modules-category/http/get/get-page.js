@@ -1,9 +1,7 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const fileSystemModule = require("tns-core-modules/file-system");
+import { Http, Observable, path } from "@nativescript/core";
 // >> require-http-get
-const httpModule = require("tns-core-modules/http");
 // << require-http-get
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -35,7 +33,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onButtonTap(args) {
+export function onButtonTap(args) {
     const button = args.object;
     const page = args.object.page;
     const vm = page.bindingContext;
@@ -87,7 +85,7 @@ function onButtonTap(args) {
 
 function getStringExample(viewModel) {
     // >> get-string-code
-    httpModule.getString("https://httpbin.org/get").then((r) => {
+    Http.getString("https://httpbin.org/get").then((r) => {
         viewModel.set("getStringResult", r);
     }, (e) => {
         // >> (hide)
@@ -99,7 +97,7 @@ function getStringExample(viewModel) {
 }
 function getJSONExample(viewModel) {
     // >> get-json-code
-    httpModule.getJSON("https://httpbin.org/get").then((r) => {
+    Http.getJSON("https://httpbin.org/get").then((r) => {
         // >> (hide)
         viewModel.set("host", r.headers.Host);
         viewModel.set("userAgent", r.headers["User-Agent"]);
@@ -116,7 +114,7 @@ function getJSONExample(viewModel) {
 }
 function getImageExample(viewModel) {
     // >> get-image-code
-    httpModule.getImage("https://httpbin.org/image/jpeg").then((r) => {
+    Http.getImage("https://httpbin.org/image/jpeg").then((r) => {
         // getImage method returns ImageSource object
         // >> (hide)
         viewModel.set("getImageResult", r);
@@ -134,7 +132,7 @@ function getImageExample(viewModel) {
 
 function getResponseStatusCodeExample(viewModel) {
     // >> request-status-code
-    httpModule.request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response) => {
@@ -155,7 +153,7 @@ function getResponseStatusCodeExample(viewModel) {
 function getResponseHeadersExample(viewModel) {
     console.log("getResponseHeadersExample");
     // >> request-response-header
-    httpModule.request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response) => {
@@ -176,7 +174,7 @@ function getResponseHeadersExample(viewModel) {
 
 function getResponseContentExample(viewModel) {
     // >> request-response-content
-    httpModule.request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response) => {
@@ -201,7 +199,7 @@ function getResponseContentExample(viewModel) {
 
 function getFileExample(viewModel) {
     // >> get-file-code
-    httpModule.getFile("https://raw.githubusercontent.com/NativeScript/NativeScript/master/tests/app/logo.png").then((resultFile) => {
+    Http.getFile("https://raw.githubusercontent.com/NativeScript/NativeScript/master/tests/app/logo.png").then((resultFile) => {
         // The returned result will be File object
         // >> (hide)
         viewModel.set("name", resultFile.name);
@@ -222,8 +220,8 @@ function getFileExample(viewModel) {
 
 function getFileWithPathExample(viewModel) {
     // >> get-file-code-with-path
-    const filePath = fileSystemModule.path.join(fileSystemModule.knownFolders.currentApp().path, "test.png");
-    httpModule.getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile) => {
+    const filePath = path.join(knownFolders.currentApp().path, "test.png");
+    Http.getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile) => {
         // The returned result will be File object
         // >> (hide)
         viewModel.set("name_get_file_with_path", resultFile.name);
@@ -241,6 +239,3 @@ function getFileWithPathExample(viewModel) {
     });
     // << get-file-code-with-path
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.onButtonTap = onButtonTap;

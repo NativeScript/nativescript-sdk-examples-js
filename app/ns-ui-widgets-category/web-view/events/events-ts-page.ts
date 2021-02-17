@@ -1,6 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { WebView } from "tns-core-modules/ui/web-view/web-view";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { WebView } from "@nativescript/core";
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
 // >> webview-ts-events

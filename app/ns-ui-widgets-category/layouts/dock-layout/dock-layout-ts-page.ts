@@ -1,8 +1,8 @@
 // >> dock-layout-import-ts
-import { DockLayout } from "tns-core-modules/ui/layouts/dock-layout";
+import { DockLayout } from "@nativescript/core";
 // << dock-layout-import-ts
-import { Button } from "tns-core-modules/ui/button/";
-import { Color } from "tns-core-modules/color/";
+import { Button } from "@nativescript/core";
+import { Color } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

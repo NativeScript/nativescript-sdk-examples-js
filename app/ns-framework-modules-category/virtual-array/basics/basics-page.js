@@ -1,8 +1,8 @@
 // >> virtual-array-require
-const VirtualArray = require("tns-core-modules/data/virtual-array").VirtualArray;
+import { VirtualArray } from "@nativescript/core";
 // << virtual-array-require
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     // >> virtual-array-creation
@@ -35,4 +35,4 @@ function onNavigatingTo(args) {
 
     page.bindingContext = { items: virtualArray };
 }
-exports.onNavigatingTo = onNavigatingTo;
+

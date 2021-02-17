@@ -1,8 +1,7 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { NavigatedData, Page } from "tns-core-modules/ui/page";
-import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
-import { Label } from "tns-core-modules/ui/label";
-import * as application from "tns-core-modules/application";
+import {Application, EventData} from "@nativescript/core";
+import { NavigatedData, Page } from "@nativescript/core";
+import { GridLayout } from "@nativescript/core";
+import { Label } from "@nativescript/core";
 
 export function onGridLoaded(args: EventData) {
     const grid = <GridLayout>args.object;
@@ -16,13 +15,13 @@ export function onGridLoaded(args: EventData) {
     lbl.verticalAlignment = "middle";
     lbl.fontSize = 24;
     // >> application-platform-ts
-    if (application.android) {
+    if (Application.android) {
         console.log("We are running on Android device!");
         // >> (hide)
         iconLabel.text = String.fromCharCode(0xff17b);
         lbl.text = "Android Applicaiton";
         // << (hide)
-    } else if (application.ios) {
+    } else if (Application.ios) {
         console.log("We are running on iOS device");
         // >> (hide)
         iconLabel.text = String.fromCharCode(0xf179);

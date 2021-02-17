@@ -1,14 +1,14 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
-import { Label } from "tns-core-modules/ui/label";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Page} from "tns-core-modules/ui/page";
-import { TextField } from "tns-core-modules/ui/text-field";
-import { TextView } from "tns-core-modules/ui/text-view";
+import { EventData } from "@nativescript/core";
+import { Button } from "@nativescript/core";
+import { Label } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
+import { Page} from "@nativescript/core";
+import { TextField } from "@nativescript/core";
+import { TextView } from "@nativescript/core";
 
 // >> formatted-string-require-ts
-import { FormattedString, Span } from "tns-core-modules/text/formatted-string";
-// import { Span } from "tns-core-modules/text/span";
+import { FormattedString, Span } from "@nativescript/core";
+// import { Span } from "@nativescript/core";
 // << formatted-string-require-ts
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

@@ -1,12 +1,8 @@
 // >> image-cache-require
-const Cache = require("tns-core-modules/ui/image-cache").Cache;
-// << image-cache-require
-const fromNativeSource = require("image-source").fromNativeSource;
-const fromFile = require("image-source").fromFile;
+import { ImageSource, Observable } from "@nativescript/core";
+import { Cache } from "@nativescript/core/ui/image-cache";
 
-const Observable = require("tns-core-modules/data/observable").Observable;
-
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -14,7 +10,6 @@ function onLoaded(args) {
 
     page.bindingContext = vm;
 }
-exports.onLoaded = onLoaded;
 
 function cacheImage(viewModel) {
     // >> image-cache-code
@@ -35,7 +30,7 @@ function cacheImage(viewModel) {
 
     if (image) {
         // If present -- use it.
-        cachedImageSource = imageSource.fromNativeSource(image);
+        cachedImageSource = new ImageSource(image);
         viewModel.set("imageSource", cachedImageSource);
     } else {
         // If not present -- request its download + put it in the cache.
@@ -44,7 +39,7 @@ function cacheImage(viewModel) {
             url: url,
             completed: (image, key) => {
                 if (url === key) {
-                    cachedImageSource = fromNativeSource(image);
+                    cachedImageSource = new ImageSource(image);
                     viewModel.set("imageSource", cachedImageSource); // set the downloaded image
                 }
             }

@@ -1,8 +1,7 @@
-const Button = require("tns-core-modules/ui/button").Button;
-const Label = require("tns-core-modules/ui/label").Label;
+import { Button } from "@nativescript/core";
 
 // >> style-code-behind
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
     // >> (hide)
     const stacklayout = page.getViewById("container");
@@ -30,5 +29,5 @@ function onPageLoaded(args) {
     // << (hide)
 }
 // << style-code-behind
-exports.onPageLoaded = onPageLoaded;
+
 

@@ -1,6 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { knownFolders, path, Folder, File } from "tns-core-modules/file-system";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { knownFolders, path, Folder, File } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();

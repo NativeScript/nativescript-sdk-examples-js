@@ -1,6 +1,6 @@
 // >> animation-properties-width-height-ts
-import { AnimationCurve } from "tns-core-modules/ui/enums";
-import { View } from "tns-core-modules/ui/core/view";
+import { AnimationCurve } from "@nativescript/core/ui/enums";
+import { View } from "@nativescript/core";
 
 export function animateWidth(args) {
     let button = args.object;

@@ -1,19 +1,22 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var application = require("tns-core-modules/application");
-var platformModule = require("tns-core-modules/platform");
-var applicationSettingsModule = require("tns-core-modules/application-settings");
-var deepLinkDataModule = require("./shared/deep-link-data");
-if (platformModule.isIOS) {
-    var mydelegate = require("./delegate/my-delegate");
-    application.ios.delegate = mydelegate.MyDelegate;
+/*
+In NativeScript, the app.js file is the entry point to your application.
+You can use this file to perform app-level initialization, but the primary
+purpose of the file is to pass control to the app’s first module.
+*/
+import { Application, ApplicationSettings } from "@nativescript/core";
+import { isIOS } from "@nativescript/core";
+const deepLinkDataModule = require("./shared/deep-link-data");
+console.log("JAVASCRIPPPPPT")
+if (isIOS) {
+    const mydelegate = require("./delegate/my-delegate");
+    Application.ios.delegate = mydelegate.MyDelegate;
 }
 function launchExample() {
-    var rootView = application.getRootView();
-    if (applicationSettingsModule.hasKey("gotoexample")) {
-        var value = applicationSettingsModule.getString("gotoexample");
+    const rootView = Application.getRootView();
+    if (ApplicationSettings.hasKey("gotoexample")) {
+        const value = ApplicationSettings.getString("gotoexample");
         if (value !== "") {
-            applicationSettingsModule.remove("gotoexample");
+            ApplicationSettings.remove("gotoexample");
             rootView.navigate({
                 moduleName: value,
                 clearHistory: true
@@ -21,13 +24,17 @@ function launchExample() {
         }
     }
 }
-application.on(application.resumeEvent, function (args) {
+Application.on(Application.resumeEvent, (args) => {
     if (args.android) {
-        var dld = new deepLinkDataModule.DeepLinkData("", args.android);
+        const dld = new deepLinkDataModule.DeepLinkData("", args.android);
         launchExample();
     }
     else if (args.ios) {
         launchExample();
     }
 });
-application.run({ moduleName: "app-root" });
+Application.run({ moduleName: "app-root" });
+/*
+Do not place any code after the application has been started as it will not
+be executed on iOS.
+*/

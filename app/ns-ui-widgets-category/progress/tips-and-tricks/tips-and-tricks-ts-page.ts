@@ -1,7 +1,7 @@
 // >> progress-value-change-event-ts
-import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { Progress } from "tns-core-modules/ui/progress";
+import { Observable, PropertyChangeData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { Progress } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

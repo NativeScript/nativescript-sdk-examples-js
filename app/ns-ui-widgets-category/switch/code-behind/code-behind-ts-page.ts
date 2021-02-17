@@ -1,8 +1,8 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 // >> switch-import
-import { Switch } from "tns-core-modules/ui/switch";
+import { Switch } from "@nativescript/core";
 // << switch-import
 
 export function onPageLoaded(args) {

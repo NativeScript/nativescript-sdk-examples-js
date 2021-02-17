@@ -1,18 +1,17 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable, Switch } from "@nativescript/core";
 // >> switch-require
-const switchModule = require("tns-core-modules/ui/switch");
 // << switch-require
 
 
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("swResult", "false");
     const stackLayout = page.getViewById("stackLayoutId");
 
     // >> creating-switch-code
     // creating new Switch and binding the checked property
-    const mySwitch = new switchModule.Switch();
+    const mySwitch = new Switch();
     const options = {
         sourceProperty: "isChecked",
         targetProperty: "checked"
@@ -38,4 +37,4 @@ function onPageLoaded(args) {
     // << creating-switch-code
     page.bindingContext = vm;
 }
-exports.onPageLoaded = onPageLoaded;
+

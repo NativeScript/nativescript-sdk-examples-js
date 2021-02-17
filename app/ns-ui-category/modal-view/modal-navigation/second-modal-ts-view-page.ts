@@ -1,5 +1,5 @@
 // >> second-modal-view-ts-navigation
-import { Page } from "tns-core-modules/ui/page";
+import { Page } from "@nativescript/core";
 
 export function onGoBack(args) {
     const view = args.object;

@@ -1,5 +1,5 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 let myFirstView, mySecondView, myThirdView, myForthView, myFifthView;
 
 export function onLoaded(args: EventData) {

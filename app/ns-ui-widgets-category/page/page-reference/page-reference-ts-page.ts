@@ -1,6 +1,6 @@
 // >> page-reference-via-event-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { Page, NavigatedData } from "tns-core-modules/ui/page";
+import { EventData } from "@nativescript/core";
+import { Page, NavigatedData } from "@nativescript/core";
 
 export function onPageLoaded(args: EventData) {
     console.log("Page loaded");
@@ -16,8 +16,8 @@ export function onNavigatedTo(args: NavigatedData) {
 // << page-reference-via-event-ts
 
 // >> page-reference-via-page-prop-ts
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Button } from "tns-core-modules/ui/button";
+import { StackLayout } from "@nativescript/core";
+import { Button } from "@nativescript/core";
 
 export function onStackLoaded(args: EventData) {
     console.log("Root StackLayout loaded");
@@ -35,11 +35,11 @@ export function onButtonTapped(args: EventData) {
 // << page-reference-via-page-prop-ts
 
 // >> page-reference-via-currrent-page-prop-ts
-import { getFrameById } from "tns-core-modules/ui/frame";
+import { Frame } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     console.log("Page navigatingTo");
-    const rootFrame = getFrameById("root-frame");
+    const rootFrame = Frame.getFrameById("root-frame");
     const page = <Page>rootFrame.currentPage;
     console.log("Page reference from currentPage property of Frame: ", page);
 }

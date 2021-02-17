@@ -1,5 +1,5 @@
 // >> dialog-confirm-ts
-import { confirm, ConfirmOptions } from "tns-core-modules/ui/dialogs";
+import { confirm, ConfirmOptions } from "@nativescript/core";
 
 export function showConfirmDialog() {
 

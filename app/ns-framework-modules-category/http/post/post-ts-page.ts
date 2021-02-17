@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> import-http-post
-import { request, getFile, getImage, getJSON, getString } from "tns-core-modules/http";
+import { Http } from "@nativescript/core";
 // << import-http-post
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
@@ -18,7 +18,7 @@ export function makePostRequest(args) {
     const page: Page = <Page>args.object.page;
     const vm = page.bindingContext;
     // >> http-post
-    request({
+    Http.request({
         url: "https://httpbin.org/post",
         method: "POST",
         headers: { "Content-Type": "application/json" },

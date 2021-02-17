@@ -1,6 +1,6 @@
-import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
+import { GridLayout } from "@nativescript/core";
 // >> gest-double-tap-ts
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { GestureEventData } from "@nativescript/core";
 
 export function onDoubleTap(args: GestureEventData) {
     console.log("Object that triggered the event: " + args.object);

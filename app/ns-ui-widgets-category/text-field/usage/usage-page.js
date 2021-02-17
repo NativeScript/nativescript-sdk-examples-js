@@ -1,13 +1,13 @@
 // >> text-field-binding-code
-const observableModule = require("tns-core-modules/data/observable");
-function onNavigatingTo(args) {
+import { Observable } from "@nativescript/core";
+export function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("viewDate", "");
 
     page.bindingContext = vm;
 }
-function onTextFieldLoaded(argsloaded) {
+export function onTextFieldLoaded(argsloaded) {
     const view = argsloaded.object;
     view.on("returnPress", (args) => {
         // returnPress event will be triggered when user submits a value
@@ -48,6 +48,5 @@ function onTextFieldLoaded(argsloaded) {
         console.log("On TextField blur");
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onTextFieldLoaded = onTextFieldLoaded;
+
 // << text-field-binding-code

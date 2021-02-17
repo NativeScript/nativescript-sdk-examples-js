@@ -1,14 +1,14 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 const vm = new Observable();
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     vm.set("counter", 0);
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 
 // >> button-tap-event
-function onTap(args) {
+export function onTap(args) {
     const button = args.object;
     // >> (hide)
     let count = vm.get("counter");
@@ -16,5 +16,5 @@ function onTap(args) {
     // << (hide)
     alert(`Tapped ${count} times!`);
 }
-exports.onTap = onTap;
+
 // << button-tap-event

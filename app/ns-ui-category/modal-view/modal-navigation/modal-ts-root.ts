@@ -1,4 +1,4 @@
-import { ShownModallyData } from "tns-core-modules/ui/page";
+import { ShownModallyData } from "@nativescript/core";
 
 export function onShowingModally(args: ShownModallyData) {
     // args is of type ShownModallyData

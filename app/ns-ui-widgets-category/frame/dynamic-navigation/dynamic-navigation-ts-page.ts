@@ -1,11 +1,11 @@
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Label } from "tns-core-modules/ui/label";
-import { getFrameById } from "tns-core-modules/ui/frame";
+import { Page } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
+import { Label } from "@nativescript/core";
+import { Frame } from "@nativescript/core";
 
 export function onLoaded() {
     // >> frame-nav-dynamic-page-ts-code
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
     frame.navigate({
         create: () => {

@@ -1,7 +1,7 @@
 // >> list-view-create-code-ts
-import { EventData, fromObject } from "tns-core-modules/data/observable";
-import { ListView, ItemEventData } from "tns-core-modules/ui/list-view";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, fromObject } from "@nativescript/core";
+import { ListView, ItemEventData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

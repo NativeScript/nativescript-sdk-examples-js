@@ -1,7 +1,7 @@
 // tslint:disable:max-line-length
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Button } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 // >> style-code-behind-ts
 export function onPageLoaded(args) {
     const page: Page = <Page>args.object;

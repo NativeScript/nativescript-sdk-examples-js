@@ -1,10 +1,9 @@
-const applicationSettingsModule = require("application-settings");
-const platformModule = require("platform");
+import { ApplicationSettings, isAndroid, isIOS } from "@nativescript/core";
 
-function DeepLinkData(url, androidActivity) {
-    if ((platformModule.isAndroid) && (androidActivity !== undefined)) {
+export function DeepLinkData(url, androidActivity) {
+    if ((isAndroid) && (androidActivity !== undefined)) {
         this.getAndroidIntent(androidActivity);
-    } else if (platformModule.isIOS) {
+    } else if (isIOS) {
         this.getParams(url);
     }
 }
@@ -14,7 +13,7 @@ DeepLinkData.prototype.getParams = function (url) {
     if (resulturl.substring(0, 10) === "examplesgo") {
         const value = this.getParameterByName("gotoexample", resulturl);
         if (value) {
-            applicationSettingsModule.setString("gotoexample", value);
+            ApplicationSettings.setString("gotoexample", value);
         }
     }
 };
@@ -43,4 +42,3 @@ DeepLinkData.prototype.getAndroidIntent = function (args) {
     }
 };
 
-exports.DeepLinkData = DeepLinkData;

@@ -1,5 +1,5 @@
 // >> gest-long-press
-function onLongPress(args) {
+export function onLongPress(args) {
     console.log(`Object that triggered the event: ${args.object}`);
     console.log(`View that triggered the event: ${args.view}`);
     console.log(`Event name: ${args.eventName}`);
@@ -12,5 +12,4 @@ function onLongPress(args) {
     });
     // << (hide)
 }
-exports.onLongPress = onLongPress;
 // << gest-long-press

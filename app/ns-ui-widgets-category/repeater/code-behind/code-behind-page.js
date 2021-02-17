@@ -1,16 +1,14 @@
-const observableArrayModule = require("tns-core-modules/data/observable-array");
-const stackLayoutModule = require("tns-core-modules/ui/layouts/stack-layout");
+import { ObservableArray, Repeater, StackLayout } from "@nativescript/core";
 // >> repeater-require
-const repeaterModule = require("tns-core-modules/ui/repeater");
 // << repeater-require
 // >> creating-repeater-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
     const stackLayoutContainer = page.getViewById("stackLayoutId");
-    const secondColorsArray = new observableArrayModule.ObservableArray(["red", "green", "blue"]);
+    const secondColorsArray = new ObservableArray(["red", "green", "blue"]);
 
-    const repeater = new repeaterModule.Repeater();
-    const stackLayout = new stackLayoutModule.StackLayout();
+    const repeater = new Repeater();
+    const stackLayout = new StackLayout();
     stackLayout.orientation = "horizontal";
     repeater.itemsLayout = stackLayout;
     repeater.items = secondColorsArray;
@@ -18,5 +16,5 @@ function onPageLoaded(args) {
     stackLayoutContainer.addChild(repeater);
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-repeater-code

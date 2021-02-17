@@ -1,5 +1,5 @@
 // >> virtual-array-require-ts
-import { VirtualArray, ChangedData } from "tns-core-modules/data/virtual-array";
+import { VirtualArray, ChangedData } from "@nativescript/core";
 // << virtual-array-require-ts
 
 export function onNavigatingTo(data) {

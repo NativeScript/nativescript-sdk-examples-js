@@ -1,11 +1,11 @@
 // >> items-actionbar-js
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-exports.onShare = function() {
+export function onShare() {
     console.log("share tap");
-};
+}
 
-exports.onDelete = function() {
+export function onDelete() {
     console.log("delete tap");
-};
+}
 // << items-actionbar-js

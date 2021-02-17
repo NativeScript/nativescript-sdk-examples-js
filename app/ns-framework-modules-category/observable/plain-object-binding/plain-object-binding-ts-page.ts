@@ -1,6 +1,6 @@
 // >> plain-object-binding-code-ts
-import { fromObject, EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { fromObject, EventData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

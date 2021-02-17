@@ -1,6 +1,6 @@
 
 
-function showAlertDialog() {
+export function showAlertDialog() {
     // >> dialog-alert
     const alertOptions = {
         title: "Race selection",
@@ -14,4 +14,3 @@ function showAlertDialog() {
     });
     // << dialog-alert
 }
-exports.showAlertDialog = showAlertDialog;

@@ -1,9 +1,8 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { HtmlView, Observable } from "@nativescript/core";
 // >> html-view-code-behind
-const HtmlView = require("tns-core-modules/ui/html-view").HtmlView;
 // >> (hide)
 
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
     const container = page.getViewById("container");
     const vm = new Observable();
@@ -16,7 +15,7 @@ function onPageLoaded(args) {
     container.removeChildren();
     container.addChild(createHtmlView());
 }
-exports.onPageLoaded = onPageLoaded;
+
 // << (hide)
 function createHtmlView() {
 

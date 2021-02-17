@@ -1,8 +1,8 @@
 // >> action-bar-hide-show-ts
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { EventData, Observable } from "@nativescript/core";
+import { Button } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { GestureEventData } from "@nativescript/core";
 
 let value: boolean = false;
 

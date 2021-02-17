@@ -1,5 +1,5 @@
-import { Observable, fromObject } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { Observable, fromObject } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
 
 const listArray = new ObservableArray(
     [

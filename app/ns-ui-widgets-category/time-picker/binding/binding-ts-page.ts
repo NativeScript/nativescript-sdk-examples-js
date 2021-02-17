@@ -1,6 +1,6 @@
 // >> time-picker-binding-code-ts
-import { Observable } from "tns-core-modules/data/observable";
-import { TimePicker } from "tns-core-modules/ui/time-picker";
+import { Observable } from "@nativescript/core";
+import { TimePicker } from "@nativescript/core";
 // setting up the initial values for the TimePicker component
 export function onNavigatingTo(args) {
     const page = args.object;

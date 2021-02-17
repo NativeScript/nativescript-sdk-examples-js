@@ -1,9 +1,9 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "@nativescript/core";
 // >> segmented-bar-view-code
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     // set up the SelectedBar selected index
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("prop", 0);
     vm.set("sbSelectedIndex", 0);
     vm.set("visibility1", true);
@@ -13,7 +13,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function sbLoaded(args) {
+export function sbLoaded(args) {
     // handle selected index change
     const segmentedBarComponent = args.object;
     segmentedBarComponent.on("selectedIndexChange", (sbargs) => {
@@ -43,6 +43,4 @@ function sbLoaded(args) {
     });
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.sbLoaded = sbLoaded;
 // << segmented-bar-view-code

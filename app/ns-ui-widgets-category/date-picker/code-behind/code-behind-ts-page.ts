@@ -1,8 +1,8 @@
 // >> date-picker-require-ts
-import { DatePicker } from "tns-core-modules/ui/date-picker";
+import { DatePicker } from "@nativescript/core";
 // << date-picker-require-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { EventData } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 
 export function onStackLoaded(args: EventData) {
     const stack = <StackLayout>args.object;

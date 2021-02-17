@@ -1,8 +1,8 @@
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Page } from "tns-core-modules/ui/page";
+import { ObservableArray } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> repeater-import
-import { Repeater } from "tns-core-modules/ui/repeater";
+import { Repeater } from "@nativescript/core";
 // << repeater-import
 // >> creating-repeater-code-ts
 export function onPageLoaded(args) {

@@ -1,10 +1,10 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import {GridLayout} from "tns-core-modules/ui/layouts/grid-layout";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import {GridLayout} from "@nativescript/core";
 // >> gest-touch-ts
 import {
     TouchGestureEventData
-} from "tns-core-modules/ui/gestures";
+} from "@nativescript/core";
 
 export function onTouch(args: TouchGestureEventData) {
     console.log("Object that triggered the event: " + args.object);

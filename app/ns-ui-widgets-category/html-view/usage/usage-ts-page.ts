@@ -1,8 +1,8 @@
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, Observable } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> html-view-code-behind-ts
-import { HtmlView } from "tns-core-modules/ui/html-view";
+import { HtmlView } from "@nativescript/core";
 // >> (hide)
 
 function onPageLoaded(args: EventData) {
@@ -20,7 +20,7 @@ function onPageLoaded(args: EventData) {
     container.removeChildren();
     container.addChild(createHtmlView());
 }
-exports.onPageLoaded = onPageLoaded;
+
 // << (hide)
 function createHtmlView() {
     const myHtmlView = new HtmlView();

@@ -1,8 +1,8 @@
 // >> main-page-ts-navigation
-import { ShowModalOptions } from "tns-core-modules/ui/core/view";
+import { ShowModalOptions } from "@nativescript/core";
 const modalView = "ns-ui-category/modal-view/modal-navigation/modal-root";
 
-function openModal(args) {
+export function openModal(args) {
     const mainpage = args.object.page;
     const options: ShowModalOptions = {
         context: "some context",
@@ -11,5 +11,5 @@ function openModal(args) {
     };
     mainpage.showModal(modalView, options);
 }
-exports.openModal = openModal;
+
 // << main-page-ts-navigation

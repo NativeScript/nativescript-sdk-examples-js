@@ -1,7 +1,7 @@
 // >> large-ios-indicator
-const isIOS = require("tns-core-modules/platform").isIOS;
+import { isIOS } from "@nativescript/core";
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const view = args.object;
 
     if (isIOS) {
@@ -10,5 +10,4 @@ function onLoaded(args) {
     }
 
 }
-exports.onLoaded = onLoaded;
 // << large-ios-indicator

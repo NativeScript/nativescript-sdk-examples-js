@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { alert } from "tns-core-modules/ui/dialogs";
-import { ItemEventData } from "tns-core-modules/ui/list-view";
+import { Observable } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
+import { alert } from "@nativescript/core";
+import { ItemEventData } from "@nativescript/core";
 
 const listArray = new ObservableArray([
     {

@@ -1,7 +1,7 @@
 // >> picker-styling-code-behind
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
 
     const items = ["Batman", "Joker", "Bane"];
 
@@ -12,6 +12,6 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 
 // << picker-styling-code-behind

@@ -1,8 +1,8 @@
 // >> nav-context-pass-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
-import { Frame, NavigationEntry } from "tns-core-modules/ui/frame";
+import { EventData } from "@nativescript/core";
+import { Button } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { Frame, NavigationEntry } from "@nativescript/core";
 
 export function onNavigate(args: EventData) {
     let button = <Button>args.object;

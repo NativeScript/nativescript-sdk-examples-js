@@ -1,18 +1,16 @@
 // >> page-creation-js
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     console.log("Page Loaded");
     const page = args.object;
 }
-exports.onPageLoaded = onPageLoaded;
+
 // << page-creation-js
 
 /*
 // >> page-code-create-js
-const Page = require("tns-core-modules/ui/page").Page;
-const Label = require("tns-core-modules/ui/label").Label;
-const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
+import { Label, StackLayout, Page } from "@nativescript/core";
 
-function createPage() {
+export function createPage() {
     // Creating of the page content
     const stack = new StackLayout();
     const label = new Label();
@@ -25,6 +23,5 @@ function createPage() {
 
     return page;
 }
-exports.createPage = createPage;
 // << page-code-create-js
 */

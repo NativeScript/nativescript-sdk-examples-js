@@ -1,5 +1,5 @@
 // >> dialog-login-ts
-import { login, LoginOptions, LoginResult } from "tns-core-modules/ui/dialogs";
+import { login, LoginOptions, LoginResult } from "@nativescript/core";
 
 export function showLoginDialog() {
 

@@ -1,7 +1,7 @@
 // >> actionbar-code-behind-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { ActionBar, NavigationButton } from "tns-core-modules/ui/action-bar";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData } from "@nativescript/core";
+import { ActionBar, NavigationButton } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

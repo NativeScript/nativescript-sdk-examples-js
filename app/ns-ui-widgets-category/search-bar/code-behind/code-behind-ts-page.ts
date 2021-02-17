@@ -1,9 +1,9 @@
-import { Observable, EventData } from "tns-core-modules/data/observable";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable, EventData } from "@nativescript/core";
+import * as dialogs from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 // >> search-bar-import
-import { SearchBar } from "tns-core-modules/ui/search-bar";
+import { SearchBar } from "@nativescript/core";
 // << search-bar-import
 // >> creating-search-bar-code-ts
 export function onPageLoaded(args) {

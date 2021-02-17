@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> fs-create-import
-import { knownFolders, Folder, File } from "tns-core-modules/file-system";
+import { knownFolders, Folder, File } from "@nativescript/core";
 // << fs-create-import
 
 export function onNavigatingTo(args) {

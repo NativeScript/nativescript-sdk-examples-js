@@ -1,10 +1,10 @@
 // tslint:disable:max-line-length
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> webview-import
-import { WebView } from "tns-core-modules/ui/web-view";
+import { WebView } from "@nativescript/core";
 // << webview-import
-import { isAndroid } from "tns-core-modules/platform";
+import { isAndroid } from "@nativescript/core";
 // >> webview-js-gestures-ts
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

@@ -1,12 +1,12 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-function onPageLoaded(args) {
+import { Observable } from "@nativescript/core";
+export function onPageLoaded(args) {
     const page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }
-exports.onPageLoaded = onPageLoaded;
+
 // >> gest-swipe
-function onSwipe(args) {
+export function onSwipe(args) {
     console.log("Swipe!");
     console.log(`Object that triggered the event: ${args.object}`);
     console.log(`View that triggered the event: ${args.view}`);
@@ -19,5 +19,5 @@ function onSwipe(args) {
     vm.set("direction", args.direction);
     // << (hide)
 }
-exports.onSwipe = onSwipe;
+
 // << gest-swipe

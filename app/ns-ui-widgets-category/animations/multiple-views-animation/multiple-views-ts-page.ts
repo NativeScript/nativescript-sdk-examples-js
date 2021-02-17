@@ -4,8 +4,7 @@
 import {
     Animation,
     AnimationDefinition,
-    Pair // Pair: Defines a pair of values (horizontal and vertical) for translate and scale animations.
-} from "tns-core-modules/ui/animation";
+} from "@nativescript/core";
 // << animation-import-ts
 let view1, view2, view3, view4;
 

@@ -1,6 +1,6 @@
-import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
+import { GridLayout } from "@nativescript/core";
 // >> gest-long-press-ts
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { GestureEventData } from "@nativescript/core";
 
 export function onLongPress(args: GestureEventData) {
     console.log("Object that triggered the event: " + args.object);

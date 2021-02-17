@@ -1,9 +1,9 @@
 // >> setting-url-webview-ts
-import {Observable} from "tns-core-modules/data/observable";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import {WebView, LoadEventData} from "tns-core-modules/ui/web-view";
-import { Page } from "tns-core-modules/ui/page";
-import { TextField } from "tns-core-modules/ui/text-field";
+import {Observable} from "@nativescript/core";
+import * as dialogs from "@nativescript/core";
+import {WebView, LoadEventData} from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { TextField } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

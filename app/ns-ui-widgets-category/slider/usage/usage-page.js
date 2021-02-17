@@ -1,5 +1,5 @@
 // >> slider-value-change-event
-function onSliderLoaded(argsloaded) {
+export function onSliderLoaded(argsloaded) {
     const sliderComponent = argsloaded.object;
     sliderComponent.on("valueChange", (args) => {
         const slider = args.object;
@@ -7,5 +7,4 @@ function onSliderLoaded(argsloaded) {
     });
 }
 
-exports.onSliderLoaded = onSliderLoaded;
 // << slider-value-change-event

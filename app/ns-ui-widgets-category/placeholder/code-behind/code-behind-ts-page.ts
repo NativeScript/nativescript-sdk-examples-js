@@ -1,7 +1,7 @@
-import { Placeholder } from "tns-core-modules/ui/placeholder";
-import { isIOS, isAndroid } from "tns-core-modules/platform";
-import { ad } from "tns-core-modules/utils/utils";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+import { Placeholder } from "@nativescript/core";
+import { isIOS, isAndroid } from "@nativescript/core";
+import { ad } from "@nativescript/core/utils";
+import {StackLayout} from "@nativescript/core";
 // >> code-behind-placeholder-code-ts
 export function onLayoutLoaded (ltargs) {
     let layout: StackLayout = ltargs.object;

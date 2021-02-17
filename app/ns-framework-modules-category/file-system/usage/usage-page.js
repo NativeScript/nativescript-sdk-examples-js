@@ -1,9 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-// >> fs-create-require
-const fileSystemModule = require("tns-core-modules/file-system");
-// << fs-create-require
+import { Observable, knownFolders } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -19,11 +16,11 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onCreateFile(args) {
+export function onCreateFile(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-create-all-code
-    const documents = fileSystemModule.knownFolders.documents();
+    const documents = knownFolders.documents();
     const folder = documents.getFolder(vm.get("folderName") || "testFolder");
     const file = folder.getFile(`${(vm.get("fileName") || "testFile")}`.txt);
 
@@ -40,5 +37,4 @@ function onCreateFile(args) {
         });
     // << fs-create-all-code
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onCreateFile = onCreateFile;
+

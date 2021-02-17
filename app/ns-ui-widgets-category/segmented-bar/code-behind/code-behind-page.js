@@ -1,11 +1,10 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable, SegmentedBar } from "@nativescript/core";
 // >> segmented-bar-require
-const segmentedBarModule = require("tns-core-modules/ui/segmented-bar");
 // << segmented-bar-require
 // >> creating-segmented-bar-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("sbResult", 0);
@@ -14,15 +13,15 @@ function onPageLoaded(args) {
         sourceProperty: "sbindex",
         targetProperty: "selectedIndex"
     };
-    const segmentedBar = new segmentedBarModule.SegmentedBar();
+    const segmentedBar = new SegmentedBar();
     const items = [];
-    const item1 = new segmentedBarModule.SegmentedBarItem();
+    const item1 = new SegmentedBarItem();
     item1.title = "Item1";
     items.push(item1);
-    const item2 = new segmentedBarModule.SegmentedBarItem();
+    const item2 = new SegmentedBarItem();
     item2.title = "Item2";
     items.push(item2);
-    const item3 = new segmentedBarModule.SegmentedBarItem();
+    const item3 = new SegmentedBarItem();
     item3.title = "Item3";
     items.push(item3);
     segmentedBar.items = items;
@@ -40,5 +39,5 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-segmented-bar-code

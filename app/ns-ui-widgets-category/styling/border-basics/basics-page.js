@@ -1,6 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     const vm = new Observable();
@@ -8,4 +8,4 @@ exports.onNavigatingTo = function(args) {
     vm.set("snippet", cssSnippet);
 
     page.bindingContext = vm;
-};
+}

@@ -1,8 +1,8 @@
 // >> action-bar-hiding-action-items-ts
-import { EventData, fromObject } from "tns-core-modules/data/observable";
-import { ActionItem } from "tns-core-modules/ui/action-bar";
-import { Page } from "tns-core-modules/ui/page";
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { EventData, fromObject } from "@nativescript/core";
+import { ActionItem } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { GestureEventData } from "@nativescript/core";
 
 // >> (hide)
 export function onNavigatingTo(args: EventData) {

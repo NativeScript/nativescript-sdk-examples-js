@@ -1,21 +1,21 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Alert", "ns-ui-widgets-category/dialogs/alert-dialog/alert-page"),
-    new link("Action", "ns-ui-widgets-category/dialogs/action-dialog/action-page"),
-    new link("Confirm", "ns-ui-widgets-category/dialogs/confirm-dialog/confirm-page"),
-    new link("Login", "ns-ui-widgets-category/dialogs/login-dialog/login-page"),
-    new link("Prompt", "ns-ui-widgets-category/dialogs/prompt-dialog/prompt-page")
+    new Link("Alert", "ns-ui-widgets-category/dialogs/alert-dialog/alert-page"),
+    new Link("Action", "ns-ui-widgets-category/dialogs/action-dialog/action-page"),
+    new Link("Confirm", "ns-ui-widgets-category/dialogs/confirm-dialog/confirm-page"),
+    new Link("Login", "ns-ui-widgets-category/dialogs/login-dialog/login-page"),
+    new Link("Prompt", "ns-ui-widgets-category/dialogs/prompt-dialog/prompt-page")
 ];
 
 const navigationLinksTsc = [
-    new link("Alert", "ns-ui-widgets-category/dialogs/alert-dialog/alert-ts-page"),
-    new link("Action", "ns-ui-widgets-category/dialogs/action-dialog/action-ts-page"),
-    new link("Confirm", "ns-ui-widgets-category/dialogs/confirm-dialog/confirm-ts-page"),
-    new link("Login", "ns-ui-widgets-category/dialogs/login-dialog/login-ts-page"),
-    new link("Prompt", "ns-ui-widgets-category/dialogs/prompt-dialog/prompt-ts-page")
+    new Link("Alert", "ns-ui-widgets-category/dialogs/alert-dialog/alert-ts-page"),
+    new Link("Action", "ns-ui-widgets-category/dialogs/action-dialog/action-ts-page"),
+    new Link("Confirm", "ns-ui-widgets-category/dialogs/confirm-dialog/confirm-ts-page"),
+    new Link("Login", "ns-ui-widgets-category/dialogs/login-dialog/login-ts-page"),
+    new Link("Prompt", "ns-ui-widgets-category/dialogs/prompt-dialog/prompt-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -24,4 +24,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

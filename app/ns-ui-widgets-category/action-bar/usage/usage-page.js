@@ -1,12 +1,10 @@
 // >> action-bar-basic-usage-sdk-js
-const frameModule = require("tns-core-modules/ui/frame");
+import { Frame } from "@nativescript/core";
 
-function goBack() {
-    frameModule.Frame.topmost().goBack();
+export function goBack() {
+    Frame.topmost().goBack();
 }
-function openSettings() {
+export function openSettings() {
     // implement the custom logic
 }
-exports.goBack = goBack;
-exports.openSettings = openSettings;
 // << action-bar-basic-usage-sdk-js

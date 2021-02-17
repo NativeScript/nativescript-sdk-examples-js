@@ -1,26 +1,26 @@
 // >> get-screen-device-info
-const platformModule = require("tns-core-modules/platform");
+import { Device, Screen, isAndroid, isIOS } from "@nativescript/core";
 
-function onNavigatingTo(args) {
-    console.log(`Running on Android? ${platformModule.isAndroid}`);
-    console.log(`Running on iOS? ${platformModule.isIOS}`);
+export function onNavigatingTo(args) {
+    console.log(`Running on Android? ${isAndroid}`);
+    console.log(`Running on iOS? ${isIOS}`);
 
-    console.log(`device.model ${platformModule.device.model}`); // For example: "Nexus 5" or "iPhone".
-    console.log(`device.deviceType ${platformModule.device.deviceType}`); // "Phone" | "Tablet"
-    console.log(`device.os ${platformModule.device.os}`); // For example: "Android" or "iOS".
-    console.log(`device.osVersion ${platformModule.device.osVersion}`); // For example: 4.4.4(android), 8.1(ios)
-    console.log(`device.sdkVersion ${platformModule.device.sdkVersion}`); //  For example: 19(android), 8.1(ios).
-    console.log(`device.language ${platformModule.device.language}`); // For example "en" or "en-US".
-    console.log(`device.manufacturer ${platformModule.device.manufacturer}`); // For example: "Apple" or "HTC" or "Samsung".
-    console.log(`device.uuid ${platformModule.device.uuid}`); // The unique identification number
-    console.log(`device.region ${platformModule.device.region}`); //  For example "US".
+    console.log(`device.model ${Device.model}`); // For example: "Nexus 5" or "iPhone".
+    console.log(`device.deviceType ${Device.deviceType}`); // "Phone" | "Tablet"
+    console.log(`device.os ${Device.os}`); // For example: "Android" or "iOS".
+    console.log(`device.osVersion ${Device.osVersion}`); // For example: 4.4.4(android), 8.1(ios)
+    console.log(`device.sdkVersion ${Device.sdkVersion}`); //  For example: 19(android), 8.1(ios).
+    console.log(`device.language ${Device.language}`); // For example "en" or "en-US".
+    console.log(`device.manufacturer ${Device.manufacturer}`); // For example: "Apple" or "HTC" or "Samsung".
+    console.log(`device.uuid ${Device.uuid}`); // The unique identification number
+    console.log(`device.region ${Device.region}`); //  For example "US".
 
-    console.log(`screen.mainScreen.heightDIPs ${platformModule.screen.mainScreen.heightDIPs}`); // The absolute height of the screen in density independent pixels.
-    console.log(`screen.mainScreen.heightPixels ${platformModule.screen.mainScreen.heightPixels}`); // The absolute height of the screen in pixels.
-    console.log(`screen.mainScreen.scale ${platformModule.screen.mainScreen.scale}`); // The logical density of the display.
-    console.log(`screen.mainScreen.widthDIPs ${platformModule.screen.mainScreen.widthDIPs}`); // The absolute width of the screen in density independent pixels.
-    console.log(`screen.mainScreen.widthPixels ${platformModule.screen.mainScreen.widthPixels}`); // The absolute width of the screen in pixel
+    console.log(`screen.mainScreen.heightDIPs ${Screen.mainScreen.heightDIPs}`); // The absolute height of the screen in density independent pixels.
+    console.log(`screen.mainScreen.heightPixels ${Screen.mainScreen.heightPixels}`); // The absolute height of the screen in pixels.
+    console.log(`screen.mainScreen.scale ${Screen.mainScreen.scale}`); // The logical density of the display.
+    console.log(`screen.mainScreen.widthDIPs ${Screen.mainScreen.widthDIPs}`); // The absolute width of the screen in density independent pixels.
+    console.log(`screen.mainScreen.widthPixels ${Screen.mainScreen.widthPixels}`); // The absolute width of the screen in pixel
 }
 
-exports.onNavigatingTo = onNavigatingTo;
+
 // << get-screen-device-info

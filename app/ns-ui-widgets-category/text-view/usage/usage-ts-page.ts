@@ -1,7 +1,7 @@
 // >> text-view-binding-code-ts
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {TextView} from "tns-core-modules/ui/text-view";
+import {Observable} from "@nativescript/core";
+import {Page} from "@nativescript/core";
+import {TextView} from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

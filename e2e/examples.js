@@ -12,7 +12,7 @@ class Example {
     }
 }
 
-exports.examples = {
+export const examples = {
     actionBar: new Example("Action Bar", ["Basics", "Code-Behind"]),
     activityIndicator: new Example("ActivityIndicator", ["Basics", "Code-Behind", "Styling"]),
     animations: new Example("Animations", ["Animated Properties", "Animating Multiple Views", "Chained Animations", "Properties originX and originY"]),
@@ -20,5 +20,5 @@ exports.examples = {
     applicationSettings: new Example("Application Settings", ["Basics"]),
     button: new Example("Button", ["Basics", "Code-Behind", "Styling"]),
     color: new Example("Color", ["Basics"]),
-    connectivity: new Example("Connectivity", ["Basics"]),
-}
+    connectivity: new Example("Connectivity", ["Basics"])
+};

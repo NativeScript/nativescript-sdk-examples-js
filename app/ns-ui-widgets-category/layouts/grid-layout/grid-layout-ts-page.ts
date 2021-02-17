@@ -1,7 +1,7 @@
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
+import { Button } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 // >> grid-layout-import-ts
-import { GridLayout, ItemSpec } from "tns-core-modules/ui/layouts/grid-layout";
+import { GridLayout, ItemSpec } from "@nativescript/core";
 // << grid-layout-import-ts
 
 export function onNavigatingTo(args) {

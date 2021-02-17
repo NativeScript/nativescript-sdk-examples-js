@@ -1,7 +1,7 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { Page } from "tns-core-modules/ui/page";
-import { Repeater } from "tns-core-modules/ui/repeater";
+import { Observable } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
+import { Page } from "@nativescript/core";
+import { Repeater } from "@nativescript/core";
 // >> repeater-create-code-ts
 const colors = ["red", "green", "blue"];
 const secondColorsArray = new ObservableArray(["red", "green", "blue"]);

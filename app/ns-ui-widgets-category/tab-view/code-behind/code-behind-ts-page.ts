@@ -1,9 +1,9 @@
 // >> tab-view-import
-import { TabView, TabViewItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/tab-view";
+import { TabView, TabViewItem, SelectedIndexChangedEventData } from "@nativescript/core";
 // << tab-view-import
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Label } from "tns-core-modules/ui/label";
+import * as dialogs from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
+import { Label } from "@nativescript/core";
 
 export function onLoaded(args) {
     const stackLayout: StackLayout = <StackLayout>args.object;

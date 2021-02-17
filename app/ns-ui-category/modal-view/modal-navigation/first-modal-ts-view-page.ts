@@ -1,5 +1,5 @@
 // >> first-modal-view-ts-navigation
-import { Page } from "tns-core-modules/ui/page";
+import { Page } from "@nativescript/core";
 export function onNavigate(args) {
     const view = args.object;
     const page: Page = <Page>view.page;

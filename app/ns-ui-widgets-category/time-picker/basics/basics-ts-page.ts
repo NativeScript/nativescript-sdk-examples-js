@@ -1,6 +1,6 @@
-import { Observable, EventData } from "tns-core-modules/data/observable";
-import { TimePicker } from "tns-core-modules/ui/time-picker";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable, EventData } from "@nativescript/core";
+import { TimePicker } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();

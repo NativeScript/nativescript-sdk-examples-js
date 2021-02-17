@@ -1,8 +1,8 @@
 // tslint:disable:no-bitwise
 // >> creating-colors-code-ts
-import { Color } from "tns-core-modules/color";
-import * as colors from "tns-core-modules/color/known-colors";
-import { isKnownName } from "tns-core-modules/color/known-colors";
+import { Color } from "@nativescript/core";
+import { isKnownName } from "@nativescript/core/color/known-colors";
+import { OrangeRed } from "@nativescript/core/color/known-colors";
 
 function createColor() {
     // Using hex values to create color;
@@ -24,6 +24,6 @@ function createColor() {
     }
 
     // Using supported known colors from tns-core-modules/color/known-colors
-    let colorKnownName = new Color(colors.OrangeRed);
+    let colorKnownName = new Color(OrangeRed);
 }
 // << creating-colors-code-ts

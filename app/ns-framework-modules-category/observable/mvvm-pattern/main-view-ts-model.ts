@@ -1,5 +1,5 @@
 // >> mvvm-view-model-ts
-import { Observable } from "tns-core-modules/data/observable";
+import { Observable } from "@nativescript/core";
 
 export class HelloWorldModel extends Observable {
 

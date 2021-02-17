@@ -1,10 +1,10 @@
 // >> animation-curve-imports-ts
 // AnimationCurve enumeration: ease, easeIn, easeInOut, easeOut, linear, spring
-import { AnimationCurve } from "tns-core-modules/ui/enums";
-import { Animation, AnimationDefinition } from "tns-core-modules/ui/animation";
-import { Color } from "tns-core-modules/color";
+import { AnimationCurve } from "@nativescript/core/ui/enums";
+import { Animation, AnimationDefinition } from "@nativescript/core";
+import { Color } from "@nativescript/core";
 // << animation-curve-imports-ts
-import { View } from "tns-core-modules/ui/core/view";
+import { View } from "@nativescript/core";
 let animation: Animation;
 
 export function animate(args) {

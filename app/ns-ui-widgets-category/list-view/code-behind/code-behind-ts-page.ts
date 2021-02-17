@@ -1,9 +1,9 @@
 // >> require-list-view-ts
-import { ItemEventData, ListView } from "tns-core-modules/ui/list-view";
+import { ItemEventData, ListView } from "@nativescript/core";
 // << require-list-view-ts
-import { alert } from "tns-core-modules/ui/dialogs";
-import { Label } from "tns-core-modules/ui/label";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
+import { alert } from "@nativescript/core";
+import { Label } from "@nativescript/core";
+import { ObservableArray } from "@nativescript/core";
 
 const listViewArray = new ObservableArray([
     { title: "The Da Vinci Code" },

@@ -1,6 +1,6 @@
 // >> large-ios-indicator-ts
-import { isIOS } from "tns-core-modules/platform";
-import {ActivityIndicator} from "tns-core-modules/ui/activity-indicator";
+import { isIOS } from "@nativescript/core";
+import {ActivityIndicator} from "@nativescript/core";
 
 export function onLoaded(args) {
     const view = args.object as ActivityIndicator;

@@ -1,7 +1,7 @@
 // >> application-import
-const applicationModule = require("tns-core-modules/application");
+import { Application } from "@nativescript/core";
 // << application-import
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 const enums = require("ui/enums");
 let vm;
 let launchListener;
@@ -13,28 +13,28 @@ let lowMemoryListener;
 let orientationChangedListener;
 let uncaughtErrorListener;
 
-const onNavigatingTo = (args) => {
+export const onNavigatingTo = (args) => {
     const page = args.object;
     vm = new Observable();
     vm.set("actionBarTitle", args.context.actionBarTitle);
     vm.set("info", "Refer to the code-behind files \nfor Application Events snippets");
-    if (applicationModule.android) {
-        const activity = applicationModule.android.foregroundActivity;
+    if (Application.android) {
+        const activity = Application.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
         vm.set("orientation", (orientationEnum === 1 ? enums.DeviceOrientation.portrait : enums.DeviceOrientation.landscape));
         vm.set("resumeEvent", "");
         vm.set("resumeEvent", "");
         vm.set("launchEvent", "");
         vm.set("displayedEvent", "");
-    } else if (applicationModule.ios) {
+    } else if (Application.ios) {
         vm.set("orientation", "portrait");
     }
     page.bindingContext = vm;
     page.actionBar.title = args.context.title;
 };
-exports.onNavigatingTo = onNavigatingTo;
 
-const onGridLoaded = (args) => {
+
+export const onGridLoaded = (args) => {
     // >> application-events-launch
     launchListener = (args) => {
         // The root view for this Window on iOS or Activity for Android.
@@ -43,7 +43,7 @@ const onGridLoaded = (args) => {
         console.log("The appication was launched!");
         vm.set("resumeEvent", "The appication was launched!");
     };
-    applicationModule.on(applicationModule.launchEvent, launchListener);
+    Application.on(Application.launchEvent, launchListener);
     // << application-events-launch
 
     // >> application-events-suspend
@@ -51,7 +51,7 @@ const onGridLoaded = (args) => {
         console.log("The appication was suspended!");
         vm.set("suspendEvent", "The appication was suspended!");
     };
-    applicationModule.on(applicationModule.suspendEvent, suspendListener);
+    Application.on(Application.suspendEvent, suspendListener);
     // << application-events-suspend
 
     // >> application-events-resume
@@ -59,14 +59,14 @@ const onGridLoaded = (args) => {
         console.log("The appication was resumed!");
         vm.set("resumeEvent", "The appication was resumed!");
     };
-    applicationModule.on(applicationModule.resumeEvent, resumeListener);
+    Application.on(Application.resumeEvent, resumeListener);
     // << application-events-resume
 
     // >> application-events-exit
     exitListener = (args) => {
         console.log("The appication was closed!");
     };
-    applicationModule.on(applicationModule.exitEvent, exitListener);
+    Application.on(Application.exitEvent, exitListener);
     // << application-events-exit
 
     // >> application-events-displayed
@@ -74,7 +74,7 @@ const onGridLoaded = (args) => {
         console.log("NativeScript displayedEvent!");
         vm.set("displayedEvent", "The appication is displayed!");
     };
-    applicationModule.on(applicationModule.displayedEvent, displayedListener);
+    Application.on(Application.displayedEvent, displayedListener);
     // << application-events-displayed
 
     // >> application-events-low-memory
@@ -82,7 +82,7 @@ const onGridLoaded = (args) => {
         // the instance that has raidsed the event
         console.log("Instance: ", args.object);
     };
-    applicationModule.on(applicationModule.lowMemoryEvent, lowMemoryListener);
+    Application.on(Application.lowMemoryEvent, lowMemoryListener);
     // << application-events-low-memory
 
     // >> application-events-orientation
@@ -91,7 +91,7 @@ const onGridLoaded = (args) => {
         console.log("Orientation: ", args.newValue);
         vm.set("orientation", args.newValue);
     };
-    applicationModule.on(applicationModule.orientationChangedEvent, orientationChangedListener);
+    Application.on(Application.orientationChangedEvent, orientationChangedListener);
     // << application-events-orientation
 
     // >> application-events-error
@@ -99,21 +99,19 @@ const onGridLoaded = (args) => {
         // UnhandledErrorEventData.error: NativeScriptError
         console.log("NativeScript Error: ", args.error);
     };
-    applicationModule.on(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
+    Application.on(Application.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-error
 };
-exports.onGridLoaded = onGridLoaded;
 
-const onGridUnloaded = () => {
+export const onGridUnloaded = () => {
     // >> application-events-off
-    applicationModule.off(applicationModule.launchEvent, launchListener);
-    applicationModule.off(applicationModule.resumeEvent, resumeListener);
-    applicationModule.off(applicationModule.suspendEvent, suspendListener);
-    applicationModule.off(applicationModule.exitEvent, exitListener);
-    applicationModule.off(applicationModule.displayedEvent, displayedListener);
-    applicationModule.off(applicationModule.lowMemoryEvent, lowMemoryListener);
-    applicationModule.off(applicationModule.orientationChangedEvent, orientationChangedListener);
-    applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
+    Application.off(Application.launchEvent, launchListener);
+    Application.off(Application.resumeEvent, resumeListener);
+    Application.off(Application.suspendEvent, suspendListener);
+    Application.off(Application.exitEvent, exitListener);
+    Application.off(Application.displayedEvent, displayedListener);
+    Application.off(Application.lowMemoryEvent, lowMemoryListener);
+    Application.off(Application.orientationChangedEvent, orientationChangedListener);
+    Application.off(Application.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-off
 };
-exports.onGridUnloaded = onGridUnloaded;

@@ -1,28 +1,24 @@
-import { AnimationCurve } from "tns-core-modules/ui/enums";
-import * as frameModule from "tns-core-modules/ui/frame";
-import { isAndroid, isIOS } from "tns-core-modules/platform";
-
 // >> frame-navigate-base-ts
-import { getFrameById } from "tns-core-modules/ui/frame";
+import { Frame } from "@nativescript/core";
 // >> (hide)
 export function navigate() {
     // << (hide)
-    // Example using `getFrameById(frameId)` to get a `Frame` reference
+    // Example using `Frame.getFrameById(frameId)` to get a `Frame` reference
     // As an alternative, we could use `topmost()` method or `page.frame` property
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
     frame.navigate("home/second-page");
     // >> (hide)
 }
 // << (hide)
 // << frame-navigate-base-ts
 
-import { NavigationEntry } from "tns-core-modules/ui/frame";
+import { NavigationEntry } from "@nativescript/core";
 
 export function navigateByModule() {
     // >> frame-navigate-module-ts
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
-    // import { NavigationEntry } from "tns-core-modules/ui/frame";
+    // import { NavigationEntry } from "@nativescript/core";
     const navigationEntry: NavigationEntry = {
         moduleName: "home/second-page",
         context: { info: "something you want to pass to your page" },
@@ -34,9 +30,9 @@ export function navigateByModule() {
 
 export function navigateWithBackstackVisible() {
     // >> frame-navigate-backstackvisible-ts
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
-    // import { NavigationEntry } from "tns-core-modules/ui/frame";
+    // import { NavigationEntry } from "@nativescript/core";
     const navigationEntry: NavigationEntry = {
         moduleName: "home/second-page",
         backstackVisible: false
@@ -47,9 +43,9 @@ export function navigateWithBackstackVisible() {
 
 export function navigateWithClearHistory() {
     // >> frame-navigate-clearhistory-ts
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
-    // import { NavigationEntry } from "tns-core-modules/ui/frame";
+    // import { NavigationEntry } from "@nativescript/core";
     const navigationEntry: NavigationEntry = {
         moduleName: "home/second-page",
         clearHistory: true
@@ -60,10 +56,10 @@ export function navigateWithClearHistory() {
 
 export function navigateWithTransition() {
     // >> frame-navigate-transitions-ts
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
-    // import { NavigationEntry } from "tns-core-modules/ui/frame";
-    // import { AnimationCurve } from "tns-core-modules/ui/enums";
+    // import { NavigationEntry } from "@nativescript/core";
+    // import { AnimationCurve } from "@nativescript/core";
     const navigationEntry: NavigationEntry = {
         moduleName: "home/second-page",
         animated: true,
@@ -79,15 +75,15 @@ export function navigateWithTransition() {
 
 
     // >> frame-navigate-default-transition-ts
-    // const getFrameById = require("tns-core-modules/ui/frame").getFrameById;
-    // const frame = getFrameById("firstFrame");
+    // import { Frame } from "@nativescript/core";
+    // const frame = Frame.getFrameById("firstFrame");
     frame.transition = { name: "flip" };
     frame.navigate("main-page");
     // << frame-navigate-default-transition-ts
 
     // >> frame-navigate-defailt-transition-app-ts
-    // import * as frameModule from "tns-core-modules/ui/frame";
-    frameModule.Frame.defaultTransition = { name: "fade" };
+    // import { Frame } from "@nativescript/core";
+    Frame.defaultTransition = { name: "fade" };
     // << frame-navigate-defailt-transition-app-ts
 }
 
@@ -108,13 +104,13 @@ export function navigatePlatformSpecificTransitions() {
             curve: AnimationCurve.spring
         }
     };
-    const frame = getFrameById("my-frame");
+    const frame = Frame.getFrameById("my-frame");
     frame.navigate(navigationEntry);
     // << frame-navigate-platform-specific-transitions-ts
 }
 
 // >> frame-navigate-custom-transitions-ios-ts
-// import { Transition } from "tns-core-modules/ui/transition";
+// import { Transition } from "@nativescript/core";
 declare let UINavigationControllerOperation: any; // or use tns-platform-declarations
 
 export class CustomTransitionIOS extends Transition {
@@ -159,18 +155,20 @@ export class CustomTransitionIOS extends Transition {
 // << frame-navigate-custom-transitions-ios-ts
 
 // >> frame-navigate-custom-transitions-android-ts
-import { Transition, AndroidTransitionType } from "tns-core-modules/ui/transition";
+import { Transition } from "@nativescript/core";
+import { AnimationCurve } from "@nativescript/core/ui/enums";
+import * as AndroidTransitionType from "@nativescript/core/ui/transition";
 export class CustomTransition extends Transition {
     public createAndroidAnimator(transitionType: string): android.animation.Animator {
         const scaleValues = (<any>Array).create("float", 2);
         switch (transitionType) {
-            case AndroidTransitionType.enter:
-            case AndroidTransitionType.popEnter:
+            case AndroidTransitionType.AndroidTransitionType.enter:
+            case AndroidTransitionType.AndroidTransitionType.popEnter:
                 scaleValues[0] = 0;
                 scaleValues[1] = 1;
                 break;
-            case AndroidTransitionType.exit:
-            case AndroidTransitionType.popExit:
+            case AndroidTransitionType.AndroidTransitionType.exit:
+            case AndroidTransitionType.AndroidTransitionType.popExit:
                 scaleValues[0] = 1;
                 scaleValues[1] = 0;
                 break;
@@ -197,8 +195,8 @@ export class CustomTransition extends Transition {
 
 export function goBack() {
     // >> frame-navigate-go-back-ts
-    // import { getFrameById } from "tns-core-modules/ui/frame";
-    const myFrame = getFrameById("my-frame");
+    // import { Frame.getFrameById } from "@nativescript/core";
+    const myFrame = Frame.getFrameById("my-frame");
     myFrame.goBack();
     // << frame-navigate-go-back-ts
 }

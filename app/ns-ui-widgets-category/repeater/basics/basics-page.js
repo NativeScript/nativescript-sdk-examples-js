@@ -1,11 +1,10 @@
-const observableModule = require("tns-core-modules/data/observable");
-const observableArrayModule = require("tns-core-modules/data/observable-array");
+import { Observable, ObservableArray } from "@nativescript/core";
 // >> repeater-create-code
 const colors = ["red", "green", "blue"];
-const secondColorsArray = new observableArrayModule.ObservableArray(["red", "green", "blue"]);
-function onNavigatingTo(args) {
+const secondColorsArray = new ObservableArray(["red", "green", "blue"]);
+export function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
 
     vm.set("myItems", colors);
     vm.set("mySecondItems", secondColorsArray);
@@ -13,7 +12,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 // << repeater-create-code
-function onTap(args) {
+export function onTap(args) {
     const page = args.object.page;
     const repeater = page.getViewById("firstRepeater");
     // >> repeater-array
@@ -23,14 +22,11 @@ function onTap(args) {
     // << repeater-array
 }
 
-function onSecondTap(args) {
+export function onSecondTap(args) {
     // >> repeater-observable-array
     secondColorsArray.push("yellow");
     // The Repeater will be updated automatically.
     // << repeater-observable-array
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onTap = onTap;
-exports.onSecondTap = onSecondTap;
 

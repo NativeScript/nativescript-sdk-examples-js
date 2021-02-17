@@ -1,6 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { TabView, SelectedIndexChangedEventData } from "tns-core-modules/ui/tab-view";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Observable } from "@nativescript/core";
+import { TabView, SelectedIndexChangedEventData } from "@nativescript/core";
+import * as dialogs from "@nativescript/core";
 // >> tab-view-navigation-code-ts
 export function onLoaded(args) {
     const tabView: TabView = <TabView>args.object;

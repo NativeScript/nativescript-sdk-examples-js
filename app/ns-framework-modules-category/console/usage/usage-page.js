@@ -1,6 +1,7 @@
-exports.onNavigatedTo = function (args) {
+export function onNavigatedTo (args) {
     const jsonObj = {
-        objProp: "I am Object!", objProp2:
+        objProp: "I am Object!",
+objProp2:
         {
             objProp3: "I am Object!",
             objProp4: "I am Object!"
@@ -33,4 +34,4 @@ exports.onNavigatedTo = function (args) {
     // Prints the current stack trace in the console.
     console.trace();
     // << console-trace
-};
+}

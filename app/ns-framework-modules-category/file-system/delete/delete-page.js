@@ -1,12 +1,11 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const fileSystemModule = require("tns-core-modules/file-system");
+import { Observable, knownFolders } from "@nativescript/core";
 
 let file;
 let myFolder;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
-    const documents = fileSystemModule.knownFolders.documents();
+    const documents = knownFolders.documents();
     myFolder = documents.getFolder("TestFolderName");
     file = myFolder.getFile("TestFileName.txt");
     vm.set("myFolderPath", myFolder.path);
@@ -15,7 +14,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onDeleteFile(args) {
+export function onDeleteFile(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     if (file) {
@@ -33,7 +32,7 @@ function onDeleteFile(args) {
     }
 }
 
-function onDeleteFolder(args) {
+export function onDeleteFolder(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     if (myFolder) {
@@ -52,7 +51,7 @@ function onDeleteFolder(args) {
     }
 }
 
-function onClearFolder(args) {
+export function onClearFolder(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     if (myFolder) {
@@ -70,15 +69,11 @@ function onClearFolder(args) {
     }
 }
 
-function onReset() {
-    const documents = fileSystemModule.knownFolders.documents();
+export function onReset() {
+    const documents = knownFolders.documents();
     myFolder = documents.getFolder("TestFolderName");
     file = myFolder.getFile("TestFileName.txt");
     tresultMessage = "Successfully reset!";
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onDeleteFile = onDeleteFile;
-exports.onDeleteFolder = onDeleteFolder;
-exports.onClearFolder = onClearFolder;
-exports.onReset = onReset;
+

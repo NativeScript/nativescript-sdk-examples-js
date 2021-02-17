@@ -1,6 +1,6 @@
 // >> modal-view-ts
-import { fromObject } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { fromObject } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 let closeCallback;
 
 export function onShownModally(args) {

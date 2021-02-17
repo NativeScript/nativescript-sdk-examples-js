@@ -1,9 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const fileSystemModule = require("tns-core-modules/file-system");
-const imageSourceModule = require("tns-core-modules/image-source");
+import { File, Folder, ImageSource, Observable, ObservableArray, knownFolders, path } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     const array = new ObservableArray();
@@ -13,7 +10,7 @@ function onNavigatingTo(args) {
         "Open source framework for building truly native mobile apps" +
         "with Angular, TypeScript or JavaScript.";
 
-    let documents = fileSystemModule.knownFolders.documents();
+    let documents = knownFolders.documents();
     const folder = documents.getFolder(folderName);
     const file = folder.getFile(fileName);
 
@@ -32,7 +29,7 @@ function onNavigatingTo(args) {
         });
 
     // >> fs-folder-content-code
-    documents = fileSystemModule.knownFolders.documents();
+    documents = knownFolders.documents();
     documents.getEntities()
         .then((entities) => {
             // entities is array with the document's files and folders.
@@ -51,14 +48,14 @@ function onNavigatingTo(args) {
         });
     // << fs-folder-content-code
     // >> fs-file-exists-check-code
-    documents = fileSystemModule.knownFolders.documents();
-    const path = fileSystemModule.path.join(documents.path, "Text.txt");
-    const exists = fileSystemModule.File.exists(path);
+    documents = knownFolders.documents();
+    const path = path.join(documents.path, "Text.txt");
+    const exists = File.exists(path);
     console.log(`Does Text.txt exists: ${exists}`);
     // << fs-file-exists-check-code
     // >> fs-folder-exists-check-code
-    const temp = fileSystemModule.knownFolders.temp();
-    const tempExists = fileSystemModule.Folder.exists(temp.path);
+    const temp = knownFolders.temp();
+    const tempExists = Folder.exists(temp.path);
     console.log(`Does temp folder exists: ${tempExists}`);
     // << fs-folder-exists-check-code
 
@@ -69,17 +66,17 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onReadSync(args) {
+export function onReadSync(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-read-sync-code
-    const image = imageSourceModule.fromResource("icon");
-    const folder = fileSystemModule.knownFolders.documents();
-    const path = fileSystemModule.path.join(folder.path, "Test.png");
+    const image = ImageSource.fromResource("icon");
+    const folder = knownFolders.documents();
+    const path = path.join(folder.path, "Test.png");
     const saved = image.saveToFile(path, "png");
 
     if (saved) {
-        const imageFile = fileSystemModule.File.fromPath(path);
+        const imageFile = File.fromPath(path);
         const binarySource = imageFile.readSync((err) => {
             console.log(err);
         });
@@ -93,5 +90,3 @@ function onReadSync(args) {
         vm.set("binarySource", `Successfully read binary data: ${binarySource}`);
     }
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onReadSync = onReadSync;

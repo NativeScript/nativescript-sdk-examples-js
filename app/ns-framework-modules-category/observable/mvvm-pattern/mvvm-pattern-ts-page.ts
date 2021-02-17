@@ -1,8 +1,8 @@
 
 // >> mvvm-code-behind-ts
 import { HelloWorldModel } from "./main-view-ts-model";
-import { EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData } from "@nativescript/core";
+import { Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

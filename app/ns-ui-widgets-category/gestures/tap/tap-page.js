@@ -1,5 +1,5 @@
 // >> gest-tap
-function onTap(args) {
+export function onTap(args) {
     console.log("Tap!");
     console.log(`Object that triggered the event: ${args.object}`);
     console.log(`View that triggered the event: ${args.view}`);
@@ -13,5 +13,5 @@ function onTap(args) {
     });
     // << (hide)
 }
-exports.onTap = onTap;
+
 // << gest-tap

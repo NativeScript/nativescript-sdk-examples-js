@@ -1,8 +1,8 @@
 // >> activity-indicator-require
-const ActivityIndicator = require("tns-core-modules/ui/activity-indicator").ActivityIndicator;
+import { ActivityIndicator } from "@nativescript/core";
 // << activity-indicator-require
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const myStack = page.getViewById("myStack");
 
@@ -20,4 +20,4 @@ function onNavigatingTo(args) {
     myStack.addChild(indicator);
     // << activity-indicator-code-behind
 }
-exports.onNavigatingTo = onNavigatingTo;
+

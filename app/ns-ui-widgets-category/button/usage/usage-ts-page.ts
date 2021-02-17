@@ -1,5 +1,5 @@
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
+import { EventData, Observable } from "@nativescript/core";
+import { Button } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

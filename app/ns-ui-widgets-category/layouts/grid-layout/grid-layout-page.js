@@ -1,8 +1,5 @@
-const GridLayout = require("tns-core-modules/ui/layouts/grid-layout").GridLayout;
-const ItemSpec = require("tns-core-modules/ui/layouts/grid-layout").ItemSpec;
-const Button = require("tns-core-modules/ui/button/").Button;
-
-exports.onNavigatingTo = function (args) {
+import { Button, GridLayout, ItemSpec } from "@nativescript/core";
+export function onNavigatingTo(args) {
     const page = args.object;
     // >> grid-layout-code
     const myGrid = new GridLayout();
@@ -76,4 +73,4 @@ exports.onNavigatingTo = function (args) {
     // << grid-layout-code
 
     page.content = myGrid;
-};
+}
