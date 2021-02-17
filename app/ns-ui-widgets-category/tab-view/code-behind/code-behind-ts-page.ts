@@ -40,7 +40,7 @@ export function onLoaded(args) {
     tabView.selectedIndex = 1;
     // handling selectedIndexChangedEvent
     tabView.on(TabView.selectedIndexChangedEvent, (argstv: SelectedIndexChangedEventData) => {
-        dialogs.alert(`Selected index has changed ( Old index: ${argstv.oldIndex} New index: ${argstv.newIndex})`)
+        Dialogs.alert(`Selected index has changed ( Old index: ${argstv.oldIndex} New index: ${argstv.newIndex})`)
             .then(() => {
                 console.log("Dialog closed!");
             });

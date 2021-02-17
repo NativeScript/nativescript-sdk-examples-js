@@ -1,6 +1,6 @@
 import { Observable } from "@nativescript/core";
 import { TabView, SelectedIndexChangedEventData } from "@nativescript/core";
-import * as dialogs from "@nativescript/core";
+import { Dialogs } from "@nativescript/core";
 // >> tab-view-navigation-code-ts
 export function onLoaded(args) {
     const tabView: TabView = <TabView>args.object;
@@ -34,7 +34,7 @@ export function onSelectedIndexChanged(args: SelectedIndexChangedEventData) {
         } else if (newIndex === 2) {
             vm.set("tabSelectedIndexResult", "Settings Tab (tabSelectedIndex = 2 )");
         }
-        dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
+        Dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
             .then(() => {
                 console.log("Dialog closed!");
             });

@@ -1,5 +1,5 @@
 import { Observable, EventData } from "@nativescript/core";
-import * as dialogs from "@nativescript/core";
+import { Dialogs } from "@nativescript/core";
 import { Page } from "@nativescript/core";
 import { StackLayout } from "@nativescript/core";
 // >> search-bar-import
@@ -17,7 +17,7 @@ export function onPageLoaded(args) {
     // set up SearchBar submit event
     searchBar.on(SearchBar.submitEvent, (sbargs: EventData) => {
         console.log("Search for ", (<SearchBar>sbargs.object).text);
-        dialogs.alert(`Search for ${(<SearchBar>sbargs.object).text}`)
+        Dialogs.alert(`Search for ${(<SearchBar>sbargs.object).text}`)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -25,7 +25,7 @@ export function onPageLoaded(args) {
     // set up SearchBar clear event
     searchBar.on(SearchBar.clearEvent, () => {
         console.log("Clear");
-        dialogs.alert("Clear SearchBar text")
+        Dialogs.alert("Clear SearchBar text")
             .then(() => {
                 console.log("Dialog closed!");
             });

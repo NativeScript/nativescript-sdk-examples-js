@@ -65,7 +65,7 @@ export function submit(args) {
         vm.set("webViewSrc", text);
         textField.dismissSoftInput();
     } else {
-        dialogs.alert("Please, add `http://` or `https://` in front of the URL string")
+        Dialogs.alert("Please, add `http://` or `https://` in front of the URL string")
         .then(() => {
             console.log("Dialog closed!");
         });

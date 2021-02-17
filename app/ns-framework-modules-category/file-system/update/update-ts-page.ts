@@ -1,6 +1,6 @@
 import { Observable } from "@nativescript/core";
 import { File, Folder, knownFolders } from "@nativescript/core";
-import * as dialogs from "@nativescript/core";
+import { Dialogs } from "@nativescript/core";
 import { Page } from "@nativescript/core";
 
 let file: File;
@@ -37,7 +37,7 @@ export function onFileRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
                 .then(() => {
                     console.log("Dialog closed!");
                 });
@@ -59,7 +59,7 @@ export function onFolderRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
                 .then(() => {
                     console.log("Dialog closed!");
                 });
