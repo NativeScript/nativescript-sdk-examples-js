@@ -1,8 +1,7 @@
 // >> application-import
 import { Application } from "@nativescript/core";
 // << application-import
-import { Observable } from "@nativescript/core";
-const enums = require("ui/enums");
+import { Observable, Enums } from "@nativescript/core";
 let vm;
 let launchListener;
 let suspendListener;
@@ -21,7 +20,7 @@ export const onNavigatingTo = (args) => {
     if (Application.android) {
         const activity = Application.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
-        vm.set("orientation", (orientationEnum === 1 ? enums.DeviceOrientation.portrait : enums.DeviceOrientation.landscape));
+        vm.set("orientation", (orientationEnum === 1 ? Enums.DeviceOrientation.portrait : Enums.DeviceOrientation.landscape));
         vm.set("resumeEvent", "");
         vm.set("resumeEvent", "");
         vm.set("launchEvent", "");

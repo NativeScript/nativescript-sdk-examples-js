@@ -14,7 +14,7 @@ export function onLoaded(args) {
 function cacheImage(viewModel) {
     // >> image-cache-code
     const cache = new Cache();
-    cache.placeholder = fromFile("~/images/logo.png");
+    cache.placeholder = ImageSource.fromFileSync("~/images/logo.png");
     cache.maxRequests = 5;
 
     // set the placeholder while the desired image is downloaded

@@ -46,8 +46,8 @@ export function onSaveContentToFile(args) {
     const vm = page.bindingContext;
     // >> fs-paths-create-file-code
     const documentsFolder = knownFolders.documents();
-    const path = path.join(documentsFolder.path, "FileFromPath.txt");
-    const file = File.fromPath(path);
+    const filePath = path.join(documentsFolder.path, "FileFromPath.txt");
+    const file = File.fromPath(filePath);
 
     // Writing text to the file.
     file.writeText(vm.get("textContentToBeSaved"))

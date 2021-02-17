@@ -18,7 +18,7 @@ export function onRotation(args) {
         vm.set("angle", args.rotation);
         vm.set("state", args.state);
 
-        if (this.state === 3) {
+        if (args.state === 3) {
             const layout = args.object;
             layout.rotate = 0;
             layout.animate({

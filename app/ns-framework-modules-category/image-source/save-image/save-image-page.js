@@ -5,8 +5,8 @@ export function onNavigatingTo(args) {
     const vm = new Observable();
     vm.set("fps", "0");
     const folder = knownFolders.currentApp();
-    const path = path.join(folder.path, "images/logo.png");
-    vm.set("imagePath", path);
+    const filePath = path.join(folder.path, "images/logo.png");
+    vm.set("imagePath", filePath);
     page.bindingContext = vm;
 }
 
@@ -18,7 +18,7 @@ export function makeCopyFromFile(args) {
     const folder = knownFolders.currentApp();
     const imagePath = path.join(folder.path, "images/logo.png");
     // >> image-source-save-from-file
-    const img = ImageSource.fromFile(imagePath);
+    const img = ImageSource.fromFileSync(imagePath);
     const folderDest = knownFolders.documents();
     const pathDest = path.join(folderDest.path, "test.png");
     const saved = img.saveToFile(pathDest, "png");
@@ -43,17 +43,16 @@ export function makeCopyFromAsset(args) {
         keepAspectRatio: true
     };
     // >> image-source-save-from-asset
-    const source = new ImageSource();
-    source.fromAsset(imageAsset)
+    ImageSource.fromAsset(imageAsset)
     .then((imageSource) => {
         const folder = knownFolders.documents().path;
         const fileName = "test.png";
-        const path = path.join(folder, fileName);
-        const saved = imageSource.saveToFile(path, "png");
+        const filePath = path.join(folder, fileName);
+        const saved = imageSource.saveToFile(filePath, "png");
         if (saved) {
             console.log("Image saved successfully!");
             // >> (hide)
-            vm.set("imageAssetCopyPath", path);
+            vm.set("imageAssetCopyPath", filePath);
             // << (hide)
         }
     })
@@ -69,8 +68,8 @@ export function makeBase64String(args) {
     const vm = page.bindingContext;
     // >> image-source-create-base64
     const folder = knownFolders.currentApp();
-    const path = path.join(folder.path, "images/logo.png");
-    const img = ImageSource.fromFile(path);
+    const filePath = path.join(folder.path, "images/logo.png");
+    const img = ImageSource.fromFileSync(filePath);
     const base64String = img.toBase64String("png");
     // << image-source-create-base64
     vm.set("base64String", base64String);

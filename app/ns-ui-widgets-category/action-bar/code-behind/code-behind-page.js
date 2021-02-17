@@ -1,5 +1,5 @@
 // >> actionbar-code-behind
-import { ActionBar, NavigationButton } from "@nativescript/core";
+import { ActionBar, NavigationButton, isAndroid } from "@nativescript/core";
 
 export function onLoaded(args) {
     const page = args.object;
@@ -10,7 +10,9 @@ export function onLoaded(args) {
     // for ios
     newNavigaitonButton.text = "Go Back";
     // for android
-    newNavigaitonButton.android.systemIcon = "ic_menu_back";
+    if (isAndroid) {
+        newNavigaitonButton.android.systemIcon = "ic_menu_back";
+    }
     // or newNavigaitonButton.icon = "~\images\nav-image.png";
     newActionBar.navigationButton = newNavigaitonButton;
 

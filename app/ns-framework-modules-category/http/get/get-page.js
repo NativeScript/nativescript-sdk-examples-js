@@ -1,7 +1,7 @@
 // >> require-http-get
 import { Http } from "@nativescript/core";
 // << require-http-get
-import { Observable } from "@nativescript/core";
+import { Observable, path, knownFolders } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

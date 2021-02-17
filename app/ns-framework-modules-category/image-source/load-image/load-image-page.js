@@ -1,24 +1,26 @@
-import { ImageSource, Observable, knownFolders, path } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> require-image-source
+import { ImageSource } from "@nativescript/core";
 // << require-image-source
 // >> require-file-system
+import { knownFolders, path } from "@nativescript/core";
 // << require-file-system
 export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     // >> image-source-from-resource
-    const imgFromResources = ImageSource.fromResource("icon");
+    const imgFromResources = ImageSource.fromResourceSync("icon");
     // << image-source-from-resource
     vm.set("imageFromResources", imgFromResources);
 
     // >> image-source-from-local-file
     const folder = knownFolders.currentApp();
-    const path = path.join(folder.path, "images/logo.png");
-    const imageFromLocalFile = ImageSource.fromFile(path);
+    const filePath = path.join(folder.path, "images/logo.png");
+    const imageFromLocalFile = ImageSource.fromFileSync(filePath);
     // << image-source-from-local-file
     vm.set("imageFromResourcesLocalFile", imageFromLocalFile);
     // >> image-source-base64
-    const imageFromBase64 = ImageSource.fromBase64(base64string);
+    const imageFromBase64 = ImageSource.fromBase64Sync(base64string);
     // << image-source-base64
     vm.set("imageFromBase64", imageFromBase64);
     page.bindingContext = vm;

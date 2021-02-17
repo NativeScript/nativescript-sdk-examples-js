@@ -16,7 +16,7 @@ export function onWebViewLoaded(webargs) {
     vm.set("result", "WebView is still loading...");
     vm.set("enabled", false);
 
-    webview.on(WebView.WebView.loadFinishedEvent, (args) => {
+    webview.on(WebView.loadFinishedEvent, (args) => {
         let message = "";
         if (!args.error) {
             message = `WebView finished loading of ${args.url}`;

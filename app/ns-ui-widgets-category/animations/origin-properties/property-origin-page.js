@@ -1,5 +1,9 @@
 import { AnimationCurve } from "@nativescript/core/ui/enums";
-let myView;
+let myFirstView;
+let mySecondView;
+let myThirdView;
+let myForthView;
+let myFifthView;
 
 export function onLoaded(args) {
     const page = args.object;

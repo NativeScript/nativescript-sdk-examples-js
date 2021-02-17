@@ -9,7 +9,7 @@ export function onNavigatedTo(args) {
     const type = Connectivity.getConnectionType();
 
     switch (type) {
-        case C.connectionType.none:
+        case Connectivity.connectionType.none:
             console.log("No connection");
             connectionTypeString = "No Internet connectivity!";
             break;

@@ -49,8 +49,8 @@ export function onNavigatingTo(args) {
     // << fs-folder-content-code
     // >> fs-file-exists-check-code
     documents = knownFolders.documents();
-    const path = path.join(documents.path, "Text.txt");
-    const exists = File.exists(path);
+    const filePath = path.join(documents.path, "Text.txt");
+    const exists = File.exists(filePath);
     console.log(`Does Text.txt exists: ${exists}`);
     // << fs-file-exists-check-code
     // >> fs-folder-exists-check-code
@@ -70,13 +70,13 @@ export function onReadSync(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-read-sync-code
-    const image = ImageSource.fromResource("icon");
+    const image = ImageSource.fromResourceSync("icon");
     const folder = knownFolders.documents();
-    const path = path.join(folder.path, "Test.png");
-    const saved = image.saveToFile(path, "png");
+    const filePath = path.join(folder.path, "Test.png");
+    const saved = image.saveToFile(filePath, "png");
 
     if (saved) {
-        const imageFile = File.fromPath(path);
+        const imageFile = File.fromPath(filePath);
         const binarySource = imageFile.readSync((err) => {
             console.log(err);
         });

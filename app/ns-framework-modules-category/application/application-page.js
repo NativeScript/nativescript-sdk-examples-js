@@ -1,6 +1,6 @@
 import ListViewLinksModel from "../../links-view-model";
 import Link from "../../link";
-import { isIOS } from "@nativescript/core";
+import { isIOS, isAndroid } from "@nativescript/core";
 
 const navigationLinks = [
     new Link(

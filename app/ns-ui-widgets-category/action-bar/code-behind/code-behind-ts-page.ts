@@ -8,9 +8,9 @@ export function onLoaded(args: EventData) {
 
     const newActionBar = new ActionBar();
     newActionBar.title = "Code-Behind ActionBar";
-    const newNavigaitonButton = new NavigationButton();
-    newNavigaitonButton.text = "Go Back";
-    newActionBar.navigationButton = newNavigaitonButton;
+    const newNavigationButton = new NavigationButton();
+    newNavigationButton.text = "Go Back";
+    newActionBar.navigationButton = newNavigationButton;
 
     page.actionBar = newActionBar;
     page.actionBarHidden = false;

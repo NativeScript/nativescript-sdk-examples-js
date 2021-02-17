@@ -1,6 +1,10 @@
 import { EventData } from "@nativescript/core";
 import { Page } from "@nativescript/core";
-let myFirstView, mySecondView, myThirdView, myForthView, myFifthView;
+let myFirstView;
+let mySecondView;
+let myThirdView;
+let myForthView;
+let myFifthView;
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

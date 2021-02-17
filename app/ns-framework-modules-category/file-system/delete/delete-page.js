@@ -69,11 +69,13 @@ export function onClearFolder(args) {
     }
 }
 
-export function onReset() {
+export function onReset(args) {
+    const page = args.object.page;
+    const vm = page.bindingContext;
     const documents = knownFolders.documents();
     myFolder = documents.getFolder("TestFolderName");
     file = myFolder.getFile("TestFileName.txt");
-    tresultMessage = "Successfully reset!";
+    vm.set("resultMessage", "Successfully reset!");
 }
 
 
