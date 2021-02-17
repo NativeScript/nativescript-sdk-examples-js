@@ -1,5 +1,6 @@
-import { HtmlView, Observable } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> html-view-code-behind
+import { HtmlView } from "@nativescript/core";
 // >> (hide)
 
 export function onPageLoaded(args) {

@@ -1,5 +1,6 @@
-import { Dialogs, Observable, SearchBar } from "@nativescript/core";
+import { Dialogs, Observable } from "@nativescript/core";
 // >> search-bar-require
+import { SearchBar } from "@nativescript/core";
 // << search-bar-require
 // >> creating-search-bar-code
 export function onPageLoaded(args) {

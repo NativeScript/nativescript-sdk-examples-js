@@ -1,5 +1,6 @@
-import { Observable, SegmentedBar } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> segmented-bar-require
+import { SegmentedBar } from "@nativescript/core";
 // << segmented-bar-require
 // >> creating-segmented-bar-code
 export function onPageLoaded(args) {

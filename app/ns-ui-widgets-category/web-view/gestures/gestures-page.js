@@ -1,5 +1,6 @@
 import { Observable, isAndroid } from "@nativescript/core";
 // >> webview-require
+import { WebView } from "@nativescript/core";
 // << webview-require
 // >> webview-js-gestures
 export function onNavigatingTo(args) {

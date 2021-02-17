@@ -1,7 +1,7 @@
 // >> image-cache-require
-import { ImageSource, Observable } from "@nativescript/core";
 import { Cache } from "@nativescript/core/ui/image-cache";
-
+// << image-cache-require
+import { ImageSource, Observable } from "@nativescript/core";
 export function onLoaded(args) {
     const page = args.object;
     const vm = new Observable();

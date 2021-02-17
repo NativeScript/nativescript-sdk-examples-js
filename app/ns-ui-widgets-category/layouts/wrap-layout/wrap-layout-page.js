@@ -1,6 +1,7 @@
 // >> wrap-layout-import
-import { Button, WrapLayout } from "@nativescript/core";
+import { WrapLayout } from "@nativescript/core";
 // << wrap-layout-import
+import { Button } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

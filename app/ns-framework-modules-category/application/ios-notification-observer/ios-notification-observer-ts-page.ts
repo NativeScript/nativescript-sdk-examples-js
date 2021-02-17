@@ -1,6 +1,4 @@
-import * as application from "@nativescript/core";
-import { isIOS } from "@nativescript/core";
-import { Application, Observable } from "@nativescript/core";
+import { Application, Observable, isIOS } from "@nativescript/core";
 
 let vm;
 let observer;
@@ -22,7 +20,7 @@ export function onNavigatedTo(args) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
 
     // >> app-class-properties-ios
-    // import { ios as Application.ios } from "@nativescript/core";
+    // import { Application } from "@nativescript/core";
 
     // https://developer.apple.com/documentation/uikit/uiapplicationdelegate?language=objc
     let delegate = Application.ios.delegate; // the iOS application delegate

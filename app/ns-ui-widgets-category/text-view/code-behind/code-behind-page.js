@@ -1,5 +1,6 @@
-import { Observable, TextView } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> text-view-require
+import { TextView } from "@nativescript/core";
 // << text-view-require
 // >> creating-text-view-code
 export function onNavigatingTo(args) {

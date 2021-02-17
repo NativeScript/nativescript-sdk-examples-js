@@ -1,6 +1,6 @@
 // >> setting-url-webview-ts
 import {Observable} from "@nativescript/core";
-import * as dialogs from "@nativescript/core";
+import { Dialogs } from "@nativescript/core";
 import {WebView, LoadEventData} from "@nativescript/core";
 import { Page } from "@nativescript/core";
 import { TextField } from "@nativescript/core";

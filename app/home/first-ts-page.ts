@@ -58,8 +58,7 @@ export function navigateWithTransition() {
     // >> frame-navigate-transitions-ts
     const frame = Frame.getFrameById("my-frame-id");
 
-    // import { NavigationEntry } from "@nativescript/core";
-    // import { AnimationCurve } from "@nativescript/core";
+    // import { Enums, NavigationEntry } from "@nativescript/core";
     const navigationEntry: NavigationEntry = {
         moduleName: "home/second-page",
         animated: true,
@@ -67,7 +66,7 @@ export function navigateWithTransition() {
         transition: {
             name: "slide",
             duration: 380,
-            curve: AnimationCurve.easeIn
+            curve: Enums.AnimationCurve.easeIn
         }
     };
     frame.navigate(navigationEntry);
@@ -96,12 +95,12 @@ export function navigatePlatformSpecificTransitions() {
         transitioniOS: {
             name: "curl",
             duration: 380,
-            curve: AnimationCurve.easeInOut
+            curve: Enums.AnimationCurve.easeInOut
         },
         transitionAndroid: {
             name: "explode",
             duration: 300,
-            curve: AnimationCurve.spring
+            curve: Enums.AnimationCurve.spring
         }
     };
     const frame = Frame.getFrameById("my-frame");
@@ -156,19 +155,18 @@ export class CustomTransitionIOS extends Transition {
 
 // >> frame-navigate-custom-transitions-android-ts
 import { Transition } from "@nativescript/core";
-import { AnimationCurve } from "@nativescript/core/ui/enums";
-import * as AndroidTransitionType from "@nativescript/core/ui/transition";
+import { AndroidTransitionType } from "@nativescript/core/ui/transition";
 export class CustomTransition extends Transition {
     public createAndroidAnimator(transitionType: string): android.animation.Animator {
         const scaleValues = (<any>Array).create("float", 2);
         switch (transitionType) {
-            case AndroidTransitionType.AndroidTransitionType.enter:
-            case AndroidTransitionType.AndroidTransitionType.popEnter:
+            case AndroidTransitionType.enter:
+            case AndroidTransitionType.popEnter:
                 scaleValues[0] = 0;
                 scaleValues[1] = 1;
                 break;
-            case AndroidTransitionType.AndroidTransitionType.exit:
-            case AndroidTransitionType.AndroidTransitionType.popExit:
+            case AndroidTransitionType.exit:
+            case AndroidTransitionType.popExit:
                 scaleValues[0] = 1;
                 scaleValues[1] = 0;
                 break;
@@ -195,7 +193,7 @@ export class CustomTransition extends Transition {
 
 export function goBack() {
     // >> frame-navigate-go-back-ts
-    // import { Frame.getFrameById } from "@nativescript/core";
+    // import { Frame } from "@nativescript/core";
     const myFrame = Frame.getFrameById("my-frame");
     myFrame.goBack();
     // << frame-navigate-go-back-ts

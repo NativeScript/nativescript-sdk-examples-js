@@ -1,7 +1,7 @@
 // >> animation-curve-imports
 // AnimationCurveEnum: ease, easeIn, easeInOut, easeOut, linear, spring
-import { Animation, Color } from "@nativescript/core";
 import { AnimationCurve } from "@nativescript/core/ui/enums";
+import { Animation, Color } from "@nativescript/core";
 // << animation-curve-imports
 let animation;
 let myView;

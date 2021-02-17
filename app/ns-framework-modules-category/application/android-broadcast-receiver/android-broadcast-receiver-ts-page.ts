@@ -20,10 +20,10 @@ export function onNavigatedTo(args: NavigatedData) {
     vm.set("actionBarTitle", args.context.actionBarTitle);
 
     // >> app-class-properties
-    // import { android as androidApp } from "@nativescript/core";
+    // import { Application } from "@nativescript/core";
     let isPaused = Application.android.paused; // e.g. false
     let packageName = Application.android.packageName; // The package ID e.g. org.nativescript.nativescriptsdkexamplesng
-    let nativeApp = Application.android.nativeApp; // The native APplication reference
+    let nativeApp = Application.android.nativeApp; // The native Application reference
     let foregroundActivity = Application.android.foregroundActivity; // The current Activity reference
     let context = Application.android.context; // The current Android context
     // << app-class-properties

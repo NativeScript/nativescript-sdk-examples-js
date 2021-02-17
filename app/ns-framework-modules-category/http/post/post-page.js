@@ -1,6 +1,8 @@
-import { Http, Observable } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> require-http-post
+import { Http } from "@nativescript/core";
 // << require-http-post
+
 export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();

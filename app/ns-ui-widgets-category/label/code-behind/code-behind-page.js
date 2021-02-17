@@ -1,5 +1,6 @@
-import { Label, Observable } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> label-code-create
+import { Label } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

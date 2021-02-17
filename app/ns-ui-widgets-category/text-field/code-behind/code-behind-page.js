@@ -1,5 +1,6 @@
-import { Observable, TextField } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> textfield-require
+import { TextField } from "@nativescript/core";
 // << textfield-require
 // >> creating-text-field-code
 export function onPageLoaded(args) {

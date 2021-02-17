@@ -1,5 +1,6 @@
-import { Observable, Progress } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> progress-require
+import { Progress } from "@nativescript/core";
 // << progress-require
 // >> creating-progress-code
 export function onPageLoaded(args) {

@@ -1,6 +1,6 @@
 import { Observable } from "@nativescript/core";
 import { Page } from "@nativescript/core";
-import {GridLayout} from "@nativescript/core";
+import { GridLayout } from "@nativescript/core";
 let startScale = 1;
 // >> gest-pinch-ts
 import { PinchGestureEventData } from "@nativescript/core";

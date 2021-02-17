@@ -1,5 +1,7 @@
-import { Dialogs, Label, ListView, ObservableArray } from "@nativescript/core";
-
+// >> require-list-view
+import { ListView } from "@nativescript/core";
+// << require-list-view
+import { Dialogs, Label, ObservableArray } from "@nativescript/core";
 const listViewArray = new ObservableArray([
     { title: "The Da Vinci Code" },
     { title: "Harry Potter and the Chamber of Secrets" },

@@ -1,5 +1,6 @@
-import { Observable, Slider } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> slider-require
+import { Slider } from "@nativescript/core";
 // << slider-require
 // >> creating-slider-code
 export function onPageLoaded(args) {

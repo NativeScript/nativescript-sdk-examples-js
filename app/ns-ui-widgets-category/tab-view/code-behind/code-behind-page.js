@@ -1,5 +1,7 @@
-import { Dialogs, Label, StackLayout, TabView, TabViewItem } from "@nativescript/core";
-
+import { Dialogs, Label, StackLayout} from "@nativescript/core";
+// >> tab-view-require
+import { TabView, TabViewItem } from "@nativescript/core";
+// << tab-view-require
 export function onLoaded(args) {
     const stackLayout = args.object;
 

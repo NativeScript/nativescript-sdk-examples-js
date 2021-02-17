@@ -1,3 +1,6 @@
+// >> placeholder-require
+import { Placeholder } from "@nativescript/core";
+// << placeholder-require
 import { Utils, isAndroid, isIOS } from "@nativescript/core";
 // >> placeholder-code
 export function creatingView(args) {

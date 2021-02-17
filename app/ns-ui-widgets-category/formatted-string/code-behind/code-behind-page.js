@@ -1,5 +1,7 @@
-import { Button, FormattedString, Label, Span, TextField, TextView } from "@nativescript/core";
-
+import { Button, Label, TextField, TextView } from "@nativescript/core";
+// >> formatted-string-require
+import { FormattedString, Span } from "@nativescript/core";
+// << formatted-string-require
 export function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");

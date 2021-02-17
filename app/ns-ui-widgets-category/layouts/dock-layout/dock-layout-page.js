@@ -1,6 +1,7 @@
 // >> dock-layout-import
-import { Button, DockLayout } from "@nativescript/core";
+import { DockLayout } from "@nativescript/core";
 // << dock-layout-import
+import { Button } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

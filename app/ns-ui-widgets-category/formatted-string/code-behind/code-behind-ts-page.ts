@@ -8,7 +8,6 @@ import { TextView } from "@nativescript/core";
 
 // >> formatted-string-require-ts
 import { FormattedString, Span } from "@nativescript/core";
-// import { Span } from "@nativescript/core";
 // << formatted-string-require-ts
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

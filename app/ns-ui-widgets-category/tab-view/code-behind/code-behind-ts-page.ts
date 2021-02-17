@@ -1,7 +1,7 @@
 // >> tab-view-import
 import { TabView, TabViewItem, SelectedIndexChangedEventData } from "@nativescript/core";
 // << tab-view-import
-import * as dialogs from "@nativescript/core";
+import { Dialogs } from "@nativescript/core";
 import { StackLayout } from "@nativescript/core";
 import { Label } from "@nativescript/core";
 

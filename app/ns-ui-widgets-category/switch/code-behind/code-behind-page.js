@@ -1,5 +1,6 @@
-import { Observable, Switch } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> switch-require
+import { Switch } from "@nativescript/core";
 // << switch-require
 
 

@@ -1,6 +1,6 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-// >> import-timer
+import { Observable, Page } from "@nativescript/core";
+// >> import-time
+// Timers are exported under Utils
 import { Utils } from "@nativescript/core";
 // << import-timer
 const color = ["green", "yellow", "red"];

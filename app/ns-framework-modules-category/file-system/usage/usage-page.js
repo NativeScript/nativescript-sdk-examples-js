@@ -1,4 +1,7 @@
-import { Observable, knownFolders } from "@nativescript/core";
+// >> fs-create-require
+import { knownFolders } from "@nativescript/core";
+// << fs-create-require
+import { Observable } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

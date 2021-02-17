@@ -1,13 +1,8 @@
 // tslint:disable:max-line-length
-import { HttpResponse, Observable} from "@nativescript/core";
-import { path, knownFolders, File } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Button, ImageSource, path, knownFolders, File, Page, Observable } from "@nativescript/core";
 // >> import-http-get
-// import { getFile, getImage, getJSON, getString, request, HttpResponse } from "@nativescript/core";
-import { Http } from "@nativescript/core";
+import { Http, HttpResponse } from "@nativescript/core";
 // << import-http-get
-import { Button } from "@nativescript/core";
-import { ImageSource } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

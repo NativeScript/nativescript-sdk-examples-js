@@ -1,6 +1,7 @@
 // >> stack-layout-import
-import { Button, StackLayout } from "@nativescript/core";
+import { StackLayout } from "@nativescript/core";
 // << stack-layout-import
+import { Button } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

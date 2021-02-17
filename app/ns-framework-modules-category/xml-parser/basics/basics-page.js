@@ -1,5 +1,6 @@
-import { Observable, ObservableArray, ParserEventType, XmlParser } from "@nativescript/core";
+import { Observable, ObservableArray } from "@nativescript/core";
 // >> require-xml-module
+import { ParserEventType, XmlParser } from "@nativescript/core";
 // << require-xml-module
 const source = new ObservableArray();
 // >> parser-event

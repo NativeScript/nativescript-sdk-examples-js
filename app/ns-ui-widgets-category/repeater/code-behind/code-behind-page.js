@@ -1,5 +1,6 @@
-import { ObservableArray, Repeater, StackLayout } from "@nativescript/core";
+import { ObservableArray, StackLayout } from "@nativescript/core";
 // >> repeater-require
+import { Repeater } from "@nativescript/core";
 // << repeater-require
 // >> creating-repeater-code
 export function onPageLoaded(args) {

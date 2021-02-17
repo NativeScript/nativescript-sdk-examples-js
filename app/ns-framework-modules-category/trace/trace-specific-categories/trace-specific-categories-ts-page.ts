@@ -1,6 +1,10 @@
 // tslint:disable:max-line-length
 // >> import-trace-module
-import { Utils, Trace, Dialogs } from "@nativescript/core";
+import { Trace } from "@nativescript/core";
+// << import-trace-module
+import { Dialogs, Utils } from "@nativescript/core";
+
+
 export function onNavigatingTo(args) {
     Trace.disable();
     // >> setting-specific-tracing-categories-ts

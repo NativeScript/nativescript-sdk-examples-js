@@ -1,5 +1,7 @@
-import { Observable, Utils } from "@nativescript/core";
+import { Observable } from "@nativescript/core";
 // >> require-timer
+// Timers are exported under Utils
+import { Utils } from "@nativescript/core";
 // << require-timer
 const color = ["green", "yellow", "red"];
 let id;
