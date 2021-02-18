@@ -23,7 +23,6 @@ function ListViewLinksModel(info) {
 
     viewModel.set("onItemTap", (args) => {
         const linkItem = viewModel.get("links").getItem(args.index);
-        console.log("linkItem", linkItem);
         Frame.topmost().navigate({
             moduleName: linkItem.link,
             context: { "title": linkItem.title }

@@ -4,7 +4,7 @@ You can use this file to perform app-level initialization, but the primary
 purpose of the file is to pass control to the app’s first module.
 */
 import { Application, ApplicationSettings, isIOS } from "@nativescript/core";
-import deepLinkDataModule from "./shared/deep-link-data";
+import { DeepLinkData } from "./shared/deep-link-data";
 if (isIOS) {
     const mydelegate = require("./delegate/my-delegate");
     Application.ios.delegate = mydelegate.MyDelegate;
@@ -24,7 +24,7 @@ function launchExample() {
 }
 Application.on(Application.resumeEvent, (args) => {
     if (args.android) {
-        const dld = new deepLinkDataModule.DeepLinkData("", args.android);
+        const dld = new DeepLinkData("", args.android);
         launchExample();
     }
     else if (args.ios) {
