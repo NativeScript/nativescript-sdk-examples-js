@@ -1,6 +1,5 @@
 // >> picker-styling-code-behind-ts
-import { EventData, fromObject } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, Page, fromObject } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
 

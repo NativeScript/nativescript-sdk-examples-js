@@ -1,6 +1,5 @@
 // >> image-binding-code-ts
-import { EventData, Observable } from "@nativescript/core";
-import { View } from "@nativescript/core";
+import { EventData, Observable, View } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const view = <View>args.object;

@@ -35,8 +35,7 @@ Set Button in XML
 
 ######text.component.js
 ```JavaScript
-import {EventData} from "@nativescript/core";
-import {Button} from "@nativescript/core";
+import { Button, EventData } from "@nativescript/core";
 
 // >> button-tap-javascript 
 export function onTap(args) {
@@ -49,8 +48,7 @@ export function onTap(args) {
 
 ######text.component.ts
 ```TypeScript
-import { EventData } from "@nativescript/core";
-import { Button } from "@nativescript/core";
+import { Button, EventData } from "@nativescript/core";
 
 // >> button-tap-ts 
 export function onTap(args: EventData) {

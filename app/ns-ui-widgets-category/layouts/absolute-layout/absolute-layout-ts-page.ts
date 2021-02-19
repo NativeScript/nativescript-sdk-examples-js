@@ -1,8 +1,7 @@
 // >> absolute-layout-import-ts
 import { AbsoluteLayout } from "@nativescript/core";
 // << absolute-layout-import-ts
-import { Button } from "@nativescript/core";
-import { Color } from "@nativescript/core";
+import { Button, Color } from "@nativescript/core";
 // TODO: This should be in "pageNavigatingTo" but that method is defined in the Page base class
 export function onNavigatingTo(args) {
     const page = args.object;

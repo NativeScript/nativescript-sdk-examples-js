@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> switch-import
 import { Switch } from "@nativescript/core";
 // << switch-import

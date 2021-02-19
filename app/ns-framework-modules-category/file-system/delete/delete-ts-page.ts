@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { knownFolders, File, Folder } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { File, Folder, knownFolders, Observable, Page } from "@nativescript/core";
 
 let file: File;
 let myFolder: Folder;

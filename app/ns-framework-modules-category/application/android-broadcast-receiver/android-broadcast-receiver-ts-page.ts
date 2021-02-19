@@ -1,8 +1,5 @@
 
-import { Application } from "@nativescript/core";
-import { Observable } from "@nativescript/core";
-import { isAndroid } from "@nativescript/core";
-import { Page, NavigatedData } from "@nativescript/core";
+import { Application, NavigatedData, Observable, Page, isAndroid } from "@nativescript/core";
 let vm;
 
 export function onNavigatingTo(args: NavigatedData) {

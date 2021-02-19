@@ -1,6 +1,5 @@
-import { Observable } from "@nativescript/core";
-import { knownFolders, path, Folder, File } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { File, Folder, knownFolders, Observable, Page, path } from "@nativescript/core";
+
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();

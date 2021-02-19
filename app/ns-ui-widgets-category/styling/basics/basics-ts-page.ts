@@ -1,7 +1,6 @@
 // tslint:disable:max-line-length
-import { Button } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { Button, Page, StackLayout } from "@nativescript/core";
+
 // >> style-code-behind-ts
 export function onPageLoaded(args) {
     const page: Page = <Page>args.object;

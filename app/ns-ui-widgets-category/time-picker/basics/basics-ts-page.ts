@@ -1,6 +1,4 @@
-import { Observable, EventData } from "@nativescript/core";
-import { TimePicker } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, Observable, Page, TimePicker } from "@nativescript/core";
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
     const vm = new Observable();

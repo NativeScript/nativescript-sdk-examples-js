@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import {GridLayout} from "@nativescript/core";
+import { GridLayout, Observable, Page } from "@nativescript/core";
 // >> gest-swipe-ts
 import { SwipeGestureEventData } from "@nativescript/core";
 

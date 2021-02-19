@@ -1,6 +1,6 @@
 // >> main-view-ts
-import { Button } from "@nativescript/core";
-import { ShowModalOptions } from "@nativescript/core";
+import { Button, ShowModalOptions } from "@nativescript/core";
+
 const modalViewModulets = "ns-ui-category/modal-view/basics/modal-ts-view-page";
 
 export function openModal(args) {

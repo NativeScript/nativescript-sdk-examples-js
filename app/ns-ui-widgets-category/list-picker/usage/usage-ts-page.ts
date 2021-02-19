@@ -1,7 +1,6 @@
 // >> list-picker-code-behind-ts
-import { EventData, fromObject } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { ListPicker } from "@nativescript/core";
+import { EventData, fromObject, ListPicker, Page } from "@nativescript/core";
+
 const years = [1980, 1990, 2000, 2010, 2020];
 export function onNavigatingTo(args: EventData) {
 

@@ -1,9 +1,5 @@
 // >> setting-url-webview-ts
-import {Observable} from "@nativescript/core";
-import { Dialogs } from "@nativescript/core";
-import {WebView, LoadEventData} from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { TextField } from "@nativescript/core";
+import { Dialogs, LoadEventData, Observable, Page, TextField, WebView } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

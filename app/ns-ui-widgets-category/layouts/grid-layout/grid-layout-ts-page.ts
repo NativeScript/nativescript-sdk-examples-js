@@ -1,5 +1,4 @@
-import { Button } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Button, Page } from "@nativescript/core";
 // >> grid-layout-import-ts
 import { GridLayout, ItemSpec } from "@nativescript/core";
 // << grid-layout-import-ts

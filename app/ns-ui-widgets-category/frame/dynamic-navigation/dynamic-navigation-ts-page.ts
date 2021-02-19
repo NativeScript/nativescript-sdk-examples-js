@@ -1,7 +1,4 @@
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { Label } from "@nativescript/core";
-import { Frame } from "@nativescript/core";
+import { Frame, Label, Page, StackLayout } from "@nativescript/core";
 
 export function onLoaded() {
     // >> frame-nav-dynamic-page-ts-code

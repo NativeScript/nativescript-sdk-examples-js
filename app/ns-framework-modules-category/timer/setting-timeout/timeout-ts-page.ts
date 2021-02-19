@@ -1,7 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Color } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { Button } from "@nativescript/core";
+import { Button, Color, Observable, Page } from "@nativescript/core";
 
 let counter = 1;
 export function onNavigatingTo(args) {

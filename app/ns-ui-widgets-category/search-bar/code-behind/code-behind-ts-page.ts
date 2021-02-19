@@ -1,7 +1,4 @@
-import { Observable, EventData } from "@nativescript/core";
-import { Dialogs } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { Dialogs, EventData, Observable, Page, StackLayout } from "@nativescript/core";
 // >> search-bar-import
 import { SearchBar } from "@nativescript/core";
 // << search-bar-import

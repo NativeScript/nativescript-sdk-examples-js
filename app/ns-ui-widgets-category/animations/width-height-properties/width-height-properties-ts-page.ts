@@ -1,6 +1,5 @@
 // >> animation-properties-width-height-ts
-import { AnimationCurve } from "@nativescript/core/ui/enums";
-import { View } from "@nativescript/core";
+import { Enums, View } from "@nativescript/core";
 
 export function animateWidth(args) {
     let button = args.object;
@@ -10,7 +9,7 @@ export function animateWidth(args) {
     view.animate({
         width: 320,
         duration: 1000,
-        curve: AnimationCurve.easeIn
+        curve: Enums.AnimationCurve.easeIn
     });
 }
 
@@ -22,7 +21,7 @@ export function animateHeight(args) {
     view.animate({
         height: 400,
         duration: 1000,
-        curve: AnimationCurve.easeIn
+        curve: Enums.AnimationCurve.easeIn
     });
 }
 // << animation-properties-width-height-ts

@@ -1,6 +1,5 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { WebView } from "@nativescript/core";
+import { Observable, Page, WebView } from "@nativescript/core";
+
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
 // >> webview-ts-events

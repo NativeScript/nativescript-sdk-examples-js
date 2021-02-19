@@ -1,6 +1,6 @@
 // >> main-page-ts-action-bar
-import { Page } from "@nativescript/core";
-import { ShowModalOptions } from "@nativescript/core";
+import { Page, ShowModalOptions } from "@nativescript/core";
+
 const modalView = "ns-ui-category/modal-view/custom-actionbar/modal-ts-root";
 
 export function openModal(args) {

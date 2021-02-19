@@ -1,6 +1,5 @@
 // tslint:disable:max-line-length
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Observable, Page } from "@nativescript/core";
 // >> webview-import
 import { WebView } from "@nativescript/core";
 // << webview-import

@@ -1,7 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { ObservableArray } from "@nativescript/core";
-import { alert } from "@nativescript/core";
-import { ItemEventData } from "@nativescript/core";
+import { alert, ItemEventData, Observable, ObservableArray } from "@nativescript/core";
 
 const listArray = new ObservableArray([
     {

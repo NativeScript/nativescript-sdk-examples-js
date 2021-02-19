@@ -1,6 +1,5 @@
 // >> progress-value-change-event-ts
-import { PropertyChangeData } from "@nativescript/core";
-import { Progress } from "@nativescript/core";
+import { Progress, PropertyChangeData } from "@nativescript/core";
 
 export function onProgressLoaded(args) {
     const sliderComponent: Progress = <Progress>args.object;

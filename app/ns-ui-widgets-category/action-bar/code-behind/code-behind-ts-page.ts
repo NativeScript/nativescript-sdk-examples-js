@@ -1,7 +1,5 @@
 // >> actionbar-code-behind-ts
-import { EventData } from "@nativescript/core";
-import { ActionBar, NavigationButton } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { ActionBar, EventData, NavigationButton, Page } from "@nativescript/core";
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

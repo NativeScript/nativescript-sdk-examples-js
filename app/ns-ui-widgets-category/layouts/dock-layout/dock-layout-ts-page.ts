@@ -1,8 +1,7 @@
 // >> dock-layout-import-ts
 import { DockLayout } from "@nativescript/core";
 // << dock-layout-import-ts
-import { Button } from "@nativescript/core";
-import { Color } from "@nativescript/core";
+import { Color, Button } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page = args.object;

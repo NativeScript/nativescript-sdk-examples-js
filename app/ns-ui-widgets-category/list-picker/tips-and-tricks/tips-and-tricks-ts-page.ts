@@ -1,7 +1,5 @@
 // >> list-picker-key-value-pairs-code-behind-ts
-import { EventData, fromObject } from "@nativescript/core";
-import { ListPicker } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, ListPicker, Page, fromObject } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

@@ -1,5 +1,4 @@
-import { EventData } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, Page } from "@nativescript/core";
 let myFirstView;
 let mySecondView;
 let myThirdView;

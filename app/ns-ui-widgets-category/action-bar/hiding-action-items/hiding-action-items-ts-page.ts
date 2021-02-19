@@ -1,8 +1,5 @@
 // >> action-bar-hiding-action-items-ts
-import { EventData, fromObject } from "@nativescript/core";
-import { ActionItem } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { GestureEventData } from "@nativescript/core";
+import { ActionItem, EventData, GestureEventData, Page, fromObject } from "@nativescript/core";
 
 // >> (hide)
 export function onNavigatingTo(args: EventData) {

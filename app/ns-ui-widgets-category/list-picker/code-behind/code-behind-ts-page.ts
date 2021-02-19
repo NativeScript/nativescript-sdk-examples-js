@@ -1,8 +1,5 @@
 // >> create-list-picker-code-ts
-import { EventData } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { ListPicker } from "@nativescript/core";
+import { EventData, ListPicker, Page, StackLayout } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

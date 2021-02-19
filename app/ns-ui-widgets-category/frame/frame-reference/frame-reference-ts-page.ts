@@ -10,8 +10,7 @@ const currentFrame: Frame = Frame.getFrameById("root-frame");
 // << frame-reference-get-id-ts
 
 // >> frame-reference-via-frame-prop-ts
-import { Button } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Button, Page } from "@nativescript/core";
 
 export function onTap(args) {
     const button: Button = args.object;

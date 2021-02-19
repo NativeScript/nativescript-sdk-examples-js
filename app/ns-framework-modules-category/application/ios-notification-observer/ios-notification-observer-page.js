@@ -1,7 +1,5 @@
-import { Application } from "@nativescript/core";
-import { Observable } from "@nativescript/core";
-import { isIOS } from "@nativescript/core";
-import { Utils } from "@nativescript/core";
+import { Application, isIOS, Observable, Utils } from "@nativescript/core";
+
 let vm;
 let observer;
 export function onNavigatingTo(args) {

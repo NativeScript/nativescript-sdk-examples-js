@@ -1,8 +1,5 @@
 // tslint:disable:max-line-length
-import { Observable } from "@nativescript/core";
-import { ObservableArray } from "@nativescript/core";
-import { Utils , Trace} from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Observable, ObservableArray, Page, Trace, Utils } from "@nativescript/core";
 // >> trace-create-custom-writer-ts
 const array = new ObservableArray();
 class TimestampConsoleWriter {

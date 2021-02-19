@@ -1,9 +1,7 @@
 // >> require-list-view-ts
 import { ItemEventData, ListView } from "@nativescript/core";
 // << require-list-view-ts
-import { alert } from "@nativescript/core";
-import { Label } from "@nativescript/core";
-import { ObservableArray } from "@nativescript/core";
+import { Label, ObservableArray, alert } from "@nativescript/core";
 
 const listViewArray = new ObservableArray([
     { title: "The Da Vinci Code" },

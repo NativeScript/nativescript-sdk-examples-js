@@ -1,5 +1,4 @@
-import { Observable, fromObject } from "@nativescript/core";
-import { ObservableArray } from "@nativescript/core";
+import { fromObject, Observable, ObservableArray } from "@nativescript/core";
 
 const listArray = new ObservableArray(
     [

@@ -1,6 +1,4 @@
-import { fromObject } from "@nativescript/core";
-import { TextField } from "@nativescript/core";
-import { Label } from "@nativescript/core";
+import { fromObject, Label, TextField } from "@nativescript/core";
 
 export function onStackLayoutLoaded(args) {
     const stackLayout = args.object;

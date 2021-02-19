@@ -1,6 +1,6 @@
 // >> modal-view-ts
-import { fromObject } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { fromObject, Page } from "@nativescript/core";
+
 let closeCallback;
 
 export function onShownModally(args) {

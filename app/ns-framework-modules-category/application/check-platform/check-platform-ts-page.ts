@@ -1,7 +1,4 @@
-import {Application, EventData} from "@nativescript/core";
-import { NavigatedData, Page } from "@nativescript/core";
-import { GridLayout } from "@nativescript/core";
-import { Label } from "@nativescript/core";
+import { Application, EventData, GridLayout, Label, NavigatedData, Page } from "@nativescript/core";
 
 export function onGridLoaded(args: EventData) {
     const grid = <GridLayout>args.object;

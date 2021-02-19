@@ -1,6 +1,4 @@
-import { EventData, Observable }  from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { EventData, Observable, Page, StackLayout } from "@nativescript/core";
 // >> label-code-create-ts
 import { Label } from "@nativescript/core";
 export function onNavigatingTo(args: EventData) {

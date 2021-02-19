@@ -1,7 +1,5 @@
 // >> text-view-binding-code-ts
-import {Observable} from "@nativescript/core";
-import {Page} from "@nativescript/core";
-import {TextView} from "@nativescript/core";
+import { Observable, Page, TextView } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

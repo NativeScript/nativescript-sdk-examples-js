@@ -1,8 +1,6 @@
 // >> animation-curve-imports-ts
 // AnimationCurve enumeration: ease, easeIn, easeInOut, easeOut, linear, spring
-import { AnimationCurve } from "@nativescript/core/ui/enums";
-import { Animation, AnimationDefinition } from "@nativescript/core";
-import { Color } from "@nativescript/core";
+import { Animation, AnimationDefinition, Color, Enums } from "@nativescript/core";
 // << animation-curve-imports-ts
 import { View } from "@nativescript/core";
 let animation: Animation;
@@ -15,7 +13,7 @@ export function animate(args) {
     // >> animation-properties-ts
     view.animate({
         backgroundColor: new Color("#414b7d"),
-        curve: AnimationCurve.easeOut,
+        curve: Enums.AnimationCurve.easeOut,
         delay: 300,
         duration: 3000,
         iterations: 3,
@@ -43,7 +41,7 @@ export function animateTarget(args) {
 
     const animationDefinition: AnimationDefinition = {
         target: view, // provide the view to animate
-        curve: AnimationCurve.easeOut,
+        curve: Enums.AnimationCurve.easeOut,
         duration: 1000,
         scale: {
             x: 0.2,

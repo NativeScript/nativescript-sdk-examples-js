@@ -1,6 +1,4 @@
-import { EventData } from "@nativescript/core";
-import { Button } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Button, EventData, Page } from "@nativescript/core";
 // >> stack-layout-import-ts
 import { StackLayout } from "@nativescript/core";
 // << stack-layout-import-ts

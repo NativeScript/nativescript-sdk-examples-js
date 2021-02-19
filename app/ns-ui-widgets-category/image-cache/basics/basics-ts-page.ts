@@ -1,9 +1,7 @@
 // >> image-cache-require-ts
 import { ImageCache } from "@nativescript/core";
 // << image-cache-require-ts
-import { EventData, Observable } from "@nativescript/core";
-import { ImageSource } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, ImageSource, Observable, Page } from "@nativescript/core";
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

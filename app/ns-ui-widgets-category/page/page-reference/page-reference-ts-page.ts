@@ -1,6 +1,5 @@
 // >> page-reference-via-event-ts
-import { EventData } from "@nativescript/core";
-import { Page, NavigatedData } from "@nativescript/core";
+import { EventData, NavigatedData, Page} from "@nativescript/core";
 
 export function onPageLoaded(args: EventData) {
     console.log("Page loaded");
@@ -16,8 +15,7 @@ export function onNavigatedTo(args: NavigatedData) {
 // << page-reference-via-event-ts
 
 // >> page-reference-via-page-prop-ts
-import { StackLayout } from "@nativescript/core";
-import { Button } from "@nativescript/core";
+import { Button, StackLayout } from "@nativescript/core";
 
 export function onStackLoaded(args: EventData) {
     console.log("Root StackLayout loaded");

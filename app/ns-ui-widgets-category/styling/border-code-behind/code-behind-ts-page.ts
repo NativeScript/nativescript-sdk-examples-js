@@ -1,7 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Color } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { Label } from "@nativescript/core";
+import { Color, Label, Observable, Page } from "@nativescript/core";
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
 

@@ -1,8 +1,6 @@
-import {Observable} from "@nativescript/core";
-import {Page} from "@nativescript/core";
-import {StackLayout} from "@nativescript/core";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> slider-import
-import {Slider} from "@nativescript/core";
+import { Slider } from "@nativescript/core";
 // << slider-import
 // >> creating-slider-code-ts
 export function onPageLoaded(args) {

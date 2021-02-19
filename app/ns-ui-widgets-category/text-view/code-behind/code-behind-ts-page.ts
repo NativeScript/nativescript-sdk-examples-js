@@ -1,9 +1,6 @@
-import { Observable } from "@nativescript/core";
-import {Page} from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { Button } from "@nativescript/core";
+import { Button, Observable, Page, StackLayout } from "@nativescript/core";
 // >> text-view-import
-import {TextView} from "@nativescript/core";
+import { TextView } from "@nativescript/core";
 // << text-view-import
 // >> creating-text-view-code-ts
 export function onNavigatingTo(args) {

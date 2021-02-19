@@ -1,11 +1,12 @@
-import { EventData } from "@nativescript/core";
-import { Button } from "@nativescript/core";
-import { Label } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { Page} from "@nativescript/core";
-import { TextField } from "@nativescript/core";
-import { TextView } from "@nativescript/core";
-
+import {
+    Button,
+    EventData,
+    Label,
+    Page,
+    StackLayout,
+    TextField,
+    TextView
+} from "@nativescript/core";
 // >> formatted-string-require-ts
 import { FormattedString, Span } from "@nativescript/core";
 // << formatted-string-require-ts

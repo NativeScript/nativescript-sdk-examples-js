@@ -1,6 +1,5 @@
 // >> time-picker-binding-code-ts
-import { Observable } from "@nativescript/core";
-import { TimePicker } from "@nativescript/core";
+import { Observable, TimePicker } from "@nativescript/core";
 // setting up the initial values for the TimePicker component
 export function onNavigatingTo(args) {
     const page = args.object;

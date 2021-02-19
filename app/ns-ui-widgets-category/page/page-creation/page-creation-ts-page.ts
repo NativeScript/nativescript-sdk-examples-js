@@ -1,8 +1,6 @@
 /*
 // >> page-code-create-ts
-import { Page } from "@nativescript/core";
-import { Label } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { Label, Page, StackLayout } from "@nativescript/core";
 
 export function createPage(): Page {
     const stack = new StackLayout();
@@ -20,8 +18,7 @@ export function createPage(): Page {
 
 // >> page-creation-ts
 // main-page.ts
-import { EventData } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, Page } from "@nativescript/core";
 
 export function onPageLoaded(args: EventData): void {
     console.log("Page Loaded");

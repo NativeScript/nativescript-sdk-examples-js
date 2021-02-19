@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> segmented-bar-import
 import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "@nativescript/core";
 // << segmented-bar-import

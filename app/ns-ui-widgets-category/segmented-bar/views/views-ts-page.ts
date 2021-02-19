@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { SegmentedBar, SelectedIndexChangedEventData } from "@nativescript/core";
+import { Observable, Page, SegmentedBar, SelectedIndexChangedEventData } from "@nativescript/core";
 // >> segmented-bar-view-code-ts
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

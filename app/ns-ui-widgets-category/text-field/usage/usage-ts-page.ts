@@ -1,7 +1,5 @@
 // >> text-field-binding-code-ts
-import {Observable} from "@nativescript/core";
-import {Page} from "@nativescript/core";
-import {TextField} from "@nativescript/core";
+import { Observable, Page, TextField } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

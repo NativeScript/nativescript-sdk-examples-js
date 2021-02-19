@@ -1,6 +1,4 @@
-import { ObservableArray } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { ObservableArray, Page, StackLayout } from "@nativescript/core";
 // >> repeater-import
 import { Repeater } from "@nativescript/core";
 // << repeater-import

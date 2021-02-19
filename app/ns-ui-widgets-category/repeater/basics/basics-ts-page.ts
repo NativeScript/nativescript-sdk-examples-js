@@ -1,7 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { ObservableArray } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { Repeater } from "@nativescript/core";
+import { Observable, ObservableArray, Page, Repeater } from "@nativescript/core";
 // >> repeater-create-code-ts
 const colors = ["red", "green", "blue"];
 const secondColorsArray = new ObservableArray(["red", "green", "blue"]);

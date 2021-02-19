@@ -1,6 +1,5 @@
-import { Observable } from "@nativescript/core";
-import { TabView, SelectedIndexChangedEventData } from "@nativescript/core";
-import { Dialogs } from "@nativescript/core";
+import { Dialogs, Observable, SelectedIndexChangedEventData, TabView } from "@nativescript/core";
+
 // >> tab-view-navigation-code-ts
 export function onLoaded(args) {
     const tabView: TabView = <TabView>args.object;

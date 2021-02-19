@@ -1,5 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Observable, Page } from "@nativescript/core";
 // >> fs-create-import
 import { knownFolders, Folder, File } from "@nativescript/core";
 // << fs-create-import

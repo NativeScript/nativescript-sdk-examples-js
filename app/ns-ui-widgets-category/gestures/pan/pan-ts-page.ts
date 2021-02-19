@@ -1,6 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Label } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Label, Observable, Page } from "@nativescript/core";
 // >> gest-pan-ts
 import { PanGestureEventData } from "@nativescript/core";
 

@@ -1,5 +1,4 @@
-import { Observable } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { Observable, Page } from "@nativescript/core";
 // >> import-http-post
 import { Http } from "@nativescript/core";
 // << import-http-post

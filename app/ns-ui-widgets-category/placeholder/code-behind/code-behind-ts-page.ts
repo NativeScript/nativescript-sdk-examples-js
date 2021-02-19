@@ -1,7 +1,4 @@
-import { Placeholder } from "@nativescript/core";
-import { isIOS, isAndroid } from "@nativescript/core";
-import { ad } from "@nativescript/core/utils";
-import {StackLayout} from "@nativescript/core";
+import { Placeholder, StackLayout, Utils, isIOS, isAndroid } from "@nativescript/core";
 // >> code-behind-placeholder-code-ts
 export function onLayoutLoaded (ltargs) {
     let layout: StackLayout = ltargs.object;
@@ -12,7 +9,7 @@ export function onLayoutLoaded (ltargs) {
             nativeView = UITextView.new();
             nativeView.text = "Native View (iOS)";
         } else if (isAndroid) {
-            nativeView = new android.widget.TextView(ad.getApplicationContext());
+            nativeView = new android.widget.TextView(Utils.ad.getApplicationContext());
             nativeView.setText("Native View (Android)");
         }
 

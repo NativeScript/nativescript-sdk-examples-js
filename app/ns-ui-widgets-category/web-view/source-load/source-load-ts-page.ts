@@ -1,8 +1,7 @@
 // tslint:disable:max-line-length
 // >> web-view-src-local-file-ts
-import {Observable} from "@nativescript/core";
-import {WebView, LoadEventData} from "@nativescript/core";
-import {Page} from "@nativescript/core";
+import { LoadEventData, Observable, Page, WebView } from "@nativescript/core";
+
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;
     const vm = new Observable();

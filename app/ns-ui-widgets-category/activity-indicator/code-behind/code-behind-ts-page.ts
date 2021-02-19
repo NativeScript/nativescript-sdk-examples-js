@@ -1,9 +1,7 @@
 // >> activity-indicator-require-ts
 import { ActivityIndicator } from "@nativescript/core";
 // << activity-indicator-require-ts
-import { EventData } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, Page, StackLayout } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

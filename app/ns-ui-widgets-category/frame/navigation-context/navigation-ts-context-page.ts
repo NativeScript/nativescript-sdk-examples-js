@@ -1,8 +1,5 @@
 // >> nav-context-pass-ts
-import { EventData } from "@nativescript/core";
-import { Button } from "@nativescript/core";
-import { Page } from "@nativescript/core";
-import { Frame, NavigationEntry } from "@nativescript/core";
+import { Button, EventData, Frame, NavigationEntry, Page } from "@nativescript/core";
 
 export function onNavigate(args: EventData) {
     let button = <Button>args.object;

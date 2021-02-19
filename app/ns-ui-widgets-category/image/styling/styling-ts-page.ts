@@ -1,7 +1,5 @@
 // >> image-icon-fonts-ts
-import { EventData } from "@nativescript/core";
-import { Image } from "@nativescript/core";
-import { StackLayout } from "@nativescript/core";
+import { EventData, Image, StackLayout } from "@nativescript/core";
 
 export function containerLoaded(args: EventData) {
     const container = <StackLayout>args.object;

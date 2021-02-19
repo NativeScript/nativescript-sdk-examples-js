@@ -1,7 +1,5 @@
 // >> list-view-create-code-ts
-import { EventData, fromObject } from "@nativescript/core";
-import { ListView, ItemEventData } from "@nativescript/core";
-import { Page } from "@nativescript/core";
+import { EventData, fromObject, ItemEventData, ListView, Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;
