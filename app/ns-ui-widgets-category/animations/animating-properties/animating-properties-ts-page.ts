@@ -87,7 +87,7 @@ export function demonstrateSimpleAnimations(args) {
             y: 100
         },
         duration: 1000,
-        curve: AnimationCurve.easeIn
+        curve: Enums.AnimationCurve.easeIn
     });
     // << using-animation-curve-enum-ts
 
@@ -98,7 +98,7 @@ export function demonstrateSimpleAnimations(args) {
             y: 100
         },
         duration: 1000,
-        curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
+        curve: Enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
     // << creating-cubic-bezier-ts
 }
