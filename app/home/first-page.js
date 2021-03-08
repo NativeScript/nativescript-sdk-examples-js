@@ -1,5 +1,4 @@
 // >> frame-navigate-base
-import { AndroidTransitionType } from "@nativescript/core/ui/transition";
 import { Frame, Transition } from "@nativescript/core";
 
 // >> (hide)
@@ -106,7 +105,6 @@ export function navigatePlatformSpecificTransitions() {
 
 // >> frame-navigate-custom-transitions-android-ts
 // import { Transition } from "@nativescript/core";
-// import { AndroidTransitionType } from "@nativescript/core/ui/transition";
 const floatType = java.lang.Float.class.getField("TYPE").get(null);
 
 export const CustomTransition = (function (_super) {
@@ -117,13 +115,13 @@ export const CustomTransition = (function (_super) {
     CustomTransition.prototype.createAndroidAnimator = function(transitionType) {
         const scaleValues = java.lang.reflect.Array.newInstance(floatType, 2);
         switch (transitionType) {
-            case AndroidTransitionType.enter:
-            case AndroidTransitionType.popEnter:
+            case Transition.AndroidTransitionType.enter:
+            case Transition.AndroidTransitionType.popEnter:
                 scaleValues[0] = 0;
                 scaleValues[1] = 1;
                 break;
-            case AndroidTransitionType.exit:
-            case AndroidTransitionType.popExit:
+            case Transition.AndroidTransitionType.exit:
+            case Transition.AndroidTransitionType.popExit:
                 scaleValues[0] = 1;
                 scaleValues[1] = 0;
                 break;

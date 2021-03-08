@@ -21,7 +21,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "nativescript-theme-core": "^2.0.24",
-    "@nativescript/core": "7.2.1"
+    "@nativescript/core": "7.3.0"
   },
   "devDependencies": {
     "eslint": "7.20.0",
