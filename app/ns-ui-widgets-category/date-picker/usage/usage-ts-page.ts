@@ -1,7 +1,5 @@
 // >> date-picker-dates-ts
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { DatePicker } from "tns-core-modules/ui/date-picker";
-import { Page } from "tns-core-modules/ui/page";
+import { DatePicker, EventData, Observable, Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

@@ -1,8 +1,6 @@
-import { EventData, Observable }  from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { EventData, Observable, Page, StackLayout } from "@nativescript/core";
 // >> label-code-create-ts
-import { Label } from "tns-core-modules/ui/label";
+import { Label } from "@nativescript/core";
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;
     const container = <StackLayout>page.getViewById("container");

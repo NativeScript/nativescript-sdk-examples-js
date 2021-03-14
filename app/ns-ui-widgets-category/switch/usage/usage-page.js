@@ -1,5 +1,5 @@
 // >> switch-checked-change-event
-function onSwitchLoaded(argsloaded) {
+export function onSwitchLoaded(argsloaded) {
     const mySwitch = argsloaded.object;
     mySwitch.on("checkedChange", (args) => {
         const sw = args.object;
@@ -7,5 +7,4 @@ function onSwitchLoaded(argsloaded) {
         console.log(`Switch new value ${isChecked}`);
     });
 }
-exports.onSwitchLoaded = onSwitchLoaded;
 // << switch-checked-change-event

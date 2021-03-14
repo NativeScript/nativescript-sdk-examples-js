@@ -1,8 +1,5 @@
 // >> create-list-picker-code-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { ListPicker } from "tns-core-modules/ui/list-picker";
+import { EventData, ListPicker, Page, StackLayout } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

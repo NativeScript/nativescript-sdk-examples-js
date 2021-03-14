@@ -1,12 +1,8 @@
 // tslint:disable:max-line-length
-import { Observable } from "tns-core-modules/data/observable";
-import { path, knownFolders, File } from "tns-core-modules/file-system";
-import { Page } from "tns-core-modules/ui/page";
+import { Button, ImageSource, path, knownFolders, File, Page, Observable } from "@nativescript/core";
 // >> import-http-get
-import { getFile, getImage, getJSON, getString, request, HttpResponse } from "tns-core-modules/http";
+import { Http, HttpResponse } from "@nativescript/core";
 // << import-http-get
-import { Button } from "tns-core-modules/ui/button";
-import { ImageSource } from "tns-core-modules/image-source";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
@@ -92,7 +88,7 @@ export function onButtonTap(args) {
 
 function getStringExample(viewModel) {
     // >> get-string-code-ts
-    getString("https://httpbin.org/get").then((r: string) => {
+    Http.getString("https://httpbin.org/get").then((r: string) => {
         viewModel.set("getStringResult", r);
     }, (e) => {
         // >> (hide)
@@ -104,7 +100,7 @@ function getStringExample(viewModel) {
 }
 function getJSONExample(viewModel) {
     // >> get-json-code-ts
-    getJSON("https://httpbin.org/get").then((r: any) => {
+    Http.getJSON("https://httpbin.org/get").then((r: any) => {
         // >> (hide)
         viewModel.set("host", r.headers.Host);
         viewModel.set("userAgent", r.headers["User-Agent"]);
@@ -121,7 +117,7 @@ function getJSONExample(viewModel) {
 }
 function getImageExample(viewModel) {
     // >> get-image-code-ts
-    getImage("https://httpbin.org/image/jpeg").then((r: ImageSource) => {
+    Http.getImage("https://httpbin.org/image/jpeg").then((r: ImageSource) => {
         // getImage method returns ImageSource object
         // >> (hide)
         viewModel.set("getImageResult", r);
@@ -139,7 +135,7 @@ function getImageExample(viewModel) {
 
 function getResponseStatusCodeExample(viewModel) {
     // >> request-status-code-ts
-    request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response: HttpResponse) => {
@@ -160,7 +156,7 @@ function getResponseStatusCodeExample(viewModel) {
 function getResponseHeadersExample(viewModel) {
     console.log("getResponseHeadersExample");
     // >> request-response-header-ts
-    request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response: HttpResponse) => {
@@ -181,7 +177,7 @@ function getResponseHeadersExample(viewModel) {
 
 function getResponseContentExample(viewModel) {
     // >> request-response-content-ts
-    request({
+    Http.request({
         url: "https://httpbin.org/get",
         method: "GET"
     }).then((response: HttpResponse) => {
@@ -206,7 +202,7 @@ function getResponseContentExample(viewModel) {
 
 function getFileExample(viewModel) {
     // >> get-file-code-ts
-    getFile("https://raw.githubusercontent.com/NativeScript/NativeScript/master/tests/app/logo.png").then((resultFile) => {
+    Http.getFile("https://raw.githubusercontent.com/NativeScript/NativeScript/master/tests/app/logo.png").then((resultFile) => {
         // The returned result will be File object
         // >> (hide)
         viewModel.set("name", resultFile.name);
@@ -228,7 +224,7 @@ function getFileExample(viewModel) {
 function getFileWithPathExample(viewModel) {
     // >> get-file-code-with-path-ts
     const filePath: string = path.join(knownFolders.currentApp().path, "test.png");
-    getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile: File) => {
+    Http.getFile("https://httpbin.org/image/png?testQuery=query&anotherParam=param", filePath).then((resultFile: File) => {
         // The returned result will be File object
         // >> (hide)
         viewModel.set("name_get_file_with_path", resultFile.name);

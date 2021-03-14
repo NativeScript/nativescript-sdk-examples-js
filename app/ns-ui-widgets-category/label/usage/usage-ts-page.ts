@@ -1,6 +1,5 @@
 // >> label-text-binding-ts
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, Observable, Page } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
 

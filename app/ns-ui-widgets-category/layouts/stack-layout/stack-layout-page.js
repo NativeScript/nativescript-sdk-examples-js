@@ -1,9 +1,9 @@
 // >> stack-layout-import
-const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
+import { StackLayout } from "@nativescript/core";
 // << stack-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
+import { Button } from "@nativescript/core";
 
-exports.onNavigatingTo = function (args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     // >> stack-layout-code-behind
     const myStack = new StackLayout();
@@ -31,4 +31,4 @@ exports.onNavigatingTo = function (args) {
     // << stack-layout-code-behind
 
     page.content = myStack;
-};
+}

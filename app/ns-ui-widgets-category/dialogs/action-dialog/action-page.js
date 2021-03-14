@@ -1,5 +1,5 @@
 // >> dialog-action
-function showActionDialog() {
+export function showActionDialog() {
     const actionOptions = {
         title: "Race selection",
         message: "Choose your race",
@@ -12,5 +12,4 @@ function showActionDialog() {
         console.log(result);
     });
 }
-exports.showActionDialog = showActionDialog;
 // << dialog-action

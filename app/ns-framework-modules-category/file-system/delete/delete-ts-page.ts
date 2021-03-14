@@ -1,6 +1,4 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { knownFolders, File, Folder } from "tns-core-modules/file-system";
-import { Page } from "tns-core-modules/ui/page";
+import { File, Folder, knownFolders, Observable, Page } from "@nativescript/core";
 
 let file: File;
 let myFolder: Folder;

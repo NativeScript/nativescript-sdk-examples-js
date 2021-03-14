@@ -1,6 +1,4 @@
-import { fromObject } from "tns-core-modules/data/observable";
-import { TextField } from "tns-core-modules/ui/text-field";
-import { Label } from "tns-core-modules/ui/label";
+import { fromObject, Label, TextField } from "@nativescript/core";
 
 export function onStackLayoutLoaded(args) {
     const stackLayout = args.object;

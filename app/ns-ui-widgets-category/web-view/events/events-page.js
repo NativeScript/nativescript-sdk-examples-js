@@ -1,8 +1,8 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 const firstUrl = "https://google.com/";
 const secondUrl = "https://www.nativescript.org/";
 // >> webview-js-events
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     vm.set("webViewSrc", secondUrl);
@@ -10,7 +10,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onLoadStarted(args) {
+export function onLoadStarted(args) {
     const page = args.object;
     const vm = page.bindingContext;
     vm.set("isItemVisible", true);
@@ -37,7 +37,7 @@ function onLoadStarted(args) {
     console.log(message);
 
 }
-function onLoadFinished(args) {
+export function onLoadFinished(args) {
     const page = args.object;
     const vm = page.bindingContext;
     let message;
@@ -68,28 +68,22 @@ function onLoadFinished(args) {
     // << (hide)
 }
 
-function loadFirst(args) {
+export function loadFirst(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     vm.set("webViewSrc", firstUrl);
 }
 
-function loadSecond(args) {
+export function loadSecond(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     vm.set("webViewSrc", secondUrl);
 }
 
-function onReload(args) {
+export function onReload(args) {
     const page = args.object.page;
     webview = page.getViewById("webview");
     webview.reload();
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onLoadStarted = onLoadStarted;
-exports.onLoadFinished = onLoadFinished;
-exports.loadFirst = loadFirst;
-exports.loadSecond = loadSecond;
-exports.onReload = onReload;
 // << webview-js-events

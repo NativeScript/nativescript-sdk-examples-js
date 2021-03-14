@@ -1,7 +1,11 @@
-const AnimationCurveEnum = require("tns-core-modules/ui/enums").AnimationCurve;
-let myView;
+import { AnimationCurve } from "@nativescript/core/ui/enums";
+let myFirstView;
+let mySecondView;
+let myThirdView;
+let myForthView;
+let myFifthView;
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
     myFirstView = page.getViewById("myFirstView");
     mySecondView = page.getViewById("mySecondView");
@@ -9,9 +13,8 @@ function onLoaded(args) {
     myForthView = page.getViewById("myForthView");
     myFifthView = page.getViewById("myFifthView");
 }
-exports.onLoaded = onLoaded;
 // >> rotating-example
-function animate() {
+export function animate() {
     // myFirstView.originX = 0.5; // Default value (center of the view's horizontal axis)
     // myFirstView.originY = 0.5; // Default value (middle of the view's vertical axis)
     myFirstView.animate({
@@ -63,5 +66,4 @@ function animate() {
         console.log(e.message);
     });
 }
-exports.animate = animate;
 // << rotating-example

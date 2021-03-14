@@ -1,9 +1,9 @@
 // >> dock-layout-import
-const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
+import { DockLayout } from "@nativescript/core";
 // << dock-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
+import { Button } from "@nativescript/core";
 
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const grid = page.getViewById("grid");
 
@@ -34,7 +34,7 @@ exports.onNavigatingTo = function(args) {
     myDockLayout.addChild(button5);
     myDockLayout.stretchLastChild = true;
 
-    // const DockLayout = require("tns-core-modules/ui/layouts/dock-layout").DockLayout;
+    // import { DockLayout } from "@nativescript/core";
     DockLayout.setDock(button1, "left");
     DockLayout.setDock(button2, "right");
     DockLayout.setDock(button3, "top");
@@ -44,4 +44,4 @@ exports.onNavigatingTo = function(args) {
     grid.removeChildren();
     grid.addChild(myDockLayout);
 
-};
+}

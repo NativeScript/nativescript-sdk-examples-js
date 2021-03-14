@@ -1,7 +1,4 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Color } from "tns-core-modules/color";
-import { Page } from "tns-core-modules/ui/page";
-import { Button } from "tns-core-modules/ui/button";
+import { Button, Color, Observable, Page } from "@nativescript/core";
 
 let counter = 1;
 export function onNavigatingTo(args) {

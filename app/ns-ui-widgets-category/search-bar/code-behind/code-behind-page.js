@@ -1,29 +1,28 @@
-const observableModule = require("tns-core-modules/data/observable");
-const dialogs = require("tns-core-modules/ui/dialogs");
+import { Dialogs, Observable } from "@nativescript/core";
 // >> search-bar-require
-const searchBarModule = require("tns-core-modules/ui/search-bar");
+import { SearchBar } from "@nativescript/core";
 // << search-bar-require
 // >> creating-search-bar-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("sbResult", "");
     // creating new SearchBar
-    const searchBar = new searchBarModule.SearchBar();
+    const searchBar = new SearchBar();
     // set up SearchBar submit event
-    searchBar.on(searchBarModule.SearchBar.submitEvent, (args) => {
+    searchBar.on(SearchBar.submitEvent, (args) => {
         console.log("Search for ", args.object.text);
-        dialogs.alert(`Search for ${args.object.text}`)
+        Dialogs.alert(`Search for ${args.object.text}`)
         .then(() => {
             console.log("Dialog closed!");
         });
     });
     // set up SearchBar clear event
-    searchBar.on(searchBarModule.SearchBar.clearEvent, (args) => {
+    searchBar.on(SearchBar.clearEvent, (args) => {
         console.log("Clear");
-        dialogs.alert("Clear SearchBar text")
+        Dialogs.alert("Clear SearchBar text")
         .then(() => {
             console.log("Dialog closed!");
         });
@@ -39,5 +38,5 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-search-bar-code

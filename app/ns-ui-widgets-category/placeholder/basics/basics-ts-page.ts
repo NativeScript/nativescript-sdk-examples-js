@@ -1,8 +1,7 @@
 // >> placeholder-import
-import { Placeholder } from "tns-core-modules/ui/placeholder";
+import { Placeholder } from "@nativescript/core";
 // << placeholder-import
-import { isIOS, isAndroid } from "tns-core-modules/platform";
-import { ad } from "tns-core-modules/utils/utils";
+import { Utils, isIOS, isAndroid } from "@nativescript/core";
 // >> placeholder-code-ts
 export function creatingView(args) {
     let nativeView;
@@ -10,7 +9,7 @@ export function creatingView(args) {
         nativeView = UITextView.new();
         nativeView.text = "Native View (iOS)";
     } else if (isAndroid) {
-        nativeView = new android.widget.TextView(ad.getApplicationContext());
+        nativeView = new android.widget.TextView(Utils.ad.getApplicationContext());
         nativeView.setText("Native View (Android)");
     }
 

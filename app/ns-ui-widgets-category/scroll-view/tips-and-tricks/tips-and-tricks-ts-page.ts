@@ -1,6 +1,5 @@
 // >> scroll-view-event-code-ts
-import { Page } from "tns-core-modules/ui/page";
-import { ScrollEventData, ScrollView } from "tns-core-modules/ui/scroll-view";
+import { Page, ScrollEventData, ScrollView } from "@nativescript/core";
 
 export function onScroll(args: ScrollEventData) {
     const scrollView = args.object as ScrollView;

@@ -1,9 +1,7 @@
 // >> image-cache-require-ts
-import { Cache } from "tns-core-modules/ui/image-cache";
+import { ImageCache } from "@nativescript/core";
 // << image-cache-require-ts
-import { EventData, Observable } from "tns-core-modules/data/observable";
-import { fromFile, fromNativeSource } from "tns-core-modules/image-source";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, ImageSource, Observable, Page } from "@nativescript/core";
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;
@@ -16,8 +14,8 @@ export function onLoaded(args: EventData) {
 
 function cacheImage(viewModel) {
     // >> image-cache-code-ts
-    const cache = new Cache();
-    cache.placeholder = fromFile("~/images/logo.png");
+    const cache = new ImageCache();
+    cache.placeholder = ImageSource.fromFileSync("~/images/logo.png");
     cache.maxRequests = 5;
 
     // set the placeholder while the desired image is donwloaded
@@ -33,7 +31,7 @@ function cacheImage(viewModel) {
 
     if (myImage) {
         // If present -- use it.
-        cachedImageSource = fromNativeSource(myImage);
+        cachedImageSource = new ImageSource(myImage);
         viewModel.set("imageSource", cachedImageSource);
     } else {
         // If not present -- request its download + put it in the cache.
@@ -42,7 +40,7 @@ function cacheImage(viewModel) {
             url: url,
             completed: (image, key) => {
                 if (url === key) {
-                    cachedImageSource = fromNativeSource(image);
+                    cachedImageSource = new ImageSource(image);
                     viewModel.set("imageSource", cachedImageSource); // set the downloaded iamge
                 }
             }

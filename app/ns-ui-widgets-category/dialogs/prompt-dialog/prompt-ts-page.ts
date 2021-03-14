@@ -1,5 +1,5 @@
 // >> dialog-prompt-ts
-import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "tns-core-modules/ui/dialogs";
+import { prompt, PromptOptions, PromptResult, capitalizationType, inputType } from "@nativescript/core";
 
 export function showPromptDialog() {
 

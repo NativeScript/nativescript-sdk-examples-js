@@ -1,9 +1,7 @@
 // >> activity-indicator-require-ts
-import { ActivityIndicator } from "tns-core-modules/ui/activity-indicator";
+import { ActivityIndicator } from "@nativescript/core";
 // << activity-indicator-require-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, Page, StackLayout } from "@nativescript/core";
 
 export function onNavigatingTo(args: EventData) {
     const page = <Page>args.object;

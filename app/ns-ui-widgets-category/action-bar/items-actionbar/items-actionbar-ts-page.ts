@@ -1,5 +1,5 @@
 // >> items-actionbar-ts
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { GestureEventData } from "@nativescript/core";
 
 export function onShare(args: GestureEventData) {
     console.log("Share tapped!");

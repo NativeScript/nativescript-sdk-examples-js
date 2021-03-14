@@ -1,8 +1,8 @@
 // >> date-picker-require
-const DatePicker = require("tns-core-modules/ui/date-picker").DatePicker;
+import { DatePicker } from "@nativescript/core";
 // << date-picker-require
 
-exports.onStackLoaded = function(args) {
+export function onStackLoaded(args) {
     const stack = args.object;
 
     // >> date-picker-code-behind
@@ -17,4 +17,4 @@ exports.onStackLoaded = function(args) {
     // << date-picker-code-behind
 
     stack.addChild(datePicker);
-};
+}

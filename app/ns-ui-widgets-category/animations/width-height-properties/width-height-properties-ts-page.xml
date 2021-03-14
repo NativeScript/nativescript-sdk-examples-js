@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd">
 	<Page.actionBar>
-		<ActionBar title="Animating Width & Height Properties" />
+		<ActionBar title="Animating Width &amp; Height Properties" />
 	</Page.actionBar>
 	<GridLayout rows="auto, auto, *">
 		<Button row="0" text="Animate height" tap="animateHeight" class="btn btn-primary btn-active" width="80%"/>

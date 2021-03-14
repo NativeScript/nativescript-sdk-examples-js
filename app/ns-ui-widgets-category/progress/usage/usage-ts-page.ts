@@ -1,6 +1,5 @@
 // >> progress-value-change-event-ts
-import { PropertyChangeData } from "tns-core-modules/data/observable";
-import { Progress } from "tns-core-modules/ui/progress";
+import { Progress, PropertyChangeData } from "@nativescript/core";
 
 export function onProgressLoaded(args) {
     const sliderComponent: Progress = <Progress>args.object;

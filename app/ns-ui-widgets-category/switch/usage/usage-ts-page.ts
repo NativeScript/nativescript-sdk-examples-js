@@ -1,5 +1,5 @@
 // >> switch-checked-change-event-ts
-import { Switch } from "tns-core-modules/ui/switch";
+import { Switch } from "@nativescript/core";
 export function onSwitchLoaded(argsloaded) {
     const mySwitch: Switch = <Switch> argsloaded.object;
     mySwitch.on("checkedChange", (args) => {

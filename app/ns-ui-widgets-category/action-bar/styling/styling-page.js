@@ -1,6 +1,5 @@
-const frameModule = require("tns-core-modules/ui/frame");
+import { Frame } from "@nativescript/core";
 
-function goBack() {
-    frameModule.Frame.topmost().goBack();
+export function goBack() {
+    Frame.topmost().goBack();
 }
-exports.goBack = goBack;

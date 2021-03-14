@@ -1,13 +1,13 @@
 // >> animation-import
 // Main Animation class
-const Animation = require("tns-core-modules/ui/animation").Animation;
+import { Animation } from "@nativescript/core";
 // << animation-import
 let view1;
 let view2;
 let view3;
 let view4;
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
 
     view1 = page.getViewById("view1");
@@ -15,9 +15,8 @@ function onLoaded(args) {
     view3 = page.getViewById("view3");
     view4 = page.getViewById("view4");
 }
-exports.onLoaded = onLoaded;
 
-function animate() {
+export function animate() {
     // >> animate-multiple-views
     const definitions = [];
 
@@ -72,9 +71,8 @@ function animate() {
     // << animate-multiple-views
 }
 
-exports.animate = animate;
 
-function reset() {
+export function reset() {
     view1.translateX = 0;
     view1.translateY = 0;
     view2.translateX = 0;
@@ -84,4 +82,3 @@ function reset() {
     view4.translateX = 0;
     view4.translateY = 0;
 }
-exports.reset = reset;

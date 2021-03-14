@@ -1,6 +1,5 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { TabView, SelectedIndexChangedEventData } from "tns-core-modules/ui/tab-view";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Dialogs, Observable, SelectedIndexChangedEventData, TabView } from "@nativescript/core";
+
 // >> tab-view-navigation-code-ts
 export function onLoaded(args) {
     const tabView: TabView = <TabView>args.object;
@@ -34,7 +33,7 @@ export function onSelectedIndexChanged(args: SelectedIndexChangedEventData) {
         } else if (newIndex === 2) {
             vm.set("tabSelectedIndexResult", "Settings Tab (tabSelectedIndex = 2 )");
         }
-        dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
+        Dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
             .then(() => {
                 console.log("Dialog closed!");
             });

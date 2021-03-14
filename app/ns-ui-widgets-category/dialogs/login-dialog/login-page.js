@@ -1,5 +1,5 @@
 // >> dialog-login
-function showLoginDialog() {
+export function showLoginDialog() {
 
     const loginOptions = {
         title: "Login Form",
@@ -17,5 +17,4 @@ function showLoginDialog() {
     });
 
 }
-exports.showLoginDialog = showLoginDialog;
 // << dialog-login

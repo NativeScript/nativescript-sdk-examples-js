@@ -1,8 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> segmented-bar-import
-import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "tns-core-modules/ui/segmented-bar";
+import { SegmentedBar, SegmentedBarItem, SelectedIndexChangedEventData } from "@nativescript/core";
 // << segmented-bar-import
 // >> creating-segmented-bar-code-ts
 export function onPageLoaded(args) {

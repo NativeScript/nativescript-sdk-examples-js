@@ -1,6 +1,4 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
-const dialogs = require("tns-core-modules/ui/dialogs");
+import { Dialogs, Observable, ObservableArray } from "@nativescript/core";
 
 const listArray = new ObservableArray([
     {
@@ -44,7 +42,7 @@ const moreListItems = new ObservableArray([
 ]);
 
 let loadMore = true;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -52,19 +50,18 @@ function onNavigatingTo(args) {
 
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // >> list-view-events
 // The event will be raise when an item inside the ListView is tapped.
-function onItemTap(args) {
+export function onItemTap(args) {
     const index = args.index;
-    dialogs.alert(`ListView item tap ${index}`).then(() => {
+    Dialogs.alert(`ListView item tap ${index}`).then(() => {
         console.log("Dialog closed!");
     });
 }
-exports.onItemTap = onItemTap;
 
 // The event will be raised when the ListView is scrolled so that the last item is visible. This even is intended to be used to add additional data in the ListView.
-function onLoadMoreItems(args) {
+export function onLoadMoreItems(args) {
     if (loadMore) {
         console.log("ListView -> LoadMoreItemsEvent");
         setTimeout(() => {
@@ -98,5 +95,4 @@ function onLoadMoreItems(args) {
         loadMore = false;
     }
 }
-exports.onLoadMoreItems = onLoadMoreItems;
 // << list-view-events

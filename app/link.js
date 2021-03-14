@@ -1,6 +1,8 @@
-function Link(title, link) {
-        this.title = title;
-        this.link = link;
+class Link {
+        constructor(title, link) {
+                this.title = title;
+                this.link = link;
+        }
 }
 
-module.exports = Link;
+export default Link;

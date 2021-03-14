@@ -1,7 +1,5 @@
 // >> text-field-binding-code-ts
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {TextField} from "tns-core-modules/ui/text-field";
+import { Observable, Page, TextField } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;

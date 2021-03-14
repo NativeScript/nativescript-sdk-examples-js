@@ -1,18 +1,16 @@
 // >> frame-reference-topmost-ts
-import { Frame } from "tns-core-modules/ui/frame";
+import { Frame } from "@nativescript/core";
 
 const topmostFrame: Frame = Frame.topmost();
 // << frame-reference-topmost-ts
 
 // >> frame-reference-get-id-ts
-import { getFrameById } from "tns-core-modules/ui/frame";
 
-const currentFrame: Frame = getFrameById("root-frame");
+const currentFrame: Frame = Frame.getFrameById("root-frame");
 // << frame-reference-get-id-ts
 
 // >> frame-reference-via-frame-prop-ts
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
+import { Button, Page } from "@nativescript/core";
 
 export function onTap(args) {
     const button: Button = args.object;

@@ -1,8 +1,7 @@
 // >> application-import-ts
-import * as applicationModule from "tns-core-modules/application";
+import { Application, Enums } from "@nativescript/core";
 // << application-import-ts
-import { Observable } from "tns-core-modules/data/observable";
-import * as enums from "tns-core-modules/ui/enums";
+import { Observable } from "@nativescript/core";
 let vm;
 let launchListener;
 let suspendListener;
@@ -18,20 +17,20 @@ export const onNavigatingTo = (navigatedData) => {
     vm = new Observable();
     vm.set("actionBarTitle", navigatedData.context.actionBarTitle);
     vm.set("info", "Refer to the code-behind files \nfor Application Events snippets");
-    if (applicationModule.android) {
-        const activity = applicationModule.android.foregroundActivity;
+    if (Application.android) {
+        const activity = Application.android.foregroundActivity;
         const orientationEnum = activity.getResources().getConfiguration().orientation;
         vm.set(
             "orientation",
             orientationEnum === 1
-                ? enums.DeviceOrientation.portrait
-                : enums.DeviceOrientation.landscape
+                ? Enums.DeviceOrientation.portrait
+                : Enums.DeviceOrientation.landscape
         );
         vm.set("resumeEvent", "");
         vm.set("resumeEvent", "");
         vm.set("launchEvent", "");
         vm.set("displayedEvent", "");
-    } else if (applicationModule.ios) {
+    } else if (Application.ios) {
         vm.set("orientation", "portrait");
     }
     page.bindingContext = vm;
@@ -47,7 +46,7 @@ export const onGridLoaded = (eventData) => {
         console.log("The appication was launched!");
         vm.set("resumeEvent", "The appication was launched!");
     };
-    applicationModule.on(applicationModule.launchEvent, launchListener);
+    Application.on(Application.launchEvent, launchListener);
     // << application-events-launch-ts
 
     // >> application-events-suspend-ts
@@ -55,7 +54,7 @@ export const onGridLoaded = (eventData) => {
         console.log("The appication was suspended!");
         vm.set("suspendEvent", "The appication was suspended!");
     };
-    applicationModule.on(applicationModule.suspendEvent, suspendListener);
+    Application.on(Application.suspendEvent, suspendListener);
     // << application-events-suspend-ts
 
     // >> application-events-resume-ts
@@ -63,14 +62,14 @@ export const onGridLoaded = (eventData) => {
         console.log("The appication was resumed!");
         vm.set("resumeEvent", "The appication was resumed!");
     };
-    applicationModule.on(applicationModule.resumeEvent, resumeListener);
+    Application.on(Application.resumeEvent, resumeListener);
     // << application-events-resume-ts
 
     // >> application-events-exit-ts
     exitListener = (args) => {
         console.log("The appication was closed!");
     };
-    applicationModule.on(applicationModule.exitEvent, exitListener);
+    Application.on(Application.exitEvent, exitListener);
     // << application-events-exit-ts
 
     // >> application-events-displayed-ts
@@ -78,7 +77,7 @@ export const onGridLoaded = (eventData) => {
         console.log("NativeScript displayedEvent!");
         vm.set("displayedEvent", "The appication is displayed!");
     };
-    applicationModule.on(applicationModule.displayedEvent, displayedListener);
+    Application.on(Application.displayedEvent, displayedListener);
     // << application-events-displayed-ts
 
     // >> application-events-low-memory-ts
@@ -86,7 +85,7 @@ export const onGridLoaded = (eventData) => {
         // the instance that has raidsed the event
         console.log("Instance: ", args.object);
     };
-    applicationModule.on(applicationModule.lowMemoryEvent, lowMemoryListener);
+    Application.on(Application.lowMemoryEvent, lowMemoryListener);
     // << application-events-low-memory-ts
 
     // >> application-events-orientation-ts
@@ -95,7 +94,7 @@ export const onGridLoaded = (eventData) => {
         console.log("Orientation: ", args.newValue);
         vm.set("orientation", args.newValue);
     };
-    applicationModule.on(applicationModule.orientationChangedEvent, orientationChangedListener);
+    Application.on(Application.orientationChangedEvent, orientationChangedListener);
     // << application-events-orientation-ts
 
     // >> application-events-error-ts
@@ -103,20 +102,20 @@ export const onGridLoaded = (eventData) => {
         // UnhandledErrorEventData.error: NativeScriptError
         console.log("NativeScript Error: ", args.error);
     };
-    applicationModule.on(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
+    Application.on(Application.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-error-ts
 };
 
 export const onGridUnloaded = () => {
     // >> application-events-off-ts
-    applicationModule.off(applicationModule.launchEvent, launchListener);
-    applicationModule.off(applicationModule.resumeEvent, resumeListener);
-    applicationModule.off(applicationModule.suspendEvent, suspendListener);
-    applicationModule.off(applicationModule.exitEvent, exitListener);
-    applicationModule.off(applicationModule.displayedEvent, displayedListener);
-    applicationModule.off(applicationModule.lowMemoryEvent, lowMemoryListener);
-    applicationModule.off(applicationModule.orientationChangedEvent, orientationChangedListener);
-    applicationModule.off(applicationModule.uncaughtErrorEvent, uncaughtErrorListener);
+    Application.off(Application.launchEvent, launchListener);
+    Application.off(Application.resumeEvent, resumeListener);
+    Application.off(Application.suspendEvent, suspendListener);
+    Application.off(Application.exitEvent, exitListener);
+    Application.off(Application.displayedEvent, displayedListener);
+    Application.off(Application.lowMemoryEvent, lowMemoryListener);
+    Application.off(Application.orientationChangedEvent, orientationChangedListener);
+    Application.off(Application.uncaughtErrorEvent, uncaughtErrorListener);
     // << application-events-off-ts
 };
 

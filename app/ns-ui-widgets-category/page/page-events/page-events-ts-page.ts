@@ -1,6 +1,5 @@
 // >> page-events-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { NavigatedData } from "tns-core-modules/ui/page";
+import { EventData, NavigatedData } from "@nativescript/core";
 
 export function onNavigatingTo(args: NavigatedData) {
     console.log(args.eventName);

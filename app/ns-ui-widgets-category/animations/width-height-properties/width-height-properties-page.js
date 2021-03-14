@@ -1,7 +1,7 @@
 // >> animation-properties-width-height
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
+import { AnimationCurve } from "@nativescript/core/ui/enums";
 
-function animateWidth(args) {
+export function animateWidth(args) {
     const button = args.object;
     const page = button.page;
     const myView = page.getViewById("lbl");
@@ -12,9 +12,8 @@ function animateWidth(args) {
         curve: AnimationCurve.easeIn
     });
 }
-exports.animateWidth = animateWidth;
 
-function animateHeight(args) {
+export function animateHeight(args) {
     const button = args.object;
     const page = button.page;
     const myView = page.getViewById("lbl");
@@ -25,5 +24,4 @@ function animateHeight(args) {
         curve: AnimationCurve.easeIn
     });
 }
-exports.animateHeight = animateHeight;
 // << animation-properties-width-height

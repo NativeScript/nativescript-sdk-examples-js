@@ -1,12 +1,8 @@
-const Label = require("tns-core-modules/ui/label").Label;
-const Button = require("tns-core-modules/ui/button").Button;
-const TextField = require("tns-core-modules/ui/text-field").TextField;
-const TextView = require("tns-core-modules/ui/text-view").TextView;
+import { Button, Label, TextField, TextView } from "@nativescript/core";
 // >> formatted-string-require
-const FormattedString = require("tns-core-modules/text/formatted-string").FormattedString;
-const Span = require("tns-core-modules/text/span").Span;
+import { FormattedString, Span } from "@nativescript/core";
 // << formatted-string-require
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
     // >> formatted-string-label-code
@@ -75,4 +71,4 @@ function onNavigatingTo(args) {
     container.addChild(textField);
     container.addChild(textView);
 }
-exports.onNavigatingTo = onNavigatingTo;
+

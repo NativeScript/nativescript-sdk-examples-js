@@ -1,8 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Label } from "tns-core-modules/ui/label";
-import { Page } from "tns-core-modules/ui/page";
+import { Label, Observable, Page } from "@nativescript/core";
 // >> gest-pan-ts
-import { PanGestureEventData } from "tns-core-modules/ui/gestures";
+import { PanGestureEventData } from "@nativescript/core";
 
 export function onPan(args: PanGestureEventData) {
     // args is of type PanGestureEventData

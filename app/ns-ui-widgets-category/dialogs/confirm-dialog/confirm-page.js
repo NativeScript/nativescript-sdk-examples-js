@@ -1,5 +1,5 @@
 // >> dialog-confirm
-function showConfirmDialog() {
+export function showConfirmDialog() {
 
     const confirmOptions = {
         title: "Race selection",
@@ -14,5 +14,4 @@ function showConfirmDialog() {
         });
 
 }
-exports.showConfirmDialog = showConfirmDialog;
 // << dialog-confirm

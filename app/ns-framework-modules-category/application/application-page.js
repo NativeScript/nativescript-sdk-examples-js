@@ -1,50 +1,51 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
-const platformModule = require("tns-core-modules/platform");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
+import { isIOS, isAndroid } from "@nativescript/core";
+
 const navigationLinks = [
-    new link(
+    new Link(
         "Check Platform",
         "ns-framework-modules-category/application/check-platform/check-platform-page"
     ),
-    new link(
+    new Link(
         "Application Events",
         "ns-framework-modules-category/application/application-events/application-events-page"
     )
 ];
 const navigationLinksTsc = [
-    new link(
+    new Link(
         "Check Platform",
         "ns-framework-modules-category/application/check-platform/check-platform-ts-page"
     ),
-    new link(
+    new Link(
         "Application Events",
         "ns-framework-modules-category/application/application-events/application-events-ts-page"
     )
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
-    if (platformModule.isIOS && navigationLinks.filter((e) => e.title === "iOS Notification Observer").length < 1) {
+    if (isIOS && navigationLinks.filter((e) => e.title === "iOS Notification Observer").length < 1) {
         navigationLinks.push(
-            new link(
+            new Link(
                 "iOS Notification Observer",
                 "ns-framework-modules-category/application/ios-notification-observer/ios-notification-observer-page"
             )
         );
         navigationLinksTsc.push(
-            new link(
+            new Link(
                 "iOS Notification Observer",
                 "ns-framework-modules-category/application/ios-notification-observer/ios-notification-observer-ts-page"
             )
         );
-    } else if (platformModule.isAndroid && navigationLinks.filter((e) => e.title === "Android Broadcast Receiver").length < 1) {
+    } else if (isAndroid && navigationLinks.filter((e) => e.title === "Android Broadcast Receiver").length < 1) {
         navigationLinks.push(
-            new link(
+            new Link(
                 "Android Broadcast Receiver",
                 "ns-framework-modules-category/application/android-broadcast-receiver/android-broadcast-receiver-page"
             )
         );
         navigationLinksTsc.push(
-            new link(
+            new Link(
                 "Android Broadcast Receiver",
                 "ns-framework-modules-category/application/android-broadcast-receiver/android-broadcast-receiver-ts-page"
             )
@@ -57,4 +58,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

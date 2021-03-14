@@ -1,7 +1,7 @@
 // >> import-button-widget
-const Button = require("tns-core-modules/ui/button").Button;
+import { Button } from "@nativescript/core";
 // << import-button-widget
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const container = page.getViewById("container");
 
@@ -17,4 +17,4 @@ function onNavigatingTo(args) {
 
     container.addChild(myButton);
 }
-exports.onNavigatingTo = onNavigatingTo;
+

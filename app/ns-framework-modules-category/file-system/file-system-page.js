@@ -1,20 +1,20 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Usage", "ns-framework-modules-category/file-system/usage/usage-page"),
-    new link("Delete", "ns-framework-modules-category/file-system/delete/delete-page"),
-    new link("Paths", "ns-framework-modules-category/file-system/paths/paths-page"),
-    new link("Read", "ns-framework-modules-category/file-system/read/read-page"),
-    new link("Update", "ns-framework-modules-category/file-system/update/update-page")
+    new Link("Usage", "ns-framework-modules-category/file-system/usage/usage-page"),
+    new Link("Delete", "ns-framework-modules-category/file-system/delete/delete-page"),
+    new Link("Paths", "ns-framework-modules-category/file-system/paths/paths-page"),
+    new Link("Read", "ns-framework-modules-category/file-system/read/read-page"),
+    new Link("Update", "ns-framework-modules-category/file-system/update/update-page")
 ];
 const navigationLinksTsc = [
-    new link("Usage", "ns-framework-modules-category/file-system/usage/usage-ts-page"),
-    new link("Delete", "ns-framework-modules-category/file-system/delete/delete-ts-page"),
-    new link("Paths", "ns-framework-modules-category/file-system/paths/paths-ts-page"),
-    new link("Read", "ns-framework-modules-category/file-system/read/read-ts-page"),
-    new link("Update", "ns-framework-modules-category/file-system/update/update-ts-page")
+    new Link("Usage", "ns-framework-modules-category/file-system/usage/usage-ts-page"),
+    new Link("Delete", "ns-framework-modules-category/file-system/delete/delete-ts-page"),
+    new Link("Paths", "ns-framework-modules-category/file-system/paths/paths-ts-page"),
+    new Link("Read", "ns-framework-modules-category/file-system/read/read-ts-page"),
+    new Link("Update", "ns-framework-modules-category/file-system/update/update-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -23,4 +23,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

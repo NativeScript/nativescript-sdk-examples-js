@@ -1,6 +1,6 @@
-import { NavigatedData, Page } from "tns-core-modules/ui/page";
+import { NavigatedData, Page } from "@nativescript/core";
 // >> observable-basics-imports-ts
-import { fromObject, fromObjectRecursive, Observable, PropertyChangeData } from "tns-core-modules/data/observable";
+import { fromObject, fromObjectRecursive, Observable, PropertyChangeData } from "@nativescript/core";
 // << observable-basics-imports-ts
 
 export function onNavigatedTo(data: NavigatedData) {

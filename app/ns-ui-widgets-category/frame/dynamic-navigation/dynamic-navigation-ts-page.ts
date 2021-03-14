@@ -1,11 +1,8 @@
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Label } from "tns-core-modules/ui/label";
-import { getFrameById } from "tns-core-modules/ui/frame";
+import { Frame, Label, Page, StackLayout } from "@nativescript/core";
 
 export function onLoaded() {
     // >> frame-nav-dynamic-page-ts-code
-    const frame = getFrameById("my-frame-id");
+    const frame = Frame.getFrameById("my-frame-id");
 
     frame.navigate({
         create: () => {

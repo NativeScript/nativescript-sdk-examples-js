@@ -1,9 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-import { Button } from "tns-core-modules/ui/button";
+import { Button, Observable, Page, StackLayout } from "@nativescript/core";
 // >> text-view-import
-import {TextView} from "tns-core-modules/ui/text-view";
+import { TextView } from "@nativescript/core";
 // << text-view-import
 // >> creating-text-view-code-ts
 export function onNavigatingTo(args) {

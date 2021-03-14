@@ -1,11 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "@nativescript/core";
 // >> text-view-require
-const textViewModule = require("tns-core-modules/ui/text-view");
+import { TextView } from "@nativescript/core";
 // << text-view-require
 // >> creating-text-view-code
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     // changing TextView editable property value on button tap
     vm.set("onTap", (btargs) => {
         const button = btargs.object;
@@ -20,15 +20,15 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
     const vm = page.bindingContext;
     const stackLayout = page.getViewById("stackLayoutId");
     // creating new TextView and changing the hint
-    const firstTextview = new textViewModule.TextView();
+    const firstTextview = new TextView();
     firstTextview.hint = "Enter text";
     // creating new TextView and binding the text property
-    const secondTextview = new textViewModule.TextView();
+    const secondTextview = new TextView();
     const options = {
         sourceProperty: "text",
         targetProperty: "secondTextProperty"
@@ -36,7 +36,7 @@ function onPageLoaded(args) {
     secondTextview.bind(options, vm);
     vm.set("secondTextProperty", "Sample TextView text");
     // creating new TextView and changing the text
-    const thirdTextview = new textViewModule.TextView();
+    const thirdTextview = new TextView();
     thirdTextview.id = "thirdTextViewId";
     thirdTextview.text = "Third TextView";
     // adding the newly created TextViews in a StackLayout
@@ -45,6 +45,5 @@ function onPageLoaded(args) {
     stackLayout.addChild(thirdTextview);
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-text-view-code

@@ -1,17 +1,17 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Basics", "ns-ui-widgets-category/styling/basics/basics-page"),
-    new link("Gradients", "ns-ui-widgets-category/styling/gradients/gradients-page"),
-    new link("Border", "ns-ui-widgets-category/styling/border-basics/basics-page"),
-    new link("Border radius", "ns-ui-widgets-category/styling/border-radius/border-radius-page"),
-    new link("Border code-behind", "ns-ui-widgets-category/styling/border-code-behind/code-behind-page")
+    new Link("Basics", "ns-ui-widgets-category/styling/basics/basics-page"),
+    new Link("Gradients", "ns-ui-widgets-category/styling/gradients/gradients-page"),
+    new Link("Border", "ns-ui-widgets-category/styling/border-basics/basics-page"),
+    new Link("Border radius", "ns-ui-widgets-category/styling/border-radius/border-radius-page"),
+    new Link("Border code-behind", "ns-ui-widgets-category/styling/border-code-behind/code-behind-page")
 ];
 const navigationLinksTsc = [
-    new link("Basics", "ns-ui-widgets-category/styling/basics/basics-ts-page"),
-    new link("Border code-behind", "ns-ui-widgets-category/styling/border-code-behind/code-behind-ts-page")
+    new Link("Basics", "ns-ui-widgets-category/styling/basics/basics-ts-page"),
+    new Link("Border code-behind", "ns-ui-widgets-category/styling/border-code-behind/code-behind-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -20,4 +20,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

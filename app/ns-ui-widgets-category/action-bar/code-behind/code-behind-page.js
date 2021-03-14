@@ -1,8 +1,7 @@
 // >> actionbar-code-behind
-const ActionBar = require("tns-core-modules/ui/action-bar").ActionBar;
-const NavigationButton = require("tns-core-modules/ui/action-bar").NavigationButton;
+import { ActionBar, NavigationButton, isAndroid } from "@nativescript/core";
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
 
     const newActionBar = new ActionBar();
@@ -11,12 +10,13 @@ function onLoaded(args) {
     // for ios
     newNavigaitonButton.text = "Go Back";
     // for android
-    newNavigaitonButton.android.systemIcon = "ic_menu_back";
+    if (isAndroid) {
+        newNavigaitonButton.android.systemIcon = "ic_menu_back";
+    }
     // or newNavigaitonButton.icon = "~\images\nav-image.png";
     newActionBar.navigationButton = newNavigaitonButton;
 
     page.actionBar = newActionBar;
     page.actionBarHidden = false;
 }
-exports.onLoaded = onLoaded;
 // << actionbar-code-behind

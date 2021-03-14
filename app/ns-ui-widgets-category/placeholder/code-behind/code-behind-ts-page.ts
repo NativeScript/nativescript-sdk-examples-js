@@ -1,7 +1,4 @@
-import { Placeholder } from "tns-core-modules/ui/placeholder";
-import { isIOS, isAndroid } from "tns-core-modules/platform";
-import { ad } from "tns-core-modules/utils/utils";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+import { Placeholder, StackLayout, Utils, isIOS, isAndroid } from "@nativescript/core";
 // >> code-behind-placeholder-code-ts
 export function onLayoutLoaded (ltargs) {
     let layout: StackLayout = ltargs.object;
@@ -12,7 +9,7 @@ export function onLayoutLoaded (ltargs) {
             nativeView = UITextView.new();
             nativeView.text = "Native View (iOS)";
         } else if (isAndroid) {
-            nativeView = new android.widget.TextView(ad.getApplicationContext());
+            nativeView = new android.widget.TextView(Utils.ad.getApplicationContext());
             nativeView.setText("Native View (Android)");
         }
 

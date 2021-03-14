@@ -1,7 +1,7 @@
 // >> image-binding-code
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const view = args.object;
 
     const vm = new Observable();
@@ -9,5 +9,5 @@ function onNavigatingTo(args) {
     view.bindingContext = vm;
 
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << image-binding-code

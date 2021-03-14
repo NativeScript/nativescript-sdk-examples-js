@@ -1,7 +1,7 @@
 // >> time-picker-binding-code
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 // setting up the initial values for the TimePicker component
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     const vm = new Observable();
@@ -16,9 +16,9 @@ function onNavigatingTo(args) {
 
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-function onPickerLoaded(eventData) {
+
+export function onPickerLoaded(eventData) {
     const timePicker = eventData.object;
     // handling 'time change' via code behind
     timePicker.on("timeChange", (args) => {
@@ -30,5 +30,4 @@ function onPickerLoaded(eventData) {
         vm.set("timeResult", args.value);
     });
 }
-exports.onPickerLoaded = onPickerLoaded;
 // << time-picker-binding-code

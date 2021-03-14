@@ -1,7 +1,7 @@
 // >> parent-binding-code
-const fromObject = require("data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const viewModel = fromObject({
         items: [1, 2, 3],
@@ -10,5 +10,5 @@ function onNavigatingTo(args) {
 
     page.bindingContext = viewModel;
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << parent-binding-code

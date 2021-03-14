@@ -1,7 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const Color = require("tns-core-modules/color").Color;
+import { Color, Observable } from "@nativescript/core";
 
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     const vm = new Observable();
@@ -9,9 +8,9 @@ exports.onNavigatingTo = function(args) {
     vm.set("snippet", cssSnippet);
 
     page.bindingContext = vm;
-};
+}
 
-exports.onLabelLoaded = function(args) {
+export function onLabelLoaded(args) {
     const label = args.object;
     label.backgroundColor = new Color("lightslategray");
     label.color = "#FFFFFF";
@@ -23,4 +22,4 @@ exports.onLabelLoaded = function(args) {
     label.borderColor = new Color("orangered");
     label.borderRadius = 10;
     // << border-radius-code
-};
+}

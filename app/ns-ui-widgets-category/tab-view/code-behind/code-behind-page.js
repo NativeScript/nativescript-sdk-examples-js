@@ -1,11 +1,8 @@
+import { Dialogs, Label, StackLayout} from "@nativescript/core";
 // >> tab-view-require
-const tabViewModule = require("tns-core-modules/ui/tab-view");
+import { TabView, TabViewItem } from "@nativescript/core";
 // << tab-view-require
-const dialogs = require("tns-core-modules/ui/dialogs");
-const StackLayout = require("tns-core-modules/ui/layouts/stack-layout").StackLayout;
-const Label = require("tns-core-modules/ui/label").Label;
-
-function onLoaded(args) {
+export function onLoaded(args) {
     const stackLayout = args.object;
 
     // >> creating-tab-view-code
@@ -21,16 +18,16 @@ function onLoaded(args) {
     label1.text = "Tab 1";
     stackLayout1.addChild(label1);
 
-    const tabViewItem0 = new tabViewModule.TabViewItem();
+    const tabViewItem0 = new TabViewItem();
     tabViewItem0.title = "Tab 0";
     tabViewItem0.view = stackLayout0;
 
-    const tabViewItem1 = new tabViewModule.TabViewItem();
+    const tabViewItem1 = new TabViewItem();
     tabViewItem1.title = "Tab 1";
     tabViewItem1.view = stackLayout1;
 
     // creating TabView
-    const tabView = new tabViewModule.TabView();
+    const tabView = new TabView();
     // setting up its items and the selected index
     const items = [];
     items.push(tabViewItem0);
@@ -39,8 +36,8 @@ function onLoaded(args) {
 
     tabView.selectedIndex = 1;
     // handling selectedIndexChangedEvent
-    tabView.on(tabViewModule.TabView.selectedIndexChangedEvent, (args) => {
-        dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex})`)
+    tabView.on(TabView.selectedIndexChangedEvent, (args) => {
+        Dialogs.alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex})`)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -49,6 +46,4 @@ function onLoaded(args) {
 
     stackLayout.addChild(tabView);
 }
-
-exports.onLoaded = onLoaded;
 

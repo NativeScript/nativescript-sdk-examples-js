@@ -1,6 +1,6 @@
-import { GestureEventData } from "tns-core-modules/ui/gestures";
+import { GestureEventData } from "@nativescript/core";
 // >> import-button-widget-ts
-import { Button } from "tns-core-modules/ui/button";
+import { Button } from "@nativescript/core";
 // << import-button-widget-ts
 export function onNavigatingTo(args) {
     const page = args.object;

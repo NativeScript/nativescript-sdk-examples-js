@@ -1,8 +1,7 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const Color = require("tns-core-modules/color").Color;
+import { Color, Observable } from "@nativescript/core";
 
 let counter = 1;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -10,7 +9,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function increase(args) {
+export function increase(args) {
     const button = args.object;
     const vm = button.page.bindingContext;
     button.backgroundColor = new Color("#3078FE");
@@ -21,7 +20,7 @@ function increase(args) {
     }, 1000);
 }
 
-function decrease(args) {
+export function decrease(args) {
     const button = args.object;
     const vm = button.page.bindingContext;
     button.backgroundColor = new Color("#3078FE");
@@ -33,7 +32,3 @@ function decrease(args) {
     }, 1000);
     // << settimeout-timer-code
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.increase = increase;
-exports.decrease = decrease;

@@ -1,11 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "@nativescript/core";
 // >> slider-require
-const sliderModule = require("tns-core-modules/ui/slider");
+import { Slider } from "@nativescript/core";
 // << slider-require
 // >> creating-slider-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("slResult", 22);
@@ -14,7 +14,7 @@ function onPageLoaded(args) {
         sourceProperty: "age",
         targetProperty: "value"
     };
-    const sliderComponent = new sliderModule.Slider();
+    const sliderComponent = new Slider();
     sliderComponent.bind(options, vm);
     // setting slider.value to 22
     vm.set("age", 22);
@@ -28,5 +28,5 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-slider-code

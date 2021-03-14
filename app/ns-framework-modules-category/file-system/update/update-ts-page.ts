@@ -1,7 +1,4 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { File, Folder, knownFolders } from "tns-core-modules/file-system";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
+import { Dialogs, File, Folder, knownFolders, Observable, Page } from "@nativescript/core";
 
 let file: File;
 let myFolder: Folder;
@@ -37,7 +34,7 @@ export function onFileRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
                 .then(() => {
                     console.log("Dialog closed!");
                 });
@@ -59,7 +56,7 @@ export function onFolderRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
                 .then(() => {
                     console.log("Dialog closed!");
                 });

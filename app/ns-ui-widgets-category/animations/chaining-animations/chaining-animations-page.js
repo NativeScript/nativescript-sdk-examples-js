@@ -1,6 +1,6 @@
 let myView;
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
     myView = page.getViewById("lbl");
     // >> chaining-animations
@@ -50,4 +50,3 @@ function onLoaded(args) {
         });
     // << chaining-animations
 }
-exports.onLoaded = onLoaded;

@@ -1,20 +1,17 @@
 // >> fps-meter-js
-const fpsMeter = require("tns-core-modules/fps-meter");
-
+import { addCallback, removeCallback, start, stop } from "@nativescript/core/fps-meter";
 
 let callbackId;
-function startFPSMeter(args) {
-    callbackId = fpsMeter.addCallback((fps, minFps) => {
+export function startFPSMeter(args) {
+    callbackId = addCallback((fps, minFps) => {
         console.log(`Frames per seconds: ${fps.toFixed(2)}`);
         console.log(minFps.toFixed(2));
     });
-    fpsMeter.start();
+    start();
 }
 
-function stopFPSMeter(args) {
-    fpsMeter.removeCallback(callbackId);
-    fpsMeter.stop();
+export function stopFPSMeter(args) {
+    removeCallback(callbackId);
+    stop();
 }
-exports.startFPSMeter = startFPSMeter;
-exports.stopFPSMeter = stopFPSMeter;
 // << fps-meter-js

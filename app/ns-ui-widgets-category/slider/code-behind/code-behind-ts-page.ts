@@ -1,8 +1,6 @@
-import {Observable} from "tns-core-modules/data/observable";
-import {Page} from "tns-core-modules/ui/page";
-import {StackLayout} from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> slider-import
-import {Slider} from "tns-core-modules/ui/slider";
+import { Slider } from "@nativescript/core";
 // << slider-import
 // >> creating-slider-code-ts
 export function onPageLoaded(args) {

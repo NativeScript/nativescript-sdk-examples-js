@@ -1,5 +1,5 @@
 // >> dialog-prompt
-function showPromptDialog() {
+export function showPromptDialog() {
 
     const promptOptions = {
         title: "Hey There",
@@ -17,5 +17,4 @@ function showPromptDialog() {
     });
 
 }
-exports.showPromptDialog = showPromptDialog;
 // << dialog-prompt

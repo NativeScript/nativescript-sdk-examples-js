@@ -1,5 +1,5 @@
 // >> action-bar-basic-usage-sdk-ts
-import { Frame } from "tns-core-modules/ui/frame";
+import { Frame } from "@nativescript/core";
 
 export function goBack() {
     Frame.topmost().goBack();

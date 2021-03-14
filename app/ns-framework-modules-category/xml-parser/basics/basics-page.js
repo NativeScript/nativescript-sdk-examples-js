@@ -1,13 +1,12 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+import { Observable, ObservableArray } from "@nativescript/core";
 // >> require-xml-module
-const xmlModule = require("tns-core-modules/xml");
+import { ParserEventType, XmlParser } from "@nativescript/core";
 // << require-xml-module
 const source = new ObservableArray();
 // >> parser-event
 const onEventCallback = (event) => {
     switch (event.eventType) {
-        case xmlModule.ParserEventType.StartElement:
+        case ParserEventType.StartElement:
             if (event.attributes) {
                 for (const attributeName in event.attributes) {
                     if (event.attributes.hasOwnProperty(attributeName)) {
@@ -30,7 +29,7 @@ const onEventCallback = (event) => {
                 });
             }
             break;
-        case xmlModule.ParserEventType.EndElement:
+        case ParserEventType.EndElement:
             source.push({
                 eventType:event.eventType,
                 elementName:event.elementName,
@@ -40,7 +39,7 @@ const onEventCallback = (event) => {
             });
             break;
 
-        case xmlModule.ParserEventType.Text:
+        case ParserEventType.Text:
             const significantText = event.data.trim();
 
             if (significantText !== "") {
@@ -63,9 +62,9 @@ const onErrorCallback = (error) => {
 };
 // << parser-event
 // >> parse-method
-const xmlParser = new xmlModule.XmlParser(onEventCallback, onErrorCallback);
+const xmlParser = new XmlParser(onEventCallback, onErrorCallback);
 // >> (hide)
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     vm.set("source", source);
@@ -73,7 +72,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function parseXMLButton(args) {
+export function parseXMLButton(args) {
     source.splice(0);
 // << (hide)
     xmlParser.parse(`
@@ -87,5 +86,4 @@ function parseXMLButton(args) {
     `);
     // << parse-method
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.parseXMLButton = parseXMLButton;
+

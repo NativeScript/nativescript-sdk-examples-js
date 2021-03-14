@@ -1,19 +1,18 @@
 // >> observable-array-require-ts
-import { ObservableArray, ChangedData } from "tns-core-modules/data/observable-array";
+import { ObservableArray, ChangedData } from "@nativescript/core";
 // << observable-array-require-ts
 
 export function onNavigatingTo(data) {
     const page = data.object;
 
     // >> observable-array-creation-ts
-    // Create ObservableArray with lenght
+    // Create ObservableArray with length
     let myObservableArray = new ObservableArray(10);
 
     // Create ObservableArray from array.
     const arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
     myObservableArray = new ObservableArray(arr);
     // Create ObservableArray from arguments.
-    myObservableArray = new ObservableArray(1, 2, 3, 5, 8, 13, 21, 33, 55, 89);
     // << observable-array-creation-ts
 
     // >> observable-array-item-index-ts
@@ -23,7 +22,7 @@ export function onNavigatingTo(data) {
     // << observable-array-item-index-ts
 
     // >> observable-array-set-item-ts
-    myObservableArray.on(ObservableArray.changeEvent, (args: any) => {
+    myObservableArray.on(ObservableArray.changeEvent, (args: ChangedData<number>) => {
         console.log(args.index); // Index of the changed item (in this case 7).
         console.log(args.action); // Action (In this case "update")
         console.log(args.addedCount); // Number of added items (In this case 1).
@@ -48,7 +47,7 @@ export function onNavigatingTo(data) {
     myObservableArray.shift();
     // << observable-array-shift-ts
 
-    const myArray = new ObservableArray(myObservableArray);
+    const myArray = new ObservableArray(arr);
     // >> observable-array-sort-ts
     myArray.sort();
     // << observable-array-sort-ts

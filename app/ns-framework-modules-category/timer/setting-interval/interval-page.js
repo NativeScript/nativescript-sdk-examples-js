@@ -1,19 +1,20 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 // >> require-timer
-const timerModule = require("tns-core-modules/timer");
+// Timers are exported under Utils
+import { Utils } from "@nativescript/core";
 // << require-timer
 const color = ["green", "yellow", "red"];
 let id;
 let status = true;
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
     vm.set("buttonText", "Disable color change");
     vm.set("buttoncolor", "gray");
     // >> set-interval-example
-    id = timerModule.setInterval(() => {
+    id = Utils.setInterval(() => {
         const randNumber = Math.floor(Math.random() * (color.length));
         vm.set("buttoncolor", color[randNumber]);
     }, 1000);
@@ -21,16 +22,16 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onButtonTap(args) {
+export function onButtonTap(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     if (status) {
     // >> clear-interval-example
-        timerModule.clearInterval(id);
+        Utils.clearInterval(id);
     // << clear-interval-example
         vm.set("buttonText", "Enable color change");
     } else {
-        id = timerModule.setInterval(() => {
+        id = Utils.setInterval(() => {
             const randNumber = Math.floor(Math.random() * (color.length));
             vm.set("buttoncolor", color[randNumber]);
         }, 1000);
@@ -39,5 +40,4 @@ function onButtonTap(args) {
     }
     status = !status;
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onButtonTap = onButtonTap;
+

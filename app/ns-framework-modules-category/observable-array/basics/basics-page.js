@@ -1,8 +1,8 @@
 // >> observable-array-require
-const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
+import { ObservableArray } from "@nativescript/core";
 // << observable-array-require
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
 
     // >> observable-array-creation
@@ -60,4 +60,4 @@ function onNavigatingTo(args) {
 
     page.bindingContext = { items: myObservableArray };
 }
-exports.onNavigatingTo = onNavigatingTo;
+

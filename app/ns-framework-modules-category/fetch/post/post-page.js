@@ -1,6 +1,6 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
@@ -11,7 +11,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function makePostRequest(args) {
+export function makePostRequest(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fetch-post
@@ -37,6 +37,3 @@ function makePostRequest(args) {
         });
     // << fetch-post
 }
-
-exports.onNavigatingTo = onNavigatingTo;
-exports.makePostRequest = makePostRequest;

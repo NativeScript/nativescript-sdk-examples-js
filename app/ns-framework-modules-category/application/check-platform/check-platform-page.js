@@ -1,6 +1,6 @@
-const application = require("tns-core-modules/application");
+import { Application } from "@nativescript/core";
 
-function onGridLoaded(args) {
+export function onGridLoaded(args) {
     const grid = args.object;
     const lbl = grid.getViewById("lbl");
     const iconLabel = grid.getViewById("iconLabel");
@@ -12,13 +12,13 @@ function onGridLoaded(args) {
     lbl.verticalAlignment = "middle";
     lbl.fontSize = 24;
     // >> application-platform-js
-    if (application.android) {
+    if (Application.android) {
         console.log("We are running on Android device!");
         // >> (hide)
         iconLabel.text = String.fromCharCode(0xff17b);
         lbl.text = "Android Applicaiton";
         // << (hide)
-    } else if (application.ios) {
+    } else if (Application.ios) {
         console.log("We are running on iOS device");
         // >> (hide)
         iconLabel.text = String.fromCharCode(0xf179);
@@ -27,9 +27,8 @@ function onGridLoaded(args) {
     }
     // << application-platform-js
 }
-exports.onGridLoaded = onGridLoaded;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.actionBar.title = args.context.title;
 }
-exports.onNavigatingTo = onNavigatingTo;
+

@@ -1,17 +1,17 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Usage", "ns-ui-widgets-category/button/usage/usage-page"),
-    new link("Styling", "ns-ui-widgets-category/button/styling/styling-page"),
-    new link("Code-Behind", "ns-ui-widgets-category/button/code-behind/code-behind-page")
+    new Link("Usage", "ns-ui-widgets-category/button/usage/usage-page"),
+    new Link("Styling", "ns-ui-widgets-category/button/styling/styling-page"),
+    new Link("Code-Behind", "ns-ui-widgets-category/button/code-behind/code-behind-page")
 ];
 
 const navigationLinksTsc = [
-    new link("Usage", "ns-ui-widgets-category/button/usage/usage-ts-page"),
-    new link("Code-Behind", "ns-ui-widgets-category/button/code-behind/code-behind-ts-page")
+    new Link("Usage", "ns-ui-widgets-category/button/usage/usage-ts-page"),
+    new Link("Code-Behind", "ns-ui-widgets-category/button/code-behind/code-behind-ts-page")
 ];
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -20,4 +20,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

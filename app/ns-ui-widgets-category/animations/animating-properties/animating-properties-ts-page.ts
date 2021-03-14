@@ -1,10 +1,8 @@
 // >> animation-curve-imports-ts
 // AnimationCurve enumeration: ease, easeIn, easeInOut, easeOut, linear, spring
-import { AnimationCurve } from "tns-core-modules/ui/enums";
-import { Animation, AnimationDefinition } from "tns-core-modules/ui/animation";
-import { Color } from "tns-core-modules/color";
+import { Animation, AnimationDefinition, Color, Enums } from "@nativescript/core";
 // << animation-curve-imports-ts
-import { View } from "tns-core-modules/ui/core/view";
+import { View } from "@nativescript/core";
 let animation: Animation;
 
 export function animate(args) {
@@ -15,7 +13,7 @@ export function animate(args) {
     // >> animation-properties-ts
     view.animate({
         backgroundColor: new Color("#414b7d"),
-        curve: AnimationCurve.easeOut,
+        curve: Enums.AnimationCurve.easeOut,
         delay: 300,
         duration: 3000,
         iterations: 3,
@@ -43,7 +41,7 @@ export function animateTarget(args) {
 
     const animationDefinition: AnimationDefinition = {
         target: view, // provide the view to animate
-        curve: AnimationCurve.easeOut,
+        curve: Enums.AnimationCurve.easeOut,
         duration: 1000,
         scale: {
             x: 0.2,
@@ -89,7 +87,7 @@ export function demonstrateSimpleAnimations(args) {
             y: 100
         },
         duration: 1000,
-        curve: AnimationCurve.easeIn
+        curve: Enums.AnimationCurve.easeIn
     });
     // << using-animation-curve-enum-ts
 
@@ -100,7 +98,7 @@ export function demonstrateSimpleAnimations(args) {
             y: 100
         },
         duration: 1000,
-        curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
+        curve: Enums.AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)
     });
     // << creating-cubic-bezier-ts
 }

@@ -1,10 +1,9 @@
 // >> absolute-layout-import
-const AbsoluteLayout = require("tns-core-modules/ui/layouts/absolute-layout").AbsoluteLayout;
+import { AbsoluteLayout } from "@nativescript/core";
 // << absolute-layout-import
-const Button = require("tns-core-modules/ui/button/").Button;
-const Color = require("tns-core-modules/color/").Color;
+import { Button, Color } from "@nativescript/core";
 // TODO: This should be in "pageNavigatingTo" but that method is defined in the Page base class
-exports.onNavigatingTo = function(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const stack = page.getViewById("stack");
 
@@ -43,4 +42,4 @@ exports.onNavigatingTo = function(args) {
 
     stack.removeChildren();
     stack.addChild(absoluteLayout);
-};
+}

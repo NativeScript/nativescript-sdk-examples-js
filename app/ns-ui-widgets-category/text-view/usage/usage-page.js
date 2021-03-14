@@ -1,13 +1,13 @@
 // >> text-view-binding-code
-const observableModule = require("tns-core-modules/data/observable");
-function onNavigatingTo(args) {
+import { Observable } from "@nativescript/core";
+export function onNavigatingTo(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     vm.set("viewDate", "");
 
     page.bindingContext = vm;
 }
-function onTextViewLoaded(argsloaded) {
+export function onTextViewLoaded(argsloaded) {
     const textView = argsloaded.object;
     textView.on("focus", (args) => {
         const view = args.object;
@@ -18,6 +18,5 @@ function onTextViewLoaded(argsloaded) {
         console.log("On TextView blur");
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
-exports.onTextViewLoaded = onTextViewLoaded;
+
 // << text-view-binding-code

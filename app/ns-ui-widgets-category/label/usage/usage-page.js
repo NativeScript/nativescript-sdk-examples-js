@@ -1,7 +1,7 @@
 // >> label-text-binding
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
 
     const page = args.object;
     const vm = new Observable();
@@ -9,5 +9,5 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 // << label-text-binding

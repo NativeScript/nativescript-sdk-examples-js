@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd">
 	<Page.actionBar>
-		<ActionBar title="Animating Width & Height Properties" />
+		<ActionBar title="Animating Width &amp; Height Properties" />
 	</Page.actionBar>
     <!-- >> animation-properties-width-height-xml -->
 	<GridLayout rows="auto, auto, *">

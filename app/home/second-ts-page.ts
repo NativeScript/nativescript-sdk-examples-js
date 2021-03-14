@@ -1,5 +1,5 @@
 // >> nav-context-receive-ts
-import { Page, NavigatedData } from "tns-core-modules/ui/page";
+import { Page, NavigatedData } from "@nativescript/core";
 
 // Event handler for Page "navigatedTo" event attached in details-page.xml e.g.
 export function onNavigatedTo(args: NavigatedData): void {

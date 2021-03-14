@@ -1,9 +1,6 @@
-import { Observable, EventData } from "tns-core-modules/data/observable";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Dialogs, EventData, Observable, Page, StackLayout } from "@nativescript/core";
 // >> search-bar-import
-import { SearchBar } from "tns-core-modules/ui/search-bar";
+import { SearchBar } from "@nativescript/core";
 // << search-bar-import
 // >> creating-search-bar-code-ts
 export function onPageLoaded(args) {
@@ -17,7 +14,7 @@ export function onPageLoaded(args) {
     // set up SearchBar submit event
     searchBar.on(SearchBar.submitEvent, (sbargs: EventData) => {
         console.log("Search for ", (<SearchBar>sbargs.object).text);
-        dialogs.alert(`Search for ${(<SearchBar>sbargs.object).text}`)
+        Dialogs.alert(`Search for ${(<SearchBar>sbargs.object).text}`)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -25,7 +22,7 @@ export function onPageLoaded(args) {
     // set up SearchBar clear event
     searchBar.on(SearchBar.clearEvent, () => {
         console.log("Clear");
-        dialogs.alert("Clear SearchBar text")
+        Dialogs.alert("Clear SearchBar text")
             .then(() => {
                 console.log("Dialog closed!");
             });

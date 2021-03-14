@@ -1,29 +1,29 @@
 // >> app-settings-code-js
-const appSettings = require("tns-core-modules/application-settings");
+import { ApplicationSettings } from "@nativescript/core";
 
 
-function onNavigatingTo(args) {
-    appSettings.setBoolean("isTurnedOn", true);
-    appSettings.setString("username", "Wolfgang");
-    appSettings.setNumber("locationX", 54.321);
+export function onNavigatingTo(args) {
+    ApplicationSettings.setBoolean("isTurnedOn", true);
+    ApplicationSettings.setString("username", "Wolfgang");
+    ApplicationSettings.setNumber("locationX", 54.321);
 
-    const isTurnedOn = appSettings.getBoolean("isTurnedOn");
-    const username = appSettings.getString("username");
-    const locationX = appSettings.getNumber("locationX");
+    const isTurnedOn = ApplicationSettings.getBoolean("isTurnedOn");
+    const username = ApplicationSettings.getString("username");
+    const locationX = ApplicationSettings.getNumber("locationX");
 
     // Will return "No string value" if there is no value for "noSuchKey"
-    const someKey = appSettings.getString("noSuchKey", "No string value");
+    const someKey = ApplicationSettings.getString("noSuchKey", "No string value");
 
     // Will return false if there is no key with name "noSuchKey"
-    const isKeExisting = appSettings.hasKey("noSuchKey");
+    const isKeExisting = ApplicationSettings.hasKey("noSuchKey");
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 
 function onClear() {
     // Removing a single entry via its key name
-    appSettings.remove("isTurnedOn");
+    ApplicationSettings.remove("isTurnedOn");
 
     // Clearing the whole application-settings for this app
-    appSettings.clear();
+    ApplicationSettings.clear();
 }
 // << app-settings-code-js

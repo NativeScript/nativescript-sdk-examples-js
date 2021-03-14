@@ -1,8 +1,6 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
-import { Page } from "tns-core-modules/ui/page";
+import { Button, EventData, Page } from "@nativescript/core";
 // >> wrap-layout-import-ts
-import { WrapLayout } from "tns-core-modules/ui/layouts/wrap-layout";
+import { WrapLayout } from "@nativescript/core";
 // << wrap-layout-import-ts
 
 export function onNavigatingTo(args: EventData) {

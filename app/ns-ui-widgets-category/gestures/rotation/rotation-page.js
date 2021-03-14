@@ -1,12 +1,12 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-function onPageLoaded(args) {
+import { Observable } from "@nativescript/core";
+export function onPageLoaded(args) {
     const page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }
-exports.onPageLoaded = onPageLoaded;
+
 // >> gest-rotation
-function onRotation(args) {
+export function onRotation(args) {
     console.log(`Object that triggered the event: ${args.object}`);
         console.log(`View that triggered the event: ${args.view}`);
         console.log(`Event name: ${args.eventName}`);
@@ -18,7 +18,7 @@ function onRotation(args) {
         vm.set("angle", args.rotation);
         vm.set("state", args.state);
 
-        if (this.state === 3) {
+        if (args.state === 3) {
             const layout = args.object;
             layout.rotate = 0;
             layout.animate({
@@ -28,5 +28,4 @@ function onRotation(args) {
         }
         // << (hide)
 }
-exports.onRotation = onRotation;
 // << gest-rotation

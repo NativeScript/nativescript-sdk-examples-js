@@ -1,47 +1,48 @@
 // tslint:disable:max-line-length
 // >> import-trace-module
-import { enable, disable, isEnabled, categories, setCategories, addCategories, write, isCategorySet } from "tns-core-modules/trace";
+import { Trace } from "@nativescript/core";
 // << import-trace-module
-import { setTimeout } from "tns-core-modules/timer";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Dialogs, Utils } from "@nativescript/core";
+
+
 export function onNavigatingTo(args) {
-    disable();
+    Trace.disable();
     // >> setting-specific-tracing-categories-ts
-    setCategories(categories.concat(
-        categories.Binding,
-        categories.Layout,
-        categories.Style,
-        categories.ViewHierarchy,
-        categories.VisualTreeEvents
+    Trace.setCategories(Trace.categories.concat(
+        Trace.categories.Binding,
+        Trace.categories.Layout,
+        Trace.categories.Style,
+        Trace.categories.ViewHierarchy,
+        Trace.categories.VisualTreeEvents
     ));
-    enable();
+    Trace.enable();
     // << setting-specific-tracing-categories-ts
     // >> trace-add-categories-ts
-    addCategories(categories.Navigation);
+    Trace.addCategories(Trace.categories.Navigation);
     // << trace-add-categories-ts
-    setTimeout(() => {
+    Utils.setTimeout(() => {
         console.log("-----------------------------------------------------");
         console.log("New trace category has been added");
         console.log("Category: NativeLifecycle");
         console.log("-----------------------------------------------------");
-        dialogs.alert("NativeLifecycle trace category has been added.")
+        Dialogs.alert("NativeLifecycle trace category has been added.")
             .then(() => {
                 console.log("Dialog closed!");
             });
-        addCategories(categories.NativeLifecycle);
+        Trace.addCategories(Trace.categories.NativeLifecycle);
     }, 2000);
 
-    write("I (heart) NativeScript!", categories.Debug);
+    Trace.write("I (heart) NativeScript!", Trace.categories.Debug);
 }
 
 export function checkIsDebugCategorySet() {
-    if (isCategorySet(categories.Debug)) {
-        dialogs.alert("Debug category has been set")
+    if (Trace.isCategorySet(Trace.categories.Debug)) {
+        Dialogs.alert("Debug category has been set")
             .then(() => {
                 console.log("Dialog closed!");
             });
     } else {
-        dialogs.alert("Debug category has not been set")
+        Dialogs.alert("Debug category has not been set")
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -50,13 +51,13 @@ export function checkIsDebugCategorySet() {
 
 export function checkIsDebugVisualTreeEventsSet() {
     // >> check-iscategoryset-ts
-    if (isCategorySet(categories.VisualTreeEvents)) {
-        dialogs.alert("VisualTreeEvents category has been set")
+    if (Trace.isCategorySet(Trace.categories.VisualTreeEvents)) {
+        Dialogs.alert("VisualTreeEvents category has been set")
             .then(() => {
                 console.log("Dialog closed!");
             });
     } else {
-        dialogs.alert("VisualTreeEvents category has not been set")
+        Dialogs.alert("VisualTreeEvents category has not been set")
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -65,30 +66,30 @@ export function checkIsDebugVisualTreeEventsSet() {
 }
 
 export function enableTracing() {
-    if (isEnabled() === false) {
-        enable();
-        dialogs.alert("Trace has been enabled")
+    if (Trace.isEnabled() === false) {
+        Trace.enable();
+        Dialogs.alert("Trace has been enabled")
             .then(() => {
                 console.log("Dialog closed!");
             });
     } else {
-        dialogs.alert("Trace has been already enabled")
+        Dialogs.alert("Trace has been already enabled")
             .then(() => {
                 console.log("Dialog closed!");
             });
     }
 }
 export function disableTracing() {
-    if (isEnabled()) {
+    if (Trace.isEnabled()) {
         // >> disable-tracing-ts
-        disable();
+        Trace.disable();
         // << disable-tracing-ts
-        dialogs.alert("Trace has been disabled")
+        Dialogs.alert("Trace has been disabled")
             .then(() => {
                 console.log("Dialog closed!");
             });
     } else {
-        dialogs.alert("Trace has been already disabled")
+        Dialogs.alert("Trace has been already disabled")
             .then(() => {
                 console.log("Dialog closed!");
             });

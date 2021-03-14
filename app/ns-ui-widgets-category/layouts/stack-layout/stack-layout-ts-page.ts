@@ -1,8 +1,6 @@
-import { EventData } from "tns-core-modules/data/observable/";
-import { Button } from "tns-core-modules/ui/button/";
-import { Page } from "tns-core-modules/ui/page/";
+import { Button, EventData, Page } from "@nativescript/core";
 // >> stack-layout-import-ts
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { StackLayout } from "@nativescript/core";
 // << stack-layout-import-ts
 
 export function onNavigatingTo(args: EventData) {

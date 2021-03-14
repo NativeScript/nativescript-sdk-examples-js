@@ -1,5 +1,5 @@
 // >> slider-value-change-event-ts
-import { Slider } from "tns-core-modules/ui/slider";
+import { Slider } from "@nativescript/core";
 
 export function onSliderLoaded(argsloaded) {
     let sliderComponent: Slider = <Slider> argsloaded.object;

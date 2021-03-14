@@ -1,7 +1,4 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Color } from "tns-core-modules/color";
-import { Page } from "tns-core-modules/ui/page";
-import { Label } from "tns-core-modules/ui/label";
+import { Color, Label, Observable, Page } from "@nativescript/core";
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;
 

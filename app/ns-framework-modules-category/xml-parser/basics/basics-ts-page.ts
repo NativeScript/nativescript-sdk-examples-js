@@ -1,14 +1,12 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { ObservableArray } from "tns-core-modules/data/observable-array";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable, ObservableArray, Page} from "@nativescript/core";
 // >> import-xml-module
-import * as xmlModule from "tns-core-modules/xml";
+import { ParserEventType, XmlParser } from "@nativescript/core";
 // << import-xml-module
 const source = new ObservableArray();
 // >> parser-event-ts
 const onEventCallback = (event) => {
     switch (event.eventType) {
-        case xmlModule.ParserEventType.StartElement:
+        case ParserEventType.StartElement:
             if (event.attributes) {
                 for (const attributeName in event.attributes) {
                     if (event.attributes.hasOwnProperty(attributeName)) {
@@ -31,7 +29,7 @@ const onEventCallback = (event) => {
                 });
             }
             break;
-        case xmlModule.ParserEventType.EndElement:
+        case ParserEventType.EndElement:
             source.push({
                 eventType: event.eventType,
                 elementName: event.elementName,
@@ -41,7 +39,7 @@ const onEventCallback = (event) => {
             });
             break;
 
-        case xmlModule.ParserEventType.Text:
+        case ParserEventType.Text:
             const significantText = event.data.trim();
 
             if (significantText !== "") {
@@ -64,7 +62,7 @@ const onErrorCallback = (error) => {
 };
 // << parser-event-ts
 // >> parse-method-ts
-const xmlParser = new xmlModule.XmlParser(onEventCallback, onErrorCallback);
+const xmlParser = new XmlParser(onEventCallback, onErrorCallback);
 // >> (hide)
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

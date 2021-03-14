@@ -1,7 +1,5 @@
 // >> image-icon-fonts-ts
-import { EventData } from "tns-core-modules/data/observable";
-import { Image } from "tns-core-modules/ui/image";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { EventData, Image, StackLayout } from "@nativescript/core";
 
 export function containerLoaded(args: EventData) {
     const container = <StackLayout>args.object;

@@ -1,11 +1,11 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "@nativescript/core";
 // >> textfield-require
-const textFieldModule = require("tns-core-modules/ui/text-field");
+import { TextField } from "@nativescript/core";
 // << textfield-require
 // >> creating-text-field-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("username", "john");
@@ -27,7 +27,7 @@ function onPageLoaded(args) {
         sourceProperty: "username",
         targetProperty: "text"
     };
-    const firstTextField = new textFieldModule.TextField();
+    const firstTextField = new TextField();
     firstTextField.updateTextTrigger = "textChanged";
     firstTextField.bind(options, vm);
     // registering for the TextField text change listener
@@ -42,7 +42,7 @@ function onPageLoaded(args) {
         sourceProperty: "secure",
         targetProperty: "secure"
     };
-    const secondTextField = new textFieldModule.TextField();
+    const secondTextField = new TextField();
     secondTextField.bind(secondOptions, vm);
 
     stackLayout.addChild(firstTextField);
@@ -51,5 +51,5 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-text-field-code

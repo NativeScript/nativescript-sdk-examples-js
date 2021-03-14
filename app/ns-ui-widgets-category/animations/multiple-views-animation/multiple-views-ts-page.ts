@@ -1,11 +1,7 @@
 // >> animation-import-ts
 // Main Animation class
 // ALL animating properties at https://docs.nativescript.org/api-reference/interfaces/_ui_animation_.animationdefinition
-import {
-    Animation,
-    AnimationDefinition,
-    Pair // Pair: Defines a pair of values (horizontal and vertical) for translate and scale animations.
-} from "tns-core-modules/ui/animation";
+import { Animation, AnimationDefinition } from "@nativescript/core";
 // << animation-import-ts
 let view1, view2, view3, view4;
 

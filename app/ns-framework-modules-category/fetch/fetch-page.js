@@ -1,14 +1,14 @@
-const ListViewLinksModel = require("../../links-view-model");
-const link = require("../../link");
+import ListViewLinksModel from "../../links-view-model";
+import Link from "../../link";
 const navigationLinks = [
-    new link("Get", "ns-framework-modules-category/fetch/get/get-page"),
-    new link("Post", "ns-framework-modules-category/fetch/post/post-page")
+    new Link("Get", "ns-framework-modules-category/fetch/get/get-page"),
+    new Link("Post", "ns-framework-modules-category/fetch/post/post-page")
 ];
 const navigationLinksTsc = [
-    new link("Get", "ns-framework-modules-category/fetch/get/get-ts-page"),
-    new link("Post", "ns-framework-modules-category/fetch/post/post-ts-page")
+    new Link("Get", "ns-framework-modules-category/fetch/get/get-ts-page"),
+    new Link("Post", "ns-framework-modules-category/fetch/post/post-ts-page")
 ];
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new ListViewLinksModel({
         links: navigationLinks,
@@ -17,4 +17,4 @@ function onNavigatingTo(args) {
         tsclinks: navigationLinksTsc
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
+

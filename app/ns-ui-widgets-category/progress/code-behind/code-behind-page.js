@@ -1,16 +1,16 @@
-const observableModule = require("tns-core-modules/data/observable");
+import { Observable } from "@nativescript/core";
 // >> progress-require
-const progressModule = require("tns-core-modules/ui/progress");
+import { Progress } from "@nativescript/core";
 // << progress-require
 // >> creating-progress-code
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
-    const vm = new observableModule.Observable();
+    const vm = new Observable();
     const stackLayout = page.getViewById("stackLayoutId");
 
     vm.set("prResult", 0);
     // creating new Switch and binding the value property
-    const progress = new progressModule.Progress();
+    const progress = new Progress();
     progress.value = 0;
     setInterval(() => {
         progress.value += 2;
@@ -25,5 +25,5 @@ function onPageLoaded(args) {
     page.bindingContext = vm;
 }
 
-exports.onPageLoaded = onPageLoaded;
+
 // << creating-progress-code

@@ -35,11 +35,10 @@ Set Button in XML
 
 ######text.component.js
 ```JavaScript
-var EventData = require("tns-core-modules/data/observable").EventData;
-var Button = require("tns-core-modules/ui/button").Button;
+import { Button, EventData } from "@nativescript/core";
 
 // >> button-tap-javascript 
-exports.onTap = function(args) {
+export function onTap(args) {
     var myButton = args.object;
     console.log(myButton + " was tapped!");
 }
@@ -49,8 +48,7 @@ exports.onTap = function(args) {
 
 ######text.component.ts
 ```TypeScript
-import { EventData } from "tns-core-modules/data/observable";
-import { Button } from "tns-core-modules/ui/button";
+import { Button, EventData } from "@nativescript/core";
 
 // >> button-tap-ts 
 export function onTap(args: EventData) {

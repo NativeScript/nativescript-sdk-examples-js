@@ -1,7 +1,7 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
+import { Observable } from "@nativescript/core";
 
 // >> gest-pan
-function onPan(args) {
+export function onPan(args) {
     // args is of type PanGestureEventData
     console.log(`Object that triggered the event: ${args.object}`);
     console.log(`View that triggered the event: ${args.view}`);
@@ -16,12 +16,11 @@ function onPan(args) {
     vm.set("state", args.state);
     // << (hide)
 }
-exports.onPan = onPan;
 // << gest-pan
 
-function onPageLoaded(args) {
+export function onPageLoaded(args) {
     const page = args.object;
     const vm = new Observable();
     page.bindingContext = vm;
 }
-exports.onPageLoaded = onPageLoaded;
+

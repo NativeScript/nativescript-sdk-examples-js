@@ -1,5 +1,5 @@
 // >> dialog-alert-ts
-import { alert, AlertOptions } from "tns-core-modules/ui/dialogs";
+import { alert, AlertOptions } from "@nativescript/core";
 
 export function showAlertDialog() {
 

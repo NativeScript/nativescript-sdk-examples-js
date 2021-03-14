@@ -1,6 +1,9 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-let myFirstView, mySecondView, myThirdView, myForthView, myFifthView;
+import { EventData, Page } from "@nativescript/core";
+let myFirstView;
+let mySecondView;
+let myThirdView;
+let myForthView;
+let myFifthView;
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

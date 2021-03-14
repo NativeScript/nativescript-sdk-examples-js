@@ -1,6 +1,4 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { Label } from "tns-core-modules/ui/label";
+import { EventData, Label, Page } from "@nativescript/core";
 
 export function onLoaded(args: EventData) {
     const page = <Page>args.object;

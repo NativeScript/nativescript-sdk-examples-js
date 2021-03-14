@@ -1,5 +1,5 @@
 // >> fps-meter-ts
-import { removeCallback, start, stop, addCallback } from "tns-core-modules/fps-meter";
+import {addCallback, removeCallback, start, stop} from "@nativescript/core/fps-meter";
 
 let callbackId;
 export function startFPSMeter(args) {

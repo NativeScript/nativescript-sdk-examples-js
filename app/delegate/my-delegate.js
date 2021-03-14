@@ -1,5 +1,5 @@
-const deepLinkDataModule = require("../shared/deep-link-data");
-const MyDelegate = (function(_super) {
+import { DeepLinkData } from "../shared/deep-link-data";
+export const MyDelegate = (function(_super) {
     __extends(MyDelegate, _super);
 
     MyDelegate.ObjCProtocols = [UIApplicationDelegate];
@@ -14,7 +14,7 @@ const MyDelegate = (function(_super) {
 
     MyDelegate.prototype.applicationHandleOpenURL = function (application, url) {
         console.log("MyDelegate.prototype.applicationHandleOpenURL");
-        const dld = new deepLinkDataModule.DeepLinkData(url, undefined);
+        const dld = new DeepLinkData(url, undefined);
 
         return true;
 
@@ -23,5 +23,3 @@ const MyDelegate = (function(_super) {
     return MyDelegate;
 
 }(UIResponder));
-
-exports.MyDelegate = MyDelegate;

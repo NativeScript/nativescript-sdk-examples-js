@@ -1,6 +1,5 @@
 // >> icon-font-code-behind-code-ts
-import { Observable, EventData } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
+import { EventData, Observable, Page } from "@nativescript/core";
 
 export function pageLoaded(args: EventData) {
     const page = <Page>args.object;

@@ -1,6 +1,5 @@
 // >> timepicker-time-format-code-ts
-import {isAndroid, isIOS} from "tns-core-modules/platform";
-import { TimePicker } from "tns-core-modules/ui/time-picker";
+import { isAndroid, isIOS, TimePicker } from "@nativescript/core";
 
 export function onPickerLoaded(args) {
     const timePicker: TimePicker = <TimePicker> args.object;

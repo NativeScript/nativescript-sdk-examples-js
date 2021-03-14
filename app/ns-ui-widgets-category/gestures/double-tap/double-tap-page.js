@@ -1,5 +1,5 @@
 // >> gest-double-tap
-function onDoubleTap(args) {
+export function onDoubleTap(args) {
     console.log(`Object that triggered the event: ${args.object}`);
     console.log(`View that triggered the event: ${args.view}`);
     console.log(`Event name: ${args.eventName}`);
@@ -12,5 +12,5 @@ function onDoubleTap(args) {
     });
     // << (hide)
 }
-exports.onDoubleTap = onDoubleTap;
+
 // << gest-double-tap

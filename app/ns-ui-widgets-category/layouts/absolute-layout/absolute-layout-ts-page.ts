@@ -1,8 +1,7 @@
 // >> absolute-layout-import-ts
-import { AbsoluteLayout } from "tns-core-modules/ui/layouts/absolute-layout";
+import { AbsoluteLayout } from "@nativescript/core";
 // << absolute-layout-import-ts
-import { Button } from "tns-core-modules/ui/button/";
-import { Color } from "tns-core-modules/color/";
+import { Button, Color } from "@nativescript/core";
 // TODO: This should be in "pageNavigatingTo" but that method is defined in the Page base class
 export function onNavigatingTo(args) {
     const page = args.object;

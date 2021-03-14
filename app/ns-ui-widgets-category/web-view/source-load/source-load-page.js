@@ -1,7 +1,6 @@
 // >> web-view-src-local-file
-const Observable = require("tns-core-modules/data/observable").Observable;
-const webViewModule = require("tns-core-modules/ui/web-view");
-function onNavigatingTo(args) {
+import { Observable, WebView } from "@nativescript/core";
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
     // loading the WebView source while providing a HTML code
@@ -13,13 +12,13 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onFirstWebViewLoaded(webargs) {
+export function onFirstWebViewLoaded(webargs) {
     const page = webargs.object.page;
     const vm = page.bindingContext;
     const webview = webargs.object;
     vm.set("resultFirstWebView", "First WebView is still loading...");
     // handling WebView load finish event
-    webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
+    webview.on(WebView.loadFinishedEvent, (args) => {
         let message = "";
         if (!args.error) {
             message = `First WebView finished loading of ${args.url}`;
@@ -32,13 +31,13 @@ function onFirstWebViewLoaded(webargs) {
     });
 }
 
-function onSecondWebViewLoaded(webargs) {
+export function onSecondWebViewLoaded(webargs) {
     const page = webargs.object.page;
     const vm = page.bindingContext;
     const webview = webargs.object;
     vm.set("resultSecondWebView", "Second WebView is still loading...");
 
-    webview.on(webViewModule.WebView.loadFinishedEvent, (args) => {
+    webview.on(WebView.loadFinishedEvent, (args) => {
         let message = "";
         if (!args.error) {
             message = `Second WebView finished loading of ${args.url}`;
@@ -51,7 +50,4 @@ function onSecondWebViewLoaded(webargs) {
     });
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onFirstWebViewLoaded = onFirstWebViewLoaded;
-exports.onSecondWebViewLoaded = onSecondWebViewLoaded;
 // << web-view-src-local-file

@@ -1,5 +1,5 @@
 // >> nav-context-receive
-function onNavigatedTo(args) {
+export function onNavigatedTo(args) {
     const page = args.object;
     const navigationContext = page.navigationContext;
 
@@ -8,5 +8,4 @@ function onNavigatedTo(args) {
 
     page.bindingContext = navigationContext;
 }
-exports.onNavigatedTo = onNavigatedTo;
 // << nav-context-receive

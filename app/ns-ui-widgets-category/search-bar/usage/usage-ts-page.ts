@@ -1,7 +1,5 @@
 // >> search-bar-basics-code-ts
-import { Observable, PropertyChangeData } from "tns-core-modules/data/observable";
-import { SearchBar } from "tns-core-modules/ui/search-bar";
-import { Page } from "tns-core-modules/ui/page";
+import { Observable, Page, PropertyChangeData, SearchBar } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page>args.object;

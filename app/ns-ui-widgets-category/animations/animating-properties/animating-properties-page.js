@@ -1,19 +1,17 @@
 // >> animation-curve-imports
 // AnimationCurveEnum: ease, easeIn, easeInOut, easeOut, linear, spring
-const AnimationCurve = require("tns-core-modules/ui/enums").AnimationCurve;
+import { AnimationCurve } from "@nativescript/core/ui/enums";
+import { Animation, Color } from "@nativescript/core";
 // << animation-curve-imports
-const Animation = require("tns-core-modules/ui/animation").Animation;
-const Color = require("tns-core-modules/color").Color;
 let animation;
 let myView;
 
-function onLoaded(args) {
+export function onLoaded(args) {
     const page = args.object;
     myView = page.getViewById("lbl");
 }
-exports.onLoaded = onLoaded;
 
-function animate(args) {
+export function animate(args) {
     // >> animation-properties
     myView.animate({
         backgroundColor: new Color("#414b7d"),
@@ -38,9 +36,8 @@ function animate(args) {
     });
     // << animation-properties
 }
-exports.animate = animate;
 
-function animateTarget(args) {
+export function animateTarget(args) {
     // >> animation-target
     const myView = args.object;
 
@@ -68,7 +65,6 @@ function animateTarget(args) {
         });
     // << animation-target
 }
-exports.animateTarget = animateTarget;
 
 function cancelAnimation() {
     // >> animation-cancel

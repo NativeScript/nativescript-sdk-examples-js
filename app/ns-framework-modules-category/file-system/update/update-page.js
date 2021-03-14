@@ -1,13 +1,11 @@
-const Observable = require("tns-core-modules/data/observable").Observable;
-const fileSystemModule = require("tns-core-modules/file-system");
-const dialogs = require("tns-core-modules/ui/dialogs");
+import { Dialogs, Observable, knownFolders } from "@nativescript/core";
 let file;
 let myFolder;
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = new Observable();
 
-    const documents = fileSystemModule.knownFolders.documents();
+    const documents = knownFolders.documents();
     file = documents.getFile("TestFileName.txt");
     myFolder = documents.getFolder("TestFolderName");
 
@@ -21,7 +19,7 @@ function onNavigatingTo(args) {
     page.bindingContext = vm;
 }
 
-function onFileRename(args) {
+export function onFileRename(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-update-rename-file-code
@@ -35,7 +33,7 @@ function onFileRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -43,7 +41,7 @@ function onFileRename(args) {
     // << fs-update-rename-file-code
 }
 
-function onFolderRename(args) {
+export function onFolderRename(args) {
     const page = args.object.page;
     const vm = page.bindingContext;
     // >> fs-update-rename-folder-code
@@ -57,7 +55,7 @@ function onFolderRename(args) {
             // Error!
             console.log("Error: ");
             console.log(err);
-            dialogs.alert(err)
+            Dialogs.alert(err)
             .then(() => {
                 console.log("Dialog closed!");
             });
@@ -65,6 +63,3 @@ function onFolderRename(args) {
     // << fs-update-rename-folder-code
 }
 
-exports.onNavigatingTo = onNavigatingTo;
-exports.onFileRename = onFileRename;
-exports.onFolderRename = onFolderRename;

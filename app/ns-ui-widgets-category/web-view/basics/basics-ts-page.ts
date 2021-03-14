@@ -1,9 +1,5 @@
 // >> setting-url-webview-ts
-import {Observable} from "tns-core-modules/data/observable";
-import * as dialogs from "tns-core-modules/ui/dialogs";
-import {WebView, LoadEventData} from "tns-core-modules/ui/web-view";
-import { Page } from "tns-core-modules/ui/page";
-import { TextField } from "tns-core-modules/ui/text-field";
+import { Dialogs, LoadEventData, Observable, Page, TextField, WebView } from "@nativescript/core";
 
 export function onNavigatingTo(args) {
     const page: Page = <Page> args.object;
@@ -65,7 +61,7 @@ export function submit(args) {
         vm.set("webViewSrc", text);
         textField.dismissSoftInput();
     } else {
-        dialogs.alert("Please, add `http://` or `https://` in front of the URL string")
+        Dialogs.alert("Please, add `http://` or `https://` in front of the URL string")
         .then(() => {
             console.log("Dialog closed!");
         });

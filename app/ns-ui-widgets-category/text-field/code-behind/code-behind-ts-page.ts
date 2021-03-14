@@ -1,8 +1,6 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { Page } from "tns-core-modules/ui/page";
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
+import { Observable, Page, StackLayout } from "@nativescript/core";
 // >> textfield-import
-import { TextField } from "tns-core-modules/ui/text-field";
+import { TextField } from "@nativescript/core";
 // << textfield-import
 // >> creating-text-field-code-ts
 export function onPageLoaded(args) {

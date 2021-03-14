@@ -1,10 +1,8 @@
 // >> observable-basics-imports
-const Observable = require("tns-core-modules/data/observable").Observable;
-const fromObject = require("tns-core-modules/data/observable").fromObject;
-const fromObjectRecursive = require("tns-core-modules/data/observable").fromObjectRecursive;
+import { Observable, fromObject, fromObjectRecursive } from "@nativescript/core";
 // << observable-basics-imports
 
-function onNavigatedTo(args) {
+export function onNavigatedTo(args) {
     console.log("onLoaded BASICS");
     // >> observable-class
     // creating an Observable and setting title propertu with a string value
@@ -70,7 +68,6 @@ function onNavigatedTo(args) {
     });
     // << property-change-event
 }
-exports.onNavigatedTo = onNavigatedTo;
 
 // dummy funciton for snippet demonstrationg
 function removeListener() {

@@ -1,7 +1,7 @@
 // >> list-view-create-code
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     const vm = fromObject({
         // Setting the listview binding source
@@ -16,21 +16,19 @@ function onNavigatingTo(args) {
     });
     page.bindingContext = vm;
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-function onListViewLoaded(args) {
+
+export function onListViewLoaded(args) {
     const listView = args.object;
 }
-exports.onListViewLoaded = onListViewLoaded;
 
-function onItemTap(args) {
+export function onItemTap(args) {
     const index = args.index;
     console.log(`Second ListView item tap ${index}`);
 }
-exports.onItemTap = onItemTap;
 // << list-view-create-code
 
-function onTap(args) {
+export function onTap(args) {
     const page = args.object.page;
     // >> list-view-refresh
     const listView = page.getViewById("listView");
@@ -40,5 +38,4 @@ function onTap(args) {
     // << list-view-refresh
 
 }
-exports.onTap = onTap;
 

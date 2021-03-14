@@ -1,5 +1,5 @@
 // >> dialog-action-ts
-import { action, ActionOptions } from "tns-core-modules/ui/dialogs";
+import { action, ActionOptions } from "@nativescript/core";
 
 export function showActionDialog() {
 

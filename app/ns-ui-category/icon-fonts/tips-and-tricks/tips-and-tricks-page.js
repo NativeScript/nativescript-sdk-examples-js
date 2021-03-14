@@ -1,6 +1,6 @@
 // >> icon-font-code-behind-code
-const Observable = require("tns-core-modules/data/observable").Observable;
-function pageLoaded(args) {
+import { Observable } from "@nativescript/core";
+export function pageLoaded(args) {
     const page = args.object;
     const viewModel = new Observable();
 
@@ -15,5 +15,4 @@ function pageLoaded(args) {
 
     page.bindingContext = viewModel;
 }
-exports.pageLoaded = pageLoaded;
 // << icon-font-code-behind-code

@@ -1,29 +1,26 @@
 // >> action-bar-hiding-action-items-js
-const fromObject = require("tns-core-modules/data/observable").fromObject;
+import { fromObject } from "@nativescript/core";
 
-function onNavigatingTo(args) {
+export function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = fromObject({
         isEditing: false
     });
 }
-exports.onNavigatingTo = onNavigatingTo;
 
-function onEdit(args) {
+
+export function onEdit(args) {
     const page = args.object.page;
     page.bindingContext.set("isEditing", true);
 }
-exports.onEdit = onEdit;
 
-function onSave(args) {
+export function onSave(args) {
     const page = args.object.page;
     page.bindingContext.set("isEditing", false);
 }
-exports.onSave = onSave;
 
-function onCancel(args) {
+export function onCancel(args) {
     const page = args.object.page;
     page.bindingContext.set("isEditing", false);
 }
-exports.onCancel = onCancel;
 // << action-bar-hiding-action-items-js

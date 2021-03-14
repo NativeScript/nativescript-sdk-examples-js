@@ -1,6 +1,6 @@
 // >> image-icon-fonts-js
-const Image = require("tns-core-modules/ui/image").Image;
-function containerLoaded(args) {
+import { Image } from "@nativescript/core";
+export function containerLoaded(args) {
     const container = args.object;
 
     const newImage = new Image();
@@ -12,5 +12,4 @@ function containerLoaded(args) {
 
     container.addChild(newImage);
 }
-exports.containerLoaded = containerLoaded;
 // << image-icon-fonts-js
