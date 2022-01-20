@@ -8,10 +8,10 @@
 
         <!-- >> icon-font-xml-def -->
         <!-- Using fa-regular-400.ttf -->
-        <Label text="&#xf019;" class="far"></Label>
+        <Label text.decode="&#xf019;" class="far"></Label>
 
         <!-- Using fa-brands-400.ttf -->
-        <Label text="&#xf39e;" class="fab"></Label>
+        <Label text.decode="&#xf39e;" class="fab"></Label>
 
         <!-- Using fa-solid-900.ttf with FormattedString -->
         <Label class="fas" textWrap="true">
@@ -21,7 +21,7 @@
         </Label>
         
         <!-- Using IcoMoon-Free.ttf -->
-        <Label text="&#xe904;" class="ico"/>
+        <Label text.decode="&#xe904;" class="ico"/>
         <!-- << icon-font-xml-def -->
 
         <!-- Using font icons in Images requires the font:// prefix -->
