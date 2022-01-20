@@ -9,7 +9,7 @@ To navigate between pages, you can use the [`navigate`](http://docs.nativescript
 <snippet id='frame-navigate-base-ts'/>
 
 ### Navigate by NavigationEntry object
-The `navigate` method accepst [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry) object.
+The `navigate` method accepts [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry) object.
 <snippet id='frame-navigate-module'/>
 <snippet id='frame-navigate-module-ts'/>
 
